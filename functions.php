@@ -384,8 +384,7 @@ function getDatabaseConnection()
 	if (isset($_SESSION['SB_LOGIN_HOST']) && isset($_SESSION['SB_LOGIN_USER']) && isset($_SESSION['SB_LOGIN_PASS']))
 	{
 		$dbconn = mysql_connect($_SESSION['SB_LOGIN_HOST'], $_SESSION['SB_LOGIN_USER'], $_SESSION['SB_LOGIN_PASS']);
-		//@mysql_query("SET NAMES 'utf8'");
-		//@mysql_query("SET CHARACTER SET utf8");
+		mysql_query("SET NAMES 'utf8'");
 		return $dbconn;
 	}
 }
