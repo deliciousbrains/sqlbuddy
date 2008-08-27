@@ -61,7 +61,16 @@ if (isset($host) && isset($user) && isset($pass))
 				$redirect .= "/" . $pathSplit[$i];
 		}
 		
-		$redirect = "http://" . $_SERVER["HTTP_HOST"] . $redirect . "/";
+		if ($_SERVER['HTTPS'] == "on")
+		{
+			$protocol = "https://";
+		}
+		else
+		{
+			$protocol = "http://";
+		}
+		
+		$redirect = $protocol . $_SERVER["HTTP_HOST"] . $redirect . "/";
 		
 		redirect($redirect);
 		exit;
