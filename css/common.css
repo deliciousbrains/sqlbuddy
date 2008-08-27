@@ -469,6 +469,9 @@ color: rgb(115, 115, 115);
 color: rgb(115, 115, 115);
 }
 
+.dboverview .column1 {
+width: 200px;
+}
 .dboverview .inputbox {
 width: 500px;
 }
