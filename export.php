@@ -426,7 +426,7 @@ if ($_POST)
 				
 				if (!$handle = @fopen($outputFile, "w"))
 				{
-					$error = __("The file could not be opened.");
+					$error = __("The file could not be opened") . ".";
 				}
 				else
 				{
