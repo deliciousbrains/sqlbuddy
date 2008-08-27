@@ -1,0 +1,631 @@
+Language: Deutsch
+Language-Code: de_DE
+Build-Date: Sun, 17 Aug 2008 18:44:04 -0600
+
+msgid: "Either the file could not be read or it was empty"
+msgstr: "Entweder konnte die Datei nicht gefunden werden, oder die Datei ist leer"
+
+msgid: "MySQL reported the following errors"
+msgstr: "MySQL meldete folgende Fehler"
+
+msgid: "Error performing operation"
+msgstr: "Fehler beim Ausführen der Operation"
+
+msgid: "All"
+msgstr: "Alle"
+
+msgid: "None"
+msgstr: "Keine"
+
+msgid: "With selected"
+msgstr: "Markierte"
+
+msgid: "Empty"
+msgstr: "Leer"
+
+msgid: "Drop"
+msgstr: "DROP"
+
+msgid: "Optimize"
+msgstr: "Optimieren"
+
+msgid: "Table"
+msgstr: "Tabelle"
+
+msgid: "Rows"
+msgstr: "Reihe"
+
+msgid: "Size"
+msgstr: "Größe"
+
+msgid: "Overhead"
+msgstr: "Overhead"
+
+msgid: "Options"
+msgstr: "Optionen"
+
+msgid: "Edit database"
+msgstr: "Datenbank bearbeiten"
+
+msgid: "Charset"
+msgstr: "Zeichensatz"
+
+msgid: "Submit"
+msgstr: "Los"
+
+msgid: "Create a new table"
+msgstr: "Neue Tabelle erstellen"
+
+msgid: "Name"
+msgstr: "Name"
+
+msgid: "Setup the fields for the table below"
+msgstr: "Zellen für Tabelle erstellen"
+
+msgid: "New field"
+msgstr: "Neues Feld"
+
+msgid: "Type"
+msgstr: "Typ"
+
+msgid: "Values"
+msgstr: "Werte"
+
+msgid: "Key"
+msgstr: "Schlüssel"
+
+msgid: "primary"
+msgstr: "primär"
+
+msgid: "unique"
+msgstr: "eindeutig"
+
+msgid: "index"
+msgstr: "index"
+
+msgid: "Default"
+msgstr: "Standardeinstellung"
+
+msgid: "Other"
+msgstr: "Andere"
+
+msgid: "Unsigned"
+msgstr: "Vorzeichenlos"
+
+msgid: "Binary"
+msgstr: "Binär"
+
+msgid: "Not Null"
+msgstr: "nicht null"
+
+msgid: "Auto Increment"
+msgstr: "automatischer Zuwachs"
+
+msgid: "Add field"
+msgstr: "Feld hinzufügen"
+
+msgid: "Oops"
+msgstr: "Hoppla"
+
+msgid: "For some reason, the database parameter was not included with your request"
+msgstr: "Aus irgendwelchen Grund war der Datenbankparameter nicht in Ihrer Anfrage"
+
+msgid: "Save changes to original"
+msgstr: "Änderungen auf das Original anwenden"
+
+msgid: "Insert as new row"
+msgstr: "Als neue Reihe einfügen"
+
+msgid: "Save"
+msgstr: "Speichern"
+
+msgid: "User"
+msgstr: "Benutzer"
+
+msgid: "All privileges"
+msgstr: "Alle Rechte"
+
+msgid: "Selected privileges"
+msgstr: "Auserwählte Rechte"
+
+msgid: "User privileges"
+msgstr: "Benutzerrechte"
+
+msgid: "Select"
+msgstr: "SELECT"
+
+msgid: "Insert"
+msgstr: "INSERT"
+
+msgid: "Update"
+msgstr: "UPDATE"
+
+msgid: "Delete"
+msgstr: "DELETE"
+
+msgid: "Alter"
+msgstr: "ALTER"
+
+msgid: "Create"
+msgstr: "CREATE"
+
+msgid: "Temp tables"
+msgstr: "Temporäre Tabellen"
+
+msgid: "Administrator privileges"
+msgstr: "Administratorrechte"
+
+msgid: "File"
+msgstr: "Datei"
+
+msgid: "Process"
+msgstr: "Prozess"
+
+msgid: "Reload"
+msgstr: "Neu laden"
+
+msgid: "Shutdown"
+msgstr: "Herunterfahren"
+
+msgid: "Super"
+msgstr: "Super"
+
+msgid: "Grant option"
+msgstr: "Option bewilligen"
+
+msgid: "User not found!"
+msgstr: "Benutzer nicht gefunden!"
+
+msgid: "You must export either structure, data, or both"
+msgstr: "Sie müssen entweder Struktur, Daten oder Beides exportieren"
+
+msgid: "Please select the databases that you would like to export"
+msgstr: "Bitte wählen Sie die zu exportierenden Datenbanken aus"
+
+msgid: "Please select the tables that you would like to export"
+msgstr: "Bitte wählen Sie die zu exportierenden Tabellen aus"
+
+msgid: "Table `%s` is empty"
+msgstr: "Tabelle „%s“ ist leer"
+
+msgid: "Results"
+msgstr: "Ergebnisse"
+
+msgid: "Select all"
+msgstr: "Alle auswählen"
+
+msgid: "The file could not be opened"
+msgstr: "Datei konnte nicht geöffnet werden"
+
+msgid: "Could not write to file"
+msgstr: "Konnte Datei nicht schreiben"
+
+msgid: "Successfully wrote content to file"
+msgstr: "Inhalt erfolgreich in Datei geschrieben"
+
+msgid: "Download"
+msgstr: "Herunterladen"
+
+msgid: "Note
+"
+msgstr: "Notiz"
+
+msgid: "If this is a public server, you should delete this file from the server after you download it"
+msgstr: "Sollte dies ein öffentlich zugänglicher Server sein, sollten Sie diese Datei nach dem herunterladen löschen"
+
+msgid: "Export"
+msgstr: "Exportieren"
+
+msgid: "Tables"
+msgstr: "Tabellen"
+
+msgid: "Databases"
+msgstr: "Datenbanken"
+
+msgid: "Format"
+msgstr: "Format"
+
+msgid: "SQL"
+msgstr: "SQL"
+
+msgid: "CSV"
+msgstr: "CSV"
+
+msgid: "Structure"
+msgstr: "Struktur"
+
+msgid: "Data"
+msgstr: "Daten"
+
+msgid: "Compact inserts"
+msgstr: "Kompakte INSERTS"
+
+msgid: "Complete inserts"
+msgstr: "Komplette INSERTS"
+
+msgid: "Delimiter"
+msgstr: "Delimiter"
+
+msgid: "Comma"
+msgstr: "Komma"
+
+msgid: "Tab"
+msgstr: "Tab"
+
+msgid: "Semicolon"
+msgstr: "Semikolon"
+
+msgid: "Space"
+msgstr: "Leerstelle"
+
+msgid: "Print field names on first line"
+msgstr: "Zellennamen in erste Zeile drucken"
+
+msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
+msgstr: "Sollten Sie viele Reihen exportieren, empfehlen wir die Ergebnisse in eine Textdatei zu speichern"
+
+msgid: "Output to"
+msgstr: "Ausgabe zu"
+
+msgid: "Browser"
+msgstr: "Browser"
+
+msgid: "Text file"
+msgstr: "Textdatei"
+
+msgid: "Home"
+msgstr: "Start"
+
+msgid: "Users"
+msgstr: "Benutzer"
+
+msgid: "Query"
+msgstr: "Query"
+
+msgid: "Import"
+msgstr: "Importieren"
+
+msgid: "Overview"
+msgstr: "Übersicht"
+
+msgid: "Browse"
+msgstr: "Browse"
+
+msgid: "Your changes were saved to the database"
+msgstr: "Änderungen in Datenbank gespeichert"
+
+msgid: "delete this row"
+msgstr: "Reihe löschen"
+
+msgid: "delete these rows"
+msgstr: "Reihen löschen"
+
+msgid: "empty this table"
+msgstr: "Tabelle leeren"
+
+msgid: "empty these tables"
+msgstr: "Tabellen leeren"
+
+msgid: "drop this table"
+msgstr: "Tabelle löschen"
+
+msgid: "drop these tables"
+msgstr: "Tabellen löschen"
+
+msgid: "delete this column"
+msgstr: "Zelle löschen"
+
+msgid: "delete these columns"
+msgstr: "Zellen löschen"
+
+msgid: "delete this index"
+msgstr: "Index löschen"
+
+msgid: "delete this indexes"
+msgstr: "Indizes löschen"
+
+msgid: "delete this user"
+msgstr: "Benutzer löschen"
+
+msgid: "delete this users"
+msgstr: "Benutzer löschen"
+
+msgid: "Are you sure you want to"
+msgstr: "Sind Sie sicher, dass Sie folgendes wollen"
+
+msgid: "The following query will be run:"
+msgstr: "Folgende Abfrage wird ausgeführt:"
+
+msgid: "The following queries will be run:"
+msgstr: "Folgende Abfragen werden ausgeführt:"
+
+msgid: "Confirm"
+msgstr: "Bestätigen"
+
+msgid: "Successfully saved changes"
+msgstr: "Änderungen erfolgreich gespeichert"
+
+msgid: "Full Text"
+msgstr: "Volltext"
+
+msgid: "Loading..."
+msgstr: "Lädt..."
+
+msgid: "Error"
+msgstr: "Fehler"
+
+msgid: "There was an error receiving data from the server"
+msgstr: "Fehler beim empfangen der Datei vom Server"
+
+msgid: "Logout"
+msgstr: "Ausloggen"
+
+msgid: "For some reason, the table parameter was not included with your request"
+msgstr: "Aus irgendwelchen Grund war der Tabellenparameter nicht in Ihrer Anfrage"
+
+msgid: "Welcome to SQL Buddy!"
+msgstr: "Willkommen zu SQL Buddy!"
+
+msgid: "You are connected to MySQL %s with the user %s."
+msgstr: "Verbunden mit MySQL %s als Benutzer %s."
+
+msgid: "The database server has been running since %s and has transferred approximately %s of data."
+msgstr: "Server läuft seit %s und hat ca. %s Daten übertragen."
+
+msgid: "A new version of SQL Buddy is available!"
+msgstr: "Neue SQL Buddy Version erhältlich!"
+
+msgid: "You have SQL Buddy %s installed and %s is now available."
+msgstr: "Sie haben SQL Buddy %s installiert. %s ist nun erhältlich."
+
+msgid: "Getting started"
+msgstr: "Einführung"
+
+msgid: "Help"
+msgstr: "Hilfe"
+
+msgid: "Translations"
+msgstr: "Übersetzungen"
+
+msgid: "Release Notes"
+msgstr: "Bemerkungen zur Version"
+
+msgid: "Contact"
+msgstr: "Kontakt"
+
+msgid: "Create a new database"
+msgstr: "Neue Datenbank erstellen"
+
+msgid: "Did you know..."
+msgstr: "Wussten Sie schon..."
+
+msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
+msgstr: "Es gibt einen leichteren Weg um eine größere Gruppe von Elementen während des browsens der Tabellenzeilen auszuwählen. Wähle die erste der auszuwählenden Zeilen aus, halte die Shift-Taste fest und wähle die letzte Zeile des zu markierenden Bereiches aus. Alle Checkboxen zwischen den beiden Zeilen werden automatisch ausgewählt."
+
+msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
+msgstr: "Die Spalten der browse und query-Tabs sind veränderbar. Vergrössere oder verkleinere sie nach Wunsch."
+
+msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
+msgstr: "Die Loginseite basiert auf den Daten des Users root@localhost. Sie können die Standardwerte für den Datenbankbenutzer und Host in der config.php ändern."
+
+msgid: "Keyboard shortcuts"
+msgstr: "Tastenkürzel"
+
+msgid: "Press this key..."
+msgstr: "Drücken Sie diese Taste ..."
+
+msgid: "...and this will happen"
+msgstr: "... und das wird passieren"
+
+msgid: "select none"
+msgstr: "nichts wählen"
+
+msgid: "edit selected items"
+msgstr: "ausgewählte Elemente ändern"
+
+msgid: "delete selected items"
+msgstr: "ausgewählte Elemente löschen"
+
+msgid: "refresh page"
+msgstr: "Seite neu laden"
+
+msgid: "load the query tab"
+msgstr: "den Query-Tab laden"
+
+msgid: "browse tab - go to first page of results"
+msgstr: "Browser Tab - gehe zur ersten Ergebnisseite"
+
+msgid: "browse tab - go to last page of results"
+msgstr: "Browser Tab - gehe zu letzten Ergebnisseite"
+
+msgid: "browse tab - go to previous page of results"
+msgstr: "Browser Tab - gehe zur vorherigen Ergebnisseite"
+
+msgid: "browse tab - go to next page of results"
+msgstr: "Browser Tab - gehe zur nächsten Ergebnisseite"
+
+msgid: "optimize selected tables"
+msgstr: "ausgewählte Tabellen optimieren"
+
+msgid: "Choose a .sql file to import"
+msgstr: "Wähle zum einlesen eine .sql Datei"
+
+msgid: "File
+"
+msgstr: "Datei"
+
+msgid: "Ignore first line"
+msgstr: "Erste Reihe ignorieren"
+
+msgid: "Edit"
+msgstr: "Bearbeiten"
+
+msgid: "Refresh"
+msgstr: "Neu laden"
+
+msgid: "No primary key defined"
+msgstr: "Kein Primärschlüssel definiert"
+
+msgid: "First"
+msgstr: "Erste"
+
+msgid: "Prev"
+msgstr: "Voherige"
+
+msgid: "Next"
+msgstr: "Nächste"
+
+msgid: "Last"
+msgstr: "Letzte"
+
+msgid: "Your query returned %d result"
+msgid_plural: "Your query returned %d results"
+msgstr[0]: "Abfrage hatte %d Reihen"
+msgstr[1]: "Abfrage hatte %d Reihen"
+
+msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
+msgstr: "Merke: Um eine Browsercrash zu verhindern, werden nur die ersten %d Reihen angezeigt"
+
+msgid: "binary data"
+msgstr: "Binärdaten"
+
+msgid: "Your query affected %d rows"
+msgstr: "Abfrage betraf %d Reihen"
+
+msgid: "Your query did not return any results"
+msgstr: "Abfrage gab keine Reihen zurück"
+
+msgid: "Your data has been inserted into the database"
+msgstr: "Daten in Datenbank gespeichert"
+
+msgid: "There was a bit of trouble locating the \"%s\" table"
+msgstr: "Tabelle \"%s\" existiert nicht"
+
+msgid: "There was a problem logging you in"
+msgstr: "Fehler beim login"
+
+msgid: "Login"
+msgstr: "Login"
+
+msgid: "Unsupported browser"
+msgstr: "Ununtersützter Browser"
+
+msgid: "Help!"
+msgstr: "Hilfe!"
+
+msgid: "Your session has timed out. Please login again."
+msgstr: "Session ausgelaufen. Bitte erneut einloggen."
+
+msgid: "Username"
+msgstr: "Benutzername"
+
+msgid: "Password"
+msgstr: "Passwort"
+
+msgid: "Run a query on the %s database"
+msgstr: "Abfrage in %s (Datenbank) laufen lassen"
+
+msgid: "Columns"
+msgstr: "Tabellenspalte"
+
+msgid: "Add a column"
+msgstr: "Neue Tabellenspalte"
+
+msgid: "Insert this column"
+msgstr: "Tabellenspalte hinzufügen"
+
+msgid: "At end of table"
+msgstr: "An das Ende der Tabelle"
+
+msgid: "At beginning of table"
+msgstr: "An den Anfang der Tabelle"
+
+msgid: "After"
+msgstr: "Nach"
+
+msgid: "Edit table"
+msgstr: "Tabelle bearbeiten"
+
+msgid: "Indexes"
+msgstr: "Indizes"
+
+msgid: "Add an index"
+msgstr: "Index hinzufügen"
+
+msgid: "Column(s)"
+msgstr: "Tabellenspalte(n)"
+
+msgid: "Show %d more..."
+msgstr: "%d mehr anzeigen..."
+
+msgid: "Empty table"
+msgstr: "Tabelle leeren"
+
+msgid: "Drop table"
+msgstr: "Tabelle löschen"
+
+msgid: "Optimize table"
+msgstr: "Tabelle optimieren"
+
+msgid: "Table Information"
+msgstr: "Tabelleninformation"
+
+msgid: "Host"
+msgstr: "Host"
+
+msgid: "Add a new user"
+msgstr: "Neuen Bentuzer erstellen"
+
+msgid: "Enter in the format: ('1','2')"
+msgstr: "Im Format ('1','2') eingeben"
+
+msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
+msgstr: "Sind Sie sicher, dass Sie die Tabelle '%s' leeren wollen? Dies wird alle Daten der Tabelle unwiderruflich löschen. Folgende Frage wird gelaufen:"
+
+msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
+msgstr: "Sind Sie sicher, dass Sie die Tabelle '%s' löschen wollen? Dies wird alle Daten der Tabelle und die Tabelle unwiderruflich löschen. Folgende Frage wird gelaufen:"
+
+msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
+msgstr: "Sind Sie sicher, dass Sie die Datenbank '%s' löschen wollen? Dies wird alle Tabellen, deren Daten und die Datenbank unwiderruflich löschen. Folgende Frage wird gelaufen:"
+
+msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
+msgstr: "Wir bitten um Verzeihung, aber momentan sind nur Internet Explorer 7, Firefox, Safari und Opera unterstützt."
+
+msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
+msgstr: "Sie haben Cookies nicht aktiviert. Sie müssen Cookies einschalten um sich einzuloggen."
+
+msgid: "Importing..."
+msgstr: "Importiere..."
+
+msgid: "Drop the '%s' database"
+msgstr: "Datenbank „%s“ löschen"
+
+msgid: "Okay"
+msgstr: "OK"
+
+msgid: "Cancel"
+msgstr: "Abbrechen"
+
+msgid: "Storage engine"
+msgstr: "Tabellenformat"
+
+msgid: "Language"
+msgstr: "Sprache"
+
+msgid: "%d statement was executed from the file"
+msgid_plural: "%d statements were executed from the file"
+msgstr[0]: "%d Anfrage von der Datei wurde ausgeführt"
+msgstr[1]: "%d Anfragen von der Datei wurden ausgeführt"
+
+msgid: "%d row was inserted into the database from the file"
+msgid_plural: "%d rows were inserted into the database from the file"
+msgstr[0]: "%d Zeile wurden aus der Datei in die Datenbank eingefügt"
+msgstr[1]: "%d Zeilen wurden aus der Datei in die Datenbank eingefügt"
+
+msgid: "%d row had to be skipped because the number of values was incorrect"
+msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
+msgstr[0]: "%d Zeile wurde übersprungen, weil die Anzahl der Werte nicht korrekt waren"
+msgstr[1]: "%d Zeilen wurden übersprungen, weil die Anzahl der Werte nicht korrekt waren"
+
+msgid: "Theme"
+msgstr: ""

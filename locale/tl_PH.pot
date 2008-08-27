@@ -1,0 +1,631 @@
+Language: Tagalog
+Language-Code: tl_PH
+Build-Date: Sun, 17 Aug 2008 18:48:13 -0600
+
+msgid: "Either the file could not be read or it was empty"
+msgstr: "Ang file ay hindi mabasa o walang laman"
+
+msgid: "MySQL reported the following errors"
+msgstr: "Ang MySQL ay nagkapagtala ng mga sumusunod na pagkakamali"
+
+msgid: "Error performing operation"
+msgstr: "Nagkaroon ng problema habang isinasagawa ang operasyon"
+
+msgid: "All"
+msgstr: "Lahat"
+
+msgid: "None"
+msgstr: "Wala"
+
+msgid: "With selected"
+msgstr: "Mga Napili"
+
+msgid: "Empty"
+msgstr: "Walang Laman"
+
+msgid: "Drop"
+msgstr: "Tanggalin"
+
+msgid: "Optimize"
+msgstr: "Pabilisin"
+
+msgid: "Table"
+msgstr: "Talaan"
+
+msgid: "Rows"
+msgstr: "Hanay"
+
+msgid: "Size"
+msgstr: "Laki"
+
+msgid: "Overhead"
+msgstr: "Sobra"
+
+msgid: "Options"
+msgstr: "Pagpipilian"
+
+msgid: "Edit database"
+msgstr: "Baguhin ang database"
+
+msgid: "Charset"
+msgstr: "Tala-titikan"
+
+msgid: "Submit"
+msgstr: "Ipasa"
+
+msgid: "Create a new table"
+msgstr: "Gumawa ng bagong talaan"
+
+msgid: "Name"
+msgstr: "Pangalan"
+
+msgid: "Setup the fields for the table below"
+msgstr: "Ayusin ang mga fields ng talaan sa ilalim"
+
+msgid: "New field"
+msgstr: "Bagong field"
+
+msgid: "Type"
+msgstr: "Uri"
+
+msgid: "Values"
+msgstr: "Halaga"
+
+msgid: "Key"
+msgstr: "Palatandaan"
+
+msgid: "primary"
+msgstr: "Pangunahing"
+
+msgid: "unique"
+msgstr: "Walang Magkapareho"
+
+msgid: "index"
+msgstr: "Index"
+
+msgid: "Default"
+msgstr: "Default"
+
+msgid: "Other"
+msgstr: "Iba"
+
+msgid: "Unsigned"
+msgstr: "Walang negatibo"
+
+msgid: "Binary"
+msgstr: "Binary"
+
+msgid: "Not Null"
+msgstr: "May Laman"
+
+msgid: "Auto Increment"
+msgstr: "Kusang nagdadagdag"
+
+msgid: "Add field"
+msgstr: "Magdagdag ng field"
+
+msgid: "Oops"
+msgstr: "Naku"
+
+msgid: "For some reason, the database parameter was not included with your request"
+msgstr: "Sa hindi malamang dahilan ay hindi nasama ang parameter ng database sa iyong ipinasa"
+
+msgid: "Save changes to original"
+msgstr: "Ibalik sa orihinal"
+
+msgid: "Insert as new row"
+msgstr: "Magdagdag ng bagong hanay"
+
+msgid: "Save"
+msgstr: "Itago"
+
+msgid: "User"
+msgstr: "Gumagamit"
+
+msgid: "All privileges"
+msgstr: "Lahat ng pribilehiyo"
+
+msgid: "Selected privileges"
+msgstr: "Nakapiling pribilehiyo"
+
+msgid: "User privileges"
+msgstr: "Pribilehiyo ng gumagamit"
+
+msgid: "Select"
+msgstr: "Pili"
+
+msgid: "Insert"
+msgstr: "Idagdag"
+
+msgid: "Update"
+msgstr: "Baguhin"
+
+msgid: "Delete"
+msgstr: "Tanggalin"
+
+msgid: "Alter"
+msgstr: "Palitan"
+
+msgid: "Create"
+msgstr: "Gumawa"
+
+msgid: "Temp tables"
+msgstr: "Pansamantalang talaan"
+
+msgid: "Administrator privileges"
+msgstr: "Pribilehiyo ng Administrator"
+
+msgid: "File"
+msgstr: "Fayl"
+
+msgid: "Process"
+msgstr: "Proseso"
+
+msgid: "Reload"
+msgstr: "Kasahin"
+
+msgid: "Shutdown"
+msgstr: "Patayin"
+
+msgid: "Super"
+msgstr: "Pinaka"
+
+msgid: "Grant option"
+msgstr: "Bigyan ng pribilehiyo"
+
+msgid: "User not found!"
+msgstr: "Walang ganoong gumagamit!"
+
+msgid: "You must export either structure, data, or both"
+msgstr: "Ang ie-eksport dapat ay istraktura, datos o pareho"
+
+msgid: "Please select the databases that you would like to export"
+msgstr: "Piliin ang mga database na gustong i-eksport"
+
+msgid: "Please select the tables that you would like to export"
+msgstr: "Piliin ang mga talaan na gustong i-eksport"
+
+msgid: "Table `%s` is empty"
+msgstr: "Ang talaan na `%s` ay walang laman"
+
+msgid: "Results"
+msgstr: "Mga Resulta"
+
+msgid: "Select all"
+msgstr: "Piliin lahat"
+
+msgid: "The file could not be opened"
+msgstr: "Hindi mabuksan ang file"
+
+msgid: "Could not write to file"
+msgstr: "Hindi malagyan ng laman ang file"
+
+msgid: "Successfully wrote content to file"
+msgstr: "Nalagyan ng laman ang file"
+
+msgid: "Download"
+msgstr: "Download"
+
+msgid: "Note
+"
+msgstr: "Tandaan"
+
+msgid: "If this is a public server, you should delete this file from the server after you download it"
+msgstr: "Kung ito ay pampublikong server, nararapat na burahin ang file na ito pagkatapos i-download"
+
+msgid: "Export"
+msgstr: "Eksport"
+
+msgid: "Tables"
+msgstr: "Mga Talaan"
+
+msgid: "Databases"
+msgstr: "Mga Database"
+
+msgid: "Format"
+msgstr: "Porma"
+
+msgid: "SQL"
+msgstr: "SQL"
+
+msgid: "CSV"
+msgstr: "CSV"
+
+msgid: "Structure"
+msgstr: "Istraktura"
+
+msgid: "Data"
+msgstr: "Datos"
+
+msgid: "Compact inserts"
+msgstr: "Pinaikling porma ng pag-insert"
+
+msgid: "Complete inserts"
+msgstr: "Kumpletong porma ng pag-insert"
+
+msgid: "Delimiter"
+msgstr: "Tagahati"
+
+msgid: "Comma"
+msgstr: "Kuwit"
+
+msgid: "Tab"
+msgstr: "Tab"
+
+msgid: "Semicolon"
+msgstr: "Tuldok-kuwit"
+
+msgid: "Space"
+msgstr: "Puwang"
+
+msgid: "Print field names on first line"
+msgstr: "Ilagay ang mga pangalan ng fields sa unang linya"
+
+msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
+msgstr: "Kung ikaw ay mag-eeksport ng napakaraming row, nirerekomenda na ilabas mo ang mga resulta sa isang text fayl"
+
+msgid: "Output to"
+msgstr: "Ilabas sa"
+
+msgid: "Browser"
+msgstr: "Browser"
+
+msgid: "Text file"
+msgstr: "Text fayl"
+
+msgid: "Home"
+msgstr: "Tahanan"
+
+msgid: "Users"
+msgstr: "Mga gumagamit"
+
+msgid: "Query"
+msgstr: "Query"
+
+msgid: "Import"
+msgstr: "Ipapasok"
+
+msgid: "Overview"
+msgstr: "Nilalaman"
+
+msgid: "Browse"
+msgstr: "Tingnan"
+
+msgid: "Your changes were saved to the database"
+msgstr: "Ang iyong mga binago ay naitala na sa database"
+
+msgid: "delete this row"
+msgstr: "tanggalin itong hanay"
+
+msgid: "delete these rows"
+msgstr: "tanggalin itong mga hanay"
+
+msgid: "empty this table"
+msgstr: "tanggalin ang laman ng talaan"
+
+msgid: "empty these tables"
+msgstr: "tanggalin ang laman ng mga talaan"
+
+msgid: "drop this table"
+msgstr: "tanggalin ang talaan"
+
+msgid: "drop these tables"
+msgstr: "tanggalin ang mga talaan"
+
+msgid: "delete this column"
+msgstr: "tanggalin ang column"
+
+msgid: "delete these columns"
+msgstr: "tanggalin ang mga column"
+
+msgid: "delete this index"
+msgstr: "tanggalin ang index"
+
+msgid: "delete this indexes"
+msgstr: "tanggalin ang mga index"
+
+msgid: "delete this user"
+msgstr: "burahin ang gumagamit"
+
+msgid: "delete this users"
+msgstr: "burahin ang mga gumagamit"
+
+msgid: "Are you sure you want to"
+msgstr: "Sigurado ka ba na"
+
+msgid: "The following query will be run:"
+msgstr: "Ang sumusunod na query ay isasagawa"
+
+msgid: "The following queries will be run:"
+msgstr: "Ang mga sumusunod na query ay isasagawa"
+
+msgid: "Confirm"
+msgstr: "Siguraduhin"
+
+msgid: "Successfully saved changes"
+msgstr: "Naging matagumpay sa pagbabago."
+
+msgid: "Full Text"
+msgstr: "Full Text"
+
+msgid: "Loading..."
+msgstr: "Naghahanda..."
+
+msgid: "Error"
+msgstr: "Mali"
+
+msgid: "There was an error receiving data from the server"
+msgstr: "Nagkakaroon ng problema habang tinatanggap ang datos mula sa server"
+
+msgid: "Logout"
+msgstr: "Lumabas"
+
+msgid: "For some reason, the table parameter was not included with your request"
+msgstr: "Sa hindi malamang dahilan ay hindi nasama ang parameter ng talaan sa iyong ipinasa"
+
+msgid: "Welcome to SQL Buddy!"
+msgstr: "Mabuhay! Maligayang paggamit ng SQL Buddy"
+
+msgid: "You are connected to MySQL %s with the user %s."
+msgstr: "Ikaw ay nakakonekta sa MySQL %s na ang gumagamit ay si %s."
+
+msgid: "The database server has been running since %s and has transferred approximately %s of data."
+msgstr: "Ang database server ay tumatakbo mula ng %s at nakapaglipat ng humigit kumulang na %s laki ng datos."
+
+msgid: "A new version of SQL Buddy is available!"
+msgstr: "May bagong bersyon ng SQL Buddy na inilabas"
+
+msgid: "You have SQL Buddy %s installed and %s is now available."
+msgstr: "Mayroon kang %s SQL Buddy na nakainstala at %s ang maaring gamitin."
+
+msgid: "Getting started"
+msgstr: "Panimula"
+
+msgid: "Help"
+msgstr: "Tulong"
+
+msgid: "Translations"
+msgstr: "ibang salin"
+
+msgid: "Release Notes"
+msgstr: "Mga importanteng bagay sa bersyong ito"
+
+msgid: "Contact"
+msgstr: "Kontak"
+
+msgid: "Create a new database"
+msgstr: "Gumawa ng bagong database"
+
+msgid: "Did you know..."
+msgstr: "Alam mo ba..."
+
+msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
+msgstr: "Mayroong mas madaling paraan upang makapili ng madaming hanay. Lagyan ng tsek ang unang hanay, habang nakapindot ang pindutang Shift at lagyan ng tsek ang huling hanay. Malalagyan ng tsek ng kusa ang mga nasa gitna ng dalawang piniling hanay."
+
+msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
+msgstr: "Maaari mong baguhin ang lapad ng mga kolum sa Browse at Query Tabs. Maaari mong gawing mas makipot o mas malapad ang mga ito."
+
+msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
+msgstr: "Ang login page ay base sa default na gumagamit na root@localhost. Sa pamamagitan ng pagbabago ng fayl na config.php, maaari mong palitan ang default na gumagamit at host ng kahit anong nais mo."
+
+msgid: "Keyboard shortcuts"
+msgstr: "Mga shortcut sa keyboard"
+
+msgid: "Press this key..."
+msgstr: "Pindutin itong key..."
+
+msgid: "...and this will happen"
+msgstr: "...at mangyayari ito"
+
+msgid: "select none"
+msgstr: "walang piliin"
+
+msgid: "edit selected items"
+msgstr: "baguhin ang mga napiling bagay"
+
+msgid: "delete selected items"
+msgstr: "burahin ang mga napiling bagay"
+
+msgid: "refresh page"
+msgstr: "sariwain ang pahina"
+
+msgid: "load the query tab"
+msgstr: "i-load ang query tab"
+
+msgid: "browse tab - go to first page of results"
+msgstr: "tingnan - pumunta sa unang pahina ng resulta"
+
+msgid: "browse tab - go to last page of results"
+msgstr: "tingnan - pumunta sa huling pahina ng resulta"
+
+msgid: "browse tab - go to previous page of results"
+msgstr: "tingnan - pumunta sa nakaraang pahina ng resulta"
+
+msgid: "browse tab - go to next page of results"
+msgstr: "tingnan - pumunta sa susunod pahina ng resulta"
+
+msgid: "optimize selected tables"
+msgstr: "pabilisin ang piniling talaan"
+
+msgid: "Choose a .sql file to import"
+msgstr: "Mamili ng ipapasok na .sql file "
+
+msgid: "File
+"
+msgstr: "File:"
+
+msgid: "Ignore first line"
+msgstr: "Baliwalain ang unang linya"
+
+msgid: "Edit"
+msgstr: "Baguhin"
+
+msgid: "Refresh"
+msgstr: "Kasahin"
+
+msgid: "No primary key defined"
+msgstr: "Walang panguhahing palatandaan binigay"
+
+msgid: "First"
+msgstr: "Una"
+
+msgid: "Prev"
+msgstr: "Balik"
+
+msgid: "Next"
+msgstr: "Sunod"
+
+msgid: "Last"
+msgstr: "Huli"
+
+msgid: "Your query returned %d result"
+msgid_plural: "Your query returned %d results"
+msgstr[0]: "Ang iyong query ay nagtala ng %d na resulta"
+msgstr[1]: "Ang iyong query ay nagtala ng %d na resulta"
+
+msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
+msgstr: "Tandaan: Upang hindi mahirapan ang iyong browser, inilabas lamang ang unang %d resulta"
+
+msgid: "binary data"
+msgstr: "datos na binary"
+
+msgid: "Your query affected %d rows"
+msgstr: "Ang iyong query ay nakaapekto ng %d na hanay"
+
+msgid: "Your query did not return any results"
+msgstr: "Ang iyong query ay hindi nagtala ng resulta"
+
+msgid: "Your data has been inserted into the database"
+msgstr: "Ang iyong datos ay naipasok na sa database"
+
+msgid: "There was a bit of trouble locating the \"%s\" table"
+msgstr: "Nagkaproblema sa paghanap sa \"%s\" na talaan"
+
+msgid: "There was a problem logging you in"
+msgstr: "Nagkaproblema sa iyong pagpasok"
+
+msgid: "Login"
+msgstr: "Pumasok"
+
+msgid: "Unsupported browser"
+msgstr: "Hindi suportado ang browser"
+
+msgid: "Help!"
+msgstr: "Tulong!"
+
+msgid: "Your session has timed out. Please login again."
+msgstr: "Ang iyong session ay lumagpas na sa itinakdang oras. Maaari kang pumasok muli."
+
+msgid: "Username"
+msgstr: "Username"
+
+msgid: "Password"
+msgstr: "Paniguru"
+
+msgid: "Run a query on the %s database"
+msgstr: "Magsagawa ng query sa %s database"
+
+msgid: "Columns"
+msgstr: "Mga Kolum"
+
+msgid: "Add a column"
+msgstr: "Magdagdag ng kolum"
+
+msgid: "Insert this column"
+msgstr: "Ipasok itong kolum"
+
+msgid: "At end of table"
+msgstr: "Sa dulo ng talaan"
+
+msgid: "At beginning of table"
+msgstr: "Sa unahan ng talaan"
+
+msgid: "After"
+msgstr: "Pagkatapos"
+
+msgid: "Edit table"
+msgstr: "Baguhin ang talaan"
+
+msgid: "Indexes"
+msgstr: "Mga index"
+
+msgid: "Add an index"
+msgstr: "Magdagdag ng index"
+
+msgid: "Column(s)"
+msgstr: "(Mga) Kolum"
+
+msgid: "Show %d more..."
+msgstr: "Magpakita pa ng %d..."
+
+msgid: "Empty table"
+msgstr: "Tanggalin ang laman ng talaan"
+
+msgid: "Drop table"
+msgstr: "Tanggalin ang talaan"
+
+msgid: "Optimize table"
+msgstr: "Pabilisin ang talaan"
+
+msgid: "Table Information"
+msgstr: "impormasyon ng talaan"
+
+msgid: "Host"
+msgstr: "Pinanggagalingan"
+
+msgid: "Add a new user"
+msgstr: "Magdagdag ng gagamit"
+
+msgid: "Enter in the format: ('1','2')"
+msgstr: "Ilagay sa porma na: ('1','2')"
+
+msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
+msgstr: "Sigurado ka bang gusto mong tanggalin ang laman ng talaang '%s'? Buburahin nito ang lahat ng datos ng talaan. Ang sumusunod na query ang gagawin:"
+
+msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
+msgstr: "Sigurado ka bang gusto mong tanggalin ang talaang '%s'? Buburahin nito ang talaan pati na ang lahat ng datos nito. Ang sumusunod na query ang gagawin:"
+
+msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
+msgstr: "Sigurado ka bang gusto mong tanggalin ang database na '%s'? Buburahin nito ang database, ang mga talaan sa loob ng database, at ang mga datos sa loob ng mga talaaan. Ang sumusunod na query ang gagawin: "
+
+msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
+msgstr: "Ipagpaumanhin ninyo, tanging Internet Explorer 7 lamang ang maaaring gamitin. Mada-download ito nang libre mula sa website ng Microsoft. Maaari rin kayong gumamit ng ibang libreng browser gaya ng Firefox, Safari at Opera."
+
+msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
+msgstr: "Mukhang hindi gumagamit ng cookies ang inyong browser. Upang umandar ang sessions, kinakailangang gumamit ng cookies."
+
+msgid: "Importing..."
+msgstr: "Iniimport na..."
+
+msgid: "Drop the '%s' database"
+msgstr: "Idrop ang '%s' na database"
+
+msgid: "Okay"
+msgstr: "Ayos"
+
+msgid: "Cancel"
+msgstr: "Kansela"
+
+msgid: "Storage engine"
+msgstr: "Storage engine"
+
+msgid: "Language"
+msgstr: "Linguahe"
+
+msgid: "%d statement was executed from the file"
+msgid_plural: "%d statements were executed from the file"
+msgstr[0]: ""
+msgstr[1]: ""
+
+msgid: "%d row was inserted into the database from the file"
+msgid_plural: "%d rows were inserted into the database from the file"
+msgstr[0]: ""
+msgstr[1]: ""
+
+msgid: "%d row had to be skipped because the number of values was incorrect"
+msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
+msgstr[0]: ""
+msgstr[1]: ""
+
+msgid: "Theme"
+msgstr: ""
