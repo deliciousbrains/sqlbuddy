@@ -50,7 +50,7 @@ if (isset($host) && isset($user) && isset($pass))
 		$_SESSION['SB_LOGIN_USER'] = $user;
 		$_SESSION['SB_LOGIN_PASS'] = $pass;
 		
-		$path = $_SERVER["SCRIPT_URL"];
+		$path = $_SERVER["SCRIPT_NAME"];
 		$pathSplit = explode("/", $path);
 		
 		$redirect = "";
