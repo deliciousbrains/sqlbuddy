@@ -112,7 +112,7 @@ if (isset($mysqlError))
 
 ?>
 
-<table cellpadding="0" class="dboverview" width="700" style="margin: 5px 7px 0">
+<table cellpadding="0" class="dboverview" width="750" style="margin: 5px 7px 0">
 <tr>
 <td>
 
