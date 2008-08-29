@@ -4,7 +4,7 @@
 SQL Buddy - Web based MySQL administration
 http://www.sqlbuddy.com/
 
-gettext.php
+gettextreader.php
 - translation file reader
 
 MIT license
