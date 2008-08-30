@@ -22,10 +22,10 @@ if (isset($_SESSION['SB_LOGIN']))
 	unset($GLOBALS['_SESSION']['SB_LOGIN']);
 }
 
-if (isset($_SESSION['SB_LOGIN_HOST']))
+if (isset($_SESSION['SB_LOGIN_STRING']))
 {
-	$_SESSION['SB_LOGIN_HOST'] = null;
-	unset($GLOBALS['_SESSION']['SB_LOGIN_HOST']);
+	$_SESSION['SB_LOGIN_STRING'] = null;
+	unset($GLOBALS['_SESSION']['SB_LOGIN_STRING']);
 }
 
 if (isset($_SESSION['SB_LOGIN_USER']))
@@ -38,12 +38,6 @@ if (isset($_SESSION['SB_LOGIN_PASS']))
 {
 	$_SESSION['SB_LOGIN_PASS'] = null;
 	unset($GLOBALS['_SESSION']['SB_LOGIN_PASS']);
-}
-
-if (isset($_SESSION['SB_HOME_CACHE']))
-{
-	$_SESSION['SB_HOME_CACHE'] = null;
-	unset($GLOBALS['_SESSION']['SB_HOME_CACHE']);
 }
 
 header("Location: login.php");

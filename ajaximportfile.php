@@ -18,7 +18,7 @@ include "functions.php";
 loginCheck();
 
 if (isset($db))
-	mysql_select_db($db);
+	$conn->selectDB($db);
 
 function stripCommentLines($in)
 {
@@ -50,10 +50,10 @@ if (isset($_POST) || isset($_FILES))
 	{
 		$columnCount = 0;
 		
-		$structureSQL = mysql_query("DESCRIBE `$table`");
-		if (@mysql_num_rows($structureSQL))
+		$structureSQL = $conn->query("DESCRIBE `$table`");
+		if (@$conn->rowCount($structureSQL))
 		{
-			while ($structureRow = mysql_fetch_assoc($structureSQL))
+			while ($structureRow = $conn->fetchAssoc($structureSQL))
 			{
 				$columnCount++;
 			}
@@ -103,9 +103,9 @@ if (isset($_POST) || isset($_FILES))
 			{
 				if (isset($format) && $format == "SQL")
 				{
-					mysql_query($statement) or ($mysqlErrors[] = mysql_error());
+					$conn->query($statement) or ($mysqlErrors[] = $conn->error());
 					
-					$affected = (int)(@mysql_affected_rows());
+					$affected = (int)(@$conn->affectedRows());
 					$insertCount += $affected;
 				}
 				else if (isset($format) && $format == "CSV" && isset($table))
@@ -119,7 +119,7 @@ if (isset($_POST) || isset($_FILES))
 						for ($i=0; $i<sizeof($rawValues); $i++)
 						{
 							$rawValues[$i] = str_replace('""', '"', $rawValues[$i]);
-							$rawValues[$i] = mysql_real_escape_string($rawValues[$i]);
+							$rawValues[$i] = $conn->escapeString($rawValues[$i]);
 						}
 						
 						$values = implode("','", $rawValues);
@@ -127,9 +127,9 @@ if (isset($_POST) || isset($_FILES))
 						// make sure that the counts match up
 						if (sizeof($rawValues) == $columnCount)
 						{
-							mysql_query("INSERT INTO `$table` VALUES ('$values')") or ($mysqlErrors[] = mysql_error());
+							$conn->query("INSERT INTO `$table` VALUES ('$values')") or ($mysqlErrors[] = $conn->error());
 							
-							$affected = (int)(@mysql_affected_rows());
+							$affected = (int)(@$conn->affectedRows());
 							
 							$insertCount += $affected;
 						}

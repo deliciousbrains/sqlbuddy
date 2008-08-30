@@ -29,22 +29,21 @@ loginCheck();
 	
 	<?php
 	
-	$version = mysql_get_server_info();
+	$message = "";
 	
-	$version = explode("-", $version);
+	$version = $conn->getVersion();
 	
-	if (isset($_SESSION['SB_LOGIN_USER']) && isset($_SESSION['SB_LOGIN_HOST']))
+	if (isset($_SESSION['SB_LOGIN_USER']))
 	{
-		$userName = $_SESSION['SB_LOGIN_USER'] . "@" . $_SESSION['SB_LOGIN_HOST'];
-		$message = sprintf(__("You are connected to MySQL %s with the user %s."), $version[0], $userName);
+		$message = sprintf(__("You are connected to MySQL %s with the user %s."), $version, $_SESSION['SB_LOGIN_USER']);
 	}
 		
-	$statusSql = mysql_query("SHOW STATUS");
+	$statusSql = $conn->query("SHOW STATUS");
 	
-	if (@mysql_num_rows($statusSql))
+	if (@$conn->rowCount($statusSql))
 	{
 		
-		while ($statusRow = mysql_fetch_assoc($statusSql))
+		while ($statusRow = $conn->fetchAssoc($statusSql))
 		{
 			$varn = $statusRow['Variable_name'];
 			if ($varn == "Uptime" || $varn == "Bytes_sent" || $varn == "Bytes_received")
@@ -234,11 +233,11 @@ if (function_exists("curl_init") && isset($sbconfig['EnableUpdateCheck']) && $sb
 		echo "<select id=\"DBCHARSET\">";
 		echo "<option></option>";
 		
-		$defaultCharSql = mysql_query("SHOW VARIABLES LIKE 'character_set_server'");
+		$defaultCharSql = $conn->query("SHOW VARIABLES LIKE 'character_set_server'");
 		
-		if (@mysql_num_rows($defaultCharSql))
+		if (@$conn->rowCount($defaultCharSql))
 		{
-			$defaultCharset = mysql_result($defaultCharSql, 0, "Value");
+			$defaultCharset = $conn->result($defaultCharSql, 0, "Value");
 		}
 		
 		foreach ($charsetList as $charset)

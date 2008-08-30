@@ -102,11 +102,10 @@ if ($_POST)
 		if ($format == "SQL")
 		{
 			
-			$version = mysql_get_server_info();
-			$version = explode("-", $version);
+			$version = $conn->getVersion();
 			
 			$outputBuffer .= "--\r\n";
-			$outputBuffer .= "-- MySQL " . $version[0] . "\r\n";
+			$outputBuffer .= "-- MySQL " . $version . "\r\n";
 			$outputBuffer .= "-- " . date("r") . "\r\n";
 			$outputBuffer .= "--\r\n\r\n";
 		}
@@ -114,7 +113,7 @@ if ($_POST)
 		foreach ($dbs as $d)
 		{
 			
-			mysql_select_db($d);
+			$conn->selectDB($d);
 			
 			// this checks to see if we are exporting an entire db with all tables
 			if (isset($exportDb) && $exportDb == true)
@@ -126,11 +125,11 @@ if ($_POST)
 					$outputBuffer .= "CREATE DATABASE `$d`";
 					
 					$currentChar = "";
-					$currentCharSql = mysql_query("SHOW VARIABLES LIKE 'character_set_database'");
+					$currentCharSql = $conn->query("SHOW VARIABLES LIKE 'character_set_database'");
 					
-					if (@mysql_num_rows($currentCharSql))
+					if (@$conn->rowCount($currentCharSql))
 					{
-						$currentChar = mysql_result($currentCharSql, 0, "Value");
+						$currentChar = $conn->result($currentCharSql, 0, "Value");
 						
 						$outputBuffer .= " DEFAULT CHARSET " . $currentChar;
 					}
@@ -141,13 +140,13 @@ if ($_POST)
 					
 				}
 				
-				$tableSql = mysql_query("SHOW TABLES");
+				$tableSql = $conn->query("SHOW TABLES");
 				
 				$tables = "";
 				
-				if (@mysql_num_rows($tableSql))
+				if (@$conn->rowCount($tableSql))
 				{
-					while ($tableRow = mysql_fetch_row($tableSql))
+					while ($tableRow = $conn->fetchArray($tableSql))
 					{
 						$tables[] = $tableRow[0];
 					}
@@ -160,7 +159,7 @@ if ($_POST)
 				if ($format == "SQL")
 				{
 					
-					$structureSQL = mysql_query("SHOW FULL FIELDS FROM `$t`");
+					$structureSQL = $conn->query("SHOW FULL FIELDS FROM `$t`");
 					
 					$tableEngine = "";
 					$tableCharset = "";
@@ -168,17 +167,17 @@ if ($_POST)
 					if (isset($exportStructure))
 					{
 						
-						if (@mysql_num_rows($structureSQL))
+						if (@$conn->rowCount($structureSQL))
 						{
 							
 							$outputBuffer .= "CREATE TABLE `$t` (";
 							
-							$infoSql = mysql_query("SHOW TABLE STATUS LIKE '$t'");
+							$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$t'");
 							
-							if (@mysql_num_rows($infoSql) == 1)
+							if (@$conn->rowCount($infoSql) == 1)
 							{
 								
-								$infoRow = mysql_fetch_assoc($infoSql);
+								$infoRow = $conn->fetchAssoc($infoSql);
 								
 								$tableEngine = (array_key_exists("Type", $infoRow)) ? $infoRow['Type'] : $infoRow['Engine'];
 								
@@ -191,7 +190,7 @@ if ($_POST)
 							
 							$first = true;
 							
-							while ($structureRow = mysql_fetch_assoc($structureSQL))
+							while ($structureRow = $conn->fetchAssoc($structureSQL))
 							{
 								if (!$first)
 									$outputBuffer .= ",";
@@ -225,12 +224,12 @@ if ($_POST)
 							}
 							
 							// dont forget about the keys
-							$keySQL = mysql_query("SHOW INDEX FROM `$t`");
+							$keySQL = $conn->query("SHOW INDEX FROM `$t`");
 							
-							if (@mysql_num_rows($keySQL))
+							if (@$conn->rowCount($keySQL))
 							{
 								$currentKey = "";
-								while ($keyRow = mysql_fetch_assoc($keySQL))
+								while ($keyRow = $conn->fetchAssoc($keySQL))
 								{
 									// if this is the start of a key
 									if ($keyRow['Key_name'] != $currentKey)
@@ -277,18 +276,18 @@ if ($_POST)
 						}
 					}
 					
-					@mysql_data_seek($structureSQL, 0);
+					@$conn->dataSeek($structureSQL, 0);
 					
 					if (isset($exportData))
 					{
-						$dataSQL = mysql_query("SELECT * FROM `$t`");
+						$dataSQL = $conn->query("SELECT * FROM `$t`");
 						
 						$columnList = array();
 						
 						// put the column names in an array
-						if (@mysql_num_rows($structureSQL))
+						if (@$conn->rowCount($structureSQL))
 						{
-							while ($structureRow = mysql_fetch_assoc($structureSQL))
+							while ($structureRow = $conn->fetchAssoc($structureSQL))
 							{
 								$columnList[] = $structureRow['Field'];
 								$type[] = $structureRow['Type'];
@@ -297,7 +296,7 @@ if ($_POST)
 						
 						$columnImplosion = implode("`, `", $columnList);
 						
-						if (@mysql_num_rows($dataSQL))
+						if (@$conn->rowCount($dataSQL))
 						{
 							
 							if ($insertType == "COMPACT")
@@ -305,7 +304,7 @@ if ($_POST)
 							
 							$firstLine = true;
 							
-							while ($dataRow = mysql_fetch_assoc($dataSQL))
+							while ($dataRow = $conn->fetchAssoc($dataSQL))
 							{
 								
 								if ($insertType == "COMPLETE")
@@ -368,12 +367,12 @@ if ($_POST)
 					
 					if (isset($printFieldnames))
 					{
-						$structureSQL = mysql_query("DESCRIBE `$t`");
+						$structureSQL = $conn->query("DESCRIBE `$t`");
 							
-						if (@mysql_num_rows($structureSQL))
+						if (@$conn->rowCount($structureSQL))
 						{
 							$first = true;
-							while ($structureRow = mysql_fetch_row($structureSQL))
+							while ($structureRow = $conn->fetchArray($structureSQL))
 							{
 								if (!$first)
 									$outputBuffer .= $delimiter;
@@ -386,11 +385,11 @@ if ($_POST)
 						}
 					}
 					
-					$dataSQL = mysql_query("SELECT * FROM `$t`");
+					$dataSQL = $conn->query("SELECT * FROM `$t`");
 					
-					if (@mysql_num_rows($dataSQL))
+					if (@$conn->rowCount($dataSQL))
 					{
-						while ($dataRow = mysql_fetch_row($dataSQL))
+						while ($dataRow = $conn->fetchArray($dataSQL))
 						{
 							$data = array(); // empty the array
 							foreach ($dataRow as $each)
@@ -474,13 +473,13 @@ if (isset($error))
 		<select name="EXPORTTABLE[]" id="exportTable" multiple="multiple" size="10">
 		<?php
 		
-		mysql_select_db($db);
+		$conn->selectDB($db);
 		
-		$tableSql = mysql_query("SHOW TABLES");
+		$tableSql = $conn->query("SHOW TABLES");
 		
-		if (@mysql_num_rows($tableSql))
+		if (@$conn->rowCount($tableSql))
 		{
-			while ($tableRow = mysql_fetch_row($tableSql))
+			while ($tableRow = $conn->fetchArray($tableSql))
 			{
 				echo '<option value="' . $tableRow[0] . '"';
 				
@@ -508,11 +507,11 @@ if (isset($error))
 		<select name="EXPORTDB[]" id="exportDb" multiple="multiple" size="10">
 		<?php
 		
-		$dbSql = mysql_query("SHOW DATABASES");
+		$dbSql = $conn->query("SHOW DATABASES");
 		
-		if (@mysql_num_rows($dbSql))
+		if (@$conn->rowCount($dbSql))
 		{
-			while ($dbRow = mysql_fetch_row($dbSql))
+			while ($dbRow = $conn->fetchArray($dbSql))
 			{
 				echo '<option value="' . $dbRow[0] . '"';
 				

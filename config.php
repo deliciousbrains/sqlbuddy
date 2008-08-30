@@ -14,8 +14,9 @@ MIT license
 */
 
 
-/* The values below are the ones displayed on the login.php page */
+/* The values below are for the login.php page */
 
+$sbconfig['DefaultAdapter'] = "mysql";
 $sbconfig['DefaultHost'] = "localhost";
 $sbconfig['DefaultUser'] = "root";
 

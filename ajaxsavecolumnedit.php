@@ -18,14 +18,14 @@ include "functions.php";
 loginCheck();
 
 if (isset($db))
-	mysql_select_db($db);
+	$conn->selectDB($db);
 
 
 if (isset($_POST['runQuery']))
 {
 	$query = $_POST['runQuery'];
 	
-	mysql_query($query) or ($mysqlError = mysql_error());
+	$conn->query($query) or ($mysqlError = $conn->error());
 	
 	echo "{\n";
 	echo "    \"formupdate\": \"" . $_GET['form'] . "\",\n";

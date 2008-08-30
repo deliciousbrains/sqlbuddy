@@ -20,7 +20,7 @@ loginCheck();
 requireDatabaseAndTableBeDefined();
 
 if (isset($db))
-	mysql_select_db($db);
+	$conn->selectDB($db);
 
 if (isset($_POST))
 {
@@ -45,7 +45,7 @@ if (isset($_POST))
 		
 		$indexQuery .= " (`" . $indexColumnList . "`)";
 		
-		mysql_query($indexQuery) or ($mysqlError = mysql_error());
+		$conn->query($indexQuery) or ($mysqlError = $conn->error());
 	}
 	
 	?>
@@ -67,7 +67,7 @@ if (isset($_POST['runQuery']))
 	foreach ($queryList as $query)
 	{
 		if (trim($query) != "")
-			mysql_query($query) or ($mysqlError = mysql_error());
+			$conn->query($query) or ($mysqlError = $conn->error());
 	}
 }
 
@@ -76,9 +76,9 @@ if (isset($mysqlError))
 	echo '<div class="errormessage" style="margin: 6px 12px 10px; width: 602px"><strong>' . __("Error performing operation") . '</strong><p>' . $mysqlError . '</p></div>';
 }
 
-$structureSql = mysql_query("DESCRIBE `$table`");
+$structureSql = $conn->query("DESCRIBE `$table`");
 
-if (@mysql_num_rows($structureSql))
+if (@$conn->rowCount($structureSql))
 {
 
 ?>
@@ -129,7 +129,7 @@ if (@mysql_num_rows($structureSql))
 	
 	$m = 0;
 	
-	while ($structureRow = mysql_fetch_array($structureSql))
+	while ($structureRow = $conn->fetchAssoc($structureSql))
 	{
 		echo '<dl class="manip';
 		
@@ -143,15 +143,15 @@ if (@mysql_num_rows($structureSql))
 	
 	echo '</div>';
 	
-	mysql_data_seek($structureSql, 0);
+	$conn->dataSeek($structureSql, 0);
 	
 	echo '<div class="gridscroll withchecks" style="overflow-x: hidden; max-height: 300px">';
 	
 	$m = 0;
 	
-	if (@mysql_num_rows($structureSql))
+	if (@$conn->rowCount($structureSql))
 	{
-		while ($structureRow = mysql_fetch_assoc($structureSql))
+		while ($structureRow = $conn->fetchAssoc($structureSql))
 		{
 			
 			echo '<div class="row' . $m . ' browse';
@@ -321,12 +321,12 @@ if (@mysql_num_rows($structureSql))
 	if (isset($charsetList) && isset($collationList))
 	{
 		
-		$infoSql = mysql_query("SHOW TABLE STATUS LIKE '$table'");
+		$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$table'");
 		
-		if (@mysql_num_rows($infoSql) == 1)
+		if (@$conn->rowCount($infoSql) == 1)
 		{
 		
-		$infoRow = mysql_fetch_assoc($infoSql);
+		$infoRow = $conn->fetchAssoc($infoSql);
 		
 		echo "<tr>";
 		echo "<td class=\"secondaryheader\">";
@@ -367,9 +367,9 @@ if (@mysql_num_rows($structureSql))
 	
 	<?php
 	
-	$indexListSQL = mysql_query("SHOW INDEX FROM `$table`");
+	$indexListSQL = $conn->query("SHOW INDEX FROM `$table`");
 	
-	if (@mysql_num_rows($indexListSQL))
+	if (@$conn->rowCount($indexListSQL))
 	{
 		
 		?>
@@ -397,7 +397,7 @@ if (@mysql_num_rows($structureSql))
 		
 		$indexList = array();
 		
-		while ($indexListRow = mysql_fetch_assoc($indexListSQL))
+		while ($indexListRow = $conn->fetchAssoc($indexListSQL))
 		{	
 			if (!array_key_exists($indexListRow['Key_name'], $indexList))
 			{
@@ -549,12 +549,12 @@ if (@mysql_num_rows($structureSql))
 	
 	<?php
 	
-	$infoSql = mysql_query("SHOW TABLE STATUS LIKE '$table'");
+	$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$table'");
 	
-	if (@mysql_num_rows($infoSql) == 1)
+	if (@$conn->rowCount($infoSql) == 1)
 	{
 	
-	$infoRow = mysql_fetch_assoc($infoSql);
+	$infoRow = $conn->fetchAssoc($infoSql);
 	
 	?>
 	

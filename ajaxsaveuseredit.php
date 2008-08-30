@@ -59,10 +59,10 @@ if (isset($user))
 		if (isset($_POST['GRANTOPTION']))
 			$query .= " WITH GRANT OPTION";
 		
-		mysql_query("REVOKE ALL PRIVILEGES ON *.* FROM " . $user);
-		mysql_query("REVOKE GRANT OPTION ON *.* FROM " . $user);
-		mysql_query($query) or ($mysqlError = mysql_error());
-		mysql_query("FLUSH PRIVILEGES") or ($mysqlError = mysql_error());
+		$conn->query("REVOKE ALL PRIVILEGES ON *.* FROM " . $user);
+		$conn->query("REVOKE GRANT OPTION ON *.* FROM " . $user);
+		$conn->query($query) or ($mysqlError = $conn->error());
+		$conn->query("FLUSH PRIVILEGES") or ($mysqlError = $conn->error());
 		
 		echo "{\n";
 		echo "    \"formupdate\": \"" . $_GET['form'] . "\",\n";

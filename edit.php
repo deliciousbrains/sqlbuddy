@@ -20,10 +20,10 @@ loginCheck();
 requireDatabaseAndTableBeDefined();
 
 if (isset($db))
-	mysql_select_db($db);
+	$conn->selectDB($db);
 
 if (isset($db))
-	$structureSql = mysql_query("DESCRIBE `$table`");
+	$structureSql = $conn->query("DESCRIBE `$table`");
 
 if (isset($_POST['editParts']))
 {
@@ -61,12 +61,12 @@ if (isset($_POST['editParts']))
 		<table class="insert edit" cellspacing="0" cellpadding="0">
 		<?php
 		
-		$dataSql = mysql_query("SELECT * FROM `" . $table . "` " . $part);
-		$dataRow = mysql_fetch_assoc($dataSql);
+		$dataSql = $conn->query("SELECT * FROM `" . $table . "` " . $part);
+		$dataRow = $conn->fetchAssoc($dataSql);
 		
-		if (@mysql_num_rows($structureSql))
+		if (@$conn->rowCount($structureSql))
 		{
-			while ($structureRow = mysql_fetch_assoc($structureSql))
+			while ($structureRow = $conn->fetchAssoc($structureSql))
 			{
 				
 				preg_match("/^([a-z]+)(.([0-9]+).)?(.*)?$/", $structureRow['Type'], $matches);
@@ -145,7 +145,7 @@ if (isset($_POST['editParts']))
 			}
 		}
 		
-		mysql_data_seek($structureSql, 0);
+		$conn->dataSeek($structureSql, 0);
 		
 		?>
 		<tr>

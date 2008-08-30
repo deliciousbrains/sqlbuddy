@@ -17,7 +17,7 @@ include "functions.php";
 
 loginCheck();
 
-mysql_select_db("mysql");
+$conn->selectDB("mysql");
 
 if (isset($_POST['editParts']))
 {
@@ -40,11 +40,11 @@ if (isset($_POST['editParts']))
 			
 			list($user, $host) = explode("@", $part);
 			
-			$userSQL = mysql_query("SELECT * FROM `user` WHERE `User`='" . $user . "' AND `Host`='" . $host . "'");
+			$userSQL = $conn->query("SELECT * FROM `user` WHERE `User`='" . $user . "' AND `Host`='" . $host . "'");
 			
-			if (@mysql_num_rows($userSQL))
+			if (@$conn->rowCount($userSQL))
 			{
-				$userRow = mysql_fetch_assoc($userSQL);
+				$userRow = $conn->fetchAssoc($userSQL);
 				
 				$allPrivs = true;
 				

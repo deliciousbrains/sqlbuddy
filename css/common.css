@@ -787,6 +787,9 @@ width: 85px;
 text-align: right;
 color: #4A7496;
 }
+#loginform select {
+width: 165px;
+}
 #loginform .text {
 width: 160px;
 color: rgb(70, 70, 70);

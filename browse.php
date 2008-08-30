@@ -20,7 +20,7 @@ loginCheck();
 requireDatabaseAndTableBeDefined();
 
 if (isset($db))
-	mysql_select_db($db);
+	$conn->selectDB($db);
 
 //run delete queries
 
@@ -31,7 +31,7 @@ if (isset($_POST['runQuery']))
 	$queryList = splitQueryText($runQuery);
 	foreach ($queryList as $query)
 	{
-		mysql_query($query);
+		$conn->query($query);
 	}
 }
 

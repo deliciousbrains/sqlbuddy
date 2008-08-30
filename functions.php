@@ -19,6 +19,7 @@ if (!session_id())
 include "config.php";
 include "includes/types.php";
 include "includes/gettextreader.php";
+include "includes/sql.php";
 
 define("VERSION_NUMBER", "1.2.9");
 define("PREVIEW_CHAR_SIZE", 65);
@@ -85,34 +86,39 @@ else
 
 $gt = new GetTextReader($lang . ".pot");
 
-$dbConnection = getDatabaseConnection();
+if (isset($_SESSION['SB_LOGIN_STRING']))
+{
+	$user = (isset($_SESSION['SB_LOGIN_USER'])) ? $_SESSION['SB_LOGIN_USER'] : "";
+	$pass = (isset($_SESSION['SB_LOGIN_PASS'])) ? $_SESSION['SB_LOGIN_PASS'] : "";
+	$conn = new SQL($_SESSION['SB_LOGIN_STRING'], $user, $pass);
+}
 
 // unique identifer for this session, to validate ajax requests.
 // document root is included because it is likely a difficult value
 // for potential attackers to guess
 $requestKey = substr(sha1(session_id() . $_SERVER["DOCUMENT_ROOT"]), 0, 16);
 
-if ($dbConnection)
+if (isset($conn) && $conn)
 {
 	if (isset($_GET['db']))
-		$db = mysql_real_escape_string($_GET['db']);
+		$db = $conn->escapeString($_GET['db']);
 	
 	if (isset($_GET['table']))
-		$table = mysql_real_escape_string($_GET['table']);
+		$table = $conn->escapeString($_GET['table']);
 	
-	$charsetSql = mysql_query("SHOW CHARACTER SET");
-	if (@mysql_num_rows($charsetSql))
+	$charsetSql = $conn->query("SHOW CHARACTER SET");
+	if (@$conn->rowCount($charsetSql))
 	{
-		while ($charsetRow = mysql_fetch_assoc($charsetSql))
+		while ($charsetRow = $conn->fetchAssoc($charsetSql))
 		{
 			$charsetList[] = $charsetRow['Charset'];
 		}
 	}
 	
-	$collationSql = mysql_query("SHOW COLLATION");
-	if (@mysql_num_rows($collationSql))
+	$collationSql = $conn->query("SHOW COLLATION");
+	if (@$conn->rowCount($collationSql))
 	{
-		while ($collationRow = mysql_fetch_assoc($collationSql))
+		while ($collationRow = $conn->fetchAssoc($collationSql))
 		{
 			$collationList[$collationRow['Collation']] = $collationRow['Charset'];
 		}
@@ -201,6 +207,7 @@ function outputPage($title = "")
 
 global $requestKey;
 global $sbconfig;
+global $conn;
 
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 "http://www.w3.org/TR/REC-html40/strict.dtd">
@@ -340,26 +347,26 @@ global $sbconfig;
 	
 	echo "\n";
 	
-	$listsql = mysql_query("SHOW DATABASES");
+	$listsql = $conn->listDatabases();
 	
 	$output = 'var menujson = {"menu": [';
 	
-	if (@mysql_num_rows($listsql))
+	if (@$conn->rowCount($listsql))
 	{
-		while ($row = mysql_fetch_row($listsql))
+		while ($row = $conn->fetchArray($listsql))
 		{
 			$output .= '{"name": "' . $row[0] . '"';
 			
-			mysql_select_db($row[0]);
-			$tableSql = mysql_query("SHOW TABLES");
+			$conn->selectDB($row[0]);
+			$tableSql = $conn->listTables();
 			
-			if (@mysql_num_rows($tableSql))
+			if (@$conn->rowCount($tableSql))
 			{
 				$output .= ',"items": [';
-				while ($tableRow = mysql_fetch_row($tableSql))
+				while ($tableRow = $conn->fetchArray($tableSql))
 				{
-					$countSql = mysql_query("SELECT COUNT(*) AS `RowCount` FROM `" . $tableRow[0] . "`");
-					$rowCount = (int)(@mysql_result($countSql, 0, "RowCount"));
+					$countSql = $conn->query("SELECT COUNT(*) AS `RowCount` FROM `" . $tableRow[0] . "`");
+					$rowCount = (int)(@$conn->result($countSql, 0, "RowCount"));
 					$output .= '{"name":"' . $tableRow[0] . '","rowcount":' . $rowCount . '},';
 				}
 				$output = substr($output, 0, -1);
@@ -377,16 +384,6 @@ global $sbconfig;
 	</script>
 </html>
 <?php
-}
-
-function getDatabaseConnection()
-{
-	if (isset($_SESSION['SB_LOGIN_HOST']) && isset($_SESSION['SB_LOGIN_USER']) && isset($_SESSION['SB_LOGIN_PASS']))
-	{
-		$dbconn = mysql_connect($_SESSION['SB_LOGIN_HOST'], $_SESSION['SB_LOGIN_USER'], $_SESSION['SB_LOGIN_PASS']);
-		mysql_query("SET NAMES 'utf8'");
-		return $dbconn;
-	}
 }
 
 function requireDatabaseAndTableBeDefined()

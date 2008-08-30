@@ -20,12 +20,12 @@ loginCheck();
 requireDatabaseAndTableBeDefined();
 
 if (isset($db))
-	mysql_select_db($db);
+	$conn->selectDB($db);
 
 if (isset($db))
-	$structureSql = mysql_query("SHOW FULL FIELDS FROM `$table`");
+	$structureSql = $conn->query("SHOW FULL FIELDS FROM `$table`");
 
-if (isset($_POST['editParts']) && @mysql_num_rows($structureSql))
+if (isset($_POST['editParts']) && @$conn->rowCount($structureSql))
 {
 	
 	$editParts = $_POST['editParts'];
@@ -48,7 +48,7 @@ if (isset($_POST['editParts']) && @mysql_num_rows($structureSql))
 	</script>
 	<?php
 	
-	while ($structureRow = mysql_fetch_assoc($structureSql))
+	while ($structureRow = $conn->fetchAssoc($structureSql))
 	{
 		if (in_array($structureRow['Field'], $editParts))
 		{

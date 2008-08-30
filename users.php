@@ -17,7 +17,7 @@ include "functions.php";
 
 loginCheck();
 
-mysql_select_db("mysql");
+$conn->selectDB("mysql");
 
 if ($_POST)
 {
@@ -63,8 +63,8 @@ if ($_POST)
 		if (isset($_POST['GRANTOPTION']))
 			$newQuery .= " WITH GRANT OPTION";
 		
-		mysql_query($newQuery) or ($mysqlError = mysql_error());
-		mysql_query("FLUSH PRIVILEGES") or ($mysqlError = mysql_error());
+		$conn->query($newQuery) or ($mysqlError = $conn->error());
+		$conn->query("FLUSH PRIVILEGES") or ($mysqlError = $conn->error());
 		
 	}
 }
@@ -90,12 +90,12 @@ if (isset($_POST['deleteUsers']))
 		
 		if (isset($user) && isset($host))
 		{
-			mysql_query("REVOKE ALL PRIVILEGES ON *.* FROM '$user'@'$host'");
-			mysql_query("REVOKE GRANT OPTION ON *.* FROM '$user'@'$host'");
-			mysql_query("DELETE FROM `user` WHERE `User`='$user' AND HOST='$host'");
+			$conn->query("REVOKE ALL PRIVILEGES ON *.* FROM '$user'@'$host'");
+			$conn->query("REVOKE GRANT OPTION ON *.* FROM '$user'@'$host'");
+			$conn->query("DELETE FROM `user` WHERE `User`='$user' AND HOST='$host'");
 		}
 	}
-	mysql_query("FLUSH PRIVILEGES");
+	$conn->query("FLUSH PRIVILEGES");
 }
 
 if (isset($mysqlError))
@@ -105,7 +105,7 @@ if (isset($mysqlError))
 	echo '</div>';
 }
 
-$userSql = mysql_query("SELECT * FROM `user`");
+$userSql = $conn->query("SELECT * FROM `user`");
 
 ?>
 
@@ -113,7 +113,7 @@ $userSql = mysql_query("SELECT * FROM `user`");
 
 <?php
 
-if (@mysql_num_rows($userSql))
+if (@$conn->rowCount($userSql))
 {
 	
 	?>
@@ -155,7 +155,7 @@ if (@mysql_num_rows($userSql))
 	
 	$m = 0;
 	
-	while ($userRow = mysql_fetch_array($userSql))
+	while ($userRow = $conn->fetchAssoc($userSql))
 	{
 		$queryBuilder = $userRow['User'] . "@" . $userRow['Host'];
 		echo '<dl class="manip';
@@ -170,15 +170,15 @@ if (@mysql_num_rows($userSql))
 	
 	echo '</div>';
 	
-	mysql_data_seek($userSql, 0);
+	$conn->dataSeek($userSql, 0);
 	
 	echo '<div class="gridscroll withchecks" style="overflow-x: hidden; max-height: 400px">';
 	
-	if (@mysql_num_rows($userSql))
+	if (@$conn->rowCount($userSql))
 	{
 		$m = 0;
 		
-		while ($userRow = mysql_fetch_assoc($userSql))
+		while ($userRow = $conn->fetchAssoc($userSql))
 		{
 			
 			echo '<div class="row' . $m . ' browse';

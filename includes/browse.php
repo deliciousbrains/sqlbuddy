@@ -42,8 +42,8 @@ if ($query)
 		{
 			if (isset($queryTable))
 			{
-				$total = mysql_query("SELECT COUNT(*) AS `RowCount` FROM `$queryTable`");
-				$totalRows = (int)(@mysql_result($total, 0, "RowCount"));
+				$total = $conn->query("SELECT COUNT(*) AS `RowCount` FROM `$queryTable`");
+				$totalRows = (int)(@$conn->result($total, 0, "RowCount"));
 	
 				if ($start > $totalRows)
 				{
@@ -54,20 +54,20 @@ if ($query)
 			}
 			
 			$queryStartTime = microtime_float();
-			$dataSql = mysql_query($q) or ($mysqlError[] = mysql_error());
+			$dataSql = $conn->query($q) or ($mysqlError[] = $conn->error());
 			$queryFinishTime = microtime_float();
 			$queryTime = round($queryFinishTime - $queryStartTime, 4);
 			
-			if (@mysql_affected_rows())
+			if (@$conn->affectedRows())
 			{
-				$insertCount += (int)(mysql_affected_rows());
+				$insertCount += (int)($conn->affectedRows());
 			}
 		}
 	}
 		
 	if (!isset($queryTable))
 	{
-		$totalRows = (int)(@mysql_num_rows($dataSql));
+		$totalRows = (int)(@$conn->rowCount($dataSql));
 	}
 	
 }
@@ -75,11 +75,11 @@ if ($query)
 //for the browse tab
 if (isset($queryTable))
 {
-	$structureSql = mysql_query("DESCRIBE `$queryTable`");
+	$structureSql = $conn->query("DESCRIBE `$queryTable`");
 	
-	if (@mysql_num_rows($structureSql))
+	if (@$conn->rowCount($structureSql))
 	{
-		while ($structureRow = mysql_fetch_assoc($structureSql))
+		while ($structureRow = $conn->fetchAssoc($structureSql))
 		{	
 			$explosion = explode("(", $structureRow['Type'], 2);
 			
@@ -231,9 +231,9 @@ else
 		echo '<table cellpadding="0" cellspacing="0">';
 		echo '<tr>';
 			
-		if (@mysql_num_rows($dataSql))
+		if (@$conn->rowCount($dataSql))
 		{
-			$dataRow = mysql_fetch_assoc($dataSql);
+			$dataRow = $conn->fetchAssoc($dataSql);
 			$g = 0;
 			$numFields = 0;
 			
@@ -303,7 +303,7 @@ else
 			echo '</tr>';
 			echo '</table>';
 			
-			mysql_data_seek($dataSql, 0);
+			$conn->dataSeek($dataSql, 0);
 			
 		}
 		
@@ -319,7 +319,7 @@ else
 			
 			$m = 0;
 			
-			while (($dataRow = mysql_fetch_array($dataSql)) && ($m < $displayLimit))
+			while (($dataRow = $conn->fetchAssoc($dataSql)) && ($m < $displayLimit))
 			{
 				
 				$queryBuilder = "WHERE ";
@@ -346,7 +346,7 @@ else
 			
 			echo '</div>';
 			
-			mysql_data_seek($dataSql, 0);
+			$conn->dataSeek($dataSql, 0);
 			
 		}
 		
@@ -357,7 +357,7 @@ else
 		
 		$m = 0;
 		
-		while (($dataRow = mysql_fetch_array($dataSql)) && ($m < $displayLimit))
+		while (($dataRow = $conn->fetchArray($dataSql)) && ($m < $displayLimit))
 		{
 			
 			echo '<table cellpadding="0" cellspacing="0" class="row' .($m). ' browse';

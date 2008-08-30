@@ -18,7 +18,7 @@ include "functions.php";
 loginCheck();
 
 if (isset($db))
-	mysql_select_db($db);
+	$conn->selectDB($db);
 
 if ($_POST && isset($table))
 {
@@ -30,9 +30,9 @@ if ($_POST && isset($table))
 		$insertChoice = $_POST['SB_INSERT_CHOICE'];
 	}
 	
-	$structureSql = mysql_query("DESCRIBE `$table`");
+	$structureSql = $conn->query("DESCRIBE `$table`");
 	
-	while ($structureRow = mysql_fetch_assoc($structureSql))
+	while ($structureRow = $conn->fetchAssoc($structureSql))
 	{
 		$pairs[$structureRow['Field']] = '';
 	}
@@ -46,7 +46,7 @@ if ($_POST && isset($table))
 				$value = implode(",", $value);
 			}
 			
-			$pairs[$key] = mysql_real_escape_string($value);
+			$pairs[$key] = $conn->escapeString($value);
 		}
 	}
 	
@@ -89,7 +89,7 @@ if ($_POST && isset($table))
 			$query = "INSERT INTO `$table` ($columns) VALUES ($values)";
 		}
 		
-		mysql_query($query) or ($mysqlError = mysql_error());
+		$conn->query($query) or ($mysqlError = $conn->error());
 		
 		echo "{\n";
 		echo "    \"formupdate\": \"" . $_GET['form'] . "\",\n";

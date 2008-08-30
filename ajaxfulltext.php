@@ -18,20 +18,20 @@ include "functions.php";
 loginCheck();
 
 if (isset($db))
-	mysql_select_db($db);
+	$conn->selectDB($db);
 
 if (isset($_POST['query']))
 {
 	$queryList = splitQueryText($_POST['query']);
 	foreach ($queryList as $query)
 	{
-		$sql = mysql_query($query);
+		$sql = $conn->query($query);
 	}
 }
 
-if (@mysql_num_rows($sql))
+if (@$conn->rowCount($sql))
 {
-	$row = @mysql_fetch_assoc($sql);
+	$row = @$conn->fetchAssoc($sql);
 	foreach ($row as $key => $value)
 	{
 		echo "<div class=\"fulltexttitle\">" . $key . "</div>";

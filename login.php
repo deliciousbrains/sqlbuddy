@@ -15,38 +15,36 @@ MIT license
 
 include "functions.php";
 
+$adapter = (isset($sbconfig['DefaultAdapter'])) ? $sbconfig['DefaultAdapter'] : "adapter";
+$host = (isset($sbconfig['DefaultHost'])) ? $sbconfig['DefaultHost'] : "localhost";
+$user = (isset($sbconfig['DefaultUser'])) ? $sbconfig['DefaultUser'] : "root";
+$pass = (isset($sbconfig['DefaultPass'])) ? $sbconfig['DefaultPass'] : "";	
+
 if ($_POST)
 {
+	if (isset($_POST['ADAPTER']))
+		$adapter = $_POST['ADAPTER'];
+	
 	if (isset($_POST['HOST']))
 		$host = $_POST['HOST'];
 		
 	if (isset($_POST['USER']))
 		$user = $_POST['USER'];
 		
-	if (isset($_POST['USER']))
+	if (isset($_POST['PASS']))
 		$pass = $_POST['PASS'];
 }
-else
-{
-	if (isset($sbconfig['DefaultHost']))
-		$host = $sbconfig['DefaultHost'];
-		
-	if (isset($sbconfig['DefaultUser']))
-		$user = $sbconfig['DefaultUser'];
-		
-	if (isset($sbconfig['DefaultPass']))
-		$pass = $sbconfig['DefaultPass'];
-	
-}
 
-if (isset($host) && isset($user) && isset($pass))	
+if ($adapter && $host && $user && $pass)
 {
-	$connCheck = @mysql_connect($host, $user, $pass);
+	$connString = "mysql:host=$host";
+	
+	$connCheck = new SQL($connString, $user, $pass);
 	
 	if ($connCheck != false)
 	{
 		$_SESSION['SB_LOGIN'] = true;
-		$_SESSION['SB_LOGIN_HOST'] = $host;
+		$_SESSION['SB_LOGIN_STRING'] = $connString;
 		$_SESSION['SB_LOGIN_USER'] = $user;
 		$_SESSION['SB_LOGIN_PASS'] = $pass;
 		
@@ -141,7 +139,7 @@ startOutput();
 			?>
 			<table cellpadding="0" id="tb">
 			<tr>
-			<td colspan="2"><div class="loginheader"><h3><strong><?php echo __("Login"); ?></strong></h3><a href="http://www.sqlbuddy.com/help/" style="" title="Help"><?php echo __("Help!"); ?></a></div></td>
+			<td colspan="2"><div class="loginheader"><h3><strong><?php echo __("Login"); ?></strong></h3><a href="http://www.sqlbuddy.com/help/" title="Help"><?php echo __("Help!"); ?></a></div></td>
 			</tr>
 			<?php
 			if (isset($error))
@@ -153,6 +151,16 @@ startOutput();
 				echo '<tr><td colspan="2"><div class="errormess">' . __("Your session has timed out. Please login again.") . '</div></td></tr>';
 			}
 			?>
+			<tr>
+			<td></td>
+			<td>
+			<select name="ADAPTER">
+			<option value="mysql"><?php echo __("MySQL"); ?></option>
+			<option value="sqlite"><?php echo __("SQLite"); ?></option>
+			<option value="postgresql"><?php echo __("PostgreSQL"); ?></option>
+			</select>
+			</td>
+			</td>
 			<tr>
 			<td class="field"><?php echo __("Host"); ?>:</td>
 			<td><input type="text" class="text" name="HOST" value="<?php echo $host; ?>" /></td>

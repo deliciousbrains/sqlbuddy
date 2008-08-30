@@ -20,7 +20,7 @@ loginCheck();
 if (isset($db))
 {
 
-mysql_select_db($db);
+$conn->selectDB($db);
 
 //run delete queries
 
@@ -37,7 +37,7 @@ if (isset($_POST['runQuery']))
 		
 		if ($query != "")
 		{
-			mysql_query($query) or ($mysqlError = mysql_error());
+			$conn->query($query) or ($mysqlError = $conn->error());
 			
 			// make a list of the tables that were dropped/emptied
 			if (substr($query, 0, 12) == "DROP TABLE `")
@@ -118,9 +118,9 @@ if (isset($mysqlError))
 
 <?php
 
-$tableSql = mysql_query("SHOW TABLES");
+$tableSql = $conn->query("SHOW TABLES");
 
-if (@mysql_num_rows($tableSql))
+if (@$conn->rowCount($tableSql))
 {
 	
 	echo '<div style="margin-bottom: 15px">';
@@ -172,7 +172,7 @@ if (@mysql_num_rows($tableSql))
 	
 	$m = 0;
 	
-	while ($tableRow = mysql_fetch_array($tableSql))
+	while ($tableRow = $conn->fetchArray($tableSql))
 	{
 		echo '<dl class="manip';
 		
@@ -186,20 +186,20 @@ if (@mysql_num_rows($tableSql))
 	
 	echo '</div>';
 	
-	mysql_data_seek($tableSql, 0);
+	$conn->dataSeek($tableSql, 0);
 	
 	echo '<div class="gridscroll withchecks" style="overflow-x: hidden; max-height: 400px">';
 	
 	$m = 0;
 	
-	while ($tableRow = mysql_fetch_row($tableSql))
+	while ($tableRow = $conn->fetchArray($tableSql))
 	{
 		
-		$countSql = mysql_query("SELECT COUNT(*) AS `RowCount` FROM `" . $tableRow[0] . "`");
-		$rowCount = (int)(@mysql_result($countSql, 0, "RowCount"));
+		$countSql = $conn->query("SELECT COUNT(*) AS `RowCount` FROM `" . $tableRow[0] . "`");
+		$rowCount = (int)(@$conn->result($countSql, 0, "RowCount"));
 		
-		$infoSql = mysql_query("SHOW TABLE STATUS LIKE '" . $tableRow[0] . "'");
-		$infoRow = mysql_fetch_assoc($infoSql);
+		$infoSql = $conn->query("SHOW TABLE STATUS LIKE '" . $tableRow[0] . "'");
+		$infoRow = $conn->fetchAssoc($infoSql);
 		
 		$overhead = $infoRow["Data_free"];
 		
@@ -259,11 +259,11 @@ if (isset($charsetList))
 {
 
 $currentChar = "";
-$currentCharSql = mysql_query("SHOW VARIABLES LIKE 'character_set_database'");
+$currentCharSql = $conn->query("SHOW VARIABLES LIKE 'character_set_database'");
 
-if (@mysql_num_rows($currentCharSql))
+if (@$conn->rowCount($currentCharSql))
 {
-	$currentChar = mysql_result($currentCharSql, 0, "Value");
+	$currentChar = $conn->result($currentCharSql, 0, "Value");
 }
 
 ?>

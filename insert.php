@@ -20,12 +20,12 @@ loginCheck();
 requireDatabaseAndTableBeDefined();
 
 if (isset($db))
-	mysql_select_db($db);
+	$conn->selectDB($db);
 
 if (isset($table))
-	$structureSql = mysql_query("DESCRIBE `$table`");
+	$structureSql = $conn->query("DESCRIBE `$table`");
 
-if (@mysql_num_rows($structureSql))
+if (@$conn->rowCount($structureSql))
 {
 	
 	if ($_POST)
@@ -43,7 +43,7 @@ if (@mysql_num_rows($structureSql))
 				$value = implode(",", $value);
 			}
 			
-			$insertValues .= "'" . mysql_real_escape_string(urldecode($value)) . "',";
+			$insertValues .= "'" . $conn->escapeString(urldecode($value)) . "',";
 		}
 		
 		$insertFields = substr($insertFields, 0, -1);
@@ -51,9 +51,9 @@ if (@mysql_num_rows($structureSql))
 		
 		$insertQuery = "INSERT INTO `$table` (" . $insertFields . ") VALUES (" . $insertValues . ")";
 		
-		mysql_query($insertQuery) or ($mysqlError = mysql_error());
+		$conn->query($insertQuery) or ($mysqlError = $conn->error());
 		
-		$insertId = mysql_insert_id();
+		$insertId = $conn->insertId();
 		
 		if (isset($mysqlError))
 		{
@@ -90,9 +90,9 @@ if (@mysql_num_rows($structureSql))
 	
 	$firstField = true;
 	
-	if (@mysql_num_rows($structureSql))
+	if (@$conn->rowCount($structureSql))
 	{
-		while ($structureRow = mysql_fetch_assoc($structureSql))
+		while ($structureRow = $conn->fetchAssoc($structureSql))
 		{
 			
 			preg_match("/^([a-z]+)(.([0-9]+).)?(.*)?$/", $structureRow['Type'], $matches);
