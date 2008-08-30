@@ -65,11 +65,11 @@ $themeList["bittersweet"] = "Bittersweet";
 if (isset($_COOKIE['sb_theme']))
 {
 	$currentTheme = preg_replace("/[^a-z0-9_]/i", "", $_COOKIE['sb_theme']);
-	
+
 	if (array_key_exists($currentTheme, $themeList))
 	{
 		$theme = $currentTheme;
-		
+
 		// extend the cookie length
 		setcookie("sb_theme", $theme, $cookieLength);
 	}
@@ -102,10 +102,10 @@ if (isset($conn) && $conn)
 {
 	if (isset($_GET['db']))
 		$db = $conn->escapeString($_GET['db']);
-	
+
 	if (isset($_GET['table']))
 		$table = $conn->escapeString($_GET['table']);
-	
+
 	$charsetSql = $conn->query("SHOW CHARACTER SET");
 	if (@$conn->rowCount($charsetSql))
 	{
@@ -114,7 +114,7 @@ if (isset($conn) && $conn)
 			$charsetList[] = $charsetRow['Charset'];
 		}
 	}
-	
+
 	$collationSql = $conn->query("SHOW COLLATION");
 	if (@$conn->rowCount($collationSql))
 	{
@@ -159,7 +159,7 @@ function loginCheck($validateReq = true)
 			exit;
 		}
 	}
-	
+
 	startOutput();
 }
 
@@ -170,9 +170,9 @@ function redirect($url)
 		global $requestKey;
 		?>
 		<script type="text/javascript" authkey="<?php echo $_GET['requestKey']; ?>">
-		
+
 		document.location = "<?php echo $url; ?>" + window.location.hash;
-		
+
 		</script>
 		<?php
 	}
@@ -240,18 +240,18 @@ global $conn;
 		<div id="headerinfo">
 		<span id="load" style="display: none"><?php echo __("Loading..."); ?></span>
 		<?php
-		
+
 		// if set to auto login, providing a link to logout wouldnt be much good
 		if (!isset($sbconfig['DefaultPass']))
 			echo '<a href="logout.php">' . __("Logout") . '</a>';
-		
+
 		?>
 		</div>
 		<div class="clearer"></div>
 	</div>
-	
+
 	<div id="bottom">
-	
+
 	<div id="leftside">
 		<div id="sidemenu">
 		<div class="dblist">
@@ -262,34 +262,34 @@ global $conn;
 		<li id="sideimport"><a href="#page=import&topTab=3" onclick="sideMainClick('import.php', 3); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Import"); ?></div></a></li>
 		<li id="sideexport"><a href="#page=export&topTab=4" onclick="sideMainClick('export.php', 4); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Export"); ?></div></a></li>
 		</ul></div>
-		
+
 		<div class="dblistheader"><?php echo __("Databases"); ?></div>
 		<div class="dblist" id="databaselist"><ul></ul></div>
 		</div>
 	</div>
 	<div id="rightside">
-		
+
 		<div id="content">
 			<div class="corners"><div class="tl"></div><div class="tr"></div></div>
 			<div id="innercontent"></div>
 			<div class="corners"><div class="bl"></div><div class="br"></div></div>
 		</div>
-		
+
 		</div>
-		
+
 	</div>
 	</div>
-	
+
 	</body>
 	<script type="text/javascript">
 	<?php
-	
+
 	if (isset($requestKey))
 	{
 		echo 'var requestKey = "' . $requestKey . '";';
 		echo "\n";
 	}
-	
+
 	// javascript translation strings
 	echo "\t\tvar getTextArr = {";
 	echo '"Home":"' . __("Home") . '", ';
@@ -297,15 +297,15 @@ global $conn;
 	echo '"Query":"' . __("Query") . '", ';
 	echo '"Import":"' . __("Import") . '", ';
 	echo '"Export":"' . __("Export") . '", ';
-	
+
 	echo '"Overview":"' . __("Overview") . '", ';
-	
+
 	echo '"Browse":"' . __("Browse") . '", ';
 	echo '"Structure":"' . __("Structure") . '", ';
 	echo '"Insert":"' . __("Insert") . '", ';
-	
+
 	echo '"Your changes were saved to the database.":"' . __("Your changes were saved to the database.") . '", ';
-	
+
 	echo '"delete this row":"' . __("delete this row") . '", ';
 	echo '"delete these rows":"' . __("delete these rows") . '", ';
 	echo '"empty this table":"' . __("empty this table") . '", ';
@@ -319,67 +319,40 @@ global $conn;
 	echo '"delete this user":"' . __("delete this user") . '", ';
 	echo '"delete these users":"' . __("delete this users") . '", ';
 	echo '"Are you sure you want to":"' . __("Are you sure you want to") . '", ';
-	
+
 	echo '"The following query will be run:":"' . __("The following query will be run:") . '", ';
 	echo '"The following queries will be run:":"' . __("The following queries will be run:") . '", ';
-	
+
 	echo '"Confirm":"' . __("Confirm") . '", ';
 	echo '"Are you sure you want to empty the \'%s\' table? This will delete all the data inside of it. The following query will be run:":"' . __("Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:") . '", ';
 	echo '"Are you sure you want to drop the \'%s\' table? This will delete the table and all data inside of it. The following query will be run:":"' . __("Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:") . '", ';
 	echo '"Are you sure you want to drop the database \'%s\'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:":"' . __("Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:") . '", ';
-	
+
 	echo '"Successfully saved changes.":"' . __("Successfully saved changes.") . '", ';
-	
+
 	echo '"New field":"' . __("New field") . '", ';
-	
+
 	echo '"Full Text":"' . __("Full Text") . '", ';
-	
+
 	echo '"Loading...":"' . __("Loading...") . '", ';
 	echo '"Redirecting...":"' . __("Redirecting...") . '", ';
-	
+
 	echo '"Okay":"' . __("Okay") . '", ';
 	echo '"Cancel":"' . __("Cancel") . '", ';
-	
+
 	echo '"Error":"' . __("Error") . '", ';
 	echo '"There was an error receiving data from the server.":"' . __("There was an error receiving data from the server.") . '"';
-	
+
 	echo '};';
-	
+
 	echo "\n";
-	
-	$listsql = $conn->listDatabases();
-	
+
+
 	$output = 'var menujson = {"menu": [';
-	
-	if (@$conn->rowCount($listsql))
-	{
-		while ($row = $conn->fetchArray($listsql))
-		{
-			$output .= '{"name": "' . $row[0] . '"';
-			
-			$conn->selectDB($row[0]);
-			$tableSql = $conn->listTables();
-			
-			if (@$conn->rowCount($tableSql))
-			{
-				$output .= ',"items": [';
-				while ($tableRow = $conn->fetchArray($tableSql))
-				{
-					$countSql = $conn->query("SELECT COUNT(*) AS `RowCount` FROM `" . $tableRow[0] . "`");
-					$rowCount = (int)(@$conn->result($countSql, 0, "RowCount"));
-					$output .= '{"name":"' . $tableRow[0] . '","rowcount":' . $rowCount . '},';
-				}
-				$output = substr($output, 0, -1);
-				$output .= ']';
-			}
-			$output .= '},';
-		}
-		$output = substr($output, 0, -1);
-	}
-	
+	$output .= $conn->getMetadata();
 	$output .= ']};';
+
 	echo $output;
-	
 	?>
 	</script>
 </html>
@@ -389,33 +362,33 @@ global $conn;
 function requireDatabaseAndTableBeDefined()
 {
 	global $db, $table;
-	
+
 	if (!isset($db))
 	{
 		?>
-		
+
 		<div class="errorpage">
 		<h4><?php echo __("Oops"); ?></h4>
 		<p><?php echo __("For some reason, the database parameter was not included with your request."); ?></p>
 		</div>
-		
+
 		<?php
 		exit;
 	}
-	
+
 	if (!isset($table))
 	{
 		?>
-		
+
 		<div class="errorpage">
 		<h4><?php echo __("Oops"); ?></h4>
 		<p><?php echo __("For some reason, the table parameter was not included with your request."); ?></p>
 		</div>
-		
+
 		<?php
 		exit;
 	}
-	
+
 }
 
 function formatForOutput($text)
@@ -435,17 +408,17 @@ function formatDataForExport($text)
 	{
 		$text = str_replace("\r\n", "\\r\\n", $text);
 	}
-	
+
 	while ($text != str_replace("\r", "\\r", $text))
 	{
 		$text = str_replace("\r", "\\r", $text);
 	}
-	
+
 	while ($text != str_replace("\n", "\\n", $text))
 	{
 		$text = str_replace("\n", "\\n", $text);
 	}
-	
+
 	// escape single quotes
 	$text = str_replace("'", "\'", $text);
 	return $text;
@@ -461,21 +434,21 @@ function splitQueryText($query)
 {
 	// the regex needs a trailing semicolon
 	$query = trim($query);
-	
+
 	if (substr($query, -1) != ";")
 		$query .= ";";
-	
+
 	// i spent 3 days figuring out this line
 	preg_match_all("/(?>[^;']|(''|(?>'([^']|\\')*[^\\\]')))+;/ixU", $query, $matches, PREG_SET_ORDER);
-	
+
 	$querySplit = "";
-	
+
 	foreach ($matches as $match)
 	{
 		// get rid of the trailing semicolon
 		$querySplit[] = substr($match[0], 0, -1);
 	}
-	
+
 	return $querySplit;
 }
 
@@ -489,7 +462,7 @@ function memoryFormat($bytes)
 		$dataString = round($bytes / (1024 * 1024)) . " MB";
 	else
 		$dataString = round($bytes / (1024 * 1024 * 1024)) . " GB";
-	
+
 	return $dataString;
 }
 

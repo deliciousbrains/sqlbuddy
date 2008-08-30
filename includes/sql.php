@@ -14,26 +14,27 @@ MIT license
 */
 
 class SQL {
-	
+
 	var $adapter = "";
 	var $conn = "";
+	var $db = "";
 	var $options = "";
 	var $errorMessage = "";
-	
+
 	function SQL($connString, $user = "", $pass = "")
 	{
 		list($adapt, $options) = explode(":", $connString, 2);
-		
+
 		$optionsList = explode(";", $options);
-		
+
 		foreach ($optionsList as $option)
 		{
 			list($a, $b) = explode("=", $option);
 			$opt[$a] = $b;
 		}
-		
+
 		$this->options = $opt;
-		
+
 		if ($adapt == "sqlite")
 		{
 			$this->adapter = "sqlite";
@@ -47,17 +48,18 @@ class SQL {
 			$this->conn = mysql_connect($host, $user, $pass);
 			$this->query("SET NAMES 'utf8'");
 		}
-		
+
 		if (!$this->conn)
 		{
 			return false;
 		}
 	}
-	
+
 	function selectDB($db)
 	{
 		if ($this->conn)
 		{
+			$this->db = $db;
 			if ($this->adapter == "mysql")
 			{
 				mysql_select_db($db);
@@ -72,7 +74,7 @@ class SQL {
 			return false;
 		}
 	}
-	
+
 	function query($queryText)
 	{
 		if ($this->conn)
@@ -80,23 +82,23 @@ class SQL {
 			if ($this->adapter == "mysql")
 			{
 				$queryResult = mysql_query($queryText, $this->conn);
-				
+
 				if (!$queryResult)
 				{
 					$this->errorMessage = mysql_error();
 				}
-				
+
 				return $queryResult;
 			}
 			else if ($this->adapter == "sqlite")
 			{
 				$queryResult = sqlite_query($this->conn, $queryText);
-				
+
 				if (!$queryResult)
 				{
 					$this->errorMessage = sqlite_error_string(sqlite_last_error($this->conn));
 				}
-				
+
 				return $queryResult;
 			}
 		}
@@ -105,7 +107,7 @@ class SQL {
 			return false;
 		}
 	}
-	
+
 	function rowCount($resultSet)
 	{
 		if ($this->conn)
@@ -120,7 +122,7 @@ class SQL {
 			}
 		}
 	}
-	
+
 	function fetchArray($resultSet)
 	{
 		if ($this->conn)
@@ -135,7 +137,7 @@ class SQL {
 			}
 		}
 	}
-	
+
 	function fetchAssoc($resultSet)
 	{
 		if ($this->conn)
@@ -150,7 +152,7 @@ class SQL {
 			}
 		}
 	}
-	
+
 	function affectedRows($resultSet)
 	{
 		if ($this->conn)
@@ -165,7 +167,7 @@ class SQL {
 			}
 		}
 	}
-	
+
 	function dataSeek($resultSet, $targetRow)
 	{
 		if ($this->conn)
@@ -180,7 +182,7 @@ class SQL {
 			}
 		}
 	}
-	
+
 	function result($resultSet, $targetRow, $targetColumn)
 	{
 		if ($this->conn)
@@ -195,7 +197,7 @@ class SQL {
 			}
 		}
 	}
-	
+
 	function listDatabases()
 	{
 		if ($this->conn)
@@ -211,7 +213,7 @@ class SQL {
 			}
 		}
 	}
-	
+
 	function listTables()
 	{
 		if ($this->conn)
@@ -226,7 +228,7 @@ class SQL {
 			}
 		}
 	}
-	
+
 	function insertId($resultSet)
 	{
 		if ($this->conn)
@@ -241,7 +243,7 @@ class SQL {
 			}
 		}
 	}
-	
+
 	function escapeString($toEscape)
 	{
 		if ($this->conn)
@@ -256,7 +258,7 @@ class SQL {
 			}
 		}
 	}
-	
+
 	function getVersion()
 	{
 		if ($this->conn)
@@ -272,12 +274,82 @@ class SQL {
 				return sqlite_libversion();
 			}
 		}
-		
+
 	}
-	
+
+	/*
+		Return names, row counts etc for every database, table and view in a JSON string
+	*/
+	function getMetadata()
+	{
+		$output = '';
+		if ($this->conn)
+		{
+			if ($this->adapter == "mysql")
+			{
+				$this->selectDB("INFORMATION_SCHEMA");
+				$schemaSql = $this->query("SELECT SCHEMA_NAME FROM SCHEMATA ORDER BY SCHEMA_NAME");
+				if ($this->rowCount($schemaSql))
+				{
+					while ($schema = $this->fetchAssoc($schemaSql))
+					{
+						$output .= '{"name": "' . $schema['SCHEMA_NAME'] . '"';
+						// other interesting columns: TABLE_TYPE, ENGINE, TABLE_COLUMN and many more
+						$tableSql = $this->query("SELECT TABLE_NAME, TABLE_ROWS FROM TABLES WHERE TABLE_SCHEMA='" . $schema['SCHEMA_NAME'] . "' ORDER BY TABLE_NAME");
+						if ($this->rowCount($tableSql))
+						{
+							$output .= ',"items": [';
+							while ($table = $this->fetchAssoc($tableSql))
+							{
+								$output .= '{';
+								$output .= '"name":"' . $table['TABLE_NAME'] . '",';
+								$output .= '"rowcount":' . ($table['TABLE_ROWS'] > 0 ? $table['TABLE_ROWS'] : '0');
+								$output .= '},';
+							}
+							$output = substr($output, 0, -1);
+							$output .= ']';
+						}
+						$output .= '},';
+					}
+					$output = substr($output, 0, -1);
+				}
+			}
+			else if ($this->adapter == "sqlite")
+			{
+				$listsql = $this->listDatabases();
+				if ($this->rowCount($listsql))
+				{
+					while ($row = $this->fetchArray($listsql))
+					{
+						$output .= '{"name": "' . $row[0] . '"';
+
+						$this->selectDB($row[0]);
+						$tableSql = $this->listTables();
+
+						if ($this->rowCount($tableSql))
+						{
+							$output .= ',"items": [';
+							while ($tableRow = $this->fetchArray($tableSql))
+							{
+								$countSql = $this->query("SELECT COUNT(*) AS `RowCount` FROM `" . $tableRow[0] . "`");
+								$rowCount = (int)($this->result($countSql, 0, "RowCount"));
+								$output .= '{"name":"' . $tableRow[0] . '","rowcount":' . $rowCount . '},';
+							}
+							$output = substr($output, 0, -1);
+							$output .= ']';
+						}
+						$output .= '},';
+					}
+					$output = substr($output, 0, -1);
+				}
+			}
+		}
+		return $output;
+	}
+
 	function error()
 	{
 		return $this->errorMessage;
 	}
-	
+
 }
