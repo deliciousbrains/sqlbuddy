@@ -350,9 +350,9 @@ global $conn;
 	echo "\n";
 
 
-	$output = 'var menujson = {"menu": [';
-	$output .= $conn->getMetadata();
-	$output .= ']};';
+	echo 'var menujson = {"menu": [';
+	echo $conn->getMetadata();
+	echo ']};';
 
 	echo $output;
 	?>
