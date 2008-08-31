@@ -170,7 +170,6 @@ startOutput();
 			<select name="ADAPTER" id="ADAPTER" onchange="adapterChange()">
 			<option value="mysql"><?php echo __("MySQL"); ?></option>
 			<option value="sqlite"><?php echo __("SQLite"); ?></option>
-			<option value="postgresql"><?php echo __("PostgreSQL"); ?></option>
 			</select>
 			</td>
 			</table>
