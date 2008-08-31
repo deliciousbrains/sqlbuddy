@@ -118,14 +118,7 @@ class SQL {
 			}
 			else if ($this->adapter == "sqlite")
 			{
-				if (is_string($resultSet) && $resultSet)
-				{
-					return 1;
-				}
-				else
-				{
-					return sqlite_num_rows($resultSet);
-				}
+				return sqlite_num_rows($resultSet);
 			}
 		}
 	}
@@ -140,15 +133,7 @@ class SQL {
 			}
 			else if ($this->adapter == "sqlite")
 			{
-				if (is_string($resultSet))
-				{
-					$returnArray[0] = $resultSet;
-					return $returnArray;
-				}
-				else
-				{
-					return sqlite_fetch_array($resultSet, SQLITE_NUM);
-				}
+				return sqlite_fetch_array($resultSet, SQLITE_NUM);
 			}
 		}
 	}
@@ -361,32 +346,25 @@ class SQL {
 			}
 			else if ($this->adapter == "sqlite")
 			{
-				$listsql = $this->listDatabases();
-				if ($this->rowCount($listsql))
+				$database = (array_key_exists("database", $this->options)) ? $this->options['database'] : "";
+				
+				$output .= '{"name": "' . $database . '"';
+				
+				$tableSql = $this->listTables();
+
+				if ($this->rowCount($tableSql))
 				{
-					while ($row = $this->fetchArray($listsql))
+					$output .= ',"items": [';
+					while ($tableRow = $this->fetchArray($tableSql))
 					{
-						$output .= '{"name": "' . $row[0] . '"';
-
-						$this->selectDB($row[0]);
-						$tableSql = $this->listTables();
-
-						if ($this->rowCount($tableSql))
-						{
-							$output .= ',"items": [';
-							while ($tableRow = $this->fetchArray($tableSql))
-							{
-								$countSql = $this->query("SELECT COUNT(*) AS `RowCount` FROM `" . $tableRow[0] . "`");
-								$rowCount = (int)($this->result($countSql, 0, "RowCount"));
-								$output .= '{"name":"' . $tableRow[0] . '","rowcount":' . $rowCount . '},';
-							}
-							$output = substr($output, 0, -1);
-							$output .= ']';
-						}
-						$output .= '},';
+						$countSql = $this->query("SELECT COUNT(*) AS `RowCount` FROM `" . $tableRow[0] . "`");
+						$rowCount = (int)($this->result($countSql, 0, "RowCount"));
+						$output .= '{"name":"' . $tableRow[0] . '","rowcount":' . $rowCount . '},';
 					}
 					$output = substr($output, 0, -1);
+					$output .= ']';
 				}
+				$output .= '}';
 			}
 		}
 		return $output;
