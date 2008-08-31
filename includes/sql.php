@@ -114,11 +114,11 @@ class SQL {
 		{
 			if ($this->adapter == "mysql")
 			{
-				return mysql_num_rows($resultSet);
+				return @mysql_num_rows($resultSet);
 			}
 			else if ($this->adapter == "sqlite")
 			{
-				return sqlite_num_rows($resultSet);
+				return @sqlite_num_rows($resultSet);
 			}
 		}
 	}
@@ -315,7 +315,7 @@ class SQL {
 		$output = '';
 		if ($this->conn)
 		{
-			if ($this->adapter == "mysql")
+			if ($this->adapter == "mysql" && version_compare($this->getVersion(), "5.0.0", ">"))
 			{
 				$this->selectDB("INFORMATION_SCHEMA");
 				$schemaSql = $this->query("SELECT SCHEMA_NAME FROM SCHEMATA ORDER BY SCHEMA_NAME");
@@ -335,6 +335,36 @@ class SQL {
 								$output .= '"name":"' . $table['TABLE_NAME'] . '",';
 								$output .= '"rowcount":' . ($table['TABLE_ROWS'] > 0 ? $table['TABLE_ROWS'] : '0');
 								$output .= '},';
+							}
+							$output = substr($output, 0, -1);
+							$output .= ']';
+						}
+						$output .= '},';
+					}
+					$output = substr($output, 0, -1);
+				}
+			}
+			else if ($this->adapter == "mysql")
+			{
+				$schemaSql = $this->listDatabases();
+				
+				if ($this->rowCount($schemaSql))
+				{
+					while ($schema = $this->fetchArray($schemaSql))
+					{
+						$output .= '{"name": "' . $schema[0] . '"';
+						
+						$this->selectDB($schema[0]);
+						$tableSql = $this->listTables();
+						
+						if ($this->rowCount($tableSql))
+						{
+							$output .= ',"items": [';
+							while ($table = $this->fetchArray($tableSql))
+							{
+								$countSql = $this->query("SELECT COUNT(*) AS `RowCount` FROM `" . $table[0] . "`");
+								$rowCount = (int)($this->result($countSql, 0, "RowCount"));
+								$output .= '{"name":"' . $table[0] . '","rowcount":' . $rowCount . '},';
 							}
 							$output = substr($output, 0, -1);
 							$output .= ']';
