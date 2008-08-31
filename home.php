@@ -203,6 +203,12 @@ if (function_exists("curl_init") && isset($sbconfig['EnableUpdateCheck']) && $sb
 	
 	</td>
 </tr>
+<?php
+
+if ($conn->getAdapter() != "sqlite")
+{
+
+?>
 <tr>
 	<td>
 	<h4><?php echo __("Create a new database"); ?></h4>
@@ -268,6 +274,11 @@ if (function_exists("curl_init") && isset($sbconfig['EnableUpdateCheck']) && $sb
 	
 	</td>
 </tr>
+<?php
+
+}
+
+?>
 <tr>
 	<td>
 	<h4><?php echo __("Did you know..."); ?></h4>
