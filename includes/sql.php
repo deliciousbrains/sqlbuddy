@@ -38,14 +38,14 @@ class SQL {
 		if ($adapt == "sqlite")
 		{
 			$this->adapter = "sqlite";
-			$file = (array_key_exists("file", $opt)) ? $opt['file'] : "";
-			$this->conn = sqlite_open($file, 0666, $sqliteError);
+			$database = (array_key_exists("database", $opt)) ? $opt['database'] : "";
+			$this->conn = @sqlite_open($database, 0666, $sqliteError);
 		}
 		else
 		{
 			$this->adapter = "mysql";
 			$host = (array_key_exists("host", $opt)) ? $opt['host'] : "";
-			$this->conn = mysql_connect($host, $user, $pass);
+			$this->conn = @mysql_connect($host, $user, $pass);
 			$this->query("SET NAMES 'utf8'");
 		}
 
@@ -118,7 +118,14 @@ class SQL {
 			}
 			else if ($this->adapter == "sqlite")
 			{
-				return sqlite_num_rows($resultSet);
+				if (is_string($resultSet) && $resultSet)
+				{
+					return 1;
+				}
+				else
+				{
+					return sqlite_num_rows($resultSet);
+				}
 			}
 		}
 	}
@@ -133,7 +140,15 @@ class SQL {
 			}
 			else if ($this->adapter == "sqlite")
 			{
-				return sqlite_fetch_array($resultSet, SQLITE_NUM);
+				if (is_string($resultSet))
+				{
+					$returnArray[0] = $resultSet;
+					return $returnArray;
+				}
+				else
+				{
+					return sqlite_fetch_array($resultSet, SQLITE_NUM);
+				}
 			}
 		}
 	}
@@ -208,8 +223,8 @@ class SQL {
 			}
 			else if ($this->adapter == "sqlite")
 			{
-				$file = (array_key_exists("file", $this->options)) ? $this->options['file'] : "";
-				return $file;
+				$database = (array_key_exists("database", $this->options)) ? $this->options['database'] : "";
+				return $database;
 			}
 		}
 	}
@@ -229,6 +244,36 @@ class SQL {
 		}
 	}
 
+	function listCharset()
+	{
+		if ($this->conn)
+		{
+			if ($this->adapter == "mysql")
+			{
+				return $this->query("SHOW CHARACTER SET");
+			}
+			else if ($this->adapter == "sqlite")
+			{
+				return "";
+			}
+		}
+	}
+	
+	function listCollation()
+	{
+		if ($this->conn)
+		{
+			if ($this->adapter == "mysql")
+			{
+				return $this->query("SHOW COLLATION");
+			}
+			else if ($this->adapter == "sqlite")
+			{
+				return "";
+			}
+		}
+	}
+	
 	function insertId($resultSet)
 	{
 		if ($this->conn)
