@@ -353,8 +353,7 @@ global $conn;
 	echo 'var menujson = {"menu": [';
 	echo $conn->getMetadata();
 	echo ']};';
-
-	echo $output;
+	
 	?>
 	//-->
 	</script>
