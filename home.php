@@ -29,48 +29,53 @@ loginCheck();
 	
 	<?php
 	
-	$message = "";
-	
-	$version = $conn->getVersion();
-	
-	if (isset($_SESSION['SB_LOGIN_USER']))
-	{
-		$message = sprintf(__("You are connected to MySQL %s with the user %s."), $version, $_SESSION['SB_LOGIN_USER']);
-	}
-		
-	$statusSql = $conn->query("SHOW STATUS");
-	
-	if (@$conn->rowCount($statusSql))
+	if ($conn->getAdapter() == "mysql")
 	{
 		
-		while ($statusRow = $conn->fetchAssoc($statusSql))
+		$message = "";
+		
+		$version = $conn->getVersion();
+		
+		if (isset($_SESSION['SB_LOGIN_USER']))
 		{
-			$varn = $statusRow['Variable_name'];
-			if ($varn == "Uptime" || $varn == "Bytes_sent" || $varn == "Bytes_received")
-				$status[$varn] = $statusRow['Value'];
+			$message = sprintf(__("You are connected to MySQL %s with the user %s."), $version, $_SESSION['SB_LOGIN_USER']);
+		}
+			
+		$statusSql = $conn->query("SHOW STATUS");
+		
+		if (@$conn->rowCount($statusSql))
+		{
+			
+			while ($statusRow = $conn->fetchAssoc($statusSql))
+			{
+				$varn = $statusRow['Variable_name'];
+				if ($varn == "Uptime" || $varn == "Bytes_sent" || $varn == "Bytes_received")
+					$status[$varn] = $statusRow['Value'];
+			}
+			
+			$uptime = (int)($status['Uptime']);
+			
+			$translated = time() - $uptime;
+			
+			if (date("Y") != date("Y", $translated))
+				$startDate = date("F jS, Y", $translated);
+			else
+				$startDate = date("F jS", $translated);
+			
+			$totalDataS = (int)($status['Bytes_sent']);
+			$totalDataR = (int)($status['Bytes_received']);
+			
+			$totalData = $totalDataS + $totalDataR;
+			
+			$dataString = memoryFormat($totalData);
+			
+			$message .= " " . sprintf(__("The database server has been running since %s and has transferred approximately %s of data."), $startDate, $dataString);
+			
 		}
 		
-		$uptime = (int)($status['Uptime']);
-		
-		$translated = time() - $uptime;
-		
-		if (date("Y") != date("Y", $translated))
-			$startDate = date("F jS, Y", $translated);
-		else
-			$startDate = date("F jS", $translated);
-		
-		$totalDataS = (int)($status['Bytes_sent']);
-		$totalDataR = (int)($status['Bytes_received']);
-		
-		$totalData = $totalDataS + $totalDataR;
-		
-		$dataString = memoryFormat($totalData);
-		
-		$message .= " " . sprintf(__("The database server has been running since %s and has transferred approximately %s of data."), $startDate, $dataString);
+		echo "<p>" . $message . "</p>";
 		
 	}
-	
-	echo "<p>" . $message . "</p>";
 	
 	?>
 	

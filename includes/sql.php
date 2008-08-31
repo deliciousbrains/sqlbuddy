@@ -54,7 +54,12 @@ class SQL {
 			return false;
 		}
 	}
-
+	
+	function getAdapter()
+	{
+		return $this->adapter;
+	}
+	
 	function selectDB($db)
 	{
 		if ($this->conn)
@@ -182,7 +187,7 @@ class SQL {
 			}
 		}
 	}
-
+	
 	function result($resultSet, $targetRow, $targetColumn)
 	{
 		if ($this->conn)
@@ -197,7 +202,7 @@ class SQL {
 			}
 		}
 	}
-
+	
 	function listDatabases()
 	{
 		if ($this->conn)
@@ -213,7 +218,7 @@ class SQL {
 			}
 		}
 	}
-
+	
 	function listTables()
 	{
 		if ($this->conn)
@@ -228,7 +233,7 @@ class SQL {
 			}
 		}
 	}
-
+	
 	function listCharset()
 	{
 		if ($this->conn)

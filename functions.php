@@ -152,7 +152,7 @@ function loginCheck($validateReq = true)
 			redirect("login.php");
 		exit;
 	}
-	if (isset($validateReq))
+	if ($validateReq)
 	{
 		if (!validateRequest())
 		{
@@ -254,15 +254,36 @@ global $conn;
 
 	<div id="leftside">
 		<div id="sidemenu">
-		<div class="dblist">
-		<ul>
-		<li id="sidehome"><a href="#page=home" onclick="sideMainClick('home.php', 0); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Home"); ?></div></a></li>
-		<li id="sideusers"><a href="#page=users&topTab=1" onclick="sideMainClick('users.php', 1); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Users"); ?></div></a></li>
-		<li id="sidequery"><a href="#page=query&topTab=2" onclick="sideMainClick('query.php', 2); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Query"); ?></div></a></li>
-		<li id="sideimport"><a href="#page=import&topTab=3" onclick="sideMainClick('import.php', 3); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Import"); ?></div></a></li>
-		<li id="sideexport"><a href="#page=export&topTab=4" onclick="sideMainClick('export.php', 4); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Export"); ?></div></a></li>
+		<div class="dblist"><ul>
+		<?php
+		
+		if ($conn->getAdapter() != "sqlite")
+		{
+		
+		?>
+			<li id="sidehome"><a href="#page=home" onclick="sideMainClick('home.php', 0); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Home"); ?></div></a></li>
+			<li id="sideusers"><a href="#page=users&topTab=1" onclick="sideMainClick('users.php', 1); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Users"); ?></div></a></li>
+			<li id="sidequery"><a href="#page=query&topTab=2" onclick="sideMainClick('query.php', 2); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Query"); ?></div></a></li>
+			<li id="sideimport"><a href="#page=import&topTab=3" onclick="sideMainClick('import.php', 3); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Import"); ?></div></a></li>
+			<li id="sideexport"><a href="#page=export&topTab=4" onclick="sideMainClick('export.php', 4); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Export"); ?></div></a></li>
+		<?php
+		
+		}
+		else
+		{
+		
+		?>
+			<li id="sidehome"><a href="#page=home" onclick="sideMainClick('home.php', 0); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Home"); ?></div></a></li>
+			<li id="sidequery"><a href="#page=query&topTab=1" onclick="sideMainClick('query.php', 1); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Query"); ?></div></a></li>
+			<li id="sideimport"><a href="#page=import&topTab=2" onclick="sideMainClick('import.php', 2); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Import"); ?></div></a></li>
+			<li id="sideexport"><a href="#page=export&topTab=3" onclick="sideMainClick('export.php', 3); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Export"); ?></div></a></li>
+		<?php
+		
+		}
+		
+		?>
 		</ul></div>
-
+		
 		<div class="dblistheader"><?php echo __("Databases"); ?></div>
 		<div class="dblist" id="databaselist"><ul></ul></div>
 		</div>
@@ -285,7 +306,16 @@ global $conn;
 	<!--
 	
 	<?php
-
+	
+	if ($conn->getAdapter() == "sqlite")
+	{
+		echo "var showUsersMenu = false;\n";
+	}
+	else
+	{
+		echo "var showUsersMenu = true;\n";
+	}
+	
 	if (isset($requestKey))
 	{
 		echo 'var requestKey = "' . $requestKey . '";';

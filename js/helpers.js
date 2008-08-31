@@ -1116,6 +1116,9 @@ function toggleVisibility(id)
 
 function approximateNumber(num)
 {
+	if (isNaN(num) || num == "NaN")
+		num = 0;
+	
 	if (num < 10000)
 		return num;
 	else if (num < 1000000)

@@ -93,7 +93,15 @@ function Page()
 	
 	this.topTabs = [new TopTabGroup("Main"), new TopTabGroup("Database"), new TopTabGroup("Table")];
 	
-	this.topTabs[0].addTab(gettext("Home"), "home.php").addTab(gettext("Users"), "users.php").addTab(gettext("Query"), "query.php").addTab(gettext("Import"), "import.php").addTab(gettext("Export"), "export.php");
+	if (showUsersMenu)
+	{
+		this.topTabs[0].addTab(gettext("Home"), "home.php").addTab(gettext("Users"), "users.php").addTab(gettext("Query"), "query.php").addTab(gettext("Import"), "import.php").addTab(gettext("Export"), "export.php");
+	}
+	else
+	{
+		this.topTabs[0].addTab(gettext("Home"), "home.php").addTab(gettext("Query"), "query.php").addTab(gettext("Import"), "import.php").addTab(gettext("Export"), "export.php");
+	}
+	
 	this.topTabs[1].addTab(gettext("Overview"), "dboverview.php").addTab(gettext("Query"), "query.php").addTab(gettext("Import"), "import.php").addTab(gettext("Export"), "export.php");
 	this.topTabs[2].addTab(gettext("Browse"), "browse.php").addTab(gettext("Structure"), "structure.php").addTab(gettext("Insert"), "insert.php").addTab(gettext("Query"), "query.php").addTab(gettext("Import"), "import.php").addTab(gettext("Export"), "export.php");
 	

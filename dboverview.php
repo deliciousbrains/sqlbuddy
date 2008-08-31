@@ -118,7 +118,7 @@ if (isset($mysqlError))
 
 <?php
 
-$tableSql = $conn->query("SHOW TABLES");
+$tableSql = $conn->listTables();
 
 if (@$conn->rowCount($tableSql))
 {
@@ -245,6 +245,9 @@ if (@$conn->rowCount($tableSql))
 	
 }
 
+if ($conn->getAdapter() != "sqlite")
+{
+
 ?>
 
 <div class="inputbox" style="width: 275px; margin-bottom: 15px">
@@ -254,6 +257,9 @@ if (@$conn->rowCount($tableSql))
 </div>
 
 <?php
+
+}
+
 
 if (isset($charsetList))
 {
