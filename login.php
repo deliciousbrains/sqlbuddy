@@ -15,7 +15,7 @@ MIT license
 
 include "functions.php";
 
-$adapter = (isset($sbconfig['DefaultAdapter'])) ? $sbconfig['DefaultAdapter'] : "adapter";
+$adapter = (isset($sbconfig['DefaultAdapter'])) ? $sbconfig['DefaultAdapter'] : "mysql";
 $host = (isset($sbconfig['DefaultHost'])) ? $sbconfig['DefaultHost'] : "localhost";
 $user = (isset($sbconfig['DefaultUser'])) ? $sbconfig['DefaultUser'] : "root";
 $pass = (isset($sbconfig['DefaultPass'])) ? $sbconfig['DefaultPass'] : "";	
@@ -33,13 +33,26 @@ if ($_POST)
 		
 	if (isset($_POST['PASS']))
 		$pass = $_POST['PASS'];
+	
+	if (isset($_POST['DATABASE']))
+		$database = $_POST['DATABASE'];
 }
 
-if ($adapter && $host && $user && $pass)
+if (($adapter != "sqlite" && $host && $user && $pass) || ($adapter == "sqlite" && $database))
 {
-	$connString = "mysql:host=$host";
 	
-	$connCheck = new SQL($connString, $user, $pass);
+	if ($adapter == "sqlite")
+	{
+		$connString = "sqlite:database=$database";
+		$connCheck = new SQL($connString);
+		$user = "";
+		$pass = "";
+	}
+	else
+	{
+		$connString = "$adapter:host=$host";
+		$connCheck = new SQL($connString, $user, $pass);
+	}
 	
 	if ($connCheck != false)
 	{
@@ -152,15 +165,16 @@ startOutput();
 			}
 			?>
 			<tr>
-			<td></td>
+			<td class="field"></td>
 			<td>
-			<select name="ADAPTER">
+			<select name="ADAPTER" id="ADAPTER" onchange="adapterChange()">
 			<option value="mysql"><?php echo __("MySQL"); ?></option>
 			<option value="sqlite"><?php echo __("SQLite"); ?></option>
 			<option value="postgresql"><?php echo __("PostgreSQL"); ?></option>
 			</select>
 			</td>
-			</td>
+			</table>
+			<table cellpadding="0" id="REGOPTIONS">
 			<tr>
 			<td class="field"><?php echo __("Host"); ?>:</td>
 			<td><input type="text" class="text" name="HOST" value="<?php echo $host; ?>" /></td>
@@ -173,8 +187,16 @@ startOutput();
 			<td class="field"><?php echo __("Password"); ?>:</td>
 			<td><input type="password" class="text" name="PASS" id="PASS" /></td>
 			</tr>
+			</table>
+			<table cellpadding="0" id="LITEOPTIONS" style="display: none">
 			<tr>
-			<td></td>
+			<td class="field"><?php echo __("Database"); ?>:</td>
+			<td><input type="text" class="text" name="DATABASE" id="DATABASE" value="<?php echo $database; ?>" /></td>
+			</tr>
+			</table>
+			<table cellpadding="0">
+			<tr>
+			<td class="field"></td>
 			<td><input type="submit" class="inputbutton" value="<?php echo __("Submit"); ?>" /></td>
 			</tr>
 			</table>
@@ -189,21 +211,40 @@ startOutput();
 	</div>
 	<script type="text/javascript">
 	
-	document.getElementById('PASS').focus();
+	$('PASS').focus();
 	
 	if (!navigator.cookieEnabled)
 	{
-		var tb = document.getElementById('tb');
-		var newTr = document.createElement('tr');
-		var newTd = document.createElement('td');
+		var tb = $('tb');
+		var newTr = new Element('tr');
+		var newTd = new Element('td');
 		newTd.setAttribute("colspan", 2);
-		var newDiv = document.createElement('div');
+		var newDiv = new Element('div');
 		newDiv.className = "errormess";
-		var textMess = document.createTextNode("<?php echo __("You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."); ?>");
-		newDiv.appendChild(textMess);
+		newDiv.set('text', "<?php echo __("You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."); ?>");
 		newTd.appendChild(newDiv);
 		newTr.appendChild(newTd);
 		tb.appendChild(newTr);
+	}
+	
+	function adapterChange()
+	{
+		var adapter = $('ADAPTER');
+		var currentAdapter = adapter.options[adapter.selectedIndex].value;
+		
+		if (currentAdapter == "sqlite")
+		{
+			$('REGOPTIONS').style.display = 'none';
+			$('LITEOPTIONS').style.display = '';
+			$('DATABASE').focus();
+		}
+		else
+		{
+			$('REGOPTIONS').style.display = '';
+			$('LITEOPTIONS').style.display = 'none';
+			$('PASS').focus();
+		}
+		
 	}
 	
 	</script>
