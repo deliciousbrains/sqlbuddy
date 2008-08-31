@@ -106,7 +106,7 @@ if (isset($conn) && $conn)
 	if (isset($_GET['table']))
 		$table = $conn->escapeString($_GET['table']);
 
-	$charsetSql = $conn->query("SHOW CHARACTER SET");
+	$charsetSql = $conn->listCharset();
 	if (@$conn->rowCount($charsetSql))
 	{
 		while ($charsetRow = $conn->fetchAssoc($charsetSql))
@@ -115,7 +115,7 @@ if (isset($conn) && $conn)
 		}
 	}
 
-	$collationSql = $conn->query("SHOW COLLATION");
+	$collationSql = $conn->listCollation();
 	if (@$conn->rowCount($collationSql))
 	{
 		while ($collationRow = $conn->fetchAssoc($collationSql))
@@ -282,6 +282,8 @@ global $conn;
 
 	</body>
 	<script type="text/javascript">
+	<!--
+	
 	<?php
 
 	if (isset($requestKey))
@@ -354,6 +356,7 @@ global $conn;
 
 	echo $output;
 	?>
+	//-->
 	</script>
 </html>
 <?php
