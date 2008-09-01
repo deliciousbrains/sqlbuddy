@@ -526,17 +526,20 @@ function cancelEdit(formu)
 
 function deleteSelectedRows()
 {
-	generatePrompt("DELETE FROM `" + sb.table + "` ", "", gettext("delete this row"), gettext("delete these rows"), "runQuery", true);
+	generatePrompt("DELETE FROM " + quoteModifier(sb.table) + " ", "", gettext("delete this row"), gettext("delete these rows"), "runQuery", true);
 }
 
 function emptySelectedTables()
 {
-	generatePrompt("TRUNCATE `", "`", gettext("empty this table"), gettext("empty these tables"), "runQuery", true);
+	if (adapter == "sqlite")
+		generatePrompt("DELETE FROM '", "'", gettext("empty this table"), gettext("empty these tables"), "runQuery", true);
+	else if (adapter == "mysql")
+		generatePrompt("TRUNCATE `", "`", gettext("empty this table"), gettext("empty these tables"), "runQuery", true);
 }
 
 function dropSelectedTables()
 {
-	generatePrompt("DROP TABLE `", "`", gettext("drop this table"), gettext("drop these tables"), "runQuery", true);
+	generatePrompt("DROP TABLE " + returnQuote(), returnQuote(), gettext("drop this table"), gettext("drop these tables"), "runQuery", true);
 }
 
 function deleteSelectedColumns()
@@ -593,7 +596,15 @@ function confirmEmptyTable()
 {
 	if (f(sb.table))
 	{
-		var emptyQuery = "TRUNCATE TABLE `" + sb.table + "`";
+		if (adapter == "mysql")
+		{
+			var emptyQuery = "TRUNCATE TABLE `" + sb.table + "`";
+		}
+		else if (adapter == "sqlite")
+		{
+			var emptyQuery = "DELETE FROM '" + sb.table + "'";
+		}
+		
 		showDialog(gettext("Confirm"),
 			printf(gettext("Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"), sb.table) + "<div class=\"querybox\">" + emptyQuery + "</div>",
 			"var x = new XHR({url: \"ajaxquery.php\", onSuccess: emptyTableCallback}).send(\"query=" + encodeURIComponent(emptyQuery) + "&silent=1\")"
@@ -612,7 +623,7 @@ function confirmDropTable()
 	var table = sb.table;
 	if (f(table))
 	{
-		var dropQuery = "DROP TABLE `" + table + "`";
+		var dropQuery = "DROP TABLE " + returnQuote() + table + returnQuote();
 		var targ = $(getSubMenuId(sb.db, sb.table));
 		while (!targ.hasClass("sublist"))
 		{
@@ -905,7 +916,7 @@ function updateFieldName(inputElem)
 
 function getFieldSummary(elem, withFormatting)
 {
-	var name, type, values, size, key, defaultval, charset, auto, unsign, binary, notnull, headerBuild;
+	var name, type, values, size, key, defaultval, charset, auto, unsign, binary, notnull, unique, headerBuild;
 	var fieldBuild;
 	if (f(elem))
 	{
@@ -928,6 +939,8 @@ function getFieldSummary(elem, withFormatting)
 				auto = inputs[inp].checked;
 			if (inputs[inp].name == "NOTNULL")
 				notnull = inputs[inp].checked;
+			if (inputs[inp].name == "UNIQUE")
+				unique = inputs[inp].checked;
 		}
 		
 		var selects = elem.getElementsByTagName("select");
@@ -945,29 +958,49 @@ function getFieldSummary(elem, withFormatting)
 		{
 			if (withFormatting)
 				fieldBuild = "<span style=\"color: steelblue\">" + name + "</span>";
+			else if (adapter == "sqlite")
+				fieldBuild = name;
 			else
 				fieldBuild = "`" + name + "`";
 			
-			if (f(type))
-				fieldBuild += " " + type;
-			if (f(values) && (type == "set" || type == "enum"))
-				fieldBuild += values + "";
-			if (f(size))
-				fieldBuild += "(" + size + ")";
-			if (f(unsign))
-				fieldBuild += " unsigned";
-			if (f(binary))
-				fieldBuild += " binary";
-			if (f(charset))
-				fieldBuild += " charset " + charset;
-			if (f(notnull))
-				fieldBuild += " not null";
-			if (f(defaultval))
-				fieldBuild += " default '" + defaultval + "'";
-			if (f(auto))
-				fieldBuild += " auto_increment";
-			if (f(key))
-				fieldBuild += " " + key + " key";
+			if (adapter == "sqlite")
+			{
+				if (f(type))
+					fieldBuild += " " + type;
+				if (f(size) && f(type))
+					fieldBuild += "(" + size + ")";
+				if (f(notnull))
+					fieldBuild += " not null";
+				if (f(key))
+					fieldBuild += " " + key + " key";
+				if (f(unique))
+					fieldBuild += " unique";
+				if (f(defaultval))
+					fieldBuild += " default '" + defaultval + "'";
+			}
+			else
+			{
+				if (f(type))
+					fieldBuild += " " + type;
+				if (f(values) && (type == "set" || type == "enum"))
+					fieldBuild += values + "";
+				if (f(size) && f(type))
+					fieldBuild += "(" + size + ")";
+				if (f(unsign))
+					fieldBuild += " unsigned";
+				if (f(binary))
+					fieldBuild += " binary";
+				if (f(charset))
+					fieldBuild += " charset " + charset;
+				if (f(notnull))
+					fieldBuild += " not null";
+				if (f(defaultval))
+					fieldBuild += " default '" + defaultval + "'";
+				if (f(auto))
+					fieldBuild += " auto_increment";
+				if (f(key))
+					fieldBuild += " " + key + " key";
+			}
 			
 		}
 	}
@@ -989,7 +1022,8 @@ function addTableField()
 		clearForm(newField);
 		
 		var valueLine = $E(".valueline", newField);
-		valueLine.style.display = 'none';
+		if (f(valueLine))
+			valueLine.style.display = 'none';
 		
 		if (!Browser.Engine.trident)
 		{
@@ -1048,7 +1082,16 @@ function createTable()
 	var fields = $ES(".fieldbox", $('fieldlist'));
 	if (f(tableName) && fields.length > 0)
 	{
-		var createQuery = "CREATE TABLE `" + tableName + "` (";
+		
+		if (adapter == "sqlite")
+		{
+			var createQuery = "CREATE TABLE " + tableName + " (";
+		}
+		else
+		{
+			var createQuery = "CREATE TABLE `" + tableName + "` (";
+		}
+		
 		for (var i=0; i<fields.length; i++)
 		{
 			createQuery += getFieldSummary(fields[i]) + ", ";
@@ -1099,8 +1142,17 @@ function removeField(elem)
 function submitAddColumn()
 {
 	var newColumn = getFieldSummary($('newfield'));
-	var position = $('INSERTPOS').options[$('INSERTPOS').selectedIndex].value;
-	var columnQuery = "ALTER TABLE `" + sb.table + "` ADD " + newColumn + position;
+	
+	if (adapter == "mysql")
+	{
+		var position = $('INSERTPOS').options[$('INSERTPOS').selectedIndex].value;
+		var columnQuery = "ALTER TABLE `" + sb.table + "` ADD " + newColumn + position;
+	}
+	else if (adapter == "sqlite")
+	{
+		var columnQuery = "ALTER TABLE '" + sb.table + "' ADD " + newColumn;
+	}
+	
 	var x = new XHR({url: sb.page, onSuccess: finishTabLoad}).send("runQuery=" + columnQuery);
 }
 
@@ -1133,7 +1185,11 @@ function refreshRowCount()
 {
 	if (f(sb.db) && f(sb.table))
 	{
-		var countQuery = "SELECT COUNT(*) AS `RowCount` FROM `" + sb.table + "`";
+		if (adapter == "sqlite")
+			var countQuery = "SELECT COUNT(*) AS 'RowCount' FROM '" + sb.table + "'";
+		else
+			var countQuery = "SELECT COUNT(*) AS `RowCount` FROM `" + sb.table + "`";
+		
 		var x = new XHR({url: "ajaxquery.php", onSuccess: updateRowCount, showLoader: false}).send("query=" + countQuery);
 	}
 }
@@ -1357,4 +1413,21 @@ function switchTheme()
 		Cookie.dispose("sb_theme");
 	}
 	location.reload(true);
+}
+
+function quoteModifier(mod)
+{
+	return returnQuote() + mod + returnQuote();
+}
+
+function returnQuote()
+{
+	if (adapter == "sqlite")
+	{
+		return "'";
+	}
+	else if (adapter == "mysql")
+	{
+		return "`";
+	}
 }

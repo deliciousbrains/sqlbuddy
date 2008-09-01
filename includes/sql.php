@@ -188,7 +188,7 @@ class SQL {
 		}
 	}
 	
-	function result($resultSet, $targetRow, $targetColumn)
+	function result($resultSet, $targetRow, $targetColumn = "")
 	{
 		if ($this->conn)
 		{
@@ -229,7 +229,7 @@ class SQL {
 			}
 			else if ($this->adapter == "sqlite")
 			{
-				return $this->query("SELECT name FROM sqlite_master WHERE type = 'table'");
+				return $this->query("SELECT name FROM sqlite_master WHERE type = 'table' ORDER BY name");
 			}
 		}
 	}
@@ -293,7 +293,7 @@ class SQL {
 			}
 		}
 	}
-
+	
 	function getVersion()
 	{
 		if ($this->conn)
@@ -311,7 +311,60 @@ class SQL {
 		}
 
 	}
-
+	
+	// returns the number of rows in a table
+	function tableRowCount($table)
+	{
+		if ($this->conn)
+		{
+			if ($this->adapter == "mysql")
+			{
+				$countSql = $this->query("SELECT COUNT(*) AS `RowCount` FROM `" . $table . "`");
+				$count = (int)($this->result($countSql, 0, "RowCount"));
+				return $count;
+			}
+			else if ($this->adapter == "sqlite")
+			{
+				$countSql = $this->query("SELECT COUNT(*) AS 'RowCount' FROM '" . $table . "'");
+				$count = (int)($this->result($countSql, 0, "RowCount"));
+				return $count;
+			}
+		}
+	}
+	
+	// gets column info for a table
+	function describeTable($table)
+	{
+		if ($this->conn)
+		{
+			if ($this->adapter == "mysql")
+			{
+				return $this->query("DESCRIBE `" . $table . "`");
+			}
+			else if ($this->adapter == "sqlite")
+			{
+				$columnSql = $this->query("SELECT sql FROM sqlite_master where tbl_name = '" . $table . "'");
+				$columnInfo = $this->result($columnSql, 0, "sql");
+				$columnStart = strpos($columnInfo, '(');
+				$columns = substr($columnInfo, $columnStart+1, -1);
+				$columns = split(',[^0-9]', $columns);
+				
+				$columnList = array();
+				
+				foreach ($columns as $column)
+				{
+					$column = trim($column);
+					$columnSplit = explode(" ", $column, 2);
+					$columnName = $columnSplit[0];
+					$columnType = (sizeof($columnSplit) > 1) ? $columnSplit[1] : "";
+					$columnList[] = array($columnName, $columnType);
+				}
+				
+				return $columnList;
+			}
+		}
+	}
+	
 	/*
 		Return names, row counts etc for every database, table and view in a JSON string
 	*/
@@ -320,7 +373,7 @@ class SQL {
 		$output = '';
 		if ($this->conn)
 		{
-			if ($this->adapter == "mysql" && version_compare($this->getVersion(), "5.0.0", ">"))
+			if ($this->adapter == "mysql" && version_compare($this->getVersion(), "5.0.0", ">="))
 			{
 				$this->selectDB("INFORMATION_SCHEMA");
 				$schemaSql = $this->query("SELECT SCHEMA_NAME FROM SCHEMATA ORDER BY SCHEMA_NAME");
@@ -392,7 +445,7 @@ class SQL {
 					$output .= ',"items": [';
 					while ($tableRow = $this->fetchArray($tableSql))
 					{
-						$countSql = $this->query("SELECT COUNT(*) AS `RowCount` FROM `" . $tableRow[0] . "`");
+						$countSql = $this->query("SELECT COUNT(*) AS 'RowCount' FROM '" . $tableRow[0] . "'");
 						$rowCount = (int)($this->result($countSql, 0, "RowCount"));
 						$output .= '{"name":"' . $tableRow[0] . '","rowcount":' . $rowCount . '},';
 					}

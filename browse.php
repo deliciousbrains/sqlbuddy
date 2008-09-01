@@ -35,7 +35,15 @@ if (isset($_POST['runQuery']))
 	}
 }
 
-$query = "SELECT * FROM `$table`";
+if ($conn->getAdapter() == "sqlite")
+{
+	$query = "SELECT * FROM '$table'";
+}
+else
+{
+	$query = "SELECT * FROM `$table`";
+}
+
 $queryTable = $table;
 
 if (isset($_POST['s']))

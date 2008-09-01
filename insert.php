@@ -23,9 +23,9 @@ if (isset($db))
 	$conn->selectDB($db);
 
 if (isset($table))
-	$structureSql = $conn->query("DESCRIBE `$table`");
+	$structureSql = $conn->describeTable($table);
 
-if (@$conn->rowCount($structureSql))
+if (@$conn->rowCount($structureSql) || sizeof($structureSql) > 0)
 {
 	
 	if ($_POST)
@@ -36,7 +36,15 @@ if (@$conn->rowCount($structureSql))
 		
 		foreach ($_POST as $key=>$value)
 		{
-			$insertFields .= "`" . $key . "`,";
+			
+			if ($conn->getAdapter() == "sqlite")
+			{
+				$insertFields .= $key . ",";
+			}
+			else
+			{
+				$insertFields .= "`" . $key . "`,";
+			}
 			
 			if (is_array($value))
 			{
@@ -49,7 +57,14 @@ if (@$conn->rowCount($structureSql))
 		$insertFields = substr($insertFields, 0, -1);
 		$insertValues = substr($insertValues, 0, -1);
 		
-		$insertQuery = "INSERT INTO `$table` (" . $insertFields . ") VALUES (" . $insertValues . ")";
+		if ($conn->getAdapter() == "sqlite")
+		{
+			$insertQuery = "INSERT INTO $table (" . $insertFields . ") VALUES (" . $insertValues . ")";
+		}
+		else
+		{
+			$insertQuery = "INSERT INTO `$table` (" . $insertFields . ") VALUES (" . $insertValues . ")";
+		}
 		
 		$conn->query($insertQuery) or ($mysqlError = $conn->error());
 		
@@ -90,79 +105,124 @@ if (@$conn->rowCount($structureSql))
 	
 	$firstField = true;
 	
-	if (@$conn->rowCount($structureSql))
+	if ($conn->getAdapter() == "sqlite")
 	{
-		while ($structureRow = $conn->fetchAssoc($structureSql))
+	
+		if (sizeof($structureSql) > 0)
 		{
-			
-			preg_match("/^([a-z]+)(.([0-9]+).)?(.*)?$/", $structureRow['Type'], $matches);
-			
-			$curtype = $matches[1];
-			$cursizeQuotes = $matches[2];
-			$cursize = $matches[3];
-			$curextra = $matches[4];
-			
-			echo '<tr>';
-			echo '<td class="fieldheader"><span style="color: steelblue">';
-			if ($structureRow['Key'] == 'PRI') echo '<u>';
-			echo $structureRow['Field'];
-			if ($structureRow['Key'] == 'PRI') echo '</u>';
-			echo "</span> " . $curtype . $cursizeQuotes . ' ' . $structureRow['Extra'] . '</td>';
-			echo "</tr>";
-			echo "<tr>";
-			echo '<td class="inputarea">';
-			if ($structureRow['Type'] == "text")
+			foreach ($structureSql as $column)
 			{
-				echo '<textarea name="' . $structureRow['Field'] . '">';
-				if (isset($mysqlError))
-					echo $_POST[$structureRow['Field']];
-				echo '</textarea>';
-			}
-			elseif (substr($structureRow['Type'], 0, 4) == "enum")
-			{
-				$trimmed = substr($structureRow['Type'], 6, -2);
-				$listOptions = explode("','", $trimmed);
-				echo '<select name="' . $structureRow['Field'] . '">';
-				echo '<option> - - - - - </option>';
-				foreach ($listOptions as $option)
-				{
-					echo '<option value="' . $option . '">' . $option . '</option>';
-				}
-				echo '</select>';
-			}
-			elseif (substr($structureRow['Type'], 0, 3) == "set")
-			{
-				$trimmed = substr($structureRow['Type'], 5, -2);
-				$listOptions = explode("','", $trimmed);
-				foreach ($listOptions as $option)
-				{
-					$id = $option . rand(1, 1000);
-					echo '<label for="' . $id . '"><input name="' . $structureRow['Field'] . '[]" value="' . $option . '" id="' . $id . '" type="checkbox">' . $option . '</label><br />';
-				}
-			}
-			else
-			{
+				
+				echo '<tr>';
+				echo '<td class="fieldheader"><span style="color: steelblue">';
+				if (strpos($column[1], "primary key") > 0) echo '<u>';
+				echo $column[0];
+				if (strpos($column[1], "primary key") > 0) echo '</u>';
+				echo "</span> " . $column[1] . '</td>';
+				echo "</tr>";
+				echo "<tr>";
+				echo '<td class="inputarea">';
 				echo '<input type="text"';
-				echo ' name="' . $structureRow['Field'] . '"';
+				echo ' name="' . $column[0] . '"';
 				if (isset($mysqlError))
 				{
-					echo 'value="' . $_POST[$structureRow['Field']] . '"';
+					echo 'value="' . $_POST[$column[0]] . '"';
 				}
-				if ($firstField && $structureRow['Extra'] != "auto_increment")
+				if ($firstField)
 				{
 					echo ' id="FIRSTFIELD"';
 					$firstField = false;
 				}
 				echo ' class="text" />';
+				
+				?>
+				
+				</td>
+				</tr>
+				
+				<?php
 			}
-			
-			?>
-			
-			</td>
-			</tr>
-			
-			<?php
 		}
+	
+	}
+	else if ($conn->getAdapter() == "mysql")
+	{
+		
+		if (@$conn->rowCount($structureSql))
+		{
+			while ($structureRow = $conn->fetchAssoc($structureSql))
+			{
+				
+				preg_match("/^([a-z]+)(.([0-9]+).)?(.*)?$/", $structureRow['Type'], $matches);
+				
+				$curtype = $matches[1];
+				$cursizeQuotes = $matches[2];
+				$cursize = $matches[3];
+				$curextra = $matches[4];
+				
+				echo '<tr>';
+				echo '<td class="fieldheader"><span style="color: steelblue">';
+				if ($structureRow['Key'] == 'PRI') echo '<u>';
+				echo $structureRow['Field'];
+				if ($structureRow['Key'] == 'PRI') echo '</u>';
+				echo "</span> " . $curtype . $cursizeQuotes . ' ' . $structureRow['Extra'] . '</td>';
+				echo "</tr>";
+				echo "<tr>";
+				echo '<td class="inputarea">';
+				if ($structureRow['Type'] == "text")
+				{
+					echo '<textarea name="' . $structureRow['Field'] . '">';
+					if (isset($mysqlError))
+						echo $_POST[$structureRow['Field']];
+					echo '</textarea>';
+				}
+				elseif (substr($structureRow['Type'], 0, 4) == "enum")
+				{
+					$trimmed = substr($structureRow['Type'], 6, -2);
+					$listOptions = explode("','", $trimmed);
+					echo '<select name="' . $structureRow['Field'] . '">';
+					echo '<option> - - - - - </option>';
+					foreach ($listOptions as $option)
+					{
+						echo '<option value="' . $option . '">' . $option . '</option>';
+					}
+					echo '</select>';
+				}
+				elseif (substr($structureRow['Type'], 0, 3) == "set")
+				{
+					$trimmed = substr($structureRow['Type'], 5, -2);
+					$listOptions = explode("','", $trimmed);
+					foreach ($listOptions as $option)
+					{
+						$id = $option . rand(1, 1000);
+						echo '<label for="' . $id . '"><input name="' . $structureRow['Field'] . '[]" value="' . $option . '" id="' . $id . '" type="checkbox">' . $option . '</label><br />';
+					}
+				}
+				else
+				{
+					echo '<input type="text"';
+					echo ' name="' . $structureRow['Field'] . '"';
+					if (isset($mysqlError))
+					{
+						echo 'value="' . $_POST[$structureRow['Field']] . '"';
+					}
+					if ($firstField && $structureRow['Extra'] != "auto_increment")
+					{
+						echo ' id="FIRSTFIELD"';
+						$firstField = false;
+					}
+					echo ' class="text" />';
+				}
+				
+				?>
+				
+				</td>
+				</tr>
+				
+				<?php
+			}
+		}
+		
 	}
 	
 	?>

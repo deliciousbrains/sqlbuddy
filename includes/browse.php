@@ -42,8 +42,7 @@ if ($query)
 		{
 			if (isset($queryTable))
 			{
-				$total = $conn->query("SELECT COUNT(*) AS `RowCount` FROM `$queryTable`");
-				$totalRows = (int)(@$conn->result($total, 0, "RowCount"));
+				$totalRows = $conn->tableRowCount($queryTable);
 	
 				if ($start > $totalRows)
 				{
@@ -73,11 +72,26 @@ if ($query)
 }
 
 //for the browse tab
-if (isset($queryTable))
+if (isset($queryTable) && $conn->getAdapter() == "sqlite")
 {
-	$structureSql = $conn->query("DESCRIBE `$queryTable`");
+	$structure = $conn->describeTable($queryTable);
 	
-	if (@$conn->rowCount($structureSql))
+	if (sizeof($structure) > 0)
+	{
+		foreach ($structure as $column)
+		{	
+			if (strpos($column[1], "primary key") > 0)
+			{
+				$primaryKeys[] = $column[0];
+			}
+		}
+	}
+}
+else if (isset($queryTable) && $conn->getAdapter() == "mysql")
+{
+	$structureSql = $conn->describeTable($queryTable);
+	
+	if ($conn->rowCount($structureSql))
 	{
 		while ($structureRow = $conn->fetchAssoc($structureSql))
 		{	
@@ -325,10 +339,22 @@ else
 				$queryBuilder = "WHERE ";
 				foreach ($primaryKeys as $primary)
 				{
-					$queryBuilder .= "`" . $primary . "`='" . $dataRow[$primary] . "' AND ";
+					if ($conn->getAdapter() == "sqlite")
+					{
+						$queryBuilder .= "" . $primary . "='" . $dataRow[$primary] . "' AND ";
+					}
+					else
+					{
+						$queryBuilder .= "`" . $primary . "`='" . $dataRow[$primary] . "' AND ";
+					}
 				}
 				$queryBuilder = substr($queryBuilder, 0, -5);
-				$queryBuilder .= " LIMIT 1";
+				
+				if ($conn->getAdapter() == "mysql")
+				{
+					$queryBuilder .= " LIMIT 1";
+				}
+				
 				echo '<dl class="manip';
 				if ($m % 2 == 1)
 				

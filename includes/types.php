@@ -65,4 +65,16 @@ $binaryDTs[] = "longblob";
 $binaryDTs[] = "binary";
 $binaryDTs[] = "varbinary";
 
+$sqliteTypeList[] = "varchar";
+$sqliteTypeList[] = "integer";
+$sqliteTypeList[] = "float";
+$sqliteTypeList[] = "varchar";
+$sqliteTypeList[] = "nvarchar";
+$sqliteTypeList[] = "text";
+$sqliteTypeList[] = "boolean";
+$sqliteTypeList[] = "clob";
+$sqliteTypeList[] = "blob";
+$sqliteTypeList[] = "timestamp";
+$sqliteTypeList[] = "numeric";
+
 ?>

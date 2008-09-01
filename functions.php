@@ -316,6 +316,8 @@ global $conn;
 		echo "var showUsersMenu = true;\n";
 	}
 	
+	echo "var adapter = \"" . $conn->getAdapter() . "\";\n";
+	
 	if (isset($requestKey))
 	{
 		echo 'var requestKey = "' . $requestKey . '";';

@@ -76,9 +76,9 @@ if (isset($mysqlError))
 	echo '<div class="errormessage" style="margin: 6px 12px 10px; width: 602px"><strong>' . __("Error performing operation") . '</strong><p>' . $mysqlError . '</p></div>';
 }
 
-$structureSql = $conn->query("DESCRIBE `$table`");
+$structureSql = $conn->describeTable($table);
 
-if (@$conn->rowCount($structureSql))
+if ($conn->getAdapter() == "mysql" && $conn->rowCount($structureSql))
 {
 
 ?>
@@ -149,32 +149,29 @@ if (@$conn->rowCount($structureSql))
 	
 	$m = 0;
 	
-	if (@$conn->rowCount($structureSql))
+	while ($structureRow = $conn->fetchAssoc($structureSql))
 	{
-		while ($structureRow = $conn->fetchAssoc($structureSql))
-		{
-			
-			echo '<div class="row' . $m . ' browse';
-			
-			if ($m % 2 == 1)
-			{ echo ' alternator'; }
-			else 
-			{ echo ' alternator2'; }
-			
-			echo '">';
-			echo '<table cellpadding="0" cellspacing="0">';
-			echo '<tr>';
-			echo '<td><div class="item column1">' . $structureRow['Field'] . '</div></td>';
-			echo '<td><div class="item column2">' . $structureRow['Type'] . '</div></td>';
-			echo '<td><div class="item column3">' . $structureRow['Default'] . '</div></td>';
-			echo '</tr>';
-			echo '</table>';
-			echo '</div>';
-			
-			$fieldList[] = $structureRow['Field'];
-			
-			$m++;
-		}
+		
+		echo '<div class="row' . $m . ' browse';
+		
+		if ($m % 2 == 1)
+		{ echo ' alternator'; }
+		else 
+		{ echo ' alternator2'; }
+		
+		echo '">';
+		echo '<table cellpadding="0" cellspacing="0">';
+		echo '<tr>';
+		echo '<td><div class="item column1">' . $structureRow['Field'] . '</div></td>';
+		echo '<td><div class="item column2">' . $structureRow['Type'] . '</div></td>';
+		echo '<td><div class="item column3">' . $structureRow['Default'] . '</div></td>';
+		echo '</tr>';
+		echo '</table>';
+		echo '</div>';
+		
+		$fieldList[] = $structureRow['Field'];
+		
+		$m++;
 	}
 	
 	echo '</div>';
@@ -585,6 +582,187 @@ if (@$conn->rowCount($structureSql))
 	}
 	
 	?>
+	
+	<script type="text/javascript" authkey="<?php echo $requestKey; ?>">
+	setTimeout("startGrid()", 1);
+	</script>
+	
+	</div>
+</td>
+</tr>
+</table>
+
+<?php
+
+}
+else if ($conn->getAdapter() == "sqlite" && sizeof($structureSql) > 0)
+{
+
+?>
+<table cellpadding="0" width="100%" class="structure" style="margin: 2px 7px 7px">
+<tr>
+<td valign="top" width="575">
+	
+	<table class="browsenav">
+	<tr>
+	<td class="options">
+	
+	<?php
+	
+	echo '<strong>' . __("Columns") . '</strong>';
+		
+	?>
+	
+	</td>
+	</tr>
+	</table>
+	
+	<?php
+	
+	echo '<div class="grid">';
+	
+	echo '<div class="gridheader impotent">';
+	echo '<div class="gridheaderinner">';
+	echo '<table cellpadding="0" cellspacing="0">';
+	echo '<tr>';
+	echo '<td><div column="1" class="headertitle column1">' . __("Name") . '</div></td>';
+	echo '<td><div class="columnresizer"></div></td>';
+	echo '<td><div column="2" class="headertitle column2">' . __("Type") . '</div></td>';
+	echo '<td><div class="columnresizer"></div></td>';
+	echo '</tr>';
+	echo '</table>';
+	echo '</div>';
+	echo '</div>';
+	
+	echo '<div class="gridscroll" style="overflow-x: hidden; max-height: 300px">';
+	
+	$m = 0;
+	
+	foreach ($structureSql as $column)
+	{
+		
+		echo '<div class="row' . $m . ' browse';
+		
+		if ($m % 2 == 1)
+		{ echo ' alternator'; }
+		else 
+		{ echo ' alternator2'; }
+		
+		echo '">';
+		echo '<table cellpadding="0" cellspacing="0">';
+		echo '<tr>';
+		echo '<td><div class="item column1">' . $column[0] . '</div></td>';
+		echo '<td><div class="item column2">' . $column[1] . '</div></td>';
+		echo '</tr>';
+		echo '</table>';
+		echo '</div>';
+		
+		$fieldList[] = $column[0];
+		
+		$m++;
+	}
+	
+	echo '</div>';
+	echo '</div>';
+	
+	if (version_compare($conn->getVersion(), "3.1.3", ">"))
+	{
+	
+	?>
+
+	<div id="newfield" class="inputbox">
+		<h4><?php echo __("Add a column"); ?></h4>
+	
+		<form onsubmit="submitAddColumn(); return false">
+		<table cellpadding="5">
+		<tr>
+		<td class="secondaryheader">
+		<?php echo __("Name"); ?>:
+		</td>
+		<td>
+		<input type="text" class="text" name="NAME" style="width: 145px" />
+		</td>
+		<td class="secondaryheader">
+		<?php echo __("Type"); ?>:
+		</td>
+		<td>
+		<select name="TYPE" style="width: 150px">
+		<option value="">typeless</option>
+		<?php
+		
+		foreach ($sqliteTypeList as $type)
+		{
+			echo '<option value="' . $type . '">' . $type . '</option>';
+		}
+		
+		?>
+		</select>
+		</td>
+		</tr>
+		<tr>
+		<td class="secondaryheader">
+		<?php echo __("Size"); ?>:
+		</td>
+		<td>
+		<input type="text" class="text" name="SIZE" style="width: 145px" />
+		</td>
+		<td class="secondaryheader">
+		<?php echo __("Default"); ?>:
+		</td>
+		<td>
+		<input type="text" class="text" name="DEFAULT" style="width: 145px" />
+		</td>
+		</tr>
+		<tr>
+		<td class="secondaryheader">
+		<?php echo __("Other"); ?>:
+		</td>
+		<td colspan="3">
+		<label><input type="checkbox" name="NOTNULL"><?php echo __("Not Null"); ?></label>
+		<label><input type="checkbox" name="UNIQUE"><?php echo __("Unique"); ?></label>
+		</td>
+		</tr>
+		<tr>
+		<td colspan="4" align="right" style="padding-right: 30px">
+		<input type="submit" class="inputbutton" value="<?php echo __("Submit"); ?>" />
+		</td>
+		</tr>
+		</table>
+		</form>
+	</div>
+	
+	<?php
+	
+	}
+	
+	?>
+
+</td>	
+<td valign="top">
+	<div style="margin: 4px 0 0 20px; padding-left: 15px; border-left: 1px solid rgb(215, 215, 215)">
+	
+	<h3><?php echo __("Options"); ?></h3>
+	
+	<div style="padding: 2px 0 15px">
+		<a onclick="confirmEmptyTable()"><?php echo __("Empty table"); ?></a><br />
+		<a onclick="confirmDropTable()"><?php echo __("Drop table"); ?></a><br />
+	</div>
+	
+	<?php
+	
+	$rowCount = $conn->tableRowCount($table);
+	
+	?>
+	
+	<h3><?php echo __("Table Information"); ?></h3>
+	<dl class="information">
+	<?php
+	
+	echo '<dt>' . __("Rows") . ':</dt><dd>' . number_format($rowCount) . '</dd>';
+		
+	?>
+	</dl>
+	<div class="clearer"></div>
 	
 	<script type="text/javascript" authkey="<?php echo $requestKey; ?>">
 	setTimeout("startGrid()", 1);

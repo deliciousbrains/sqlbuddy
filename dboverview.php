@@ -40,11 +40,14 @@ if (isset($_POST['runQuery']))
 			$conn->query($query) or ($mysqlError = $conn->error());
 			
 			// make a list of the tables that were dropped/emptied
-			if (substr($query, 0, 12) == "DROP TABLE `")
+			if (substr($query, 0, 10) == "DROP TABLE")
 				$droppedList[] = substr($query, 12, -1);
 			
 			if (substr($query, 0, 10) == "TRUNCATE `")
 				$emptiedList[] = substr($query, 10, -1);
+			
+			if (substr($query, 0, 13) == "DELETE FROM '")
+				$emptiedList[] = substr($query, 13, -1);
 			
 		}
 	}
@@ -120,7 +123,7 @@ if (isset($mysqlError))
 
 $tableSql = $conn->listTables();
 
-if (@$conn->rowCount($tableSql))
+if ($conn->rowCount($tableSql))
 {
 	
 	echo '<div style="margin-bottom: 15px">';
@@ -130,7 +133,12 @@ if (@$conn->rowCount($tableSql))
 	echo '<td class="options">';
 	
 	echo __("Select") . ':&nbsp;&nbsp;<a onclick="checkAll()">' . __("All") . '</a>&nbsp;&nbsp;<a onclick="checkNone()">' . __("None") . '</a>';
-	echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' . __("With selected") . ':&nbsp;&nbsp;<a onclick="emptySelectedTables()">' . __("Empty") . '</a>&nbsp;&nbsp;<a onclick="dropSelectedTables()">' . __("Drop") . '</a>&nbsp;&nbsp;<a onclick="optimizeSelectedTables()">' . __("Optimize") . '</a>';
+	echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' . __("With selected") . ':&nbsp;&nbsp;<a onclick="emptySelectedTables()">' . __("Empty") . '</a>&nbsp;&nbsp;<a onclick="dropSelectedTables()">' . __("Drop") . '</a>';
+	
+	if ($conn->getAdapter() == "mysql")
+	{
+		echo '&nbsp;&nbsp;<a onclick="optimizeSelectedTables()">' . __("Optimize") . '</a>';
+	}
 	
 	echo '</td>';
 	echo '</tr>';
@@ -156,9 +164,9 @@ if (@$conn->rowCount($tableSql))
 			echo '<td><div column="4" class="headertitle column4">' . __("Overhead") . '</div></td>';
 			echo '<td><div class="columnresizer"></div></td>';
 		}
-		else
+		else if ($conn->getAdapter() == "mysql")
 		{
-			echo '<td><div column="3" class="headertitle column4">' . __("Overhead") . '</div></td>';
+			echo '<td><div column="3" class="headertitle column3">' . __("Overhead") . '</div></td>';
 			echo '<td><div class="columnresizer"></div></td>';
 		}
 		
@@ -195,18 +203,20 @@ if (@$conn->rowCount($tableSql))
 	while ($tableRow = $conn->fetchArray($tableSql))
 	{
 		
-		$countSql = $conn->query("SELECT COUNT(*) AS `RowCount` FROM `" . $tableRow[0] . "`");
-		$rowCount = (int)(@$conn->result($countSql, 0, "RowCount"));
+		$rowCount = $conn->tableRowCount($tableRow[0]);
 		
-		$infoSql = $conn->query("SHOW TABLE STATUS LIKE '" . $tableRow[0] . "'");
-		$infoRow = $conn->fetchAssoc($infoSql);
-		
-		$overhead = $infoRow["Data_free"];
-		
-		$formattedOverhead = "";
-		
-		if ($overhead > 0)
-			$formattedOverhead = memoryFormat($overhead);
+		if ($conn->getAdapter() == "mysql")
+		{
+			$infoSql = $conn->query("SHOW TABLE STATUS LIKE '" . $tableRow[0] . "'");
+			$infoRow = $conn->fetchAssoc($infoSql);
+			
+			$overhead = $infoRow["Data_free"];
+			
+			$formattedOverhead = "";
+			
+			if ($overhead > 0)
+				$formattedOverhead = memoryFormat($overhead);
+		}
 		
 		echo '<div class="row' . $m . ' browse';
 		
@@ -226,7 +236,7 @@ if (@$conn->rowCount($tableSql))
 			echo '<td><div class="item column3">' . $collationList[$infoRow['Collation']] . '</div></td>';
 			echo '<td><div class="item column4">' . $formattedOverhead . '</div></td>';
 		}
-		else
+		else if ($conn->getAdapter() == "mysql")
 		{
 			echo '<td><div class="item column4">' . $formattedOverhead . '</div></td>';
 		}
@@ -375,102 +385,180 @@ if (@$conn->rowCount($currentCharSql))
 		<a class="fieldclose" onclick="removeField(this)"></a>
 		</td>
 		</tr>
-		<tr>
-		<td class="secondaryheader">
-		<?php echo __("Name"); ?>:
-		</td>
-		<td>
-		<input type="text" class="text" name="NAME" onkeyup="updateFieldName(this)" />
-		</td>
-		<td class="secondaryheader" style="padding-left: 5px">
-		<?php echo __("Type"); ?>:
-		</td>
-		<td>
-		<select name="TYPE" onchange="updateFieldName(this); toggleValuesLine(this)">
 		<?php
 		
-		foreach ($typeList as $type)
+		if ($conn->getAdapter() == "mysql")
 		{
-			echo '<option value="' . $type . '">' . $type . '</option>';
-		}
-		
-		?>
-		</select>
-		</td>
-		</tr>
-		<tr class="valueline" style="display: none">
-		<td class="secondaryheader">
-		<?php echo __("Values"); ?>:
-		</td>
-		<td class="inputarea">
-		<input type="text" class="text" name="VALUES" onkeyup="updateFieldName(this)" />
-		</td>
-		<td colspan="2" style="color: gray">
-		<?php echo __("Enter in the format: ('1','2')"); ?>
-		</td>
-		</tr>
-		<tr>
-		<td class="secondaryheader">
-		<?php echo __("Size") ?>:
-		</td>
-		<td class="inputarea">
-		<input type="text" class="text" name="SIZE" onkeyup="updateFieldName(this)" />
-		</td>
-		<td class="secondaryheader" style="padding-left: 5px">
-		<?php echo __("Key"); ?>:
-		</td>
-		<td class="inputarea">
-		<select name="KEY" onchange="updateFieldName(this)">
-		<option value=""></option>
-		<option value="primary"><?php echo __("primary"); ?></option>
-		<option value="unique"><?php echo __("unique"); ?></option>
-		<option value="index"><?php echo __("index"); ?></option>
-		</select>
-		</td>
-		</tr>
-		<tr>
-		<td class="secondaryheader">
-		<?php echo __("Default") ?>:
-		</td>
-		<td class="inputarea">
-		<input type="text" class="text" name="DEFAULT" onkeyup="updateFieldName(this)" />
-		</td>
-		<?php
-		
-		if (isset($charsetList))
-		{
-			echo "<td class=\"secondaryheader\" style=\"padding-left: 5px\">";
-			echo __("Charset") . ":";
-			echo "</td>";
-			echo "<td class=\"inputarea\">";
-			echo "<select name=\"CHARSET\" onchange=\"updateFieldName(this)\">";
-			echo "<option></option>";
-			foreach ($charsetList as $charset)
+			
+			?>
+			<tr>
+			<td class="secondaryheader">
+			<?php echo __("Name"); ?>:
+			</td>
+			<td>
+			<input type="text" class="text" name="NAME" onkeyup="updateFieldName(this)" />
+			</td>
+			<td class="secondaryheader" style="padding-left: 5px">
+			<?php echo __("Type"); ?>:
+			</td>
+			<td>
+			<select name="TYPE" onchange="updateFieldName(this); toggleValuesLine(this)">
+			<?php
+			
+			foreach ($typeList as $type)
 			{
-				echo "<option value=\"" . $charset . "\">" . $charset . "</option>";
+				echo '<option value="' . $type . '">' . $type . '</option>';
 			}
-			echo "</select>";
-			echo "</td>";
+			
+			?>
+			</select>
+			</td>
+			</tr>
+			<tr class="valueline" style="display: none">
+			<td class="secondaryheader">
+			<?php echo __("Values"); ?>:
+			</td>
+			<td class="inputarea">
+			<input type="text" class="text" name="VALUES" onkeyup="updateFieldName(this)" />
+			</td>
+			<td colspan="2" style="color: gray">
+			<?php echo __("Enter in the format: ('1','2')"); ?>
+			</td>
+			</tr>
+			<tr>
+			<td class="secondaryheader">
+			<?php echo __("Size") ?>:
+			</td>
+			<td class="inputarea">
+			<input type="text" class="text" name="SIZE" onkeyup="updateFieldName(this)" />
+			</td>
+			<td class="secondaryheader" style="padding-left: 5px">
+			<?php echo __("Key"); ?>:
+			</td>
+			<td class="inputarea">
+			<select name="KEY" onchange="updateFieldName(this)">
+			<option value=""></option>
+			<option value="primary"><?php echo __("primary"); ?></option>
+			<option value="unique"><?php echo __("unique"); ?></option>
+			<option value="index"><?php echo __("index"); ?></option>
+			</select>
+			</td>
+			</tr>
+			<tr>
+			<td class="secondaryheader">
+			<?php echo __("Default") ?>:
+			</td>
+			<td class="inputarea">
+			<input type="text" class="text" name="DEFAULT" onkeyup="updateFieldName(this)" />
+			</td>
+			<?php
+			
+			if (isset($charsetList))
+			{
+				echo "<td class=\"secondaryheader\" style=\"padding-left: 5px\">";
+				echo __("Charset") . ":";
+				echo "</td>";
+				echo "<td class=\"inputarea\">";
+				echo "<select name=\"CHARSET\" onchange=\"updateFieldName(this)\">";
+				echo "<option></option>";
+				foreach ($charsetList as $charset)
+				{
+					echo "<option value=\"" . $charset . "\">" . $charset . "</option>";
+				}
+				echo "</select>";
+				echo "</td>";
+			}
+			else
+			{
+				echo "<td></td>";
+				echo "<td></td>";
+			}
+			
+			?>
+			</tr>
+			<tr>
+			<td class="secondaryheader">
+			<?php echo __("Other"); ?>:
+			</td>
+			<td colspan="3">
+			<label><input type="checkbox" name="UNSIGN" onchange="updateFieldName(this)"><?php echo __("Unsigned"); ?></label>
+			<label><input type="checkbox" name="BINARY" onchange="updateFieldName(this)"><?php echo __("Binary"); ?></label>
+			<label><input type="checkbox" name="NOTNULL" onchange="updateFieldName(this)"><?php echo __("Not Null"); ?></label>
+			<label><input type="checkbox" name="AUTO" onchange="updateFieldName(this)"><?php echo __("Auto Increment"); ?></label>
+			</td>
+			</tr>
+			<?php
+			
 		}
-		else
+		else if ($conn->getAdapter() == "sqlite")
 		{
-			echo "<td></td>";
-			echo "<td></td>";
+			
+			?>
+			<tr>
+			<td class="secondaryheader">
+			<?php echo __("Name"); ?>:
+			</td>
+			<td>
+			<input type="text" class="text" name="NAME" onkeyup="updateFieldName(this)" />
+			</td>
+			<td class="secondaryheader" style="padding-left: 5px">
+			<?php echo __("Type"); ?>:
+			</td>
+			<td>
+			<select name="TYPE" onchange="updateFieldName(this)">
+			<option value="">typeless</option>
+			<?php
+			
+			foreach ($sqliteTypeList as $type)
+			{
+				echo '<option value="' . $type . '">' . $type . '</option>';
+			}
+			
+			?>
+			</select>
+			</td>
+			</tr>
+			<tr>
+			<td class="secondaryheader">
+			<?php echo __("Size") ?>:
+			</td>
+			<td class="inputarea">
+			<input type="text" class="text" name="SIZE" onkeyup="updateFieldName(this)" />
+			</td>
+			<td class="secondaryheader" style="padding-left: 5px">
+			<?php echo __("Key"); ?>:
+			</td>
+			<td class="inputarea">
+			<select name="KEY" onchange="updateFieldName(this)">
+			<option value=""></option>
+			<option value="primary"><?php echo __("primary"); ?></option>
+			</select>
+			</td>
+			</tr>
+			<tr>
+			<td class="secondaryheader">
+			<?php echo __("Default") ?>:
+			</td>
+			<td class="inputarea">
+			<input type="text" class="text" name="DEFAULT" onkeyup="updateFieldName(this)" />
+			</td>
+			<td></td>
+			<td></td>
+			</tr>
+			<tr>
+			<td class="secondaryheader">
+			<?php echo __("Other"); ?>:
+			</td>
+			<td colspan="3">
+			<label><input type="checkbox" name="NOTNULL" onchange="updateFieldName(this)"><?php echo __("Not Null"); ?></label>
+			<label><input type="checkbox" name="UNIQUE" onchange="updateFieldName(this)"><?php echo __("Unique"); ?></label>
+			</td>
+			</tr>
+			<?php
+			
 		}
 		
 		?>
-		</tr>
-		<tr>
-		<td class="secondaryheader">
-		<?php echo __("Other"); ?>:
-		</td>
-		<td colspan="3">
-		<label><input type="checkbox" name="UNSIGN" onchange="updateFieldName(this)"><?php echo __("Unsigned"); ?></label>
-		<label><input type="checkbox" name="BINARY" onchange="updateFieldName(this)"><?php echo __("Binary"); ?></label>
-		<label><input type="checkbox" name="NOTNULL" onchange="updateFieldName(this)"><?php echo __("Not Null"); ?></label>
-		<label><input type="checkbox" name="AUTO" onchange="updateFieldName(this)"><?php echo __("Auto Increment"); ?></label>
-		</td>
-		</tr>
 		</table>
 		</div>
 		
