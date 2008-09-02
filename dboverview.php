@@ -277,7 +277,7 @@ if (isset($charsetList))
 $currentChar = "";
 $currentCharSql = $conn->query("SHOW VARIABLES LIKE 'character_set_database'");
 
-if (@$conn->rowCount($currentCharSql))
+if ($conn->rowCount($currentCharSql))
 {
 	$currentChar = $conn->result($currentCharSql, 0, "Value");
 }

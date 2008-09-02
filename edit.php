@@ -23,7 +23,7 @@ if (isset($db))
 	$conn->selectDB($db);
 
 if (isset($db))
-	$structureSql = $conn->query("DESCRIBE `$table`");
+	$structureSql = $conn->describeTable($table);
 
 if (isset($_POST['editParts']))
 {
@@ -61,11 +61,12 @@ if (isset($_POST['editParts']))
 		<table class="insert edit" cellspacing="0" cellpadding="0">
 		<?php
 		
-		$dataSql = $conn->query("SELECT * FROM `" . $table . "` " . $part);
-		$dataRow = $conn->fetchAssoc($dataSql);
-		
-		if (@$conn->rowCount($structureSql))
+		if ($conn->rowCount($structureSql) && $conn->getAdapter() == "mysql")
 		{
+			
+			$dataSql = $conn->query("SELECT * FROM `" . $table . "` " . $part);
+			$dataRow = $conn->fetchAssoc($dataSql);
+			
 			while ($structureRow = $conn->fetchAssoc($structureSql))
 			{
 				
@@ -143,9 +144,54 @@ if (isset($_POST['editParts']))
 				
 				<?php
 			}
+			
+			$conn->dataSeek($structureSql, 0);
+			
 		}
-		
-		$conn->dataSeek($structureSql, 0);
+		else if (sizeof($structureSql) > 0 && $conn->getAdapter() == "sqlite")
+		{
+			
+			$dataSql = $conn->query("SELECT * FROM '" . $table . "' " . $part);
+			$dataRow = $conn->fetchAssoc($dataSql);
+			
+			foreach ($structureSql as $column)
+			{
+								
+				echo '<tr>';
+				echo '<td class="fieldheader"><span style="color: steelblue">';
+				if (strpos($column[1], "primary key") > 0) echo '<u>';
+				echo $column[0];
+				if (strpos($column[1], "primary key") > 0) echo '</u>';
+				echo "</span> " . $column[1] . '</td>';
+				echo '</tr>';
+				echo '<tr>';
+				echo '<td class="inputarea">';
+				
+				if (strpos($column[1], "text") !== false)
+				{
+					echo '<textarea name="' . $column[0] . '">' . $dataRow[$column[0]] . '</textarea>';
+				}
+				else
+				{
+					echo '<input type="text"';
+					if ($firstField)
+						echo ' id="EDITFIRSTFIELD"';
+					echo ' name="' . $column[0] . '" class="text" value="' . htmlentities($dataRow[$column[0]], ENT_QUOTES, 'UTF-8') . '" />';
+				}
+				
+				$firstField = false;
+				
+				?>
+				
+				</td>
+				</tr>
+				
+				<?php
+			}
+			
+			$conn->dataSeek($structureSql, 0);
+			
+		}
 		
 		?>
 		<tr>

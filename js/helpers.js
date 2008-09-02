@@ -668,9 +668,13 @@ function editTable()
 	
 	var runQuery = "";
 	
-	if (f(newName) != "" && newName != sb.table)
+	if (newName != sb.table && adapter == "mysql")
 	{
 		runQuery += "RENAME TABLE `" + sb.table + "` TO `" + newName + "`;";
+	}
+	else if (newName != sb.table && adapter == "sqlite")
+	{
+		runQuery += "ALTER TABLE '" + sb.table + "' RENAME TO '" + newName + "';";
 	}
 	
 	if (f(newCharset) != "")

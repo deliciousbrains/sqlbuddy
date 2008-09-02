@@ -29,7 +29,7 @@ if (isset($_POST['query']))
 	}
 }
 
-if (@$conn->rowCount($sql))
+if ($conn->rowCount($sql))
 {
 	$row = @$conn->fetchAssoc($sql);
 	foreach ($row as $key => $value)

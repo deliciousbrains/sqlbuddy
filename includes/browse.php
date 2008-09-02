@@ -66,7 +66,7 @@ if ($query)
 		
 	if (!isset($queryTable))
 	{
-		$totalRows = (int)(@$conn->rowCount($dataSql));
+		$totalRows = (int)($conn->rowCount($dataSql));
 	}
 	
 }
@@ -245,7 +245,7 @@ else
 		echo '<table cellpadding="0" cellspacing="0">';
 		echo '<tr>';
 			
-		if (@$conn->rowCount($dataSql))
+		if ($conn->rowCount($dataSql))
 		{
 			$dataRow = $conn->fetchAssoc($dataSql);
 			$g = 0;

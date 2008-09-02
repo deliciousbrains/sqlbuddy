@@ -43,7 +43,7 @@ loginCheck();
 			
 		$statusSql = $conn->query("SHOW STATUS");
 		
-		if (@$conn->rowCount($statusSql))
+		if ($conn->rowCount($statusSql))
 		{
 			
 			while ($statusRow = $conn->fetchAssoc($statusSql))
@@ -246,7 +246,7 @@ if ($conn->getAdapter() != "sqlite")
 		
 		$defaultCharSql = $conn->query("SHOW VARIABLES LIKE 'character_set_server'");
 		
-		if (@$conn->rowCount($defaultCharSql))
+		if ($conn->rowCount($defaultCharSql))
 		{
 			$defaultCharset = $conn->result($defaultCharSql, 0, "Value");
 		}

@@ -30,11 +30,21 @@ if ($_POST && isset($table))
 		$insertChoice = $_POST['SB_INSERT_CHOICE'];
 	}
 	
-	$structureSql = $conn->query("DESCRIBE `$table`");
+	$structureSql = $conn->describeTable($table);
 	
-	while ($structureRow = $conn->fetchAssoc($structureSql))
+	if ($conn->getAdapter() == "mysql")
 	{
-		$pairs[$structureRow['Field']] = '';
+		while ($structureRow = $conn->fetchAssoc($structureSql))
+		{
+			$pairs[$structureRow['Field']] = '';
+		}
+	}
+	else if ($conn->getAdapter() == "sqlite")
+	{
+		foreach ($structureRow as $column)
+		{
+			$pairs[$column[0]] = '';
+		}
 	}
 	
 	foreach ($_POST as $key=>$value)
@@ -59,7 +69,14 @@ if ($_POST && isset($table))
 			
 			foreach ($pairs as $keyname=>$value)
 			{
-				$updates .= "`" . $keyname . "`='" . $value . "',";
+				if ($conn->getAdapter() == "mysql")
+				{
+					$updates .= "`" . $keyname . "`='" . $value . "',";
+				}
+				else if ($conn->getAdapter() == "sqlite")
+				{
+					$updates .= "'" . $keyname . "'='" . $value . "',";
+				}
 			}
 			
 			$updates = substr($updates, 0, -1);
@@ -69,7 +86,14 @@ if ($_POST && isset($table))
 			else
 				$queryPart = "";
 			
-			$query = "UPDATE `$table` SET " . $updates . " " . $queryPart;
+			if ($conn->getAdapter() == "mysql")
+			{
+				$query = "UPDATE `$table` SET " . $updates . " " . $queryPart;
+			}
+			else if ($conn->getAdapter() == "sqlite")
+			{
+				$query = "UPDATE '$table' SET " . $updates . " " . $queryPart;
+			}
 			
 		}
 		else
@@ -79,14 +103,30 @@ if ($_POST && isset($table))
 			
 			foreach ($pairs as $keyname=>$value)
 			{
-				$columns .= "`" . $keyname . "`,";
+				
+				if ($conn->getAdapter() == "mysql")
+				{
+					$columns .= "`" . $keyname . "`,";
+				}
+				else if ($conn->getAdapter() == "sqlite")
+				{
+					$columns .= "'" . $keyname . "',";
+				}
+				
 				$values .= "'" . $value . "',";
 			}
 			
 			$columns = substr($columns, 0, -1);
 			$values = substr($values, 0, -1);
 			
-			$query = "INSERT INTO `$table` ($columns) VALUES ($values)";
+			if ($conn->getAdapter() == "mysql")
+			{
+				$query = "INSERT INTO `$table` ($columns) VALUES ($values)";
+			}
+			else if ($conn->getAdapter() == "sqlite")
+			{
+				$query = "INSERT INTO '$table' ($columns) VALUES ($values)";
+			}
 		}
 		
 		$conn->query($query) or ($mysqlError = $conn->error());

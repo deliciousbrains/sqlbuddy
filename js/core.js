@@ -650,7 +650,7 @@ function printf()
 function fullTextWindow(rowId)
 {
 	var rowQuery = $E(".check" + rowId, sb.pane).get("queryBuilder");
-	var fullQuery = "SELECT * FROM `" + sb.table + "` " + rowQuery;
+	var fullQuery = "SELECT * FROM " + returnQuote() + sb.table + returnQuote() + " " + rowQuery;
 	var loadWin = createWindow(gettext("Loading..."), gettext("Loading..."));
 	var x = new XHR({
 		url: "ajaxfulltext.php", 

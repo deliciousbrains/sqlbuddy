@@ -107,7 +107,7 @@ if (isset($conn) && $conn)
 		$table = $conn->escapeString($_GET['table']);
 
 	$charsetSql = $conn->listCharset();
-	if (@$conn->rowCount($charsetSql))
+	if ($conn->rowCount($charsetSql))
 	{
 		while ($charsetRow = $conn->fetchAssoc($charsetSql))
 		{
@@ -116,7 +116,7 @@ if (isset($conn) && $conn)
 	}
 
 	$collationSql = $conn->listCollation();
-	if (@$conn->rowCount($collationSql))
+	if ($conn->rowCount($collationSql))
 	{
 		while ($collationRow = $conn->fetchAssoc($collationSql))
 		{

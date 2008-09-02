@@ -51,7 +51,7 @@ if (isset($_POST) || isset($_FILES))
 		$columnCount = 0;
 		
 		$structureSQL = $conn->query("DESCRIBE `$table`");
-		if (@$conn->rowCount($structureSQL))
+		if ($conn->rowCount($structureSQL))
 		{
 			while ($structureRow = $conn->fetchAssoc($structureSQL))
 			{

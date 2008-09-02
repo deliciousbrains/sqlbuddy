@@ -320,7 +320,7 @@ if ($conn->getAdapter() == "mysql" && $conn->rowCount($structureSql))
 		
 		$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$table'");
 		
-		if (@$conn->rowCount($infoSql) == 1)
+		if ($conn->rowCount($infoSql) == 1)
 		{
 		
 		$infoRow = $conn->fetchAssoc($infoSql);
@@ -366,7 +366,7 @@ if ($conn->getAdapter() == "mysql" && $conn->rowCount($structureSql))
 	
 	$indexListSQL = $conn->query("SHOW INDEX FROM `$table`");
 	
-	if (@$conn->rowCount($indexListSQL))
+	if ($conn->rowCount($indexListSQL))
 	{
 		
 		?>
@@ -548,7 +548,7 @@ if ($conn->getAdapter() == "mysql" && $conn->rowCount($structureSql))
 	
 	$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$table'");
 	
-	if (@$conn->rowCount($infoSql) == 1)
+	if ($conn->rowCount($infoSql) == 1)
 	{
 	
 	$infoRow = $conn->fetchAssoc($infoSql);
@@ -729,6 +729,30 @@ else if ($conn->getAdapter() == "sqlite" && sizeof($structureSql) > 0)
 		</tr>
 		</table>
 		</form>
+	</div>
+	
+	<div class="inputbox" style="width: 235px">
+	<h4><?php echo __("Edit table"); ?></h4>
+	
+	<div id="editTableMessage"></div>
+	<form onsubmit="editTable(); return false">
+	<table cellpadding="0">
+	<tr>
+	<td class="secondaryheader">
+	<?php echo __("Name"); ?>:
+	</td>
+	<td class="inputarea">
+	<input type="text" class="text" name="RENAME" id="RENAME" value="<?php echo $table; ?>" style="width: 140px" />
+	</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td align="left">
+	<input type="submit" class="inputbutton" value="<?php echo __("Submit"); ?>" />
+	</td>
+	</tr>
+	</table>
+	</form>
 	</div>
 	
 	<?php

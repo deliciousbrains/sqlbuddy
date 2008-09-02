@@ -25,7 +25,7 @@ if (isset($db))
 if (isset($table))
 	$structureSql = $conn->describeTable($table);
 
-if (@$conn->rowCount($structureSql) || sizeof($structureSql) > 0)
+if ($conn->rowCount($structureSql) || sizeof($structureSql) > 0)
 {
 	
 	if ($_POST)
@@ -122,18 +122,31 @@ if (@$conn->rowCount($structureSql) || sizeof($structureSql) > 0)
 				echo "</tr>";
 				echo "<tr>";
 				echo '<td class="inputarea">';
-				echo '<input type="text"';
-				echo ' name="' . $column[0] . '"';
-				if (isset($mysqlError))
+				
+				if (strpos($column[1], "text") !== false)
 				{
-					echo 'value="' . $_POST[$column[0]] . '"';
+					echo '<textarea name="' . $column[0] . '">';
+					if (isset($mysqlError))
+					{
+						echo $_POST[$column[0]];
+					}
+					echo '</textarea>';
 				}
-				if ($firstField)
+				else
 				{
-					echo ' id="FIRSTFIELD"';
-					$firstField = false;
+					echo '<input type="text"';
+					echo ' name="' . $column[0] . '"';
+					if (isset($mysqlError))
+					{
+						echo 'value="' . $_POST[$column[0]] . '"';
+					}
+					if ($firstField)
+					{
+						echo ' id="FIRSTFIELD"';
+						$firstField = false;
+					}
+					echo ' class="text" />';
 				}
-				echo ' class="text" />';
 				
 				?>
 				
@@ -148,7 +161,7 @@ if (@$conn->rowCount($structureSql) || sizeof($structureSql) > 0)
 	else if ($conn->getAdapter() == "mysql")
 	{
 		
-		if (@$conn->rowCount($structureSql))
+		if ($conn->rowCount($structureSql))
 		{
 			while ($structureRow = $conn->fetchAssoc($structureSql))
 			{

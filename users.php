@@ -113,7 +113,7 @@ $userSql = $conn->query("SELECT * FROM `user`");
 
 <?php
 
-if (@$conn->rowCount($userSql))
+if ($conn->rowCount($userSql))
 {
 	
 	?>
@@ -174,7 +174,7 @@ if (@$conn->rowCount($userSql))
 	
 	echo '<div class="gridscroll withchecks" style="overflow-x: hidden; max-height: 400px">';
 	
-	if (@$conn->rowCount($userSql))
+	if ($conn->rowCount($userSql))
 	{
 		$m = 0;
 		
