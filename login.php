@@ -72,7 +72,7 @@ if (($adapter != "sqlite" && $host && $user && $pass) || ($adapter == "sqlite" &
 				$redirect .= "/" . $pathSplit[$i];
 		}
 		
-		if ($_SERVER['HTTPS'] == "on")
+		if (array_key_exists("HTTPS", $_SERVER) && $_SERVER['HTTPS'] == "on")
 		{
 			$protocol = "https://";
 		}
@@ -103,6 +103,7 @@ startOutput();
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/common.css"); ?>" />
 		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/navigation.css"); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/print.css"); ?>" media="print" />
 		<link type="text/css" rel="stylesheet" href="<?php echo outputThemeFile("css/main.css"); ?>" />
 		<!--[if lte IE 7]>
     		<link type="text/css" rel="stylesheet" href="<?php echo outputThemeFile("css/ie.css"); ?>" />

@@ -552,6 +552,7 @@ if ($conn->rowCount($currentCharSql))
 			<td colspan="3">
 			<label><input type="checkbox" name="NOTNULL" onchange="updateFieldName(this)"><?php echo __("Not Null"); ?></label>
 			<label><input type="checkbox" name="UNIQUE" onchange="updateFieldName(this)"><?php echo __("Unique"); ?></label>
+			<label><input type="checkbox" name="AUTO" onchange="updateFieldName(this)"><?php echo __("Auto Increment"); ?></label>
 			</td>
 			</tr>
 			<?php

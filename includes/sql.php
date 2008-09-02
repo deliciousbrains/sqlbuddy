@@ -391,7 +391,7 @@ class SQL {
 							{
 								$output .= '{';
 								$output .= '"name":"' . $table['TABLE_NAME'] . '",';
-								$output .= '"rowcount":' . ($table['TABLE_ROWS'] > 0 ? $table['TABLE_ROWS'] : '0');
+								$output .= '"rowcount":' . ($table['TABLE_ROWS'] > 0) ? $table['TABLE_ROWS'] : '0';
 								$output .= '},';
 							}
 							$output = substr($output, 0, -1);

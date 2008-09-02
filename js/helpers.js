@@ -977,6 +977,8 @@ function getFieldSummary(elem, withFormatting)
 					fieldBuild += " not null";
 				if (f(key))
 					fieldBuild += " " + key + " key";
+				if (f(auto))
+					fieldBuild += " autoincrement";
 				if (f(unique))
 					fieldBuild += " unique";
 				if (f(defaultval))
@@ -1433,5 +1435,46 @@ function returnQuote()
 	else if (adapter == "mysql")
 	{
 		return "`";
+	}
+}
+
+function autoExpandTextareas()
+{
+	var taList = document.getElementsByTagName("textarea");
+	if (taList.length > 0)
+	{
+		var sizeDiv = new Element('div', {
+			id: "sizeDiv",
+			styles: {
+				visibility: "hidden",
+				position: "absolute",
+				lineHeight: "15px",
+				fontSize: "13px",
+				padding: "2px"
+			}
+		});
+		document.body.appendChild(sizeDiv);
+		
+		for (var i=0; i<taList.length; i++)
+		{
+			var theDiv = $("sizeDiv");
+			theDiv.style.width = taList[i].clientWidth + "px";
+			theDiv.set('html', taList[i].value.replace(/\n/g,'<br />') + '&nbsp;');
+			
+			var newHeight = theDiv.clientHeight + 5;
+			
+			if (newHeight < 50)
+			{
+				newHeight = 50;
+			}
+			else if (newHeight > 300)
+			{
+				newHeight = 300;
+			}
+			
+			taList[i].style.height = newHeight + "px";
+		}
+		
+		document.body.removeChild(sizeDiv);
 	}
 }

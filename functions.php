@@ -216,11 +216,12 @@ global $conn;
 	<head>
 		<title>SQL Buddy</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/common.css"); ?>" />
-		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/navigation.css"); ?>" />
-		<link type="text/css" rel="stylesheet" href="<?php echo outputThemeFile("css/main.css"); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/common.css"); ?>" media="all" />
+		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/navigation.css"); ?>" media="all" />
+		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/print.css"); ?>" media="print" />
+		<link type="text/css" rel="stylesheet" href="<?php echo outputThemeFile("css/main.css"); ?>" media="all" />
 		<!--[if lte IE 7]>
-    		<link type="text/css" rel="stylesheet" href="<?php echo outputThemeFile("css/ie.css"); ?>" />
+    		<link type="text/css" rel="stylesheet" href="<?php echo outputThemeFile("css/ie.css"); ?>" media="all" />
 		<![endif]-->
 		<script type="text/javascript" src="<?php echo smartCaching("js/mootools-1.2-core.js"); ?>"></script>
 		<script type="text/javascript" src="<?php echo smartCaching("js/helpers.js"); ?>"></script>

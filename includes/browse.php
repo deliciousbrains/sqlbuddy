@@ -55,7 +55,7 @@ if ($query)
 			$queryStartTime = microtime_float();
 			$dataSql = $conn->query($q) or ($mysqlError[] = $conn->error());
 			$queryFinishTime = microtime_float();
-			$queryTime = round($queryFinishTime - $queryStartTime, 4);
+			$queryTime += round($queryFinishTime - $queryStartTime, 4);
 			
 			if (@$conn->affectedRows())
 			{
@@ -111,7 +111,7 @@ echo '<div class="browsetab">';
 
 if (isset($mysqlError))
 {
-	echo '<div class="errormessage" style="margin-left: 5px; width: 536px"><strong>' . __("MySQL reported the following errors") . ':</strong>';
+	echo '<div class="errormessage" style="margin-left: 5px; width: 536px"><strong>' . __("The following errors were reported") . ':</strong>';
 	foreach ($mysqlError as $error)
 	{
 		echo $error . "<br />";
@@ -194,7 +194,7 @@ else
 					if ($bnav == $currentPage)
 						echo ' class="selected"';
 					
-					echo ' onclick="browseNav(' . (($bnav - 1) * $perPage) . ',' . $view . ')">' . $bnav . '</a>';
+					echo ' onclick="browseNav(' . (($bnav - 1) * $perPage) . ',' . $view . ')">' . number_format($bnav) . '</a>';
 				}
 			}
 			

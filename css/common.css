@@ -59,6 +59,10 @@ padding: 2px;
 font-size: 13px;
 width: 175px;
 }
+textarea {
+height: 50px;
+line-height: 15px;
+}
 select {
 font-size: 12px;
 }
@@ -370,7 +374,6 @@ width: 325px;
 }
 .insert textarea {
 width: 325px;
-height: 150px;
 }
 .insertseperator {
 width: 348px;
@@ -450,12 +453,6 @@ width: 475px;
 }
 .hometable p {
 line-height: 15px;
-}
-.hometable textarea {
-width: 425px;
-height: 40px;
-font-size: 12px;
-display: block;
 }
 
 #userprivs td, #adminprivs td {
@@ -730,7 +727,6 @@ margin-bottom: -1px;
 
 #QUERY {
 width: 550px;
-height: 60px;
 font-size: 12px;
 display: block;
 margin: 2px 0 0;

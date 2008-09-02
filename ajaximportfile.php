@@ -168,7 +168,7 @@ if (isset($_POST) || isset($_FILES))
 	
 	if (isset($mysqlErrors))
 	{
-		$message .= __("MySQL reported the following errors") . ":<br />";
+		$message .= __("The following errors were reported") . ":<br />";
 		foreach ($mysqlErrors as $merr)
 		{
 			$message .= " - " . $merr . "<br />";

@@ -34,9 +34,13 @@ if (isset($query))
 {
 	$displayQuery = $query;
 }
-else if (isset($db) && isset($table))
+else if (isset($db) && isset($table) && $conn->getAdapter() == "mysql")
 {
 	$displayQuery = "SELECT * FROM `$table` LIMIT 100";
+}
+else if (isset($db) && isset($table) && $conn->getAdapter() == "sqlite")
+{
+	$displayQuery = "SELECT * FROM '$table' LIMIT 100";
 }
 
 ?>

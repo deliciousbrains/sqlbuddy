@@ -62,7 +62,8 @@ window.addEvent("domready", function()
 			viewportSize = [winWidth, winHeight];
 			sizePage();
 		}
-	}).periodical(150);
+	}).periodical(175);
+	(function(){ autoExpandTextareas(); }).periodical(500);
 });
 
 function Page()
