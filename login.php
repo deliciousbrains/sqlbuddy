@@ -19,6 +19,7 @@ $adapter = (isset($sbconfig['DefaultAdapter'])) ? $sbconfig['DefaultAdapter'] : 
 $host = (isset($sbconfig['DefaultHost'])) ? $sbconfig['DefaultHost'] : "localhost";
 $user = (isset($sbconfig['DefaultUser'])) ? $sbconfig['DefaultUser'] : "root";
 $pass = (isset($sbconfig['DefaultPass'])) ? $sbconfig['DefaultPass'] : "";	
+$database = "";
 
 if ($_POST)
 {
@@ -54,7 +55,7 @@ if (($adapter != "sqlite" && $host && $user && $pass) || ($adapter == "sqlite" &
 		$connCheck = new SQL($connString, $user, $pass);
 	}
 	
-	if ($connCheck != false)
+	if ($connCheck->isConnected())
 	{
 		$_SESSION['SB_LOGIN'] = true;
 		$_SESSION['SB_LOGIN_STRING'] = $connString;
@@ -104,15 +105,13 @@ startOutput();
 		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/common.css"); ?>" />
 		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/navigation.css"); ?>" />
 		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/print.css"); ?>" media="print" />
-		<link type="text/css" rel="stylesheet" href="<?php echo outputThemeFile("css/main.css"); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo themeFile("css/main.css"); ?>" />
 		<!--[if lte IE 7]>
-    		<link type="text/css" rel="stylesheet" href="<?php echo outputThemeFile("css/ie.css"); ?>" />
+    		<link type="text/css" rel="stylesheet" href="<?php echo themeFile("css/ie.css"); ?>" />
 		<![endif]-->
 		<script type="text/javascript" src="<?php echo smartCaching("js/mootools-1.2-core.js"); ?>"></script>
-		<script type="text/javascript" src="<?php echo smartCaching("js/animation.js"); ?>"></script>
-		<script type="text/javascript" src="<?php echo smartCaching("js/columnsize.js"); ?>"></script>
-		<script type="text/javascript" src="<?php echo smartCaching("js/drag.js"); ?>"></script>
-		<script type="text/javascript" src="<?php echo smartCaching("js/resize.js"); ?>"></script>
+		<script type="text/javascript" src="<?php echo smartCaching("js/helpers.js"); ?>"></script>
+		<script type="text/javascript" src="<?php echo smartCaching("js/movement.js"); ?>"></script>
 	</head>
 	<body style="background: none">
 	<div id="container">

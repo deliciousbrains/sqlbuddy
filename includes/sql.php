@@ -17,7 +17,6 @@ class SQL {
 
 	var $adapter = "";
 	var $conn = "";
-	var $db = "";
 	var $options = "";
 	var $errorMessage = "";
 
@@ -39,7 +38,7 @@ class SQL {
 		{
 			$this->adapter = "sqlite";
 			$database = (array_key_exists("database", $opt)) ? $opt['database'] : "";
-			$this->conn = @sqlite_open($database, 0666, $sqliteError);
+			$this->conn = sqlite_open($database, 0666, $sqliteError);
 		}
 		else
 		{
@@ -48,10 +47,27 @@ class SQL {
 			$this->conn = @mysql_connect($host, $user, $pass);
 			$this->query("SET NAMES 'utf8'");
 		}
-
-		if (!$this->conn)
+	}
+	
+	function isConnected()
+	{
+		return ($this->conn !== false);
+	}
+	
+	function disconnect()
+	{
+		if ($this->conn)
 		{
-			return false;
+			if ($this->adapter == "mysql")
+			{
+				mysql_close($this->conn);
+				$this->conn = null;
+			}
+			else if ($this->adapter == "sqlite")
+			{
+				sqlite_close($this->conn);
+				$this->conn = null;
+			}
 		}
 	}
 	
@@ -60,14 +76,25 @@ class SQL {
 		return $this->adapter;
 	}
 	
+	function getOptionValue($optKey)
+	{
+		if (array_key_exists($optKey, $this->options))
+		{
+			return $this->options[$optKey];
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
 	function selectDB($db)
 	{
 		if ($this->conn)
 		{
-			$this->db = $db;
 			if ($this->adapter == "mysql")
 			{
-				mysql_select_db($db);
+				return (mysql_select_db($db));
 			}
 			else if ($this->adapter == "sqlite")
 			{

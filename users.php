@@ -17,8 +17,6 @@ include "functions.php";
 
 loginCheck();
 
-$conn->selectDB("mysql");
-
 if ($_POST)
 {
 	
@@ -105,208 +103,251 @@ if (isset($mysqlError))
 	echo '</div>';
 }
 
-$userSql = $conn->query("SELECT * FROM `user`");
-
 ?>
 
 <div class="users">
 
 <?php
 
-if ($conn->rowCount($userSql))
+if ($conn->selectDB("mysql"))
 {
 	
-	?>
-	
-	<table class="browsenav">
-	<tr>
-	<td class="options">
-	<?php
-	
-	echo __("Select") . ':&nbsp;&nbsp;<a onclick="checkAll()">' . __("All") . '</a>&nbsp;&nbsp;<a onclick="checkNone()">' . __("None") . '</a>';
-	echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' . __("With selected") . ':&nbsp;&nbsp;<a onclick="editSelectedRows()">' . __("Edit") . '</a>&nbsp;&nbsp;<a onclick="deleteSelectedUsers()">' . __("Delete") . '</a>';
-	
-	?>
-	
-	</td>
-	</tr>
-	</table>
-	
-	<?php
-	
-	echo '<div class="grid">';
-	
-	echo '<div class="emptyvoid">&nbsp;</div>';
-	
-	echo '<div class="gridheader impotent">';
-		echo '<div class="gridheaderinner">';
-		echo '<table cellpadding="0" cellspacing="0">';
-		echo '<tr>';
-		echo '<td><div column="1" class="headertitle column1">' . __("Host") . '</div></td>';
-		echo '<td><div class="columnresizer"></div></td>';
-		echo '<td><div column="2" class="headertitle column2">' . __("User") . '</div></td>';
-		echo '<td><div class="columnresizer"></div></td>';
-		echo '</tr>';
-		echo '</table>';
-		echo '</div>';
-	echo '</div>';
-	
-	echo '<div class="leftchecks" style="max-height: 400px">';
-	
-	$m = 0;
-	
-	while ($userRow = $conn->fetchAssoc($userSql))
-	{
-		$queryBuilder = $userRow['User'] . "@" . $userRow['Host'];
-		echo '<dl class="manip';
-		
-		if ($m % 2 == 1)
-			echo ' alternator';
-		else 
-			echo ' alternator2';
-		
-		echo '"><dt><input type="checkbox" class="check' . $m . '" onclick="rowClicked(' . $m++ . ')" querybuilder="' . $queryBuilder . '" /></dt></dl>';
-	}
-	
-	echo '</div>';
-	
-	$conn->dataSeek($userSql, 0);
-	
-	echo '<div class="gridscroll withchecks" style="overflow-x: hidden; max-height: 400px">';
+	$userSql = $conn->query("SELECT * FROM `user`");
 	
 	if ($conn->rowCount($userSql))
 	{
+		
+		?>
+		
+		<table class="browsenav">
+		<tr>
+		<td class="options">
+		<?php
+		
+		echo __("Select") . ':&nbsp;&nbsp;<a onclick="checkAll()">' . __("All") . '</a>&nbsp;&nbsp;<a onclick="checkNone()">' . __("None") . '</a>';
+		echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' . __("With selected") . ':&nbsp;&nbsp;<a onclick="editSelectedRows()">' . __("Edit") . '</a>&nbsp;&nbsp;<a onclick="deleteSelectedUsers()">' . __("Delete") . '</a>';
+		
+		?>
+		
+		</td>
+		</tr>
+		</table>
+		
+		<?php
+		
+		echo '<div class="grid">';
+		
+		echo '<div class="emptyvoid">&nbsp;</div>';
+		
+		echo '<div class="gridheader impotent">';
+			echo '<div class="gridheaderinner">';
+			echo '<table cellpadding="0" cellspacing="0">';
+			echo '<tr>';
+			echo '<td><div column="1" class="headertitle column1">' . __("Host") . '</div></td>';
+			echo '<td><div class="columnresizer"></div></td>';
+			echo '<td><div column="2" class="headertitle column2">' . __("User") . '</div></td>';
+			echo '<td><div class="columnresizer"></div></td>';
+			echo '</tr>';
+			echo '</table>';
+			echo '</div>';
+		echo '</div>';
+		
+		echo '<div class="leftchecks" style="max-height: 400px">';
+		
 		$m = 0;
 		
 		while ($userRow = $conn->fetchAssoc($userSql))
 		{
-			
-			echo '<div class="row' . $m . ' browse';
+			$queryBuilder = $userRow['User'] . "@" . $userRow['Host'];
+			echo '<dl class="manip';
 			
 			if ($m % 2 == 1)
-			{ echo ' alternator'; }
+				echo ' alternator';
 			else 
-			{ echo ' alternator2'; }
+				echo ' alternator2';
 			
-			echo '">';
-			echo '<table cellspacing="0" cellpadding="0">';
-			echo '<tr>';
-			echo '<td><div class="item column1">' . $userRow['Host'] . '</div></td>';
-			echo '<td><div class="item column2">' . $userRow['User'] . '</div></td>';
-			echo '</tr>';
-			echo '</table>';
-			echo '</div>';
+			echo '"><dt><input type="checkbox" class="check' . $m . '" onclick="rowClicked(' . $m++ . ')" querybuilder="' . $queryBuilder . '" /></dt></dl>';
+		}
+		
+		echo '</div>';
+		
+		$conn->dataSeek($userSql, 0);
+		
+		echo '<div class="gridscroll withchecks" style="overflow-x: hidden; max-height: 400px">';
+		
+		if ($conn->rowCount($userSql))
+		{
+			$m = 0;
 			
-			$m++;
+			while ($userRow = $conn->fetchAssoc($userSql))
+			{
+				
+				echo '<div class="row' . $m . ' browse';
+				
+				if ($m % 2 == 1)
+				{ echo ' alternator'; }
+				else 
+				{ echo ' alternator2'; }
+				
+				echo '">';
+				echo '<table cellspacing="0" cellpadding="0">';
+				echo '<tr>';
+				echo '<td><div class="item column1">' . $userRow['Host'] . '</div></td>';
+				echo '<td><div class="item column2">' . $userRow['User'] . '</div></td>';
+				echo '</tr>';
+				echo '</table>';
+				echo '</div>';
+				
+				$m++;
+			}
+		}
+		
+		echo '</div>';
+		echo '</div>';
+	
+	}
+	
+	$hasPermissions = false;
+	
+	// check to see if this user has proper permissions to manage users
+	$checkSql = $conn->query("SELECT `Grant_priv` FROM `user` WHERE `Host`='" . $conn->getOptionValue("host") . "' AND `User`='" . $_SESSION['SB_LOGIN_USER'] . "' LIMIT 1");
+	
+	if ($conn->rowCount($checkSql))
+	{
+		$grantValue = $conn->result($checkSql, 0, "Grant_priv");
+		
+		if ($grantValue == "Y")
+		{
+			$hasPermissions = true;
 		}
 	}
 	
-	echo '</div>';
-	echo '</div>';
+	if ($hasPermissions)
+	{
+	
+	?>
+	
+	<div class="inputbox" style="margin-top: 15px">
+		<h4><?php echo __("Add a new user"); ?></h4>
+			
+		<form id="NEWUSERFORM" onsubmit="submitForm('NEWUSERFORM'); return false">
+		<table cellpadding="0">
+		<tr>
+			<td class="secondaryheader"><?php echo __("Host"); ?>:</td>
+			<td><input type="text" class="text" name="NEWHOST" value="localhost" /></td>
+		</tr>
+		<tr>
+			<td class="secondaryheader"><?php echo __("Name"); ?>:</td>
+			<td><input type="text" class="text" name="NEWNAME" /></td>
+		</tr>
+		<tr>
+			<td class="secondaryheader"><?php echo __("Password"); ?>:</td>
+			<td><input type="password" class="text" name="NEWPASS" /></td>
+		</tr>
+		</table>
+		
+		<div style="padding-top: 5px">
+		<label><input type="radio" name="NEWCHOICE" value="ALL" onchange="updatePane('PRIVSELECTED', 'privilegepane')" onclick="updatePane('PRIVSELECTED', 'privilegepane')" checked="checked" /><?php echo __("All privileges"); ?></label><br />
+		<label><input type="radio" name="NEWCHOICE" value="SELECTED" id="PRIVSELECTED" onchange="updatePane('PRIVSELECTED', 'privilegepane')" onclick="updatePane('PRIVSELECTED', 'privilegepane')" /><?php echo __("Selected privileges"); ?></label>
+		</div>
+		
+		<div id="privilegepane" style="display: none">
+		<div class="paneheader">
+		<?php echo __("User privileges"); ?>&nbsp;&nbsp;[<a onclick="paneCheckAll('userprivs')"><?php echo __("All"); ?></a> / <a onclick="paneCheckNone('userprivs')"><?php echo __("None"); ?></a>]
+		</div>
+		<table cellpadding="0" id="userprivs">
+		<tr>
+			<td width="33%">
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="SELECT" /><?php echo __("Select"); ?></label>
+			</td>
+			<td width="33%">
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="INSERT" /><?php echo __("Insert"); ?></label>
+			</td>
+			<td width="34%">
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="UPDATE" /><?php echo __("Update"); ?></label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="DELETE" /><?php echo __("Delete"); ?></label>
+			</td>
+			<td>
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="INDEX" /><?php echo __("Index"); ?></label>
+			</td>
+			<td>
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="ALTER" /><?php echo __("Alter"); ?></label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="CREATE" /><?php echo __("Create"); ?></label>
+			</td>
+			<td>
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="DROP" /><?php echo __("Drop"); ?></label>
+			</td>
+			<td>
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="CREATE TEMPORARY TABLES" /><?php echo __("Temp tables"); ?></label>
+			</td>
+		</tr>
+		</table>
+		<div class="paneheader">
+		<?php echo __("Administrator privileges"); ?>&nbsp;&nbsp;[<a onclick="paneCheckAll('adminprivs')"><?php echo __("All"); ?></a> / <a onclick="paneCheckNone('adminprivs')"><?php echo __("None"); ?></a>]
+		</div>
+		<table cellpadding="0" id="adminprivs">
+		<tr>
+			<td width="33%">
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="FILE" /><?php echo __("File"); ?></label>
+			</td>
+			<td width="33%">
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="PROCESS" /><?php echo __("Process"); ?></label>
+			</td>
+			<td width="34%">
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="RELOAD" /><?php echo __("Reload"); ?></label>
+			</td>
+		</tr>
+		<tr>
+			<td width="33%">
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="SHUTDOWN" /><?php echo __("Shutdown"); ?></label>
+			</td>
+			<td width="33%">
+			<label><input type="checkbox" name="NEWPRIVILEGES[]" value="SUPER" /><?php echo __("Super"); ?></label>
+			</td>
+			<td width="34%">
+			</td>
+		</tr>
+		</table>
+		</div>
+		<div class="paneheader">
+		<?php echo __("Options"); ?>
+		</div>
+		<label><input type="checkbox" name="GRANTOPTION" value="true" /><?php echo __("Grant option"); ?></label>
+		
+		<div style="margin-top: 10px; height: 22px; padding: 4px 0">
+			<input type="submit" class="inputbutton" value="<?php echo __("Submit"); ?>" />
+		</div>
+		</form>
+	</div>
+	<?php
+	
+	}
+	else
+	{
+		?>
+		<h4 style="margin-top: 20px"><?php echo __("Error"); ?></h4>
+		<p><?php echo __("You do not have enough permissions to create new users."); ?></p>
+		<?php
+	}
 
+}
+else
+{
+	?>
+	<div class="errorpage">
+	<h4><?php echo __("Error"); ?></h4>
+	<p><?php echo __("You do not have enough permissions to view or manage users."); ?></p>
+	</div>
+	<?php
 }
 
 ?>
-
-<div class="inputbox" style="margin-top: 15px">
-	<h4><?php echo __("Add a new user"); ?></h4>
-		
-	<form id="NEWUSERFORM" onsubmit="submitForm('NEWUSERFORM'); return false">
-	<table cellpadding="0">
-	<tr>
-		<td class="secondaryheader"><?php echo __("Host"); ?>:</td>
-		<td><input type="text" class="text" name="NEWHOST" value="localhost" /></td>
-	</tr>
-	<tr>
-		<td class="secondaryheader"><?php echo __("Name"); ?>:</td>
-		<td><input type="text" class="text" name="NEWNAME" /></td>
-	</tr>
-	<tr>
-		<td class="secondaryheader"><?php echo __("Password"); ?>:</td>
-		<td><input type="password" class="text" name="NEWPASS" /></td>
-	</tr>
-	</table>
-	
-	<div style="padding-top: 5px">
-	<label><input type="radio" name="NEWCHOICE" value="ALL" onchange="updatePane('PRIVSELECTED', 'privilegepane')" onclick="updatePane('PRIVSELECTED', 'privilegepane')" checked="checked" /><?php echo __("All privileges"); ?></label><br />
-	<label><input type="radio" name="NEWCHOICE" value="SELECTED" id="PRIVSELECTED" onchange="updatePane('PRIVSELECTED', 'privilegepane')" onclick="updatePane('PRIVSELECTED', 'privilegepane')" /><?php echo __("Selected privileges"); ?></label>
-	</div>
-	
-	<div id="privilegepane" style="display: none">
-	<div class="paneheader">
-	<?php echo __("User privileges"); ?>&nbsp;&nbsp;[<a onclick="paneCheckAll('userprivs')"><?php echo __("All"); ?></a> / <a onclick="paneCheckNone('userprivs')"><?php echo __("None"); ?></a>]
-	</div>
-	<table cellpadding="0" id="userprivs">
-	<tr>
-		<td width="33%">
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="SELECT" /><?php echo __("Select"); ?></label>
-		</td>
-		<td width="33%">
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="INSERT" /><?php echo __("Insert"); ?></label>
-		</td>
-		<td width="34%">
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="UPDATE" /><?php echo __("Update"); ?></label>
-		</td>
-	</tr>
-	<tr>
-		<td>
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="DELETE" /><?php echo __("Delete"); ?></label>
-		</td>
-		<td>
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="INDEX" /><?php echo __("Index"); ?></label>
-		</td>
-		<td>
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="ALTER" /><?php echo __("Alter"); ?></label>
-		</td>
-	</tr>
-	<tr>
-		<td>
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="CREATE" /><?php echo __("Create"); ?></label>
-		</td>
-		<td>
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="DROP" /><?php echo __("Drop"); ?></label>
-		</td>
-		<td>
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="CREATE TEMPORARY TABLES" /><?php echo __("Temp tables"); ?></label>
-		</td>
-	</tr>
-	</table>
-	<div class="paneheader">
-	<?php echo __("Administrator privileges"); ?>&nbsp;&nbsp;[<a onclick="paneCheckAll('adminprivs')"><?php echo __("All"); ?></a> / <a onclick="paneCheckNone('adminprivs')"><?php echo __("None"); ?></a>]
-	</div>
-	<table cellpadding="0" id="adminprivs">
-	<tr>
-		<td width="33%">
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="FILE" /><?php echo __("File"); ?></label>
-		</td>
-		<td width="33%">
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="PROCESS" /><?php echo __("Process"); ?></label>
-		</td>
-		<td width="34%">
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="RELOAD" /><?php echo __("Reload"); ?></label>
-		</td>
-	</tr>
-	<tr>
-		<td width="33%">
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="SHUTDOWN" /><?php echo __("Shutdown"); ?></label>
-		</td>
-		<td width="33%">
-		<label><input type="checkbox" name="NEWPRIVILEGES[]" value="SUPER" /><?php echo __("Super"); ?></label>
-		</td>
-		<td width="34%">
-		</td>
-	</tr>
-	</table>
-	</div>
-	<div class="paneheader">
-	<?php echo __("Options"); ?>
-	</div>
-	<label><input type="checkbox" name="GRANTOPTION" value="true" /><?php echo __("Grant option"); ?></label>
-	
-	<div style="margin-top: 10px; height: 22px; padding: 4px 0">
-		<input type="submit" class="inputbutton" value="<?php echo __("Submit"); ?>" />
-	</div>
-	</form>
-</div>
-
 </div>

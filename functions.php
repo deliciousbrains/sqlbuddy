@@ -21,23 +21,35 @@ include "includes/types.php";
 include "includes/gettextreader.php";
 include "includes/sql.php";
 
-define("VERSION_NUMBER", "1.2.9");
+define("VERSION_NUMBER", "1.3.0");
 define("PREVIEW_CHAR_SIZE", 65);
 
 $cookieLength = time() + (60*24*60*60);
 
+$langList['ca_AD'] = "Català";
+$langList['cs_CZ'] = "Čeština";
 $langList['de_DE'] = "Deutsch";
 $langList['en_US'] = "English";
 $langList['es_ES'] = "Español";
+$langList['es_AR'] = "Español (Argentina)";
+$langList['fr_FR'] = "Français";
 $langList['it_IT'] = "Italiano";
+$langList['lo_LA'] = "Lao";
+$langList['hu_HU'] = "Magyar";
 $langList['nl_NL'] = "Nederlands";
 $langList['pl_PL'] = "Polski";
 $langList['pt_BR'] = "Português (Brasil)";
+$langList['pt_PT'] = "Português (Portugal)";
 $langList['ru_RU'] = "Русский";
+$langList['sk_SK'] = "Slovenčina";
+$langList['sl_SI'] = "Slovenski";
+$langList['fi_FI'] = "Suomi";
 $langList['sv_SE'] = "Svenska";
 $langList['tl_PH'] = "Tagalog";
+$langList['tr_TR'] = "Türkçe";
 $langList['zh_CN'] = "中文 (简体)";
 $langList['zh_TW'] = "中文 (繁體)";
+$langList['ja_JP'] = "日本語";
 
 if (isset($_COOKIE['sb_lang']) && array_key_exists($_COOKIE['sb_lang'], $langList))
 {
@@ -96,9 +108,9 @@ if (isset($_SESSION['SB_LOGIN_STRING']))
 // unique identifer for this session, to validate ajax requests.
 // document root is included because it is likely a difficult value
 // for potential attackers to guess
-$requestKey = substr(sha1(session_id() . $_SERVER["DOCUMENT_ROOT"]), 0, 16);
+$requestKey = substr(md5(session_id() . $_SERVER["DOCUMENT_ROOT"]), 0, 16);
 
-if (isset($conn) && $conn)
+if (isset($conn) && $conn->isConnected())
 {
 	if (isset($_GET['db']))
 		$db = $conn->escapeString($_GET['db']);
@@ -197,8 +209,34 @@ function startOutput()
 {
 	if (!headers_sent())
 	{
+		if (extension_loaded("zlib") && !ini_get("zlib.output_compression") && ini_get("output_handler") != "ob_gzhandler")
+		{
+			ob_start("ob_gzhandler");
+			//header("Content-Encoding: gzip");
+			ob_implicit_flush();
+		}
+		else
+		{
+			ob_start();
+		}
+		
 		header("Cache-Control: no-cache, must-revalidate");
-		header("Content-type: text/html; charset=UTF-8");
+		header("Content-Type: text/html; charset=UTF-8");
+		
+		register_shutdown_function("finishOutput");
+	}
+}
+
+function finishOutput()
+{	
+	global $conn;
+	
+	if (ob_get_length() > 0)
+		ob_end_flush();
+	
+	if (isset($conn) && $conn->isConnected())
+	{
+		$conn->disconnect();
 	}
 }
 
@@ -219,18 +257,20 @@ global $conn;
 		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/common.css"); ?>" media="all" />
 		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/navigation.css"); ?>" media="all" />
 		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/print.css"); ?>" media="print" />
-		<link type="text/css" rel="stylesheet" href="<?php echo outputThemeFile("css/main.css"); ?>" media="all" />
+		<link type="text/css" rel="stylesheet" href="<?php echo themeFile("css/main.css"); ?>" media="all" />
 		<!--[if lte IE 7]>
-    		<link type="text/css" rel="stylesheet" href="<?php echo outputThemeFile("css/ie.css"); ?>" media="all" />
+    		<link type="text/css" rel="stylesheet" href="<?php echo themeFile("css/ie.css"); ?>" media="all" />
 		<![endif]-->
 		<script type="text/javascript" src="<?php echo smartCaching("js/mootools-1.2-core.js"); ?>"></script>
 		<script type="text/javascript" src="<?php echo smartCaching("js/helpers.js"); ?>"></script>
 		<script type="text/javascript" src="<?php echo smartCaching("js/core.js"); ?>"></script>
-		<script type="text/javascript" src="<?php echo smartCaching("js/animation.js"); ?>"></script>
-		<script type="text/javascript" src="<?php echo smartCaching("js/columnsize.js"); ?>"></script>
-		<script type="text/javascript" src="<?php echo smartCaching("js/drag.js"); ?>"></script>
-		<script type="text/javascript" src="<?php echo smartCaching("js/resize.js"); ?>"></script>
+		<script type="text/javascript" src="<?php echo smartCaching("js/movement.js"); ?>"></script>
 	</head>
+	<?php
+	
+	flush();
+	
+	?>
 	<body>
 	<div id="container">
 	<div id="header">
@@ -501,15 +541,15 @@ function memoryFormat($bytes)
 	return $dataString;
 }
 
-function outputThemeFile($filename)
+function themeFile($filename)
 {
 	global $theme;
-	return "themes/" . $theme . "/" . smartCaching($filename);
+	return smartCaching("themes/" . $theme . "/" . $filename);
 }
 
 function smartCaching($filename)
 {
-	return $filename . "?ver=" . str_replace(".", "_", VERSION_NUMBER);
+	return "serve.php?file=" . $filename . "&ver=" . str_replace(".", "_", VERSION_NUMBER);
 }
 
 function __($t)

@@ -210,17 +210,17 @@ function finishTabLoad(responseText)
 	var pageTitle;
 	if (sb.table)
 	{
-		pageTitle = sb.getTabTitle(sb.topTab) + " - " + sb.table;
+		pageTitle = sb.getTabTitle(sb.topTab) + " " + "-" + " " + sb.table;
 	}
 	else if (sb.db)
 	{
-		pageTitle = sb.getTabTitle(sb.topTab) + " - " + sb.db;
+		pageTitle = sb.getTabTitle(sb.topTab) + " " + "-" + " " + sb.db;
 	}
 	else
 	{
 		pageTitle = sb.getTabTitle(sb.topTab);
 	}
-	document.title = "SQL Buddy - " + pageTitle;
+	document.title = "SQL Buddy " + "-" + " " + pageTitle;
 	
 	refreshRowCount();
 }
@@ -1477,4 +1477,15 @@ function autoExpandTextareas()
 		
 		document.body.removeChild(sizeDiv);
 	}
+}
+
+function yellowFade(el, curr)
+{	
+	if (!curr)
+		curr = 175;
+	
+	el.style.background = 'rgb(255, 255, '+ (curr+=3) +')';
+	
+	if (curr < 255)
+			setTimeout(function(){ yellowFade(el, curr) }, 25);
 }

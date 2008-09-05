@@ -1,9 +1,9 @@
 body {
-background: rgb(255, 255, 255) url(../images/initLoad-dark.png) no-repeat 50% 125px;
+background: rgb(255, 255, 255) url(themes/bittersweet/images/initLoad-dark.png) no-repeat 50% 125px;
 }
 
 #header {
-background: rgb(80, 80, 80) url(../images/header.png) repeat-x;
+background: rgb(80, 80, 80) url(themes/bittersweet/images/header.png) repeat-x;
 }
 
 #headerlogo {
@@ -17,7 +17,7 @@ margin-left: 205px !important;
 }
 
 #bottom {
-background: transparent url(../../../images/window-shadow-bottom.png) repeat-x scroll 0px -7px;
+background: transparent url(images/window-shadow-bottom.png) repeat-x scroll 0px -7px;
 }
 
 #innercontent a {

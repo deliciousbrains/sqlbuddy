@@ -1,6 +1,6 @@
 body {
 text-align: center;
-background: url(../images/initLoad.png) no-repeat 50% 125px;
+background: url(images/initLoad.png) no-repeat 50% 125px;
 font: 12px/17px arial, sans-serif;
 color: rgb(50, 50, 50);
 }
@@ -83,7 +83,7 @@ margin: 0 5px 2px 0;
 vertical-align: middle;
 }
 .inputbutton {
-background: url(../images/button.png);
+background: url(images/button.png);
 padding: 2px 5px 4px;
 font-size: 12px;
 line-height: 18px;
@@ -94,7 +94,7 @@ color: rgb(60, 60, 60);
 outline-width: thin;
 }
 .inputbutton:active {
-background: url(../images/button.png) 0 22px;
+background: url(images/button.png) 0 22px;
 color: rgb(80, 80, 80);
 }
 
@@ -166,7 +166,7 @@ padding: 8px 10px 10px;
 border-width: 1px;
 border-style: solid;
 border-color: rgb(225, 225, 225) rgb(210, 210, 210) rgb(210, 210, 210) rgb(210, 210, 210);
-background: url(../images/schemaHeader.png) top repeat-x;
+background: url(images/schemaHeader.png) top repeat-x;
 }
 
 .gridheader {
@@ -180,7 +180,7 @@ padding-left: 1px;
 }
 
 .headertitle {
-background: #EEEEEE url(../images/schemaHeader.png) top;
+background: #EEEEEE url(images/schemaHeader.png) top;
 padding: 0 5px 0 6px;
 width: 200px;
 cursor: pointer;
@@ -199,7 +199,7 @@ cursor: ew-resize;
 }
 
 .emptyvoid {
-background: #EEEEEE url(../images/schemaHeader.png) top;
+background: #EEEEEE url(images/schemaHeader.png) top;
 height: 16px;
 width: 14px;
 padding: 1px 4px;
@@ -270,14 +270,14 @@ padding: 2px 0 0 0;
 float: left;
 }
 .manip dd a {
-background: url(../images/info.png) no-repeat;
+background: url(images/info.png) no-repeat;
 width: 13px;
 height: 13px;
 display: block;
 cursor: default;
 }
 .manip dd a:hover {
-background: url(../images/infoHover.png) no-repeat;
+background: url(images/infoHover.png) no-repeat;
 }
 .browsetab .leftchecks {
 width: 38px;
@@ -295,11 +295,11 @@ margin-left: 39px;
 color: steelblue;
 }
 .sortasc {
-background: url(../images/sortasc.gif) no-repeat right 6px;
+background: url(images/sortasc.gif) no-repeat right 6px;
 margin-right: 1px;
 }
 .sortdesc {
-background: url(../images/sortdesc.gif) no-repeat right 5px;
+background: url(images/sortdesc.gif) no-repeat right 5px;
 margin-right: 1px;
 }
 
@@ -409,10 +409,10 @@ height: 16px;
 padding-right: 4px;
 display: block;
 float: right;
-background: url(../images/close.png) no-repeat 0 1px;
+background: url(images/close.png) no-repeat 0 1px;
 }
 .fieldheader a.fieldclose:hover {
-background: url(../images/closeHover.png) no-repeat 0 1px;
+background: url(images/closeHover.png) no-repeat 0 1px;
 }
 .secondaryheader {
 color: rgb(100, 100, 100);
@@ -637,14 +637,14 @@ padding: 2px 0;
 }
 .headertl {
 width: 19px;
-background: url(../images/window-header-left.png) no-repeat;
+background: url(images/window-header-left.png) no-repeat;
 }
 .headertr {
 width: 19px;
-background: url(../images/window-header-right.png) no-repeat;
+background: url(images/window-header-right.png) no-repeat;
 }
 .headercenter {
-background: url(../images/window-header-center.png) repeat-x;
+background: url(images/window-header-center.png) repeat-x;
 }
 
 .fulltextheader p {
@@ -656,10 +656,10 @@ margin-top: 1px;
 }
 .mainl {
 width: 13px;
-background: url(../images/window-shadow-left.png) repeat-y;
+background: url(images/window-shadow-left.png) repeat-y;
 }
 .maincenter {
-background: url(../images/window-center.png);
+background: url(images/window-center.png);
 padding: 5px 5px 0 8px;
 }
 .fulltextcontent {
@@ -669,7 +669,7 @@ padding-right: 5px;
 }
 .mainr {
 width: 13px;
-background: url(../images/window-shadow-right.png) repeat-y;
+background: url(images/window-shadow-right.png) repeat-y;
 }
 .fulltexttitle {
 color: rgb(175, 175, 175);
@@ -687,15 +687,15 @@ height: 19px;
 }
 .footerbl {
 width: 15px;
-background: url(../images/window-shadow-bottom-left.png) no-repeat -1px;
+background: url(images/window-shadow-bottom-left.png) no-repeat -1px;
 }
 .footerbr {
 width: 15px;
-background: url(../images/window-shadow-bottom-right.png) no-repeat;
+background: url(images/window-shadow-bottom-right.png) no-repeat;
 }
 .footermiddle {
 width: auto;
-background: url(../images/window-shadow-bottom.png) repeat-x;
+background: url(images/window-shadow-bottom.png) repeat-x;
 }
 
 .dialog {
@@ -711,7 +711,7 @@ padding: 5px 2px 0px 8px !important
 padding: 7px 0 5px;
 }
 .windowbutton {
-background: url(../images/window-button.png);
+background: url(images/window-button.png);
 padding: 3px 5px 4px;
 width: 60px;
 height: 22px; 
