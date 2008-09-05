@@ -18,8 +18,8 @@ if (!session_id())
 
 include "config.php";
 include "includes/types.php";
-include "includes/gettextreader.php";
-include "includes/sql.php";
+include "includes/class/GetTextReader.php";
+include "includes/class/Sql.php";
 
 define("VERSION_NUMBER", "1.3.0");
 define("PREVIEW_CHAR_SIZE", 65);
