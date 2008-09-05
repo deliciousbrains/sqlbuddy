@@ -53,7 +53,7 @@ if ($query)
 			}
 			
 			$queryStartTime = microtime_float();
-			$dataSql = $conn->query($q) or ($mysqlError[] = $conn->error());
+			$dataSql = $conn->query($q) or ($dbError[] = $conn->error());
 			$queryFinishTime = microtime_float();
 			$queryTime += round($queryFinishTime - $queryStartTime, 4);
 			
@@ -109,10 +109,10 @@ else if (isset($queryTable) && $conn->getAdapter() == "mysql")
 
 echo '<div class="browsetab">';
 
-if (isset($mysqlError))
+if (isset($dbError))
 {
 	echo '<div class="errormessage" style="margin-left: 5px; width: 536px"><strong>' . __("The following errors were reported") . ':</strong>';
-	foreach ($mysqlError as $error)
+	foreach ($dbError as $error)
 	{
 		echo $error . "<br />";
 	}

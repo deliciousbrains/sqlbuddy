@@ -27,12 +27,12 @@ if (isset($_POST['query']))
 	
 	foreach ($queryList as $query)
 	{
-		$sql = $conn->query($query) or ($mysqlError = $conn->error());
+		$sql = $conn->query($query) or ($dbError = $conn->error());
 	}
 	
-	if (isset($mysqlError))
+	if (isset($dbError))
 	{
-		echo $mysqlError;
+		echo $dbError;
 	}
 	
 }

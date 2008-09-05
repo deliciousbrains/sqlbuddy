@@ -61,15 +61,16 @@ if ($_POST)
 		if (isset($_POST['GRANTOPTION']))
 			$newQuery .= " WITH GRANT OPTION";
 		
-		$conn->query($newQuery) or ($mysqlError = $conn->error());
-		$conn->query("FLUSH PRIVILEGES") or ($mysqlError = $conn->error());
+		$conn->query($newQuery) or ($dbError = $conn->error());
+		$conn->query("FLUSH PRIVILEGES") or ($dbError = $conn->error());
 		
 	}
 }
 
-// delete users
+$connected = $conn->selectDB("mysql");
 
-if (isset($_POST['deleteUsers']))
+// delete users
+if (isset($_POST['deleteUsers']) && $connected)
 {
 	$deleteUsers = $_POST['deleteUsers'];
 	
@@ -96,10 +97,10 @@ if (isset($_POST['deleteUsers']))
 	$conn->query("FLUSH PRIVILEGES");
 }
 
-if (isset($mysqlError))
+if (isset($dbError))
 {
 	echo '<div class="errormessage" style="margin: 6px 12px 10px 7px; width: 550px">';
-	echo '<strong>' . __("Error performing operation") . '</strong><p>' . $mysqlError . '</p>';
+	echo '<strong>' . __("Error performing operation") . '</strong><p>' . $dbError . '</p>';
 	echo '</div>';
 }
 
@@ -109,7 +110,7 @@ if (isset($mysqlError))
 
 <?php
 
-if ($conn->selectDB("mysql"))
+if ($connected)
 {
 	
 	$userSql = $conn->query("SELECT * FROM `user`");

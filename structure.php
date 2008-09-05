@@ -45,7 +45,7 @@ if (isset($_POST))
 		
 		$indexQuery .= " (`" . $indexColumnList . "`)";
 		
-		$conn->query($indexQuery) or ($mysqlError = $conn->error());
+		$conn->query($indexQuery) or ($dbError = $conn->error());
 	}
 	
 	?>
@@ -67,13 +67,13 @@ if (isset($_POST['runQuery']))
 	foreach ($queryList as $query)
 	{
 		if (trim($query) != "")
-			$conn->query($query) or ($mysqlError = $conn->error());
+			$conn->query($query) or ($dbError = $conn->error());
 	}
 }
 
-if (isset($mysqlError))
+if (isset($dbError))
 {
-	echo '<div class="errormessage" style="margin: 6px 12px 10px; width: 602px"><strong>' . __("Error performing operation") . '</strong><p>' . $mysqlError . '</p></div>';
+	echo '<div class="errormessage" style="margin: 6px 12px 10px; width: 602px"><strong>' . __("Error performing operation") . '</strong><p>' . $dbError . '</p></div>';
 }
 
 $structureSql = $conn->describeTable($table);

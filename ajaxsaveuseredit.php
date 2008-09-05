@@ -61,14 +61,14 @@ if (isset($user))
 		
 		$conn->query("REVOKE ALL PRIVILEGES ON *.* FROM " . $user);
 		$conn->query("REVOKE GRANT OPTION ON *.* FROM " . $user);
-		$conn->query($query) or ($mysqlError = $conn->error());
-		$conn->query("FLUSH PRIVILEGES") or ($mysqlError = $conn->error());
+		$conn->query($query) or ($dbError = $conn->error());
+		$conn->query("FLUSH PRIVILEGES") or ($dbError = $conn->error());
 		
 		echo "{\n";
 		echo "    \"formupdate\": \"" . $_GET['form'] . "\",\n";
 		echo "    \"errormess\": \"";
-		if (isset($mysqlError))
-			echo $mysqlError;
+		if (isset($dbError))
+			echo $dbError;
 		echo "\"\n";
 		echo '}';
 	}

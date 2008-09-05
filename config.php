@@ -21,15 +21,19 @@ $sbconfig['DefaultHost'] = "localhost";
 $sbconfig['DefaultUser'] = "root";
 
 /*
-* If you want to enable automatic login, you can include your password below. 
+* If you want to enable automatic login, you can include your password below. To 
+* automatically connect to SQLite, include the filename of the database instead.
 * Note: This is generally not recommended because it means that anyone with the 
 * proper url will have access to your data. It should only be used on machines
 * that are not accessible from the internet (local testing boxes) or if you have
 * set up some other form of authentication. Use as your own discretion.
 */
 
+// MySQL
 // $sbconfig['DefaultPass'] = "";
 
+// SQLite
+// $sbconfig['DefaultDatabase'] = "";
 
 /*
 * By default, when you view the homepage of your SQL Buddy installation, a check is

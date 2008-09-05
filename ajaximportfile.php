@@ -103,7 +103,7 @@ if (isset($_POST) || isset($_FILES))
 			{
 				if (isset($format) && $format == "SQL")
 				{
-					$conn->query($statement) or ($mysqlErrors[] = $conn->error());
+					$conn->query($statement) or ($dbErrors[] = $conn->error());
 					
 					$affected = (int)(@$conn->affectedRows());
 					$insertCount += $affected;
@@ -127,7 +127,7 @@ if (isset($_POST) || isset($_FILES))
 						// make sure that the counts match up
 						if (sizeof($rawValues) == $columnCount)
 						{
-							$conn->query("INSERT INTO `$table` VALUES ('$values')") or ($mysqlErrors[] = $conn->error());
+							$conn->query("INSERT INTO `$table` VALUES ('$values')") or ($dbErrors[] = $conn->error());
 							
 							$affected = (int)(@$conn->affectedRows());
 							
@@ -166,10 +166,10 @@ if (isset($_POST) || isset($_FILES))
 		}
 	}
 	
-	if (isset($mysqlErrors))
+	if (isset($dbErrors))
 	{
 		$message .= __("The following errors were reported") . ":<br />";
-		foreach ($mysqlErrors as $merr)
+		foreach ($dbErrors as $merr)
 		{
 			$message .= " - " . $merr . "<br />";
 		}

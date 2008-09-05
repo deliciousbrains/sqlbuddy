@@ -24,6 +24,13 @@ include "includes/sql.php";
 define("VERSION_NUMBER", "1.3.0");
 define("PREVIEW_CHAR_SIZE", 65);
 
+$adapterList[] = "mysql";
+
+if (function_exists("sqlite_open"))
+{
+	$adapterList[] = "sqlite";
+}
+
 $cookieLength = time() + (60*24*60*60);
 
 $langList['ca_AD'] = "Català";
@@ -279,7 +286,7 @@ global $conn;
 		<?php
 
 		// if set to auto login, providing a link to logout wouldnt be much good
-		if (!isset($sbconfig['DefaultPass']))
+		if (!((isset($sbconfig['DefaultPass']) && $conn->getAdapter() == "mysql") || (isset($sbconfig['DefaultDatabase']) && $conn->getAdapter() == "sqlite")))
 			echo '<a href="logout.php">' . __("Logout") . '</a>';
 
 		?>

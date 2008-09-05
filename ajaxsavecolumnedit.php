@@ -25,13 +25,13 @@ if (isset($_POST['runQuery']))
 {
 	$query = $_POST['runQuery'];
 	
-	$conn->query($query) or ($mysqlError = $conn->error());
+	$conn->query($query) or ($dbError = $conn->error());
 	
 	echo "{\n";
 	echo "    \"formupdate\": \"" . $_GET['form'] . "\",\n";
 	echo "    \"errormess\": \"";
-	if (isset($mysqlError))
-		echo $mysqlError;
+	if (isset($dbError))
+		echo $dbError;
 	echo "\"\n";
 	echo '}';
 	

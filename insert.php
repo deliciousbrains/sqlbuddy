@@ -66,13 +66,13 @@ if ($conn->rowCount($structureSql) || sizeof($structureSql) > 0)
 			$insertQuery = "INSERT INTO `$table` (" . $insertFields . ") VALUES (" . $insertValues . ")";
 		}
 		
-		$conn->query($insertQuery) or ($mysqlError = $conn->error());
+		$conn->query($insertQuery) or ($dbError = $conn->error());
 		
 		$insertId = $conn->insertId();
 		
-		if (isset($mysqlError))
+		if (isset($dbError))
 		{
-			echo '<div class="errormessage" style="margin: 6px 12px 10px; width: 350px">' . $mysqlError . '</div>';
+			echo '<div class="errormessage" style="margin: 6px 12px 10px; width: 350px">' . $dbError . '</div>';
 		}
 		else
 		{
@@ -126,7 +126,7 @@ if ($conn->rowCount($structureSql) || sizeof($structureSql) > 0)
 				if (strpos($column[1], "text") !== false)
 				{
 					echo '<textarea name="' . $column[0] . '">';
-					if (isset($mysqlError))
+					if (isset($dbError))
 					{
 						echo $_POST[$column[0]];
 					}
@@ -136,7 +136,7 @@ if ($conn->rowCount($structureSql) || sizeof($structureSql) > 0)
 				{
 					echo '<input type="text"';
 					echo ' name="' . $column[0] . '"';
-					if (isset($mysqlError))
+					if (isset($dbError))
 					{
 						echo 'value="' . $_POST[$column[0]] . '"';
 					}
@@ -185,7 +185,7 @@ if ($conn->rowCount($structureSql) || sizeof($structureSql) > 0)
 				if ($structureRow['Type'] == "text")
 				{
 					echo '<textarea name="' . $structureRow['Field'] . '">';
-					if (isset($mysqlError))
+					if (isset($dbError))
 						echo $_POST[$structureRow['Field']];
 					echo '</textarea>';
 				}
@@ -215,7 +215,7 @@ if ($conn->rowCount($structureSql) || sizeof($structureSql) > 0)
 				{
 					echo '<input type="text"';
 					echo ' name="' . $structureRow['Field'] . '"';
-					if (isset($mysqlError))
+					if (isset($dbError))
 					{
 						echo 'value="' . $_POST[$structureRow['Field']] . '"';
 					}

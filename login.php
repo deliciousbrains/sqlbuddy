@@ -19,7 +19,9 @@ $adapter = (isset($sbconfig['DefaultAdapter'])) ? $sbconfig['DefaultAdapter'] : 
 $host = (isset($sbconfig['DefaultHost'])) ? $sbconfig['DefaultHost'] : "localhost";
 $user = (isset($sbconfig['DefaultUser'])) ? $sbconfig['DefaultUser'] : "root";
 $pass = (isset($sbconfig['DefaultPass'])) ? $sbconfig['DefaultPass'] : "";	
-$database = "";
+
+// SQLite only
+$database = (isset($sbconfig['DefaultDatabase'])) ? $sbconfig['DefaultDatabase'] : "";	
 
 if ($_POST)
 {
@@ -37,6 +39,11 @@ if ($_POST)
 	
 	if (isset($_POST['DATABASE']))
 		$database = $_POST['DATABASE'];
+}
+
+if (!in_array($adapter, $adapterList))
+{
+	$adapter = "mysql";
 }
 
 if (($adapter != "sqlite" && $host && $user && $pass) || ($adapter == "sqlite" && $database))
@@ -168,12 +175,12 @@ startOutput();
 			<td class="field"></td>
 			<td>
 			<select name="ADAPTER" id="ADAPTER" onchange="adapterChange()">
-			<option value="mysql"><?php echo __("MySQL"); ?></option>
-			<option value="sqlite"><?php echo __("SQLite"); ?></option>
+			<option value="mysql"<?php if ($adapter == "mysql") echo " selected"; ?>><?php echo __("MySQL"); ?></option>
+			<option value="sqlite"<?php if ($adapter == "sqlite") echo " selected"; ?>><?php echo __("SQLite"); ?></option>
 			</select>
 			</td>
 			</table>
-			<table cellpadding="0" id="REGOPTIONS">
+			<table cellpadding="0" id="REGOPTIONS"<?php if ($adapter == "sqlite") echo ' style="display: none"'; ?>>
 			<tr>
 			<td class="field"><?php echo __("Host"); ?>:</td>
 			<td><input type="text" class="text" name="HOST" value="<?php echo $host; ?>" /></td>
@@ -187,7 +194,7 @@ startOutput();
 			<td><input type="password" class="text" name="PASS" id="PASS" /></td>
 			</tr>
 			</table>
-			<table cellpadding="0" id="LITEOPTIONS" style="display: none">
+			<table cellpadding="0" id="LITEOPTIONS"<?php if ($adapter == "mysql") echo ' style="display: none"'; ?>>
 			<tr>
 			<td class="field"><?php echo __("Database"); ?>:</td>
 			<td><input type="text" class="text" name="DATABASE" id="DATABASE" value="<?php echo $database; ?>" /></td>
@@ -209,8 +216,20 @@ startOutput();
 	</div>
 	</div>
 	<script type="text/javascript">
+	<!--
 	
-	$('PASS').focus();
+	<?php
+	
+	if ($adapter != "sqlite")
+	{
+		echo "$('PASS').focus();";
+	}
+	else
+	{
+		echo "$('DATABASE').focus();";
+	}
+	
+	?>
 	
 	if (!navigator.cookieEnabled)
 	{
@@ -246,6 +265,7 @@ startOutput();
 		
 	}
 	
+	// -->
 	</script>
 </body>
 </html>

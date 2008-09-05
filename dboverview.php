@@ -37,7 +37,7 @@ if (isset($_POST['runQuery']))
 		
 		if ($query != "")
 		{
-			$conn->query($query) or ($mysqlError = $conn->error());
+			$conn->query($query) or ($dbError = $conn->error());
 			
 			// make a list of the tables that were dropped/emptied
 			if (substr($query, 0, 10) == "DROP TABLE")
@@ -106,11 +106,11 @@ if (isset($emptiedList) && isset($db))
 }
 
 
-if (isset($mysqlError))
+if (isset($dbError))
 {
 	echo '<div class="errormessage" style="margin: 6px 12px 10px 7px; width: 550px"><strong>';
 	echo __("Error performing operation");
-	echo '</strong><p>' . $mysqlError . '</p></div>';
+	echo '</strong><p>' . $dbError . '</p></div>';
 }
 
 ?>
