@@ -212,7 +212,7 @@ function startOutput()
 		if (extension_loaded("zlib") && !ini_get("zlib.output_compression") && ini_get("output_handler") != "ob_gzhandler")
 		{
 			ob_start("ob_gzhandler");
-			//header("Content-Encoding: gzip");
+			header("Content-Encoding: gzip");
 			ob_implicit_flush();
 		}
 		else
@@ -237,10 +237,11 @@ function finishOutput()
 	if (isset($conn) && $conn->isConnected())
 	{
 		$conn->disconnect();
+		unset($conn);
 	}
 }
 
-function outputPage($title = "")
+function outputPage()
 {
 
 global $requestKey;
@@ -266,11 +267,6 @@ global $conn;
 		<script type="text/javascript" src="<?php echo smartCaching("js/core.js"); ?>"></script>
 		<script type="text/javascript" src="<?php echo smartCaching("js/movement.js"); ?>"></script>
 	</head>
-	<?php
-	
-	flush();
-	
-	?>
 	<body>
 	<div id="container">
 	<div id="header">
