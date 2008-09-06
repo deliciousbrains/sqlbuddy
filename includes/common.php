@@ -16,11 +16,14 @@ MIT license
 if (!session_id())
 	session_start();
 
-include "../config.php";
-include "helpers.php";
-include "types.php";
-include "class/GetTextReader.php";
-include "class/Sql.php";
+define("MAIN_DIR", dirname(dirname(__FILE__)) . "/");
+define("INCLUDES_DIR", dirname(__FILE__) . "/");
+
+include MAIN_DIR . "config.php";
+include INCLUDES_DIR . "helpers.php";
+include INCLUDES_DIR . "types.php";
+include INCLUDES_DIR . "class/GetTextReader.php";
+include INCLUDES_DIR . "class/Sql.php";
 
 define("VERSION_NUMBER", "1.3.0");
 define("PREVIEW_CHAR_SIZE", 65);

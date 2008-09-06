@@ -1463,9 +1463,9 @@ function autoExpandTextareas()
 			
 			var newHeight = theDiv.clientHeight + 5;
 			
-			if (newHeight < 50)
+			if (newHeight < 80)
 			{
-				newHeight = 50;
+				newHeight = 80;
 			}
 			else if (newHeight > 300)
 			{

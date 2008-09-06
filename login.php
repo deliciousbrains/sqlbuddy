@@ -170,15 +170,40 @@ startOutput();
 			{
 				echo '<tr><td colspan="2"><div class="errormess">' . __("Your session has timed out. Please login again.") . '</div></td></tr>';
 			}
+			
+			if (sizeof($adapterList) > 1)
+			{
+			
 			?>
 			<tr>
 			<td class="field"></td>
 			<td>
 			<select name="ADAPTER" id="ADAPTER" onchange="adapterChange()">
-			<option value="mysql"<?php if ($adapter == "mysql") echo " selected"; ?>><?php echo __("MySQL"); ?></option>
-			<option value="sqlite"<?php if ($adapter == "sqlite") echo " selected"; ?>><?php echo __("SQLite"); ?></option>
+			<?php
+			
+			if (in_array("mysql", $adapterList))
+			{
+				?>
+				<option value="mysql"<?php if ($adapter == "mysql") echo " selected"; ?>><?php echo __("MySQL"); ?></option>
+				<?php
+			}
+			
+			if (in_array("sqlite", $adapterList))
+			{
+				?>
+				<option value="sqlite"<?php if ($adapter == "sqlite") echo " selected"; ?>><?php echo __("SQLite"); ?></option>
+				<?php
+			}
+			
+			?>
 			</select>
 			</td>
+			</tr>
+			<?php
+			
+			}
+			
+			?>
 			</table>
 			<table cellpadding="0" id="REGOPTIONS"<?php if ($adapter == "sqlite") echo ' style="display: none"'; ?>>
 			<tr>

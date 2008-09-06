@@ -91,11 +91,11 @@ if (isset($_POST['editParts']))
 				$showLargeEditor[] = "mediumtext";
 				$showLargeEditor[] = "longtext";
 				
-				if (in_array($structureRow['Type'], $showLargeEditor))
+				if (in_array($curtype, $showLargeEditor))
 				{
 					echo '<textarea name="' . $structureRow['Field'] . '">' . $dataRow[$structureRow['Field']] . '</textarea>';
 				}
-				elseif (substr($structureRow['Type'], 0, 4) == "enum")
+				elseif ($curtype == "enum")
 				{
 					$trimmed = substr($structureRow['Type'], 6, -2);
 					$listOptions = explode("','", $trimmed);
@@ -112,7 +112,7 @@ if (isset($_POST['editParts']))
 					}
 					echo '</select>';
 				}
-				elseif (substr($structureRow['Type'], 0, 3) == "set")
+				elseif ($curtype == "set")
 				{
 					$trimmed = substr($structureRow['Type'], 5, -2);
 					$listOptions = explode("','", $trimmed);
@@ -132,7 +132,18 @@ if (isset($_POST['editParts']))
 					echo '<input type="text"';
 					if ($firstField)
 						echo ' id="EDITFIRSTFIELD"';
-					echo ' name="' . $structureRow['Field'] . '" class="text" value="' . htmlentities($dataRow[$structureRow['Field']], ENT_QUOTES, 'UTF-8') . '" />';
+					echo ' name="' . $structureRow['Field'] . '" class="text" value="';
+					
+					if ($dataRow[$structureRow['Field']] && ((isset($binaryDTs) && in_array($curtype, $binaryDTs)) || stristr($structureRow['Type'], "binary") !== false))
+					{
+						echo "0x" . bin2hex($dataRow[$structureRow['Field']]);
+					}
+					else
+					{
+						echo htmlentities($dataRow[$structureRow['Field']], ENT_QUOTES, 'UTF-8');
+					}
+					
+					echo '" />';
 				}
 				
 				$firstField = false;

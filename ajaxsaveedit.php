@@ -37,6 +37,7 @@ if ($_POST && isset($table))
 		while ($structureRow = $conn->fetchAssoc($structureSql))
 		{
 			$pairs[$structureRow['Field']] = '';
+			$types[$structureRow['Field']] = $structureRow['Type'];
 		}
 	}
 	else if ($conn->getAdapter() == "sqlite")
@@ -71,7 +72,14 @@ if ($_POST && isset($table))
 			{
 				if ($conn->getAdapter() == "mysql")
 				{
-					$updates .= "`" . $keyname . "`='" . $value . "',";
+					if (isset($types) && substr($value, 0, 2) == "0x" && ((isset($binaryDTs) && in_array($types[$keyname], $binaryDTs)) || stristr($types[$keyname], "binary") !== false))
+					{
+						$updates .= "`" . $keyname . "`=" . $value . ",";
+					}
+					else
+					{
+						$updates .= "`" . $keyname . "`='" . $value . "',";
+					}
 				}
 				else if ($conn->getAdapter() == "sqlite")
 				{
@@ -113,7 +121,15 @@ if ($_POST && isset($table))
 					$columns .= "'" . $keyname . "',";
 				}
 				
-				$values .= "'" . $value . "',";
+				if (isset($types) && substr($value, 0, 2) == "0x" && ((isset($binaryDTs) && in_array($types[$keyname], $binaryDTs)) || stristr($types[$keyname], "binary") !== false))
+				{
+					$values .= $value . ",";
+				}
+				else
+				{
+					$values .= "'" . $value . "',";
+				}
+				
 			}
 			
 			$columns = substr($columns, 0, -1);
