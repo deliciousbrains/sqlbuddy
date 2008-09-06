@@ -91,7 +91,7 @@ if (isset($_POST['deleteUsers']) && $connected)
 		{
 			$conn->query("REVOKE ALL PRIVILEGES ON *.* FROM '$user'@'$host'");
 			$conn->query("REVOKE GRANT OPTION ON *.* FROM '$user'@'$host'");
-			$conn->query("DELETE FROM `user` WHERE `User`='$user' AND HOST='$host'");
+			$conn->query("DELETE FROM `user` WHERE `User`='$user' AND `Host`='$host'");
 		}
 	}
 	$conn->query("FLUSH PRIVILEGES");
@@ -115,7 +115,7 @@ if ($connected)
 	
 	$userSql = $conn->query("SELECT * FROM `user`");
 	
-	if ($conn->rowCount($userSql))
+	if ($conn->isResultSet($userSql))
 	{
 		
 		?>
@@ -172,11 +172,11 @@ if ($connected)
 		
 		echo '</div>';
 		
-		$conn->dataSeek($userSql, 0);
+		$userSql = $conn->query("SELECT * FROM `user`");
 		
 		echo '<div class="gridscroll withchecks" style="overflow-x: hidden; max-height: 400px">';
 		
-		if ($conn->rowCount($userSql))
+		if ($conn->isResultSet($userSql))
 		{
 			$m = 0;
 			
@@ -213,7 +213,7 @@ if ($connected)
 	// check to see if this user has proper permissions to manage users
 	$checkSql = $conn->query("SELECT `Grant_priv` FROM `user` WHERE `Host`='" . $conn->getOptionValue("host") . "' AND `User`='" . $_SESSION['SB_LOGIN_USER'] . "' LIMIT 1");
 	
-	if ($conn->rowCount($checkSql))
+	if ($conn->isResultSet($checkSql))
 	{
 		$grantValue = $conn->result($checkSql, 0, "Grant_priv");
 		
@@ -248,11 +248,11 @@ if ($connected)
 		</table>
 		
 		<div style="padding-top: 5px">
-		<label><input type="radio" name="NEWCHOICE" value="ALL" onchange="updatePane('PRIVSELECTED', 'privilegepane')" onclick="updatePane('PRIVSELECTED', 'privilegepane')" checked="checked" /><?php echo __("All privileges"); ?></label><br />
-		<label><input type="radio" name="NEWCHOICE" value="SELECTED" id="PRIVSELECTED" onchange="updatePane('PRIVSELECTED', 'privilegepane')" onclick="updatePane('PRIVSELECTED', 'privilegepane')" /><?php echo __("Selected privileges"); ?></label>
+		<label><input type="radio" name="NEWCHOICE" value="ALL" onchange="updatePane('PRIVSELECTED', 'privilegepane')" onclick="updatePane('PRIVSELECTED', 'privilegepane')" /><?php echo __("All privileges"); ?></label><br />
+		<label><input type="radio" name="NEWCHOICE" value="SELECTED" id="PRIVSELECTED" onchange="updatePane('PRIVSELECTED', 'privilegepane')" onclick="updatePane('PRIVSELECTED', 'privilegepane')" checked="checked" /><?php echo __("Selected privileges"); ?></label>
 		</div>
 		
-		<div id="privilegepane" style="display: none">
+		<div id="privilegepane">
 		<div class="paneheader">
 		<?php echo __("User privileges"); ?>&nbsp;&nbsp;[<a onclick="paneCheckAll('userprivs')"><?php echo __("All"); ?></a> / <a onclick="paneCheckNone('userprivs')"><?php echo __("None"); ?></a>]
 		</div>

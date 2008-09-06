@@ -127,7 +127,7 @@ if ($_POST)
 					$currentChar = "";
 					$currentCharSql = $conn->query("SHOW VARIABLES LIKE 'character_set_database'");
 					
-					if ($conn->rowCount($currentCharSql))
+					if ($conn->isResultSet($currentCharSql))
 					{
 						$currentChar = $conn->result($currentCharSql, 0, "Value");
 						
@@ -144,7 +144,7 @@ if ($_POST)
 				
 				$tables = "";
 				
-				if ($conn->rowCount($tableSql))
+				if ($conn->isResultSet($tableSql))
 				{
 					while ($tableRow = $conn->fetchArray($tableSql))
 					{
@@ -167,14 +167,14 @@ if ($_POST)
 					if (isset($exportStructure))
 					{
 						
-						if ($conn->rowCount($structureSQL))
+						if ($conn->isResultSet($structureSQL))
 						{
 							
 							$outputBuffer .= "CREATE TABLE `$t` (";
 							
 							$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$t'");
 							
-							if ($conn->rowCount($infoSql) == 1)
+							if ($conn->isResultSet($infoSql) == 1)
 							{
 								
 								$infoRow = $conn->fetchAssoc($infoSql);
@@ -226,7 +226,7 @@ if ($_POST)
 							// dont forget about the keys
 							$keySQL = $conn->query("SHOW INDEX FROM `$t`");
 							
-							if ($conn->rowCount($keySQL))
+							if ($conn->isResultSet($keySQL))
 							{
 								$currentKey = "";
 								while ($keyRow = $conn->fetchAssoc($keySQL))
@@ -276,7 +276,7 @@ if ($_POST)
 						}
 					}
 					
-					@$conn->dataSeek($structureSQL, 0);
+					$structureSQL = $conn->query("SHOW FULL FIELDS FROM `$t`");
 					
 					if (isset($exportData))
 					{
@@ -285,7 +285,7 @@ if ($_POST)
 						$columnList = array();
 						
 						// put the column names in an array
-						if ($conn->rowCount($structureSQL))
+						if ($conn->isResultSet($structureSQL))
 						{
 							while ($structureRow = $conn->fetchAssoc($structureSQL))
 							{
@@ -296,7 +296,7 @@ if ($_POST)
 						
 						$columnImplosion = implode("`, `", $columnList);
 						
-						if ($conn->rowCount($dataSQL))
+						if ($conn->isResultSet($dataSQL))
 						{
 							
 							if ($insertType == "COMPACT")
@@ -369,7 +369,7 @@ if ($_POST)
 					{
 						$structureSQL = $conn->query("DESCRIBE `$t`");
 							
-						if ($conn->rowCount($structureSQL))
+						if ($conn->isResultSet($structureSQL))
 						{
 							$first = true;
 							while ($structureRow = $conn->fetchArray($structureSQL))
@@ -387,7 +387,7 @@ if ($_POST)
 					
 					$dataSQL = $conn->query("SELECT * FROM `$t`");
 					
-					if ($conn->rowCount($dataSQL))
+					if ($conn->isResultSet($dataSQL))
 					{
 						while ($dataRow = $conn->fetchArray($dataSQL))
 						{
@@ -477,7 +477,7 @@ if (isset($error))
 		
 		$tableSql = $conn->query("SHOW TABLES");
 		
-		if ($conn->rowCount($tableSql))
+		if ($conn->isResultSet($tableSql))
 		{
 			while ($tableRow = $conn->fetchArray($tableSql))
 			{
@@ -509,7 +509,7 @@ if (isset($error))
 		
 		$dbSql = $conn->query("SHOW DATABASES");
 		
-		if ($conn->rowCount($dbSql))
+		if ($conn->isResultSet($dbSql))
 		{
 			while ($dbRow = $conn->fetchArray($dbSql))
 			{

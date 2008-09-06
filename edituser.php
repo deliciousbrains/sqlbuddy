@@ -42,7 +42,7 @@ if (isset($_POST['editParts']))
 			
 			$userSQL = $conn->query("SELECT * FROM `user` WHERE `User`='" . $user . "' AND `Host`='" . $host . "'");
 			
-			if ($conn->rowCount($userSQL))
+			if ($conn->isResultSet($userSQL))
 			{
 				$userRow = $conn->fetchAssoc($userSQL);
 				

@@ -11,9 +11,13 @@ width: 185px !important;
 }
 #leftside {
 width: 205px !important;
+overflow-y: hidden;
 }
 #rightside {
 margin-left: 205px !important;
+}
+#sidemenu {
+overflow-x: hidden;
 }
 
 #bottom {

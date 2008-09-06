@@ -14,6 +14,7 @@ MIT license
 */
 
 error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 if (!session_id())
 	session_start();
@@ -24,7 +25,15 @@ define("INCLUDES_DIR", dirname(__FILE__) . "/");
 include MAIN_DIR . "config.php";
 include INCLUDES_DIR . "types.php";
 include INCLUDES_DIR . "class/GetTextReader.php";
-include INCLUDES_DIR . "class/Sql.php";
+
+if (version_compare(PHP_VERSION, "5.0.0", "<"))
+{
+	include INCLUDES_DIR . "class/Sql-php4.php";
+}
+else
+{
+	include INCLUDES_DIR . "class/Sql.php";
+}
 
 define("VERSION_NUMBER", "1.3.0");
 define("PREVIEW_CHAR_SIZE", 65);
@@ -129,22 +138,25 @@ if (isset($conn) && $conn->isConnected())
 
 	if (isset($_GET['table']))
 		$table = $conn->escapeString($_GET['table']);
-
-	$charsetSql = $conn->listCharset();
-	if ($conn->rowCount($charsetSql))
+	
+	if ($conn->getAdapter() == "mysql")
 	{
-		while ($charsetRow = $conn->fetchAssoc($charsetSql))
+		$charsetSql = $conn->listCharset();
+		if ($conn->isResultSet($charsetSql))
 		{
-			$charsetList[] = $charsetRow['Charset'];
+			while ($charsetRow = $conn->fetchAssoc($charsetSql))
+			{
+				$charsetList[] = $charsetRow['Charset'];
+			}
 		}
-	}
-
-	$collationSql = $conn->listCollation();
-	if ($conn->rowCount($collationSql))
-	{
-		while ($collationRow = $conn->fetchAssoc($collationSql))
+	
+		$collationSql = $conn->listCollation();
+		if ($conn->isResultSet($collationSql))
 		{
-			$collationList[$collationRow['Collation']] = $collationRow['Charset'];
+			while ($collationRow = $conn->fetchAssoc($collationSql))
+			{
+				$collationList[$collationRow['Collation']] = $collationRow['Charset'];
+			}
 		}
 	}
 }

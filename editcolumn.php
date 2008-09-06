@@ -25,7 +25,7 @@ if (isset($db))
 if (isset($db))
 	$structureSql = $conn->query("SHOW FULL FIELDS FROM `$table`");
 
-if (isset($_POST['editParts']) && $conn->rowCount($structureSql))
+if (isset($_POST['editParts']) && $conn->isResultSet($structureSql))
 {
 	
 	$editParts = $_POST['editParts'];

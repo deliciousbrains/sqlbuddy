@@ -29,21 +29,21 @@ loginCheck();
 	
 	<?php
 	
+	$version = $conn->getVersion();
+	
 	if ($conn->getAdapter() == "mysql")
 	{
 		
 		$message = "";
 		
-		$version = $conn->getVersion();
-		
-		if (isset($_SESSION['SB_LOGIN_USER']))
+		if (isset($_SESSION['SB_LOGIN_USER']) && $conn->getOptionValue("host"))
 		{
-			$message = sprintf(__("You are connected to MySQL %s with the user %s."), $version, $_SESSION['SB_LOGIN_USER']);
+			$message = sprintf(__("You are connected to MySQL %s with the user %s."), $version, $_SESSION['SB_LOGIN_USER'] . "@" . $conn->getOptionValue("host"));
 		}
 			
 		$statusSql = $conn->query("SHOW STATUS");
 		
-		if ($conn->rowCount($statusSql))
+		if ($conn->isResultSet($statusSql))
 		{
 			
 			while ($statusRow = $conn->fetchAssoc($statusSql))
@@ -73,9 +73,13 @@ loginCheck();
 			
 		}
 		
-		echo "<p>" . $message . "</p>";
-		
 	}
+	else if ($conn->getAdapter() == "sqlite")
+	{
+		$message = sprintf(__("You are connected to %s."), "SQLite " . $version);
+	}
+	
+	echo "<p>" . $message . "</p>";
 	
 	?>
 	
@@ -246,7 +250,7 @@ if ($conn->getAdapter() != "sqlite")
 		
 		$defaultCharSql = $conn->query("SHOW VARIABLES LIKE 'character_set_server'");
 		
-		if ($conn->rowCount($defaultCharSql))
+		if ($conn->isResultSet($defaultCharSql))
 		{
 			$defaultCharset = $conn->result($defaultCharSql, 0, "Value");
 		}

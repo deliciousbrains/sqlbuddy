@@ -32,7 +32,7 @@ if (isset($_POST['query']))
 //return the first field from the first row
 if (!isset($_POST['silent']))
 {
-	$row = @$conn->fetchArray($sql);
+	$row = $conn->fetchArray($sql);
 	echo nl2br(htmlentities($row[0], ENT_QUOTES, 'UTF-8'));
 }
 

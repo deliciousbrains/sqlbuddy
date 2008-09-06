@@ -123,7 +123,7 @@ if (isset($dbError))
 
 $tableSql = $conn->listTables();
 
-if ($conn->rowCount($tableSql))
+if ($conn->isResultSet($tableSql))
 {
 	
 	echo '<div style="margin-bottom: 15px">';
@@ -194,7 +194,7 @@ if ($conn->rowCount($tableSql))
 	
 	echo '</div>';
 	
-	$conn->dataSeek($tableSql, 0);
+	$tableSql = $conn->listTables();
 	
 	echo '<div class="gridscroll withchecks" style="overflow-x: hidden; max-height: 400px">';
 	
@@ -228,7 +228,7 @@ if ($conn->rowCount($tableSql))
 		echo '">';
 		echo '<table cellpadding="0" cellspacing="0">';
 		echo '<tr>';
-		echo '<td><div class="item column1"><img src="images/goto.png" class="goto" onclick="subTabLoad(\'' . $db . '\', \'' . $tableRow[0] . '\')" align="right" />' . $tableRow[0] . '</div></td>';
+		echo '<td><div class="item column1"><div style="float: left; overflow: hidden; width: 185px">' . $tableRow[0] . '</div><img src="images/goto.png" class="goto" onclick="subTabLoad(\'' . $db . '\', \'' . $tableRow[0] . '\')" /></div></td>';
 		echo '<td><div class="item column2">' . number_format($rowCount) . '</div></td>';
 		
 		if (isset($collationList) && array_key_exists("Collation", $infoRow))
@@ -277,7 +277,7 @@ if (isset($charsetList))
 $currentChar = "";
 $currentCharSql = $conn->query("SHOW VARIABLES LIKE 'character_set_database'");
 
-if ($conn->rowCount($currentCharSql))
+if ($conn->isResultSet($currentCharSql))
 {
 	$currentChar = $conn->result($currentCharSql, 0, "Value");
 }

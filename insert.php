@@ -25,16 +25,16 @@ if (isset($db))
 if (isset($table))
 	$structureSql = $conn->describeTable($table);
 
-if ($conn->rowCount($structureSql) && $conn->getAdapter() == "mysql")
+if ($conn->isResultSet($structureSql) && $conn->getAdapter() == "mysql")
 {
 	while ($structureRow = $conn->fetchAssoc($structureSql))
 	{
 		$types[$structureRow['Field']] = $structureRow['Type'];
 	}
-	$conn->dataSeek($structureSql, 0);
+	$structureSql = $conn->describeTable($table);
 }
 
-if ($conn->rowCount($structureSql) || sizeof($structureSql) > 0)
+if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0)
 {
 	
 	if ($_POST)
@@ -178,7 +178,7 @@ if ($conn->rowCount($structureSql) || sizeof($structureSql) > 0)
 	else if ($conn->getAdapter() == "mysql")
 	{
 		
-		if ($conn->rowCount($structureSql))
+		if ($conn->isResultSet($structureSql))
 		{
 			while ($structureRow = $conn->fetchAssoc($structureSql))
 			{

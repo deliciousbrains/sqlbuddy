@@ -18,7 +18,7 @@ include "includes/common.php";
 loginCheck();
 
 if (isset($db))
-	mysql_select_db($db);
+	$conn->selectDB($db);
 
 if (isset($_POST['query']))
 	$query = $_POST['query'];

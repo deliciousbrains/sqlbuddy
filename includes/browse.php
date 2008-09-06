@@ -57,9 +57,9 @@ if ($query)
 			$queryFinishTime = microtime_float();
 			$queryTime += round($queryFinishTime - $queryStartTime, 4);
 			
-			if (@$conn->affectedRows())
+			if ($conn->affectedRows($dataSql))
 			{
-				$insertCount += (int)($conn->affectedRows());
+				$insertCount += (int)($conn->affectedRows($dataSql));
 			}
 		}
 	}
@@ -67,6 +67,13 @@ if ($query)
 	if (!isset($queryTable))
 	{
 		$totalRows = (int)($conn->rowCount($dataSql));
+		
+		// running rowCount on PDO resets the result set
+		// so we need to run the query again
+		if ($conn->getMethod() == "pdo")
+		{
+			$dataSql = $conn->query($q);
+		}
 	}
 	
 }
@@ -91,7 +98,7 @@ else if (isset($queryTable) && $conn->getAdapter() == "mysql")
 {
 	$structureSql = $conn->describeTable($queryTable);
 	
-	if ($conn->rowCount($structureSql))
+	if ($conn->isResultSet($structureSql))
 	{
 		while ($structureRow = $conn->fetchAssoc($structureSql))
 		{	
@@ -245,7 +252,7 @@ else
 		echo '<table cellpadding="0" cellspacing="0">';
 		echo '<tr>';
 			
-		if ($conn->rowCount($dataSql))
+		if ($conn->isResultSet($dataSql))
 		{
 			$dataRow = $conn->fetchAssoc($dataSql);
 			$g = 0;
@@ -316,13 +323,13 @@ else
 			echo '<td><div class="emptyvoid" style="width: 30px; border-right: 0">&nbsp;</div></td>';
 			echo '</tr>';
 			echo '</table>';
-			
-			$conn->dataSeek($dataSql, 0);
-			
+						
 		}
 		
 		echo '</div>';
 		echo '</div>';
+		
+		$dataSql = $conn->query($q);
 		
 		$queryBuilder = "";
 		
@@ -372,7 +379,7 @@ else
 			
 			echo '</div>';
 			
-			$conn->dataSeek($dataSql, 0);
+			$dataSql = $conn->query($q);
 			
 		}
 		

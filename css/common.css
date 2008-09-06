@@ -149,10 +149,8 @@ margin-left: 180px;
 padding: 0 6px 5px 0;
 }
 #sidemenu {
-overflow-y: auto;
 display: block;
 padding: 10px 0 0 5px;
-width: auto;
 }
 
 #content {
@@ -666,7 +664,6 @@ padding: 5px 5px 0 8px;
 overflow: auto;
 min-height: 100px;
 padding-right: 5px;
-word-break: break-all;
 }
 .mainr {
 width: 13px;
@@ -893,6 +890,7 @@ font-weight: bold;
 cursor: pointer;
 margin-top: 2px;
 opacity: 0.7;
+float: right;
 }
 .goto:hover {
 opacity: 1;

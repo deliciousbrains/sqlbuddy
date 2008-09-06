@@ -61,7 +61,7 @@ if (isset($_POST['editParts']))
 		<table class="insert edit" cellspacing="0" cellpadding="0">
 		<?php
 		
-		if ($conn->rowCount($structureSql) && $conn->getAdapter() == "mysql")
+		if ($conn->isResultSet($structureSql) && $conn->getAdapter() == "mysql")
 		{
 			
 			$dataSql = $conn->query("SELECT * FROM `" . $table . "` " . $part);
@@ -156,7 +156,7 @@ if (isset($_POST['editParts']))
 				<?php
 			}
 			
-			$conn->dataSeek($structureSql, 0);
+			$structureSql = $conn->describeTable($table);
 			
 		}
 		else if (sizeof($structureSql) > 0 && $conn->getAdapter() == "sqlite")
@@ -200,7 +200,7 @@ if (isset($_POST['editParts']))
 				<?php
 			}
 			
-			$conn->dataSeek($structureSql, 0);
+			$structureSql = $conn->describeTable($table);
 			
 		}
 		

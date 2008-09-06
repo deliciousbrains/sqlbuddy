@@ -39,9 +39,9 @@ if ($conn->getAdapter() == "mysql")
 	}
 }
 
-if ($conn->rowCount($sql))
+if ($conn->isResultSet($sql))
 {
-	$row = @$conn->fetchAssoc($sql);
+	$row = $conn->fetchAssoc($sql);
 	foreach ($row as $key => $value)
 	{
 		echo "<div class=\"fulltexttitle\">" . $key . "</div>";

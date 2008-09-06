@@ -51,7 +51,7 @@ if (isset($_POST) || isset($_FILES))
 		$columnCount = 0;
 		
 		$structureSQL = $conn->query("DESCRIBE `$table`");
-		if ($conn->rowCount($structureSQL))
+		if ($conn->isResultSet($structureSQL))
 		{
 			while ($structureRow = $conn->fetchAssoc($structureSQL))
 			{
@@ -105,7 +105,7 @@ if (isset($_POST) || isset($_FILES))
 				{
 					$conn->query($statement) or ($dbErrors[] = $conn->error());
 					
-					$affected = (int)(@$conn->affectedRows());
+					$affected = (int)($conn->affectedRows());
 					$insertCount += $affected;
 				}
 				else if (isset($format) && $format == "CSV" && isset($table))
@@ -129,7 +129,7 @@ if (isset($_POST) || isset($_FILES))
 						{
 							$conn->query("INSERT INTO `$table` VALUES ('$values')") or ($dbErrors[] = $conn->error());
 							
-							$affected = (int)(@$conn->affectedRows());
+							$affected = (int)($conn->affectedRows());
 							
 							$insertCount += $affected;
 						}

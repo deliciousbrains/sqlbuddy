@@ -78,7 +78,7 @@ if (isset($dbError))
 
 $structureSql = $conn->describeTable($table);
 
-if ($conn->getAdapter() == "mysql" && $conn->rowCount($structureSql))
+if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 {
 
 ?>
@@ -143,7 +143,7 @@ if ($conn->getAdapter() == "mysql" && $conn->rowCount($structureSql))
 	
 	echo '</div>';
 	
-	$conn->dataSeek($structureSql, 0);
+	$structureSql = $conn->describeTable($table);
 	
 	echo '<div class="gridscroll withchecks" style="overflow-x: hidden; max-height: 300px">';
 	
@@ -320,7 +320,7 @@ if ($conn->getAdapter() == "mysql" && $conn->rowCount($structureSql))
 		
 		$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$table'");
 		
-		if ($conn->rowCount($infoSql) == 1)
+		if ($conn->isResultSet($infoSql) == 1)
 		{
 		
 		$infoRow = $conn->fetchAssoc($infoSql);
@@ -366,7 +366,7 @@ if ($conn->getAdapter() == "mysql" && $conn->rowCount($structureSql))
 	
 	$indexListSQL = $conn->query("SHOW INDEX FROM `$table`");
 	
-	if ($conn->rowCount($indexListSQL))
+	if ($conn->isResultSet($indexListSQL))
 	{
 		
 		?>
@@ -548,7 +548,7 @@ if ($conn->getAdapter() == "mysql" && $conn->rowCount($structureSql))
 	
 	$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$table'");
 	
-	if ($conn->rowCount($infoSql) == 1)
+	if ($conn->isResultSet($infoSql) == 1)
 	{
 	
 	$infoRow = $conn->fetchAssoc($infoSql);
