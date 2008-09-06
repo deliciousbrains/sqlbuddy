@@ -107,7 +107,7 @@ if (isset($_GET['file']))
 		$etag = md5_file($filename);
 		
 		header("Last-Modified: " . gmdate("D, d M Y H:i:s", $last_modified_time) . " GMT");
-		header("Expires: " . gmdate("D, d M Y H:i:s", time()+24*60*60*30) . " GMT");
+		header("Expires: " . gmdate("D, d M Y H:i:s", time()+24*60*60*60) . " GMT");
 		header("Etag: $etag");
 		
 		if ((array_key_exists('HTTP_IF_MODIFIED_SINCE', $_SERVER) && @strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']) == $last_modified_time) || (array_key_exists('HTTP_IF_NONE_MATCH', $_SERVER) && trim($_SERVER['HTTP_IF_NONE_MATCH']) == $etag)) {

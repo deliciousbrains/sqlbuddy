@@ -25,6 +25,15 @@ if (isset($db))
 if (isset($table))
 	$structureSql = $conn->describeTable($table);
 
+if ($conn->rowCount($structureSql) && $conn->getAdapter() == "mysql")
+{
+	while ($structureRow = $conn->fetchAssoc($structureSql))
+	{
+		$types[$structureRow['Field']] = $structureRow['Type'];
+	}
+	$conn->dataSeek($structureSql, 0);
+}
+
 if ($conn->rowCount($structureSql) || sizeof($structureSql) > 0)
 {
 	
@@ -51,7 +60,15 @@ if ($conn->rowCount($structureSql) || sizeof($structureSql) > 0)
 				$value = implode(",", $value);
 			}
 			
-			$insertValues .= "'" . $conn->escapeString(urldecode($value)) . "',";
+			if (isset($types) && substr($value, 0, 2) == "0x" && ((isset($binaryDTs) && in_array($types[$key], $binaryDTs)) || stristr($types[$key], "binary") !== false))
+			{
+				$insertValues .= $conn->escapeString(urldecode($value)) . ",";
+			}
+			else
+			{
+				$insertValues .= "'" . $conn->escapeString(urldecode($value)) . "',";
+			}
+			
 		}
 		
 		$insertFields = substr($insertFields, 0, -1);

@@ -22,7 +22,7 @@ requireDatabaseAndTableBeDefined();
 if (isset($db))
 	$conn->selectDB($db);
 
-if (isset($db))
+if (isset($table))
 	$structureSql = $conn->describeTable($table);
 
 if (isset($_POST['editParts']))

@@ -291,13 +291,20 @@ class SQL {
 		}
 	}
 	
-	function insertId($resultSet)
+	function insertId($resultSet = "")
 	{
 		if ($this->conn)
 		{
 			if ($this->adapter == "mysql")
 			{
-				return mysql_insert_id($resultSet);
+				if ($resultSet)
+				{
+					return mysql_insert_id($resultSet);
+				}
+				else
+				{
+					return mysql_insert_id();
+				}
 			}
 			else if ($this->adapter == "sqlite")
 			{
