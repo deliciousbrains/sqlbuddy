@@ -552,7 +552,17 @@ if ($conn->isResultSet($currentCharSql))
 			<td colspan="3">
 			<label><input type="checkbox" name="NOTNULL" onchange="updateFieldName(this)"><?php echo __("Not Null"); ?></label>
 			<label><input type="checkbox" name="UNIQUE" onchange="updateFieldName(this)"><?php echo __("Unique"); ?></label>
-			<label><input type="checkbox" name="AUTO" onchange="updateFieldName(this)"><?php echo __("Auto Increment"); ?></label>
+			<?php
+			
+			// autoincrement supported in SQLite 3+
+			if (version_compare($conn->getVersion(), "3.0.0", ">="))
+			{
+			?>
+				<label><input type="checkbox" name="AUTO" onchange="updateFieldName(this)"><?php echo __("Auto Increment"); ?></label>
+			<?php
+			}
+			
+			?>
 			</td>
 			</tr>
 			<?php

@@ -13,8 +13,21 @@ MIT license
 
 */
 
-function removeSpacesNewlinesCSS($input)
+include "config.php";
+
+function compressCSS($input)
 {
+	// remove comments
+	$input = preg_replace("/\/\*.*\*\//Us", "", $input);
+	
+	// remove unnecessary characters
+	$input = str_replace(":0px", ":0", $input);
+	$input = str_replace(":0em", ":0", $input);
+	$input = str_replace(" 0px", " 0", $input);
+	$input = str_replace(" 0em", " 0", $input);
+	$input = str_replace(";}", "}", $input);
+	
+	// remove spaces, etc
 	$input = preg_replace('/\s\s+/', ' ', $input);
 	$input = str_replace(" {", "{", $input);
 	$input = str_replace("{ ", "{", $input);
@@ -32,42 +45,6 @@ function removeSpacesNewlinesCSS($input)
 	return trim($input);
 }
 
-function removeSpacesNewlinesJS($input)
-{
-	$input = preg_replace("/\t/", "", $input);
-	$input = preg_replace("/\n\n+/m", "\n", $input);
-	$input = str_replace(";\n", ";", $input);
-	$input = str_replace(" = ", "=", $input);
-	$input = str_replace(" == ", "==", $input);
-	$input = str_replace(" || ", "||", $input);
-	$input = str_replace(" && ", "&&", $input);
-	$input = str_replace(" + ", "+", $input);
-	$input = str_replace(" - ", "-", $input);
-	$input = str_replace(" * ", "*", $input);
-	$input = str_replace(" / ", "/", $input);
-	$input = str_replace(", ", ",", $input);
-	$input = str_replace(")\n{", "){", $input);
-	$input = str_replace("if (", "if(", $input);
-	
-	return trim($input);
-}
-
-function compressCSS($input)
-{
-	// remove comments
-	$input = preg_replace("/\/\*.*\*\//Us", "", $input);
-	
-	$input = str_replace(":0px", ":0", $input);
-	$input = str_replace(":0em", ":0", $input);
-	$input = str_replace(" 0px", " 0", $input);
-	$input = str_replace(" 0em", " 0", $input);
-	$input = str_replace(";}", "}", $input);
-	
-	$input = removeSpacesNewlinesCSS($input);
-	
-	return $input;
-}
-
 function compressJS($input)
 {
 	
@@ -75,9 +52,18 @@ function compressJS($input)
 	$input = preg_replace("/\/\/.*\n/Us", "", $input);
 	$input = preg_replace("/\/\*.*\*\//Us", "", $input);
 	
-	$input = removeSpacesNewlinesJS($input);
+	// remove spaces, etc
+	$input = preg_replace("/\t/", "", $input);
+	$input = preg_replace("/\n\n+/m", "\n", $input);
+	$input = str_replace(";\n", ";", $input);
+	$input = str_replace(" = ", "=", $input);
+	$input = str_replace(" == ", "==", $input);
+	$input = str_replace(" || ", "||", $input);
+	$input = str_replace(" && ", "&&", $input);
+	$input = str_replace(")\n{", "){", $input);
+	$input = str_replace("if (", "if(", $input);
 	
-	return $input;
+	return trim($input);
 }
 
 if (isset($_GET['file']))
@@ -93,7 +79,7 @@ if (isset($_GET['file']))
 	
 	if (file_exists($filename))
 	{
-		if (extension_loaded('zlib'))
+		if (extension_loaded('zlib') && isset($sbconfig['EnableGzip']) && $sbconfig['EnableGzip'] == true)
 		{
 			ob_start("ob_gzhandler");
 			header("Content-Encoding: gzip");

@@ -14,7 +14,6 @@ MIT license
 */
 
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 if (!session_id())
 	session_start();
@@ -27,13 +26,9 @@ include INCLUDES_DIR . "types.php";
 include INCLUDES_DIR . "class/GetTextReader.php";
 
 if (version_compare(PHP_VERSION, "5.0.0", "<"))
-{
 	include INCLUDES_DIR . "class/Sql-php4.php";
-}
 else
-{
 	include INCLUDES_DIR . "class/Sql.php";
-}
 
 define("VERSION_NUMBER", "1.3.0");
 define("PREVIEW_CHAR_SIZE", 65);
@@ -231,9 +226,11 @@ function validateRequest()
 
 function startOutput()
 {
+	global $sbconfig;
+	
 	if (!headers_sent())
 	{
-		if (extension_loaded("zlib") && !ini_get("zlib.output_compression") && ini_get("output_handler") != "ob_gzhandler")
+		if (extension_loaded("zlib") && isset($sbconfig['EnableGzip']) && $sbconfig['EnableGzip'] == true && !ini_get("zlib.output_compression") && ini_get("output_handler") != "ob_gzhandler")
 		{
 			ob_start("ob_gzhandler");
 			header("Content-Encoding: gzip");

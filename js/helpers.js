@@ -210,17 +210,17 @@ function finishTabLoad(responseText)
 	var pageTitle;
 	if (sb.table)
 	{
-		pageTitle = sb.getTabTitle(sb.topTab) + " " + "-" + " " + sb.table;
+		pageTitle = sb.getTabTitle(sb.topTab) + " - " + sb.table;
 	}
 	else if (sb.db)
 	{
-		pageTitle = sb.getTabTitle(sb.topTab) + " " + "-" + " " + sb.db;
+		pageTitle = sb.getTabTitle(sb.topTab) + " - " + sb.db;
 	}
 	else
 	{
 		pageTitle = sb.getTabTitle(sb.topTab);
 	}
-	document.title = "SQL Buddy " + "-" + " " + pageTitle;
+	document.title = "SQL Buddy - " + pageTitle;
 	
 	refreshRowCount();
 }

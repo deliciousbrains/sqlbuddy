@@ -90,7 +90,7 @@ class SQL {
 	
 	function getMethod()
 	{
-		return $this->adapter;
+		return $this->method;
 	}
 	
 	function getOptionValue($optKey)
@@ -173,9 +173,20 @@ class SQL {
 			}
 		}
 	}
-
+	
+	function isResultSet($resultSet)
+	{
+		if ($this->conn)
+		{
+			return ($this->rowCount($resultSet) > 0);
+		}
+	}
+	
 	function fetchArray($resultSet)
 	{
+		if (!$resultSet)
+			return false;
+		
 		if ($this->conn)
 		{
 			if ($this->method == "mysql")
@@ -191,6 +202,9 @@ class SQL {
 
 	function fetchAssoc($resultSet)
 	{
+		if (!$resultSet)
+			return false;
+		
 		if ($this->conn)
 		{
 			if ($this->method == "mysql")
@@ -206,6 +220,9 @@ class SQL {
 
 	function affectedRows($resultSet)
 	{
+		if (!$resultSet)
+			return false;
+		
 		if ($this->conn)
 		{
 			if ($this->method == "mysql")
@@ -221,6 +238,9 @@ class SQL {
 	
 	function result($resultSet, $targetRow, $targetColumn = "")
 	{
+		if (!$resultSet)
+			return false;
+		
 		if ($this->conn)
 		{
 			if ($this->method == "mysql")

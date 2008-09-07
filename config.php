@@ -53,4 +53,13 @@ $sbconfig['EnableUpdateCheck'] = true;
 
 $sbconfig['RowsPerPage'] = 100;
 
+/*
+* When set to true, the server will attempt to compress all content before it is sent to the 
+* browser. This includes css and javascript files as well as html content. Although unlikely,
+* there is a chance that using gzip will cause issues on certain setups. If you are having trouble
+* getting pages to load properly, you could try disabling gzip.
+*/
+
+$sbconfig['EnableGzip'] = true;
+
 ?>
