@@ -34,6 +34,7 @@ if ($_POST && isset($table)) {
 		while ($structureRow = $conn->fetchAssoc($structureSql)) {
 			$pairs[$structureRow['Field']] = '';
 			$types[$structureRow['Field']] = $structureRow['Type'];
+			$nulls[$structureRow['Field']] = (isset($structureRow['Null'])) ? $structureRow['Null'] : "YES";
 		}
 	} else if ($conn->getAdapter() == "sqlite") {
 		foreach ($structureRow as $column) {
@@ -60,6 +61,8 @@ if ($_POST && isset($table)) {
 				if ($conn->getAdapter() == "mysql") {
 					if (isset($types) && substr($value, 0, 2) == "0x" && isset($binaryDTs) && in_array($types[$keyname], $binaryDTs)) {
 						$updates .= "`" . $keyname . "`=" . $value . ",";
+					} else if (!$value && $nulls[$keyname] == "YES") {
+						$updates .= "`" . $keyname . "`=NULL,";
 					} else {
 						$updates .= "`" . $keyname . "`='" . $value . "',";
 					}

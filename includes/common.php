@@ -57,6 +57,7 @@ $langList['pl_PL'] = "Polski";
 $langList['pt_BR'] = "Português (Brasil)";
 $langList['pt_PT'] = "Português (Portugal)";
 $langList['ru_RU'] = "Русский";
+$langList['ro_RO'] = "Română";
 $langList['sk_SK'] = "Slovenčina";
 $langList['sl_SI'] = "Slovenski";
 $langList['fi_FI'] = "Suomi";

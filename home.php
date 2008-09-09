@@ -75,7 +75,7 @@ loginCheck();
 			if (version_compare($version, VERSION_NUMBER, ">")) {
 				echo '<span style="background-color: rgb(255, 255, 200); padding: 1px 3px 1px 4px">' . __("A new version of SQL Buddy is available!") . '</span> <a href="http://www.sqlbuddy.com/download/dl.php">' . __("Download") . ' &raquo;</a>';
 			} else {
-				echo __("You have the latest release.");
+				echo __("There are no updates available") . ".";
 			}
 			
 			?>

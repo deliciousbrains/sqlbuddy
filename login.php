@@ -44,7 +44,7 @@ if (!in_array($adapter, $adapterList)) {
 	$adapter = "mysql";
 }
 
-if (($adapter != "sqlite" && $host && $user && $pass) || ($adapter == "sqlite" && $database)) {
+if (($adapter != "sqlite" && $host && $user && ($pass || $_POST)) || ($adapter == "sqlite" && $database)) {
 	
 	if ($adapter == "sqlite") {
 		$connString = "sqlite:database=$database";
