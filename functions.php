@@ -4,7 +4,7 @@
 SQL Buddy - Web based MySQL administration
 http://www.sqlbuddy.com/
 
-common.php
+functions.php
 - gets the page setup with the variables it needs
 
 MIT license
@@ -21,8 +21,8 @@ if (function_exists('date_default_timezone_set'))
 if (!session_id())
 	session_start();
 
-define("MAIN_DIR", dirname(dirname(__FILE__)) . "/");
-define("INCLUDES_DIR", dirname(__FILE__) . "/");
+define("MAIN_DIR", dirname(__FILE__) . "/");
+define("INCLUDES_DIR", MAIN_DIR . "includes/");
 
 include MAIN_DIR . "config.php";
 include INCLUDES_DIR . "types.php";

@@ -13,7 +13,7 @@ MIT license
 
 */
 
-include "includes/common.php";
+include "functions.php";
 
 $adapter = (isset($sbconfig['DefaultAdapter'])) ? $sbconfig['DefaultAdapter'] : "mysql";
 $host = (isset($sbconfig['DefaultHost'])) ? $sbconfig['DefaultHost'] : "localhost";

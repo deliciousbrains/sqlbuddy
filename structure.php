@@ -13,7 +13,7 @@ MIT license
 
 */
 
-include "includes/common.php";
+include "functions.php";
 
 loginCheck();
 
