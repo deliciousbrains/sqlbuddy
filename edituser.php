@@ -94,6 +94,10 @@ if (isset($_POST['editParts'])) {
 					<td class="secondaryheader"><?php echo __("User"); ?>:</td>
 					<td><strong><?php echo $part; ?></strong></td>
 				</tr>
+				<tr>
+					<td class="secondaryheader"><?php echo __("Change password"); ?>:</td>
+					<td><input type="password" class="text" name="NEWPASS" /></td>
+				</tr>
 				<?php
 				
 				$dbList = $conn->listDatabases();

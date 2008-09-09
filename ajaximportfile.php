@@ -87,9 +87,9 @@ if (isset($_POST) || isset($_FILES)) {
 			
 			if ($statement) {
 				if (isset($format) && $format == "SQL") {
-					$conn->query($statement) or ($dbErrors[] = $conn->error());
+					$importQuery = $conn->query($statement) or ($dbErrors[] = $conn->error());
 					
-					$affected = (int)($conn->affectedRows());
+					$affected = (int)($conn->affectedRows($importQuery));
 					$insertCount += $affected;
 				} else if (isset($format) && $format == "CSV" && isset($table)) {
 					if (!(isset($ignoreFirst) && $first)) {
@@ -108,11 +108,11 @@ if (isset($_POST) || isset($_FILES)) {
 						if (sizeof($rawValues) == $columnCount) {
 							
 							if ($conn->getAdapter() == "sqlite")
-								$conn->query("INSERT INTO '$table' VALUES ('$values')") or ($dbErrors[] = $conn->error());
+								$importQuery = $conn->query("INSERT INTO '$table' VALUES ('$values')") or ($dbErrors[] = $conn->error());
 							else
-								$conn->query("INSERT INTO `$table` VALUES ('$values')") or ($dbErrors[] = $conn->error());
+								$importQuery = $conn->query("INSERT INTO `$table` VALUES ('$values')") or ($dbErrors[] = $conn->error());
 							
-							$affected = (int)($conn->affectedRows());
+							$affected = (int)($conn->affectedRows($importQuery));
 							
 							$insertCount += $affected;
 						} else {

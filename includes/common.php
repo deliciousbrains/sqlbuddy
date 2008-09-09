@@ -15,6 +15,9 @@ MIT license
 
 error_reporting(E_ALL);
 
+if (function_exists('date_default_timezone_set'))
+	date_default_timezone_set('AMERICA/REGINA');
+
 if (!session_id())
 	session_start();
 
@@ -31,7 +34,6 @@ else
 	include INCLUDES_DIR . "class/Sql.php";
 
 define("VERSION_NUMBER", "1.3.0");
-define("VERSION_DATE", "September 10, 2008");
 define("PREVIEW_CHAR_SIZE", 65);
 
 $adapterList[] = "mysql";
@@ -448,27 +450,6 @@ function formatForOutput($text) {
 	if (utf8_strlen($text) > PREVIEW_CHAR_SIZE) {
 		$text = utf8_substr($text, 0, PREVIEW_CHAR_SIZE) . " <span class=\"toBeContinued\">[...]</span>";
 	}
-	return $text;
-}
-
-function formatDataForExport($text) {
-	
-	global $conn;
-	
-	// replace line endings with character representations
-	while ($text != str_replace("\r\n", "\\r\\n", $text)) {
-		$text = str_replace("\r\n", "\\r\\n", $text);
-	}
-
-	while ($text != str_replace("\r", "\\r", $text)) {
-		$text = str_replace("\r", "\\r", $text);
-	}
-
-	while ($text != str_replace("\n", "\\n", $text)) {
-		$text = str_replace("\n", "\\n", $text);
-	}
-	
-	$text = $conn->escapeString($text);
 	return $text;
 }
 

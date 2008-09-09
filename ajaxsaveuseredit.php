@@ -28,7 +28,10 @@ function removeAdminPrivs($priv) {
 
 if (isset($_GET['user']))
 	$user = $_GET['user'];
-	
+
+if (isset($_POST['NEWPASS']))
+	$newPass = $_POST['NEWPASS'];
+
 if (isset($_POST['CHOICE']))
 	$choice = $_POST['CHOICE'];
 
@@ -108,6 +111,9 @@ if (isset($user) && ($accessLevel == "GLOBAL" || ($accessLevel == "LIMITED" && s
 			
 			$conn->query($query) or ($dbError = $conn->error());
 		}
+		
+		if (isset($newPass))
+			$conn->query("SET PASSWORD FOR '$name'@'$host' = PASSWORD('$newPass')") or ($dbError = $conn->error());
 		
 		$conn->query("FLUSH PRIVILEGES") or ($dbError = $conn->error());
 		

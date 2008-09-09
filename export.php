@@ -328,7 +328,7 @@ if ($_POST) {
 										if (isset($type) && $currentData && ((isset($binaryDTs) && in_array($type[$i], $binaryDTs)) || stristr($type[$i], "binary") !== false)) {
 											$outputBuffer .= "0x" . bin2hex($currentData);
 										} else {
-											$outputBuffer .= "'" . formatDataForExport($currentData) . "'";
+											$outputBuffer .= "'" . $conn->escapeString($currentData) . "'";
 										}
 										
 										$first = false;
@@ -380,7 +380,7 @@ if ($_POST) {
 										
 										$currentData = $dataRow[$columnList[$i]];
 										
-										$outputBuffer .= "'" . formatDataForExport($currentData) . "'";
+										$outputBuffer .= "'" . $conn->escapeString($currentData) . "'";
 										
 										$first = false;
 									}
@@ -478,7 +478,7 @@ if ($_POST) {
 						$error = __("Could not write to file") . ".";
 					} else {
 						echo '<div style="margin: 10px 12px 5px 14px; color: rgb(100, 100, 100)">';
-						echo __("Successfully wrote content to file") . '. <a href="' . $outputFile . '">' . __("Download") . '</a><br /><strong>' . __("Note") . ':</strong>' . __("If this is a public server, you should delete this file from the server after you download it") . '.</div>';
+						echo __("Successfully wrote content to file") . '. <a href="' . $outputFile . '">' . __("Download") . '</a><br /><strong>' . __("Note") . ':</strong> ' . __("If this is a public server, you should delete this file from the server after you download it") . '.</div>';
 					}
 				}
 				

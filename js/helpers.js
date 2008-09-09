@@ -555,6 +555,7 @@ function editTable() {
 	}
 	
 	if (f(runQuery) != "") {
+		$('RENAME').blur();
 		var x = new XHR({url: "ajaxquery.php", onSuccess: editTableCallback}).send("query=" + runQuery + "&silent=1");
 	}
 	
@@ -906,6 +907,8 @@ function createTable() {
 	var fields = $ES(".fieldbox", $('fieldlist'));
 	if (f(tableName) && fields.length > 0) {
 		
+		$('TABLENAME').style.border = "";
+		
 		if (adapter == "sqlite") {
 			var createQuery = "CREATE TABLE " + tableName + " (";
 		} else {
@@ -925,6 +928,9 @@ function createTable() {
 		}
 		
 		var x = new XHR({url: "ajaxcreatetable.php", onSuccess: createTableCallback}).send("table=" + tableName + "&query=" + createQuery);
+	}
+	else if (!(f(tableName))) {
+		$('TABLENAME').style.border = "1px solid rgb(200, 125, 125)";
 	}
 	
 	function createTableCallback(response) {
