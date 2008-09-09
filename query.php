@@ -25,21 +25,15 @@ if (isset($_POST['query']))
 
 echo '<div style="padding-left: 5px">';
 
-if (isset($db))
-{
+if (isset($db)) {
 	echo '<span style="color: rgb(135, 135, 135)">' . sprintf(__("Run a query on the %s database"), $db) . '.</span>';
 }
 
-if (isset($query))
-{
+if (isset($query)) {
 	$displayQuery = $query;
-}
-else if (isset($db) && isset($table) && $conn->getAdapter() == "mysql")
-{
+} else if (isset($db) && isset($table) && $conn->getAdapter() == "mysql") {
 	$displayQuery = "SELECT * FROM `$table` LIMIT 100";
-}
-else if (isset($db) && isset($table) && $conn->getAdapter() == "sqlite")
-{
+} else if (isset($db) && isset($table) && $conn->getAdapter() == "sqlite") {
 	$displayQuery = "SELECT * FROM '$table' LIMIT 100";
 }
 
@@ -67,8 +61,7 @@ else if (isset($db) && isset($table) && $conn->getAdapter() == "sqlite")
 
 <?php
 
-if (isset($query))
-{
+if (isset($query)) {
 	
 	echo '<div style="margin-top: 10px">';
 	

@@ -20,18 +20,15 @@ loginCheck();
 if (isset($db))
 	$conn->selectDB($db);
 
-if (isset($_POST['query']))
-{
+if (isset($_POST['query'])) {
 	
 	$queryList = splitQueryText($_POST['query']);
 	
-	foreach ($queryList as $query)
-	{
+	foreach ($queryList as $query) {
 		$sql = $conn->query($query) or ($dbError = $conn->error());
 	}
 	
-	if (isset($dbError))
-	{
+	if (isset($dbError)) {
 		echo $dbError;
 	}
 	

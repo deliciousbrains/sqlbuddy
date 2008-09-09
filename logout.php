@@ -16,26 +16,22 @@ MIT license
 if (!session_id())
 	session_start();
 
-if (isset($_SESSION['SB_LOGIN']))
-{
+if (isset($_SESSION['SB_LOGIN'])) {
 	$_SESSION['SB_LOGIN'] = null;
 	unset($GLOBALS['_SESSION']['SB_LOGIN']);
 }
 
-if (isset($_SESSION['SB_LOGIN_STRING']))
-{
+if (isset($_SESSION['SB_LOGIN_STRING'])) {
 	$_SESSION['SB_LOGIN_STRING'] = null;
 	unset($GLOBALS['_SESSION']['SB_LOGIN_STRING']);
 }
 
-if (isset($_SESSION['SB_LOGIN_USER']))
-{
+if (isset($_SESSION['SB_LOGIN_USER'])) {
 	$_SESSION['SB_LOGIN_USER'] = null;
 	unset($GLOBALS['_SESSION']['SB_LOGIN_USER']);
 }
 
-if (isset($_SESSION['SB_LOGIN_PASS']))
-{
+if (isset($_SESSION['SB_LOGIN_PASS'])) {
 	$_SESSION['SB_LOGIN_PASS'] = null;
 	unset($GLOBALS['_SESSION']['SB_LOGIN_PASS']);
 }

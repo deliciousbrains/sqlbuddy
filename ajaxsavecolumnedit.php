@@ -20,9 +20,7 @@ loginCheck();
 if (isset($db))
 	$conn->selectDB($db);
 
-
-if (isset($_POST['runQuery']))
-{
+if (isset($_POST['runQuery'])) {
 	$query = $_POST['runQuery'];
 	
 	$conn->query($query) or ($dbError = $conn->error());

@@ -15,8 +15,7 @@ MIT license
 
 include "config.php";
 
-function compressCSS($input)
-{
+function compressCSS($input) {
 	// remove comments
 	$input = preg_replace("/\/\*.*\*\//Us", "", $input);
 	
@@ -45,8 +44,7 @@ function compressCSS($input)
 	return trim($input);
 }
 
-function compressJS($input)
-{
+function compressJS($input) {
 	
 	// remove comments
 	$input = preg_replace("/\/\/.*\n/Us", "", $input);
@@ -66,8 +64,7 @@ function compressJS($input)
 	return trim($input);
 }
 
-if (isset($_GET['file']))
-{
+if (isset($_GET['file'])) {
 	
 	$filename = $_GET['file'];
 	
@@ -77,15 +74,11 @@ if (isset($_GET['file']))
 	if (strpos($filename, "..") !== false)
 		exit;
 	
-	if (file_exists($filename))
-	{
-		if (extension_loaded('zlib') && isset($sbconfig['EnableGzip']) && $sbconfig['EnableGzip'] == true)
-		{
+	if (file_exists($filename)) {
+		if (extension_loaded('zlib') && ((isset($sbconfig['EnableGzip']) && $sbconfig['EnableGzip'] == true) || !isset($sbconfig['EnableGzip']))) {
 			ob_start("ob_gzhandler");
 			header("Content-Encoding: gzip");
-		}
-		else
-		{
+		} else {
 			ob_start();
 		}
 		
@@ -103,27 +96,20 @@ if (isset($_GET['file']))
 		
 		$contents = file_get_contents($filename);
 		
-		if (substr($filename, -4) == ".css")
-		{
+		if (substr($filename, -4) == ".css") {
 			header("Content-Type: text/css");
 			$contents = compressCSS($contents);
-		}
-		else if (substr($filename, -3) == ".js" && strpos($filename, "mootools") === false)
-		{
+		} else if (substr($filename, -3) == ".js" && strpos($filename, "mootools") === false) {
 			header("Content-Type: application/x-javascript");
 			$contents = compressJS($contents);
-		}
-		else if (substr($filename, -3) == ".js")
-		{
+		} else if (substr($filename, -3) == ".js") {
 			header("Content-Type: application/x-javascript");
 		}
 		
 		echo $contents;
 		
 		ob_end_flush();
-	}
-	else
-	{
+	} else {
 		echo "File doesn't exist!";
 	}
 }

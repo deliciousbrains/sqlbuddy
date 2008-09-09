@@ -12,13 +12,11 @@ var activeColumn;
 var styleNodeKeys = [];
 var styleNodes = [];
 
-function startResize(e)
-{
+function startResize(e) {
 	var event = new Event(e);
 	
 	activeWindow = event.target;
-	while (activeWindow != null && activeWindow.className.indexOf("fulltextwin") == -1)
-	{
+	while (activeWindow != null && activeWindow.className.indexOf("fulltextwin") == -1) {
 		activeWindow = activeWindow.parentNode;
 	}
 	
@@ -38,33 +36,25 @@ function startResize(e)
 	return false;
 }
 
-function doResize(e)
-{
-	if (activeWindow)
-	{
+function doResize(e) {
+	if (activeWindow) {
 		var event = new Event(e);
 		
 		var diffX = event.page.x - mouseX;
 		var diffY = event.page.y - mouseY;
 		
-		if (compX > 0 && compX > diffX)
-		{
+		if (compX > 0 && compX > diffX) {
 			compX -= diffX;
 			diffX = 0;
-		}
-		else if (compX > 0)
-		{
+		} else if (compX > 0) {
 			diffX -= compX;
 			compX = 0;
 		}
 		
-		if (compY > 0 && compY > diffY)
-		{
+		if (compY > 0 && compY > diffY) {
 			compY -= diffY;
 			diffY = 0;
-		}
-		else if (compY > 0)
-		{
+		} else if (compY > 0) {
 			diffY -= compY;
 			compY = 0;
 		}
@@ -72,14 +62,12 @@ function doResize(e)
 		lastWidth = lastWidth + diffX;
 		lastHeight = lastHeight + diffY;
 		
-		if (lastWidth < 175)
-		{
+		if (lastWidth < 175) {
 			compX += 175 - lastWidth;
 			lastWidth = 175;
 		}
 		
-		if (lastHeight < 100)
-		{
+		if (lastHeight < 100) {
 			compY += 100 - lastHeight;
 			lastHeight = 100;
 		}
@@ -92,8 +80,7 @@ function doResize(e)
 	}
 }
 
-function endResize()
-{
+function endResize() {
 	activeWindow = null;
 	activeContent = null;
 	compX = 0;
@@ -102,13 +89,11 @@ function endResize()
 	window.removeEvent("mouseup", endResize);
 }
 
-function startDrag(e)
-{
+function startDrag(e) {
 	var event = new Event(e);
 	
 	activeWindow = event.target;
-	while (activeWindow != null && activeWindow.className.indexOf("fulltextwin") == -1)
-	{
+	while (activeWindow != null && activeWindow.className.indexOf("fulltextwin") == -1) {
 		activeWindow = activeWindow.parentNode;
 	}
 	
@@ -125,10 +110,8 @@ function startDrag(e)
 	return false;
 }
 
-function doDrag(e)
-{
-	if (activeWindow)
-	{
+function doDrag(e) {
+	if (activeWindow) {
 		var event = new Event(e);
 		
 		var diffX = event.page.x - mouseX;
@@ -144,15 +127,13 @@ function doDrag(e)
 	}
 }
 
-function endDrag()
-{
+function endDrag() {
 	activeWindow = null;
 	window.removeEvent("mousemove", doDrag);
 	window.removeEvent("mouseup", endDrag);
 }
 
-function startColumnResize(e)
-{
+function startColumnResize(e) {
 	var event = new Event(e);
 	
 	activeColumn = $(event.target.offsetParent.previousSibling.firstChild);
@@ -170,10 +151,8 @@ function startColumnResize(e)
 	return false;
 }
 
-function columnResize(e)
-{
-	if (activeColumn)
-	{
+function columnResize(e) {
+	if (activeColumn) {
 		var event = new Event(e);
 		
 		var diff = (event.page.x - mouseX);
@@ -184,17 +163,14 @@ function columnResize(e)
 		var removeLater = -1;
 		var keyName = 'pane' + sb.topTab + '_' + activeColumnId;
 		
-		for (var i=0; i<styleNodeKeys.length; i++)
-		{
-			if (styleNodeKeys[i] == keyName)
-			{
+		for (var i=0; i<styleNodeKeys.length; i++) {
+			if (styleNodeKeys[i] == keyName) {
 				document.getElementsByTagName("head")[0].removeChild(styleNodes[i]);
 				removeLater = i;
 			}
 		}
 		
-		if (removeLater >= 0)
-		{
+		if (removeLater >= 0) {
 			styleNodes.splice(removeLater, 1);
 			styleNodeKeys.splice(removeLater, 1);
 		}
@@ -210,22 +186,17 @@ function columnResize(e)
 	}
 }
 
-function endColumnResize()
-{
+function endColumnResize() {
 	document.body.style.cursor = "";
 	activeColumn = null;
 	window.removeEvent("mousemove", columnResize);
 	window.removeEvent("mouseup", endColumnResize);
 }
 
-function clearColumnSizes()
-{
-	if (styleNodes.length > 0)
-	{
-		for (var i=0; i<styleNodes.length; i++)
-		{
-			if (f(styleNodes[i]) != "")
-			{
+function clearColumnSizes() {
+	if (styleNodes.length > 0) {
+		for (var i=0; i<styleNodes.length; i++) {
+			if (f(styleNodes[i]) != "") {
 				document.getElementsByTagName("head")[0].removeChild(styleNodes[i]);
 			}
 		}

@@ -31,12 +31,12 @@ else
 	include INCLUDES_DIR . "class/Sql.php";
 
 define("VERSION_NUMBER", "1.3.0");
+define("VERSION_DATE", "September 10, 2008");
 define("PREVIEW_CHAR_SIZE", 65);
 
 $adapterList[] = "mysql";
 
-if (function_exists("sqlite_open"))
-{
+if (function_exists("sqlite_open") || (class_exists("PDO") && in_array("sqlite", PDO::getAvailableDrivers()))) {
 	$adapterList[] = "sqlite";
 }
 
@@ -67,22 +67,16 @@ $langList['zh_CN'] = "中文 (简体)";
 $langList['zh_TW'] = "中文 (繁體)";
 $langList['ja_JP'] = "日本語";
 
-if (isset($_COOKIE['sb_lang']) && array_key_exists($_COOKIE['sb_lang'], $langList))
-{
+if (isset($_COOKIE['sb_lang']) && array_key_exists($_COOKIE['sb_lang'], $langList)) {
 	$lang = preg_replace("/[^a-z0-9_]/i", "", $_COOKIE['sb_lang']);
-}
-else
-{
+} else {
 	$lang = "en_US";
 }
 
-if ($lang != "en_US")
-{
+if ($lang != "en_US") {
 	// extend the cookie length
 	setcookie("sb_lang", $lang, $cookieLength);
-}
-else if (isset($_COOKIE['sb_lang']))
-{
+} else if (isset($_COOKIE['sb_lang'])) {
 	// cookie not needed for en_US
 	setcookie("sb_lang", "", time() - 10000);
 }
@@ -90,32 +84,25 @@ else if (isset($_COOKIE['sb_lang']))
 $themeList["classic"] = "Classic";
 $themeList["bittersweet"] = "Bittersweet";
 
-if (isset($_COOKIE['sb_theme']))
-{
+if (isset($_COOKIE['sb_theme'])) {
 	$currentTheme = preg_replace("/[^a-z0-9_]/i", "", $_COOKIE['sb_theme']);
 
-	if (array_key_exists($currentTheme, $themeList))
-	{
+	if (array_key_exists($currentTheme, $themeList)) {
 		$theme = $currentTheme;
 
 		// extend the cookie length
 		setcookie("sb_theme", $theme, $cookieLength);
-	}
-	else
-	{
+	} else {
 		$theme = "bittersweet";
 		setcookie("sb_theme", "", time() - 10000);
 	}
-}
-else
-{
+} else {
 	$theme = "bittersweet";
 }
 
 $gt = new GetTextReader($lang . ".pot");
 
-if (isset($_SESSION['SB_LOGIN_STRING']))
-{
+if (isset($_SESSION['SB_LOGIN_STRING'])) {
 	$user = (isset($_SESSION['SB_LOGIN_USER'])) ? $_SESSION['SB_LOGIN_USER'] : "";
 	$pass = (isset($_SESSION['SB_LOGIN_PASS'])) ? $_SESSION['SB_LOGIN_PASS'] : "";
 	$conn = new SQL($_SESSION['SB_LOGIN_STRING'], $user, $pass);
@@ -126,30 +113,24 @@ if (isset($_SESSION['SB_LOGIN_STRING']))
 // for potential attackers to guess
 $requestKey = substr(md5(session_id() . $_SERVER["DOCUMENT_ROOT"]), 0, 16);
 
-if (isset($conn) && $conn->isConnected())
-{
+if (isset($conn) && $conn->isConnected()) {
 	if (isset($_GET['db']))
 		$db = $conn->escapeString($_GET['db']);
 
 	if (isset($_GET['table']))
 		$table = $conn->escapeString($_GET['table']);
 	
-	if ($conn->getAdapter() == "mysql")
-	{
+	if ($conn->getAdapter() == "mysql") {
 		$charsetSql = $conn->listCharset();
-		if ($conn->isResultSet($charsetSql))
-		{
-			while ($charsetRow = $conn->fetchAssoc($charsetSql))
-			{
+		if ($conn->isResultSet($charsetSql)) {
+			while ($charsetRow = $conn->fetchAssoc($charsetSql)) {
 				$charsetList[] = $charsetRow['Charset'];
 			}
 		}
 	
 		$collationSql = $conn->listCollation();
-		if ($conn->isResultSet($collationSql))
-		{
-			while ($collationRow = $conn->fetchAssoc($collationSql))
-			{
+		if ($conn->isResultSet($collationSql)) {
+			while ($collationRow = $conn->fetchAssoc($collationSql)) {
 				$collationList[$collationRow['Collation']] = $collationRow['Charset'];
 			}
 		}
@@ -157,16 +138,14 @@ if (isset($conn) && $conn->isConnected())
 }
 
 // undo magic quotes, if necessary
-if (get_magic_quotes_gpc())
-{
+if (get_magic_quotes_gpc()) {
 	$_GET = stripslashesFromArray($_GET);
 	$_POST = stripslashesFromArray($_POST);
 	$_COOKIE = stripslashesFromArray($_COOKIE);
 	$_REQUEST = stripslashesFromArray($_REQUEST);
 }
 
-function stripslashesFromArray($value)
-{
+function stripslashesFromArray($value) {
     $value = is_array($value) ?
                 array_map('stripslashesFromArray', $value) :
                 stripslashes($value);
@@ -174,8 +153,7 @@ function stripslashesFromArray($value)
     return $value;
 }
 
-function loginCheck($validateReq = true)
-{
+function loginCheck($validateReq = true) {
 	if (!isset($_SESSION['SB_LOGIN'])){
 		if (isset($_GET['ajaxRequest']))
 			redirect("login.php?timeout=1");
@@ -183,10 +161,8 @@ function loginCheck($validateReq = true)
 			redirect("login.php");
 		exit;
 	}
-	if ($validateReq)
-	{
-		if (!validateRequest())
-		{
+	if ($validateReq) {
+		if (!validateRequest()) {
 			exit;
 		}
 	}
@@ -194,10 +170,8 @@ function loginCheck($validateReq = true)
 	startOutput();
 }
 
-function redirect($url)
-{
-	if (isset($_GET['ajaxRequest']) || headers_sent())
-	{
+function redirect($url) {
+	if (isset($_GET['ajaxRequest']) || headers_sent()) {
 		global $requestKey;
 		?>
 		<script type="text/javascript" authkey="<?php echo $_GET['requestKey']; ?>">
@@ -206,38 +180,29 @@ function redirect($url)
 
 		</script>
 		<?php
-	}
-	else
-	{
+	} else {
 		header("Location: $url");
 	}
 	exit;
 }
 
-function validateRequest()
-{
+function validateRequest() {
 	global $requestKey;
-	if (isset($_GET['requestKey']) && $_GET['requestKey'] != $requestKey)
-	{
+	if (isset($_GET['requestKey']) && $_GET['requestKey'] != $requestKey) {
 		return false;
 	}
 	return true;
 }
 
-function startOutput()
-{
+function startOutput() {
 	global $sbconfig;
 	
-	if (!headers_sent())
-	{
-		if (extension_loaded("zlib") && isset($sbconfig['EnableGzip']) && $sbconfig['EnableGzip'] == true && !ini_get("zlib.output_compression") && ini_get("output_handler") != "ob_gzhandler")
-		{
+	if (!headers_sent()) {
+		if (extension_loaded("zlib") && ((isset($sbconfig['EnableGzip']) && $sbconfig['EnableGzip'] == true) || !isset($sbconfig['EnableGzip'])) && !ini_get("zlib.output_compression") && ini_get("output_handler") != "ob_gzhandler") {
 			ob_start("ob_gzhandler");
 			header("Content-Encoding: gzip");
 			ob_implicit_flush();
-		}
-		else
-		{
+		} else {
 			ob_start();
 		}
 		
@@ -248,22 +213,19 @@ function startOutput()
 	}
 }
 
-function finishOutput()
-{	
+function finishOutput() {	
 	global $conn;
 	
 	if (ob_get_length() > 0)
 		ob_end_flush();
 	
-	if (isset($conn) && $conn->isConnected())
-	{
+	if (isset($conn) && $conn->isConnected()) {
 		$conn->disconnect();
 		unset($conn);
 	}
 }
 
-function outputPage()
-{
+function outputPage() {
 
 global $requestKey;
 global $sbconfig;
@@ -316,8 +278,7 @@ global $lang;
 		<div class="dblist"><ul>
 		<?php
 		
-		if ($conn->getAdapter() != "sqlite")
-		{
+		if ($conn->getAdapter() != "sqlite") {
 		
 		?>
 			<li id="sidehome"><a href="#page=home" onclick="sideMainClick('home.php', 0); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Home"); ?></div></a></li>
@@ -327,9 +288,7 @@ global $lang;
 			<li id="sideexport"><a href="#page=export&topTab=4" onclick="sideMainClick('export.php', 4); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Export"); ?></div></a></li>
 		<?php
 		
-		}
-		else
-		{
+		} else {
 		
 		?>
 			<li id="sidehome"><a href="#page=home" onclick="sideMainClick('home.php', 0); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Home"); ?></div></a></li>
@@ -366,19 +325,15 @@ global $lang;
 	
 	<?php
 	
-	if ($conn->getAdapter() == "sqlite")
-	{
+	if ($conn->getAdapter() == "sqlite") {
 		echo "var showUsersMenu = false;\n";
-	}
-	else
-	{
+	} else {
 		echo "var showUsersMenu = true;\n";
 	}
 	
 	echo "var adapter = \"" . $conn->getAdapter() . "\";\n";
 	
-	if (isset($requestKey))
-	{
+	if (isset($requestKey)) {
 		echo 'var requestKey = "' . $requestKey . '";';
 		echo "\n";
 	}
@@ -386,8 +341,7 @@ global $lang;
 	// javascript translation strings
 	echo "\t\tvar getTextArr = {";
 	
-	if ($lang != "en_US")
-	{
+	if ($lang != "en_US") {
 		
 		echo '"Home":"' . __("Home") . '", ';
 		echo '"Users":"' . __("Users") . '", ';
@@ -458,12 +412,10 @@ global $lang;
 <?php
 }
 
-function requireDatabaseAndTableBeDefined()
-{
+function requireDatabaseAndTableBeDefined() {
 	global $db, $table;
 
-	if (!isset($db))
-	{
+	if (!isset($db)) {
 		?>
 
 		<div class="errorpage">
@@ -475,8 +427,7 @@ function requireDatabaseAndTableBeDefined()
 		exit;
 	}
 
-	if (!isset($table))
-	{
+	if (!isset($table)) {
 		?>
 
 		<div class="errorpage">
@@ -490,31 +441,25 @@ function requireDatabaseAndTableBeDefined()
 
 }
 
-function formatForOutput($text)
-{
+function formatForOutput($text) {
 	$text = nl2br(htmlentities($text, ENT_QUOTES, 'UTF-8'));
-	if (utf8_strlen($text) > PREVIEW_CHAR_SIZE)
-	{
+	if (utf8_strlen($text) > PREVIEW_CHAR_SIZE) {
 		$text = utf8_substr($text, 0, PREVIEW_CHAR_SIZE) . " <span class=\"toBeContinued\">[...]</span>";
 	}
 	return $text;
 }
 
-function formatDataForExport($text)
-{
+function formatDataForExport($text) {
 	// replace line endings with character representations
-	while ($text != str_replace("\r\n", "\\r\\n", $text))
-	{
+	while ($text != str_replace("\r\n", "\\r\\n", $text)) {
 		$text = str_replace("\r\n", "\\r\\n", $text);
 	}
 
-	while ($text != str_replace("\r", "\\r", $text))
-	{
+	while ($text != str_replace("\r", "\\r", $text)) {
 		$text = str_replace("\r", "\\r", $text);
 	}
 
-	while ($text != str_replace("\n", "\\n", $text))
-	{
+	while ($text != str_replace("\n", "\\n", $text)) {
 		$text = str_replace("\n", "\\n", $text);
 	}
 
@@ -523,14 +468,12 @@ function formatDataForExport($text)
 	return $text;
 }
 
-function formatDataForCSV($text)
-{
+function formatDataForCSV($text) {
 	$text = str_replace('"', '""', $text);
 	return $text;
 }
 
-function splitQueryText($query)
-{
+function splitQueryText($query) {
 	// the regex needs a trailing semicolon
 	$query = trim($query);
 
@@ -542,8 +485,7 @@ function splitQueryText($query)
 
 	$querySplit = "";
 
-	foreach ($matches as $match)
-	{
+	foreach ($matches as $match) {
 		// get rid of the trailing semicolon
 		$querySplit[] = substr($match[0], 0, -1);
 	}
@@ -551,8 +493,7 @@ function splitQueryText($query)
 	return $querySplit;
 }
 
-function memoryFormat($bytes)
-{
+function memoryFormat($bytes) {
 	if ($bytes < 1024)
 		$dataString = $bytes . " B";
 	else if ($bytes < (1024 * 1024))
@@ -565,38 +506,30 @@ function memoryFormat($bytes)
 	return $dataString;
 }
 
-function themeFile($filename)
-{
+function themeFile($filename) {
 	global $theme;
 	return smartCaching("themes/" . $theme . "/" . $filename);
 }
 
-function smartCaching($filename)
-{
+function smartCaching($filename) {
 	return "serve.php?file=" . $filename . "&ver=" . str_replace(".", "_", VERSION_NUMBER);
 }
 
-function __($t)
-{
+function __($t) {
 	global $gt;
 	return $gt->getTranslation($t);
 }
 
-function __p($singular, $plural, $count)
-{
+function __p($singular, $plural, $count) {
 	global $gt;
-	if ($count == 1)
-	{
+	if ($count == 1) {
 		return $gt->getTranslation($singular);
-	}
-	else
-	{
+	} else {
 		return $gt->getTranslation($plural);
 	}
 }
 
-function utf8_substr($str, $from, $len)
-{
+function utf8_substr($str, $from, $len) {
 # utf8 substr
 # www.yeap.lv
   return preg_replace('#^(?:[\x00-\x7F]|[\xC0-\xFF][\x80-\xBF]+){0,'.$from.'}'.
@@ -604,24 +537,20 @@ function utf8_substr($str, $from, $len)
                        '$1',$str);
 }
 
-function utf8_strlen($str)
-{
+function utf8_strlen($str) {
     $i = 0;
     $count = 0;
     $len = strlen ($str);
-    while ($i < $len)
-    {
+    while ($i < $len) {
     $chr = ord ($str[$i]);
     $count++;
     $i++;
     if ($i >= $len)
         break;
 
-    if ($chr & 0x80)
-    {
+    if ($chr & 0x80) {
         $chr <<= 1;
-        while ($chr & 0x80)
-        {
+        while ($chr & 0x80) {
         $i++;
         $chr <<= 1;
         }
@@ -630,8 +559,7 @@ function utf8_strlen($str)
     return $count;
 }
 
-function microtime_float()
-{
+function microtime_float() {
     list($usec, $sec) = explode(" ", microtime());
     return ((float)$usec + (float)$sec);
 }

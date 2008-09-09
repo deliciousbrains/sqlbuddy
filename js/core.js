@@ -9,33 +9,29 @@ var animationStack = [];
 
 var viewportSize = [0, 0];
 
-function f(g)
-{
+function f(g) {
 	if (g == undefined || g == "undefined" || g == null)
 		return "";
 	else
 		return g;
 }
 
-var $E = function(selector, filter){
+var $E = function(selector, filter) {
 	return ($(filter) || document).getElement(selector);
 };
 
-var $ES = function(selector, filter){
+var $ES = function(selector, filter) {
 	return ($(filter) || document).getElements(selector);
 };
 
-window.addEvent("domready", function()
-{
-	document.addEvent("keydown", function(e)
-	{
+window.addEvent("domready", function() {
+	document.addEvent("keydown", function(e) {
 		var ev = new Event(e);
 		if (ev.shift)
 			shiftPressed = true;
 	});
 	
-	document.addEvent("keyup", function()
-	{
+	document.addEvent("keyup", function() {
 		shiftPressed = false;
 	});
 	
@@ -54,8 +50,7 @@ window.addEvent("domready", function()
 	(function(){
 		var winWidth = getWindowWidth();
 		var winHeight = getWindowHeight();
-		if (viewportSize[0] != winWidth || viewportSize[1] != winHeight)
-		{
+		if (viewportSize[0] != winWidth || viewportSize[1] != winHeight) {
 			viewportSize = [winWidth, winHeight];
 			sizePage();
 		}
@@ -63,8 +58,7 @@ window.addEvent("domready", function()
 	(function(){ autoExpandTextareas(); }).periodical(500);
 });
 
-function Page()
-{
+function Page() {
 	this.page = "home.php";
 	this.db;
 	this.table;
@@ -77,7 +71,6 @@ function Page()
 	
 	this.$GUID = 1;
 	
-	// cache basically
 	this.pane;
 	this.grid;
 	this.gridHeader;
@@ -91,12 +84,9 @@ function Page()
 	
 	this.topTabs = [new TopTabGroup("Main"), new TopTabGroup("Database"), new TopTabGroup("Table")];
 	
-	if (showUsersMenu)
-	{
+	if (showUsersMenu) {
 		this.topTabs[0].addTab(gettext("Home"), "home.php").addTab(gettext("Users"), "users.php").addTab(gettext("Query"), "query.php").addTab(gettext("Import"), "import.php").addTab(gettext("Export"), "export.php");
-	}
-	else
-	{
+	} else {
 		this.topTabs[0].addTab(gettext("Home"), "home.php").addTab(gettext("Query"), "query.php").addTab(gettext("Import"), "import.php").addTab(gettext("Export"), "export.php");
 	}
 	
@@ -105,10 +95,8 @@ function Page()
 	
 }
 
-Page.prototype.loadPage = function()
-{
-	if (this.page == "browse.php" && parseInt(this.tableRowCounts[this.db + "_" + this.table]) == 0)
-	{
+Page.prototype.loadPage = function() {
+	if (this.page == "browse.php" && parseInt(this.tableRowCounts[this.db + "_" + this.table]) == 0) {
 		this.page = "structure.php";
 		this.topTab = 1;
 	}
@@ -122,18 +110,13 @@ Page.prototype.loadPage = function()
 		pageUrl += "sortKey=" + this.sortKey + "&";
 	pageUrl = pageUrl.substring(0, pageUrl.length - 1);
 	
-	if (this.page == "editcolumn.php")
-	{
+	if (this.page == "editcolumn.php") {
 		this.page = "structure.php";
 		this.topTab = 1;
-	}
-	else if (this.page == "edituser.php")
-	{
+	} else if (this.page == "edituser.php") {
 		this.page = "users.php";
 		this.topTab = 1;
-	}
-	else if (this.page == "edit.php")
-	{
+	} else if (this.page == "edit.php") {
 		this.page = "browse.php";
 		this.topTab = 0;
 	}
@@ -142,8 +125,7 @@ Page.prototype.loadPage = function()
 	var x = new XHR({url: this.page, onSuccess: finishTabLoad}).send(pageUrl);
 }
 
-Page.prototype.refreshTopTabSet = function(setNum)
-{
+Page.prototype.refreshTopTabSet = function(setNum) {
 	if (f(setNum))
 		this.topTabSet = setNum;
 	
@@ -153,8 +135,7 @@ Page.prototype.refreshTopTabSet = function(setNum)
 	var browseIsActive = true;
 	var currentTab, rowCount, tabId, tabLiObj, tabAObj, tabACount;
 	
-	for (var i=0; i<loopStop; i++)
-	{	
+	for (var i=0; i<loopStop; i++) {	
 		currentTab = this.topTabs[this.topTabSet].tabList[i];
 		tabId = i;
 		
@@ -176,8 +157,7 @@ Page.prototype.refreshTopTabSet = function(setNum)
 			tabLiObj.addClass('deactivated');
 		tabAObj = new Element('a');
 		tabAObj.appendText(currentTab.title);
-		if (currentTab.url == "browse.php" && f(rowCount) != "")
-		{
+		if (currentTab.url == "browse.php" && f(rowCount) != "") {
 			tabACount = new Element("span");
 			tabACount.addClass("rowcount");
 			tabACount.appendText("(" + rowCount + ")");
@@ -185,8 +165,7 @@ Page.prototype.refreshTopTabSet = function(setNum)
 		}
 		if (tabId != this.topTab && !(currentTab.url == "browse.php" && browseIsActive == false) && !currentTab.temp)
 			tabAObj.onclick = topTabClicked;
-		if (!(currentTab.url == "browse.php" && browseIsActive == false) && !currentTab.temp)
-		{
+		if (!(currentTab.url == "browse.php" && browseIsActive == false) && !currentTab.temp) {
 			var hrefBuild = "#page=" + currentTab.url.substring(0, currentTab.url.length - 4);
 			if (f(this.db))
 				hrefBuild += "&db=" + this.db;
@@ -204,45 +183,37 @@ Page.prototype.refreshTopTabSet = function(setNum)
 	}
 }
 
-Page.prototype.getTabUrl = function(tabId)
-{
+Page.prototype.getTabUrl = function(tabId) {
 	tabId = tabId || 0;
 	return this.topTabs[this.topTabSet].tabList[tabId].url;
 }
 
-Page.prototype.getTabTitle = function(tabId)
-{
+Page.prototype.getTabTitle = function(tabId) {
 	tabId = tabId || 0;
 	return this.topTabs[this.topTabSet].tabList[tabId].title;
 }
 
-Page.prototype.removeTempTabs = function()
-{
-	for (var i=0; i<this.topTabs[this.topTabSet].tabCounter; i++)
-	{
-		if ((this.topTabs[this.topTabSet].tabList[i].temp) == true && (this.topTabs[this.topTabSet].tabList[i].url != this.page))
-		{
+Page.prototype.removeTempTabs = function() {
+	for (var i=0; i<this.topTabs[this.topTabSet].tabCounter; i++) {
+		if ((this.topTabs[this.topTabSet].tabList[i].temp) == true && (this.topTabs[this.topTabSet].tabList[i].url != this.page)) {
 			this.topTabs[this.topTabSet].removeTab(i);
 		}
 	}
 }
 
-Page.prototype.preload = function()
-{
+Page.prototype.preload = function() {
 	var images = ["closeHover.png", "loading.gif", "openArrow.png", "goto.png", "schemaHeader.png", "info.png", "infoHover.png", 
 	"window-button.png", "window-center.png", "window-close.png", "window-header-center.png", "window-header-left.png",
 	"window-header-right.png", "window-resize.png", "window-shadow-bottom-left.png", "window-shadow-bottom-right.png",
 	"window-shadow-bottom.png", "window-shadow-left.png", "window-shadow-right.png"];
 	var pre;
-	for (var i=0; i<images.length; i++)
-	{
+	for (var i=0; i<images.length; i++) {
 		pre = new Image();
 		pre.src = "images/" + images[i];
 	}
 }
 
-Page.prototype.setHash = function()
-{
+Page.prototype.setHash = function() {
 	var newHash = "";
 	if (f(this.page))
 		newHash += "page=" + this.page.substr(0, this.page.length - 4) + "&";
@@ -264,23 +235,20 @@ Page.prototype.setHash = function()
 		newHash += "sortKey=" + this.sortKey + "&";
 	
 	newHash = "#" + newHash.substring(0, newHash.length-1);
-	if (window.location.hash != newHash)
-	{
+	if (window.location.hash != newHash) {
 		window.location.hash = newHash;
 		this.hashMemory = newHash;
 	}
 }
 
-Page.prototype.loadHash = function()
-{
+Page.prototype.loadHash = function() {
 	var hash = window.location.hash;
 	var part = hash.substring(1);
 	var pairs = part.split("&");
 	
 	this.hashMemory = window.location.hash;
 	
-	for (var i=0; i<pairs.length; i++)
-	{
+	for (var i=0; i<pairs.length; i++) {
 		var pairsplit = pairs[i].split("=");
 		var key = pairsplit[0];
 		var value = pairsplit[1];
@@ -296,18 +264,15 @@ Page.prototype.loadHash = function()
 	}
 }
 
-Page.prototype.checkHashState = function()
-{
-	if (window.location.hash != this.hashMemory)
-	{
+Page.prototype.checkHashState = function() {
+	if (window.location.hash != this.hashMemory) {
 		this.resetInternals();
 		this.loadHash();
 		this.loadPage();
 	}
 }
 
-Page.prototype.resetInternals = function()
-{
+Page.prototype.resetInternals = function() {
 	this.page = "home.php";
 	this.db = "";
 	this.table = "";
@@ -319,34 +284,29 @@ Page.prototype.resetInternals = function()
 	this.sortKey = "";
 }
 
-function TopTabGroup(name)
-{
+function TopTabGroup(name) {
 	this.name = name;
 	this.tabList = [];
 	this.tabCounter = 0;
 }
 
-TopTabGroup.prototype.addTab = function(title, url, temp)
-{
+TopTabGroup.prototype.addTab = function(title, url, temp) {
 	this.tabList[this.tabCounter++] = new TopTab(title, url, temp);
 	return this; // for chaining
 }
 
-TopTabGroup.prototype.removeTab = function(id)
-{
+TopTabGroup.prototype.removeTab = function(id) {
 	this.tabList[id] = null;
 	this.tabCounter--;
 }
 
-function TopTab(title, url, temp)
-{
+function TopTab(title, url, temp) {
 	this.title = title;
 	this.url = url;
 	this.temp = temp;
 }
 
-function initializeSidemenu()
-{
+function initializeSidemenu() {
 	var menudata = eval(menujson);
 	menujson = null;
 	var ulmenu = $('databaselist').firstChild;
@@ -354,18 +314,15 @@ function initializeSidemenu()
 	var subul, subli, suba, subatext;
 	var counter = 0;
 	
-	for (var i=0; i<menudata['menu'].length; i++)
-	{
+	for (var i=0; i<menudata['menu'].length; i++) {
 		currentItem = menudata['menu'][i];
 		newli = returnMenuItem(currentItem['name'], i);
 		
 		subul = new Element('ul');
 		subul.addClass("sublist");
 		subul.id = "sublist" + i;
-		if (currentItem['items'])
-		{
-			for (var j=0; j<currentItem['items'].length; j++)
-			{
+		if (currentItem['items']) {
+			for (var j=0; j<currentItem['items'].length; j++) {
 				subli = returnSubMenuItem(currentItem.name, currentItem['items'][j].name, currentItem['items'][j].rowcount);
 				subul.appendChild(subli);
 				
@@ -384,8 +341,7 @@ function initializeSidemenu()
 	menudata = null;
 }
 
-function addSubMenuItem(sublist, db, table)
-{
+function addSubMenuItem(sublist, db, table) {
 	var subul = $(sublist);
 	
 	var newItem = returnSubMenuItem(db, table, 0);
@@ -398,8 +354,7 @@ function addSubMenuItem(sublist, db, table)
 	recalculateSubmenuHeight(sublist);
 }
 
-function returnSubMenuItem(db, table, count)
-{
+function returnSubMenuItem(db, table, count) {
 	var subli, suba, subacount;
 	var subId = sb.$GUID++;
 	subli = new Element('li');
@@ -418,8 +373,7 @@ function returnSubMenuItem(db, table, count)
 	return subli;
 }
 
-function returnMenuItem(db, i)
-{
+function returnMenuItem(db, i) {
 	var menuli, menua, togglea, texta
 	menuli = new Element('li');
 	menuli.id = 'db' + i;
@@ -441,8 +395,7 @@ function returnMenuItem(db, i)
 	return menuli;
 }
 
-function addMenuItem(db)
-{
+function addMenuItem(db) {
 	var ulmenu = $E('#databaselist ul');
 	var i = ulmenu.childNodes.length;
 	var newli = returnMenuItem(db, i);
@@ -459,18 +412,15 @@ function addMenuItem(db)
 	sb.submenuHeights[i] = 0;
 }
 
-function showPane(paneId)
-{
+function showPane(paneId) {
 	var panes = $$('#innercontent div[id^=pane]');
-	for (var i=0; i<panes.length; i++)
-	{
+	for (var i=0; i<panes.length; i++) {
 		panes[i].style.display = 'none';
 	}
 	$(paneId).style.display = '';
 }
 
-function addPane(paneId)
-{
+function addPane(paneId) {
 	if (Browser.Engine.trident)
 		clearPanes();
 	var pane = new Element('div');
@@ -480,41 +430,32 @@ function addPane(paneId)
 	showPane(paneId);
 }
 
-function generatePrompt(prepend, postpend, single, multiple, parameter, showQuery, context)
-{
-	if (context)
-	{
+function generatePrompt(prepend, postpend, single, multiple, parameter, showQuery, context) {
+	if (context) {
 		var grid = $(context);
 		var inputs = $ES("input", grid);
-	}
-	else
-	{
+	} else {
 		var grid = sb.grid;
 		var inputs = $ES("input", sb.leftChecks);
 	}
 	
-	if (f(grid))
-	{
+	if (f(grid)) {
 		var buildList = "";
 		var m = 0;
-		for (var i=0; i<inputs.length; i++)
-		{
-			if (inputs[i].type == "checkbox" && inputs[i].checked == true)
-			{
+		for (var i=0; i<inputs.length; i++) {
+			if (inputs[i].type == "checkbox" && inputs[i].checked == true) {
 				buildList += prepend + inputs[i].get("querybuilder") + postpend + ";\n ";
 				m++;
 			}
 		}
-		if (buildList)
-		{
+		if (buildList) {
 			var prompter = gettext("Are you sure you want to") + " ";
 			if (m == 1)
 				prompter += single + "? ";
 			else
 				prompter += multiple + "? ";
 			
-			if (showQuery)
-			{
+			if (showQuery) {
 				var formattedQuery = buildList.replace(/\n/g, "<br />");
 				
 				if (m == 1)
@@ -530,8 +471,7 @@ function generatePrompt(prepend, postpend, single, multiple, parameter, showQuer
 			
 			buildUrl = parameter + "=" + buildList;
 			
-			if (sb.page == "browse.php")
-			{
+			if (sb.page == "browse.php") {
 				if (f(sb.view))
 					buildUrl += "&view=" + sb.view;
 					
@@ -553,13 +493,11 @@ function generatePrompt(prepend, postpend, single, multiple, parameter, showQuer
 	}
 }
 
-function showDialog(title, content, action)
-{	
+function showDialog(title, content, action) {	
 	createWindow(title, content, {isDialog: true, dialogAction: action});
 }
 
-function submitForm(formId)
-{
+function submitForm(formId) {
 	var theForm = $(formId);
 	var action = theForm.get("action");
 	
@@ -573,8 +511,7 @@ var XHR = new Class({
 
 	Extends: Request,
 	
-	initialize: function(options)
-	{
+	initialize: function(options) {
 		
 		if (!options.url)
 			options.url = sb.page;
@@ -593,17 +530,14 @@ var XHR = new Class({
 		
 		this.parent(options);
 		
-		if (options && options.showLoader != false)
-		{
+		if (options && options.showLoader != false) {
 			show('load');
 			
-			this.addEvent("onSuccess", function()
-			{
+			this.addEvent("onSuccess", function() {
 				hide('load');
 			});
 			
-			this.addEvent("onFailure", function()
-			{
+			this.addEvent("onFailure", function() {
 				hide('load');
 				createWindow(gettext("Error"), gettext("There was an error receiving data from the server."), {isDismissible: true});
 			});
@@ -611,30 +545,26 @@ var XHR = new Class({
 	},
 	
 	// redefined to avoid auto script execution
-	success: function(text, xml)
-	{
+	success: function(text, xml) {
 		this.onSuccess(text, xml);
 	}
 	
 });
 
-function gettext(str)
-{
+function gettext(str) {
 	if (f(getTextArr[str]) != "")
 		return getTextArr[str];
 	else
 		return str;
 }
 
-function printf()
-{
+function printf() {
 	var argv = printf.arguments;
 	var argc = parseInt(argv.length);
 	
 	var inputString = argv[0];
 	
-	for (var i=1; i<argc; i++)
-	{
+	for (var i=1; i<argc; i++) {
 		var position = inputString.indexOf("%s");
 		var firstPart = inputString.substring(0, position + 2);
 		var lastPart = inputString.substring(position + 2);
@@ -645,47 +575,39 @@ function printf()
 	return inputString;
 }
 
-function fullTextWindow(rowId)
-{
+function fullTextWindow(rowId) {
 	var rowQuery = $E(".check" + rowId, sb.pane).get("queryBuilder");
 	var fullQuery = "SELECT * FROM " + returnQuote() + sb.table + returnQuote() + " " + rowQuery;
 	var loadWin = createWindow(gettext("Loading..."), gettext("Loading..."));
 	var x = new XHR({
 		url: "ajaxfulltext.php", 
-		onSuccess: function(responseText)
-		{
+		onSuccess: function(responseText) {
 			$(loadWin).dispose();
 			createWindow(gettext("Full Text"), responseText)
 		},
-		onFailure: function()
-		{
+		onFailure: function() {
 			$(loadWin).dispose();
 		}
 	}).send("query=" + fullQuery);
 }
 
-function createWindow(title, content, options)
-{
+function createWindow(title, content, options) {
 	options = options || {};
 	
 	var windowInnerWidth = getWindowWidth();
 	
 	var textWindow = new Element('div');
 	textWindow.className = 'fulltextwin';
-	if (options.isDialog || options.isDismissible)
-	{
+	if (options.isDialog || options.isDismissible) {
 		textWindow.className += " dialog";
 	}
 	
 	var windowId = "window" + sb.$GUID++;
 	textWindow.id = windowId;
 	
-	if (options.isDialog || options.isDismissible)
-	{
+	if (options.isDialog || options.isDismissible) {
 		var leftValue = Math.round((windowInnerWidth - 400) / 2);
-	}
-	else
-	{
+	} else {
 		var leftValue = Math.round((windowInnerWidth - 400) / 2);
 	}
 	
@@ -708,12 +630,9 @@ function createWindow(title, content, options)
 	windowHeader.set('html', windowHeaderContent);
 	windowMain.appendChild(windowHeader);
 	
-	if (options.isDialog && f(options.dialogAction) != "")
-	{
+	if (options.isDialog && f(options.dialogAction) != "") {
 		content += '<div class="buttons"><table cellspacing="0" width="100%"><tr><td>&nbsp;</td><td align="right" width="20" style="padding-right: 8px"><input type="submit" id="' + windowId + 'Click" class="windowbutton" value="' + gettext("Okay") + '" /></td><td align="right" width="20"><input type="button" onclick="closeWindow(\'' + windowId + '\')" class="windowbutton" value="' + gettext("Cancel") + '" /></td></tr></table></div>';
-	}
-	else if (options.isDismissible)
-	{
+	} else if (options.isDismissible) {
 		content += '<div class="buttons"><table cellspacing="0" width="100%"><tr><td>&nbsp;</td><td align="right"><input type="submit" id="' + windowId + 'Click" onclick="closeWindow(\'' + windowId + '\')" class="windowbutton" value="' + gettext("Okay") + '" /></td></tr></table></div>';
 	}
 	
@@ -721,8 +640,7 @@ function createWindow(title, content, options)
 	windowInner.className = 'fulltextinner';
 	var innerContent = '<table cellspacing="0" width="100%"><tr><td class="mainl"></td><td class="maincenter"><div class="fulltextcontent" style="max-height: 300px">' + content + '</div>';
 	
-	if (!(options.isDialog || options.isDismissible))
-	{
+	if (!(options.isDialog || options.isDismissible)) {
 		innerContent += '<div class="resizeHandle"><img src="images/window-resize.png" id="resize' + windowId + '"></div>';
 	}
 	
@@ -740,23 +658,17 @@ function createWindow(title, content, options)
 	textWindow.appendChild(windowFooter);
 	document.body.appendChild(textWindow);
 	
-	if (options.isDialog == true && f(options.dialogAction) != "")
-	{
+	if (options.isDialog == true && f(options.dialogAction) != "") {
 		var okayClick = $(windowId + 'Click');
-		okayClick.addEvent("click", function()
-		{
+		okayClick.addEvent("click", function() {
 			closeWindow(windowId);
 			eval(options.dialogAction);
 		});
 		okayClick.focus();
-	}
-	else if (options.isDismissible == true)
-	{
+	} else if (options.isDismissible == true) {
 		var okayClick = $(windowId + 'Click');
 		okayClick.focus();
-	}
-	else if (!(options.isDialog || options.isDismissible))
-	{
+	} else if (!(options.isDialog || options.isDismissible)) {
 		var resizeHandle = $('resize' + windowId);
 		resizeHandle.addEvent("mousedown", startResize);
 	}
@@ -764,36 +676,25 @@ function createWindow(title, content, options)
 	return windowId;
 }
 
-function show(a)
-{
+function show(a) {
 	$(a).style.display = '';
 }
 
-function hide(a)
-{
+function hide(a) {
 	$(a).style.display = 'none';
 }
 
-function runKeyboardShortcuts(e)
-{
+function runKeyboardShortcuts(e) {
 	var event = new Event(e);
-	if (!((event.target.nodeName == "INPUT" && (event.target.type == "text" || event.target.type == "password")) || (event.target.nodeName == "TEXTAREA") || event.meta || event.control))
-	{
-		if (event.key == "a")
-		{
+	if (!((event.target.nodeName == "INPUT" && (event.target.type == "text" || event.target.type == "password")) || (event.target.nodeName == "TEXTAREA") || event.meta || event.control)) {
+		if (event.key == "a") {
 			checkAll();
-		}
-		else if (event.key == "n")
-		{
+		} else if (event.key == "n") {
 			checkNone();
-		}
-		else if (event.key == "e")
-		{
+		} else if (event.key == "e") {
 			if (sb.page == "browse.php" || sb.page == "structure.php" || sb.page == "users.php")
 				editSelectedRows();
-		}
-		else if (event.key == "d")
-		{
+		} else if (event.key == "d") {
 			if (sb.page == "structure.php")
 				deleteSelectedColumns();
 			else if (sb.page == "users.php")
@@ -802,91 +703,67 @@ function runKeyboardShortcuts(e)
 				deleteSelectedRows();
 			else if (sb.page == "dboverview.php")
 				dropSelectedTables();
-		}
-		else if (event.key == "r")
-		{
+		} else if (event.key == "r") {
 			sb.loadPage();
-		}
-		else if (event.key == "f" && sb.page == "browse.php")
-		{
+		} else if (event.key == "f" && sb.page == "browse.php") {
 			if ($('firstNav'))
 				eval($('firstNav').get("onclick"));
-		}
-		else if (event.key == "g" && sb.page == "browse.php")
-		{
+		} else if (event.key == "g" && sb.page == "browse.php") {
 			if ($('prevNav'))
 				eval($('prevNav').get("onclick"));
-		}
-		else if (event.key == "h" && sb.page == "browse.php")
-		{
+		} else if (event.key == "h" && sb.page == "browse.php") {
 			if ($('nextNav'))
 				eval($('nextNav').get("onclick"));
-		}
-		else if (event.key == "l" && sb.page == "browse.php")
-		{
+		} else if (event.key == "l" && sb.page == "browse.php") {
 			if ($('lastNav'))
 				eval($('lastNav').get("onclick"));
-		}
-		else if (event.key == "q")
-		{
+		} else if (event.key == "q") {
 			var tabId = 0;
-			while (sb.getTabUrl(tabId) != "query.php")
-			{
+			while (sb.getTabUrl(tabId) != "query.php") {
 				tabId++;
 			}
 			topTabLoad(tabId);
 			
 			event.stop();
 			event.stopPropagation();
-		}
-		else if (event.key == "o" && sb.page == "dboverview.php")
-		{
+		} else if (event.key == "o" && sb.page == "dboverview.php") {
 			optimizeSelectedTables();
 		}
 		
-	}
-	else if (event.target.nodeName == "TEXTAREA" && event.control && event.key == "enter")
-	{
+	} else if (event.target.nodeName == "TEXTAREA" && event.control && event.key == "enter") {
 		var curr = $(event.target);
-		while (curr && curr.get('tag') != "form")
-		{
+		while (curr && curr.get('tag') != "form") {
 			curr = $(curr.parentNode);
 		}
 		
-		if (curr)
-		{
+		if (curr) {
 			currButton = $E("input[type=submit]", curr);
-			if (currButton)
-			{
+			if (currButton) {
 				currButton.click();
 			}
 		}
 	}
 }
 
-function getWindowWidth()
-{
+function getWindowWidth() {
 	if (window.innerWidth)
 		return window.innerWidth;
 	else
 		return document.documentElement.clientWidth;
 }
 
-function getWindowHeight()
-{
+function getWindowHeight() {
 	if (window.innerHeight)
 		return window.innerHeight;
 	else
 		return document.documentElement.clientHeight;
 }
 
-function addAnimation(id, finish)
-{
+function addAnimation(id, finish) {
 	var elem = $(id);
 	
 	//remove duplicates
-	for (var i in animationStack)
-	{
+	for (var i in animationStack) {
 		if (animationStack[i][0] == elem)
 			animationStack.splice(i, 1);
 	}
@@ -905,11 +782,9 @@ function addAnimation(id, finish)
 		animate();
 }
 
-function animate()
-{
+function animate() {
 	var j, elem, start, change, currentFrame, totalFrames;
-	for (var i = 0; i < animationStack.length; i++)
-	{
+	for (var i = 0; i < animationStack.length; i++) {
 		
 		j = parseInt(i);
 		
@@ -924,13 +799,11 @@ function animate()
 		
 		elem.style.height = newHeight + "px";
 		
-		if (currentFrame >= totalFrames)
-		{
+		if (currentFrame >= totalFrames) {
 			animationStack.splice(j, 1);
 			
 			//if the menu is expanded, take off the explicit height attribute
-			if (elem.style.height != "0px")
-			{
+			if (elem.style.height != "0px") {
 				elem.style.height = '';
 			}
 		}
@@ -939,7 +812,6 @@ function animate()
 		setTimeout('animate()', 25);
 }
 
-function sineInOut(t, b, c, d)
-{
+function sineInOut(t, b, c, d) {
 	return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
 }

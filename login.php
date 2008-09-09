@@ -23,8 +23,7 @@ $pass = (isset($sbconfig['DefaultPass'])) ? $sbconfig['DefaultPass'] : "";
 // SQLite only
 $database = (isset($sbconfig['DefaultDatabase'])) ? $sbconfig['DefaultDatabase'] : "";	
 
-if ($_POST)
-{
+if ($_POST) {
 	if (isset($_POST['ADAPTER']))
 		$adapter = $_POST['ADAPTER'];
 	
@@ -41,29 +40,23 @@ if ($_POST)
 		$database = $_POST['DATABASE'];
 }
 
-if (!in_array($adapter, $adapterList))
-{
+if (!in_array($adapter, $adapterList)) {
 	$adapter = "mysql";
 }
 
-if (($adapter != "sqlite" && $host && $user && $pass) || ($adapter == "sqlite" && $database))
-{
+if (($adapter != "sqlite" && $host && $user && $pass) || ($adapter == "sqlite" && $database)) {
 	
-	if ($adapter == "sqlite")
-	{
+	if ($adapter == "sqlite") {
 		$connString = "sqlite:database=$database";
 		$connCheck = new SQL($connString);
 		$user = "";
 		$pass = "";
-	}
-	else
-	{
+	} else {
 		$connString = "$adapter:host=$host";
 		$connCheck = new SQL($connString, $user, $pass);
 	}
 	
-	if ($connCheck->isConnected())
-	{
+	if ($connCheck->isConnected()) {
 		$_SESSION['SB_LOGIN'] = true;
 		$_SESSION['SB_LOGIN_STRING'] = $connString;
 		$_SESSION['SB_LOGIN_USER'] = $user;
@@ -74,18 +67,14 @@ if (($adapter != "sqlite" && $host && $user && $pass) || ($adapter == "sqlite" &
 		
 		$redirect = "";
 		
-		for ($i=0; $i<count($pathSplit)-1; $i++)
-		{
+		for ($i=0; $i<count($pathSplit)-1; $i++) {
 			if (trim($pathSplit[$i]) != "")
 				$redirect .= "/" . $pathSplit[$i];
 		}
 		
-		if (array_key_exists("HTTPS", $_SERVER) && $_SERVER['HTTPS'] == "on")
-		{
+		if (array_key_exists("HTTPS", $_SERVER) && $_SERVER['HTTPS'] == "on") {
 			$protocol = "https://";
-		}
-		else
-		{
+		} else {
 			$protocol = "http://";
 		}
 		
@@ -93,9 +82,7 @@ if (($adapter != "sqlite" && $host && $user && $pass) || ($adapter == "sqlite" &
 		
 		redirect($redirect);
 		exit;
-	}
-	else
-	{
+	} else {
 		$error = __("There was a problem logging you in.");
 	}
 }
@@ -138,8 +125,7 @@ startOutput();
 		// turn into whole number
 		$ieVer = (int)($ieVer);
 		
-		if ($ua && $ie && $ieVer < 7)
-		{
+		if ($ua && $ie && $ieVer < 7) {
 			
 			?>
 			<table cellpadding="0" id="tb">
@@ -152,9 +138,7 @@ startOutput();
 			</table>
 			<?php
 			
-		}
-		else
-		{
+		} else {
 			
 			?>
 			<table cellpadding="0" id="tb">
@@ -162,17 +146,14 @@ startOutput();
 			<td colspan="2"><div class="loginheader"><h3><strong><?php echo __("Login"); ?></strong></h3><a href="http://www.sqlbuddy.com/help/" title="Help"><?php echo __("Help!"); ?></a></div></td>
 			</tr>
 			<?php
-			if (isset($error))
-			{
+			if (isset($error)) {
 				echo '<tr><td colspan="2"><div class="errormess">' . $error . '</div></td></tr>';
 			}
-			if (isset($_GET['timeout']))
-			{
+			if (isset($_GET['timeout'])) {
 				echo '<tr><td colspan="2"><div class="errormess">' . __("Your session has timed out. Please login again.") . '</div></td></tr>';
 			}
 			
-			if (sizeof($adapterList) > 1)
-			{
+			if (sizeof($adapterList) > 1) {
 			
 			?>
 			<tr>
@@ -181,15 +162,13 @@ startOutput();
 			<select name="ADAPTER" id="ADAPTER" onchange="adapterChange()">
 			<?php
 			
-			if (in_array("mysql", $adapterList))
-			{
+			if (in_array("mysql", $adapterList)) {
 				?>
 				<option value="mysql"<?php if ($adapter == "mysql") echo " selected"; ?>><?php echo __("MySQL"); ?></option>
 				<?php
 			}
 			
-			if (in_array("sqlite", $adapterList))
-			{
+			if (in_array("sqlite", $adapterList)) {
 				?>
 				<option value="sqlite"<?php if ($adapter == "sqlite") echo " selected"; ?>><?php echo __("SQLite"); ?></option>
 				<?php
@@ -245,19 +224,15 @@ startOutput();
 	
 	<?php
 	
-	if ($adapter != "sqlite")
-	{
+	if ($adapter != "sqlite") {
 		echo "$('PASS').focus();";
-	}
-	else
-	{
+	} else {
 		echo "$('DATABASE').focus();";
 	}
 	
 	?>
 	
-	if (!navigator.cookieEnabled)
-	{
+	if (!navigator.cookieEnabled) {
 		var tb = $('tb');
 		var newTr = new Element('tr');
 		var newTd = new Element('td');
@@ -270,19 +245,15 @@ startOutput();
 		tb.appendChild(newTr);
 	}
 	
-	function adapterChange()
-	{
+	function adapterChange() {
 		var adapter = $('ADAPTER');
 		var currentAdapter = adapter.options[adapter.selectedIndex].value;
 		
-		if (currentAdapter == "sqlite")
-		{
+		if (currentAdapter == "sqlite") {
 			$('REGOPTIONS').style.display = 'none';
 			$('LITEOPTIONS').style.display = '';
 			$('DATABASE').focus();
-		}
-		else
-		{
+		} else {
 			$('REGOPTIONS').style.display = '';
 			$('LITEOPTIONS').style.display = 'none';
 			$('PASS').focus();

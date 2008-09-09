@@ -25,8 +25,7 @@ if (isset($db))
 if (isset($db))
 	$structureSql = $conn->query("SHOW FULL FIELDS FROM `$table`");
 
-if (isset($_POST['editParts']) && $conn->isResultSet($structureSql))
-{
+if (isset($_POST['editParts']) && $conn->isResultSet($structureSql)) {
 	
 	$editParts = $_POST['editParts'];
 	
@@ -40,18 +39,15 @@ if (isset($_POST['editParts']) && $conn->isResultSet($structureSql))
 	?>
 	<script type="text/javascript" authkey="<?php echo $requestKey; ?>">
 	
-	if ($('EDITCOLUMNFIRSTFIELD'))
-	{
+	if ($('EDITCOLUMNFIRSTFIELD')) {
 		$('EDITCOLUMNFIRSTFIELD').focus();
 	}
 	
 	</script>
 	<?php
 	
-	while ($structureRow = $conn->fetchAssoc($structureSql))
-	{
-		if (in_array($structureRow['Field'], $editParts))
-		{
+	while ($structureRow = $conn->fetchAssoc($structureSql)) {
+		if (in_array($structureRow['Field'], $editParts)) {
 			echo '<form id="editform' . $counter . '" querypart="' . $structureRow['Field'] . '" onsubmit="saveColumnEdit(\'editform' . $counter . '\'); return false;">';
 			echo '<div class="editcolumn">';
 			echo '<div class="errormessage" style="margin: 0 7px 13px; display: none"></div>';
@@ -80,8 +76,7 @@ if (isset($_POST['editParts']) && $conn->isResultSet($structureSql))
 			<select name="TYPE" onchange="toggleValuesLine(this, 'editform<?php echo $counter; ?>')" style="width: 125px">
 			<?php
 			
-			foreach ($typeList as $type)
-			{
+			foreach ($typeList as $type) {
 				echo '<option value="' . $type . '"';
 				
 				if ($type == $curtype)
@@ -129,8 +124,7 @@ if (isset($_POST['editParts']) && $conn->isResultSet($structureSql))
 			</tr>
 			<?php
 			
-			if (isset($charsetList) && isset($collationList))
-			{
+			if (isset($charsetList) && isset($collationList)) {
 				echo "<tr>";
 				echo "<td class=\"secondaryheader\">";
 				echo __("Charset:");
@@ -139,17 +133,14 @@ if (isset($_POST['editParts']) && $conn->isResultSet($structureSql))
 				echo "<select name=\"CHARSET\" style=\"width: 125px\">";
 				echo "<option></option>";
 				
-				if ($structureRow['Collation'] != "NULL")
-				{
+				if ($structureRow['Collation'] != "NULL") {
 					$currentCharset = $collationList[$structureRow['Collation']];
 				}
 				
-				foreach ($charsetList as $charset)
-				{
+				foreach ($charsetList as $charset) {
 					echo "<option value=\"" . $charset . "\"";
 					
-					if (isset($currentCharset) && $charset == $currentCharset)
-					{
+					if (isset($currentCharset) && $charset == $currentCharset) {
 						echo ' selected="selected"';
 					}
 					

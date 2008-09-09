@@ -25,8 +25,7 @@ if (isset($db))
 if (isset($table))
 	$structureSql = $conn->describeTable($table);
 
-if (isset($_POST['editParts']))
-{
+if (isset($_POST['editParts'])) {
 	$editParts = $_POST['editParts'];
 	$editParts = explode("; ", $editParts);
 	
@@ -38,21 +37,18 @@ if (isset($_POST['editParts']))
 	?>
 	<script type="text/javascript" authkey="<?php echo $requestKey; ?>">
 	
-	if ($('EDITFIRSTFIELD'))
-	{
+	if ($('EDITFIRSTFIELD')) {
 		$('EDITFIRSTFIELD').focus();
 	}
 	
 	</script>
 	<?php
 	
-	foreach ($editParts as $part)
-	{
+	foreach ($editParts as $part) {
 		
 		$part = trim($part);
 		
-		if ($part != "" && $part != ";")
-		{
+		if ($part != "" && $part != ";") {
 		
 		?>
 		
@@ -61,14 +57,12 @@ if (isset($_POST['editParts']))
 		<table class="insert edit" cellspacing="0" cellpadding="0">
 		<?php
 		
-		if ($conn->isResultSet($structureSql) && $conn->getAdapter() == "mysql")
-		{
+		if ($conn->isResultSet($structureSql) && $conn->getAdapter() == "mysql") {
 			
 			$dataSql = $conn->query("SELECT * FROM `" . $table . "` " . $part);
 			$dataRow = $conn->fetchAssoc($dataSql);
 			
-			while ($structureRow = $conn->fetchAssoc($structureSql))
-			{
+			while ($structureRow = $conn->fetchAssoc($structureSql)) {
 				
 				preg_match("/^([a-z]+)(.([0-9]+).)?(.*)?$/", $structureRow['Type'], $matches);
 				
@@ -91,33 +85,27 @@ if (isset($_POST['editParts']))
 				$showLargeEditor[] = "mediumtext";
 				$showLargeEditor[] = "longtext";
 				
-				if (in_array($curtype, $showLargeEditor))
-				{
+				if (in_array($curtype, $showLargeEditor)) {
 					echo '<textarea name="' . $structureRow['Field'] . '">' . $dataRow[$structureRow['Field']] . '</textarea>';
 				}
-				elseif ($curtype == "enum")
-				{
+				elseif ($curtype == "enum") {
 					$trimmed = substr($structureRow['Type'], 6, -2);
 					$listOptions = explode("','", $trimmed);
 					echo '<select name="' . $structureRow['Field'] . '">';
 					echo '<option> - - - - - </option>';
-					foreach ($listOptions as $option)
-					{
+					foreach ($listOptions as $option) {
 						echo '<option value="' . $option . '"';
-						if ($option == $dataRow[$structureRow['Field']])
-						{
+						if ($option == $dataRow[$structureRow['Field']]) {
 							echo ' selected="selected"';
 						}
 						echo '>' . $option . '</option>';
 					}
 					echo '</select>';
 				}
-				elseif ($curtype == "set")
-				{
+				elseif ($curtype == "set") {
 					$trimmed = substr($structureRow['Type'], 5, -2);
 					$listOptions = explode("','", $trimmed);
-					foreach ($listOptions as $option)
-					{
+					foreach ($listOptions as $option) {
 						$id = $option . rand(1, 1000);
 						echo '<label for="' . $id . '"><input name="' . $structureRow['Field'] . '[]" value="' . $option . '" id="' . $id . '" type="checkbox"';
 						
@@ -126,20 +114,15 @@ if (isset($_POST['editParts']))
 						
 						echo '>' . $option . '</label><br />';
 					}
-				}
-				else
-				{
+				} else {
 					echo '<input type="text"';
 					if ($firstField)
 						echo ' id="EDITFIRSTFIELD"';
 					echo ' name="' . $structureRow['Field'] . '" class="text" value="';
 					
-					if ($dataRow[$structureRow['Field']] && ((isset($binaryDTs) && in_array($curtype, $binaryDTs)) || stristr($structureRow['Type'], "binary") !== false))
-					{
+					if ($dataRow[$structureRow['Field']] && isset($binaryDTs) && in_array($curtype, $binaryDTs)) {
 						echo "0x" . bin2hex($dataRow[$structureRow['Field']]);
-					}
-					else
-					{
+					} else {
 						echo htmlentities($dataRow[$structureRow['Field']], ENT_QUOTES, 'UTF-8');
 					}
 					
@@ -158,15 +141,12 @@ if (isset($_POST['editParts']))
 			
 			$structureSql = $conn->describeTable($table);
 			
-		}
-		else if (sizeof($structureSql) > 0 && $conn->getAdapter() == "sqlite")
-		{
+		} else if (sizeof($structureSql) > 0 && $conn->getAdapter() == "sqlite") {
 			
 			$dataSql = $conn->query("SELECT * FROM '" . $table . "' " . $part);
 			$dataRow = $conn->fetchAssoc($dataSql);
 			
-			foreach ($structureSql as $column)
-			{
+			foreach ($structureSql as $column) {
 								
 				echo '<tr>';
 				echo '<td class="fieldheader"><span style="color: steelblue">';
@@ -178,12 +158,9 @@ if (isset($_POST['editParts']))
 				echo '<tr>';
 				echo '<td class="inputarea">';
 				
-				if (strpos($column[1], "text") !== false)
-				{
+				if (strpos($column[1], "text") !== false) {
 					echo '<textarea name="' . $column[0] . '">' . $dataRow[$column[0]] . '</textarea>';
-				}
-				else
-				{
+				} else {
 					echo '<input type="text"';
 					if ($firstField)
 						echo ' id="EDITFIRSTFIELD"';

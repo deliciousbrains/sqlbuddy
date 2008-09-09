@@ -29,8 +29,7 @@ loginCheck();
 	<table cellpadding="0">
 	<?php
 	
-	if (!isset($table))
-	{
+	if (!isset($table)) {
 	?>
 	<tr>
 		<td class="secondaryheader" colspan="2"><?php echo __("Choose a .sql file to import"); ?>.</td>
@@ -47,8 +46,7 @@ loginCheck();
 	</tr>
 	<?php
 	
-	if (isset($table))
-	{
+	if (isset($table)) {
 	?>
 	<tr>
 		<td class="secondaryheader"><?php echo __("Format"); ?>:</td>

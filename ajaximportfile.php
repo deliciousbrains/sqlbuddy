@@ -20,16 +20,14 @@ loginCheck();
 if (isset($db))
 	$conn->selectDB($db);
 
-function stripCommentLines($in)
-{
+function stripCommentLines($in) {
 	if (substr($in, 0, 2) == "--")
 		$in = '';
 	
 	return $in;
 }
 
-if (isset($_POST) || isset($_FILES))
-{
+if (isset($_POST) || isset($_FILES)) {
 	
 	if (isset($_FILES['INPUTFILE']['tmp_name']))
 		$file = $_FILES['INPUTFILE']['tmp_name'];
@@ -37,7 +35,7 @@ if (isset($_POST) || isset($_FILES))
 	if (isset($_POST['FORMAT']))
 		$format = $_POST['FORMAT'];
 	
-	if (!isset($format) || $format != "CSV")
+	if (!(isset($format) && $format == "CSV"))
 		$format = "SQL";
 	
 	if (isset($_POST['IGNOREFIRST']))
@@ -46,15 +44,13 @@ if (isset($_POST) || isset($_FILES))
 	$first = true;
 	
 	// for csv
-	if (isset($format) && $format == "CSV" && isset($table))
-	{
+	if (isset($format) && $format == "CSV" && isset($table)) {
 		$columnCount = 0;
 		
-		$structureSQL = $conn->query("DESCRIBE `$table`");
-		if ($conn->isResultSet($structureSQL))
-		{
-			while ($structureRow = $conn->fetchAssoc($structureSQL))
-			{
+		$structureSQL = $conn->describeTable($table);
+		
+		if ($conn->isResultSet($structureSQL)) {
+			while ($structureRow = $conn->fetchAssoc($structureSQL)) {
 				$columnCount++;
 			}
 		}
@@ -63,18 +59,12 @@ if (isset($_POST) || isset($_FILES))
 	$insertCount = 0;
 	$skipCount = 0;
 	
-	if (isset($file) && is_uploaded_file($file))
-	{
-		
-		if (isset($format) && $format == "SQL")
-		{
+	if (isset($file) && is_uploaded_file($file)) {
+		if (isset($format) && $format == "SQL") {
 			$lines = file($file);
 			
-			// the file() function handles mac line endings incorrectly
-			// this might have been fixed in a recent version of php
-			// if so, this code will just be ignored
-			if (sizeof($lines) == 1 && strpos($lines[0], "\r") > 0)
-			{
+			// the file() function doesn't handle mac line endings correctly
+			if (sizeof($lines) == 1 && strpos($lines[0], "\r") > 0) {
 				$lines = explode("\r", $lines[0]);
 			}
 			
@@ -83,41 +73,31 @@ if (isset($_POST) || isset($_FILES))
 			$contents = trim(implode('', $commentFree));
 			
 			$statements = splitQueryText($contents);
-		}
-		else
-		{
+		} else {
 			$statements = file($file);
 			
-			// same as before
-			if (sizeof($statements) == 1 && strpos($statements[0], "\r") > 0)
-			{
+			// see previous comment
+			if (sizeof($statements) == 1 && strpos($statements[0], "\r") > 0) {
 				$statements = explode("\r", $statements[0]);
 			}
 		}
 		
-		foreach ($statements as $statement)
-		{
+		foreach ($statements as $statement) {
 			$statement = trim($statement);
 			
-			if ($statement)
-			{
-				if (isset($format) && $format == "SQL")
-				{
+			if ($statement) {
+				if (isset($format) && $format == "SQL") {
 					$conn->query($statement) or ($dbErrors[] = $conn->error());
 					
 					$affected = (int)($conn->affectedRows());
 					$insertCount += $affected;
-				}
-				else if (isset($format) && $format == "CSV" && isset($table))
-				{
-					if (!(isset($ignoreFirst) && $first))
-					{
+				} else if (isset($format) && $format == "CSV" && isset($table)) {
+					if (!(isset($ignoreFirst) && $first)) {
 						preg_match_all('/"(([^"]|"")*)"/i', $statement, $matches);
 						
 						$rawValues = $matches[1];
 						
-						for ($i=0; $i<sizeof($rawValues); $i++)
-						{
+						for ($i=0; $i<sizeof($rawValues); $i++) {
 							$rawValues[$i] = str_replace('""', '"', $rawValues[$i]);
 							$rawValues[$i] = $conn->escapeString($rawValues[$i]);
 						}
@@ -125,16 +105,13 @@ if (isset($_POST) || isset($_FILES))
 						$values = implode("','", $rawValues);
 						
 						// make sure that the counts match up
-						if (sizeof($rawValues) == $columnCount)
-						{
+						if (sizeof($rawValues) == $columnCount) {
 							$conn->query("INSERT INTO `$table` VALUES ('$values')") or ($dbErrors[] = $conn->error());
 							
 							$affected = (int)($conn->affectedRows());
 							
 							$insertCount += $affected;
-						}
-						else
-						{
+						} else {
 							$skipCount++;
 						}
 					}
@@ -146,31 +123,22 @@ if (isset($_POST) || isset($_FILES))
 	
 	$message = "";
 	
-	if (!isset($statements))
-	{
+	if (!isset($statements)) {
 		$message .= __("Either the file could not be read or it was empty") . "<br />";
-	}
-	else if ($format == "SQL")
-	{	
+	} else if ($format == "SQL") {	
 		$message .= sprintf(__p("%d statement was executed from the file", "%d statements were executed from the file", $insertCount), $insertCount) . ".<br />";
-	}
-	else if ($format == "CSV")
-	{
-		if (isset($insertCount) && $insertCount > 0)
-		{
+	} else if ($format == "CSV") {
+		if (isset($insertCount) && $insertCount > 0) {
 			$message .= sprintf(__p("%d row was inserted into the database from the file", "%d rows were inserted into the database from the file", $insertCount), $insertCount) . ".<br />";
 		}
-		if (isset($skipCount) && $skipCount > 0)
-		{
+		if (isset($skipCount) && $skipCount > 0) {
 			$message .= sprintf(__p("%d row had to be skipped because the number of values was incorrect", "%d rows had to be skipped because the number of values was incorrect", $skipCount), $skipCount) . ".<br />";
 		}
 	}
 	
-	if (isset($dbErrors))
-	{
+	if (isset($dbErrors)) {
 		$message .= __("The following errors were reported") . ":<br />";
-		foreach ($dbErrors as $merr)
-		{
+		foreach ($dbErrors as $merr) {
 			$message .= " - " . $merr . "<br />";
 		}
 	}
@@ -185,7 +153,6 @@ if (isset($_POST) || isset($_FILES))
 	<script type="text/javascript">
 	
 	parent.updateAfterImport("<?php echo trim(addslashes(nl2br($message))); ?>");
-	
 	parent.refreshRowCount();
 	
 	</script>

@@ -20,18 +20,16 @@ loginCheck();
 if (isset($db))
 	$conn->selectDB($db);
 
-if (isset($_POST['query']))
-{
+if (isset($_POST['query'])) {
 	$queryList = splitQueryText($_POST['query']);
-	foreach ($queryList as $query)
-	{
+	
+	foreach ($queryList as $query) {
 		$sql = $conn->query($query);
 	}
 }
 
 //return the first field from the first row
-if (!isset($_POST['silent']))
-{
+if (!isset($_POST['silent']) && $conn->isResultSet($sql)) {
 	$row = $conn->fetchArray($sql);
 	echo nl2br(htmlentities($row[0], ENT_QUOTES, 'UTF-8'));
 }

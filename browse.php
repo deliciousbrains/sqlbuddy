@@ -24,23 +24,18 @@ if (isset($db))
 
 //run delete queries
 
-if (isset($_POST['runQuery']))
-{
+if (isset($_POST['runQuery'])) {
 	$runQuery = $_POST['runQuery'];
 	
 	$queryList = splitQueryText($runQuery);
-	foreach ($queryList as $query)
-	{
+	foreach ($queryList as $query) {
 		$conn->query($query);
 	}
 }
 
-if ($conn->getAdapter() == "sqlite")
-{
+if ($conn->getAdapter() == "sqlite") {
 	$query = "SELECT * FROM '$table'";
-}
-else
-{
+} else {
 	$query = "SELECT * FROM `$table`";
 }
 
@@ -64,12 +59,9 @@ if (isset($_POST['view']) && $_POST['view'] == "1")
 else
 	$view = 0;
 
-if (isset($sortKey) && $sortKey != "" && isset($sortDir) && $sortDir != "")
-{
+if (isset($sortKey) && $sortKey != "" && isset($sortDir) && $sortDir != "") {
 	$sort = "ORDER BY " . $sortKey . " " . $sortDir;
-}
-else
-{
+} else {
 	$sort = "";
 }
 

@@ -25,47 +25,35 @@ if (isset($db))
 if (isset($table))
 	$structureSql = $conn->describeTable($table);
 
-if ($conn->isResultSet($structureSql) && $conn->getAdapter() == "mysql")
-{
-	while ($structureRow = $conn->fetchAssoc($structureSql))
-	{
+if ($conn->isResultSet($structureSql) && $conn->getAdapter() == "mysql") {
+	while ($structureRow = $conn->fetchAssoc($structureSql)) {
 		$types[$structureRow['Field']] = $structureRow['Type'];
 	}
 	$structureSql = $conn->describeTable($table);
 }
 
-if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0)
-{
+if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0) {
 	
-	if ($_POST)
-	{
+	if ($_POST) {
 		
 		$insertFields = "";
 		$insertValues = "";
 		
-		foreach ($_POST as $key=>$value)
-		{
+		foreach ($_POST as $key=>$value) {
 			
-			if ($conn->getAdapter() == "sqlite")
-			{
+			if ($conn->getAdapter() == "sqlite") {
 				$insertFields .= $key . ",";
-			}
-			else
-			{
+			} else {
 				$insertFields .= "`" . $key . "`,";
 			}
 			
-			if (is_array($value))
-			{
+			if (is_array($value)) {
 				$value = implode(",", $value);
 			}
 			
-			if (isset($types) && substr($value, 0, 2) == "0x" && ((isset($binaryDTs) && in_array($types[$key], $binaryDTs)) || stristr($types[$key], "binary") !== false))
-			{
+			if (isset($types) && substr($value, 0, 2) == "0x" && isset($binaryDTs) && in_array($types[$key], $binaryDTs)) {
 				$insertValues .= $conn->escapeString(urldecode($value)) . ",";
-			}
-			else
-			{
+			} else {
 				$insertValues .= "'" . $conn->escapeString(urldecode($value)) . "',";
 			}
 			
@@ -74,12 +62,9 @@ if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0)
 		$insertFields = substr($insertFields, 0, -1);
 		$insertValues = substr($insertValues, 0, -1);
 		
-		if ($conn->getAdapter() == "sqlite")
-		{
+		if ($conn->getAdapter() == "sqlite") {
 			$insertQuery = "INSERT INTO $table (" . $insertFields . ") VALUES (" . $insertValues . ")";
-		}
-		else
-		{
+		} else {
 			$insertQuery = "INSERT INTO `$table` (" . $insertFields . ") VALUES (" . $insertValues . ")";
 		}
 		
@@ -87,12 +72,9 @@ if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0)
 		
 		$insertId = $conn->insertId();
 		
-		if (isset($dbError))
-		{
+		if (isset($dbError)) {
 			echo '<div class="errormessage" style="margin: 6px 12px 10px; width: 350px">' . $dbError . '</div>';
-		}
-		else
-		{
+		} else {
 			echo '<div class="insertmessage" id="freshmess">';
 			echo __("Your data has been inserted into the database.");
 			if ($insertId)
@@ -104,7 +86,6 @@ if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0)
 			<script type="text/javascript" authkey="<?php echo $requestKey; ?>">
 			
 			clearPanesOnLoad = true;
-			
 			yellowFade($('freshmess'));
 			
 			</script>
@@ -122,13 +103,10 @@ if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0)
 	
 	$firstField = true;
 	
-	if ($conn->getAdapter() == "sqlite")
-	{
+	if ($conn->getAdapter() == "sqlite") {
 	
-		if (sizeof($structureSql) > 0)
-		{
-			foreach ($structureSql as $column)
-			{
+		if (sizeof($structureSql) > 0) {
+			foreach ($structureSql as $column) {
 				
 				echo '<tr>';
 				echo '<td class="fieldheader"><span style="color: steelblue">';
@@ -140,25 +118,19 @@ if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0)
 				echo "<tr>";
 				echo '<td class="inputarea">';
 				
-				if (strpos($column[1], "text") !== false)
-				{
+				if (strpos($column[1], "text") !== false) {
 					echo '<textarea name="' . $column[0] . '">';
-					if (isset($dbError))
-					{
+					if (isset($dbError)) {
 						echo $_POST[$column[0]];
 					}
 					echo '</textarea>';
-				}
-				else
-				{
+				} else {
 					echo '<input type="text"';
 					echo ' name="' . $column[0] . '"';
-					if (isset($dbError))
-					{
+					if (isset($dbError)) {
 						echo 'value="' . $_POST[$column[0]] . '"';
 					}
-					if ($firstField)
-					{
+					if ($firstField) {
 						echo ' id="FIRSTFIELD"';
 						$firstField = false;
 					}
@@ -174,14 +146,10 @@ if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0)
 			}
 		}
 	
-	}
-	else if ($conn->getAdapter() == "mysql")
-	{
+	} else if ($conn->getAdapter() == "mysql") {
 		
-		if ($conn->isResultSet($structureSql))
-		{
-			while ($structureRow = $conn->fetchAssoc($structureSql))
-			{
+		if ($conn->isResultSet($structureSql)) {
+			while ($structureRow = $conn->fetchAssoc($structureSql)) {
 				
 				preg_match("/^([a-z]+)(.([0-9]+).)?(.*)?$/", $structureRow['Type'], $matches);
 				
@@ -199,45 +167,36 @@ if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0)
 				echo "</tr>";
 				echo "<tr>";
 				echo '<td class="inputarea">';
-				if ($structureRow['Type'] == "text")
-				{
+				if ($structureRow['Type'] == "text") {
 					echo '<textarea name="' . $structureRow['Field'] . '">';
 					if (isset($dbError))
 						echo $_POST[$structureRow['Field']];
 					echo '</textarea>';
 				}
-				elseif (substr($structureRow['Type'], 0, 4) == "enum")
-				{
+				elseif (substr($structureRow['Type'], 0, 4) == "enum") {
 					$trimmed = substr($structureRow['Type'], 6, -2);
 					$listOptions = explode("','", $trimmed);
 					echo '<select name="' . $structureRow['Field'] . '">';
 					echo '<option> - - - - - </option>';
-					foreach ($listOptions as $option)
-					{
+					foreach ($listOptions as $option) {
 						echo '<option value="' . $option . '">' . $option . '</option>';
 					}
 					echo '</select>';
 				}
-				elseif (substr($structureRow['Type'], 0, 3) == "set")
-				{
+				elseif (substr($structureRow['Type'], 0, 3) == "set") {
 					$trimmed = substr($structureRow['Type'], 5, -2);
 					$listOptions = explode("','", $trimmed);
-					foreach ($listOptions as $option)
-					{
+					foreach ($listOptions as $option) {
 						$id = $option . rand(1, 1000);
 						echo '<label for="' . $id . '"><input name="' . $structureRow['Field'] . '[]" value="' . $option . '" id="' . $id . '" type="checkbox">' . $option . '</label><br />';
 					}
-				}
-				else
-				{
+				} else {
 					echo '<input type="text"';
 					echo ' name="' . $structureRow['Field'] . '"';
-					if (isset($dbError))
-					{
+					if (isset($dbError)) {
 						echo 'value="' . $_POST[$structureRow['Field']] . '"';
 					}
-					if ($firstField && $structureRow['Extra'] != "auto_increment")
-					{
+					if ($firstField && $structureRow['Extra'] != "auto_increment") {
 						echo ' id="FIRSTFIELD"';
 						$firstField = false;
 					}
@@ -266,8 +225,7 @@ if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0)
 	
 	<?php
 	
-	if (!$firstField)
-	{
+	if (!$firstField) {
 	?>
 		<script type="text/javascript" authkey="<?php echo $requestKey; ?>">
 		
@@ -277,9 +235,7 @@ if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0)
 	<?php
 	}
 
-}
-else
-{
+} else {
 	?>
 	
 	<div class="errorpage">

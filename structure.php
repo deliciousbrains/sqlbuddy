@@ -22,8 +22,7 @@ requireDatabaseAndTableBeDefined();
 if (isset($db))
 	$conn->selectDB($db);
 
-if (isset($_POST))
-{
+if (isset($_POST)) {
 	
 	// process form - add index
 	if (isset($_POST['INDEXTYPE']))
@@ -32,8 +31,7 @@ if (isset($_POST))
 	if (isset($_POST['INDEXCOLUMNLIST']))
 		$indexColumnList = $_POST['INDEXCOLUMNLIST'];
 	
-	if (isset($indexType) && isset($indexColumnList) && $indexType && $indexColumnList)
-	{
+	if (isset($indexType) && isset($indexColumnList) && $indexType && $indexColumnList) {
 		$indexColumnList = implode("`, `", $indexColumnList);
 		
 		$indexQuery = "ALTER TABLE `$table` ADD ";
@@ -59,27 +57,23 @@ if (isset($_POST))
 }
 
 //run delete queries
-if (isset($_POST['runQuery']))
-{
+if (isset($_POST['runQuery'])) {
 	$runQuery = $_POST['runQuery'];
 	
 	$queryList = splitQueryText($runQuery);
-	foreach ($queryList as $query)
-	{
+	foreach ($queryList as $query) {
 		if (trim($query) != "")
 			$conn->query($query) or ($dbError = $conn->error());
 	}
 }
 
-if (isset($dbError))
-{
+if (isset($dbError)) {
 	echo '<div class="errormessage" style="margin: 6px 12px 10px; width: 602px"><strong>' . __("Error performing operation") . '</strong><p>' . $dbError . '</p></div>';
 }
 
 $structureSql = $conn->describeTable($table);
 
-if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
-{
+if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql)) {
 
 ?>
 
@@ -129,8 +123,7 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 	
 	$m = 0;
 	
-	while ($structureRow = $conn->fetchAssoc($structureSql))
-	{
+	while ($structureRow = $conn->fetchAssoc($structureSql)) {
 		echo '<dl class="manip';
 		
 		if ($m % 2 == 1)
@@ -149,13 +142,11 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 	
 	$m = 0;
 	
-	while ($structureRow = $conn->fetchAssoc($structureSql))
-	{
+	while ($structureRow = $conn->fetchAssoc($structureSql)) {
 		
 		echo '<div class="row' . $m . ' browse';
 		
-		if ($m % 2 == 1)
-		{ echo ' alternator'; }
+		if ($m % 2 == 1) { echo ' alternator'; }
 		else 
 		{ echo ' alternator2'; }
 		
@@ -198,8 +189,7 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 		<select name="TYPE" onchange="toggleValuesLine(this, 'newfield')" style="width: 145px">
 		<?php
 		
-		foreach ($typeList as $type)
-		{
+		foreach ($typeList as $type) {
 			echo '<option value="' . $type . '">' . $type . '</option>';
 		}
 		
@@ -243,23 +233,19 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 		</td>
 		<?php
 		
-		if (isset($charsetList))
-		{
+		if (isset($charsetList)) {
 			echo "<td class=\"secondaryheader charsetToggle\">";
 			echo __("Charset") . ":";
 			echo "</td>";
 			echo "<td class=\"inputarea charsetToggle\">";
 			echo "<select name=\"CHARSET\" style=\"width: 145px\">";
 			echo "<option></option>";
-			foreach ($charsetList as $charset)
-			{
+			foreach ($charsetList as $charset) {
 				echo "<option value=\"" . $charset . "\">" . $charset . "</option>";
 			}
 			echo "</select>";
 			echo "</td>";
-		}
-		else
-		{
+		} else {
 			echo "<td></td>";
 			echo "<td></td>";
 		}
@@ -284,8 +270,7 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 		<option value=" FIRST"><?php echo __("At beginning of table"); ?></option>
 		<option value=""> - - - - - - - - </option>
 		<?php
-		for ($i=0; $i<count($fieldList); $i++)
-		{	
+		for ($i=0; $i<count($fieldList); $i++) {	
 			echo '<option value=" AFTER ' . $fieldList[$i] . '">' . __("After") . ' ' . $fieldList[$i] . '</option>';
 		}
 		?>
@@ -315,13 +300,11 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 	</tr>
 	<?php
 	
-	if (isset($charsetList) && isset($collationList))
-	{
+	if (isset($charsetList) && isset($collationList)) {
 		
 		$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$table'");
 		
-		if ($conn->isResultSet($infoSql) == 1)
-		{
+		if ($conn->isResultSet($infoSql) == 1) {
 		
 		$infoRow = $conn->fetchAssoc($infoSql);
 		
@@ -332,12 +315,10 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 		echo "<td class=\"inputarea\">";
 		echo "<select name=\"CHARSET\" id=\"RECHARSET\" style=\"width: 145px\">";
 		echo "<option></option>";
-		foreach ($charsetList as $charset)
-		{
+		foreach ($charsetList as $charset) {
 			echo "<option value=\"" . $charset . "\"";
 			
-			if ($collationList[$infoRow['Collation']] == $charset)
-			{
+			if ($collationList[$infoRow['Collation']] == $charset) {
 				echo ' selected="selected"';
 			}
 			
@@ -366,8 +347,7 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 	
 	$indexListSQL = $conn->query("SHOW INDEX FROM `$table`");
 	
-	if ($conn->isResultSet($indexListSQL))
-	{
+	if ($conn->isResultSet($indexListSQL)) {
 		
 		?>
 		
@@ -394,14 +374,10 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 		
 		$indexList = array();
 		
-		while ($indexListRow = $conn->fetchAssoc($indexListSQL))
-		{	
-			if (!array_key_exists($indexListRow['Key_name'], $indexList))
-			{
+		while ($indexListRow = $conn->fetchAssoc($indexListSQL)) {	
+			if (!array_key_exists($indexListRow['Key_name'], $indexList)) {
 				$indexList[$indexListRow['Key_name']] = $indexListRow['Column_name'];
-			}
-			else
-			{
+			} else {
 				$indexList[$indexListRow['Key_name']] .= ", " . $indexListRow['Column_name'];
 			}
 		}
@@ -428,8 +404,7 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 		
 		$m = 0;
 		
-		foreach ($indexList as $keyName => $columns)
-		{
+		foreach ($indexList as $keyName => $columns) {
 			echo '<dl class="manip';
 			
 			if ($m % 2 == 1)
@@ -446,12 +421,10 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 		
 		$m = 0;
 		
-		foreach ($indexList as $keyName => $columns)
-		{
+		foreach ($indexList as $keyName => $columns) {
 			echo '<div class="row' . $m . ' browse';
 			
-			if ($m % 2 == 1)
-			{ echo ' alternator'; }
+			if ($m % 2 == 1) { echo ' alternator'; }
 			else 
 			{ echo ' alternator2'; }
 			
@@ -502,17 +475,14 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 			
 			$finish = (count($fieldList) < 5) ? count($fieldList) : 5;
 			
-			for ($i=0; $i<$finish; $i++)
-			{	
+			for ($i=0; $i<$finish; $i++) {	
 				echo '<label><input type="checkbox" name="INDEXCOLUMNLIST[]" value="' . $fieldList[$i] . '">' . $fieldList[$i] . '</label><br />';
 			}
 			
-			if (count($fieldList) > 5)
-			{
+			if (count($fieldList) > 5) {
 				echo '<a onclick="show(\'columnListFull\'); hide(\'columnListLink\'); return false;" id="columnListLink">' . sprintf(__("Show %d more..."), count($fieldList) - 5) . '</a>';
 				echo '<div id="columnListFull" style="display: none">';
-				for ($i=5; $i<count($fieldList); $i++)
-				{	
+				for ($i=5; $i<count($fieldList); $i++) {	
 					echo '<label><input type="checkbox" name="INDEXCOLUMNLIST[]" value="' . $fieldList[$i] . '">' . $fieldList[$i] . '</label><br />';
 				}
 				echo '</div>';
@@ -548,8 +518,7 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 	
 	$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$table'");
 	
-	if ($conn->isResultSet($infoSql) == 1)
-	{
+	if ($conn->isResultSet($infoSql) == 1) {
 	
 	$infoRow = $conn->fetchAssoc($infoSql);
 	
@@ -563,8 +532,7 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 	
 	echo '<dt>' . __("Storage engine") . ':</dt><dd>' . $engine . '</dd>';
 	
-	if (array_key_exists('Collation', $infoRow) && isset($collationList))
-	{
+	if (array_key_exists('Collation', $infoRow) && isset($collationList)) {
 		echo '<dt>' . ("Charset") . ':</dt><dd>' . $collationList[$infoRow['Collation']] . '</dd>';
 	}
 	
@@ -594,9 +562,7 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql))
 
 <?php
 
-}
-else if ($conn->getAdapter() == "sqlite" && sizeof($structureSql) > 0)
-{
+} else if ($conn->getAdapter() == "sqlite" && sizeof($structureSql) > 0) {
 
 ?>
 <table cellpadding="0" width="100%" class="structure" style="margin: 2px 7px 7px">
@@ -638,13 +604,11 @@ else if ($conn->getAdapter() == "sqlite" && sizeof($structureSql) > 0)
 	
 	$m = 0;
 	
-	foreach ($structureSql as $column)
-	{
+	foreach ($structureSql as $column) {
 		
 		echo '<div class="row' . $m . ' browse';
 		
-		if ($m % 2 == 1)
-		{ echo ' alternator'; }
+		if ($m % 2 == 1) { echo ' alternator'; }
 		else 
 		{ echo ' alternator2'; }
 		
@@ -665,8 +629,7 @@ else if ($conn->getAdapter() == "sqlite" && sizeof($structureSql) > 0)
 	echo '</div>';
 	echo '</div>';
 	
-	if (version_compare($conn->getVersion(), "3.1.3", ">"))
-	{
+	if (version_compare($conn->getVersion(), "3.1.3", ">")) {
 	
 	?>
 
@@ -690,8 +653,7 @@ else if ($conn->getAdapter() == "sqlite" && sizeof($structureSql) > 0)
 		<option value="">typeless</option>
 		<?php
 		
-		foreach ($sqliteTypeList as $type)
-		{
+		foreach ($sqliteTypeList as $type) {
 			echo '<option value="' . $type . '">' . $type . '</option>';
 		}
 		
@@ -799,9 +761,7 @@ else if ($conn->getAdapter() == "sqlite" && sizeof($structureSql) > 0)
 
 <?php
 
-}
-else
-{
+} else {
 	?>
 	
 	<div class="errorpage">

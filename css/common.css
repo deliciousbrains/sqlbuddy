@@ -445,17 +445,6 @@ cursor: pointer;
 font-size: 12px;
 }
 
-.hometable {
-margin: 7px 0 0 10px;
-width: 475px;
-}
-.hometable p {
-line-height: 15px;
-}
-
-#userprivs td, #adminprivs td {
-padding: 1px 0 !important;
-}
 .paneheader {
 margin: 7px 0 0;
 color: rgb(115, 115, 115);
@@ -512,21 +501,18 @@ font-size: 12px !important;
 .edituser {
 margin: 0 0 4px 13px;
 padding: 12px 0;
-width: 430px;
+width: 325px;
 border-bottom: 1px solid rgb(175, 175, 175);
 }
 form:last-child .edituser {
 border-bottom: 0 !important;
 }
-.edituser table {
-width: 300px;
-}
-.edituser .paneheader {
-padding: 6px 0 2px;
-}
 .edituser .edit {
 border-bottom: 0;
 margin-bottom: 0;
+}
+.edituser .secondaryheader {
+width: 100px;
 }
 
 .users {
@@ -534,7 +520,21 @@ padding: 5px 7px 7px;
 width: 550px;
 }
 .users .inputbox {
-width: 370px;
+width: 325px;
+}
+.users .secondaryheader {
+width: 100px;
+}
+.privpane {
+background: rgb(245, 245, 245);
+padding: 1px 0px 8px 12px;
+margin-top: 5px;
+}
+#dbaccesspane {
+padding-top: 5px !important;
+}
+.privpane td {
+padding: 1px 0 !important;
 }
 
 .export {
@@ -815,6 +815,29 @@ padding: 4px 0;
 color: rgb(125, 125, 125);
 }
 
+.hometable {
+margin: 7px 0 0 10px;
+width: 475px;
+}
+.hometable p {
+line-height: 15px;
+}
+.hometable table td {
+padding-top: 7px;
+}
+.hometable .text {
+width: 120px;
+}
+.hometable select {
+width: 125px;
+}
+.hometable .inputfield {
+color: rgb(140, 140, 140);
+width: 85px;
+padding-right: 7px;
+text-align: right;
+}
+
 .keyboardtable {
 width: 445px;
 margin-top: 7px;
@@ -822,7 +845,7 @@ border-right: 1px solid rgb(200, 200, 200);
 border-bottom: 1px solid rgb(200, 200, 200);
 }
 .keyboardtable td, .keyboardtable th {
-padding: 1px 10px 1px 5px;
+padding: 1px 10px 1px 5px !important;
 border-left: 1px solid rgb(200, 200, 200);
 border-top: 1px solid rgb(200, 200, 200);
 }
@@ -830,18 +853,6 @@ border-top: 1px solid rgb(200, 200, 200);
 color: rgb(125, 125, 125);
 font-weight: normal;
 text-align: left;
-}
-
-h3.upgrade {
-color: #EB894E;
-padding-bottom: 5px;
-}
-.upgradelinks {
-padding-top: 5px;
-}
-.upgradelinks a {
-color: steelblue;
-text-decoration: underline;
 }
 
 dl.information {
@@ -856,22 +867,6 @@ color: rgb(125, 125, 125);
 dl.information dd {
 float: left;
 width: 100px;
-}
-
-.newdb td {
-padding-top: 7px;
-}
-.newdb .text {
-width: 120px;
-}
-.newdb select {
-width: 125px;
-}
-.newdb .inputfield {
-color: rgb(140, 140, 140);
-width: 70px;
-padding-right: 7px;
-text-align: right;
 }
 
 .morelink:hover {

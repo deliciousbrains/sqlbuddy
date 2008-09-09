@@ -17,22 +17,18 @@ include "includes/common.php";
 
 loginCheck();
 
-if ($_POST)
-{
+if ($_POST) {
 	
 	$outputBuffer = "";
 	
-	if (isset($db))
-	{
+	if (isset($db)) {
 		$dbs[] = $db;
 		
 		if (isset($table))
 			$tables[] = $table;
 		else if (isset($_POST['EXPORTTABLE']))
 			$tables = $_POST['EXPORTTABLE'];
-	}
-	else
-	{
+	} else {
 		if (isset($_POST['EXPORTDB']))
 			$dbs = $_POST['EXPORTDB'];
 		$exportDb = true;
@@ -59,8 +55,7 @@ if ($_POST)
 	if (isset($_POST['OUTPUT']))
 		$output = $_POST['OUTPUT'];
 	
-	if (isset($_POST['OUTPUTFILETEXT']))
-	{
+	if (isset($_POST['OUTPUTFILETEXT'])) {
 		$outputFile = "exports/" . basename($_POST['OUTPUTFILETEXT']);
 	}
 	
@@ -84,23 +79,15 @@ if ($_POST)
 	if (!isset($insertType) || $insertType != "COMPLETE")
 		$insertType = "COMPACT";
 	
-	if (isset($format) && $format == "SQL" && !isset($exportStructure) && !isset($exportData))
-	{
+	if (isset($format) && $format == "SQL" && !isset($exportStructure) && !isset($exportData)) {
 		$error = __("You must export either structure, data, or both") . ".";
-	}
-	else if (!isset($dbs))
-	{
+	} else if (!isset($dbs)) {
 		$error = __("Please select the databases that you would like to export") . ".";
-	}
-	else if (isset($db) && !isset($tables))
-	{
+	} else if (isset($db) && !isset($tables)) {
 		$error = __("Please select the tables that you would like to export") . ".";
-	}
-	else
-	{
+	} else {
 	
-		if ($format == "SQL")
-		{
+		if ($format == "SQL") {
 			
 			$version = $conn->getVersion();
 			
@@ -110,25 +97,21 @@ if ($_POST)
 			$outputBuffer .= "--\r\n\r\n";
 		}
 		
-		foreach ($dbs as $d)
-		{
+		foreach ($dbs as $d) {
 			
 			$conn->selectDB($d);
 			
 			// this checks to see if we are exporting an entire db with all tables
-			if (isset($exportDb) && $exportDb == true)
-			{
+			if (isset($exportDb) && $exportDb == true) {
 				
-				if ($format == "SQL")
-				{
+				if ($format == "SQL") {
 					
 					$outputBuffer .= "CREATE DATABASE `$d`";
 					
 					$currentChar = "";
 					$currentCharSql = $conn->query("SHOW VARIABLES LIKE 'character_set_database'");
 					
-					if ($conn->isResultSet($currentCharSql))
-					{
+					if ($conn->isResultSet($currentCharSql)) {
 						$currentChar = $conn->result($currentCharSql, 0, "Value");
 						
 						$outputBuffer .= " DEFAULT CHARSET " . $currentChar;
@@ -144,45 +127,37 @@ if ($_POST)
 				
 				$tables = "";
 				
-				if ($conn->isResultSet($tableSql))
-				{
-					while ($tableRow = $conn->fetchArray($tableSql))
-					{
+				if ($conn->isResultSet($tableSql)) {
+					while ($tableRow = $conn->fetchArray($tableSql)) {
 						$tables[] = $tableRow[0];
 					}
 				}
 			}
 			
-			foreach ($tables as $t)
-			{
+			foreach ($tables as $t) {
 				
-				if ($format == "SQL")
-				{
+				if ($format == "SQL") {
 					
 					$structureSQL = $conn->query("SHOW FULL FIELDS FROM `$t`");
 					
 					$tableEngine = "";
 					$tableCharset = "";
 					
-					if (isset($exportStructure))
-					{
+					if (isset($exportStructure)) {
 						
-						if ($conn->isResultSet($structureSQL))
-						{
+						if ($conn->isResultSet($structureSQL)) {
 							
 							$outputBuffer .= "CREATE TABLE `$t` (";
 							
 							$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$t'");
 							
-							if ($conn->isResultSet($infoSql) == 1)
-							{
+							if ($conn->isResultSet($infoSql) == 1) {
 								
 								$infoRow = $conn->fetchAssoc($infoSql);
 								
 								$tableEngine = (array_key_exists("Type", $infoRow)) ? $infoRow['Type'] : $infoRow['Engine'];
 								
-								if (array_key_exists('Collation', $infoRow) && isset($collationList))
-								{
+								if (array_key_exists('Collation', $infoRow) && isset($collationList)) {
 									$tableCharset = $collationList[$infoRow['Collation']];
 								}
 							
@@ -190,17 +165,14 @@ if ($_POST)
 							
 							$first = true;
 							
-							while ($structureRow = $conn->fetchAssoc($structureSQL))
-							{
+							while ($structureRow = $conn->fetchAssoc($structureSQL)) {
 								if (!$first)
 									$outputBuffer .= ",";
 								
 								$outputBuffer .= "\r\n   `" . $structureRow['Field'] . "` " . $structureRow['Type'];
 								
-								if (isset($collationList) && $structureRow['Collation'] != "NULL" && !is_null($structureRow['Collation']))
-								{
-									if ($collationList[$structureRow['Collation']] != $tableCharset)
-									{
+								if (isset($collationList) && $structureRow['Collation'] != "NULL" && !is_null($structureRow['Collation'])) {
+									if ($collationList[$structureRow['Collation']] != $tableCharset) {
 										$outputBuffer .= " CHARSET " . $collationList[$structureRow['Collation']];
 									}
 								}
@@ -208,12 +180,9 @@ if ($_POST)
 								if ($structureRow['Null'] != "YES")
 									$outputBuffer .= " NOT NULL";
 								
-								if ($structureRow['Default'] == "CURRENT_TIMESTAMP")
-								{
+								if ($structureRow['Default'] == "CURRENT_TIMESTAMP") {
 									$outputBuffer .= " DEFAULT CURRENT_TIMESTAMP";
-								}
-								else if ($structureRow['Default'])
-								{
+								} else if ($structureRow['Default']) {
 									$outputBuffer .= " DEFAULT '" . $structureRow['Default'] . "'";
 								}
 								
@@ -226,14 +195,11 @@ if ($_POST)
 							// dont forget about the keys
 							$keySQL = $conn->query("SHOW INDEX FROM `$t`");
 							
-							if ($conn->isResultSet($keySQL))
-							{
+							if ($conn->isResultSet($keySQL)) {
 								$currentKey = "";
-								while ($keyRow = $conn->fetchAssoc($keySQL))
-								{
+								while ($keyRow = $conn->fetchAssoc($keySQL)) {
 									// if this is the start of a key
-									if ($keyRow['Key_name'] != $currentKey)
-									{	
+									if ($keyRow['Key_name'] != $currentKey) {	
 										// finish off the last key first, if necessary
 										if ($currentKey != "")
 											$outputBuffer .= ")";
@@ -246,9 +212,7 @@ if ($_POST)
 											$outputBuffer .= ",\r\n   KEY `" . $keyRow['Key_name'] . "` (";
 										
 										$outputBuffer .= "`" . $keyRow['Column_name'] . "`";
-									}
-									else
-									{
+									} else {
 										$outputBuffer .= ",`" . $keyRow['Column_name'] . "`";
 									}
 									
@@ -262,13 +226,11 @@ if ($_POST)
 							
 							$outputBuffer .= "\r\n)";
 							
-							if ($tableEngine)
-							{
+							if ($tableEngine) {
 								$outputBuffer .= ' ENGINE=' . $tableEngine;
 							}
 							
-							if ($tableCharset)
-							{
+							if ($tableCharset) {
 								$outputBuffer .= ' DEFAULT CHARSET ' . $tableCharset;
 							}
 							
@@ -278,17 +240,14 @@ if ($_POST)
 					
 					$structureSQL = $conn->query("SHOW FULL FIELDS FROM `$t`");
 					
-					if (isset($exportData))
-					{
+					if (isset($exportData)) {
 						$dataSQL = $conn->query("SELECT * FROM `$t`");
 						
 						$columnList = array();
 						
 						// put the column names in an array
-						if ($conn->isResultSet($structureSQL))
-						{
-							while ($structureRow = $conn->fetchAssoc($structureSQL))
-							{
+						if ($conn->isResultSet($structureSQL)) {
+							while ($structureRow = $conn->fetchAssoc($structureSQL)) {
 								$columnList[] = $structureRow['Field'];
 								$type[] = $structureRow['Type'];
 							}
@@ -296,23 +255,18 @@ if ($_POST)
 						
 						$columnImplosion = implode("`, `", $columnList);
 						
-						if ($conn->isResultSet($dataSQL))
-						{
+						if ($conn->isResultSet($dataSQL)) {
 							
 							if ($insertType == "COMPACT")
 								$outputBuffer .= "INSERT INTO `$t` (`$columnImplosion`) VALUES \r\n";
 							
 							$firstLine = true;
 							
-							while ($dataRow = $conn->fetchAssoc($dataSQL))
-							{
+							while ($dataRow = $conn->fetchAssoc($dataSQL)) {
 								
-								if ($insertType == "COMPLETE")
-								{
+								if ($insertType == "COMPLETE") {
 									$outputBuffer .= "INSERT INTO `$t` (`$columnImplosion`) VALUES ";
-								}
-								else
-								{
+								} else {
 									if (!$firstLine)
 										$outputBuffer .= ",\r\n";
 								}
@@ -321,19 +275,15 @@ if ($_POST)
 								
 								$first = true;
 								
-								for ($i=0; $i<sizeof($columnList); $i++)
-								{
+								for ($i=0; $i<sizeof($columnList); $i++) {
 									if (!$first)
 										$outputBuffer .= ", ";
 									
 									$currentData = $dataRow[$columnList[$i]];
 									
-									if (isset($type) && $currentData && ((isset($binaryDTs) && in_array($type[$i], $binaryDTs)) || stristr($type[$i], "binary") !== false))
-									{
+									if (isset($type) && $currentData && ((isset($binaryDTs) && in_array($type[$i], $binaryDTs)) || stristr($type[$i], "binary") !== false)) {
 										$outputBuffer .= "0x" . bin2hex($currentData);
-									}
-									else
-									{
+									} else {
 										$outputBuffer .= "'" . formatDataForExport($currentData) . "'";
 									}
 									
@@ -352,28 +302,21 @@ if ($_POST)
 							if ($insertType == "COMPACT")
 								$outputBuffer .= ";\r\n";
 							
-						}
-						else
-						{
+						} else {
 							$outputBuffer .= "-- [" . sprintf(__("Table `%s` is empty"), $t) . "]\r\n";
 						}
 					}
 					
 					$outputBuffer .= "\r\n";
 					
-				}
-				else if ($format == "CSV")
-				{
+				} else if ($format == "CSV") {
 					
-					if (isset($printFieldnames))
-					{
+					if (isset($printFieldnames)) {
 						$structureSQL = $conn->query("DESCRIBE `$t`");
 							
-						if ($conn->isResultSet($structureSQL))
-						{
+						if ($conn->isResultSet($structureSQL)) {
 							$first = true;
-							while ($structureRow = $conn->fetchArray($structureSQL))
-							{
+							while ($structureRow = $conn->fetchArray($structureSQL)) {
 								if (!$first)
 									$outputBuffer .= $delimiter;
 								
@@ -387,13 +330,10 @@ if ($_POST)
 					
 					$dataSQL = $conn->query("SELECT * FROM `$t`");
 					
-					if ($conn->isResultSet($dataSQL))
-					{
-						while ($dataRow = $conn->fetchArray($dataSQL))
-						{
+					if ($conn->isResultSet($dataSQL)) {
+						while ($dataRow = $conn->fetchArray($dataSQL)) {
 							$data = array(); // empty the array
-							foreach ($dataRow as $each)
-							{
+							foreach ($dataRow as $each) {
 								$data[] = "\"" . formatDataForCSV($each) . "\"";
 							}
 							
@@ -411,30 +351,20 @@ if ($_POST)
 		
 		$outputBuffer = trim($outputBuffer);
 		
-		if ($outputBuffer)
-		{
-			if ($output == "BROWSER")
-			{
+		if ($outputBuffer) {
+			if ($output == "BROWSER") {
 				echo "<div id=\"EXPORTWRAPPER\">";
 					echo "<strong>" . __("Results:") . "</strong> [<a onclick=\"$('EXPORTRESULTS').select()\">" . __("Select all") . "</a>]";
 					echo "<textarea id=\"EXPORTRESULTS\">$outputBuffer</textarea>";
 				echo "</div>";
-			}
-			else
-			{
+			} else {
 				
-				if (!$handle = @fopen($outputFile, "w"))
-				{
+				if (!$handle = @fopen($outputFile, "w")) {
 					$error = __("The file could not be opened") . ".";
-				}
-				else
-				{
-					if (fwrite($handle, $outputBuffer) === false)
-					{
+				} else {
+					if (fwrite($handle, $outputBuffer) === false) {
 						$error = __("Could not write to file") . ".";
-					}
-					else
-					{
+					} else {
 						echo '<div style="margin: 10px 12px 5px 14px; color: rgb(100, 100, 100)">';
 						echo __("Successfully wrote content to file") . '. <a href="' . $outputFile . '">' . __("Download") . '</a><br /><strong>' . __("Note") . ':</strong>' . __("If this is a public server, you should delete this file from the server after you download it") . '.</div>';
 					}
@@ -448,8 +378,7 @@ if ($_POST)
 	}
 }
 
-if (isset($error))
-{
+if (isset($error)) {
 	echo '<div class="errormessage" style="margin: 14px 12px 7px 14px; width: 340px">' . $error . '</div>';
 }
 
@@ -463,8 +392,7 @@ if (isset($error))
 	<table cellpadding="0">
 	<?php
 	
-	if (isset($db) && !isset($table))
-	{
+	if (isset($db) && !isset($table)) {
 	
 	?>
 	<tr>
@@ -477,10 +405,8 @@ if (isset($error))
 		
 		$tableSql = $conn->query("SHOW TABLES");
 		
-		if ($conn->isResultSet($tableSql))
-		{
-			while ($tableRow = $conn->fetchArray($tableSql))
-			{
+		if ($conn->isResultSet($tableSql)) {
+			while ($tableRow = $conn->fetchArray($tableSql)) {
 				echo '<option value="' . $tableRow[0] . '"';
 				
 				if (isset($tables) && in_array($tableRow[0], $tables))
@@ -496,9 +422,7 @@ if (isset($error))
 	</tr>
 	<?php
 	
-	}
-	else if (!isset($db))
-	{
+	} else if (!isset($db)) {
 	?>
 	
 	<tr>
@@ -509,10 +433,8 @@ if (isset($error))
 		
 		$dbSql = $conn->query("SHOW DATABASES");
 		
-		if ($conn->isResultSet($dbSql))
-		{
-			while ($dbRow = $conn->fetchArray($dbSql))
-			{
+		if ($conn->isResultSet($dbSql)) {
+			while ($dbRow = $conn->fetchArray($dbSql)) {
 				echo '<option value="' . $dbRow[0] . '"';
 				
 				if (isset($dbs) && in_array($dbRow[0], $dbs))
@@ -528,9 +450,7 @@ if (isset($error))
 	</tr>
 	
 	<?php
-	}
-	else if (isset($db) && isset($table))
-	{
+	} else if (isset($db) && isset($table)) {
 	
 	?>
 	<tr>
