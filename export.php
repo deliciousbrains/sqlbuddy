@@ -92,7 +92,12 @@ if ($_POST) {
 			$version = $conn->getVersion();
 			
 			$outputBuffer .= "--\r\n";
-			$outputBuffer .= "-- MySQL " . $version . "\r\n";
+			
+			if ($conn->getAdapter() == "mysql")
+				$outputBuffer .= "-- MySQL " . $version . "\r\n";
+			else if ($conn->getAdapter() == "sqlite")
+				$outputBuffer .= "-- SQLite " . $version . "\r\n";
+			
 			$outputBuffer .= "-- " . date("r") . "\r\n";
 			$outputBuffer .= "--\r\n\r\n";
 		}
@@ -108,13 +113,16 @@ if ($_POST) {
 					
 					$outputBuffer .= "CREATE DATABASE `$d`";
 					
-					$currentChar = "";
-					$currentCharSql = $conn->query("SHOW VARIABLES LIKE 'character_set_database'");
-					
-					if ($conn->isResultSet($currentCharSql)) {
-						$currentChar = $conn->result($currentCharSql, 0, "Value");
+					if ($conn->hasCharsetSupport())
+					{
+						$currentChar = "";
+						$currentCharSql = $conn->query("SHOW VARIABLES LIKE 'character_set_database'");
 						
-						$outputBuffer .= " DEFAULT CHARSET " . $currentChar;
+						if ($conn->isResultSet($currentCharSql)) {
+							$currentChar = $conn->result($currentCharSql, 0, "Value");
+							
+							$outputBuffer .= " DEFAULT CHARSET " . $currentChar;
+						}
 					}
 					
 					$outputBuffer .= ";\r\n\r\n";
@@ -123,7 +131,7 @@ if ($_POST) {
 					
 				}
 				
-				$tableSql = $conn->query("SHOW TABLES");
+				$tableSql = $conn->listTables();
 				
 				$tables = "";
 				
@@ -138,7 +146,10 @@ if ($_POST) {
 				
 				if ($format == "SQL") {
 					
-					$structureSQL = $conn->query("SHOW FULL FIELDS FROM `$t`");
+					if ($conn->getAdapter() == "mysql")
+						$structureSQL = $conn->query("SHOW FULL FIELDS FROM `$t`");
+					else
+						$structureSQL = $conn->describeTable($t);
 					
 					$tableEngine = "";
 					$tableCharset = "";
@@ -147,163 +158,243 @@ if ($_POST) {
 						
 						if ($conn->isResultSet($structureSQL)) {
 							
-							$outputBuffer .= "CREATE TABLE `$t` (";
-							
-							$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$t'");
-							
-							if ($conn->isResultSet($infoSql) == 1) {
+							if ($conn->getAdapter() == "mysql") {
 								
-								$infoRow = $conn->fetchAssoc($infoSql);
+								$outputBuffer .= "CREATE TABLE `$t` (";
 								
-								$tableEngine = (array_key_exists("Type", $infoRow)) ? $infoRow['Type'] : $infoRow['Engine'];
+								$infoSql = $conn->query("SHOW TABLE STATUS LIKE '$t'");
 								
-								if (array_key_exists('Collation', $infoRow) && isset($collationList)) {
-									$tableCharset = $collationList[$infoRow['Collation']];
+								if ($conn->isResultSet($infoSql) == 1) {
+									
+									$infoRow = $conn->fetchAssoc($infoSql);
+									
+									$tableEngine = (array_key_exists("Type", $infoRow)) ? $infoRow['Type'] : $infoRow['Engine'];
+									
+									if (array_key_exists('Collation', $infoRow) && isset($collationList)) {
+										$tableCharset = $collationList[$infoRow['Collation']];
+									}
+								
 								}
-							
+								
+							} else if ($conn->getAdapter() == "sqlite") {
+								
+								$outputBuffer .= "CREATE TABLE '$t' (";
 							}
 							
 							$first = true;
 							
-							while ($structureRow = $conn->fetchAssoc($structureSQL)) {
-								if (!$first)
-									$outputBuffer .= ",";
-								
-								$outputBuffer .= "\r\n   `" . $structureRow['Field'] . "` " . $structureRow['Type'];
-								
-								if (isset($collationList) && $structureRow['Collation'] != "NULL" && !is_null($structureRow['Collation'])) {
-									if ($collationList[$structureRow['Collation']] != $tableCharset) {
-										$outputBuffer .= " CHARSET " . $collationList[$structureRow['Collation']];
+							if ($conn->getAdapter() == "mysql") {
+							
+								while ($structureRow = $conn->fetchArray($structureSQL)) {
+									
+									if (!$first)
+										$outputBuffer .= ",";
+									
+									$outputBuffer .= "\r\n   `" . $structureRow[0] . "` " . $structureRow[1];
+									
+									if (isset($collationList) && $structureRow['Collation'] != "NULL" && !is_null($structureRow['Collation'])) {
+										if ($collationList[$structureRow['Collation']] != $tableCharset) {
+											$outputBuffer .= " CHARSET " . $collationList[$structureRow['Collation']];
+										}
 									}
+									
+									if (isset($structureRow['Null']) && $structureRow['Null'] != "YES")
+										$outputBuffer .= " NOT NULL";
+									
+									if (isset($structureRow['Default']) && $structureRow['Default'] == "CURRENT_TIMESTAMP") {
+										$outputBuffer .= " DEFAULT CURRENT_TIMESTAMP";
+									} else if (isset($structureRow['Default'])) {
+										$outputBuffer .= " DEFAULT '" . $structureRow['Default'] . "'";
+									}
+									
+									if (isset($structureRow['Extra']) && $structureRow['Extra'] != "")
+										$outputBuffer .= " " . $structureRow['Extra'];
+									
+									$first = false;
+								}
+							
+							} else if ($conn->getAdapter() == "sqlite") {
+								
+								foreach ($structureSQL as $structureRow) {
+									
+									if (!$first)
+										$outputBuffer .= ",";
+									
+									$outputBuffer .= "\r\n   " . $structureRow[0] . " " . $structureRow[1];
+									
+									$first = false;
 								}
 								
-								if ($structureRow['Null'] != "YES")
-									$outputBuffer .= " NOT NULL";
-								
-								if ($structureRow['Default'] == "CURRENT_TIMESTAMP") {
-									$outputBuffer .= " DEFAULT CURRENT_TIMESTAMP";
-								} else if ($structureRow['Default']) {
-									$outputBuffer .= " DEFAULT '" . $structureRow['Default'] . "'";
-								}
-								
-								if ($structureRow['Extra'])
-									$outputBuffer .= " " . $structureRow['Extra'];
-								
-								$first = false;
 							}
 							
 							// dont forget about the keys
-							$keySQL = $conn->query("SHOW INDEX FROM `$t`");
-							
-							if ($conn->isResultSet($keySQL)) {
-								$currentKey = "";
-								while ($keyRow = $conn->fetchAssoc($keySQL)) {
-									// if this is the start of a key
-									if ($keyRow['Key_name'] != $currentKey) {	
-										// finish off the last key first, if necessary
-										if ($currentKey != "")
-											$outputBuffer .= ")";
+							if ($conn->getAdapter() == "mysql") {
+								$keySQL = $conn->query("SHOW INDEX FROM `$t`");
+								
+								if ($conn->isResultSet($keySQL)) {
+									$currentKey = "";
+									while ($keyRow = $conn->fetchAssoc($keySQL)) {
+										// if this is the start of a key
+										if ($keyRow['Key_name'] != $currentKey) {	
+											// finish off the last key first, if necessary
+											if ($currentKey != "")
+												$outputBuffer .= ")";
+											
+											if ($keyRow['Key_name'] == "PRIMARY")
+												$outputBuffer .= ",\r\n   PRIMARY KEY (";
+											elseif ($keyRow['Non_unique'] == "0")
+												$outputBuffer .= ",\r\n   UNIQUE KEY (";
+											else
+												$outputBuffer .= ",\r\n   KEY `" . $keyRow['Key_name'] . "` (";
+											
+											$outputBuffer .= "`" . $keyRow['Column_name'] . "`";
+										} else {
+											$outputBuffer .= ",`" . $keyRow['Column_name'] . "`";
+										}
 										
-										if ($keyRow['Key_name'] == "PRIMARY")
-											$outputBuffer .= ",\r\n   PRIMARY KEY (";
-										elseif ($keyRow['Non_unique'] == "0")
-											$outputBuffer .= ",\r\n   UNIQUE KEY (";
-										else
-											$outputBuffer .= ",\r\n   KEY `" . $keyRow['Key_name'] . "` (";
-										
-										$outputBuffer .= "`" . $keyRow['Column_name'] . "`";
-									} else {
-										$outputBuffer .= ",`" . $keyRow['Column_name'] . "`";
+										$currentKey = $keyRow['Key_name'];
 									}
 									
-									$currentKey = $keyRow['Key_name'];
+									if (isset($currentKey) && $currentKey != "")
+										$outputBuffer .= ")";
 								}
-								
-								if (isset($currentKey) && $currentKey != "")
-									$outputBuffer .= ")";
-								
 							}
 							
 							$outputBuffer .= "\r\n)";
 							
-							if ($tableEngine) {
-								$outputBuffer .= ' ENGINE=' . $tableEngine;
-							}
-							
-							if ($tableCharset) {
-								$outputBuffer .= ' DEFAULT CHARSET ' . $tableCharset;
+							if ($conn->getAdapter() == "mysql") {
+								if ($tableEngine) {
+									$outputBuffer .= ' ENGINE=' . $tableEngine;
+								}
+								
+								if ($tableCharset) {
+									$outputBuffer .= ' DEFAULT CHARSET ' . $tableCharset;
+								}
 							}
 							
 							$outputBuffer .= ";\r\n\r\n";
 						}
 					}
 					
-					$structureSQL = $conn->query("SHOW FULL FIELDS FROM `$t`");
+					if ($conn->getAdapter() == "mysql")
+						$structureSQL = $conn->query("SHOW FULL FIELDS FROM `$t`");
+					else
+						$structureSQL = $conn->describeTable($t);
 					
 					if (isset($exportData)) {
-						$dataSQL = $conn->query("SELECT * FROM `$t`");
 						
 						$columnList = array();
 						
-						// put the column names in an array
-						if ($conn->isResultSet($structureSQL)) {
-							while ($structureRow = $conn->fetchAssoc($structureSQL)) {
-								$columnList[] = $structureRow['Field'];
-								$type[] = $structureRow['Type'];
-							}
-						}
-						
-						$columnImplosion = implode("`, `", $columnList);
-						
-						if ($conn->isResultSet($dataSQL)) {
+						if ($conn->getAdapter() == "mysql") {
 							
-							if ($insertType == "COMPACT")
-								$outputBuffer .= "INSERT INTO `$t` (`$columnImplosion`) VALUES \r\n";
+							$dataSQL = $conn->query("SELECT * FROM `$t`");
 							
-							$firstLine = true;
-							
-							while ($dataRow = $conn->fetchAssoc($dataSQL)) {
-								
-								if ($insertType == "COMPLETE") {
-									$outputBuffer .= "INSERT INTO `$t` (`$columnImplosion`) VALUES ";
-								} else {
-									if (!$firstLine)
-										$outputBuffer .= ",\r\n";
+							// put the column names in an array
+							if ($conn->isResultSet($structureSQL)) {
+								while ($structureRow = $conn->fetchAssoc($structureSQL)) {
+									$columnList[] = $structureRow['Field'];
+									$type[] = $structureRow['Type'];
 								}
+							}
+							
+							$columnImplosion = implode("`, `", $columnList);
+							
+							if ($conn->isResultSet($dataSQL)) {
 								
-								$outputBuffer .= "(";
+								if ($insertType == "COMPACT")
+									$outputBuffer .= "INSERT INTO `$t` (`$columnImplosion`) VALUES \r\n";
 								
-								$first = true;
+								$firstLine = true;
 								
-								for ($i=0; $i<sizeof($columnList); $i++) {
-									if (!$first)
-										$outputBuffer .= ", ";
+								while ($dataRow = $conn->fetchAssoc($dataSQL)) {
 									
-									$currentData = $dataRow[$columnList[$i]];
-									
-									if (isset($type) && $currentData && ((isset($binaryDTs) && in_array($type[$i], $binaryDTs)) || stristr($type[$i], "binary") !== false)) {
-										$outputBuffer .= "0x" . bin2hex($currentData);
+									if ($insertType == "COMPLETE") {
+										$outputBuffer .= "INSERT INTO `$t` (`$columnImplosion`) VALUES ";
 									} else {
-										$outputBuffer .= "'" . formatDataForExport($currentData) . "'";
+										if (!$firstLine)
+											$outputBuffer .= ",\r\n";
 									}
 									
-									$first = false;
+									$outputBuffer .= "(";
+									
+									$first = true;
+									
+									for ($i=0; $i<sizeof($columnList); $i++) {
+										if (!$first)
+											$outputBuffer .= ", ";
+										
+										$currentData = $dataRow[$columnList[$i]];
+										
+										if (isset($type) && $currentData && ((isset($binaryDTs) && in_array($type[$i], $binaryDTs)) || stristr($type[$i], "binary") !== false)) {
+											$outputBuffer .= "0x" . bin2hex($currentData);
+										} else {
+											$outputBuffer .= "'" . formatDataForExport($currentData) . "'";
+										}
+										
+										$first = false;
+									}
+									
+									$outputBuffer .= ")";
+									
+									if ($insertType == "COMPLETE")
+										$outputBuffer .= ";\r\n";
+									
+									$firstLine = false;
+									
 								}
 								
-								$outputBuffer .= ")";
-								
-								if ($insertType == "COMPLETE")
+								if ($insertType == "COMPACT")
 									$outputBuffer .= ";\r\n";
 								
-								$firstLine = false;
-								
+							} else {
+								$outputBuffer .= "-- [" . sprintf(__("Table `%s` is empty"), $t) . "]\r\n";
 							}
 							
-							if ($insertType == "COMPACT")
-								$outputBuffer .= ";\r\n";
+						} else if ($conn->getAdapter() == "sqlite") {
 							
-						} else {
-							$outputBuffer .= "-- [" . sprintf(__("Table `%s` is empty"), $t) . "]\r\n";
+							$dataSQL = $conn->query("SELECT * FROM '$t'");
+							
+							// put the column names in an array
+							if ($conn->isResultSet($structureSQL)) {
+								foreach ($structureSQL as $structureRow) {
+									$columnList[] = $structureRow[0];
+									$type[] = $structureRow[1];
+								}
+							}
+							
+							$columnImplosion = implode("', '", $columnList);
+							
+							if ($conn->isResultSet($dataSQL)) {
+								
+								$firstLine = true;
+								
+								while ($dataRow = $conn->fetchAssoc($dataSQL)) {
+									
+									$outputBuffer .= "INSERT INTO '$t' ('$columnImplosion') VALUES (";
+									
+									$first = true;
+									
+									for ($i=0; $i<sizeof($columnList); $i++) {
+										if (!$first)
+											$outputBuffer .= ", ";
+										
+										$currentData = $dataRow[$columnList[$i]];
+										
+										$outputBuffer .= "'" . formatDataForExport($currentData) . "'";
+										
+										$first = false;
+									}
+									
+									$outputBuffer .= ");\r\n";
+									
+									$firstLine = false;
+									
+								}
+								
+							} else {
+								$outputBuffer .= "-- [" . sprintf(__("Table `%s` is empty"), $t) . "]\r\n";
+							}
+							
 						}
 					}
 					
@@ -312,27 +403,48 @@ if ($_POST) {
 				} else if ($format == "CSV") {
 					
 					if (isset($printFieldnames)) {
-						$structureSQL = $conn->query("DESCRIBE `$t`");
+						$structureSQL = $conn->describeTable($t);
 							
 						if ($conn->isResultSet($structureSQL)) {
 							$first = true;
-							while ($structureRow = $conn->fetchArray($structureSQL)) {
-								if (!$first)
-									$outputBuffer .= $delimiter;
+							
+							if ($conn->getAdapter() == "mysql") {
 								
-								$outputBuffer .= "\"" . $structureRow[0] . "\"";
+								while ($structureRow = $conn->fetchArray($structureSQL)) {
+									if (!$first)
+										$outputBuffer .= $delimiter;
+									
+									$outputBuffer .= "\"" . $structureRow[0] . "\"";
+									
+									$first = false;
+								}
 								
-								$first = false;
+							} else if ($conn->getAdapter() == "sqlite") {
+								
+								foreach ($structureSQL as $structureRow) {
+									if (!$first)
+										$outputBuffer .= $delimiter;
+									
+									$outputBuffer .= "\"" . $structureRow[0] . "\"";
+									
+									$first = false;
+								}
+								
 							}
+							
 							$outputBuffer .= "\r\n";
 						}
 					}
 					
-					$dataSQL = $conn->query("SELECT * FROM `$t`");
+					if ($conn->getAdapter() == "mysql") {
+						$dataSQL = $conn->query("SELECT * FROM `$t`");
+					} else if ($conn->getAdapter() == "sqlite") {
+						$dataSQL = $conn->query("SELECT * FROM '$t'");
+					}
 					
 					if ($conn->isResultSet($dataSQL)) {
 						while ($dataRow = $conn->fetchArray($dataSQL)) {
-							$data = array(); // empty the array
+							$data = array();
 							foreach ($dataRow as $each) {
 								$data[] = "\"" . formatDataForCSV($each) . "\"";
 							}
@@ -392,6 +504,8 @@ if (isset($error)) {
 	<table cellpadding="0">
 	<?php
 	
+	$showSeperator = false;
+	
 	if (isset($db) && !isset($table)) {
 	
 	?>
@@ -403,7 +517,7 @@ if (isset($error)) {
 		
 		$conn->selectDB($db);
 		
-		$tableSql = $conn->query("SHOW TABLES");
+		$tableSql = $conn->listTables();
 		
 		if ($conn->isResultSet($tableSql)) {
 			while ($tableRow = $conn->fetchArray($tableSql)) {
@@ -422,7 +536,9 @@ if (isset($error)) {
 	</tr>
 	<?php
 	
-	} else if (!isset($db)) {
+	$showSeperator = true;
+	
+	} else if (!isset($db) && $conn->getAdapter() != "sqlite") {
 	?>
 	
 	<tr>
@@ -431,7 +547,7 @@ if (isset($error)) {
 		<select name="EXPORTDB[]" id="exportDb" multiple="multiple" size="10">
 		<?php
 		
-		$dbSql = $conn->query("SHOW DATABASES");
+		$dbSql = $conn->listDatabases();
 		
 		if ($conn->isResultSet($dbSql)) {
 			while ($dbRow = $conn->fetchArray($dbSql)) {
@@ -448,8 +564,10 @@ if (isset($error)) {
 		</select>
 		</td>
 	</tr>
-	
 	<?php
+	
+	$showSeperator = true;
+	
 	} else if (isset($db) && isset($table)) {
 	
 	?>
@@ -462,12 +580,19 @@ if (isset($error)) {
 	</tr>
 	<?php
 	
+	$showSeperator = true;
+	
 	}
 	
 	?>
 	</table>
 	
-	<div class="exportseperator"></div>
+	<?php
+	
+	if ($showSeperator)
+		echo '<div class="exportseperator"></div>';
+	
+	?>
 	
 	<table cellpadding="0" id="sqlpane"<?php if (isset($format) && $format == "CSV") echo ' style="display: none"'; ?>>
 	<tr>
@@ -477,6 +602,11 @@ if (isset($error)) {
 			<label><input type="checkbox" name="DATA" value="DATA" <?php if (isset($exportData) || !($_POST)) echo 'checked="checked"'; ?> /><?php echo __("Data"); ?></label>
 		</td>
 	</tr>
+	<?php
+	
+	if ($conn->getAdapter() == "mysql") {
+	
+	?>
 	<tr>
 		<td class="secondaryheader"><?php echo __("Options"); ?>:</td>
 		<td>
@@ -484,6 +614,11 @@ if (isset($error)) {
 			<label><input type="radio" name="INSERTTYPE" value="COMPLETE" <?php if (isset($insertType) && $insertType == "COMPLETE") echo 'checked="checked"'; ?> /><?php echo __("Complete inserts"); ?></label>
 		</td>
 	</tr>
+	<?php
+	
+	}
+	
+	?>
 	</table>
 	
 	<table cellpadding="0" id="csvpane"<?php if ((isset($format) && $format == "SQL") || !isset($format)) echo ' style="display: none"'; ?>>

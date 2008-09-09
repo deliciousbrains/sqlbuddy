@@ -106,7 +106,11 @@ if (isset($_POST) || isset($_FILES)) {
 						
 						// make sure that the counts match up
 						if (sizeof($rawValues) == $columnCount) {
-							$conn->query("INSERT INTO `$table` VALUES ('$values')") or ($dbErrors[] = $conn->error());
+							
+							if ($conn->getAdapter() == "sqlite")
+								$conn->query("INSERT INTO '$table' VALUES ('$values')") or ($dbErrors[] = $conn->error());
+							else
+								$conn->query("INSERT INTO `$table` VALUES ('$values')") or ($dbErrors[] = $conn->error());
 							
 							$affected = (int)($conn->affectedRows());
 							

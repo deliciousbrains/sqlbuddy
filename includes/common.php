@@ -120,7 +120,8 @@ if (isset($conn) && $conn->isConnected()) {
 	if (isset($_GET['table']))
 		$table = $conn->escapeString($_GET['table']);
 	
-	if ($conn->getAdapter() == "mysql") {
+	if ($conn->hasCharsetSupport()) {
+		
 		$charsetSql = $conn->listCharset();
 		if ($conn->isResultSet($charsetSql)) {
 			while ($charsetRow = $conn->fetchAssoc($charsetSql)) {
@@ -450,6 +451,9 @@ function formatForOutput($text) {
 }
 
 function formatDataForExport($text) {
+	
+	global $conn;
+	
 	// replace line endings with character representations
 	while ($text != str_replace("\r\n", "\\r\\n", $text)) {
 		$text = str_replace("\r\n", "\\r\\n", $text);
@@ -462,9 +466,8 @@ function formatDataForExport($text) {
 	while ($text != str_replace("\n", "\\n", $text)) {
 		$text = str_replace("\n", "\\n", $text);
 	}
-
-	// escape single quotes
-	$text = str_replace("'", "\'", $text);
+	
+	$text = $conn->escapeString($text);
 	return $text;
 }
 

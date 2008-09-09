@@ -214,6 +214,17 @@ class SQL {
 		}
 	}
 	
+	function hasCharsetSupport()
+	{
+		if ($this->conn) {
+			if ($this->adapter == "mysql" && version_compare($this->getVersion(), "4.1", ">")) {
+				return true;
+			} else  {
+				return false;
+			}
+		}
+	}
+	
 	function listCharset() {
 		if ($this->conn) {
 			if ($this->adapter == "mysql") {	

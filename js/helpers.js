@@ -1190,7 +1190,7 @@ function returnQuote() {
 
 function autoExpandTextareas() {
 	var taList = document.getElementsByTagName("textarea");
-	if (taList.length > 0) {
+	if (taList.length > 0 && sb.page != "export.php") {
 		var sizeDiv = new Element('div', {
 			id: "sizeDiv",
 			styles: {
