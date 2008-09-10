@@ -605,15 +605,11 @@ function createWindow(title, content, options) {
 	var windowId = "window" + sb.$GUID++;
 	textWindow.id = windowId;
 	
-	if (options.isDialog || options.isDismissible) {
-		var leftValue = Math.round((windowInnerWidth - 400) / 2);
-	} else {
-		var leftValue = Math.round((windowInnerWidth - 400) / 2);
-	}
+	var leftValue = Math.round((windowInnerWidth - 475) / 2);
 	
 	textWindow.style.left = leftValue + "px";
 	
-	var topValue = 150;
+	var topValue = 120;
 	
 	if (window.scrollY)
 		topValue += window.scrollY;
@@ -638,7 +634,7 @@ function createWindow(title, content, options) {
 	
 	var windowInner = new Element('div');
 	windowInner.className = 'fulltextinner';
-	var innerContent = '<table cellspacing="0" width="100%"><tr><td class="mainl"></td><td class="maincenter"><div class="fulltextcontent" style="max-height: 300px">' + content + '</div>';
+	var innerContent = '<table cellspacing="0" width="100%"><tr><td class="mainl"></td><td class="maincenter"><div class="fulltextcontent" style="max-height: 400px">' + content + '</div>';
 	
 	if (!(options.isDialog || options.isDismissible)) {
 		innerContent += '<div class="resizeHandle"><img src="images/window-resize.png" id="resize' + windowId + '"></div>';
@@ -758,6 +754,32 @@ function getWindowHeight() {
 	else
 		return document.documentElement.clientHeight;
 }
+
+function getScrollbarWidth() {
+	
+	var outer = new Element('div');
+	outer.style.position = 'absolute';
+	outer.style.top = '-1000px';
+	outer.style.left = '-1000px';
+	outer.style.width = '100px';
+	outer.style.height = '50px';
+	outer.style.overflow = 'hidden';
+	
+	var inner = new Element('div');
+	inner.style.width = '100%';
+	inner.style.height = '200px';
+	
+	outer.appendChild(inner);
+	document.body.appendChild(outer);
+	
+	var w1 = inner.offsetWidth;
+	outer.style.overflow = "auto";
+	var w2 = inner.offsetWidth;
+	
+	document.body.removeChild(outer);
+	
+	return (w1 - w2);
+};
 
 function addAnimation(id, finish) {
 	var elem = $(id);

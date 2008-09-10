@@ -653,11 +653,14 @@ function sizePage() {
 		sb.grid.style.maxHeight = gridHeight + 'px';
 		
 		if (sb.leftChecks) {
-			var otherWidth = sb.grid.scrollWidth + 15;
+			
+			var scrollbarWidth = getScrollbarWidth();
+			
+			var otherWidth = sb.grid.scrollWidth + scrollbarWidth;
 			
 			// check for horizontal scrollbar
 			if ((sb.grid.offsetHeight == sb.grid.scrollHeight && sb.grid.offsetWidth != sb.grid.scrollWidth) || (sb.grid.offsetHeight != sb.grid.scrollHeight && sb.grid.offsetWidth != otherWidth)) {
-				sb.leftChecks.style.maxHeight = (gridHeight - 15) + 'px';
+				sb.leftChecks.style.maxHeight = (gridHeight - scrollbarWidth) + 'px';
 				sb.leftChecks.style.borderBottom = "1px solid rgb(200, 200, 200)";
 			} else {
 				sb.leftChecks.style.maxHeight = gridHeight + 'px';
@@ -1197,16 +1200,13 @@ function returnQuote() {
 function autoExpandTextareas() {
 	var taList = document.getElementsByTagName("textarea");
 	if (taList.length > 0 && sb.page != "export.php") {
-		var sizeDiv = new Element('div', {
-			id: "sizeDiv",
-			styles: {
-				visibility: "hidden",
-				position: "absolute",
-				lineHeight: "15px",
-				fontSize: "13px",
-				padding: "2px"
-			}
-		});
+		var sizeDiv = new Element('div');
+		sizeDiv.id = "sizeDiv";
+		sizeDiv.style.visibility = "hidden";
+		sizeDiv.style.position = "absolute";
+		sizeDiv.style.lineHeight = "15px";
+		sizeDiv.style.fontSize = "13px";
+		sizeDiv.style.padding = "2px";
 		document.body.appendChild(sizeDiv);
 		
 		for (var i=0; i<taList.length; i++) {

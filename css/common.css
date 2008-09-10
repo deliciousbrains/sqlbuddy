@@ -625,7 +625,7 @@ border-color: rgb(180, 180, 180) rgb(220, 220, 220) rgb(210, 210, 210) rgb(200, 
 position: absolute;
 text-align: left;
 color: rgb(240, 240, 240);
-width: 400px;
+width: 475px;
 }
 .fulltextheader {
 height: 21px;
@@ -697,7 +697,7 @@ background: url(images/window-shadow-bottom.png) repeat-x;
 }
 
 .dialog {
-width: 400px;
+width: 475px;
 }
 .dialog .fulltextcontent {
 min-height: 25px;

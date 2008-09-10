@@ -32,6 +32,10 @@ float: none !important;
 float: none !important;
 }
 
+.sublist {
+width: 225px;
+}
+
 #leftside {
 width: 225px !important;
 }

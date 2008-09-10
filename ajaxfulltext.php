@@ -52,7 +52,7 @@ if ($conn->isResultSet($sql)) {
 		}
 		
 		if ($value && isset($binaryDTs) && in_array($curtype, $binaryDTs)) {
-			echo "0x" . bin2hex($value);
+			echo '<span class="binary">(' . __("binary data") . ')</span>';
 		} else {
 			echo nl2br(htmlentities($value, ENT_QUOTES, 'UTF-8'));
 		}
