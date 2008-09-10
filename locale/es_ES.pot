@@ -1,12 +1,9 @@
 Language: Español
 Language-Code: es_ES
-Build-Date: Sun, 17 Aug 2008 18:30:17 -0600
+Build-Date: Tue, 09 Sep 2008 20:42:48 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "No se pudo encontrar el fichero o estaba vacío"
-
-msgid: "MySQL reported the following errors"
-msgstr: "MySQL ha reportado los siguiente errores"
 
 msgid: "Error performing operation"
 msgstr: "Error durante la operación"
@@ -21,7 +18,7 @@ msgid: "With selected"
 msgstr: "Con los seleccionados"
 
 msgid: "Empty"
-msgstr: "Vacio"
+msgstr: "Vacío"
 
 msgid: "Drop"
 msgstr: "Borrar"
@@ -84,7 +81,7 @@ msgid: "index"
 msgstr: "índice"
 
 msgid: "Default"
-msgstr: "Por omisión"
+msgstr: "Por Defecto"
 
 msgid: "Other"
 msgstr: "Otro"
@@ -96,7 +93,7 @@ msgid: "Binary"
 msgstr: "Binario"
 
 msgid: "Not Null"
-msgstr: "No nulo"
+msgstr: "No Nulo"
 
 msgid: "Auto Increment"
 msgstr: "Auto Incrementar"
@@ -105,7 +102,7 @@ msgid: "Add field"
 msgstr: "Añadir campo"
 
 msgid: "Oops"
-msgstr: "¡Mecacho!"
+msgstr: "Ups"
 
 msgid: "For some reason, the database parameter was not included with your request"
 msgstr: "Por alguna razón, en su consulta falta el parámetro de base de datos"
@@ -180,10 +177,10 @@ msgid: "You must export either structure, data, or both"
 msgstr: "Debe exportar la estructura, los datos o ambos"
 
 msgid: "Please select the databases that you would like to export"
-msgstr: "Por favor marque las bases de datos que desee exportar"
+msgstr: "Por favor seleccione las bases de datos que desee exportar"
 
 msgid: "Please select the tables that you would like to export"
-msgstr: "Por favor marque las tablas que desee exportar"
+msgstr: "Por favor seleccione las tablas que desee exportar"
 
 msgid: "Table `%s` is empty"
 msgstr: "La tabla `%s` esta vacia"
@@ -238,10 +235,10 @@ msgid: "Data"
 msgstr: "Datos"
 
 msgid: "Compact inserts"
-msgstr: "Compactar inserciones"
+msgstr: "Inserciones compactas"
 
 msgid: "Complete inserts"
-msgstr: "Completar inserciones"
+msgstr: "Inserciones completas"
 
 msgid: "Delimiter"
 msgstr: "Delimitador"
@@ -262,13 +259,13 @@ msgid: "Print field names on first line"
 msgstr: "Imprimir nombres de campo en la primera línea"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "Si está exportando muchas filas se recomienda que redirija el resultado a un fichero de texto"
+msgstr: "Si está exportando muchas filas se recomienda que extraiga los resultados a un fichero de texto"
 
 msgid: "Output to"
-msgstr: "Redirigir resultado a"
+msgstr: "Extraer a"
 
 msgid: "Browser"
-msgstr: "Navegar"
+msgstr: "Explorador"
 
 msgid: "Text file"
 msgstr: "Archivo de texto"
@@ -292,7 +289,7 @@ msgid: "Browse"
 msgstr: "Examinar"
 
 msgid: "Your changes were saved to the database"
-msgstr: "Sus cambios se han guardado en la base"
+msgstr: "Sus cambios se han guardado en la base de datos"
 
 msgid: "delete this row"
 msgstr: "borrar esta fila"
@@ -346,7 +343,7 @@ msgid: "Successfully saved changes"
 msgstr: "Se han guardado los cambios"
 
 msgid: "Full Text"
-msgstr: "Texto completo"
+msgstr: "Full Text"
 
 msgid: "Loading..."
 msgstr: "Cargando..."
@@ -370,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Está conectado al MySQL %s con el usuario %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "El servidor de bases de datos lleva funcionando desde %s y se han transferido aproximadamente %s de datos."
+msgstr: ""
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "¡Hay disponible una nueva versión de SQL Buddy!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "Su versión de SQL Buddy es la %s y se encuentra disponible la %s."
+msgstr: ""
 
 msgid: "Getting started"
 msgstr: "Primeros pasos"
@@ -388,7 +385,7 @@ msgid: "Translations"
 msgstr: "Traducciones"
 
 msgid: "Release Notes"
-msgstr: "Notas de la versión"
+msgstr: ""
 
 msgid: "Contact"
 msgstr: "Contactar"
@@ -580,13 +577,13 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Introducir usando el formato: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "¿Seguro que desea vaciar la tabla '%s'? Esta acción borrará los datos que contenga. Se ejecutará la siguiente consulta:"
+msgstr: "Â¿Seguro que desea vaciar la tabla '%s'? Esta acciÃ³n borrarÃ¡ los datos que contenga. Se ejecutarÃ¡ la siguiente consulta:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "¿Seguro que desea borrar la tabla '%s'? Esta acción borrará la tabla y los datos que contenga. Se ejecutará la siguiente consulta:"
+msgstr: "Â¿Seguro que desea borrar la tabla '%s'? Esta acciÃ³n borrarÃ¡ la tabla y los datos que contenga. Se ejecutarÃ¡ la siguiente consulta:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "¿Seguro que desea borrar la base de datos '%s'? Esta acción borrará la base, las tablas que contenga y sus datos. Se ejecutará la siguiente consulta:"
+msgstr: "Â¿Seguro que desea borrar la base de datos '%s'? Esta acciÃ³n borrarÃ¡ la base, las tablas que contenga y sus datos. Se ejecutarÃ¡ la siguiente consulta:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
 msgstr: "Lo lamentamos pero actualmente solo se soporta Internet Explorer 7, que se puede descargar gratuitamente desde la página web de Microsoft. Otros navegadores soportados: Firefox, Safari y Opera."
@@ -626,3 +623,42 @@ msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
 msgstr[0]: "%d fila se ha omitido porque el número de valores era incorrecto"
 msgstr[1]: "%d filas se ha omitido porque el número de valores era incorrecto"
+
+msgid: "Theme"
+msgstr: "Tema"
+
+msgid: "(%.4f seconds)"
+msgstr: "(%.4f segundos)"
+
+msgid: "The following errors were reported"
+msgstr: "Los siguientes errores fueron reportados"
+
+msgid: "You do not have enough permissions to create new users."
+msgstr: "No tiene suficientes permisos para crear nuevos usuarios."
+
+msgid: "You do not have enough permissions to view or manage users."
+msgstr: "No tiene suficientes permisos para ver o administrar usuarios"
+
+msgid: "You are connected to %s."
+msgstr: ""
+
+msgid: "Allow access to"
+msgstr: ""
+
+msgid: "All databases"
+msgstr: ""
+
+msgid: "Selected databases"
+msgstr: ""
+
+msgid: "Give user"
+msgstr: ""
+
+msgid: "Updates"
+msgstr: ""
+
+msgid: "There are no updates available"
+msgstr: ""
+
+msgid: "Change password"
+msgstr: ""

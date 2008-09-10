@@ -1,12 +1,9 @@
 Language: 中文 (简体)
 Language-Code: zh_CN
-Build-Date: Sun, 17 Aug 2008 18:33:18 -0600
+Build-Date: Tue, 09 Sep 2008 20:53:22 -0600
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "文件不可读或文件为空"
-
-msgid: "MySQL reported the following errors"
-msgstr: "MySQL报告了下列错误"
+msgstr: "文件为空或文件不可读"
 
 msgid: "Error performing operation"
 msgstr: "操作错误"
@@ -18,7 +15,7 @@ msgid: "None"
 msgstr: "无"
 
 msgid: "With selected"
-msgstr: "连同被选项"
+msgstr: "将选中项目"
 
 msgid: "Empty"
 msgstr: "清空"
@@ -126,7 +123,7 @@ msgid: "All privileges"
 msgstr: "所有权限"
 
 msgid: "Selected privileges"
-msgstr: "所选权限"
+msgstr: "选择权限"
 
 msgid: "User privileges"
 msgstr: "用户权限"
@@ -208,7 +205,7 @@ msgstr: "下载"
 
 msgid: "Note
 "
-msgstr: "注释"
+msgstr: "注"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
 msgstr: "如果这是一台公共服务器，您必须在下载后删除此文件"
@@ -238,10 +235,10 @@ msgid: "Data"
 msgstr: "数据"
 
 msgid: "Compact inserts"
-msgstr: "密集插入"
+msgstr: "简化的 Insert 语句"
 
 msgid: "Complete inserts"
-msgstr: "完整插入"
+msgstr: "完整的 Insert 语句"
 
 msgid: "Delimiter"
 msgstr: "分隔符"
@@ -262,7 +259,7 @@ msgid: "Print field names on first line"
 msgstr: "在第一行打印字段名"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "如果您正导出的是大量的行，建议将其输出为文本文件"
+msgstr: "如果您正导出的是大量的数据，建议将其输出为文本文件"
 
 msgid: "Output to"
 msgstr: "输出到"
@@ -367,16 +364,16 @@ msgid: "Welcome to SQL Buddy!"
 msgstr: "欢迎使用 SQL Buddy！"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "您已经以 %s 的身份连接到 MySQL %s 。"
+msgstr: "您已经连接到 MySQL %s ，连接身份为 %s 。"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "数据库服务器自从 %s 开始运行，并已经传输了大约 %s 的数据。"
+msgstr: ""
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "新版 SQL Buddy 可用！"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "你已经安装了 SQL Buddy %s ， %s 当前可用。"
+msgstr: ""
 
 msgid: "Getting started"
 msgstr: "新手上路"
@@ -385,13 +382,13 @@ msgid: "Help"
 msgstr: "帮助"
 
 msgid: "Translations"
-msgstr: "翻译"
+msgstr: "多国语言"
 
 msgid: "Release Notes"
-msgstr: "发行说明"
+msgstr: ""
 
 msgid: "Contact"
-msgstr: "联系"
+msgstr: "联系我们"
 
 msgid: "Create a new database"
 msgstr: "创建新数据库"
@@ -400,13 +397,13 @@ msgid: "Did you know..."
 msgstr: "您知道吗……"
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: "这里有种选中大量数据项简便方法，选择第一行，按住 Shift 键不放，然后选择最后一行，在这两行之间的所有项都会自动选中。"
+msgstr: "这里有种选中大量数据项的简便方法：选择第一行，按住 Shift 键不放，然后选择最后一行，在这两行之间的所有项都会自动选中。"
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
 msgstr: "在浏览中的列和查询选项卡是可以改变大小的。您可以按您需要调整宽窄。"
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "登录页面是基于 root@localhost 这一默认用户的。通过编辑config.php，你可以将默认用户和主机随意更改为所需值。"
+msgstr: "登录页面是基于 root@localhost 这一默认用户的。通过编辑config.php，您可以将默认用户和主机随意更改为所需值。"
 
 msgid: "Keyboard shortcuts"
 msgstr: "快捷键"
@@ -577,16 +574,16 @@ msgid: "Add a new user"
 msgstr: "添加新用户"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: "以 ('1','2') 的格式输入"
+msgstr: "按 ('1','2') 的格式输入"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "您确信您想清空 '%s' 表？这将删除其内部所有数据。下列查询将被运行："
+msgstr: "您确定您想清空数据表 '%s' ？这将删除其中所有数据。以下查询将运行："
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "您确信您想丢弃 '%s' 表？这将删除此表及其内部所有数据。下列查询将被运行："
+msgstr: "您确定您想删除数据表 '%s' ？这将删除该表及其中所有数据。以下查询将运行："
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "您确信您想丢弃 '%s' 数据库？这将删除此数据库及其内部所有表、表内所有数据。下列查询将被运行："
+msgstr: "您确定您想删除数据库 '%s' ？这将删除数据库本身、以及数据库中的表，和表中所有数据。以下查询将运行："
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
 msgstr: "我们很抱歉，但是目前只支持 Internet Explorer 7 。它可以在 Microsoft 的网站上免费下载。其他一些免费的浏览器也被支持，比如 Firefox、Safari 和 Opera。"
@@ -598,7 +595,7 @@ msgid: "Importing..."
 msgstr: "导入中……"
 
 msgid: "Drop the '%s' database"
-msgstr: "丢弃 '%s' 数据库"
+msgstr: "删除数据库 '%s'"
 
 msgid: "Okay"
 msgstr: "OK"
@@ -626,3 +623,42 @@ msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
 msgstr[0]: "由于对应的值的数目不正确， %d 行数据已被跳过"
 msgstr[1]: "由于对应的值的数目不正确， %d 行数据已被跳过"
+
+msgid: "Theme"
+msgstr: "主题"
+
+msgid: "(%.4f seconds)"
+msgstr: "（%.4f 秒）"
+
+msgid: "The following errors were reported"
+msgstr: "已报告下列错误"
+
+msgid: "You do not have enough permissions to create new users."
+msgstr: "您没有足够的权限来创建新用户。"
+
+msgid: "You do not have enough permissions to view or manage users."
+msgstr: "您没有足够的权限来查看或管理用户。"
+
+msgid: "You are connected to %s."
+msgstr: ""
+
+msgid: "Allow access to"
+msgstr: ""
+
+msgid: "All databases"
+msgstr: ""
+
+msgid: "Selected databases"
+msgstr: ""
+
+msgid: "Give user"
+msgstr: ""
+
+msgid: "Updates"
+msgstr: ""
+
+msgid: "There are no updates available"
+msgstr: ""
+
+msgid: "Change password"
+msgstr: ""

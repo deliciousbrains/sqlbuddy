@@ -1,11 +1,8 @@
 Language: English
 Language-Code: en_US
-Build-Date: Sun, 17 Aug 2008 18:45:16 -0600
+Build-Date: Tue, 09 Sep 2008 20:42:19 -0600
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: ""
-
-msgid: "MySQL reported the following errors"
 msgstr: ""
 
 msgid: "Error performing operation"
@@ -628,4 +625,40 @@ msgstr[0]: ""
 msgstr[1]: ""
 
 msgid: "Theme"
+msgstr: ""
+
+msgid: "(%.4f seconds)"
+msgstr: ""
+
+msgid: "The following errors were reported"
+msgstr: ""
+
+msgid: "You do not have enough permissions to create new users."
+msgstr: ""
+
+msgid: "You do not have enough permissions to view or manage users."
+msgstr: ""
+
+msgid: "You are connected to %s."
+msgstr: ""
+
+msgid: "Allow access to"
+msgstr: ""
+
+msgid: "All databases"
+msgstr: ""
+
+msgid: "Selected databases"
+msgstr: ""
+
+msgid: "Give user"
+msgstr: ""
+
+msgid: "Updates"
+msgstr: ""
+
+msgid: "There are no updates available"
+msgstr: ""
+
+msgid: "Change password"
 msgstr: ""

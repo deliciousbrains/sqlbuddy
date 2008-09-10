@@ -1,12 +1,9 @@
 Language: Deutsch
 Language-Code: de_DE
-Build-Date: Sun, 17 Aug 2008 18:44:04 -0600
+Build-Date: Tue, 09 Sep 2008 20:41:42 -0600
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "Entweder konnte die Datei nicht gefunden werden, oder die Datei ist leer"
-
-msgid: "MySQL reported the following errors"
-msgstr: "MySQL meldete folgende Fehler"
+msgstr: "Entweder konnte die Datei nicht gefunden werden oder die Datei ist leer"
 
 msgid: "Error performing operation"
 msgstr: "Fehler beim Ausführen der Operation"
@@ -21,10 +18,10 @@ msgid: "With selected"
 msgstr: "Markierte"
 
 msgid: "Empty"
-msgstr: "Leer"
+msgstr: "Leeren"
 
 msgid: "Drop"
-msgstr: "DROP"
+msgstr: "Löschen"
 
 msgid: "Optimize"
 msgstr: "Optimieren"
@@ -51,7 +48,7 @@ msgid: "Charset"
 msgstr: "Zeichensatz"
 
 msgid: "Submit"
-msgstr: "Los"
+msgstr: "Senden"
 
 msgid: "Create a new table"
 msgstr: "Neue Tabelle erstellen"
@@ -84,13 +81,13 @@ msgid: "index"
 msgstr: "index"
 
 msgid: "Default"
-msgstr: "Standardeinstellung"
+msgstr: "Standard"
 
 msgid: "Other"
 msgstr: "Andere"
 
 msgid: "Unsigned"
-msgstr: "Vorzeichenlos"
+msgstr: "Nicht signiert"
 
 msgid: "Binary"
 msgstr: "Binär"
@@ -108,7 +105,7 @@ msgid: "Oops"
 msgstr: "Hoppla"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "Aus irgendwelchen Grund war der Datenbankparameter nicht in Ihrer Anfrage"
+msgstr: "Der Datenbankparameter war nicht in Ihrer Anfrage enthalten."
 
 msgid: "Save changes to original"
 msgstr: "Änderungen auf das Original anwenden"
@@ -126,7 +123,7 @@ msgid: "All privileges"
 msgstr: "Alle Rechte"
 
 msgid: "Selected privileges"
-msgstr: "Auserwählte Rechte"
+msgstr: "Ausgewählte Rechte"
 
 msgid: "User privileges"
 msgstr: "Benutzerrechte"
@@ -177,7 +174,7 @@ msgid: "User not found!"
 msgstr: "Benutzer nicht gefunden!"
 
 msgid: "You must export either structure, data, or both"
-msgstr: "Sie müssen entweder Struktur, Daten oder Beides exportieren"
+msgstr: "Sie müssen entweder Struktur, Daten oder beides exportieren"
 
 msgid: "Please select the databases that you would like to export"
 msgstr: "Bitte wählen Sie die zu exportierenden Datenbanken aus"
@@ -211,7 +208,7 @@ msgid: "Note
 msgstr: "Notiz"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
-msgstr: "Sollte dies ein öffentlich zugänglicher Server sein, sollten Sie diese Datei nach dem herunterladen löschen"
+msgstr: "Sollte dies ein öffentlich zugänglicher Server sein, sollten Sie diese Datei nach dem Herunterladen löschen"
 
 msgid: "Export"
 msgstr: "Exportieren"
@@ -262,7 +259,7 @@ msgid: "Print field names on first line"
 msgstr: "Zellennamen in erste Zeile drucken"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "Sollten Sie viele Reihen exportieren, empfehlen wir die Ergebnisse in eine Textdatei zu speichern"
+msgstr: "Sollten Sie viele Reihen exportieren, empfehlen wir, die Ergebnisse in eine Textdatei zu speichern"
 
 msgid: "Output to"
 msgstr: "Ausgabe zu"
@@ -355,28 +352,28 @@ msgid: "Error"
 msgstr: "Fehler"
 
 msgid: "There was an error receiving data from the server"
-msgstr: "Fehler beim empfangen der Datei vom Server"
+msgstr: "Fehler beim Empfangen der Datei vom Server"
 
 msgid: "Logout"
 msgstr: "Ausloggen"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: "Aus irgendwelchen Grund war der Tabellenparameter nicht in Ihrer Anfrage"
+msgstr: "Der Tabellenparameter war nicht in Ihrer Anfrage enthalten."
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "Willkommen zu SQL Buddy!"
+msgstr: "Willkommen bei SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Verbunden mit MySQL %s als Benutzer %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "Server läuft seit %s und hat ca. %s Daten übertragen."
+msgstr: ""
 
 msgid: "A new version of SQL Buddy is available!"
-msgstr: "Neue SQL Buddy Version erhältlich!"
+msgstr: "Eine neue Version von SQL Buddy ist verfügbar!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "Sie haben SQL Buddy %s installiert. %s ist nun erhältlich."
+msgstr: ""
 
 msgid: "Getting started"
 msgstr: "Einführung"
@@ -388,7 +385,7 @@ msgid: "Translations"
 msgstr: "Übersetzungen"
 
 msgid: "Release Notes"
-msgstr: "Bemerkungen zur Version"
+msgstr: ""
 
 msgid: "Contact"
 msgstr: "Kontakt"
@@ -400,10 +397,10 @@ msgid: "Did you know..."
 msgstr: "Wussten Sie schon..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: "Es gibt einen leichteren Weg um eine größere Gruppe von Elementen während des browsens der Tabellenzeilen auszuwählen. Wähle die erste der auszuwählenden Zeilen aus, halte die Shift-Taste fest und wähle die letzte Zeile des zu markierenden Bereiches aus. Alle Checkboxen zwischen den beiden Zeilen werden automatisch ausgewählt."
+msgstr: "Es gibt einen leichteren Weg, um eine größere Gruppe von Elementen während des Browsens der Tabellenzeilen auszuwählen. Wählen Sie die erste der auszuwählenden Zeilen aus, halten Sie die Shift-Taste fest und wählen Sie die letzte Zeile des zu markierenden Bereiches aus. Alle Checkboxen zwischen den beiden Zeilen werden automatisch aktiviert."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: "Die Spalten der browse und query-Tabs sind veränderbar. Vergrössere oder verkleinere sie nach Wunsch."
+msgstr: "Die Spalten der browse- und query-Tabs sind veränderbar. Vergrößern oder verkleinern Sie sie nach Wunsch."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
 msgstr: "Die Loginseite basiert auf den Daten des Users root@localhost. Sie können die Standardwerte für den Datenbankbenutzer und Host in der config.php ändern."
@@ -448,7 +445,7 @@ msgid: "optimize selected tables"
 msgstr: "ausgewählte Tabellen optimieren"
 
 msgid: "Choose a .sql file to import"
-msgstr: "Wähle zum einlesen eine .sql Datei"
+msgstr: "Wählen Sie zum Einlesen eine .sql Datei"
 
 msgid: "File
 "
@@ -484,7 +481,7 @@ msgstr[0]: "Abfrage hatte %d Reihen"
 msgstr[1]: "Abfrage hatte %d Reihen"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Merke: Um eine Browsercrash zu verhindern, werden nur die ersten %d Reihen angezeigt"
+msgstr: "Merke: Um einen Browser-Absturz zu verhindern, werden nur die ersten %d Reihen angezeigt"
 
 msgid: "binary data"
 msgstr: "Binärdaten"
@@ -502,19 +499,19 @@ msgid: "There was a bit of trouble locating the \"%s\" table"
 msgstr: "Tabelle \"%s\" existiert nicht"
 
 msgid: "There was a problem logging you in"
-msgstr: "Fehler beim login"
+msgstr: "Fehler beim Login"
 
 msgid: "Login"
 msgstr: "Login"
 
 msgid: "Unsupported browser"
-msgstr: "Ununtersützter Browser"
+msgstr: "Nicht untersützter Browser"
 
 msgid: "Help!"
 msgstr: "Hilfe!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: "Session ausgelaufen. Bitte erneut einloggen."
+msgstr: "Die Session ist abgelaufen. Bitte loggen Sie sich erneut ein."
 
 msgid: "Username"
 msgstr: "Benutzername"
@@ -574,25 +571,25 @@ msgid: "Host"
 msgstr: "Host"
 
 msgid: "Add a new user"
-msgstr: "Neuen Bentuzer erstellen"
+msgstr: "Neuen Benutzer erstellen"
 
 msgid: "Enter in the format: ('1','2')"
 msgstr: "Im Format ('1','2') eingeben"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Sind Sie sicher, dass Sie die Tabelle '%s' leeren wollen? Dies wird alle Daten der Tabelle unwiderruflich löschen. Folgende Frage wird gelaufen:"
+msgstr: "Sind Sie sicher, dass Sie die Tabelle '%s' leeren wollen? Dies wird alle Daten der Tabelle unwiderruflich lÃ¶schen. Folgende Anfrage wird ausgefÃ¼hrt:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Sind Sie sicher, dass Sie die Tabelle '%s' löschen wollen? Dies wird alle Daten der Tabelle und die Tabelle unwiderruflich löschen. Folgende Frage wird gelaufen:"
+msgstr: "Sind Sie sicher, dass Sie die Tabelle '%s' löschen wollen? Dies wird alle Daten der Tabelle und die Tabelle unwiderruflich löschen. Folgende Anfrage wird ausgeführt:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Sind Sie sicher, dass Sie die Datenbank '%s' löschen wollen? Dies wird alle Tabellen, deren Daten und die Datenbank unwiderruflich löschen. Folgende Frage wird gelaufen:"
+msgstr: "Sind Sie sicher, dass Sie die Datenbank '%s' löschen wollen? Dies wird alle Tabellen, deren Daten und die Datenbank unwiderruflich löschen. Folgende Anfrage wird ausgefÃ¼hrt:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "Wir bitten um Verzeihung, aber momentan sind nur Internet Explorer 7, Firefox, Safari und Opera unterstützt."
+msgstr: "Wir bitten um Verzeihung, aber momentan werden nur Internet Explorer 7, Firefox, Safari und Opera unterstützt."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: "Sie haben Cookies nicht aktiviert. Sie müssen Cookies einschalten um sich einzuloggen."
+msgstr: "Sie haben Cookies nicht aktiviert. Sie müssen Cookies einschalten, um sich einzuloggen."
 
 msgid: "Importing..."
 msgstr: "Importiere..."
@@ -628,4 +625,40 @@ msgstr[0]: "%d Zeile wurde übersprungen, weil die Anzahl der Werte nicht korrek
 msgstr[1]: "%d Zeilen wurden übersprungen, weil die Anzahl der Werte nicht korrekt waren"
 
 msgid: "Theme"
+msgstr: "Aussehen"
+
+msgid: "(%.4f seconds)"
+msgstr: "(%.4f Sekunden)"
+
+msgid: "The following errors were reported"
+msgstr: "Die folgenden Fehler wurden berichtet"
+
+msgid: "You do not have enough permissions to create new users."
+msgstr: "Sie verfügen nicht über die Rechte neue Benutzer anzulegen."
+
+msgid: "You do not have enough permissions to view or manage users."
+msgstr: "Sie verfügen nicht über die Rechte Benutzer einzusehen oder sie zu konfigurieren."
+
+msgid: "You are connected to %s."
+msgstr: "Sie sind mit %s verbunden."
+
+msgid: "Allow access to"
+msgstr: "Zugriff erlauben auf"
+
+msgid: "All databases"
+msgstr: "All Datenbanken"
+
+msgid: "Selected databases"
+msgstr: "Ausgewählte Datenbanken"
+
+msgid: "Give user"
+msgstr: "Benutzer anlegen"
+
+msgid: "Updates"
+msgstr: ""
+
+msgid: "There are no updates available"
+msgstr: ""
+
+msgid: "Change password"
 msgstr: ""

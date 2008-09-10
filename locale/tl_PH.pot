@@ -1,12 +1,9 @@
 Language: Tagalog
 Language-Code: tl_PH
-Build-Date: Sun, 17 Aug 2008 18:48:13 -0600
+Build-Date: Tue, 09 Sep 2008 20:51:49 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Ang file ay hindi mabasa o walang laman"
-
-msgid: "MySQL reported the following errors"
-msgstr: "Ang MySQL ay nagkapagtala ng mga sumusunod na pagkakamali"
 
 msgid: "Error performing operation"
 msgstr: "Nagkaroon ng problema habang isinasagawa ang operasyon"
@@ -370,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Ikaw ay nakakonekta sa MySQL %s na ang gumagamit ay si %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "Ang database server ay tumatakbo mula ng %s at nakapaglipat ng humigit kumulang na %s laki ng datos."
+msgstr: ""
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "May bagong bersyon ng SQL Buddy na inilabas"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "Mayroon kang %s SQL Buddy na nakainstala at %s ang maaring gamitin."
+msgstr: ""
 
 msgid: "Getting started"
 msgstr: "Panimula"
@@ -388,7 +385,7 @@ msgid: "Translations"
 msgstr: "ibang salin"
 
 msgid: "Release Notes"
-msgstr: "Mga importanteng bagay sa bersyong ito"
+msgstr: ""
 
 msgid: "Contact"
 msgstr: "Kontak"
@@ -452,7 +449,7 @@ msgstr: "Mamili ng ipapasok na .sql file "
 
 msgid: "File
 "
-msgstr: "File:"
+msgstr: "File"
 
 msgid: "Ignore first line"
 msgstr: "Baliwalain ang unang linya"
@@ -514,10 +511,10 @@ msgid: "Help!"
 msgstr: "Tulong!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: "Ang iyong session ay lumagpas na sa itinakdang oras. Maaari kang pumasok muli."
+msgstr: "Ang iyong session ay lumagpas na sa itinakdang oras. Maaari kang pumasok muli. uli kula para!"
 
 msgid: "Username"
-msgstr: "Username"
+msgstr: "Alyas"
 
 msgid: "Password"
 msgstr: "Paniguru"
@@ -614,18 +611,54 @@ msgstr: "Linguahe"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d statement ay na-execute sa file"
+msgstr[1]: "%d statements ay na-execute sa file"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d na hanay ay naipasok sa database mula sa file"
+msgstr[1]: "%d na hanay ay naipasok na sa database mula sa file"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d na hanay ay nilaktawan sa dahilan na mali ang bilang ng values"
+msgstr[1]: "%d ng mga hanay nilaktawan sa dahilan na mali ang bilang ng mga values"
 
 msgid: "Theme"
+msgstr: "Tema"
+
+msgid: "(%.4f seconds)"
+msgstr: "(%.4f segundo)"
+
+msgid: "The following errors were reported"
+msgstr: "Ang mga sumusunod na problema ay iniulat"
+
+msgid: "You do not have enough permissions to create new users."
+msgstr: ""
+
+msgid: "You do not have enough permissions to view or manage users."
+msgstr: ""
+
+msgid: "You are connected to %s."
+msgstr: ""
+
+msgid: "Allow access to"
+msgstr: ""
+
+msgid: "All databases"
+msgstr: ""
+
+msgid: "Selected databases"
+msgstr: ""
+
+msgid: "Give user"
+msgstr: ""
+
+msgid: "Updates"
+msgstr: ""
+
+msgid: "There are no updates available"
+msgstr: ""
+
+msgid: "Change password"
 msgstr: ""

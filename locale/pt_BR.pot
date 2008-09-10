@@ -1,15 +1,12 @@
 Language: Português (Brasil)
 Language-Code: pt_BR
-Build-Date: Sun, 17 Aug 2008 18:31:58 -0600
+Build-Date: Tue, 09 Sep 2008 20:47:04 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "O arquivo não pode ser lido ou estava vazio."
 
-msgid: "MySQL reported the following errors"
-msgstr: "O MySQL reportou os seguintes erros"
-
 msgid: "Error performing operation"
-msgstr: "Erro executando operação"
+msgstr: "Erro ao executar operação"
 
 msgid: "All"
 msgstr: "Tudo"
@@ -18,7 +15,7 @@ msgid: "None"
 msgstr: "Nenhum"
 
 msgid: "With selected"
-msgstr: "Com os selecionado"
+msgstr: "Com os selecionados"
 
 msgid: "Empty"
 msgstr: "Vazio"
@@ -33,19 +30,19 @@ msgid: "Table"
 msgstr: "Tabela"
 
 msgid: "Rows"
-msgstr: "Registros"
+msgstr: "Registro"
 
 msgid: "Size"
 msgstr: "Tamanho"
 
 msgid: "Overhead"
-msgstr: ""
+msgstr: "Sobrecarregado"
 
 msgid: "Options"
 msgstr: "Opções"
 
 msgid: "Edit database"
-msgstr: "Editar Banco de Dados"
+msgstr: "Editar banco de dados"
 
 msgid: "Charset"
 msgstr: "Conjunto de caracteres"
@@ -75,7 +72,7 @@ msgid: "Key"
 msgstr: "Chave"
 
 msgid: "primary"
-msgstr: "primário"
+msgstr: "primária"
 
 msgid: "unique"
 msgstr: "único"
@@ -105,7 +102,7 @@ msgid: "Add field"
 msgstr: "Adicionar campo"
 
 msgid: "Oops"
-msgstr: "Oops"
+msgstr: "Ops! O.O"
 
 msgid: "For some reason, the database parameter was not included with your request"
 msgstr: "Por alguma razão, o parâmetro \"database\" não foi incluído em sua requisição"
@@ -129,7 +126,7 @@ msgid: "Selected privileges"
 msgstr: "Privilégios selecionados"
 
 msgid: "User privileges"
-msgstr: "Privilégios do usuário"
+msgstr: "Privilégios de usuário"
 
 msgid: "Select"
 msgstr: "Selecionar"
@@ -195,7 +192,7 @@ msgid: "Select all"
 msgstr: "Selecionar todos"
 
 msgid: "The file could not be opened"
-msgstr: "O arquivo não pode ser aberto"
+msgstr: "O arquivo não pôde ser aberto"
 
 msgid: "Could not write to file"
 msgstr: "Não foi possível escrever no arquivo"
@@ -211,7 +208,7 @@ msgid: "Note
 msgstr: "Nota"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
-msgstr: "Se este é um servidor público, você deve apagar este arquivo do servidor depois de fazer o download"
+msgstr: "Se este é um servidor público, você deve apagar este arquivo do servidor após fazer o download"
 
 msgid: "Export"
 msgstr: "Exportar"
@@ -292,7 +289,7 @@ msgid: "Browse"
 msgstr: "Navegar"
 
 msgid: "Your changes were saved to the database"
-msgstr: "Suas mudanças foram salvas para o banco de dados"
+msgstr: "Suas alterações foram salvas no banco de dados"
 
 msgid: "delete this row"
 msgstr: "apagar este registro"
@@ -343,7 +340,7 @@ msgid: "Confirm"
 msgstr: "Confirmar"
 
 msgid: "Successfully saved changes"
-msgstr: "Mudanças salvas com sucesso"
+msgstr: "Alterações salvas com sucesso"
 
 msgid: "Full Text"
 msgstr: "Texto completo"
@@ -355,7 +352,7 @@ msgid: "Error"
 msgstr: "Erro"
 
 msgid: "There was an error receiving data from the server"
-msgstr: "Houve um erro recebendo os dados do servidor"
+msgstr: "Houve um erro ao receber os dados do servidor"
 
 msgid: "Logout"
 msgstr: "Logout"
@@ -364,22 +361,22 @@ msgid: "For some reason, the table parameter was not included with your request"
 msgstr: "Por alguma razão, o parâmetro \"table\" não foi incluído em sua requisição"
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "Bem vindo so SQL Buddy!"
+msgstr: "Bem vindo ao SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Você está conectado ao MySQL %s com o usuário %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "O banco de dados está sendo executado desde %s e transferiu aproximadamente %s de dados."
+msgstr: ""
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Uma nova versão do SQL Buddy está disponível!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "Você possui a versão %s do SQL Buddy e %s está disponível"
+msgstr: ""
 
 msgid: "Getting started"
-msgstr: "Iniciando"
+msgstr: "Iniciando..."
 
 msgid: "Help"
 msgstr: "Ajuda"
@@ -388,7 +385,7 @@ msgid: "Translations"
 msgstr: "Traduções"
 
 msgid: "Release Notes"
-msgstr: "Notas da versão"
+msgstr: ""
 
 msgid: "Contact"
 msgstr: "Contato"
@@ -400,229 +397,268 @@ msgid: "Did you know..."
 msgstr: "Você sabia..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: "Existe uma maneira mais fácil de selecionar um grande grupo de itens quando estiver navegando nos registros de uma tabela. Marque o primeiro registro, pressiona a tecla Shift, e marque o último registro. Os registros entre eles serão automaticamente selecionados para você."
+msgstr: "Existe uma maneira mais fácil de selecionar um grande grupo de itens quando estiver navegando nos registros de uma tabela. Marque o primeiro registro, pressione a tecla Shift e marque o último registro. Os registros entre eles serão automaticamente selecionados para você."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
 msgstr: "As colunas nas abas Navegar e Consulta são redimensionáveis. Ajuste-as como quiser."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: ""
+msgstr: "A página de login é baseada no usuário padrão root@localhost. Ao editar config.php, você pode alterar o usuário padrão e host para o que você quiser."
 
 msgid: "Keyboard shortcuts"
-msgstr: ""
+msgstr: "Atalhos do teclado"
 
 msgid: "Press this key..."
-msgstr: ""
+msgstr: "Pressione essa tecla..."
 
 msgid: "...and this will happen"
-msgstr: ""
+msgstr: "... e acontecerá isso"
 
 msgid: "select none"
-msgstr: ""
+msgstr: "Nenhuma seleção"
 
 msgid: "edit selected items"
-msgstr: ""
+msgstr: "Editar itens selecionados"
 
 msgid: "delete selected items"
-msgstr: ""
+msgstr: "Excluir itens selecionados"
 
 msgid: "refresh page"
-msgstr: ""
+msgstr: "Atualizar a página"
 
 msgid: "load the query tab"
-msgstr: ""
+msgstr: "abrir a aba de consulta"
 
 msgid: "browse tab - go to first page of results"
-msgstr: ""
+msgstr: "Aba Navegar - Ir para primeira página de resultados"
 
 msgid: "browse tab - go to last page of results"
-msgstr: ""
+msgstr: "Aba Navegar - Ir para última página de resultados"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: ""
+msgstr: "Aba Navegar - Ir para página anterior de resultados"
 
 msgid: "browse tab - go to next page of results"
-msgstr: ""
+msgstr: "Aba Navegar - Ir para próxima página de resultados"
 
 msgid: "optimize selected tables"
-msgstr: ""
+msgstr: "Otimizar as tabelas selecionadas"
 
 msgid: "Choose a .sql file to import"
-msgstr: ""
+msgstr: "Escolha um arquivo .sql para importar"
 
 msgid: "File
 "
-msgstr: ""
+msgstr: "Arquivo"
 
 msgid: "Ignore first line"
-msgstr: ""
+msgstr: "Ignorar primeira linha"
 
 msgid: "Edit"
-msgstr: ""
+msgstr: "Editar"
 
 msgid: "Refresh"
-msgstr: ""
+msgstr: "Atualizar"
 
 msgid: "No primary key defined"
-msgstr: ""
+msgstr: "Chave primária não definida"
 
 msgid: "First"
-msgstr: ""
+msgstr: "Primeira"
 
 msgid: "Prev"
-msgstr: ""
+msgstr: "Anterior"
 
 msgid: "Next"
-msgstr: ""
+msgstr: "Próxima"
 
 msgid: "Last"
-msgstr: ""
+msgstr: "Última"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "Sua query retornou %d resultado"
+msgstr[1]: "Sua query retornou %d resultados"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: ""
+msgstr: "Nota: Para evitar travamento do seu navegador, somente os primeiros %d registros serão mostrados"
 
 msgid: "binary data"
-msgstr: ""
+msgstr: "Dado binário"
 
 msgid: "Your query affected %d rows"
-msgstr: ""
+msgstr: "Sua query alterou %d linhas"
 
 msgid: "Your query did not return any results"
-msgstr: ""
+msgstr: "Sua consulta não retornou nenhum resultado"
 
 msgid: "Your data has been inserted into the database"
-msgstr: ""
+msgstr: "Seus dados foram inseridos no banco de dados"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: ""
+msgstr: "Houve um pequeno problema para localizar a tabela \"%s\""
 
 msgid: "There was a problem logging you in"
-msgstr: ""
+msgstr: "Ocorreu um problema ao entrar no"
 
 msgid: "Login"
-msgstr: ""
+msgstr: "Login"
 
 msgid: "Unsupported browser"
-msgstr: ""
+msgstr: "Navegador não suportado"
 
 msgid: "Help!"
-msgstr: ""
+msgstr: "Ajuda"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: ""
+msgstr: "Sua sessão foi encerrada. Faça login novamente."
 
 msgid: "Username"
-msgstr: ""
+msgstr: "Nome do Usuário"
 
 msgid: "Password"
-msgstr: ""
+msgstr: "Senha"
 
 msgid: "Run a query on the %s database"
-msgstr: ""
+msgstr: "Executar a consulta no banco de dados %s"
 
 msgid: "Columns"
-msgstr: ""
+msgstr: "Colunas"
 
 msgid: "Add a column"
-msgstr: ""
+msgstr: "Adicionar uma coluna"
 
 msgid: "Insert this column"
-msgstr: ""
+msgstr: "Inserir esta coluna"
 
 msgid: "At end of table"
-msgstr: ""
+msgstr: "No final da tabela"
 
 msgid: "At beginning of table"
-msgstr: ""
+msgstr: "No começo da tabela"
 
 msgid: "After"
-msgstr: ""
+msgstr: "Depois"
 
 msgid: "Edit table"
-msgstr: ""
+msgstr: "Editar tabela"
 
 msgid: "Indexes"
-msgstr: ""
+msgstr: "Índice"
 
 msgid: "Add an index"
-msgstr: ""
+msgstr: "Adicionar um índice"
 
 msgid: "Column(s)"
-msgstr: ""
+msgstr: "Coluna(s)"
 
 msgid: "Show %d more..."
-msgstr: ""
+msgstr: "Mostrar %d mais..."
 
 msgid: "Empty table"
-msgstr: ""
+msgstr: "Tabela vazia"
 
 msgid: "Drop table"
-msgstr: ""
+msgstr: "Excluir tabela"
 
 msgid: "Optimize table"
-msgstr: ""
+msgstr: "Otimizar tabela"
 
 msgid: "Table Information"
-msgstr: ""
+msgstr: "Informações da tabela"
 
 msgid: "Host"
-msgstr: ""
+msgstr: "Endereço do servidor"
 
 msgid: "Add a new user"
-msgstr: ""
+msgstr: "Adicionar um novo usuário"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: ""
+msgstr: "Entre com o formato: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "VocÃª quer mesmo esvaziar a tabela '%s'? Isso irÃ¡ remover todos os dados da tabela. A seguinte instruÃ§Ã£o serÃ¡ executada:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "VocÃª quer mesmo excluir a tabela '%s'? Isso irÃ¡ remover a tabela e todos os dados contidos nela. A seguinte instruÃ§Ã£o serÃ¡ executada:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: ""
+msgstr: "VocÃª quer mesmo excluir o banco de dados '%s'? Isso irÃ¡ remover o banco de dados, suas tabelas e os dados contidos nelas. A seguinte instruÃ§Ã£o serÃ¡ executada:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: ""
+msgstr: "Desculpe, mas no momento apenas o Internet Explorer 7 é suportado. Ele está disponível para download, gratuitamente, no site da Microsoft. Outros navegadores gratuitos também são suportados também, incluindo Firefox, Safari e Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: ""
+msgstr: "Parece que você não tem cookies habilitado. Para a sessão funcionar, muitas instalações php requerem cookies."
 
 msgid: "Importing..."
-msgstr: ""
+msgstr: "Importando..."
 
 msgid: "Drop the '%s' database"
-msgstr: ""
+msgstr: "Excluir o banco de dados '%s'"
 
 msgid: "Okay"
-msgstr: ""
+msgstr: "Okay"
 
 msgid: "Cancel"
-msgstr: ""
+msgstr: "Cancelar"
 
 msgid: "Storage engine"
-msgstr: ""
+msgstr: "Engine de Armazenamento"
 
 msgid: "Language"
-msgstr: ""
+msgstr: "Linguagem"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d comando foi executado"
+msgstr[1]: "%d comandos foram executados"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d registro foi inserido no banco de dados a partir do arquivo"
+msgstr[1]: "%d registros foram inseridos no banco de dados a partir do arquivo"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d registro teve que ser ignorado porque o número de valores estava incorreto"
+msgstr[1]: "%d registros tiveram que ser ignorados porque o número de valores estava incorreto"
+
+msgid: "Theme"
+msgstr: "Tema"
+
+msgid: "(%.4f seconds)"
+msgstr: "%4f segundos"
+
+msgid: "The following errors were reported"
+msgstr: "Os seguintes erros foram reportados"
+
+msgid: "You do not have enough permissions to create new users."
+msgstr: "Você não tem privilégios suficientes para criar novos usuários."
+
+msgid: "You do not have enough permissions to view or manage users."
+msgstr: "Você não tem privilégios suficientes para visualizar ou gerenciar usuários."
+
+msgid: "You are connected to %s."
+msgstr: "Você está conectado a %s."
+
+msgid: "Allow access to"
+msgstr: "Permirtir acesso a"
+
+msgid: "All databases"
+msgstr: "Todos os Bancos de Dados"
+
+msgid: "Selected databases"
+msgstr: "Bancos de Dados selecionados"
+
+msgid: "Give user"
+msgstr: ""
+
+msgid: "Updates"
+msgstr: ""
+
+msgid: "There are no updates available"
+msgstr: ""
+
+msgid: "Change password"
+msgstr: ""

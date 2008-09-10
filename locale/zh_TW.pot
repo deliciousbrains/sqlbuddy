@@ -1,12 +1,9 @@
 Language: 中文 (繁體)
 Language-Code: zh_TW
-Build-Date: Sun, 17 Aug 2008 18:34:14 -0600
+Build-Date: Tue, 09 Sep 2008 20:53:49 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "檔案空白或無法讀取"
-
-msgid: "MySQL reported the following errors"
-msgstr: "MySQL 回報下列錯誤"
 
 msgid: "Error performing operation"
 msgstr: "執行程序錯誤"
@@ -108,7 +105,7 @@ msgid: "Oops"
 msgstr: "哎呀"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "因為某種原因，資料庫變數並沒有與您的要求送出"
+msgstr: "因為某種原因，資料庫變數並沒有與您的要求一起送出"
 
 msgid: "Save changes to original"
 msgstr: "將變更儲存至原始"
@@ -370,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "您以使用者 %s 連結到 MySQL %s。"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "資料庫伺服器從 %s 起運作，且已傳輸了 %s 的資料。"
+msgstr: ""
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "新版的 SQL Buddy 已經釋出!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "您安裝了 SQL Buddy %s，%s 已可供下載。"
+msgstr: ""
 
 msgid: "Getting started"
 msgstr: "快速入門"
@@ -388,7 +385,7 @@ msgid: "Translations"
 msgstr: "翻譯"
 
 msgid: "Release Notes"
-msgstr: "版本訊息"
+msgstr: ""
 
 msgid: "Contact"
 msgstr: "聯絡"
@@ -577,16 +574,16 @@ msgid: "Add a new user"
 msgstr: "新增使用者"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: "以 ('1','2') 的格式輸入:"
+msgstr: "請以此格式輸入：('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "您確定您要清空 '%s' 資料庫嗎? 這會刪除其中所有的資料。下列的指令將被執行:"
+msgstr: "您確定要清空'%s'資料表嗎？這將會刪除裡面所有的資料。以下的指令將被執行："
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "您確定您要刪除 '%s' 表格嗎? 這會刪除該表格及其中所有的資料。下列的指令將被執行:"
+msgstr: "您確定要刪除'%s'資料表嗎？這將會刪除裡面所有的資料。以下的指令將被執行："
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "您確定您要刪除 '%s' 資料庫嗎? 這會刪除該資料庫及其中所有的表格及資料。下列的指令將被執行:"
+msgstr: "您確定要刪除'%s'資料庫嗎？裡面所有的資料與資料表將一併被刪除。以下的指令將被執行："
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
 msgstr: "對不起，但目前我們只支援 Internet Explorer 7。它可以從微軟的網站免費下載。您也可以使用其他如 Firefox、Safari 及 Opera 等的免費瀏覽器。"
@@ -598,7 +595,7 @@ msgid: "Importing..."
 msgstr: "匯入中..."
 
 msgid: "Drop the '%s' database"
-msgstr: "刪除 '%s' 資料庫"
+msgstr: "刪除'%s'資料庫"
 
 msgid: "Okay"
 msgstr: "確定"
@@ -626,3 +623,42 @@ msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
 msgstr[0]: "%d 行資料因為數值數目不正確而被迫跳過"
 msgstr[1]: "%d 行資料因為數值數目不正確而被迫跳過"
+
+msgid: "Theme"
+msgstr: "主題"
+
+msgid: "(%.4f seconds)"
+msgstr: "(%.4f 秒)"
+
+msgid: "The following errors were reported"
+msgstr: "下列的錯誤被回報"
+
+msgid: "You do not have enough permissions to create new users."
+msgstr: "您沒有足夠的權限來建立使用者。"
+
+msgid: "You do not have enough permissions to view or manage users."
+msgstr: "您沒有足夠的權限來檢視或管理使用者。"
+
+msgid: "You are connected to %s."
+msgstr: ""
+
+msgid: "Allow access to"
+msgstr: ""
+
+msgid: "All databases"
+msgstr: ""
+
+msgid: "Selected databases"
+msgstr: ""
+
+msgid: "Give user"
+msgstr: ""
+
+msgid: "Updates"
+msgstr: ""
+
+msgid: "There are no updates available"
+msgstr: ""
+
+msgid: "Change password"
+msgstr: ""

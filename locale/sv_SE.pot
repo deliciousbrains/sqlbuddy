@@ -1,12 +1,9 @@
 Language: Svenska
 Language-Code: sv_SE
-Build-Date: Sun, 17 Aug 2008 18:47:47 -0600
+Build-Date: Tue, 09 Sep 2008 20:51:17 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Filen kunde inte läsas eller var tom"
-
-msgid: "MySQL reported the following errors"
-msgstr: "MySQL rapporterade följande fel"
 
 msgid: "Error performing operation"
 msgstr: "Fel vid genomförande"
@@ -105,7 +102,7 @@ msgid: "Add field"
 msgstr: "Infoga fält"
 
 msgid: "Oops"
-msgstr: "Oj oj"
+msgstr: "Hoppsan"
 
 msgid: "For some reason, the database parameter was not included with your request"
 msgstr: "Av någon anledning kunde inte databasparametern inkluderas i din förfrågan"
@@ -150,7 +147,7 @@ msgid: "Create"
 msgstr: "Skapa"
 
 msgid: "Temp tables"
-msgstr: "Temp tabeller"
+msgstr: "Temporära tabeller"
 
 msgid: "Administrator privileges"
 msgstr: "Administratörsrättigheter"
@@ -250,10 +247,10 @@ msgid: "Comma"
 msgstr: "Komma"
 
 msgid: "Tab"
-msgstr: "Tab"
+msgstr: "Tabb"
 
 msgid: "Semicolon"
-msgstr: "Semicolon"
+msgstr: "Semikolon"
 
 msgid: "Space"
 msgstr: "Mellanslag"
@@ -292,13 +289,13 @@ msgid: "Browse"
 msgstr: "Utforska"
 
 msgid: "Your changes were saved to the database"
-msgstr: "Dina ändringar har blivit sparade till databasen"
+msgstr: "Dina ändringar har blivit sparade i databasen"
 
 msgid: "delete this row"
-msgstr: "ta bort den här raden"
+msgstr: "radera den här raden"
 
 msgid: "delete these rows"
-msgstr: "ta bort de här raderna"
+msgstr: "radera de här raderna"
 
 msgid: "empty this table"
 msgstr: "töm den här tabellen"
@@ -307,10 +304,10 @@ msgid: "empty these tables"
 msgstr: "töm de här tabellerna"
 
 msgid: "drop this table"
-msgstr: "Radera tabell"
+msgstr: "radera tabell"
 
 msgid: "drop these tables"
-msgstr: "Radera tabellerna"
+msgstr: "radera tabellerna"
 
 msgid: "delete this column"
 msgstr: "ta bort colum"
@@ -370,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Du är ansluten till MySQL %s med användaren %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "Databasservern har varit uppe sedan %s och har skickat ca %s data"
+msgstr: ""
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "En ny version av SQL Buddy är tillgänglig!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "Du har SQL Buddy %s installerat och %s är nu tillgänglig."
+msgstr: ""
 
 msgid: "Getting started"
 msgstr: "Kom igång"
@@ -388,7 +385,7 @@ msgid: "Translations"
 msgstr: "Översättningar"
 
 msgid: "Release Notes"
-msgstr: "Senaste nytt"
+msgstr: ""
 
 msgid: "Contact"
 msgstr: "Kontakt"
@@ -403,7 +400,7 @@ msgid: "There is an easier way to select a large group of items when browsing ta
 msgstr: "För att enklast markera en stor grupp av poster i en tabell, markera första posten och håll sedan inne shift-tangenten och klicka på sista posten. Alla kryssrutor mellan dessa två poster kommer då automatiskt bli markerde."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: "Kolumnerna i utforskaren och fråge-tabbarna är justerbara. Ändra till önskad storlek."
+msgstr: "Kolumnerna i utforskaren och fråge-flikarna är justerbara. Ändra till önskad storlek."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
 msgstr: "Login-sidan använder root-kontot om inga ändringar har gjorts. Genom att ändra i config.php kan dessa inställningar justeras efter eget önskemål."
@@ -439,13 +436,13 @@ msgid: "browse tab - go to last page of results"
 msgstr: "Bläddra tabb - Gå till sista resultat-sidan"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: "Bläddra tabb - Gå till föregåense resultat-sida"
+msgstr: "Bläddra tabb - Gå till föregående resultat-sida"
 
 msgid: "browse tab - go to next page of results"
 msgstr: "Bläddra tabb - Gå till nästa resultat-sida"
 
 msgid: "optimize selected tables"
-msgstr: "optimera valda tabeller"
+msgstr: "optimera markerade tabeller"
 
 msgid: "Choose a .sql file to import"
 msgstr: "Välj en .sql-fil att importera"
@@ -484,7 +481,7 @@ msgstr[0]: "Din sökning gav %d resultat"
 msgstr[1]: "Din sökning gav %d resultat"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Obs! För att undvika att din webbläsare ska krasha kommer endast de %d första resultaten att visas"
+msgstr: "Obs! För att undvika att din webbläsare ska krascha kommer endast de %d första resultaten att visas"
 
 msgid: "binary data"
 msgstr: "binärdata"
@@ -526,7 +523,7 @@ msgid: "Run a query on the %s database"
 msgstr: "Kör en sökfråga på databasen %s"
 
 msgid: "Columns"
-msgstr: "Columer"
+msgstr: "Kolumner"
 
 msgid: "Add a column"
 msgstr: "Lägg till colum"
@@ -577,19 +574,19 @@ msgid: "Add a new user"
 msgstr: "Lägg till ny användare"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: "SKriv in i formatet: ('1', '2')"
+msgstr: "Skriv in i formatet: ('1', '2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Är du säker på att du vill tömma tabellen '%s'? Detta kommer att radera all data i tabellen. Följande fråga kommer att köras:"
+msgstr: "Ã„r du sÃ¤ker pÃ¥ att du vill tÃ¶mma tabellen '%s'? Detta kommer att radera all data i tabellen. FÃ¶ljande frÃ¥ga kommer att kÃ¶ras:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Är du säker på att du vill radera tabellen '%s'? Detta kommer att radera tabellen och all data i denna tabell. Följande fråga kommer att köras:"
+msgstr: "Ã„r du sÃ¤ker pÃ¥ att du vill radera tabellen '%s'? Detta kommer att radera tabellen och all data i denna tabell. FÃ¶ljande frÃ¥ga kommer att kÃ¶ras:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Är du säker på att du vill radera databasen '%s'? Detta kommer att radera databasen och alla tabeller och all data i denna databas. Följande fråga kommer att köras:"
+msgstr: "Ã„r du sÃ¤ker pÃ¥ att du vill radera databasen '%s'? Detta kommer att radera databasen och alla tabeller och all data i denna databas. FÃ¶ljande frÃ¥ga kommer att kÃ¶ras:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "Endast Internet Explorer 7 stöds. Den finns att ladda hem på Microsofts websida. Andra gratis webbläsare som också stöds är Firefox, Safari och Opera."
+msgstr: "Endast Internet Explorer 7 stöds. Den finns att ladda hem på Microsofts webbsida. Andra gratis webbläsare som också stöds är Firefox, Safari och Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
 msgstr: "Det verkar som att du inte tillåter cookies. För att en session ska fungera kräver de flesta PHP-installationer att cookies tillåts."
@@ -624,8 +621,44 @@ msgstr[1]: "%d rader sattes in i databasen från filen"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: "%d rad hopades över på grund av att antalet värden inte var korrekta"
-msgstr[1]: "%d rader hopades över på grund av att antalet värden inte var korrekta"
+msgstr[0]: "%d rad hoppades över på grund av att antalet värden inte var korrekta"
+msgstr[1]: "%d rader hoppades över på grund av att antalet värden inte var korrekta"
 
 msgid: "Theme"
+msgstr: "Tema"
+
+msgid: "(%.4f seconds)"
+msgstr: "(%.4f sekunder)"
+
+msgid: "The following errors were reported"
+msgstr: ""
+
+msgid: "You do not have enough permissions to create new users."
+msgstr: ""
+
+msgid: "You do not have enough permissions to view or manage users."
+msgstr: ""
+
+msgid: "You are connected to %s."
+msgstr: ""
+
+msgid: "Allow access to"
+msgstr: ""
+
+msgid: "All databases"
+msgstr: ""
+
+msgid: "Selected databases"
+msgstr: ""
+
+msgid: "Give user"
+msgstr: ""
+
+msgid: "Updates"
+msgstr: ""
+
+msgid: "There are no updates available"
+msgstr: ""
+
+msgid: "Change password"
 msgstr: ""
