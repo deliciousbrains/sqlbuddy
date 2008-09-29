@@ -434,3 +434,7 @@ if ($connected) {
 
 ?>
 </div>
+
+<script type="text/javascript" authkey="<?php echo $requestKey; ?>">
+setTimeout(function(){ startGrid(); }, 1);
+</script>
