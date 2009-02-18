@@ -1,6 +1,6 @@
 Language: Română
-Language-Code: 
-Build-Date: Tue, 09 Sep 2008 20:49:35 -0600
+Language-Code: ro_RO
+Build-Date: Wed, 18 Feb 2009 10:19:01 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Fișierul nu a putut fi citit sau este gol"
@@ -12,7 +12,7 @@ msgid: "All"
 msgstr: "Toate"
 
 msgid: "None"
-msgstr: "Nimic"
+msgstr: "Niciuna"
 
 msgid: "With selected"
 msgstr: "Cu cele selectate"
@@ -33,7 +33,7 @@ msgid: "Rows"
 msgstr: "Rânduri"
 
 msgid: "Size"
-msgstr: "Mărime"
+msgstr: "Lungime"
 
 msgid: "Overhead"
 msgstr: "Global"
@@ -75,7 +75,7 @@ msgid: "primary"
 msgstr: "primară"
 
 msgid: "unique"
-msgstr: "unic"
+msgstr: "unică"
 
 msgid: "index"
 msgstr: "index"
@@ -84,7 +84,7 @@ msgid: "Default"
 msgstr: "Implicit"
 
 msgid: "Other"
-msgstr: "Alt"
+msgstr: "Altele"
 
 msgid: "Unsigned"
 msgstr: "Fără semn"
@@ -277,7 +277,7 @@ msgid: "Users"
 msgstr: "Utilizatori"
 
 msgid: "Query"
-msgstr: "interogare"
+msgstr: "Interogare"
 
 msgid: "Import"
 msgstr: "Importare"
@@ -661,4 +661,4 @@ msgid: "There are no updates available"
 msgstr: "Nu sunt actualizări disponibile"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Schimbare de parolă"

@@ -1,6 +1,6 @@
 Language: Italiano
 Language-Code: it_IT
-Build-Date: Tue, 09 Sep 2008 20:44:32 -0600
+Build-Date: Wed, 18 Feb 2009 10:17:10 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Non è possibile la lettura del file, oppure il file è vuoto."
@@ -9,7 +9,7 @@ msgid: "Error performing operation"
 msgstr: "Errore nell'esecuzione dell'operazione"
 
 msgid: "All"
-msgstr: "Tutto"
+msgstr: "amore'"
 
 msgid: "None"
 msgstr: "Nessuno"
@@ -367,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Sei connesso a MySQL %s tramite l'utente %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "Il database sta girando da %s ed ha trasferito approssimativamente %s di dati."
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Una nuova versione di SQL Buddy è disponibile!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "Hai SQL Buddy %s installato e %s è ora disponibile."
 
 msgid: "Getting started"
 msgstr: "Come iniziare"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "Traduzioni"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Note di rilascio"
 
 msgid: "Contact"
 msgstr: "Contatti"
@@ -397,13 +397,13 @@ msgid: "Did you know..."
 msgstr: "Lo sapevi che..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: "C'Ã¨ un modo piÃ¹ semplice di selezionare un grande numero di campi mentre si scorrono le righe di una tabella. Seleziona la prima riga, tieni premuto il tasto shift, e seleziona infine l'ultima riga. Tutte le righe presenti tra le due precedenti saranno automaticamente selezionate."
+msgstr: "C'è un modo più semplice di selezionare un grande numero di campi mentre si scorrono le righe di una tabella. Seleziona la prima riga, tieni premuto il tasto shift, e seleziona infine l'ultima riga. Tutte le righe presenti tra le due precedenti saranno automaticamente selezionate."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
 msgstr: "La dimensione delle colonne nella finestra ed il campo delle query sono ridimensionabili. Aumenta o diminuisci la dimensione a tuo piacimento."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "La pagine di autenticazione di default usa l'utente root@localhost. Editando il file config.php, Ã¨ possibile modificare l'utente e dominio di default."
+msgstr: "La pagine di autenticazione di default usa l'utente root@localhost. Editando il file config.php, è possibile modificare l'utente e dominio di default."
 
 msgid: "Keyboard shortcuts"
 msgstr: "Scorciatoie da tastiera"
@@ -577,13 +577,13 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Inserisci nel formato: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Sei sicuro di voler svuotare la tabella '%s'? Questa operazione eliminerÃ  i dati all'interno della tabella. La query seguente verrÃ  eseguita:"
+msgstr: "Sei sicuro di voler svuotare la tabella '%s'? Questa operazione eliminerà  i dati all'interno della tabella. La query seguente verrà  eseguita:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Sei sicuro di voler eliminare la tabella '%s'? Questa operazione eliminerÃ  i dati all'interno della tabella. La query seguente verrÃ  eseguita:"
+msgstr: "Sei sicuro di voler eliminare la tabella '%s'? Questa operazione eliminerà  i dati all'interno della tabella. La query seguente verrà  eseguita:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Sei sicuro di voler cancellare il database '%s'? Questa operazione cancellerÃ  assieme al database le tabelle ed ogni dato presente all'interno di esse. La query seguente verrÃ  eseguita:"
+msgstr: "Sei sicuro di voler cancellare il database '%s'? Questa operazione cancellerà  assieme al database le tabelle ed ogni dato presente all'interno di esse. La query seguente verrà  eseguita:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
 msgstr: "Siamo spiacenti ma solo Internet Explorer 7 è supportato. È possibile scaricarlo gratuitamente dal sito internet della Microsoft. Altrimenti è possbile utilizzare altri browser gratuiti tra cui Firefox, Safari ed Opera."
@@ -616,49 +616,49 @@ msgstr[1]: "%d operazioni sono state eseguite dal file"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: "%d riga Ã¨ stata inserita all'interno del database dal file"
+msgstr[0]: "%d riga è stata inserita all'interno del database dal file"
 msgstr[1]: "%d righe sono state inserite all'interno del database dal file"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: "%d riga è stata saltata poiché il numero dei valori era incorretto"
-msgstr[1]: "%d righe sono state saltate poiché il numero dei valori era incorretto"
+msgstr[0]: "%d riga è stata saltata poiché il numero dei valori era errato"
+msgstr[1]: "%d righe sono state saltate poiché il numero dei valori era errato"
 
 msgid: "Theme"
 msgstr: "Tema"
 
 msgid: "(%.4f seconds)"
-msgstr: ""
+msgstr: "(%.4f secondi)"
 
 msgid: "The following errors were reported"
-msgstr: ""
+msgstr: "I seguenti errori sono stati riscontrati"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: ""
+msgstr: "Non hai permessi sufficienti per creare nuovi utenti."
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: ""
+msgstr: "Non hai permessi sufficienti per gestire gli utenti."
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "Sei connesso a %s."
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "Consenti accesso a"
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "Tutti i database"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "Database selezionati"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Dai all'utente"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Aggiornamenti"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "Nessun aggiornamento disponibile"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Cambia password"

@@ -1,6 +1,6 @@
 Language: Svenska
 Language-Code: sv_SE
-Build-Date: Tue, 09 Sep 2008 20:51:17 -0600
+Build-Date: Wed, 18 Feb 2009 10:16:31 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Filen kunde inte läsas eller var tom"
@@ -18,7 +18,7 @@ msgid: "With selected"
 msgstr: "Med markerade"
 
 msgid: "Empty"
-msgstr: "Tom"
+msgstr: "Töm"
 
 msgid: "Drop"
 msgstr: "Radera"
@@ -42,7 +42,7 @@ msgid: "Options"
 msgstr: "Alternativ"
 
 msgid: "Edit database"
-msgstr: "Ändra databas"
+msgstr: "Editera databas"
 
 msgid: "Charset"
 msgstr: "Kodning"
@@ -340,7 +340,7 @@ msgid: "Confirm"
 msgstr: "Acceptera"
 
 msgid: "Successfully saved changes"
-msgstr: "Ändringar sparade"
+msgstr: "Dina ändringar är sparade"
 
 msgid: "Full Text"
 msgstr: "Fulltext"
@@ -361,31 +361,31 @@ msgid: "For some reason, the table parameter was not included with your request"
 msgstr: "Av någon anledning kunde inte tabellparametern inkluderas i din förfrågan"
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "Välkommen till SQL Buddy"
+msgstr: "Välkommen till SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Du är ansluten till MySQL %s med användaren %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "Databasservern har varit igång sedan %s och har skickat ca %s data."
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "En ny version av SQL Buddy är tillgänglig!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "Du har för närvarande SQL Buddy %s installerat och %s är nu tillgänglig"
 
 msgid: "Getting started"
-msgstr: "Kom igång"
+msgstr: "börja"
 
 msgid: "Help"
 msgstr: "Hjälp"
 
 msgid: "Translations"
-msgstr: "Översättningar"
+msgstr: "Översättning"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Ändringar"
 
 msgid: "Contact"
 msgstr: "Kontakt"
@@ -397,7 +397,7 @@ msgid: "Did you know..."
 msgstr: "Visste du att..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: "För att enklast markera en stor grupp av poster i en tabell, markera första posten och håll sedan inne shift-tangenten och klicka på sista posten. Alla kryssrutor mellan dessa två poster kommer då automatiskt bli markerde."
+msgstr: "För att enklast markera en stor grupp av poster i en tabell, markera första posten och håll sedan inne shift-tangenten och klicka på sista posten. Alla kryssrutor mellan dessa två poster kommer då automatiskt bli markerade."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
 msgstr: "Kolumnerna i utforskaren och fråge-flikarna är justerbara. Ändra till önskad storlek."
@@ -418,7 +418,7 @@ msgid: "select none"
 msgstr: "avmarkera alla"
 
 msgid: "edit selected items"
-msgstr: "ändra markerade objekt"
+msgstr: "Ändra valda objekt"
 
 msgid: "delete selected items"
 msgstr: "ta bort markerade objekt"
@@ -430,16 +430,16 @@ msgid: "load the query tab"
 msgstr: "Öppna fråge-fliken"
 
 msgid: "browse tab - go to first page of results"
-msgstr: "Bläddra tabb - Gå till första resultat-sidan"
+msgstr: "Bläddra-tabb - Gå till första resultat-sidan"
 
 msgid: "browse tab - go to last page of results"
-msgstr: "Bläddra tabb - Gå till sista resultat-sidan"
+msgstr: "Bläddra-tabb - Gå till sista resultat-sidan"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: "Bläddra tabb - Gå till föregående resultat-sida"
+msgstr: "Bläddra-tabb - Gå till föregående resultat-sida"
 
 msgid: "browse tab - go to next page of results"
-msgstr: "Bläddra tabb - Gå till nästa resultat-sida"
+msgstr: "Bläddra-tabb - Gå till nästa resultat-sida"
 
 msgid: "optimize selected tables"
 msgstr: "optimera markerade tabeller"
@@ -505,10 +505,10 @@ msgid: "Login"
 msgstr: "Logga in"
 
 msgid: "Unsupported browser"
-msgstr: "Webbläsaren stödjs ej"
+msgstr: "Webbläsaren stöds ej"
 
 msgid: "Help!"
-msgstr: "Hjälp!"
+msgstr: "Hjälp"
 
 msgid: "Your session has timed out. Please login again."
 msgstr: "Din session har tagit slut. Var god logga in igen."
@@ -526,10 +526,10 @@ msgid: "Columns"
 msgstr: "Kolumner"
 
 msgid: "Add a column"
-msgstr: "Lägg till colum"
+msgstr: "Lägg till kolumn"
 
 msgid: "Insert this column"
-msgstr: "Infoga den här columen"
+msgstr: "Infoga den här kolumen"
 
 msgid: "At end of table"
 msgstr: "I slutet av tabellen"
@@ -577,13 +577,13 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Skriv in i formatet: ('1', '2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Ã„r du sÃ¤ker pÃ¥ att du vill tÃ¶mma tabellen '%s'? Detta kommer att radera all data i tabellen. FÃ¶ljande frÃ¥ga kommer att kÃ¶ras:"
+msgstr: "Är du säker på att du vill tömma tabellen '%s'? Detta kommer att radera all data i tabellen. Följande fråga kommer att köras:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Ã„r du sÃ¤ker pÃ¥ att du vill radera tabellen '%s'? Detta kommer att radera tabellen och all data i denna tabell. FÃ¶ljande frÃ¥ga kommer att kÃ¶ras:"
+msgstr: "Är du säker på att du vill radera tabellen '%s'? Detta kommer att radera tabellen och all data i denna tabell. Följande fråga kommer att köras:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Ã„r du sÃ¤ker pÃ¥ att du vill radera databasen '%s'? Detta kommer att radera databasen och alla tabeller och all data i denna databas. FÃ¶ljande frÃ¥ga kommer att kÃ¶ras:"
+msgstr: "Är du säker på att du vill radera databasen '%s'? Detta kommer att radera databasen och alla tabeller och all data i denna databas. Följande fråga kommer att köras:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
 msgstr: "Endast Internet Explorer 7 stöds. Den finns att ladda hem på Microsofts webbsida. Andra gratis webbläsare som också stöds är Firefox, Safari och Opera."
@@ -631,34 +631,34 @@ msgid: "(%.4f seconds)"
 msgstr: "(%.4f sekunder)"
 
 msgid: "The following errors were reported"
-msgstr: ""
+msgstr: "Följande fel har rapporterats"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: ""
+msgstr: "Du saknar rättigheterna för att skapa en ny användare."
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: ""
+msgstr: "Du saknar rättigheterna för att visa eller hantera användare."
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "Du är ansluten till %s."
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "Tillåt åtkomst till"
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "Alla databaser"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "Markerade databaser"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Ge användare"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Uppdateringar"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "Det finns inga tillgängliga uppdateringar"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Byt lösenord"

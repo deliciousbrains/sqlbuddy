@@ -1,9 +1,9 @@
 Language: Português (Portugal)
-Language-Code: 
-Build-Date: Tue, 09 Sep 2008 20:47:33 -0600
+Language-Code: pt_PT
+Build-Date: Wed, 18 Feb 2009 10:21:50 -0700
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "Ou o ficheiro não pode ser lido ou este estava vazio."
+msgstr: "Ou o ficheiro não consegue ser lido ou estava vazio "
 
 msgid: "Error performing operation"
 msgstr: "Erro ao executar a operação"
@@ -72,13 +72,13 @@ msgid: "Key"
 msgstr: "Chave"
 
 msgid: "primary"
-msgstr: "primária"
+msgstr: "Primária"
 
 msgid: "unique"
-msgstr: "única"
+msgstr: "Única"
 
 msgid: "index"
-msgstr: "índice"
+msgstr: "Índice"
 
 msgid: "Default"
 msgstr: "Padrão"
@@ -87,7 +87,7 @@ msgid: "Other"
 msgstr: "Outro"
 
 msgid: "Unsigned"
-msgstr: "Não atribuido"
+msgstr: "Não atribuído"
 
 msgid: "Binary"
 msgstr: "Binário"
@@ -105,7 +105,7 @@ msgid: "Oops"
 msgstr: "Oops"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "Por alguma razão, o parâmetro da base de dados não foi incluído na consulta"
+msgstr: "Por alguma razão, o parâmetro da base de dados não foi incluído no seu pedido"
 
 msgid: "Save changes to original"
 msgstr: "Guardar alterações para o original"
@@ -126,10 +126,10 @@ msgid: "Selected privileges"
 msgstr: "Privilégios seleccionados"
 
 msgid: "User privileges"
-msgstr: "Privilégios do Utilizador"
+msgstr: "Privilégios de Utilizador"
 
 msgid: "Select"
-msgstr: "Selecione"
+msgstr: "Seleccione"
 
 msgid: "Insert"
 msgstr: "Inserir"
@@ -168,7 +168,7 @@ msgid: "Super"
 msgstr: "Super"
 
 msgid: "Grant option"
-msgstr: "Permitir opção"
+msgstr: "Conceder opção"
 
 msgid: "User not found!"
 msgstr: "Utilizador não encontrado!"
@@ -177,7 +177,7 @@ msgid: "You must export either structure, data, or both"
 msgstr: "Tem de exportar a estrutura, os dados ou ambos"
 
 msgid: "Please select the databases that you would like to export"
-msgstr: "Por favor, seleccione a base dados que deseja exportar"
+msgstr: "Por favor, seleccione as bases de dados que deseja exportar"
 
 msgid: "Please select the tables that you would like to export"
 msgstr: "Por favor, seleccione as tabelas que deseja exportar"
@@ -208,7 +208,7 @@ msgid: "Note
 msgstr: "Nota"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
-msgstr: "Se o servidor é público, deve apagar este ficheiro do mesmo depois de o descarregar"
+msgstr: "Se este servidor é público, deve apagar este ficheiro do servidor depois de o descarregar"
 
 msgid: "Export"
 msgstr: "Exportar"
@@ -259,7 +259,7 @@ msgid: "Print field names on first line"
 msgstr: "Escrever nomes dos campos na primeira linha"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "Se está a exportar um número elevado de linhas, é recomendado que o ficheiro gerado seja de texto"
+msgstr: "Se está a exportar um número elevado de linhas, é recomendado que o destino seja um ficheiro de texto"
 
 msgid: "Output to"
 msgstr: "Enviar para"
@@ -358,7 +358,7 @@ msgid: "Logout"
 msgstr: "Sair"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: "Por alguma razão, a tabela de parâmetros não foi incluída no pedido "
+msgstr: "Por alguma razão, a tabela de parâmetros não foi incluída no seu pedido "
 
 msgid: "Welcome to SQL Buddy!"
 msgstr: "Bem-vindo ao SQL Buddy!"
@@ -367,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Está ligado ao MySQL %s com o utilizador %s"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "O servidor da base de dados está em execução desde %s e transferiu aproximadamente %s dos dados."
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Uma nova versão do SQL Buddy está disponível!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "Foi instalado %s do SQL Buddy e %s está agora disponível."
 
 msgid: "Getting started"
 msgstr: "Começar"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "Traduções"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Notas de lançamento"
 
 msgid: "Contact"
 msgstr: "Contacto"
@@ -397,13 +397,13 @@ msgid: "Did you know..."
 msgstr: "Sabia que..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: "Há uma forma mais rápida de seleccionar um grande grupo de itens quando navega pelas linhas. Seleccione a primeira linha, carregue na tecla Shift e seleccione a ultima linha. Todas as linhas entre as duas serão automaticamente seleccionadas por si."
+msgstr: "Há uma forma mais rápida de seleccionar um grande grupo de itens quando navega pelas linhas. Seleccione a primeira linha, carregue na tecla Shift e seleccione a última linha. Todas as linhas entre as duas serão automaticamente seleccionadas por si."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
 msgstr: "As colunas nos separadores de procura e comando são redimensionáveis. Ajuste-as para mais largas ou mais estreitas, conforme preferir."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "A página de login baseia-se no utilizador pré-definido root@localhost.com. Editando o ficheiro config.php, é possível mudar este utilizador e o alojamento."
+msgstr: "A página de login baseia-se no utilizador pré-definido root@localhost.com. Editando o ficheiro config.php, é possível mudar este utilizador e o servidor."
 
 msgid: "Keyboard shortcuts"
 msgstr: "Atalhos do teclado"
@@ -493,10 +493,10 @@ msgid: "Your query did not return any results"
 msgstr: "O comando não retornou resultados"
 
 msgid: "Your data has been inserted into the database"
-msgstr: "Os seus dados estão as ser inseridos na base de dados"
+msgstr: "Os seus dados estão a ser inseridos na base de dados"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: "Ocorreu um problema ao encontrar a tabela \"%s\""
+msgstr: "Ocorreu um problema ao localizar a tabela \"%s\""
 
 msgid: "There was a problem logging you in"
 msgstr: "Ocorreu um problema ao efectuar o login"
@@ -577,10 +577,10 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Insira no formato: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Tem a certeza que pretende vazar a tabela '%s'? Isto elimina todos os dados contidos na tabela. O comando seguinte serÃ¡ executado:"
+msgstr: "Tem a certeza que pretende esvaziar a tabela '%s'? Isto elimina todos os dados contidos na tabela. O comando seguinte será executado:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Tem a certeza que pretende apagar a tabela '%s'? Isto elimina a tabela e todos os dados contidos na mesma. O comando seguinte serÃ¡ executado:"
+msgstr: "Tem a certeza que pretende apagar a tabela '%s'? Isto elimina a tabela e todos os dados contidos na mesma. O comando seguinte será executado:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
 msgstr: "Tem a certeza que pretende apagar a base de dados '%s'? Isto elimina a base de dados, as tabelas e os dados contidos nas tabelas. O comando seguinte serÃ¡ executado:"
@@ -611,18 +611,18 @@ msgstr: "Língua"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: "%d instrução foi executada desde o ficheiro"
-msgstr[1]: "%d instruções foram executadas desde o ficheiro"
+msgstr[0]: "%d instrução foi executada a partir do ficheiro"
+msgstr[1]: "%d instruções foram executadas a partir do ficheiro"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: "%d campo foi inserido na base da dados desde o ficheiro"
-msgstr[1]: "%d campos foram inseridos na base da dados desde o ficheiro"
+msgstr[0]: "%d linha foi inserida na base da dados a partir do ficheiro"
+msgstr[1]: "%d linhas foram inseridas na base de dados a partir do ficheiro"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: "%d campo não foi inserido devido ao número de valores inseridos não ser o correcto"
-msgstr[1]: "%d campos não foram inseridos devido ao número de valores inseridos não ser o correcto"
+msgstr[0]: "%d linha não foi inserida devido a número de valores inseridos incorrecto"
+msgstr[1]: "%d linhas não foram inseridas devido a número de valores inseridos incorrecto"
 
 msgid: "Theme"
 msgstr: "Tema"
@@ -634,13 +634,13 @@ msgid: "The following errors were reported"
 msgstr: "Foram reportados os seguintes erros"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: "Tu não tens permissões suficientes para criar novos utilizadores."
+msgstr: "Não tem permissões suficientes para criar novos utilizadores."
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: "Tu não tens permissões suficientes para ver ou gerir os utilizadores."
+msgstr: "Não tem permissões suficientes para ver ou gerir os utilizadores."
 
 msgid: "You are connected to %s."
-msgstr: "Tu estás conectado como"
+msgstr: "Está ligado a %s."
 
 msgid: "Allow access to"
 msgstr: "Permitir acesso a"
@@ -649,16 +649,16 @@ msgid: "All databases"
 msgstr: "Todas as bases de dados"
 
 msgid: "Selected databases"
-msgstr: "Bases de dados selecionadas"
+msgstr: "Bases de dados seleccionadas"
 
 msgid: "Give user"
 msgstr: "Permitir ao utilizador"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Actualizações"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "Não há actualizações disponíveis"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Alterar palavra-passe"

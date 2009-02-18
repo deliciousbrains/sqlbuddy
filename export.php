@@ -192,7 +192,7 @@ if ($_POST) {
 									
 									$outputBuffer .= "\r\n   `" . $structureRow[0] . "` " . $structureRow[1];
 									
-									if (isset($collationList) && $structureRow['Collation'] != "NULL" && !is_null($structureRow['Collation'])) {
+									if (isset($collationList) && isset($structureRow['Collation']) && $structureRow['Collation'] != "NULL" && !is_null($structureRow['Collation'])) {
 										if ($collationList[$structureRow['Collation']] != $tableCharset) {
 											$outputBuffer .= " CHARSET " . $collationList[$structureRow['Collation']];
 										}

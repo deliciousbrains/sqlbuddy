@@ -1,6 +1,6 @@
 Language: Français
 Language-Code: fr_FR
-Build-Date: Tue, 09 Sep 2008 20:44:07 -0600
+Build-Date: Wed, 18 Feb 2009 10:17:13 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Le fichier est vide ou ne peut pas être lu"
@@ -21,7 +21,7 @@ msgid: "Empty"
 msgstr: "Vide"
 
 msgid: "Drop"
-msgstr: "Supprimer"
+msgstr: "Jeter"
 
 msgid: "Optimize"
 msgstr: "Optimiser"
@@ -367,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Vous êtes connectés à  MySQL %s avec l'utilisateur %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "Le serveur de la base de données fonctionne depuis %s et a transféré environ %s de données."
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Une nouvelle version de SQL Buddy est disponible !"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "Vous avez SQL Buddy %s installé, cependant la version %s est disponible au téléchargement."
 
 msgid: "Getting started"
 msgstr: "Commencez !"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "Traductions"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Notes de version"
 
 msgid: "Contact"
 msgstr: "Contact"
@@ -655,10 +655,10 @@ msgid: "Give user"
 msgstr: "Récupérer l'utilisateur"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Mises à jour"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "Il n'y a pas de mise à jour disponible"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Changez le mot de passe"

@@ -1,12 +1,12 @@
 Language: Tagalog
 Language-Code: tl_PH
-Build-Date: Tue, 09 Sep 2008 20:51:49 -0600
+Build-Date: Wed, 18 Feb 2009 10:13:51 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Ang file ay hindi mabasa o walang laman"
 
 msgid: "Error performing operation"
-msgstr: "Nagkaroon ng problema habang isinasagawa ang operasyon"
+msgstr: "Nagka-problema habang isinasagawa ang operasyon"
 
 msgid: "All"
 msgstr: "Lahat"
@@ -42,7 +42,7 @@ msgid: "Options"
 msgstr: "Pagpipilian"
 
 msgid: "Edit database"
-msgstr: "Baguhin ang database"
+msgstr: "Magbago sa database"
 
 msgid: "Charset"
 msgstr: "Tala-titikan"
@@ -57,7 +57,7 @@ msgid: "Name"
 msgstr: "Pangalan"
 
 msgid: "Setup the fields for the table below"
-msgstr: "Ayusin ang mga fields ng talaan sa ilalim"
+msgstr: "Ayusin ang mga field sa ilalim ng talaan"
 
 msgid: "New field"
 msgstr: "Bagong field"
@@ -72,19 +72,19 @@ msgid: "Key"
 msgstr: "Palatandaan"
 
 msgid: "primary"
-msgstr: "Pangunahing"
+msgstr: "Pangunahin"
 
 msgid: "unique"
-msgstr: "Walang Magkapareho"
+msgstr: "Kakaiba"
 
 msgid: "index"
-msgstr: "Index"
+msgstr: "Indeks"
 
 msgid: "Default"
-msgstr: "Default"
+msgstr: "Katutubo"
 
 msgid: "Other"
-msgstr: "Iba"
+msgstr: "Iba pa"
 
 msgid: "Unsigned"
 msgstr: "Walang negatibo"
@@ -93,7 +93,7 @@ msgid: "Binary"
 msgstr: "Binary"
 
 msgid: "Not Null"
-msgstr: "May Laman"
+msgstr: "hindi blanko"
 
 msgid: "Auto Increment"
 msgstr: "Kusang nagdadagdag"
@@ -102,7 +102,7 @@ msgid: "Add field"
 msgstr: "Magdagdag ng field"
 
 msgid: "Oops"
-msgstr: "Naku"
+msgstr: "Naku po"
 
 msgid: "For some reason, the database parameter was not included with your request"
 msgstr: "Sa hindi malamang dahilan ay hindi nasama ang parameter ng database sa iyong ipinasa"
@@ -123,7 +123,7 @@ msgid: "All privileges"
 msgstr: "Lahat ng pribilehiyo"
 
 msgid: "Selected privileges"
-msgstr: "Nakapiling pribilehiyo"
+msgstr: "Napiling pribilehiyo"
 
 msgid: "User privileges"
 msgstr: "Pribilehiyo ng gumagamit"
@@ -138,7 +138,7 @@ msgid: "Update"
 msgstr: "Baguhin"
 
 msgid: "Delete"
-msgstr: "Tanggalin"
+msgstr: "Burahin"
 
 msgid: "Alter"
 msgstr: "Palitan"
@@ -150,10 +150,10 @@ msgid: "Temp tables"
 msgstr: "Pansamantalang talaan"
 
 msgid: "Administrator privileges"
-msgstr: "Pribilehiyo ng Administrator"
+msgstr: "Pribilehiyo ng Administrador"
 
 msgid: "File"
-msgstr: "Fayl"
+msgstr: "File"
 
 msgid: "Process"
 msgstr: "Proseso"
@@ -174,7 +174,7 @@ msgid: "User not found!"
 msgstr: "Walang ganoong gumagamit!"
 
 msgid: "You must export either structure, data, or both"
-msgstr: "Ang ie-eksport dapat ay istraktura, datos o pareho"
+msgstr: "Ang ie-eksport mo dapat ay istraktura, datos o pareho"
 
 msgid: "Please select the databases that you would like to export"
 msgstr: "Piliin ang mga database na gustong i-eksport"
@@ -195,10 +195,10 @@ msgid: "The file could not be opened"
 msgstr: "Hindi mabuksan ang file"
 
 msgid: "Could not write to file"
-msgstr: "Hindi malagyan ng laman ang file"
+msgstr: "Hindi makapag sulat sa file"
 
 msgid: "Successfully wrote content to file"
-msgstr: "Nalagyan ng laman ang file"
+msgstr: "Tagumpay na nakapag sulat ng laman sa file"
 
 msgid: "Download"
 msgstr: "Download"
@@ -238,7 +238,7 @@ msgid: "Compact inserts"
 msgstr: "Pinaikling porma ng pag-insert"
 
 msgid: "Complete inserts"
-msgstr: "Kumpletong porma ng pag-insert"
+msgstr: "Kumpletong pag-insert"
 
 msgid: "Delimiter"
 msgstr: "Tagahati"
@@ -259,7 +259,7 @@ msgid: "Print field names on first line"
 msgstr: "Ilagay ang mga pangalan ng fields sa unang linya"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "Kung ikaw ay mag-eeksport ng napakaraming row, nirerekomenda na ilabas mo ang mga resulta sa isang text fayl"
+msgstr: "Kung ikaw ay mag-eeksport ng napakaraming hanay, nirerekomenda na ilabas mo ang mga resulta sa isang text file"
 
 msgid: "Output to"
 msgstr: "Ilabas sa"
@@ -268,7 +268,7 @@ msgid: "Browser"
 msgstr: "Browser"
 
 msgid: "Text file"
-msgstr: "Text fayl"
+msgstr: "Text file"
 
 msgid: "Home"
 msgstr: "Tahanan"
@@ -289,7 +289,7 @@ msgid: "Browse"
 msgstr: "Tingnan"
 
 msgid: "Your changes were saved to the database"
-msgstr: "Ang iyong mga binago ay naitala na sa database"
+msgstr: "Ang mga binago mo ay naitala na sa database"
 
 msgid: "delete this row"
 msgstr: "tanggalin itong hanay"
@@ -316,10 +316,10 @@ msgid: "delete these columns"
 msgstr: "tanggalin ang mga column"
 
 msgid: "delete this index"
-msgstr: "tanggalin ang index"
+msgstr: "tanggalin ang indeks"
 
 msgid: "delete this indexes"
-msgstr: "tanggalin ang mga index"
+msgstr: "tanggalin ang mga indeks"
 
 msgid: "delete this user"
 msgstr: "burahin ang gumagamit"
@@ -328,31 +328,31 @@ msgid: "delete this users"
 msgstr: "burahin ang mga gumagamit"
 
 msgid: "Are you sure you want to"
-msgstr: "Sigurado ka ba na"
+msgstr: "Sigurado ka na gusto mo"
 
 msgid: "The following query will be run:"
-msgstr: "Ang sumusunod na query ay isasagawa"
+msgstr: "Ang sumusunod na tanong ay isasagawa"
 
 msgid: "The following queries will be run:"
-msgstr: "Ang mga sumusunod na query ay isasagawa"
+msgstr: "Ang mga sumusunod na tanong ay isasagawa"
 
 msgid: "Confirm"
-msgstr: "Siguraduhin"
+msgstr: "Kumpirmahin"
 
 msgid: "Successfully saved changes"
-msgstr: "Naging matagumpay sa pagbabago."
+msgstr: "Matagumpay na nabago."
 
 msgid: "Full Text"
-msgstr: "Full Text"
+msgstr: "KabuuangTeksto"
 
 msgid: "Loading..."
-msgstr: "Naghahanda..."
+msgstr: "Ikinakarga..."
 
 msgid: "Error"
 msgstr: "Mali"
 
 msgid: "There was an error receiving data from the server"
-msgstr: "Nagkakaroon ng problema habang tinatanggap ang datos mula sa server"
+msgstr: "Nagkakaroon ng mali habang tinatanggap ang datos mula sa server"
 
 msgid: "Logout"
 msgstr: "Lumabas"
@@ -361,31 +361,31 @@ msgid: "For some reason, the table parameter was not included with your request"
 msgstr: "Sa hindi malamang dahilan ay hindi nasama ang parameter ng talaan sa iyong ipinasa"
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "Mabuhay! Maligayang paggamit ng SQL Buddy"
+msgstr: "Maligayang paggamit ng SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "Ikaw ay nakakonekta sa MySQL %s na ang gumagamit ay si %s."
+msgstr: "Ikaw ay nakakonekta sa MySQL %s bilang si %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "Ang database ay gumagana mula % at naglipat ng humigit kumulang na % ng datos."
 
 msgid: "A new version of SQL Buddy is available!"
-msgstr: "May bagong bersyon ng SQL Buddy na inilabas"
+msgstr: "Meron ng mas bagong bersyon ng SQL Buddy!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "Ang gamit mong SQL Buddy %s at %s ay nilabas na."
 
 msgid: "Getting started"
-msgstr: "Panimula"
+msgstr: "Pagsisimula"
 
 msgid: "Help"
 msgstr: "Tulong"
 
 msgid: "Translations"
-msgstr: "ibang salin"
+msgstr: "mga salin"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Patalastas sa lahat"
 
 msgid: "Contact"
 msgstr: "Kontak"
@@ -403,7 +403,7 @@ msgid: "The columns in the browse and query tabs are resizable. Adjust them to a
 msgstr: "Maaari mong baguhin ang lapad ng mga kolum sa Browse at Query Tabs. Maaari mong gawing mas makipot o mas malapad ang mga ito."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "Ang login page ay base sa default na gumagamit na root@localhost. Sa pamamagitan ng pagbabago ng fayl na config.php, maaari mong palitan ang default na gumagamit at host ng kahit anong nais mo."
+msgstr: "Ang login page ay base sa katutubong gumagamit na root@localhost. Sa pamamagitan ng pagbabago ng file na config.php, maaari mong palitan ang katutubong gumagamit at host sa kahit anong nais mo."
 
 msgid: "Keyboard shortcuts"
 msgstr: "Mga shortcut sa keyboard"
@@ -418,7 +418,7 @@ msgid: "select none"
 msgstr: "walang piliin"
 
 msgid: "edit selected items"
-msgstr: "baguhin ang mga napiling bagay"
+msgstr: "ibahin ang mga napiling bagay"
 
 msgid: "delete selected items"
 msgstr: "burahin ang mga napiling bagay"
@@ -427,7 +427,7 @@ msgid: "refresh page"
 msgstr: "sariwain ang pahina"
 
 msgid: "load the query tab"
-msgstr: "i-load ang query tab"
+msgstr: "ikarga ang query tab"
 
 msgid: "browse tab - go to first page of results"
 msgstr: "tingnan - pumunta sa unang pahina ng resulta"
@@ -455,10 +455,10 @@ msgid: "Ignore first line"
 msgstr: "Baliwalain ang unang linya"
 
 msgid: "Edit"
-msgstr: "Baguhin"
+msgstr: "Ibahin"
 
 msgid: "Refresh"
-msgstr: "Kasahin"
+msgstr: "Sariwain"
 
 msgid: "No primary key defined"
 msgstr: "Walang panguhahing palatandaan binigay"
@@ -477,8 +477,8 @@ msgstr: "Huli"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: "Ang iyong query ay nagtala ng %d na resulta"
-msgstr[1]: "Ang iyong query ay nagtala ng %d na resulta"
+msgstr[0]: "Ang iyong tanong ay nagtala ng %d na resulta"
+msgstr[1]: "Ang iyong tanong ay nagtala ng %d na resulta"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
 msgstr: "Tandaan: Upang hindi mahirapan ang iyong browser, inilabas lamang ang unang %d resulta"
@@ -517,10 +517,10 @@ msgid: "Username"
 msgstr: "Alyas"
 
 msgid: "Password"
-msgstr: "Paniguru"
+msgstr: "Panigurong salita"
 
 msgid: "Run a query on the %s database"
-msgstr: "Magsagawa ng query sa %s database"
+msgstr: "Magsagawa ng tanong sa %s database"
 
 msgid: "Columns"
 msgstr: "Mga Kolum"
@@ -611,8 +611,8 @@ msgstr: "Linguahe"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: "%d statement ay na-execute sa file"
-msgstr[1]: "%d statements ay na-execute sa file"
+msgstr[0]: "%d na pangungusap ay naisagawa sa file"
+msgstr[1]: "%d na mga pangungusap ay naisagawa sa file"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
@@ -634,31 +634,31 @@ msgid: "The following errors were reported"
 msgstr: "Ang mga sumusunod na problema ay iniulat"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: ""
+msgstr: "Wala kang permiso para gumawa ng bagong tauhan."
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: ""
+msgstr: "Wala kang permiso para makita o manipulahin ang mga tauhan."
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "Ikaw ay konektado sa %s"
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "Bigyan ng access sa"
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "Lahat ng databases"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "Napiling databases"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Bigyan ang tauhan"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Bago"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "Walang pang bago."
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Magpalit ng password"

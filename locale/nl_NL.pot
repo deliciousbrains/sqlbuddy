@@ -1,9 +1,9 @@
 Language: Nederlands
 Language-Code: nl_NL
-Build-Date: Tue, 09 Sep 2008 20:46:10 -0600
+Build-Date: Wed, 18 Feb 2009 10:16:19 -0700
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "Het bestand is leeg of kon niet worden gelezen"
+msgstr: "Bestand kon niet gelezen worden of was leeg"
 
 msgid: "Error performing operation"
 msgstr: "Fout tijdens bewerking"
@@ -105,7 +105,7 @@ msgid: "Oops"
 msgstr: "Oeps"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "Er is niet opgegeven welke database gebruikt moet worden"
+msgstr: "Omwille een bepaalde reden was de databaseparameter niet in uw verzoek meegenomen"
 
 msgid: "Save changes to original"
 msgstr: "Sla wijzigingen op in origineel"
@@ -162,7 +162,7 @@ msgid: "Reload"
 msgstr: "Herlaad"
 
 msgid: "Shutdown"
-msgstr: "Beëindigen"
+msgstr: "Be"
 
 msgid: "Super"
 msgstr: "Super"
@@ -174,13 +174,13 @@ msgid: "User not found!"
 msgstr: "Gebruiker niet gevonden!"
 
 msgid: "You must export either structure, data, or both"
-msgstr: "Je moet de structuur, de data of allebei exporteren"
+msgstr: "U moet structuur en/of data exporteren"
 
 msgid: "Please select the databases that you would like to export"
-msgstr: "Selecteer de databases die je wilt exporteren"
+msgstr: "Selecteer AUB de databases die u wilt exporteren"
 
 msgid: "Please select the tables that you would like to export"
-msgstr: "Selecteer de tabellen die je wilt exporteren"
+msgstr: "Selecteer AUB de tabellen die u wilt exporteren"
 
 msgid: "Table `%s` is empty"
 msgstr: "Tabel `%s` is leeg"
@@ -208,7 +208,7 @@ msgid: "Note
 msgstr: "Opmerking"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
-msgstr: "Als dit een publieke server is, verwijder het bestand dan nadat je het hebt gedownload"
+msgstr: "Dit is een publieke server, u zal dit bestand van de server moeten verwijderen nadat u het gedownload heeft"
 
 msgid: "Export"
 msgstr: "Exporteer"
@@ -259,7 +259,7 @@ msgid: "Print field names on first line"
 msgstr: "Veldnamen op de eerste regel weergeven"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "Als je veel rijen ineens exporteert, dan kun je het beste naar een tekstbestand exporteren!"
+msgstr: "Als u een groot aantal rijen exporteert, wordt aanbevolen het resultaat naar een tekstbestand uit te voeren."
 
 msgid: "Output to"
 msgstr: "Uitvoeren naar"
@@ -352,28 +352,28 @@ msgid: "Error"
 msgstr: "Fout"
 
 msgid: "There was an error receiving data from the server"
-msgstr: "Er is een fout opgetreden tijdens het ontvangen van gegevens van de server"
+msgstr: "Er is een fout opgetreden bij het ontvangen van data van de server"
 
 msgid: "Logout"
 msgstr: "Afmelden"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: "Er is niet opgegeven welke tabel gebruikt moet worden"
+msgstr: "Omwille een bepaalde reden was de tabelparameter niet in uw verzoek meegenomen"
 
 msgid: "Welcome to SQL Buddy!"
 msgstr: "Welkom bij SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "Je bent verbonden met MySQL %s als gebruiker %s."
+msgstr: "U bent verbonden met MySQL %s als gebruiker %s"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "De databaseserver draait sinds %s en heeft ongeveer %s data verzonden"
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Er is een nieuwe versie van SQL Buddy beschikbaar!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "U heeft SQL Buddy %s geïnstalleerd en %s is nu beschikbaar"
 
 msgid: "Getting started"
 msgstr: "Hoe te beginnen"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "Vertalingen"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Versie notities"
 
 msgid: "Contact"
 msgstr: "Contact"
@@ -397,13 +397,13 @@ msgid: "Did you know..."
 msgstr: "Wist je dat..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: "Er is een eenvoudiger manier om een groot aantal rijen te selecteren. Selecteer de eerste rij, houd de shifttoets ingedrukt en selecteer de laatste rij. De tussenliggende rijen worden dan automatisch geselecteerd."
+msgstr: "Er is een gemakkelijker manier om een grote groep van items te selecteren terwijl u door tabelrijen bladert. Klik op de eerste rij, houd shift ingedrukt en selecteer de laatste rij. De keuzevakjes tussen de twee rijen zullen nu automatisch voor u worden gemarkeerd."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: "De breedte van de kolommen kan worden aangepast. Maak ze zo breed of smal als je zelf wilt. "
+msgstr: "De kolommen in de Bladeren- en Query-tabbladen zijn schaalbaar. Stel ze zo breed of smal in zoals u wilt."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "De aanmeldpagina gebruikt de standaardgebruiker root@localhost. Pas het bestand \"config.php\" aan om dit te wijzigen."
+msgstr: "De loginpagina is gebaseerd op de standaardgebruiker root@localhost. Door config.php aan te passen kunt u de standaardgebruiker en -host aanpassen"
 
 msgid: "Keyboard shortcuts"
 msgstr: "Sneltoetsen"
@@ -481,7 +481,7 @@ msgstr[0]: "Je query gaf %d resultaat"
 msgstr[1]: "Je query gaf %d resultaten"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Opmerking: Om je browser niet te laten crashen, worden alleen de eerste %d resultaten getoond"
+msgstr: "Opmerking: Om het crashen van uw browser te voorkomen, worden alleen de eerste %d resultaten getoond"
 
 msgid: "binary data"
 msgstr: "binaire data"
@@ -493,10 +493,10 @@ msgid: "Your query did not return any results"
 msgstr: "Je query gaf geen resultaten terug"
 
 msgid: "Your data has been inserted into the database"
-msgstr: "Je data is aan de database toegevoegd"
+msgstr: "Uw data is in de database ingevoegd"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: "Er waren problemen bij het vinden van de \"%s\" tabel"
+msgstr: "Er waren problemen de \"%s\" tabel te vinden"
 
 msgid: "There was a problem logging you in"
 msgstr: "Er was een probleem met het aanmelden"
@@ -511,7 +511,7 @@ msgid: "Help!"
 msgstr: "Help!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: "Je sessie is verlopen. Meld je a.u.b. opnieuw aan."
+msgstr: "Uw sessie is verlopen. Log AUB opnieuw in."
 
 msgid: "Username"
 msgstr: "Gebruikersnaam"
@@ -577,19 +577,21 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Invullen in het formaat: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Weet je zeker dat je de tabel '%s' wilt leegmaken? Alle gegevens in de tabel worden hierdoor verwijderd! De volgende query zal worden uitgevoerd:"
+msgstr: "Weet u zeker dat u de '%s' tabel wilt leegmaken? Dit zal alle gegevens verwijderen. De volgende Query zal worden uitgevoerd:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Weet je zeker dat je de '%s' tabel wilt wissen? Dit zal de tabel en alle data in de tabel wissen! De volgende query zal worden uitgevoerd:"
+msgstr: "Weet u zeker dat u de '%s' tabel wilt verwijderen? Dit zal alle gegevens verwijderen. De volgende Query zal worden uitgevoerd:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Weet je zeker dat je de database '%s' wilt verwijderen? Dit zal de database, alle tabellen in de database en de data in de tabellen verwijderen! De volgende query zal worden uitgevoerd:"
+msgstr: "Weet u zeker dat u de '%s' database wilt leegmaken? Dit zal alle tabellen met alle gegevens verwijderen. De volgende Query zal worden uitgevoerd:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "Onze excuses, momenteel wordt alleen Internet Explorer 7 ondersteund. Deze browser kunt u gratis downloaden op de website van Microsoft. Andere gratis browsers die ook ondersteund worden, zijn onder meer Firefox, Safari en Opera."
+msgstr: "Sorry, maar op dit moment ondersteunen we alleen Internet Explorer 7, Firefox, Safari en Opera.
+
+Internet Explorer is gratis beschikbaar op de site van Microsoft."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: "Het lijkt er op dat uw browser geen cookies accepteert. De meeste php-installaties hebben cookies nodig om sessies te laten werken."
+msgstr: "U heeft cookies uitgeschakeld. Om sessies te laten werken hebben de meeste php-installaties cookies nodig."
 
 msgid: "Importing..."
 msgstr: "Importeren..."
@@ -616,13 +618,13 @@ msgstr[1]: "%d statements zijn uitgevoerd vanuit het bestand"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: "%d rij was aan de database toegevoegd vanuit het bestand"
-msgstr[1]: "%d rijen zijn aan de database toegevoegd vanuit het bestand"
+msgstr[0]: "%d rijen is ingevoegd in de database uit het bestand."
+msgstr[1]: "%d rijen is ingevoegd in de database uit het bestand."
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: "%d rij moest worden overgeslagen omdat het aantal aanwezige waardes incorrect was"
-msgstr[1]: "%d rijen moesten worden overgeslagen omdat het aantal aanwezige waardes incorrect was"
+msgstr[0]: "%d rijen werden overgeslagen omdat het aantal waarden incorrect was."
+msgstr[1]: "%d rijen werden overgeslagen omdat het aantal waarden incorrect was."
 
 msgid: "Theme"
 msgstr: "Thema"
@@ -640,25 +642,25 @@ msgid: "You do not have enough permissions to view or manage users."
 msgstr: "Je hebt niet genoeg permissies om gebruikers weer te geven of te beheren."
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "Je bent verbonden met %s."
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "Toegang verlenen tot"
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "Alle databases"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "Geselecteerde databases"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Geef gebruiker"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Updates"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "Er zijn geen updates beschikbaar"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Verander wachtwoord"

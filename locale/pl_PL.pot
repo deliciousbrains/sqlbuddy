@@ -1,6 +1,6 @@
 Language: Polski
 Language-Code: pl_PL
-Build-Date: Tue, 09 Sep 2008 20:46:30 -0600
+Build-Date: Wed, 18 Feb 2009 10:15:29 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Plik niezdatny do odczytu lub pusty"
@@ -45,13 +45,13 @@ msgid: "Edit database"
 msgstr: "Edytuj bazę danych"
 
 msgid: "Charset"
-msgstr: "Zestaw znaków:"
+msgstr: "Zestaw znak"
 
 msgid: "Submit"
 msgstr: "Zatwierdź"
 
 msgid: "Create a new table"
-msgstr: "Utwórz nową tabelę"
+msgstr: "Utw"
 
 msgid: "Name"
 msgstr: "Nazwa"
@@ -72,7 +72,7 @@ msgid: "Key"
 msgstr: "Klucz"
 
 msgid: "primary"
-msgstr: "główny"
+msgstr: "gł"
 
 msgid: "unique"
 msgstr: "unikalny"
@@ -129,7 +129,7 @@ msgid: "User privileges"
 msgstr: "Uprawnienia użytkownika"
 
 msgid: "Select"
-msgstr: "Wybór"
+msgstr: "Wyb"
 
 msgid: "Insert"
 msgstr: "Wprowadzanie"
@@ -235,7 +235,7 @@ msgid: "Data"
 msgstr: "Dane"
 
 msgid: "Compact inserts"
-msgstr: "Skrócone inserty"
+msgstr: "Skr"
 
 msgid: "Complete inserts"
 msgstr: "Kompletne inserty"
@@ -325,7 +325,7 @@ msgid: "delete this user"
 msgstr: "skasuj tego użytkownika"
 
 msgid: "delete this users"
-msgstr: "skasuj tych użytkowników"
+msgstr: "skasuj tych użytkownik"
 
 msgid: "Are you sure you want to"
 msgstr: "Czy jestes pewny"
@@ -367,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Jesteś połączony z bazą danych MySQL %s jako użytkownik %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "Serwer bazy danych pracuje od %s i w przybliżeniu wygenerował %s danych"
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Nowa wersja SQL Buddy jest już dostępna"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "Masz zainstalowaną wersję SQL Buddy %s a jest dostępna wersja %s"
 
 msgid: "Getting started"
 msgstr: "Zaczynamy"
@@ -385,13 +385,13 @@ msgid: "Translations"
 msgstr: "Tłumaczenia"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Informacje o wydaniu"
 
 msgid: "Contact"
 msgstr: "Kontakt"
 
 msgid: "Create a new database"
-msgstr: "Utwórz nową bazę"
+msgstr: "Utw"
 
 msgid: "Did you know..."
 msgstr: "Czy wiesz, że..."
@@ -430,16 +430,16 @@ msgid: "load the query tab"
 msgstr: "pokaż zakładkę zapytania"
 
 msgid: "browse tab - go to first page of results"
-msgstr: "idź do pierwszej strony wyników"
+msgstr: "idź do pierwszej strony wynik"
 
 msgid: "browse tab - go to last page of results"
-msgstr: "idź do ostatniej strony wyników"
+msgstr: "idź do ostatniej strony wynik"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: "idź do poprzedniej strony wyników"
+msgstr: "idź do poprzedniej strony wynik"
 
 msgid: "browse tab - go to next page of results"
-msgstr: "idź do następnej strony wyników"
+msgstr: "idź do następnej strony wynik"
 
 msgid: "optimize selected tables"
 msgstr: "zoptymalizuj zaznaczone tabele"
@@ -477,8 +477,8 @@ msgstr: "Ostatni"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: "Twoje zapytanie zwróciło %d wynik"
-msgstr[1]: "Twoje zapytanie zwróciło %d wyników"
+msgstr[0]: "Twoje zapytanie zwr"
+msgstr[1]: "Twoje zapytanie zwr"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
 msgstr: "Uwaga: Aby uniknąć kłopotów z przeglądarką wyświetlonych zostanie tylko pierwsze %d wyników"
@@ -490,7 +490,7 @@ msgid: "Your query affected %d rows"
 msgstr: "Twoje zapytanie dotyczyło %d wierszy"
 
 msgid: "Your query did not return any results"
-msgstr: "Twoje zapytanie nie zwróciło żadnych wyników"
+msgstr: "Twoje zapytanie nie zwr"
 
 msgid: "Your data has been inserted into the database"
 msgstr: "Twoje dane zostały dodane do bazy danych"
@@ -634,31 +634,31 @@ msgid: "The following errors were reported"
 msgstr: "Wykryto następujące błędy"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: ""
+msgstr: "Nie masz wystarczających przywilejów by utworzyć nowych użytkowników. "
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: ""
+msgstr: "Nie masz wystarczających przywilejów obserwować lub zarządzać użytkownikami."
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "Połączony z %s."
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "Zezwalaj na połączenie do"
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "Wszystkie bazy danych"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "Wybrana baza danych"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Podaj użytkownika"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Aktualizacje"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "Brak aktualizacji"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Zmień hasło"

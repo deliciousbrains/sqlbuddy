@@ -1,6 +1,6 @@
 Language: Lao
-Language-Code: 
-Build-Date: Tue, 09 Sep 2008 20:44:56 -0600
+Language-Code: lo_LA
+Build-Date: Wed, 18 Feb 2009 10:19:37 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "ໄຟລ໌ບໍ່ສາມາດອ່ານໄດ້ ຫຼືວ່າງເປົ່າ"
@@ -367,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "ທ່ານໄດ້ເຊື່ອມຕໍ່ເຂົ້າຖານຂໍ້ມູນ %s ໃສຊື່ %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "ລະບົບຖານຂໍ້ມູນນີ້ຖືກເປີດໃຊ້ມາຕັ້ງແຕ່ %s ແລະສົ່ງຂໍ້ມູນໄປແລ້ວປະມານ %s."
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "ເວີຊັນໃຫມ່ຂອງ SQL Buddy ອອກແລ້ວ!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "ທ່ານກຳລັງໃຊ້ SQL Buddy ເວີຊັນ %s ແລະຕອນນີ້ເວີຊັນ %s ມີໃຫ້ດາວໂຫລດແລ້ວ."
 
 msgid: "Getting started"
 msgstr: "ເລີ່ມໃຊ້ງານ"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "ຮ່ວມແປ"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "ໝາຍເຫດໃນເວີຊັນ"
 
 msgid: "Contact"
 msgstr: "ຕິດຕໍ່"
@@ -574,16 +574,16 @@ msgid: "Add a new user"
 msgstr: "ເພີ່ມຜູ້ໃຊ້ງານໃໝ່"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: "à»ƒàºªà»ˆàº‚à»à»‰àº¡àº¹àº™àº®àº¹àºšà»àºšàºšàº™àºµà»‰: ('1','2')"
+msgstr: "ໃສ່ໃນຮູບແບບນີ້: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "àº—à»ˆàº²àº™à»àº™à»ˆà»ƒàºˆàº«àº¼àº·àºšà»à»ˆàº§à»ˆàº²àºˆàº°àº¥àº¶àºšàº‚à»à»‰àº¡àº¹àº™à»ƒàº™àº•àº²àº•àº°àº¥àº²àº‡ '%s' àº­àº­àº? àº„àº´àº§àº£àºµàº¥àº¸à»ˆàº¡àº™àºµà»‰àºˆàº°àº–àº·àºà»ƒàºŠà»‰àº‡àº²àº™àº«àº²àºàº•à»‰àº­àº‡àºàº²àº™àº¥àº¶àºš"
+msgstr: "ທ່ານແນ່ໃຈຫຼືບໍ່ວ່າຈະລຶບຂໍ້ມູນໃນຕາຕະລາງ '%s'? ຖ້າທ່ານຕ້ອງການຈະລຶບແທ້ ລະບົບຈະຣັນຄຳສັ່ງລຸ່ມນີ້:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "àº—à»ˆàº²àº™à»àº™à»ˆà»ƒàºˆàºšà»à»ˆàº§à»ˆàº²àºˆàº°à»‚àºàº™àº•àº²àº•àº°àº¥àº²àº‡àºŠàº·à»ˆ '%s' àº–àº´à»‰àº¡? àºàº²àº™àºàº°àº—àº³àº™àºµà»‰àºˆàº°à»€àº›àº±àº™àºàº²àº™àº¥àº¶àºšàº•àº²àº•àº°àº¥àº²àº‡ à»àº¥àº°àº‚à»à»‰àº¡àº¹àº™à»ƒàº” à»† àºà»à»ˆàº•àº²àº¡àº—àºµà»ˆàº¡àºµàº¢àº¹à»ˆ à»ƒàº™àº•àº²àº•àº°àº¥àº²àº‡àº™àº±à»‰àº™. àº„àº³àºªàº±à»ˆàº‡àº•à»à»ˆà»„àº›àº™àºµà»‰àºˆàº°àº–àº·àºà»ƒàºŠà»‰:"
+msgstr: "ທ່ານແນ່ໃຈຫຼືບໍ່ວ່າຈະໂຍນຕາຕະລາງ '%s' ຖິ້ມ? ຖ້າທ່ານຕ້ອງການຈະລຶບແທ້ ລະບົບຈະຣັນຄຳສັ່ງລຸ່ມນີ້:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "àº—à»ˆàº²àº™à»àº™à»ˆà»ƒàºˆàºšà»à»ˆàº§à»ˆàº²àºˆàº°à»‚àºàº™àº–àº²àº™àº‚à»à»‰àº¡àº¹àº™àºŠàº·à»ˆ '%s' àº–àº´à»‰àº¡? àºàº²àº™àºàº°àº—àº³àº™àºµà»‰àºˆàº°à»€àº›àº±àº™àºàº²àº™àº¥àº¶àºšàº–àº²àº™àº‚à»à»‰àº¡àº¹àº™, àº•àº²àº•àº°àº¥àº²àº‡ à»àº¥àº°àº‚à»à»‰àº¡àº¹àº™à»ƒàº” à»† àºà»à»ˆàº•àº²àº¡àº—àºµà»ˆàº¡àºµàº¢àº¹à»ˆ à»ƒàº™àº–àº²àº™àº‚à»à»‰àº¡àº¹àº™àº™àº±à»‰àº™. àº„àº³àºªàº±à»ˆàº‡àº•à»à»ˆà»„àº›àº™àºµà»‰àºˆàº°àº–àº·àºà»ƒàºŠà»‰:"
+msgstr: "ທ່ານແນ່ໃຈຫຼືບໍ່ວ່າຈະໂຍນຖານຂໍ້ມູນ '%s' ຖິ້ມ? ການກະທຳນີ້ຈະເປັນການລຶບຖານຂໍ້ມູນ, ຕາຕະລາງ ແລະຂໍ້ມູນທັງໝົດໃນຖານຂໍ້ມູນນີ້ຖິ້ມ."
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
 msgstr: "ຂໍອະໄພ, ຂະນະນີ້ມີພຽງ Internet Explorer 7 ເທົ່ານັ້ນທີ່ສາມາດໃຊ້ໄດ້. ທ່ານສາມາດດາວໂຫລດໄດ້ຟຣີຈາກເວັບໄຊຂອງ Microsoft. ນອກຈາກນີ້ກໍ່ຍັງມີ browser ຟຣີອື່ນ ໆ ທີ່ຮອງຮັບເຊັ່ນ Firefox, Safari, ແລະ Opera ເປັນຕົ້ນ."
@@ -595,7 +595,7 @@ msgid: "Importing..."
 msgstr: "ກຳລັງນຳເຂົ້າ..."
 
 msgid: "Drop the '%s' database"
-msgstr: "à»‚àºàº™àº–àº²àº™àº‚à»à»‰àº¡àº¹àº™ '%s' àº–àº´à»‰àº¡"
+msgstr: "ໂຍນຖານຂໍ້ມູນ '%s' ຖິ້ມ"
 
 msgid: "Okay"
 msgstr: "ຕົກລົງ"
@@ -640,25 +640,25 @@ msgid: "You do not have enough permissions to view or manage users."
 msgstr: "ທ່ານບໍ່ມີອະພິສິດພຽງພໍທີ່ຈະຈັດການ ຫຼືເບິ່ງຜູ້ໃຊ້ຕ່າງ ໆ ໄດ້."
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "ຂະນະນີ້ທ່ານກຳລັງເຊື່ອມຕໍ່ໄປທີ່ %s."
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "ອະນຸຍາດໃຫ້ເຂົ້າເຖິງ"
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "ຖານຂໍ້ມູນທັງໝົດ"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "ຖານຂໍ້ມູນທີ່ເລືອກໄວ້"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "ໃຫ້ຜູ້ໃຊ້ງານ"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "ອັບເດດ"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "ຍັງບໍ່ມີເວີຊັນອັບເດດໃໝ່ເທື່ອ"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "ປ່ຽນລະຫັດຜ່ານ"

@@ -1,631 +1,631 @@
-Language: English
-Language-Code: en_US
-Build-Date: Wed, 18 Feb 2009 10:34:56 -0700
+Language: Slovenski
+Language-Code: sl_SL
+Build-Date: Wed, 18 Feb 2009 10:23:36 -0700
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: ""
+msgstr: "Ali datoteke ni bilo mogoče prebrati ali pa je prazna"
 
 msgid: "Error performing operation"
-msgstr: ""
+msgstr: "Napaka pri izvajanju operacije"
 
 msgid: "All"
-msgstr: ""
+msgstr: "Vse"
 
 msgid: "None"
-msgstr: ""
+msgstr: "nič"
 
 msgid: "With selected"
-msgstr: ""
+msgstr: "z izbrano"
 
 msgid: "Empty"
-msgstr: ""
+msgstr: "Prazno"
 
 msgid: "Drop"
-msgstr: ""
+msgstr: "Zbriši"
 
 msgid: "Optimize"
-msgstr: ""
+msgstr: "Optimiziraj"
 
 msgid: "Table"
-msgstr: ""
+msgstr: "Tabela"
 
 msgid: "Rows"
-msgstr: ""
+msgstr: "Vrsta"
 
 msgid: "Size"
-msgstr: ""
+msgstr: "Velikost"
 
 msgid: "Overhead"
-msgstr: ""
+msgstr: "Zgornji"
 
 msgid: "Options"
-msgstr: ""
+msgstr: "Možnosti"
 
 msgid: "Edit database"
-msgstr: ""
+msgstr: "Popravi Bazo podatkov"
 
 msgid: "Charset"
-msgstr: ""
+msgstr: "Nabor znakov"
 
 msgid: "Submit"
-msgstr: ""
+msgstr: "Izvrši"
 
 msgid: "Create a new table"
-msgstr: ""
+msgstr: "Ustvari novo tabelo"
 
 msgid: "Name"
-msgstr: ""
+msgstr: "Ime"
 
 msgid: "Setup the fields for the table below"
-msgstr: ""
+msgstr: "Pripravite polja za spodnjo tabelo "
 
 msgid: "New field"
-msgstr: ""
+msgstr: "Novo polje"
 
 msgid: "Type"
-msgstr: ""
+msgstr: "Tip"
 
 msgid: "Values"
-msgstr: ""
+msgstr: "Vrednost"
 
 msgid: "Key"
-msgstr: ""
+msgstr: "Ključ"
 
 msgid: "primary"
-msgstr: ""
+msgstr: "Primarni"
 
 msgid: "unique"
-msgstr: ""
+msgstr: "Unikaten"
 
 msgid: "index"
-msgstr: ""
+msgstr: "Index"
 
 msgid: "Default"
-msgstr: ""
+msgstr: "Osnovni"
 
 msgid: "Other"
-msgstr: ""
+msgstr: "Ostalo"
 
 msgid: "Unsigned"
-msgstr: ""
+msgstr: "Nepodpisan"
 
 msgid: "Binary"
-msgstr: ""
+msgstr: "Binaren"
 
 msgid: "Not Null"
-msgstr: ""
+msgstr: "Nenična vsota"
 
 msgid: "Auto Increment"
-msgstr: ""
+msgstr: "Auto dodaj"
 
 msgid: "Add field"
-msgstr: ""
+msgstr: "Dodaj polje"
 
 msgid: "Oops"
-msgstr: ""
+msgstr: "Pomota"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: ""
+msgstr: "Zaradi neznanega razloga, podatkovni parameter ni bil vključen v vaši zahtevi  "
 
 msgid: "Save changes to original"
-msgstr: ""
+msgstr: "Shrani spremembe v original"
 
 msgid: "Insert as new row"
-msgstr: ""
+msgstr: "Vstavi kot novo vrstico"
 
 msgid: "Save"
-msgstr: ""
+msgstr: "Shrani"
 
 msgid: "User"
-msgstr: ""
+msgstr: "Uporabnik"
 
 msgid: "All privileges"
-msgstr: ""
+msgstr: "Vsi privilegiji"
 
 msgid: "Selected privileges"
-msgstr: ""
+msgstr: "Izbrani privilegiji"
 
 msgid: "User privileges"
-msgstr: ""
+msgstr: "Uporabnikovi privilegiji"
 
 msgid: "Select"
-msgstr: ""
+msgstr: "Izberi"
 
 msgid: "Insert"
-msgstr: ""
+msgstr: "Vstavi"
 
 msgid: "Update"
-msgstr: ""
+msgstr: "Posodobi"
 
 msgid: "Delete"
-msgstr: ""
+msgstr: "Zbriši"
 
 msgid: "Alter"
-msgstr: ""
+msgstr: "Spremeniti"
 
 msgid: "Create"
-msgstr: ""
+msgstr: "Ustvariti"
 
 msgid: "Temp tables"
-msgstr: ""
+msgstr: "Pomožne tabele"
 
 msgid: "Administrator privileges"
-msgstr: ""
+msgstr: "Administratorske pravice"
 
 msgid: "File"
-msgstr: ""
+msgstr: "Datoteka"
 
 msgid: "Process"
-msgstr: ""
+msgstr: "Proces"
 
 msgid: "Reload"
-msgstr: ""
+msgstr: "Ponovno naloži"
 
 msgid: "Shutdown"
-msgstr: ""
+msgstr: "Ustaviti"
 
 msgid: "Super"
-msgstr: ""
+msgstr: "Super"
 
 msgid: "Grant option"
-msgstr: ""
+msgstr: "Dovoli možnost"
 
 msgid: "User not found!"
-msgstr: ""
+msgstr: "Uporabnik ni bil najden"
 
 msgid: "You must export either structure, data, or both"
-msgstr: ""
+msgstr: "Morate izvoziti strukturo, podatke ali oboje"
 
 msgid: "Please select the databases that you would like to export"
-msgstr: ""
+msgstr: "Prosim izberite bazo podatkov, ki bi jo radi izvozili"
 
 msgid: "Please select the tables that you would like to export"
-msgstr: ""
+msgstr: "Prosim izberite bazo tabele, ki bi jih radi izvozili"
 
 msgid: "Table `%s` is empty"
-msgstr: ""
+msgstr: "Tabela `%s` je prazna"
 
 msgid: "Results"
-msgstr: ""
+msgstr: "Rezultat"
 
 msgid: "Select all"
-msgstr: ""
+msgstr: "Izberi vse"
 
 msgid: "The file could not be opened"
-msgstr: ""
+msgstr: "Datoteke ni bilo mogoče odpreti"
 
 msgid: "Could not write to file"
-msgstr: ""
+msgstr: "Pisanje v datoteko ni možno"
 
 msgid: "Successfully wrote content to file"
-msgstr: ""
+msgstr: "Pisanje v datoteko je bilo uspešno"
 
 msgid: "Download"
-msgstr: ""
+msgstr: "Prenesi"
 
 msgid: "Note
 "
-msgstr: ""
+msgstr: "Opomba"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
-msgstr: ""
+msgstr: "Če je to javni strežnik je bolje da zbrišeš to datoteko po prenosu z strežnika"
 
 msgid: "Export"
-msgstr: ""
+msgstr: "Izvozi"
 
 msgid: "Tables"
-msgstr: ""
+msgstr: "Tabele"
 
 msgid: "Databases"
-msgstr: ""
+msgstr: "Baze podatkov"
 
 msgid: "Format"
-msgstr: ""
+msgstr: "Format"
 
 msgid: "SQL"
-msgstr: ""
+msgstr: "SQL"
 
 msgid: "CSV"
-msgstr: ""
+msgstr: "CVS"
 
 msgid: "Structure"
-msgstr: ""
+msgstr: "Struktura"
 
 msgid: "Data"
-msgstr: ""
+msgstr: "Podatki"
 
 msgid: "Compact inserts"
-msgstr: ""
+msgstr: "Kompakten vnos"
 
 msgid: "Complete inserts"
-msgstr: ""
+msgstr: "Celoten vnos"
 
 msgid: "Delimiter"
-msgstr: ""
+msgstr: "Razmejevalec"
 
 msgid: "Comma"
-msgstr: ""
+msgstr: "Vejica"
 
 msgid: "Tab"
-msgstr: ""
+msgstr: "Zavihek"
 
 msgid: "Semicolon"
-msgstr: ""
+msgstr: "podpičje"
 
 msgid: "Space"
-msgstr: ""
+msgstr: "Presledek"
 
 msgid: "Print field names on first line"
-msgstr: ""
+msgstr: "Natisni imena polj na prvi liniji"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: ""
+msgstr: "Če izvažate veliko število vrstic je priporočljivo da jih izvozite v tekstovno datoteko"
 
 msgid: "Output to"
-msgstr: ""
+msgstr: "Izpiši v"
 
 msgid: "Browser"
-msgstr: ""
+msgstr: "Brskalnik"
 
 msgid: "Text file"
-msgstr: ""
+msgstr: "Tekstovna datoteka"
 
 msgid: "Home"
-msgstr: ""
+msgstr: "Domov"
 
 msgid: "Users"
-msgstr: ""
+msgstr: "Uporabniki"
 
 msgid: "Query"
-msgstr: ""
+msgstr: "Poizvedba"
 
 msgid: "Import"
-msgstr: ""
+msgstr: "Uvozi"
 
 msgid: "Overview"
-msgstr: ""
+msgstr: "Predogled"
 
 msgid: "Browse"
-msgstr: ""
+msgstr: "Brskaj"
 
 msgid: "Your changes were saved to the database"
-msgstr: ""
+msgstr: "Vaše spremembe so bile shranjene v bazo "
 
 msgid: "delete this row"
-msgstr: ""
+msgstr: "Zbriši to vrsto"
 
 msgid: "delete these rows"
-msgstr: ""
+msgstr: "Zbriši te vrste"
 
 msgid: "empty this table"
-msgstr: ""
+msgstr: "Izprazni tabelo"
 
 msgid: "empty these tables"
-msgstr: ""
+msgstr: "Izprazni te tabele"
 
 msgid: "drop this table"
-msgstr: ""
+msgstr: "Zbriši tabelo"
 
 msgid: "drop these tables"
-msgstr: ""
+msgstr: "Zbriši te tabele"
 
 msgid: "delete this column"
-msgstr: ""
+msgstr: "Zbriši stolpec"
 
 msgid: "delete these columns"
-msgstr: ""
+msgstr: "Zbriši te stolpce"
 
 msgid: "delete this index"
-msgstr: ""
+msgstr: "Zbriši ta indeks"
 
 msgid: "delete this indexes"
-msgstr: ""
+msgstr: "Zbriši te indekse"
 
 msgid: "delete this user"
-msgstr: ""
+msgstr: "Zbriši tega uporabnika"
 
 msgid: "delete this users"
-msgstr: ""
+msgstr: "Zbriši tega uporabnika"
 
 msgid: "Are you sure you want to"
-msgstr: ""
+msgstr: "Ali ste prepričani da hočete"
 
 msgid: "The following query will be run:"
-msgstr: ""
+msgstr: "Naslednja poizvedba bo  opravljena"
 
 msgid: "The following queries will be run:"
-msgstr: ""
+msgstr: "Naslednje poizvedbe bodo  opravljene"
 
 msgid: "Confirm"
-msgstr: ""
+msgstr: "Potrdi"
 
 msgid: "Successfully saved changes"
-msgstr: ""
+msgstr: "Spremembe uspešno shranjene"
 
 msgid: "Full Text"
-msgstr: ""
+msgstr: "Celoten tekst"
 
 msgid: "Loading..."
-msgstr: ""
+msgstr: "Nalaganje ... "
 
 msgid: "Error"
-msgstr: ""
+msgstr: "Napaka"
 
 msgid: "There was an error receiving data from the server"
-msgstr: ""
+msgstr: "Prišlo je do napake pri prejemanju podatkov iz strežnika"
 
 msgid: "Logout"
-msgstr: ""
+msgstr: "Odjava"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: ""
+msgstr: "Zaradi neznanega razloga, parameter tabele ni bil vključen v vaši zahtevi  "
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: ""
+msgstr: "Dobrodošli v SQL Buddyu!"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: ""
+msgstr: "Povezani ste v MySQL bazo %s uporabniškim imenom %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
 msgstr: ""
 
 msgid: "A new version of SQL Buddy is available!"
-msgstr: ""
+msgstr: "Nova verzija SQL Buddy je na voljo!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
 msgstr: ""
 
 msgid: "Getting started"
-msgstr: ""
+msgstr: "Za začetek"
 
 msgid: "Help"
-msgstr: ""
+msgstr: "Pomoč"
 
 msgid: "Translations"
-msgstr: ""
+msgstr: "Prevodi"
 
 msgid: "Release Notes"
 msgstr: ""
 
 msgid: "Contact"
-msgstr: ""
+msgstr: "Kontakt"
 
 msgid: "Create a new database"
-msgstr: ""
+msgstr: "Ustvari novo bazo podatkov"
 
 msgid: "Did you know..."
-msgstr: ""
+msgstr: "Ali ste vedeli...,"
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: ""
+msgstr: "Obstaja preprostejši način za izbiro velikega števila predmetov pri pregledovanju vrstic tabele. Označite prvo vrstico, držite Shift tipko, in izberite zadnjo vrstico, ki jo hočete označiti. Vrstice tako zajete se bojo avtomatično označile za vas. "
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: ""
+msgstr: "Stolpci v brskaj in poizvedbenih zavihkih lahko spreminjate velikost. Raztegnite jih po svojih željah. "
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: ""
+msgstr: "Stran za vpis je zasnovana na osnovnem uporabniku root@localhost. S spremembami v nastavitvah config.php, lahko spremenite osnovnega uporabnika in gostitelja. "
 
 msgid: "Keyboard shortcuts"
-msgstr: ""
+msgstr: "Bližnjice na tipkovnici"
 
 msgid: "Press this key..."
-msgstr: ""
+msgstr: "Pritisni to tipko ..."
 
 msgid: "...and this will happen"
-msgstr: ""
+msgstr: "... in to se bo zgodilo"
 
 msgid: "select none"
-msgstr: ""
+msgstr: "Izberi nič"
 
 msgid: "edit selected items"
-msgstr: ""
+msgstr: "Popravi izbrane predmete"
 
 msgid: "delete selected items"
-msgstr: ""
+msgstr: "Zbriši izbrane predmete"
 
 msgid: "refresh page"
-msgstr: ""
+msgstr: "Osveži stran"
 
 msgid: "load the query tab"
-msgstr: ""
+msgstr: "Naloži poizvedbeni zavihek"
 
 msgid: "browse tab - go to first page of results"
-msgstr: ""
+msgstr: "Prebrskaj zavihek - pojdi na prvo stran rezultatov"
 
 msgid: "browse tab - go to last page of results"
-msgstr: ""
+msgstr: "Prebrskaj zavihek - pojdi na zadnjo stran rezultatov"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: ""
+msgstr: "Prebrskaj zavihek - pojdi na predhodno stran rezultatov"
 
 msgid: "browse tab - go to next page of results"
-msgstr: ""
+msgstr: "Prebrskaj zavihek - pojdi na naslednjo stran rezultatov"
 
 msgid: "optimize selected tables"
-msgstr: ""
+msgstr: "Optimiziraj izbrane tabele"
 
 msgid: "Choose a .sql file to import"
-msgstr: ""
+msgstr: "Izberi .sql datoteko za uvoz"
 
 msgid: "File
 "
-msgstr: ""
+msgstr: "Datoteka"
 
 msgid: "Ignore first line"
-msgstr: ""
+msgstr: "Prezri prvo linijo"
 
 msgid: "Edit"
-msgstr: ""
+msgstr: "Popravi"
 
 msgid: "Refresh"
-msgstr: ""
+msgstr: "Osveži"
 
 msgid: "No primary key defined"
-msgstr: ""
+msgstr: "Primarni kjuč ni bil določen"
 
 msgid: "First"
-msgstr: ""
+msgstr: "Prva"
 
 msgid: "Prev"
-msgstr: ""
+msgstr: "Predhodna"
 
 msgid: "Next"
-msgstr: ""
+msgstr: "Naslednja"
 
 msgid: "Last"
-msgstr: ""
+msgstr: "Zadnja"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "Vaša poizvedba je vrnila %d rezultatov"
+msgstr[1]: "Vaše poizvedbe so vrnile %d rezultatov"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: ""
+msgstr: "Opozorilo: Da bi se izognili zrušenju brskalnika, je bilo prikazanih samo prvih %d rezultatov"
 
 msgid: "binary data"
-msgstr: ""
+msgstr: "binarni (dvojni) podatki"
 
 msgid: "Your query affected %d rows"
-msgstr: ""
+msgstr: "Vaša poizvedba vpliva %d vrstic"
 
 msgid: "Your query did not return any results"
-msgstr: ""
+msgstr: "Vaša poizvedba ni vrnila nobenega rezultata"
 
 msgid: "Your data has been inserted into the database"
-msgstr: ""
+msgstr: "Vaši podatki so bili vneseni v bazo podatkov."
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: ""
+msgstr: "Prišlo je do težav pri iskanju \"%s\" tabele"
 
 msgid: "There was a problem logging you in"
-msgstr: ""
+msgstr: "Pojavil se je problem pri poskusu prijave"
 
 msgid: "Login"
-msgstr: ""
+msgstr: "prijava"
 
 msgid: "Unsupported browser"
-msgstr: ""
+msgstr: "Ta brskalnik ni podprt"
 
 msgid: "Help!"
-msgstr: ""
+msgstr: "Pomoč !"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: ""
+msgstr: "Vaša seja se je iztekla. Prosim vpišite se ponovno."
 
 msgid: "Username"
-msgstr: ""
+msgstr: "Uporabniško ime"
 
 msgid: "Password"
-msgstr: ""
+msgstr: "Geslo"
 
 msgid: "Run a query on the %s database"
-msgstr: ""
+msgstr: "Naredi poizvedbo na %s bazi podatkov"
 
 msgid: "Columns"
-msgstr: ""
+msgstr: "Stolpci"
 
 msgid: "Add a column"
-msgstr: ""
+msgstr: "Dodaj stolpec"
 
 msgid: "Insert this column"
-msgstr: ""
+msgstr: "Vnesi ta stolpec"
 
 msgid: "At end of table"
-msgstr: ""
+msgstr: "Na koncu tabele"
 
 msgid: "At beginning of table"
-msgstr: ""
+msgstr: "Na začetku tabele"
 
 msgid: "After"
-msgstr: ""
+msgstr: "Spremeni"
 
 msgid: "Edit table"
-msgstr: ""
+msgstr: "Popravi tabelo"
 
 msgid: "Indexes"
-msgstr: ""
+msgstr: "Indeksi"
 
 msgid: "Add an index"
-msgstr: ""
+msgstr: "Dodaj indeks"
 
 msgid: "Column(s)"
-msgstr: ""
+msgstr: "Stopec(i)"
 
 msgid: "Show %d more..."
-msgstr: ""
+msgstr: "Pokaži %d več ..."
 
 msgid: "Empty table"
-msgstr: ""
+msgstr: "Izprazni tabelo"
 
 msgid: "Drop table"
-msgstr: ""
+msgstr: "Izbriši tabelo"
 
 msgid: "Optimize table"
-msgstr: ""
+msgstr: "Optimiziraj tabelo"
 
 msgid: "Table Information"
-msgstr: ""
+msgstr: "Informacije o tabeli"
 
 msgid: "Host"
-msgstr: ""
+msgstr: "Gostitelj"
 
 msgid: "Add a new user"
-msgstr: ""
+msgstr: "Dodaj novega uporabnika"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: ""
+msgstr: "VpiÅ¡i v formatu ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "Ali si prepriÄan da hoÄeÅ¡ izprazniti '%s' tabelo. To bo izbrisalo vse podatke v tej tabeli. Naslednja operacija bo izvedena:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "Ali ste prepriÄani da hoÄete zbrisati tabelo '%e'? To bo izbrisalo tabelo, in vse podatke v tabeli. Naslednja operacija bo izvedena:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: ""
+msgstr: "Ali ste prepriÄani da hoÄete zbrisati bazo podatkov '%s'? To bo izbrisalo bazo, vse tabele v bazi, in podatke v the tabelah. Naslednja operacija bo izvedena:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: ""
+msgstr: "Se opravičujemo ampak trenutno je podprt samo Internet Explorer 7. Na voljo je zastonj na Microsoftovi strani. Ostali brezplačni brskalniki so tudi podprti, vključno z Firefox, Safari in Opera. "
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: ""
+msgstr: "Zgleda da nimate vključenih piškotkov (cookies). Za delovanje sej, večina php namestitev potrebuje piškotke.  "
 
 msgid: "Importing..."
-msgstr: ""
+msgstr: "Vnašanje ..."
 
 msgid: "Drop the '%s' database"
-msgstr: ""
+msgstr: "ZbriÅ¡i '%s' baz podatkov"
 
 msgid: "Okay"
-msgstr: ""
+msgstr: "V redu"
 
 msgid: "Cancel"
-msgstr: ""
+msgstr: "Prekliči"
 
 msgid: "Storage engine"
-msgstr: ""
+msgstr: "Podatkovni model"
 
 msgid: "Language"
-msgstr: ""
+msgstr: "Jezik"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d poročila je bilo izvršene iz datoteke"
+msgstr[1]: "%d poročil je bilo izvršene iz datoteke"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d vrstice je bilo vnesenih v bazo podatkov iz datoteke "
+msgstr[1]: "%d vrstic je bilo vnesenih v bazo podatkov iz datoteke "
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d vrstice je bilo izpuščenih zaradi napačnega števila vrednosti"
+msgstr[1]: "%d vrstic je bilo izpuščenih zaradi napačnega števila vrednosti"
 
 msgid: "Theme"
-msgstr: ""
+msgstr: "Tema"
 
 msgid: "(%.4f seconds)"
 msgstr: ""

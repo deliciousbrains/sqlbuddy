@@ -1,6 +1,6 @@
 Language: 日本語
-Language-Code: 
-Build-Date: Tue, 09 Sep 2008 20:54:23 -0600
+Language-Code: ja_JP
+Build-Date: Wed, 18 Feb 2009 10:18:33 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "ファイルが空のため読み込むことが出来ませんでした。"
@@ -51,19 +51,19 @@ msgid: "Submit"
 msgstr: "送信"
 
 msgid: "Create a new table"
-msgstr: "新規テーブルの作成"
+msgstr: "新規テーブルを作成"
 
 msgid: "Name"
 msgstr: "名前"
 
 msgid: "Setup the fields for the table below"
-msgstr: "フィールドのセットアップ"
+msgstr: "フィールドをセットアップ"
 
 msgid: "New field"
 msgstr: "新しいフィールド"
 
 msgid: "Type"
-msgstr: "タイプ"
+msgstr: "型"
 
 msgid: "Values"
 msgstr: "値"
@@ -87,10 +87,10 @@ msgid: "Other"
 msgstr: "その他"
 
 msgid: "Unsigned"
-msgstr: "Unsigned"
+msgstr: "符号無し"
 
 msgid: "Binary"
-msgstr: "Binary"
+msgstr: "バイナリ"
 
 msgid: "Not Null"
 msgstr: "Not Null"
@@ -117,7 +117,7 @@ msgid: "Save"
 msgstr: "保存"
 
 msgid: "User"
-msgstr: "ユーザ"
+msgstr: "ユーザー"
 
 msgid: "All privileges"
 msgstr: "すべての特権"
@@ -126,7 +126,7 @@ msgid: "Selected privileges"
 msgstr: "選択された特権"
 
 msgid: "User privileges"
-msgstr: "ユーザの特権"
+msgstr: "ユーザーの特権"
 
 msgid: "Select"
 msgstr: "選択"
@@ -171,10 +171,10 @@ msgid: "Grant option"
 msgstr: "Grant オプション"
 
 msgid: "User not found!"
-msgstr: "ユーザが存在しません"
+msgstr: "ユーザーが存在しません"
 
 msgid: "You must export either structure, data, or both"
-msgstr: "構造、データのいずれか、または両方をエクスポートしなければなりません"
+msgstr: "構造・データのいずれか又は両方をエクスポートしなければなりません"
 
 msgid: "Please select the databases that you would like to export"
 msgstr: "エクスポートするデータベースを選択してください"
@@ -189,16 +189,16 @@ msgid: "Results"
 msgstr: "結果"
 
 msgid: "Select all"
-msgstr: "すべてを選択する"
+msgstr: "すべて選択"
 
 msgid: "The file could not be opened"
-msgstr: "ファイルを開けることができません"
+msgstr: "ファイルを開けません"
 
 msgid: "Could not write to file"
-msgstr: "ファイルに書き込むことができません"
+msgstr: "ファイルに書き込めません"
 
 msgid: "Successfully wrote content to file"
-msgstr: "ファイルに書き込み成功"
+msgstr: "ファイルに書き込みました"
 
 msgid: "Download"
 msgstr: "ダウンロード"
@@ -208,7 +208,7 @@ msgid: "Note
 msgstr: "注意"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
-msgstr: "もし共有サーバならば、ダウンロード後このファイルを削除してください"
+msgstr: "共有サーバの場合、ダウンロード後にこのファイルを削除してください"
 
 msgid: "Export"
 msgstr: "エクスポート"
@@ -223,10 +223,10 @@ msgid: "Format"
 msgstr: "フォーマット"
 
 msgid: "SQL"
-msgstr: "SQL"
+msgstr: "SQLファイル"
 
 msgid: "CSV"
-msgstr: "CSV"
+msgstr: "CSVファイル"
 
 msgid: "Structure"
 msgstr: "構造"
@@ -241,7 +241,7 @@ msgid: "Complete inserts"
 msgstr: "完全挿入"
 
 msgid: "Delimiter"
-msgstr: "デリミタ"
+msgstr: "区切り"
 
 msgid: "Comma"
 msgstr: "コンマ"
@@ -256,16 +256,16 @@ msgid: "Space"
 msgstr: "スペース"
 
 msgid: "Print field names on first line"
-msgstr: "1行目にフィールド名を印刷"
+msgstr: "1行目にフィールド名を表示"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "大量のデータをエクスポートする場合、テキストファイルへ出力することをお勧めします"
+msgstr: "大量のデータをエクスポートする際は、テキストファイルに出力することをお勧めします"
 
 msgid: "Output to"
 msgstr: "出力先"
 
 msgid: "Browser"
-msgstr: "ブラウザ"
+msgstr: "ブラウザー"
 
 msgid: "Text file"
 msgstr: "テキストファイル"
@@ -289,43 +289,43 @@ msgid: "Browse"
 msgstr: "閲覧"
 
 msgid: "Your changes were saved to the database"
-msgstr: "変更は保存されました"
+msgstr: "変更を保存しました"
 
 msgid: "delete this row"
-msgstr: "行を削除"
+msgstr: "この行を削除"
 
 msgid: "delete these rows"
 msgstr: "これらの行を削除"
 
 msgid: "empty this table"
-msgstr: "テーブルは空です"
+msgstr: "このテーブルは空です"
 
 msgid: "empty these tables"
 msgstr: "これらのテーブルは空です"
 
 msgid: "drop this table"
-msgstr: "テーブルを削除します"
+msgstr: "このテーブルを削除します"
 
 msgid: "drop these tables"
 msgstr: "これらのテーブルを削除します"
 
 msgid: "delete this column"
-msgstr: "列を削除します"
+msgstr: "この列を削除します"
 
 msgid: "delete these columns"
 msgstr: "これらの列を削除します"
 
 msgid: "delete this index"
-msgstr: "インデックスを削除します"
+msgstr: "このインデックスを削除します"
 
 msgid: "delete this indexes"
 msgstr: "これらのインデックスを削除します"
 
 msgid: "delete this user"
-msgstr: "ユーザを削除します"
+msgstr: "このユーザーを削除します"
 
 msgid: "delete this users"
-msgstr: "これらのユーザを削除します"
+msgstr: "これらのユーザーを削除します"
 
 msgid: "Are you sure you want to"
 msgstr: "よろしいですか？"
@@ -340,7 +340,7 @@ msgid: "Confirm"
 msgstr: "確認"
 
 msgid: "Successfully saved changes"
-msgstr: "変更が保存されました"
+msgstr: "変更を保存しました"
 
 msgid: "Full Text"
 msgstr: "全文"
@@ -352,28 +352,28 @@ msgid: "Error"
 msgstr: "エラー"
 
 msgid: "There was an error receiving data from the server"
-msgstr: "データベースからのエラーがあります"
+msgstr: "サーバから受信したデータにエラーがありました"
 
 msgid: "Logout"
 msgstr: "ログアウト"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: "何らかの理由でテーブルのパラメタは含まれませんでした"
+msgstr: "何らかの理由でテーブルのパラメータは含まれませんでした"
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "ようこそ　SQL Buddy! へ"
+msgstr: "SQL Buddy へようこそ！"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "ユーザー名 %s でデータベース %s へ接続しました。"
+msgstr: "データベース%sへ、ユーザ名%sで接続しました。"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "データベースサーバは、%sから稼働していて、約%sのデータが転送されました。"
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "新しいバージョンのSQL Buddyが入手可能です"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "SQL Buddy %s がインストールされ、%s が利用可能になりました。"
 
 msgid: "Getting started"
 msgstr: "はじめに"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "翻訳"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "リリースノート"
 
 msgid: "Contact"
 msgstr: "連絡"
@@ -400,19 +400,19 @@ msgid: "There is an easier way to select a large group of items when browsing ta
 msgstr: "複数のテーブル列を閲覧したいとき、簡単に選ぶ方法があります。まず最初の列をチェックして、shift キーを押したまま、選びたい最後の行をチェックしてください。2列の間にあるチェックボックスが自動的にチェックされます。"
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: "この列は、クエリをブラウズし、タブのサイズ変更します。広いか狭いとして調整していくだけです。"
+msgstr: "クエリタブのサイズを変更します。任意の幅に調整できます。"
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "ログインページは、デフォルトのユーザー「root@localhost」に基づいています。config.phpを編集することによってデフォルトのユーザーおよびホストを変更することができます。"
+msgstr: "ログインページは、デフォルトのユーザ「root@localhost」に基づいています。config.phpを編集することでデフォルトのユーザ及びホストを変更することができます。"
 
 msgid: "Keyboard shortcuts"
 msgstr: "キーボードショートカット"
 
 msgid: "Press this key..."
-msgstr: "このキーを押すと..."
+msgstr: "キー操作"
 
 msgid: "...and this will happen"
-msgstr: "こうなります。"
+msgstr: "効果"
 
 msgid: "select none"
 msgstr: "選択されていません"
@@ -424,10 +424,10 @@ msgid: "delete selected items"
 msgstr: "選択した項目を削除"
 
 msgid: "refresh page"
-msgstr: "ページの更新"
+msgstr: "ページを更新"
 
 msgid: "load the query tab"
-msgstr: "クエリタブのロード"
+msgstr: "クエリタブをロード"
 
 msgid: "browse tab - go to first page of results"
 msgstr: "最初のページへ"
@@ -445,7 +445,7 @@ msgid: "optimize selected tables"
 msgstr: "選択したテーブルを最適化"
 
 msgid: "Choose a .sql file to import"
-msgstr: "選択したSQLファイルをインポート"
+msgstr: "インポートするSQLファイルを選択"
 
 msgid: "File
 "
@@ -481,13 +481,13 @@ msgstr[0]: "%d件の結果が返されました"
 msgstr[1]: "%d件の結果が返されました"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "ノート:ブラウザがクラッシュするのを防ぐ為、最初の%d件の結果が表示されています。"
+msgstr: "注:ブラウザがクラッシュするのを防ぐ為、最初の%d件のみ結果が表示されています。"
 
 msgid: "binary data"
 msgstr: "バイナリデータ"
 
 msgid: "Your query affected %d rows"
-msgstr: "%d件の列を更新しました"
+msgstr: "%d件の行が影響を受けました"
 
 msgid: "Your query did not return any results"
 msgstr: "結果が返されませんでした"
@@ -532,10 +532,10 @@ msgid: "Insert this column"
 msgstr: "このカラムを挿入"
 
 msgid: "At end of table"
-msgstr: "テーブルの最後"
+msgstr: "テーブルの最後に"
 
 msgid: "At beginning of table"
-msgstr: "テーブルの最初"
+msgstr: "テーブルの最初に"
 
 msgid: "After"
 msgstr: "後"
@@ -553,25 +553,25 @@ msgid: "Column(s)"
 msgstr: "カラム"
 
 msgid: "Show %d more..."
-msgstr: "%d をもっと表示..."
+msgstr: "更に%d個表示..."
 
 msgid: "Empty table"
 msgstr: "空のテーブル"
 
 msgid: "Drop table"
-msgstr: "テーブルの削除"
+msgstr: "テーブル削除"
 
 msgid: "Optimize table"
-msgstr: "テーブルの最適化"
+msgstr: "テーブル最適化"
 
 msgid: "Table Information"
-msgstr: "テーブルの情報"
+msgstr: "テーブル情報"
 
 msgid: "Host"
 msgstr: "ホスト"
 
 msgid: "Add a new user"
-msgstr: "新規ユーザーの追加"
+msgstr: "新規ユーザー追加"
 
 msgid: "Enter in the format: ('1','2')"
 msgstr: "入力形式：('1','2')"
@@ -586,7 +586,7 @@ msgid: "Are you sure you want to drop the database '%s'? This will delete the da
 msgstr: "%s データベースを削除してもよろしいですか？これによりデータベース内の全てのテーブルと全てのデータが削除されます。次のクエリを実行します："
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "申し訳ありません、現在のところInternet Explorer 7のみサポートしています。これはマイクロソフト社のウェブサイトで無料でダウンロードできます。 Firefox、Safari、Operaといった他の無料ブラウザにも対応しています。"
+msgstr: "申し訳ありません、現在のところInternet Explorer 7のみサポートしています。これはマイクロソフト社のウェブサイトで無料でダウンロードできます。 Opera、Firefox、Safariといった他のブラウザにも対応しています。"
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
 msgstr: "表示されない様にするには、クッキーを有効にします。セッションを有効にする為、ほとんどのphpインストールがクッキーを必要とします。"
@@ -611,18 +611,18 @@ msgstr: "言語"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: "%d ステートメントはファイルから実行されました"
-msgstr[1]: "%d ステートメントはファイルから実行されました"
+msgstr[0]: "%d個のステートメントがファイルから実行されました"
+msgstr[1]: "%d個のステートメントがファイルから実行されました"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: "%d 列はファイルからデータベースへ挿入されました"
-msgstr[1]: "%d 列はファイルからデータベースへ挿入されました"
+msgstr[0]: "%d個の行がファイルからデータベースへ挿入されました"
+msgstr[1]: "%d個の行がファイルからデータベースへ挿入されました"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: "値の数が不正確であったため %d 列はスキップされました。"
-msgstr[1]: "値の数が不正確であったため %d 列はスキップされました。"
+msgstr[0]: "値の数が不正であったため%d個の行はスキップされました。"
+msgstr[1]: "値の数が不正であったため%d個の行はスキップされました。"
 
 msgid: "Theme"
 msgstr: "テーマ"
@@ -634,16 +634,16 @@ msgid: "The following errors were reported"
 msgstr: "以下のエラｰが報告されました"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: "あなたには、新しいユーザを創造できるくらいの権限がありません。"
+msgstr: "新しいユーザーを作成する権限がありません"
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: "あなたには、ユーザを見るか、または管理できるくらいの権限がありません。"
+msgstr: "ユーザーの閲覧や管理する権限がありません"
 
 msgid: "You are connected to %s."
-msgstr: "%sに接続されます。"
+msgstr: "%sに接続されました"
 
 msgid: "Allow access to"
-msgstr: "アクセスを許します。"
+msgstr: "アクセスを許可"
 
 msgid: "All databases"
 msgstr: "すべてのデータベース "
@@ -652,13 +652,13 @@ msgid: "Selected databases"
 msgstr: "選択されたデータベース "
 
 msgid: "Give user"
-msgstr: "ユーザに与えてください。"
+msgstr: "ユーザに与える。"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "更新"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "利用可能な更新はありません"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "パスワードを変更"

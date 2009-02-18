@@ -60,7 +60,7 @@ else
 	$view = 0;
 
 if (isset($sortKey) && $sortKey != "" && isset($sortDir) && $sortDir != "") {
-	$sort = "ORDER BY " . $sortKey . " " . $sortDir;
+	$sort = "ORDER BY `" . $sortKey . "` " . $sortDir;
 } else {
 	$sort = "";
 }

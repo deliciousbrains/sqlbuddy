@@ -1,21 +1,21 @@
 Language: Magyar
 Language-Code: hu_HU
-Build-Date: Tue, 09 Sep 2008 20:45:38 -0600
+Build-Date: Wed, 18 Feb 2009 10:18:02 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "A fájl nem olvasható vagy üres"
 
 msgid: "Error performing operation"
-msgstr: "Hiba a művelet elvégzésekor"
+msgstr: "Hiba a művelet elvégzésében"
 
 msgid: "All"
-msgstr: "Összes"
+msgstr: "Mind"
 
 msgid: "None"
 msgstr: "Nincs"
 
 msgid: "With selected"
-msgstr: "A kiválasztottakat"
+msgstr: "A kiválasztott"
 
 msgid: "Empty"
 msgstr: "Kiürít"
@@ -57,7 +57,7 @@ msgid: "Name"
 msgstr: "Név"
 
 msgid: "Setup the fields for the table below"
-msgstr: "Add meg a mezöket a lenti táblához"
+msgstr: "Add meg a mezőket a lenti táblához"
 
 msgid: "New field"
 msgstr: "Új mező"
@@ -102,10 +102,10 @@ msgid: "Add field"
 msgstr: "Mező hozzáadása"
 
 msgid: "Oops"
-msgstr: "Oops"
+msgstr: "Hupsz"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "Valamilyen okból kifolyolag, az adatbázis paraméter nem volt beléfoglalva a kérésbe"
+msgstr: "Valamilyen okból kifolyólag, az adatbázis paraméter nem volt belefoglalva a kérésbe"
 
 msgid: "Save changes to original"
 msgstr: "Változások mentése az eredetin"
@@ -192,13 +192,13 @@ msgid: "Select all"
 msgstr: "Mindent kijelöl"
 
 msgid: "The file could not be opened"
-msgstr: "A file nem nyitható meg"
+msgstr: "A fájl nem nyitható meg"
 
 msgid: "Could not write to file"
 msgstr: "Nem tudom írni a fájlt"
 
 msgid: "Successfully wrote content to file"
-msgstr: "A file tartalmának írása kész"
+msgstr: "A fájl tartalmának írása kész"
 
 msgid: "Download"
 msgstr: "Letöltés"
@@ -358,13 +358,13 @@ msgid: "Logout"
 msgstr: "Kilépés"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: "Valamilyen okból kifolyolag, a tábla paraméter nem volt beléfoglalva a kérésbe"
+msgstr: "Valamilyen okból kifolyólag, a tábla paraméter nem volt belefoglalva a kérésbe"
 
 msgid: "Welcome to SQL Buddy!"
 msgstr: "Üdvözöli az SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "MySQL %s-hoz csatlakozva mint %s felhasználó."
+msgstr: "MySQL %s-hoz vagy csatlakozva mint %s felhasználó."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
 msgstr: "Az adatbázis szerver %s óta fut és hozzávetőlegesen %s adatforgalmat generált"
@@ -373,7 +373,7 @@ msgid: "A new version of SQL Buddy is available!"
 msgstr: "Az SQL Buddy egy újabb verziója elérhető!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "Az SQL Buddy %s verziója van instalálva és elérhető a %s verzió"
+msgstr: "Az SQL Buddy %s verziója van installálva és elérhető a %s verzió"
 
 msgid: "Getting started"
 msgstr: "Elindulás"
@@ -400,7 +400,7 @@ msgid: "There is an easier way to select a large group of items when browsing ta
 msgstr: "Létezik egy egyszerűbb módszer több sor kijelölésére adatbázis-táblák listázásakor. Jelöld ki az első sort, tartsd nyomva a Shift-et és jelöld ki az utolsó sort. A checkboxok a két sor között automatikusan kiválasztódnak."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: "Az oszlopok szélessege a böngésző és lekérdezés fülekben változtatható. Állitsd öket amilyen szélesre vagy keskenyre akarod."
+msgstr: "Az oszlopok szelessége a böngésző és lekérdezés fülekben változtatható. Állítsd őket amilyen szélesre vagy keskenyre akarod."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
 msgstr: "A bejelentkezési oldal a root@localhost  alapértelmezett felhasználóján alapul. Újra szerkeszd a config.php fájlt és meg tudod változtatni az alapértelmezett felhasználót és host-ot bármire akarod."
@@ -412,7 +412,7 @@ msgid: "Press this key..."
 msgstr: "Nyomd le ezt a gombot..."
 
 msgid: "...and this will happen"
-msgstr: ".. és ez fog történi"
+msgstr: "... és ez fog történni"
 
 msgid: "select none"
 msgstr: "nincs kiválasztva"
@@ -496,7 +496,7 @@ msgid: "Your data has been inserted into the database"
 msgstr: "Az adat be lett szúrva az adatbázisba"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: "Egy kis probléma  lépett fel a \"%s\" tábla keresése közben"
+msgstr: "Egy kis probléma lépett fel a \"%s\" tábla keresése közben"
 
 msgid: "There was a problem logging you in"
 msgstr: "Probléma van a bejelentkezéseddel"
@@ -589,7 +589,7 @@ msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is 
 msgstr: "Sajnos csak az Internet Explorer 7 támogatott. Ingyenesen letölthető a Microsoft weboldaláról, egyéb ingyenes böngészők is támogatottak, mint a Firefox, Safari és az Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: "Úgy tűnik a cookie-k nincsenek engedélyezve. A munkamenetek működéséhez a legtöbb PHP alkalmazásnak szüksége van a cookie-k engedélyezésére."
+msgstr: "Úgy tűnik a sütik-k nincsenek engedélyezve. A munkamenetek működéséhez a legtöbb PHP alkalmazásnak szüksége van a sütik-k engedélyezésére."
 
 msgid: "Importing..."
 msgstr: "Importálás..."
@@ -661,4 +661,4 @@ msgid: "There are no updates available"
 msgstr: "Nincsenek elérhető frissítések"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Jelszó csere"

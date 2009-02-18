@@ -1,6 +1,6 @@
 Language: Русский
 Language-Code: ru_RU
-Build-Date: Tue, 09 Sep 2008 20:48:27 -0600
+Build-Date: Wed, 18 Feb 2009 10:19:04 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Файл не был прочитан или файл пуст"
@@ -102,7 +102,7 @@ msgid: "Add field"
 msgstr: "Добавить поле"
 
 msgid: "Oops"
-msgstr: "Мля :("
+msgstr: "Упс..."
 
 msgid: "For some reason, the database parameter was not included with your request"
 msgstr: "По некоторой причине, параметр базы данных не был включен в ваш запрос"
@@ -367,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Вы подсоединены к MySQL %s пользователем %s"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "Сервер БД работает с %s и передал примерно %s данных"
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Доступна новая версия  SQL Buddy"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "У вас установлена SQL Buddy %s, сейчас доступна %s"
 
 msgid: "Getting started"
 msgstr: "С чего начать?"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "Переводы"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Замечания к релизу"
 
 msgid: "Contact"
 msgstr: "Контакты"
@@ -640,25 +640,25 @@ msgid: "You do not have enough permissions to view or manage users."
 msgstr: "У Вас недостаточно прав для того, чтобы просматривать или управлять пользователями"
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "Вы соединены с %s"
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "Разрешить доступ к "
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "Все базы данных"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "Выбранные БД"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Дать пользователю"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Обновления"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "Нет доступных обновлений"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Изменить пароль"

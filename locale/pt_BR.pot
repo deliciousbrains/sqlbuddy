@@ -1,9 +1,9 @@
 Language: Português (Brasil)
 Language-Code: pt_BR
-Build-Date: Tue, 09 Sep 2008 20:47:04 -0600
+Build-Date: Wed, 18 Feb 2009 10:18:58 -0700
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "O arquivo não pode ser lido ou estava vazio."
+msgstr: "O arquivo não pode ser lido ou está vazio."
 
 msgid: "Error performing operation"
 msgstr: "Erro ao executar operação"
@@ -30,13 +30,13 @@ msgid: "Table"
 msgstr: "Tabela"
 
 msgid: "Rows"
-msgstr: "Registro"
+msgstr: "Registros"
 
 msgid: "Size"
 msgstr: "Tamanho"
 
 msgid: "Overhead"
-msgstr: "Sobrecarregado"
+msgstr: "Sobrecarga"
 
 msgid: "Options"
 msgstr: "Opções"
@@ -102,7 +102,7 @@ msgid: "Add field"
 msgstr: "Adicionar campo"
 
 msgid: "Oops"
-msgstr: "Ops! O.O"
+msgstr: "Ops!"
 
 msgid: "For some reason, the database parameter was not included with your request"
 msgstr: "Por alguma razão, o parâmetro \"database\" não foi incluído em sua requisição"
@@ -138,7 +138,7 @@ msgid: "Update"
 msgstr: "Atualizar"
 
 msgid: "Delete"
-msgstr: "Remover"
+msgstr: "Remover sua mãe"
 
 msgid: "Alter"
 msgstr: "Alterar"
@@ -201,7 +201,7 @@ msgid: "Successfully wrote content to file"
 msgstr: "Conteúdo escrito com sucesso no arquivo"
 
 msgid: "Download"
-msgstr: "Download"
+msgstr: "Baixar"
 
 msgid: "Note
 "
@@ -259,7 +259,7 @@ msgid: "Print field names on first line"
 msgstr: "Exibir os nomes dos campos na primeira linha"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "Se você está exportando um grande número de registros, é recomendado exportar os resultados em um arquivo texto"
+msgstr: "Se você está exportando um grande número de registros, é recomendado exportar os resultados em um arquivo de texto"
 
 msgid: "Output to"
 msgstr: "Exportar para"
@@ -268,7 +268,7 @@ msgid: "Browser"
 msgstr: "Navegador"
 
 msgid: "Text file"
-msgstr: "Arquivo texto"
+msgstr: "Arquivo de texto"
 
 msgid: "Home"
 msgstr: "Principal"
@@ -355,25 +355,25 @@ msgid: "There was an error receiving data from the server"
 msgstr: "Houve um erro ao receber os dados do servidor"
 
 msgid: "Logout"
-msgstr: "Logout"
+msgstr: "Sair"
 
 msgid: "For some reason, the table parameter was not included with your request"
 msgstr: "Por alguma razão, o parâmetro \"table\" não foi incluído em sua requisição"
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "Bem vindo ao SQL Buddy!"
+msgstr: "Seja bem vindo ao SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Você está conectado ao MySQL %s com o usuário %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "O servidor de banco de dados está rondado desde %s e transferiu apróximadamente %s de dados."
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Uma nova versão do SQL Buddy está disponível!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "Você tem SQL Buddy %s instalado e %s já está disponível."
 
 msgid: "Getting started"
 msgstr: "Iniciando..."
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "Traduções"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Informações"
 
 msgid: "Contact"
 msgstr: "Contato"
@@ -394,7 +394,7 @@ msgid: "Create a new database"
 msgstr: "Criar um novo banco de dados"
 
 msgid: "Did you know..."
-msgstr: "Você sabia..."
+msgstr: "Você sabia?"
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
 msgstr: "Existe uma maneira mais fácil de selecionar um grande grupo de itens quando estiver navegando nos registros de uma tabela. Marque o primeiro registro, pressione a tecla Shift e marque o último registro. Os registros entre eles serão automaticamente selecionados para você."
@@ -445,7 +445,7 @@ msgid: "optimize selected tables"
 msgstr: "Otimizar as tabelas selecionadas"
 
 msgid: "Choose a .sql file to import"
-msgstr: "Escolha um arquivo .sql para importar"
+msgstr: "Escolha um arquivo .SQL para importar"
 
 msgid: "File
 "
@@ -481,7 +481,7 @@ msgstr[0]: "Sua query retornou %d resultado"
 msgstr[1]: "Sua query retornou %d resultados"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Nota: Para evitar travamento do seu navegador, somente os primeiros %d registros serão mostrados"
+msgstr: "Nota: Para evitar o travamento do seu navegador, somente os primeiros %d registros serão mostrados"
 
 msgid: "binary data"
 msgstr: "Dado binário"
@@ -502,7 +502,7 @@ msgid: "There was a problem logging you in"
 msgstr: "Ocorreu um problema ao entrar no"
 
 msgid: "Login"
-msgstr: "Login"
+msgstr: "Login (Conectar)"
 
 msgid: "Unsupported browser"
 msgstr: "Navegador não suportado"
@@ -556,7 +556,7 @@ msgid: "Show %d more..."
 msgstr: "Mostrar %d mais..."
 
 msgid: "Empty table"
-msgstr: "Tabela vazia"
+msgstr: "Esvaziar tabela"
 
 msgid: "Drop table"
 msgstr: "Excluir tabela"
@@ -577,13 +577,13 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Entre com o formato: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "VocÃª quer mesmo esvaziar a tabela '%s'? Isso irÃ¡ remover todos os dados da tabela. A seguinte instruÃ§Ã£o serÃ¡ executada:"
+msgstr: "Você quer mesmo esvaziar a tabela '%s'? Isso irá remover todos os dados da tabela. A seguinte instrução será executada:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "VocÃª quer mesmo excluir a tabela '%s'? Isso irÃ¡ remover a tabela e todos os dados contidos nela. A seguinte instruÃ§Ã£o serÃ¡ executada:"
+msgstr: "Você quer mesmo excluir a tabela '%s'? Isso irá remover a tabela e todos os dados contidos nela. A seguinte instrução será executada:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "VocÃª quer mesmo excluir o banco de dados '%s'? Isso irÃ¡ remover o banco de dados, suas tabelas e os dados contidos nelas. A seguinte instruÃ§Ã£o serÃ¡ executada:"
+msgstr: "Você quer mesmo excluir o banco de dados '%s'? Isso irá remover o banco de dados, suas tabelas e os dados contidos nelas. A seguinte instrução será executada:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
 msgstr: "Desculpe, mas no momento apenas o Internet Explorer 7 é suportado. Ele está disponível para download, gratuitamente, no site da Microsoft. Outros navegadores gratuitos também são suportados também, incluindo Firefox, Safari e Opera."
@@ -598,13 +598,13 @@ msgid: "Drop the '%s' database"
 msgstr: "Excluir o banco de dados '%s'"
 
 msgid: "Okay"
-msgstr: "Okay"
+msgstr: "Okay (Confirmar)"
 
 msgid: "Cancel"
 msgstr: "Cancelar"
 
 msgid: "Storage engine"
-msgstr: "Engine de Armazenamento"
+msgstr: "Núcleo de Armazenamento"
 
 msgid: "Language"
 msgstr: "Linguagem"
@@ -652,13 +652,13 @@ msgid: "Selected databases"
 msgstr: "Bancos de Dados selecionados"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Dar ao usuário"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Atualizar"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "Nenhuma atualização encontrada"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Alterar Senha"

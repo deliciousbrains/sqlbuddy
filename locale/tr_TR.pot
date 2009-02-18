@@ -1,6 +1,6 @@
 Language: Türkçe
-Language-Code: 
-Build-Date: Tue, 09 Sep 2008 20:52:33 -0600
+Language-Code: tr_TR
+Build-Date: Wed, 18 Feb 2009 10:19:40 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Dosya okunamıyor veya boş"
@@ -18,13 +18,13 @@ msgid: "With selected"
 msgstr: "Seçilenle beraber"
 
 msgid: "Empty"
-msgstr: "Temizle"
+msgstr: "Boşalt"
 
 msgid: "Drop"
-msgstr: "Çıkar"
+msgstr: "Kaldır"
 
 msgid: "Optimize"
-msgstr: "Optimize"
+msgstr: "İyileştirme"
 
 msgid: "Table"
 msgstr: "Tablo"
@@ -90,7 +90,7 @@ msgid: "Unsigned"
 msgstr: "İmzasız"
 
 msgid: "Binary"
-msgstr: "Binary"
+msgstr: "İkili"
 
 msgid: "Not Null"
 msgstr: "Boş Değil"
@@ -114,7 +114,7 @@ msgid: "Insert as new row"
 msgstr: "Yeni satır ekle"
 
 msgid: "Save"
-msgstr: "Sakla"
+msgstr: "Kaydet"
 
 msgid: "User"
 msgstr: "Kullanıcı"
@@ -144,7 +144,7 @@ msgid: "Alter"
 msgstr: "Değiştir"
 
 msgid: "Create"
-msgstr: "Yarat"
+msgstr: "Oluştur"
 
 msgid: "Temp tables"
 msgstr: "Geçici tablolar"
@@ -211,7 +211,7 @@ msgid: "If this is a public server, you should delete this file from the server 
 msgstr: "Eğer bu bir genel sunucu ise indirdikten sonra bu dosyayı sunucudan silmelisiniz"
 
 msgid: "Export"
-msgstr: "Dışa sktar"
+msgstr: "Dışa aktar"
 
 msgid: "Tables"
 msgstr: "Tablolar"
@@ -247,13 +247,13 @@ msgid: "Comma"
 msgstr: "Virgül"
 
 msgid: "Tab"
-msgstr: "Tab"
+msgstr: "Sekme"
 
 msgid: "Semicolon"
-msgstr: "Noktali virgül"
+msgstr: "Noktalı virgül"
 
 msgid: "Space"
-msgstr: "Aralık"
+msgstr: "Boşluk"
 
 msgid: "Print field names on first line"
 msgstr: "Alan adlarını ilk satırda bas"
@@ -304,10 +304,10 @@ msgid: "empty these tables"
 msgstr: "Bu tabloları boşalt"
 
 msgid: "drop this table"
-msgstr: "abloyu düşür"
+msgstr: "Tabloyu düşür"
 
 msgid: "drop these tables"
-msgstr: "tabloları düşür"
+msgstr: "Tabloları düşür"
 
 msgid: "delete this column"
 msgstr: "kolonu sil"
@@ -361,22 +361,22 @@ msgid: "For some reason, the table parameter was not included with your request"
 msgstr: "Bazı nedenlerden dolayı, tablo parametresi isteğinize eklenemedi"
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "SQL Buddy'ye HoÅŸgeldiniz"
+msgstr: "SQL Buddy'e Hoşgeldiniz"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "MySQL %s 'e %s kullanÄ±cÄ±sÄ±yla baÄŸlandÄ±nÄ±z."
+msgstr: "MySQL %s 'e %s kullanıcısıyla bağlandınız."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "Veritabanı %s den bu yana çalışıyor ve yaklaşık %s kadar veri çekildi."
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "SQL Buddy'nin yeni versiyonu mevcut!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "SQL Buddy %s yüklü, %s şimdi kullanılabilir."
 
 msgid: "Getting started"
-msgstr: "Burdan başlayın"
+msgstr: "Buradan başlayın"
 
 msgid: "Help"
 msgstr: "Yardım"
@@ -385,13 +385,13 @@ msgid: "Translations"
 msgstr: "Tercüme"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Sürüm Notları"
 
 msgid: "Contact"
 msgstr: "İletişim"
 
 msgid: "Create a new database"
-msgstr: "Yeni veritabanı yarat"
+msgstr: "Yeni veritabanı oluştur"
 
 msgid: "Did you know..."
 msgstr: "Biliyor muydunuz?"
@@ -511,7 +511,7 @@ msgid: "Help!"
 msgstr: "Yardım!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: "Oturum zamanınız doldu. Lütfen giriş yapın."
+msgstr: "Oturum zamanınız doldu. Lütfen tekrar giriş yapın."
 
 msgid: "Username"
 msgstr: "Kullanıcı Adı"
@@ -574,19 +574,19 @@ msgid: "Add a new user"
 msgstr: "Yeni kullanıcı ekle"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: "('1','2') formatÄ±nda girin"
+msgstr: "('1','2')formatında girin"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
 msgstr: "`%s` tablosunu boşaltmak istediğinizden emin misiniz? Bu işlem içindeki bütün verileri silecektir. Çalıştırılacak sorgu:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "'%s' tablosunu dÃ¼ÅŸÃ¼rmek istediÄŸinizden emin misiniz? Bu iÅŸlem tabloyu ve iÃ§erisindeki bÃ¼tÃ¼n verileri silecektir. Ã‡alÄ±ÅŸtÄ±rÄ±lacak sorgu:"
+msgstr: "'%s' tablosunu silmek istediğinizden emin misiniz? Bu işlem tabloyu ve içerisindeki bütün verileri silecektir. Çalıştırılacakacak sorgu:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "'%s' veritabanÄ±nÄ± dÃ¼ÅŸÃ¼rmek istediÄŸinizden emin misiniz? Bu iÅŸlem veritabanÄ±nÄ±, iÃ§erisindeki tablolarÄ± ve tablolar iÃ§erisindeki bÃ¼tÃ¼n verileri silecektir. Ã‡alÄ±ÅŸtÄ±rÄ±lacak sorgu:"
+msgstr: "'%s' veritabanını silmek istediÄŸinizden emin misiniz? Bu iÅŸlem veritabanÄ±nÄ±, iÃ§erisindeki tablolarÄ± ve tablolar iÃ§erisindeki bÃ¼tÃ¼n verileri silecektir. Ã‡alÄ±ÅŸtÄ±rÄ±lacak sorgu:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "ÃœzgÃ¼nÃ¼z ancak sadece Internet Explorer 7 desteklenmektedir. Microsoft'un web sayfasÄ±nda bedava indirmek mÃ¼mkÃ¼ndÃ¼r. Firefox, Safari ve Opera dahil olmak Ã¼zere diÄŸer bedava tarayÄ±cÄ±lar da desteklenmektedir."
+msgstr: "ÃœzgÃ¼nÃ¼z ancak sadece Internet Explorer 7 desteklenmektedir. Microsoft'un web sayfaından bedava indirmek mümkündür Firefox, Safari ve Opera dahil olmak Ã¼zere diÄŸer bedava tarayÄ±cÄ±lar da desteklenmektedir."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
 msgstr: "Görünen o ki cookieleriniz seçili değil. Oturumların çalışması için birçok php kurulumu cookie gerektirir."
@@ -631,34 +631,34 @@ msgid: "(%.4f seconds)"
 msgstr: "(%.4f saniye)"
 
 msgid: "The following errors were reported"
-msgstr: ""
+msgstr: "Hatalar rapor edildi."
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: ""
+msgstr: "Yeni kullanıcı oluşturabilmek için yeterli hakkınız yok."
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: ""
+msgstr: "Kullanıcıları görüntülemek veya düzenlemek için yeterli hakkınız yok."
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "%s e bağlandınız."
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "Erişime izin ver"
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "Tüm veritabanları"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "Seçili veritabanları"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Kullanıcıya ver"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Güncellemeler"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "Güncelleme yok"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Şifre değiştir"

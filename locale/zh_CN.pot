@@ -1,6 +1,6 @@
 Language: 中文 (简体)
 Language-Code: zh_CN
-Build-Date: Tue, 09 Sep 2008 20:53:22 -0600
+Build-Date: Wed, 18 Feb 2009 10:17:05 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "文件为空或文件不可读"
@@ -57,7 +57,7 @@ msgid: "Name"
 msgstr: "名称"
 
 msgid: "Setup the fields for the table below"
-msgstr: "为以下表设置字段"
+msgstr: "为表设置字段"
 
 msgid: "New field"
 msgstr: "新建字段"
@@ -111,7 +111,7 @@ msgid: "Save changes to original"
 msgstr: "保存更改到原始数据"
 
 msgid: "Insert as new row"
-msgstr: "以新行插入"
+msgstr: "插入新行"
 
 msgid: "Save"
 msgstr: "保存"
@@ -129,22 +129,22 @@ msgid: "User privileges"
 msgstr: "用户权限"
 
 msgid: "Select"
-msgstr: "Select"
+msgstr: "选择"
 
 msgid: "Insert"
-msgstr: "Insert"
+msgstr: "插入"
 
 msgid: "Update"
-msgstr: "Update"
+msgstr: "更新"
 
 msgid: "Delete"
-msgstr: "Delete"
+msgstr: "删除"
 
 msgid: "Alter"
-msgstr: "Alter"
+msgstr: "修改"
 
 msgid: "Create"
-msgstr: "Create"
+msgstr: "创建"
 
 msgid: "Temp tables"
 msgstr: "临时表"
@@ -367,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "您已经连接到 MySQL %s ，连接身份为 %s 。"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "数据库服务器已经从 %s 开始运行，并且已经传输了大约 %s 的数据。"
 
 msgid: "A new version of SQL Buddy is available!"
-msgstr: "新版 SQL Buddy 可用！"
+msgstr: "有新版 SQL Buddy 可用！"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "您已经成功安装SQL Buddy %s ，最新版本是 %s 。"
 
 msgid: "Getting started"
 msgstr: "新手上路"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "多国语言"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "发行说明"
 
 msgid: "Contact"
 msgstr: "联系我们"
@@ -640,25 +640,25 @@ msgid: "You do not have enough permissions to view or manage users."
 msgstr: "您没有足够的权限来查看或管理用户。"
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "您连接到了 %s。"
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "允许访问"
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "所有数据库"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "已选数据库"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "给用户"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "更新"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "无可用的更新"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "修改密码"

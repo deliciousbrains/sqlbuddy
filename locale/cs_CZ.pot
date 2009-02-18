@@ -1,12 +1,12 @@
 Language: Čeština
 Language-Code: cs_CZ
-Build-Date: Tue, 09 Sep 2008 20:40:55 -0600
+Build-Date: Wed, 18 Feb 2009 10:17:59 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Nelze číst ze souboru nebo je soubor prázdný"
 
 msgid: "Error performing operation"
-msgstr: ""
+msgstr: "Chyba při provádění akce"
 
 msgid: "All"
 msgstr: "Vše"
@@ -36,7 +36,7 @@ msgid: "Size"
 msgstr: "Velikost"
 
 msgid: "Overhead"
-msgstr: ""
+msgstr: "Navíc"
 
 msgid: "Options"
 msgstr: "Nastavení"
@@ -57,7 +57,7 @@ msgid: "Name"
 msgstr: "Jméno"
 
 msgid: "Setup the fields for the table below"
-msgstr: ""
+msgstr: "Nastavte pole pro tabulku"
 
 msgid: "New field"
 msgstr: "Nové pole"
@@ -105,7 +105,7 @@ msgid: "Oops"
 msgstr: "Chybička se vloudila"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: ""
+msgstr: "Z neznámé příčiny nebyl parametr dotazu zahrnut ve vašem požadavku"
 
 msgid: "Save changes to original"
 msgstr: "Uložit změny za originál"
@@ -141,13 +141,13 @@ msgid: "Delete"
 msgstr: "Smazat"
 
 msgid: "Alter"
-msgstr: "Alter"
+msgstr: "Upravit"
 
 msgid: "Create"
 msgstr: "Vytvořit"
 
 msgid: "Temp tables"
-msgstr: "Temp tables"
+msgstr: "Dočasné tabulky"
 
 msgid: "Administrator privileges"
 msgstr: "Administrátorská práva"
@@ -162,13 +162,13 @@ msgid: "Reload"
 msgstr: "Aktualizovat"
 
 msgid: "Shutdown"
-msgstr: "Shutdown"
+msgstr: "Uzavřít"
 
 msgid: "Super"
-msgstr: "Supr"
+msgstr: "Super"
 
 msgid: "Grant option"
-msgstr: "Grantové možnosti"
+msgstr: "Udělovací práva"
 
 msgid: "User not found!"
 msgstr: "Uživatel nenalezen"
@@ -364,16 +364,16 @@ msgid: "Welcome to SQL Buddy!"
 msgstr: "Vítejte v SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "Jste spojen s MySQL% s a s uživatelem % s"
+msgstr: "Jste spojen s MySQL %s a s uživatelem %s"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "Databázový server běží od %s a poslal přibližně %s dat"
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Nová verze SQL Buddy je k dispozici! "
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "SQL Buddy %s je nainstalován a %s je k dispozici."
 
 msgid: "Getting started"
 msgstr: "Začínáme"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "Překlady"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Poznámky k vydání"
 
 msgid: "Contact"
 msgstr: "Kontakt"
@@ -397,13 +397,13 @@ msgid: "Did you know..."
 msgstr: "Věděli jste, že..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: "Existuje jednodušší způsob, jak vybrat velkou skupinu položek při procházení tabulky řádky. Check the first row, hold the shift key, and check the final row. Podívejte se na prvním řádku, držet klávesu Shift, a zkontrolujte konečné řadě. The checkboxes between the two rows will be automatically checked for you. Zaškrtávací mezi dvěma řádky budou automaticky kontroluje na vás. "
+msgstr: "Existuje jednodušší způsob, jak vybrat velkou skupinu položek při procházení tabulky řádky. Označte první řádek, podržte klávesu Shift, a označte poslední řádek. Zaškrtávací pole mezi těmito dvěma řádky budou zaškrtnuty automaticky. "
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: "Sloupce v dotazu procházet a karty jsou resizable. Adjust them to as wide or narrow as you like. Upravte je, aby tak široká nebo úzká, jak budete chtít. "
+msgstr: "Sloupce v záložkách Procházet a Dotaz jsou roztahovatelné. Upravte je tak široce nebo úzce, jak budete chtít. "
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "Přihlašovací stránka je založen na standardní uživatel root @ localhost. By editing config.php, you can change the default user and host to whatever you want. Úpravou config.php, můžete změnit výchozí uživatele a hostitele na cokoliv chcete. "
+msgstr: "Přihlašovací stránka je založen na standardní uživatel root @ localhost. Úpravou config.php, můžete změnit výchozí uživatele a hostitele na jakékoliv chcete. "
 
 msgid: "Keyboard shortcuts"
 msgstr: "Klávesové skratky"
@@ -415,7 +415,7 @@ msgid: "...and this will happen"
 msgstr: "...a to se stane"
 
 msgid: "select none"
-msgstr: "zvvolte nic"
+msgstr: "zvolte nic"
 
 msgid: "edit selected items"
 msgstr: "editovat vybrané položky "
@@ -430,13 +430,13 @@ msgid: "load the query tab"
 msgstr: "zatížení dotaz tabulky"
 
 msgid: "browse tab - go to first page of results"
-msgstr: "procházet kartu - jít na první stránce výsledků"
+msgstr: "procházet kartu - jít na první stránku výsledků"
 
 msgid: "browse tab - go to last page of results"
-msgstr: "procházet kartu - jít na první stránce výsledků"
+msgstr: "procházet kartu - jít na poslední stránku výsledků"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: "procházet kartu - jdi na předchozí stránku výsledků "
+msgstr: "procházet kartu - jít na předchozí stránku výsledků "
 
 msgid: "browse tab - go to next page of results"
 msgstr: "procházet kartu - přejít na další stránku výsledků "
@@ -477,11 +477,11 @@ msgstr: "Poslední"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: "Váš dotaz vrátil% d výsledek "
-msgstr[1]: "Váš dotaz vrátil% d výsledků"
+msgstr[0]: "Váš dotaz vrátil %d výsledek "
+msgstr[1]: "Váš dotaz vrátil %d výsledků"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Poznámka: Chcete-li se vyhnout shazovat váš prohlížeč pouze prvních% d výsledky byly zobrazeny "
+msgstr: "Poznámka: Chcete-li se vyhnout shazovat váš prohlížeč pouze prvních %d výsledky byly zobrazeny "
 
 msgid: "binary data"
 msgstr: "binární data"
@@ -568,7 +568,7 @@ msgid: "Table Information"
 msgstr: "Informace o tabulce"
 
 msgid: "Host"
-msgstr: "Host"
+msgstr: "Hostitel"
 
 msgid: "Add a new user"
 msgstr: "Přidej nového uživatele"
@@ -604,31 +604,31 @@ msgid: "Cancel"
 msgstr: "Zahodit"
 
 msgid: "Storage engine"
-msgstr: ""
+msgstr: "Uložiště"
 
 msgid: "Language"
 msgstr: "Jazyk"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "% dotaz ze souboru proveden"
+msgstr[1]: "% dotazů ze souboru provedeno"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: ""
+msgstr[0]: "Do databáze byl vložen %d řádek"
 msgstr[1]: "Do databáze bylo vloženo ze souboru %d řádků"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "Musel být přeskočen %d řádek, protože číslo hodnot bylo nesprávné"
+msgstr[1]: "Muselo být přeskočeno %d řádků, protože číslo hodnot bylo nesprávné"
 
 msgid: "Theme"
 msgstr: "Motiv vzhledu"
 
 msgid: "(%.4f seconds)"
-msgstr: ""
+msgstr: "(%.4f vteřin)"
 
 msgid: "The following errors were reported"
 msgstr: "Byly nahlášeny následující problémy"
@@ -640,25 +640,25 @@ msgid: "You do not have enough permissions to view or manage users."
 msgstr: "Nemáte povolení prohlížet a spravovat účty."
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "Jste připojen k %s"
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "Povolen přístup k"
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "Všechny databáze"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "Vybrané databáze"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Předat uživateli"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Aktualizace"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "Nejsou k dispozici žádné aktualizace"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Změna hesla"

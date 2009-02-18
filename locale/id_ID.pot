@@ -1,135 +1,135 @@
-Language: Català
-Language-Code: ca_AD
-Build-Date: Wed, 18 Feb 2009 10:25:23 -0700
+Language: Indonesian
+Language-Code: id_ID
+Build-Date: Wed, 18 Feb 2009 10:21:47 -0700
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "No s'ha pogut llegir l'arxiu o estava buit"
+msgstr: "File tidak dapat dibaca atau file masih kosong"
 
 msgid: "Error performing operation"
-msgstr: "Error durant l'operació"
+msgstr: "Gagal menjalankan perintah"
 
 msgid: "All"
-msgstr: "Tots"
+msgstr: "Semua"
 
 msgid: "None"
-msgstr: "Cap"
+msgstr: "Tidak satupun"
 
 msgid: "With selected"
-msgstr: "Amb els seleccionats"
+msgstr: "Yang terseleksi"
 
 msgid: "Empty"
-msgstr: "Buidar"
+msgstr: "Kosong"
 
 msgid: "Drop"
-msgstr: "Eliminar"
+msgstr: "Drop"
 
 msgid: "Optimize"
-msgstr: "Optimitzar"
+msgstr: "Optimalkan"
 
 msgid: "Table"
-msgstr: "Taula"
+msgstr: "Tabel"
 
 msgid: "Rows"
-msgstr: "Files"
+msgstr: "Baris"
 
 msgid: "Size"
-msgstr: "Mida"
+msgstr: "Ukuran"
 
 msgid: "Overhead"
-msgstr: "Overhead (a dalt)"
+msgstr: "Overhead"
 
 msgid: "Options"
-msgstr: "Opcions"
+msgstr: "Opsi"
 
 msgid: "Edit database"
-msgstr: "Editar base de dades"
+msgstr: "Edit database"
 
 msgid: "Charset"
-msgstr: "Joc de caràcters"
+msgstr: "Charset"
 
 msgid: "Submit"
-msgstr: "Enviar"
+msgstr: "Kirim"
 
 msgid: "Create a new table"
-msgstr: "Crear nova taula"
+msgstr: "Buat tabel baru"
 
 msgid: "Name"
-msgstr: "Nom"
+msgstr: "Nama"
 
 msgid: "Setup the fields for the table below"
-msgstr: "Estableix els camps per la següent taula"
+msgstr: "Setup field baru pada tabel berikut"
 
 msgid: "New field"
-msgstr: "Nou camp"
+msgstr: "Field baru"
 
 msgid: "Type"
-msgstr: "Tipus"
+msgstr: "Tipe"
 
 msgid: "Values"
-msgstr: "Valors"
+msgstr: "Nilai"
 
 msgid: "Key"
-msgstr: "Clau"
+msgstr: "Kunci"
 
 msgid: "primary"
-msgstr: "primària"
+msgstr: "primary"
 
 msgid: "unique"
-msgstr: "única"
+msgstr: "unique"
 
 msgid: "index"
-msgstr: "índex"
+msgstr: "indeks"
 
 msgid: "Default"
-msgstr: "Per defecte"
+msgstr: "Default"
 
 msgid: "Other"
-msgstr: "Altre"
+msgstr: "Lainnya"
 
 msgid: "Unsigned"
-msgstr: "Sense signar"
+msgstr: "Unsigned"
 
 msgid: "Binary"
-msgstr: "Binàri"
+msgstr: "Biner"
 
 msgid: "Not Null"
-msgstr: "No Null"
+msgstr: "Not Null"
 
 msgid: "Auto Increment"
-msgstr: "Auto-incremental"
+msgstr: "Auto Increment"
 
 msgid: "Add field"
-msgstr: "Afegir camp"
+msgstr: "Tambah field"
 
 msgid: "Oops"
-msgstr: "Ostres"
+msgstr: "Ups"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "Per alguna raó, el paràmetre de la base de dades no s'ha inclòs a la teva petició"
+msgstr: "Untuk alasan tertentu, parameter database tidak disertakan dalam query anda"
 
 msgid: "Save changes to original"
-msgstr: "Desar canvis a l'original"
+msgstr: "Simpan perubahan ke kondisi asli "
 
 msgid: "Insert as new row"
-msgstr: "Inserir com a nova fila"
+msgstr: "Sisip sebagai baris baru"
 
 msgid: "Save"
-msgstr: "Desar"
+msgstr: "Simpan"
 
 msgid: "User"
-msgstr: "Usuari"
+msgstr: "User"
 
 msgid: "All privileges"
-msgstr: "Tots els privilegis"
+msgstr: "Semua hak akses (privileges)"
 
 msgid: "Selected privileges"
-msgstr: "Privilegis seleccionats"
+msgstr: "Hak akses yang terseleksi"
 
 msgid: "User privileges"
-msgstr: "Privilegis d'usuari"
+msgstr: "Hak akses user"
 
 msgid: "Select"
-msgstr: "Select"
+msgstr: "Pilih"
 
 msgid: "Insert"
 msgstr: "Insert"
@@ -147,80 +147,80 @@ msgid: "Create"
 msgstr: "Create"
 
 msgid: "Temp tables"
-msgstr: "Taules temporals"
+msgstr: "Tabel sementara"
 
 msgid: "Administrator privileges"
-msgstr: "Privilegis d'administrador"
+msgstr: "Hak akses administrator"
 
 msgid: "File"
-msgstr: "Arxiu"
+msgstr: "Berkas"
 
 msgid: "Process"
-msgstr: "Procés"
+msgstr: "Proses"
 
 msgid: "Reload"
-msgstr: "Recarregar"
+msgstr: "Reload"
 
 msgid: "Shutdown"
-msgstr: "Apagar"
+msgstr: "Matikan"
 
 msgid: "Super"
 msgstr: "Super"
 
 msgid: "Grant option"
-msgstr: "Otorgar opció"
+msgstr: "Opsi grant"
 
 msgid: "User not found!"
-msgstr: "Usuari no trobat"
+msgstr: "User tidak ditemukan!"
 
 msgid: "You must export either structure, data, or both"
-msgstr: "Has d'exportar l'estructura, les dades o ambdues."
+msgstr: "Anda harus mengekspor struktur, atau data, maupun kedua-duanya"
 
 msgid: "Please select the databases that you would like to export"
-msgstr: "Si us plau, seleccioni la base de dades que voleu exportar"
+msgstr: "Silakan pilih database yang ingin anda ekspor"
 
 msgid: "Please select the tables that you would like to export"
-msgstr: "si us plau, seleccioni les taules que voleu exportar"
+msgstr: "Silakan pilih tabel yang ingin anda ekspor"
 
 msgid: "Table `%s` is empty"
-msgstr: "La taula `%s` és buida"
+msgstr: "Tabel `%s` kosong"
 
 msgid: "Results"
-msgstr: "Resultats"
+msgstr: "Results"
 
 msgid: "Select all"
-msgstr: "Seleccionar tot"
+msgstr: "Seleksi semua"
 
 msgid: "The file could not be opened"
-msgstr: "El fitxer no pot ser obert"
+msgstr: "File tidak dapat dibuka"
 
 msgid: "Could not write to file"
-msgstr: "Imposible escriure el fitxer"
+msgstr: "Tidak dapat menulis ke file"
 
 msgid: "Successfully wrote content to file"
-msgstr: "El fitxer s'ha escrit correctament"
+msgstr: "Sukses! Content telah ditulis dalam file"
 
 msgid: "Download"
-msgstr: "Descarregant"
+msgstr: "Download"
 
 msgid: "Note
 "
-msgstr: "Nota"
+msgstr: "Catatan"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
-msgstr: "Si això és un servidor públic, has d'esborrar aquest arxiu del servidor després de descarregar-lo"
+msgstr: "Bila server yang Anda gunakan bersifat publik, sebaiknya Anda hapus file ini dari server setelah mendownloadnya."
 
 msgid: "Export"
-msgstr: "Exportar"
+msgstr: "Ekspor"
 
 msgid: "Tables"
-msgstr: "Taules"
+msgstr: "Tabel-tabel"
 
 msgid: "Databases"
-msgstr: "Base de dades"
+msgstr: "Database-database"
 
 msgid: "Format"
-msgstr: "Formateig"
+msgstr: "Format"
 
 msgid: "SQL"
 msgstr: "SQL"
@@ -229,436 +229,436 @@ msgid: "CSV"
 msgstr: "CSV"
 
 msgid: "Structure"
-msgstr: "Estructura"
+msgstr: "Struktur"
 
 msgid: "Data"
 msgstr: "Data"
 
 msgid: "Compact inserts"
-msgstr: "inserts compactats"
+msgstr: "Insert secara compact"
 
 msgid: "Complete inserts"
-msgstr: "inserts complerts"
+msgstr: "Insert secara komplit"
 
 msgid: "Delimiter"
-msgstr: "Delimitador"
+msgstr: "Pemisah"
 
 msgid: "Comma"
-msgstr: "Coma"
+msgstr: "Koma"
 
 msgid: "Tab"
-msgstr: "Tabulador"
+msgstr: "Tab"
 
 msgid: "Semicolon"
-msgstr: "Punt i coma"
+msgstr: "Titik koma"
 
 msgid: "Space"
-msgstr: "Espai"
+msgstr: "Spasi"
 
 msgid: "Print field names on first line"
-msgstr: "Imprimir els noms del camps a la primera línia"
+msgstr: "Cetak nama field pada baris pertama"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "Si vosté està exportant un nùmero gran de columnes, es recomenable que faci el volcat sobre un arxiu de texte."
+msgstr: "Jika Anda mengekspor baris dalam jumlah besar, direkomendasikan untuk menyimpan outputnya dalam sebuah file teks"
 
 msgid: "Output to"
-msgstr: "Extraure a"
+msgstr: "Output ke"
 
 msgid: "Browser"
-msgstr: "Navegador"
+msgstr: "Browser"
 
 msgid: "Text file"
-msgstr: "Fitxer text"
+msgstr: "File teks"
 
 msgid: "Home"
-msgstr: "Inici"
+msgstr: "Home"
 
 msgid: "Users"
-msgstr: "Usuaris"
+msgstr: "User-user"
 
 msgid: "Query"
-msgstr: "Consulta"
+msgstr: "Query"
 
 msgid: "Import"
-msgstr: "Importar"
+msgstr: "Impor"
 
 msgid: "Overview"
-msgstr: "Visualitzar"
+msgstr: "Tampilan"
 
 msgid: "Browse"
-msgstr: "Navegar"
+msgstr: "Browse"
 
 msgid: "Your changes were saved to the database"
-msgstr: "Els teus canvis s'han guardat a la base de dades"
+msgstr: "Perubahan telah disimpan ke dalam database"
 
 msgid: "delete this row"
-msgstr: "eliminar aquesta fila"
+msgstr: "hapus baris ini"
 
 msgid: "delete these rows"
-msgstr: "elimina aquestes files"
+msgstr: "hapus baris-baris ini"
 
 msgid: "empty this table"
-msgstr: "buida aquesta taula"
+msgstr: "kosongkan tabel ini"
 
 msgid: "empty these tables"
-msgstr: "buida aquestes taules"
+msgstr: "kosongkan tabel-tabel ini"
 
 msgid: "drop this table"
-msgstr: "eliminar aquesta taula"
+msgstr: "drop tabel ini"
 
 msgid: "drop these tables"
-msgstr: "eliminar aquestes taules"
+msgstr: "drop tabel-tabel ini"
 
 msgid: "delete this column"
-msgstr: "esborra aquesta columna"
+msgstr: "hapus kolom "
 
 msgid: "delete these columns"
-msgstr: "esborra aquestes columnes"
+msgstr: "hapus kolom-kolom ini"
 
 msgid: "delete this index"
-msgstr: "esborra aquest índex"
+msgstr: "hapus indeks ini"
 
 msgid: "delete this indexes"
-msgstr: "esborra aquests índexs"
+msgstr: "hapus indeks-indeks ini"
 
 msgid: "delete this user"
-msgstr: "esborra aquest usuari"
+msgstr: "hapus user ini"
 
 msgid: "delete this users"
-msgstr: "esborra aquests usuaris"
+msgstr: "hapus user-user ini"
 
 msgid: "Are you sure you want to"
-msgstr: "Estàs segur que vols"
+msgstr: "Apakah anda yakin untuk"
 
 msgid: "The following query will be run:"
-msgstr: "La següent query serà creada:"
+msgstr: "Query berikut ini akan dieksekusi"
 
 msgid: "The following queries will be run:"
-msgstr: "Les següents queries seran creades:"
+msgstr: "Query-query berikut ini akan dieksekusi"
 
 msgid: "Confirm"
-msgstr: "Confirmació"
+msgstr: "Konfirmasi"
 
 msgid: "Successfully saved changes"
-msgstr: "Canvis guardats correctament"
+msgstr: "Perubahan telah disimpan"
 
 msgid: "Full Text"
-msgstr: "Text complet"
+msgstr: "Full Teks"
 
 msgid: "Loading..."
-msgstr: "Carregant..."
+msgstr: "Loading..."
 
 msgid: "Error"
 msgstr: "Error"
 
 msgid: "There was an error receiving data from the server"
-msgstr: "Hi ha hagut un error al rebre les dades desde el servidor"
+msgstr: "Terjadi error saat menerima data dari server "
 
 msgid: "Logout"
-msgstr: "Sortir"
+msgstr: "Logout"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: "Per alguna raó, algun paràmetre de no ha sigut inclòs a la seva consulta"
+msgstr: "Untuk alasan tertentu, parameter tabel tidak disertakan dalam query anda"
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "Benvingut a SQL Buddy!"
+msgstr: "Selamat datang di SQL Buddy"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "Estàs connectat a MySQL %s amb l'usuari %s."
+msgstr: "Anda terkoneksi ke MySQL %s atas nama user %s"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "El servidor de base de dades esta funcionant des de %s i ha transferit aproximadament %s de dades"
+msgstr: "Server database telah berjalan sejak %s dan telah mentransfer kurang lebih %s data."
 
 msgid: "A new version of SQL Buddy is available!"
-msgstr: "Una nova versió de SQL Buddy està disponible!"
+msgstr: "Versi terbaru SQL Buddy telah tersedia"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "SQL Buddy ha sigut instalat i està disponible."
+msgstr: "Versi SQL Buddy Anda adalah %s dan sekarang telah tersedia versi %s."
 
 msgid: "Getting started"
-msgstr: "Començar"
+msgstr: "Pendahuluan"
 
 msgid: "Help"
-msgstr: "Ajuda"
+msgstr: "Bantuan"
 
 msgid: "Translations"
-msgstr: "Traduccions"
+msgstr: "Terjemahan"
 
 msgid: "Release Notes"
-msgstr: "Notes tècniques"
+msgstr: "Catatan rilis"
 
 msgid: "Contact"
-msgstr: "Contactar"
+msgstr: "Kontak"
 
 msgid: "Create a new database"
-msgstr: "Crear una nova base de dades"
+msgstr: "Buat database baru"
 
 msgid: "Did you know..."
-msgstr: "Sabies que..."
+msgstr: "Tahukah anda..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: ""
+msgstr: "Ada cara mudah untuk menyeleksi banyak group item. Pilih baris pertama, lalu tekan tombol shift bersamaan dengan memilih baris akhir. Checkbox antara baris awal hingga akhir secara otomatis akan terseleksi."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: ""
+msgstr: "Kolom pada browse dan tab query dapat di-resize. Anda bisa mengubah-ubah ukurannya sesuai keinginan. "
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: ""
+msgstr: "Halaman login adalah berdasar pada user default: root@localhost. Anda bisa mengubahnya dengan mengedit nama default user dan nama host pada file config.php"
 
 msgid: "Keyboard shortcuts"
-msgstr: "Adreces de Teclat"
+msgstr: "Shortcut keyboard"
 
 msgid: "Press this key..."
-msgstr: "Pitja aquesta tecla...."
+msgstr: "Tekan tombol ini..."
 
 msgid: "...and this will happen"
-msgstr: ".... i passarà això"
+msgstr: "...dan hal ini akan terjadi"
 
 msgid: "select none"
-msgstr: "selecciona cap"
+msgstr: "seleksi"
 
 msgid: "edit selected items"
-msgstr: "modificar elements seleccionats"
+msgstr: "edit item yang terseleksi"
 
 msgid: "delete selected items"
-msgstr: "esborrar elements seleccionats"
+msgstr: "hapus item yang terseleksi"
 
 msgid: "refresh page"
-msgstr: "refrescar pàgina"
+msgstr: "refresh halaman"
 
 msgid: "load the query tab"
-msgstr: "carregar la pestanya de consultes"
+msgstr: "load tab query"
 
 msgid: "browse tab - go to first page of results"
-msgstr: ""
+msgstr: "browse tab - tuju ke halaman awal"
 
 msgid: "browse tab - go to last page of results"
-msgstr: ""
+msgstr: "browse tab - tuju ke halaman akhir"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: ""
+msgstr: "browse tab - tuju ke halaman sebelumnya"
 
 msgid: "browse tab - go to next page of results"
-msgstr: ""
+msgstr: "browse tab - tuju ke halaman sesudahnya"
 
 msgid: "optimize selected tables"
-msgstr: ""
+msgstr: "Optimalkan tabel yang terpilih"
 
 msgid: "Choose a .sql file to import"
-msgstr: ""
+msgstr: "Pilih file .sql yang akan diimpor"
 
 msgid: "File
 "
-msgstr: "Arxiu"
+msgstr: "File"
 
 msgid: "Ignore first line"
-msgstr: "Ignora la primera línia"
+msgstr: "Abaikan baris pertama"
 
 msgid: "Edit"
-msgstr: "Editar"
+msgstr: "Edit"
 
 msgid: "Refresh"
-msgstr: "Refrescar"
+msgstr: "Refresh"
 
 msgid: "No primary key defined"
-msgstr: "No s'ha definit clau principal"
+msgstr: "Tidak ada primary key yang terdefinisi"
 
 msgid: "First"
-msgstr: "Primer"
+msgstr: "Awal"
 
 msgid: "Prev"
-msgstr: "Ant"
+msgstr: "Sebelum"
 
 msgid: "Next"
-msgstr: "Pos"
+msgstr: "Berikut"
 
 msgid: "Last"
-msgstr: "Ultim"
+msgstr: "Akhir"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: "La consulta ha retornat %d resultat"
-msgstr[1]: "La consulta ha retornat %d resultats"
+msgstr[0]: "Query anda menghasilkan %d hasil"
+msgstr[1]: "Query anda menghasilkan %d hasil"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Nota: Per evitar bloquejar el navegador, només es mostraran els %d primers resultats."
+msgstr: "Catatan: Untuk menghindari crash-nya browser Anda, hanya %d hasil yang ditampilkan"
 
 msgid: "binary data"
-msgstr: "dades binaries"
+msgstr: "binary data"
 
 msgid: "Your query affected %d rows"
-msgstr: ""
+msgstr: "Query anda mempengaruhi %d baris"
 
 msgid: "Your query did not return any results"
-msgstr: ""
+msgstr: "Query anda tidak menghasilkan apa-apa"
 
 msgid: "Your data has been inserted into the database"
-msgstr: ""
+msgstr: "Data telah disisipkan ke dalam database"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: ""
+msgstr: "Telah terjadi masalah saat mencari tabel \"%s\""
 
 msgid: "There was a problem logging you in"
-msgstr: "Hi ha hagut un problema en la identificació en"
+msgstr: "Telah terjadi masalah pada proses login"
 
 msgid: "Login"
-msgstr: "Autentificació"
+msgstr: "Login"
 
 msgid: "Unsupported browser"
-msgstr: "Navegador no suportat"
+msgstr: "Browser yang tidak di-support"
 
 msgid: "Help!"
-msgstr: "Ajuda!"
+msgstr: "Tolong!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: ""
+msgstr: "Session anda telah berakhir. Silahkan login kembali."
 
 msgid: "Username"
-msgstr: "Usuari"
+msgstr: "Username"
 
 msgid: "Password"
-msgstr: "Contrasenya"
+msgstr: "Password"
 
 msgid: "Run a query on the %s database"
-msgstr: ""
+msgstr: "Eksekusi sebuah query pada database %s"
 
 msgid: "Columns"
-msgstr: ""
+msgstr: "Kolom"
 
 msgid: "Add a column"
-msgstr: ""
+msgstr: "Tambahkan sebuah kolom"
 
 msgid: "Insert this column"
-msgstr: ""
+msgstr: "Sisipkan kolom ini"
 
 msgid: "At end of table"
-msgstr: ""
+msgstr: "Pada akhir tabel"
 
 msgid: "At beginning of table"
-msgstr: ""
+msgstr: "Pada awal tabel"
 
 msgid: "After"
-msgstr: ""
+msgstr: "Setelah"
 
 msgid: "Edit table"
-msgstr: ""
+msgstr: "Edit tabel"
 
 msgid: "Indexes"
-msgstr: ""
+msgstr: "Indeks"
 
 msgid: "Add an index"
-msgstr: ""
+msgstr: "Tambahkan sebuah indeks"
 
 msgid: "Column(s)"
-msgstr: ""
+msgstr: "Kolom"
 
 msgid: "Show %d more..."
-msgstr: ""
+msgstr: "Tampilkan %d berikutnya..."
 
 msgid: "Empty table"
-msgstr: ""
+msgstr: "Kosongkan tabel"
 
 msgid: "Drop table"
-msgstr: ""
+msgstr: "Drop tabel"
 
 msgid: "Optimize table"
-msgstr: ""
+msgstr: "Optimalkan tabel"
 
 msgid: "Table Information"
-msgstr: ""
+msgstr: "Info tabel"
 
 msgid: "Host"
-msgstr: "Hoste"
+msgstr: "Host"
 
 msgid: "Add a new user"
-msgstr: ""
+msgstr: "Tambahkan user baru"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: ""
+msgstr: "Masukkan dalam format: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "Apakah anda yakin untuk mengosongkan tabel '%s'? Semua data di dalam tabel tersebut akan dihapus. Query berikut akan dieksekusi:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "Apakah anda yakin untuk men-drop tabel '%s'? Tabel dan semua data di dalamnya akan dihapus. Query berikut akan dieksekusi:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: ""
+msgstr: "Apakah anda yakin untuk men-drop database '%s'? Database, tabel dalam database, dan semua data di dalam tabel tersebut akan dihapus. Query berikut akan dieksekusi:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: ""
+msgstr: "Mohon maaf, saat ini hanya Internet Eksplorer 7 yang didukung. Disarankan menggunakan browser Firefox, Safari, maupun Opera yang tersedia gratis dan bebas masalah. ;)"
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: ""
+msgstr: "Anda harus meng-enable cookies agar sessions dalam php dapat bekerja."
 
 msgid: "Importing..."
-msgstr: ""
+msgstr: "Sedang mengimport..."
 
 msgid: "Drop the '%s' database"
-msgstr: "Eliminar la base de dades '%s'"
+msgstr: "Drop database '%s'"
 
 msgid: "Okay"
-msgstr: "Correcte"
+msgstr: "Ok"
 
 msgid: "Cancel"
-msgstr: "Cancelar"
+msgstr: "Batal"
 
 msgid: "Storage engine"
-msgstr: "Motor d'enmagatzematge"
+msgstr: "Penyimpanan"
 
 msgid: "Language"
-msgstr: "Idioma"
+msgstr: "Bahasa"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d statemen telah dieksekusi dari file"
+msgstr[1]: "%d statemen telah dieksekusi dari file"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: "%d fila ha estat insertada en la base de dades des de l'arxiu"
-msgstr[1]: "%d files han estat insertades en la base de dades des de l'arxiu"
+msgstr[0]: "%d baris telah disisipkan dari file ke dalam database "
+msgstr[1]: "%d baris telah disisipkan dari file ke dalam database "
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: "%d fila ha estat ignorada perque el nombre de valors és incorrecte"
-msgstr[1]: "%d files han estat ignorades perque el nombre de valors és incorrecte"
+msgstr[0]: "%d baris telah diabaikan karena banyaknya values tidak sesuai"
+msgstr[1]: "%d baris telah diabaikan karena banyaknya values tidak sesuai"
 
 msgid: "Theme"
 msgstr: "Tema"
 
 msgid: "(%.4f seconds)"
-msgstr: "(%.4f segons)"
+msgstr: "(%.4f detik)"
 
 msgid: "The following errors were reported"
-msgstr: "S'han reportat els següents errors"
+msgstr: "Error berikut ini telah diketahui"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: "No tens prous permisos per a crear nous usuaris."
+msgstr: "Anda tidak mempunyai ijin untuk membuat user baru."
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: "No tens prous permisos per veure o manipular els usuaris."
+msgstr: "Anda tidak mempunyai ijin untuk menampilkan atau me-manage user."
 
 msgid: "You are connected to %s."
-msgstr: "Esàs connectat a %s"
+msgstr: "Anda terkoneksi ke %s."
 
 msgid: "Allow access to"
-msgstr: "Permetre accés a"
+msgstr: "Ijinkan akses ke"
 
 msgid: "All databases"
-msgstr: "Totes les bases de dades"
+msgstr: "Semua database"
 
 msgid: "Selected databases"
-msgstr: "Bases de dades selecionades"
+msgstr: "Database terpilih"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Berikan user"
 
 msgid: "Updates"
-msgstr: "Actualitzacions"
+msgstr: "Perbaharui"
 
 msgid: "There are no updates available"
-msgstr: "No hi han actualitzacions disponibles."
+msgstr: "Tidak ada update baru yang tersedia"
 
 msgid: "Change password"
-msgstr: "Canviar clau"
+msgstr: "Ubah password"

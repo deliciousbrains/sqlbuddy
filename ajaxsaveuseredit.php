@@ -93,7 +93,7 @@ if (isset($user) && ($accessLevel == "GLOBAL" || ($accessLevel == "LIMITED" && s
 			$conn->query("DELETE FROM `db` WHERE `User`='$name' AND `Host`='$host'");
 			
 			foreach ($dbList as $theDb) {	
-				$query = "GRANT " . $privList . " ON $theDb.* TO " . $user;
+				$query = "GRANT " . $privList . " ON `$theDb`.* TO " . $user;
 				
 				if (isset($grantOption))
 					$query .= " WITH GRANT OPTION";

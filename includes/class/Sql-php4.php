@@ -354,7 +354,10 @@ class SQL {
 								
 								$output .= '{"name":"' . $table['TABLE_NAME'] . '","rowcount":' . $rowCount . '},';
 							}
-							$output = substr($output, 0, -1);
+							
+							if (substr($output, -1) == ",")
+								$output = substr($output, 0, -1);
+							
 							$output .= ']';
 						}
 						$output .= '},';
@@ -378,7 +381,10 @@ class SQL {
 								$rowCount = (int)($this->result($countSql, 0, "RowCount"));
 								$output .= '{"name":"' . $table[0] . '","rowcount":' . $rowCount . '},';
 							}
-							$output = substr($output, 0, -1);
+							
+							if (substr($output, -1) == ",")
+								$output = substr($output, 0, -1);
+							
 							$output .= ']';
 						}
 						$output .= '},';
@@ -399,7 +405,10 @@ class SQL {
 						$rowCount = (int)($this->result($countSql, 0, "RowCount"));
 						$output .= '{"name":"' . $tableRow[0] . '","rowcount":' . $rowCount . '},';
 					}
-					$output = substr($output, 0, -1);
+					
+					if (substr($output, -1) == ",")
+						$output = substr($output, 0, -1);
+					
 					$output .= ']';
 				}
 				$output .= '}';

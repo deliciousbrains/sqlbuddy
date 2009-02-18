@@ -1,6 +1,6 @@
 Language: Suomi
-Language-Code: 
-Build-Date: Tue, 09 Sep 2008 20:50:43 -0600
+Language-Code: fi_FI
+Build-Date: Wed, 18 Feb 2009 10:24:07 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Tiedostoa ei pystytty lukemaan tai se oli tyhjä"
@@ -183,7 +183,7 @@ msgid: "Please select the tables that you would like to export"
 msgstr: "Valitse taulut, jotka haluat viedä"
 
 msgid: "Table `%s` is empty"
-msgstr: "Taulu '%s' on tyhjÃ¤"
+msgstr: "Taulu '%s' on tyhjä"
 
 msgid: "Results"
 msgstr: "Tulokset"
@@ -367,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Olet yhdistettynä MySQL:ään %s käyttäjän %s kanssa."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "Tietokantapalvelin on ollut käynnissä %s lähtien ja dataa on siirretty n. %s."
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Uusi versio SQL Buddysta on saatavilla!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "Sinulla on SQL Buddy %s asennettu ja %s on nyt saatavissa."
 
 msgid: "Getting started"
 msgstr: "Aloitusohjeet"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "Käännökset"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Julkaisutiedot"
 
 msgid: "Contact"
 msgstr: "Ota yhteyttä"
@@ -571,10 +571,10 @@ msgid: "Host"
 msgstr: "Tietokantapalvelin"
 
 msgid: "Add a new user"
-msgstr: "Lisää käyttäjä"
+msgstr: "Lisää uusi käyttäjä"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: "SyÃ¶tÃ¤ muodossa: ('1','2')"
+msgstr: "Syötä muodossa: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
 msgstr: "Haluatko varmasti tyhjentÃ¤Ã¤ taulun '%s'? Kaikki data taulussa menetetÃ¤Ã¤n. Seuraava kysely tullaan suorittamaan:"
@@ -628,37 +628,37 @@ msgid: "Theme"
 msgstr: "Teema"
 
 msgid: "(%.4f seconds)"
-msgstr: ""
+msgstr: "(%.4f sekuntia)"
 
 msgid: "The following errors were reported"
-msgstr: ""
+msgstr: "Vastaan tuli seuraavat virheet"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: ""
+msgstr: "Sinulla ei ole riittäviä oikeuksia uusien käyttäjien luomiseen."
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: ""
+msgstr: "Sinulla ei ole riittäviä oikeuksia käyttäjien näyttämiseen ja hallinnointiin."
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "Sinut on yhdistetty: %s."
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "Salli pääsy"
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "Kaikki tietokannat"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "Valitut tietokannat"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Anna käyttäjä"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Päivitykset"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "Päivityksiä ei ole saatavilla"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Vaihda salasana"

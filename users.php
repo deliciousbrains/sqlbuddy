@@ -78,7 +78,7 @@ if ($_POST) {
 			foreach ($dbList as $theDb) {
 				$newQuery = "GRANT " . $privList;
 				
-				$newQuery .= " ON $theDb.*";
+				$newQuery .= " ON `$theDb`.*";
 				
 				$newQuery .= " TO '" . $newName . "'@'" . $newHost . "'";
 				

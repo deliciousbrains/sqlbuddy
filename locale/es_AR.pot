@@ -1,6 +1,6 @@
 Language: Español (Argentina)
-Language-Code: 
-Build-Date: Tue, 09 Sep 2008 20:43:24 -0600
+Language-Code: es_AR
+Build-Date: Wed, 18 Feb 2009 10:25:39 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "No se pudo encontrar el archivo o está vacío"
@@ -81,7 +81,7 @@ msgid: "index"
 msgstr: "Indice"
 
 msgid: "Default"
-msgstr: "Valor por defecto"
+msgstr: "Por defecto"
 
 msgid: "Other"
 msgstr: "Otro"
@@ -367,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Está conectado a MySQL %s con el usuario %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "El servidor de Base de Datos ha estado corriendo desde %s y ha transferido aproximadamente %s de data."
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Una nueva versión de SQL Buddy está disponible!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "Tienes SQL Buddy %s instalado y %s está disponible"
 
 msgid: "Getting started"
 msgstr: "Primeros pasos"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "Traducciones"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Notas del lanzamiento"
 
 msgid: "Contact"
 msgstr: "Contacto"
@@ -397,7 +397,7 @@ msgid: "Did you know..."
 msgstr: "¿ Sabía que ...?"
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: "Hay una forma más fácil de seleccionar muchos elementos cuando se examinan filas. rnMarque la primera fila, mantenga pulsada la tecla mayúsculas y marque la última fila. Las casillas de verificación intermedias se marcarán automáticamente."
+msgstr: "Hay una forma más fácil de seleccionar muchos elementos cuando se examinan filas. Marque la primera fila, mantenga pulsada la tecla mayúsculas y marque la última fila. Las casillas de verificación intermedias se marcarán automáticamente."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
 msgstr: "Las columnas de las pestañas Examinar y Consulta se pueden redimensionar. Ajuste el ancho según sus necesidades."
@@ -481,7 +481,7 @@ msgstr[0]: "La consulta ha devuelto %d fila"
 msgstr[1]: "La consulta ha devuelto %d filas"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Nota: para evitar errores de navegador solo se muestran los %d primeros resultados"
+msgstr: "Nota: para evitar errores en su navegador solo se muestran los %d primeros resultados"
 
 msgid: "binary data"
 msgstr: "Datos binarios"
@@ -577,16 +577,16 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Introducir usando el formato: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Â¿EstÃ¡ seguro que quiere vaciar la tabla '%s'? Esta acciÃ³n borrarÃ¡ los datos que contenga. Se ejecutarÃ¡ la siguiente consulta:"
+msgstr: "¿Está seguro que quiere vaciar la tabla '%s'? Esta acción borrará¡ los datos que contenga. Se ejecutará¡ la siguiente consulta:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Â¿EstÃ¡ seguro que quiere elimninarr la tabla '%s'? Esta acciÃ³n borrarÃ¡ la tabla y los datos que contenga. Se ejecutarÃ¡ la siguiente consulta:"
+msgstr: "¿Está seguro que quiere elimninar la tabla '%s'? Esta acción borrará la tabla y los datos que contenga. Se ejecutará la siguiente consulta:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Â¿EstÃ¡ seguro que quire eliminar la base de datos '%s'? Esta acciÃ³n borrarÃ¡ la base, las tablas que contenga y sus datos. Se ejecutarÃ¡ la siguiente consulta:"
+msgstr: "¿Está seguro que quiere eliminar la base de datos '%s'? Esta acción borrará la base, las tablas que contenga y sus datos. Se ejecutará la siguiente consulta:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "Lo lamentamos pero actualmente solo se soporta Internet Explorer 7, que se puede descargar gratuitamente desde la página web de Microsoft. Otros navegadores soportados: Firefox, Safari y Opera."
+msgstr: "Lo lamentamos pero actualmente sólo se soporta Internet Explorer 7, que se puede descargar gratuitamente desde la página web de Microsoft. Otros navegadores soportados: Firefox, Safari y Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
 msgstr: "Las cookies de su navegador no parecen estar habilitadas. Para el correcto funcionamiento de las sesiones la mayoría de las instalaciones de php las requieren."
@@ -631,34 +631,34 @@ msgid: "(%.4f seconds)"
 msgstr: "(%.4f segundos)"
 
 msgid: "The following errors were reported"
-msgstr: ""
+msgstr: "Los siguientes errores son reportados"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: ""
+msgstr: "No posee permisos para crear nuevos usuarios"
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: ""
+msgstr: "No posee permisos para ver o administrar usuarios"
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "Se conecto a %s"
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "Permitir acceso a"
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "Todas las bases de datos"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "Bases de datos seleccionadas"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Dar al usuario"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "Actualizaciones"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "No hay actualizaciones disponibles"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "Cambiar contraseña"

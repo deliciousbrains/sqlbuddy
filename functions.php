@@ -16,7 +16,7 @@ MIT license
 error_reporting(E_ALL);
 
 if (function_exists('date_default_timezone_set'))
-	date_default_timezone_set('AMERICA/REGINA');
+	date_default_timezone_set('Greenwich');
 
 if (!session_id())
 	session_start();
@@ -33,7 +33,7 @@ if (version_compare(PHP_VERSION, "5.0.0", "<"))
 else
 	include INCLUDES_DIR . "class/Sql.php";
 
-define("VERSION_NUMBER", "1.3.0");
+define("VERSION_NUMBER", "1.3.1");
 define("PREVIEW_CHAR_SIZE", 65);
 
 $adapterList[] = "mysql";
@@ -44,15 +44,20 @@ if (function_exists("sqlite_open") || (class_exists("PDO") && in_array("sqlite",
 
 $cookieLength = time() + (60*24*60*60);
 
+$langList['ms_ID'] = "Bahasa Melayu";
 $langList['ca_AD'] = "Català";
 $langList['cs_CZ'] = "Čeština";
+$langList['sr_RS'] = "Српски ћирилица";
+$langList['da_DK'] = "Danish";
 $langList['de_DE'] = "Deutsch";
 $langList['en_US'] = "English";
 $langList['es_ES'] = "Español";
 $langList['es_AR'] = "Español (Argentina)";
 $langList['fr_FR'] = "Français";
+$langList['id_ID'] = "Indonesian";
 $langList['it_IT'] = "Italiano";
 $langList['lo_LA'] = "Lao";
+$langList['lv_LV'] = "Latviešu";
 $langList['hu_HU'] = "Magyar";
 $langList['nl_NL'] = "Nederlands";
 $langList['pl_PL'] = "Polski";

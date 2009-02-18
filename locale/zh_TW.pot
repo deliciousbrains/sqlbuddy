@@ -1,6 +1,6 @@
 Language: 中文 (繁體)
 Language-Code: zh_TW
-Build-Date: Tue, 09 Sep 2008 20:53:49 -0600
+Build-Date: Wed, 18 Feb 2009 10:16:26 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "檔案空白或無法讀取"
@@ -57,7 +57,7 @@ msgid: "Name"
 msgstr: "名稱"
 
 msgid: "Setup the fields for the table below"
-msgstr: "為下列表格設定欄位"
+msgstr: "為表格設定欄位"
 
 msgid: "New field"
 msgstr: "新欄位"
@@ -72,7 +72,7 @@ msgid: "Key"
 msgstr: "鍵"
 
 msgid: "primary"
-msgstr: "主要"
+msgstr: "主鍵"
 
 msgid: "unique"
 msgstr: "唯一"
@@ -364,16 +364,16 @@ msgid: "Welcome to SQL Buddy!"
 msgstr: "歡迎使用 SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "您以使用者 %s 連結到 MySQL %s。"
+msgstr: "您已連結到 MySQL %s，並登入為使用者 %s。"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "資料庫伺服器自從 %s 起已傳輸了大約 %s 的資料。"
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "新版的 SQL Buddy 已經釋出!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "您已成功安裝 SQL Buddy %s ，最新版本是 %s 。"
 
 msgid: "Getting started"
 msgstr: "快速入門"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "翻譯"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "發行說明"
 
 msgid: "Contact"
 msgstr: "聯絡"
@@ -535,7 +535,7 @@ msgid: "At end of table"
 msgstr: "在表格的尾端"
 
 msgid: "At beginning of table"
-msgstr: "在表格的開頭"
+msgstr: "在表格的閅"
 
 msgid: "After"
 msgstr: "以後"
@@ -611,18 +611,18 @@ msgstr: "語言"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: "%d 個敘述從檔案執行"
-msgstr[1]: "%d 個敘述從檔案執行"
+msgstr[0]: "已經從檔案中被執行了%d的語法"
+msgstr[1]: "已經從檔案中被執行了%d的語法(多行)"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: "%d 列資料從檔案插入到資料庫中"
-msgstr[1]: "%d 列資料從檔案插入到資料庫中"
+msgstr[0]: "已從檔案中成功插入了%d列資料"
+msgstr[1]: "已從檔案中成功插入了%d列資料(多列)"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: "%d 行資料因為數值數目不正確而被迫跳過"
-msgstr[1]: "%d 行資料因為數值數目不正確而被迫跳過"
+msgstr[0]: "%d列的語法已被略過,原因是value中的數量不正確"
+msgstr[1]: "%d列的語法已被略過,原因是value中的數量不正確(多行)"
 
 msgid: "Theme"
 msgstr: "主題"
@@ -640,25 +640,25 @@ msgid: "You do not have enough permissions to view or manage users."
 msgstr: "您沒有足夠的權限來檢視或管理使用者。"
 
 msgid: "You are connected to %s."
-msgstr: ""
+msgstr: "您已連接至 %s"
 
 msgid: "Allow access to"
-msgstr: ""
+msgstr: "允許存取"
 
 msgid: "All databases"
-msgstr: ""
+msgstr: "所有資料庫"
 
 msgid: "Selected databases"
-msgstr: ""
+msgstr: "選定的資料庫"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "給使用者"
 
 msgid: "Updates"
-msgstr: ""
+msgstr: "更新"
 
 msgid: "There are no updates available"
-msgstr: ""
+msgstr: "目前沒有更新"
 
 msgid: "Change password"
-msgstr: ""
+msgstr: "修改密碼"

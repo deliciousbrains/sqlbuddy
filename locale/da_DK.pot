@@ -1,226 +1,226 @@
-Language: Català
-Language-Code: ca_AD
-Build-Date: Wed, 18 Feb 2009 10:25:23 -0700
+Language: Danish
+Language-Code: da_DK
+Build-Date: Wed, 18 Feb 2009 10:21:44 -0700
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "No s'ha pogut llegir l'arxiu o estava buit"
+msgstr: "Filen kunne enten, ikke blive fundet eller den er tom"
 
 msgid: "Error performing operation"
-msgstr: "Error durant l'operació"
+msgstr: "Fejl ved udførelse af opgaven"
 
 msgid: "All"
-msgstr: "Tots"
+msgstr: "Alle"
 
 msgid: "None"
-msgstr: "Cap"
+msgstr: "Ingen"
 
 msgid: "With selected"
-msgstr: "Amb els seleccionats"
+msgstr: "Med valgte"
 
 msgid: "Empty"
-msgstr: "Buidar"
+msgstr: "Tom"
 
 msgid: "Drop"
-msgstr: "Eliminar"
+msgstr: "Forkaste"
 
 msgid: "Optimize"
-msgstr: "Optimitzar"
+msgstr: "Optimer"
 
 msgid: "Table"
-msgstr: "Taula"
+msgstr: "Tabel"
 
 msgid: "Rows"
-msgstr: "Files"
+msgstr: "Række"
 
 msgid: "Size"
-msgstr: "Mida"
+msgstr: "Størrelse"
 
 msgid: "Overhead"
-msgstr: "Overhead (a dalt)"
+msgstr: "Overhead"
 
 msgid: "Options"
-msgstr: "Opcions"
+msgstr: "Valg"
 
 msgid: "Edit database"
-msgstr: "Editar base de dades"
+msgstr: "Rediger database"
 
 msgid: "Charset"
-msgstr: "Joc de caràcters"
+msgstr: "Tegnkodning"
 
 msgid: "Submit"
-msgstr: "Enviar"
+msgstr: "Send"
 
 msgid: "Create a new table"
-msgstr: "Crear nova taula"
+msgstr: "Opret en ny tabel"
 
 msgid: "Name"
-msgstr: "Nom"
+msgstr: "Navn"
 
 msgid: "Setup the fields for the table below"
-msgstr: "Estableix els camps per la següent taula"
+msgstr: "Opsæt felter til nedenstående tabel"
 
 msgid: "New field"
-msgstr: "Nou camp"
+msgstr: "Nyt felt"
 
 msgid: "Type"
-msgstr: "Tipus"
+msgstr: "Type"
 
 msgid: "Values"
-msgstr: "Valors"
+msgstr: "Værdier"
 
 msgid: "Key"
-msgstr: "Clau"
+msgstr: "Nøgle"
 
 msgid: "primary"
-msgstr: "primària"
+msgstr: "primær"
 
 msgid: "unique"
-msgstr: "única"
+msgstr: "unik"
 
 msgid: "index"
-msgstr: "índex"
+msgstr: "index"
 
 msgid: "Default"
-msgstr: "Per defecte"
+msgstr: "Standardopsætning"
 
 msgid: "Other"
-msgstr: "Altre"
+msgstr: "Andre"
 
 msgid: "Unsigned"
-msgstr: "Sense signar"
+msgstr: "Usigneret"
 
 msgid: "Binary"
-msgstr: "Binàri"
+msgstr: "Binær"
 
 msgid: "Not Null"
-msgstr: "No Null"
+msgstr: "ikke nul"
 
 msgid: "Auto Increment"
-msgstr: "Auto-incremental"
+msgstr: ""
 
 msgid: "Add field"
-msgstr: "Afegir camp"
+msgstr: "Tilføj felt"
 
 msgid: "Oops"
-msgstr: "Ostres"
+msgstr: "Ups"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "Per alguna raó, el paràmetre de la base de dades no s'ha inclòs a la teva petició"
+msgstr: "Databaseparameteren var ikke inkluderet i din forespørgsel"
 
 msgid: "Save changes to original"
-msgstr: "Desar canvis a l'original"
+msgstr: "Gem ændringer til originalet"
 
 msgid: "Insert as new row"
-msgstr: "Inserir com a nova fila"
+msgstr: "Indsæt som ny række"
 
 msgid: "Save"
-msgstr: "Desar"
+msgstr: "Gem"
 
 msgid: "User"
-msgstr: "Usuari"
+msgstr: "Bruger"
 
 msgid: "All privileges"
-msgstr: "Tots els privilegis"
+msgstr: "Alle rettigheder"
 
 msgid: "Selected privileges"
-msgstr: "Privilegis seleccionats"
+msgstr: "Valgte rettigheder"
 
 msgid: "User privileges"
-msgstr: "Privilegis d'usuari"
+msgstr: "Brugerrettigheder"
 
 msgid: "Select"
-msgstr: "Select"
+msgstr: "SELECT"
 
 msgid: "Insert"
-msgstr: "Insert"
+msgstr: "INSERT"
 
 msgid: "Update"
-msgstr: "Update"
+msgstr: "UPDATE"
 
 msgid: "Delete"
-msgstr: "Delete"
+msgstr: "DELETE"
 
 msgid: "Alter"
-msgstr: "Alter"
+msgstr: "ALTER"
 
 msgid: "Create"
-msgstr: "Create"
+msgstr: "CREATE"
 
 msgid: "Temp tables"
-msgstr: "Taules temporals"
+msgstr: "Temporære tabeller"
 
 msgid: "Administrator privileges"
-msgstr: "Privilegis d'administrador"
+msgstr: "Administratorrettigheder"
 
 msgid: "File"
-msgstr: "Arxiu"
+msgstr: "Fil"
 
 msgid: "Process"
-msgstr: "Procés"
+msgstr: "Proces"
 
 msgid: "Reload"
-msgstr: "Recarregar"
+msgstr: "Genopfrisk"
 
 msgid: "Shutdown"
-msgstr: "Apagar"
+msgstr: "Luk ned"
 
 msgid: "Super"
 msgstr: "Super"
 
 msgid: "Grant option"
-msgstr: "Otorgar opció"
+msgstr: "Bevillig tilvalg"
 
 msgid: "User not found!"
-msgstr: "Usuari no trobat"
+msgstr: "Bruger ikke fundet!"
 
 msgid: "You must export either structure, data, or both"
-msgstr: "Has d'exportar l'estructura, les dades o ambdues."
+msgstr: "Du skal eksportere enten struktur, data eller begge dele"
 
 msgid: "Please select the databases that you would like to export"
-msgstr: "Si us plau, seleccioni la base de dades que voleu exportar"
+msgstr: "Vælg venligst de databaser der skal eksporteres"
 
 msgid: "Please select the tables that you would like to export"
-msgstr: "si us plau, seleccioni les taules que voleu exportar"
+msgstr: "Vælg venligst de tabeller der skal eksporteres"
 
 msgid: "Table `%s` is empty"
-msgstr: "La taula `%s` és buida"
+msgstr: "Tabellen  `%s` er tom"
 
 msgid: "Results"
-msgstr: "Resultats"
+msgstr: "Resultater"
 
 msgid: "Select all"
-msgstr: "Seleccionar tot"
+msgstr: "Vælg alle"
 
 msgid: "The file could not be opened"
-msgstr: "El fitxer no pot ser obert"
+msgstr: "Filen kunne ikke åbnes"
 
 msgid: "Could not write to file"
-msgstr: "Imposible escriure el fitxer"
+msgstr: "Der kan ikke skrives til filen"
 
 msgid: "Successfully wrote content to file"
-msgstr: "El fitxer s'ha escrit correctament"
+msgstr: "Indhold blev skrevet til filen"
 
 msgid: "Download"
-msgstr: "Descarregant"
+msgstr: "Download"
 
 msgid: "Note
 "
-msgstr: "Nota"
+msgstr: "Bemærk"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
-msgstr: "Si això és un servidor públic, has d'esborrar aquest arxiu del servidor després de descarregar-lo"
+msgstr: "Hvis dette er en offentlig server, så bør denne fil slettes efter at den er blevet downloadet"
 
 msgid: "Export"
-msgstr: "Exportar"
+msgstr: "Eksportér"
 
 msgid: "Tables"
-msgstr: "Taules"
+msgstr: "Tabeller"
 
 msgid: "Databases"
-msgstr: "Base de dades"
+msgstr: "Databaser"
 
 msgid: "Format"
-msgstr: "Formateig"
+msgstr: "Formatér"
 
 msgid: "SQL"
 msgstr: "SQL"
@@ -229,172 +229,172 @@ msgid: "CSV"
 msgstr: "CSV"
 
 msgid: "Structure"
-msgstr: "Estructura"
+msgstr: "Struktur"
 
 msgid: "Data"
 msgstr: "Data"
 
 msgid: "Compact inserts"
-msgstr: "inserts compactats"
+msgstr: ""
 
 msgid: "Complete inserts"
-msgstr: "inserts complerts"
+msgstr: ""
 
 msgid: "Delimiter"
-msgstr: "Delimitador"
+msgstr: "Skilletegn"
 
 msgid: "Comma"
-msgstr: "Coma"
+msgstr: "Komma"
 
 msgid: "Tab"
-msgstr: "Tabulador"
+msgstr: "Tab"
 
 msgid: "Semicolon"
-msgstr: "Punt i coma"
+msgstr: "Semikolon"
 
 msgid: "Space"
-msgstr: "Espai"
+msgstr: "Mellemrum"
 
 msgid: "Print field names on first line"
-msgstr: "Imprimir els noms del camps a la primera línia"
+msgstr: "Udskriv feltnavne på første linie"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "Si vosté està exportant un nùmero gran de columnes, es recomenable que faci el volcat sobre un arxiu de texte."
+msgstr: "Du er ved at eksportere et stort antal af rækker, det anbefales at du eksporterer resultatet til en tekst fil"
 
 msgid: "Output to"
-msgstr: "Extraure a"
+msgstr: "Skriv til "
 
 msgid: "Browser"
-msgstr: "Navegador"
+msgstr: "Browser"
 
 msgid: "Text file"
-msgstr: "Fitxer text"
+msgstr: "Tekstfil"
 
 msgid: "Home"
-msgstr: "Inici"
+msgstr: "Hjem"
 
 msgid: "Users"
-msgstr: "Usuaris"
+msgstr: "Brugere"
 
 msgid: "Query"
-msgstr: "Consulta"
+msgstr: "Forespørgsel"
 
 msgid: "Import"
-msgstr: "Importar"
+msgstr: "Importér"
 
 msgid: "Overview"
-msgstr: "Visualitzar"
+msgstr: "Overblik"
 
 msgid: "Browse"
-msgstr: "Navegar"
+msgstr: "Gennemse"
 
 msgid: "Your changes were saved to the database"
-msgstr: "Els teus canvis s'han guardat a la base de dades"
+msgstr: "Ændringerne blev gemt til databasen"
 
 msgid: "delete this row"
-msgstr: "eliminar aquesta fila"
+msgstr: "Slet denne række"
 
 msgid: "delete these rows"
-msgstr: "elimina aquestes files"
+msgstr: "Slet disse rækker"
 
 msgid: "empty this table"
-msgstr: "buida aquesta taula"
+msgstr: "Tøm denne tabel"
 
 msgid: "empty these tables"
-msgstr: "buida aquestes taules"
+msgstr: "Tøm disse tabeller"
 
 msgid: "drop this table"
-msgstr: "eliminar aquesta taula"
+msgstr: "drop denne tabel"
 
 msgid: "drop these tables"
-msgstr: "eliminar aquestes taules"
+msgstr: "drop disse tabeller"
 
 msgid: "delete this column"
-msgstr: "esborra aquesta columna"
+msgstr: "slet denne kolonne"
 
 msgid: "delete these columns"
-msgstr: "esborra aquestes columnes"
+msgstr: "slet disse kolonner"
 
 msgid: "delete this index"
-msgstr: "esborra aquest índex"
+msgstr: "slet dette index"
 
 msgid: "delete this indexes"
-msgstr: "esborra aquests índexs"
+msgstr: "slet disse indicies "
 
 msgid: "delete this user"
-msgstr: "esborra aquest usuari"
+msgstr: "slet denne bruger"
 
 msgid: "delete this users"
-msgstr: "esborra aquests usuaris"
+msgstr: "slet disse brugere"
 
 msgid: "Are you sure you want to"
-msgstr: "Estàs segur que vols"
+msgstr: "Er du sikker på at du ønsker at"
 
 msgid: "The following query will be run:"
-msgstr: "La següent query serà creada:"
+msgstr: "Følgende forespørgelse vil blive kørt:"
 
 msgid: "The following queries will be run:"
-msgstr: "Les següents queries seran creades:"
+msgstr: "Følgende forespørgelser vil blive kørt:"
 
 msgid: "Confirm"
-msgstr: "Confirmació"
+msgstr: "Bekræft"
 
 msgid: "Successfully saved changes"
-msgstr: "Canvis guardats correctament"
+msgstr: "Ændringer blev gemt"
 
 msgid: "Full Text"
-msgstr: "Text complet"
+msgstr: "Fuld Tekst"
 
 msgid: "Loading..."
-msgstr: "Carregant..."
+msgstr: "Henter..."
 
 msgid: "Error"
-msgstr: "Error"
+msgstr: "Fejl"
 
 msgid: "There was an error receiving data from the server"
-msgstr: "Hi ha hagut un error al rebre les dades desde el servidor"
+msgstr: "Der opstod en fejl ved modtagningen af data fra serveren"
 
 msgid: "Logout"
-msgstr: "Sortir"
+msgstr: "Log ud"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: "Per alguna raó, algun paràmetre de no ha sigut inclòs a la seva consulta"
+msgstr: ""
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "Benvingut a SQL Buddy!"
+msgstr: "Velkommen til SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "Estàs connectat a MySQL %s amb l'usuari %s."
+msgstr: "Du har forbindelse til MySQL %s med brugeren %s"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "El servidor de base de dades esta funcionant des de %s i ha transferit aproximadament %s de dades"
+msgstr: ""
 
 msgid: "A new version of SQL Buddy is available!"
-msgstr: "Una nova versió de SQL Buddy està disponible!"
+msgstr: "En ny version af SQL Buddy er tilgængelig!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "SQL Buddy ha sigut instalat i està disponible."
+msgstr: "Du har SQL Buddy version %s installeret og %s er nu tilgængelig."
 
 msgid: "Getting started"
-msgstr: "Començar"
+msgstr: "Gå i gang"
 
 msgid: "Help"
-msgstr: "Ajuda"
+msgstr: "Hjælp"
 
 msgid: "Translations"
-msgstr: "Traduccions"
+msgstr: "Oversættelser"
 
 msgid: "Release Notes"
-msgstr: "Notes tècniques"
+msgstr: "Udgivelsesnoter"
 
 msgid: "Contact"
-msgstr: "Contactar"
+msgstr: "Kontakt"
 
 msgid: "Create a new database"
-msgstr: "Crear una nova base de dades"
+msgstr: "Opret en ny database"
 
 msgid: "Did you know..."
-msgstr: "Sabies que..."
+msgstr: "Viste du..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
 msgstr: ""
@@ -406,28 +406,28 @@ msgid: "The login page is based on a default user of root@localhost. By editing 
 msgstr: ""
 
 msgid: "Keyboard shortcuts"
-msgstr: "Adreces de Teclat"
+msgstr: "Genvejstaster"
 
 msgid: "Press this key..."
-msgstr: "Pitja aquesta tecla...."
+msgstr: "Tryk på denne knap..."
 
 msgid: "...and this will happen"
-msgstr: ".... i passarà això"
+msgstr: "...og dette vil ske"
 
 msgid: "select none"
-msgstr: "selecciona cap"
+msgstr: "vælg ingen"
 
 msgid: "edit selected items"
-msgstr: "modificar elements seleccionats"
+msgstr: "rediger valgte elementer"
 
 msgid: "delete selected items"
-msgstr: "esborrar elements seleccionats"
+msgstr: "slet valgte elementer"
 
 msgid: "refresh page"
-msgstr: "refrescar pàgina"
+msgstr: "Opdater siden"
 
 msgid: "load the query tab"
-msgstr: "carregar la pestanya de consultes"
+msgstr: ""
 
 msgid: "browse tab - go to first page of results"
 msgstr: ""
@@ -442,142 +442,142 @@ msgid: "browse tab - go to next page of results"
 msgstr: ""
 
 msgid: "optimize selected tables"
-msgstr: ""
+msgstr: "Optimér valgte tabeller"
 
 msgid: "Choose a .sql file to import"
-msgstr: ""
+msgstr: "Vælg en .sql fil at importere"
 
 msgid: "File
 "
-msgstr: "Arxiu"
+msgstr: "Fil"
 
 msgid: "Ignore first line"
-msgstr: "Ignora la primera línia"
+msgstr: "Ignorer første linie"
 
 msgid: "Edit"
-msgstr: "Editar"
+msgstr: "Rediger"
 
 msgid: "Refresh"
-msgstr: "Refrescar"
+msgstr: "Opdater"
 
 msgid: "No primary key defined"
-msgstr: "No s'ha definit clau principal"
+msgstr: "Ingen primær nøgle defineret"
 
 msgid: "First"
-msgstr: "Primer"
+msgstr: "Første"
 
 msgid: "Prev"
-msgstr: "Ant"
+msgstr: "Tilbage"
 
 msgid: "Next"
-msgstr: "Pos"
+msgstr: "Næste"
 
 msgid: "Last"
-msgstr: "Ultim"
+msgstr: "Sidste"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: "La consulta ha retornat %d resultat"
-msgstr[1]: "La consulta ha retornat %d resultats"
+msgstr[0]: "Din forespørgsel returnerede %d resultat"
+msgstr[1]: "Din forespørgsel retunerede %d resultater"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Nota: Per evitar bloquejar el navegador, només es mostraran els %d primers resultats."
+msgstr: "Note: Kun de første %d resultater er vist, for ikke at din browser skal gå ned."
 
 msgid: "binary data"
-msgstr: "dades binaries"
+msgstr: "Binear data"
 
 msgid: "Your query affected %d rows"
-msgstr: ""
+msgstr: "Din forespørgsel påvirkede %d rækker"
 
 msgid: "Your query did not return any results"
-msgstr: ""
+msgstr: "Din forespørgsel returnerede ingen resultater"
 
 msgid: "Your data has been inserted into the database"
-msgstr: ""
+msgstr: "Dine data er blevet indsat i databasen"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: ""
+msgstr: "Der var problemer med at lokalisere \"%s\" tabellen"
 
 msgid: "There was a problem logging you in"
-msgstr: "Hi ha hagut un problema en la identificació en"
+msgstr: "Der opstod en fejl i dit login"
 
 msgid: "Login"
-msgstr: "Autentificació"
+msgstr: "Login"
 
 msgid: "Unsupported browser"
-msgstr: "Navegador no suportat"
+msgstr: "Ikke supporteret browser"
 
 msgid: "Help!"
-msgstr: "Ajuda!"
+msgstr: "Hjælp!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: ""
+msgstr: "Din session er udløbet. Vær venlig at logge ind igen."
 
 msgid: "Username"
-msgstr: "Usuari"
+msgstr: "Brugernavn"
 
 msgid: "Password"
-msgstr: "Contrasenya"
+msgstr: "Kodeord"
 
 msgid: "Run a query on the %s database"
-msgstr: ""
+msgstr: "Kør en forespørgsel på databasen %s"
 
 msgid: "Columns"
-msgstr: ""
+msgstr: "Rækker"
 
 msgid: "Add a column"
-msgstr: ""
+msgstr: "Tilføj række"
 
 msgid: "Insert this column"
-msgstr: ""
+msgstr: "Indsæt denne række"
 
 msgid: "At end of table"
-msgstr: ""
+msgstr: "I slutningen af tabellen"
 
 msgid: "At beginning of table"
-msgstr: ""
+msgstr: "I begyndelsen af tabellen"
 
 msgid: "After"
-msgstr: ""
+msgstr: "Efter"
 
 msgid: "Edit table"
-msgstr: ""
+msgstr: "Redigér tabel"
 
 msgid: "Indexes"
-msgstr: ""
+msgstr: "Indeks"
 
 msgid: "Add an index"
-msgstr: ""
+msgstr: "Tilføj et indeks"
 
 msgid: "Column(s)"
-msgstr: ""
+msgstr: "Række(r)"
 
 msgid: "Show %d more..."
-msgstr: ""
+msgstr: "Vis %d flere..."
 
 msgid: "Empty table"
-msgstr: ""
+msgstr: "Tom tabel"
 
 msgid: "Drop table"
-msgstr: ""
+msgstr: "Slet tabel"
 
 msgid: "Optimize table"
-msgstr: ""
+msgstr: "Optimer tabel"
 
 msgid: "Table Information"
-msgstr: ""
+msgstr: "Tabelinformation"
 
 msgid: "Host"
-msgstr: "Hoste"
+msgstr: "Værtsnavn"
 
 msgid: "Add a new user"
-msgstr: ""
+msgstr: "Tilføj ny bruger"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: ""
+msgstr: "Indtast i formatet: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "Er du sikker på, at du vil tømme '%s' tabeller? Dette vil slette al dataindhold. Følgende forspørgsel vil blive kørt:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
 msgstr: ""
@@ -592,22 +592,22 @@ msgid: "You don't appear to have cookies enabled. For sessions to work, most php
 msgstr: ""
 
 msgid: "Importing..."
-msgstr: ""
+msgstr: "Importerer..."
 
 msgid: "Drop the '%s' database"
-msgstr: "Eliminar la base de dades '%s'"
+msgstr: "Slet databasen '%s'"
 
 msgid: "Okay"
-msgstr: "Correcte"
+msgstr: "Ok"
 
 msgid: "Cancel"
-msgstr: "Cancelar"
+msgstr: "Afbryd"
 
 msgid: "Storage engine"
-msgstr: "Motor d'enmagatzematge"
+msgstr: "Lagringsmotor"
 
 msgid: "Language"
-msgstr: "Idioma"
+msgstr: "Sprog"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
@@ -616,49 +616,49 @@ msgstr[1]: ""
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: "%d fila ha estat insertada en la base de dades des de l'arxiu"
-msgstr[1]: "%d files han estat insertades en la base de dades des de l'arxiu"
+msgstr[0]: ""
+msgstr[1]: ""
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: "%d fila ha estat ignorada perque el nombre de valors és incorrecte"
-msgstr[1]: "%d files han estat ignorades perque el nombre de valors és incorrecte"
+msgstr[0]: "%d række blev droppet på grund af antallet af værdier er forkert"
+msgstr[1]: "%d rækker blev droppet på grund af antallet af værdier er forkert"
 
 msgid: "Theme"
 msgstr: "Tema"
 
 msgid: "(%.4f seconds)"
-msgstr: "(%.4f segons)"
+msgstr: "(%. 4f sekunder)"
 
 msgid: "The following errors were reported"
-msgstr: "S'han reportat els següents errors"
+msgstr: "De følgende fejl opstod"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: "No tens prous permisos per a crear nous usuaris."
+msgstr: "Du har ikke tilstrækkelige rettigheder til at lave en ny bruger"
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: "No tens prous permisos per veure o manipular els usuaris."
+msgstr: "Du har ikke tilstrækkelige rettigheder til at se eller styre brugere"
 
 msgid: "You are connected to %s."
-msgstr: "Esàs connectat a %s"
+msgstr: "Du har forbindelse til %s"
 
 msgid: "Allow access to"
-msgstr: "Permetre accés a"
+msgstr: "Tillad adgang til"
 
 msgid: "All databases"
-msgstr: "Totes les bases de dades"
+msgstr: "Alle databaser"
 
 msgid: "Selected databases"
-msgstr: "Bases de dades selecionades"
+msgstr: "Valgte databaser"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Tildel bruger"
 
 msgid: "Updates"
-msgstr: "Actualitzacions"
+msgstr: "Opdateringer"
 
 msgid: "There are no updates available"
-msgstr: "No hi han actualitzacions disponibles."
+msgstr: "Der er ingen opdateringer tilgængelige"
 
 msgid: "Change password"
-msgstr: "Canviar clau"
+msgstr: "Skift kodeord"

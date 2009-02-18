@@ -312,14 +312,14 @@ class SQL {
 		}
 	}
 	
-	function insertId($resultSet = null) {
+	function insertId() {
 		if ($this->conn) {
 			if ($this->method == "pdo") {
 				return $this->conn->lastInsertId();
 			} else if ($this->method == "mysql") {
-				return mysql_insert_id($resultSet);
+				return @mysql_insert_id($this->conn);
 			} else if ($this->method == "sqlite") {
-				return sqlite_last_insert_rowid($resultSet);
+				return sqlite_last_insert_rowid($this-conn);
 			}
 		}
 	}
@@ -427,7 +427,10 @@ class SQL {
 								
 								$output .= '{"name":"' . $table['TABLE_NAME'] . '","rowcount":' . $rowCount . '},';
 							}
-							$output = substr($output, 0, -1);
+							
+							if (substr($output, -1) == ",")
+								$output = substr($output, 0, -1);
+							
 							$output .= ']';
 						}
 						$output .= '},';
@@ -451,7 +454,10 @@ class SQL {
 								$rowCount = (int)($this->result($countSql, 0, "RowCount"));
 								$output .= '{"name":"' . $table[0] . '","rowcount":' . $rowCount . '},';
 							}
-							$output = substr($output, 0, -1);
+							
+							if (substr($output, -1) == ",")
+								$output = substr($output, 0, -1);
+							
 							$output .= ']';
 						}
 						$output .= '},';
@@ -470,7 +476,10 @@ class SQL {
 						$rowCount = (int)($this->result($countSql, 0, "RowCount"));
 						$output .= '{"name":"' . $tableRow[0] . '","rowcount":' . $rowCount . '},';
 					}
-					$output = substr($output, 0, -1);
+					
+					if (substr($output, -1) == ",")
+						$output = substr($output, 0, -1);
+					
 					$output .= ']';
 				}
 				$output .= '}';
