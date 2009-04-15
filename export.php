@@ -185,12 +185,12 @@ if ($_POST) {
 							
 							if ($conn->getAdapter() == "mysql") {
 							
-								while ($structureRow = $conn->fetchArray($structureSQL)) {
+								while ($structureRow = $conn->fetchassoc($structureSQL)) {
 									
 									if (!$first)
 										$outputBuffer .= ",";
 									
-									$outputBuffer .= "\r\n   `" . $structureRow[0] . "` " . $structureRow[1];
+									$outputBuffer .= "\r\n   `" . $structureRow['Field'] . "` " . $structureRow['Type'];
 									
 									if (isset($collationList) && isset($structureRow['Collation']) && $structureRow['Collation'] != "NULL" && !is_null($structureRow['Collation'])) {
 										if ($collationList[$structureRow['Collation']] != $tableCharset) {
@@ -199,12 +199,12 @@ if ($_POST) {
 									}
 									
 									if (isset($structureRow['Null']) && $structureRow['Null'] != "YES")
-										$outputBuffer .= " NOT NULL";
+										$outputBuffer .= " not null";
 									
 									if (isset($structureRow['Default']) && $structureRow['Default'] == "CURRENT_TIMESTAMP") {
-										$outputBuffer .= " DEFAULT CURRENT_TIMESTAMP";
-									} else if (isset($structureRow['Default'])) {
-										$outputBuffer .= " DEFAULT '" . $structureRow['Default'] . "'";
+										$outputBuffer .= " default CURRENT_TIMESTAMP";
+									} else if (isset($structureRow['Default']) && $structureRow['Default'] != "") {
+										$outputBuffer .= " default '" . $structureRow['Default'] . "'";
 									}
 									
 									if (isset($structureRow['Extra']) && $structureRow['Extra'] != "")
@@ -467,7 +467,7 @@ if ($_POST) {
 			if ($output == "BROWSER") {
 				echo "<div id=\"EXPORTWRAPPER\">";
 					echo "<strong>" . __("Results:") . "</strong> [<a onclick=\"$('EXPORTRESULTS').select()\">" . __("Select all") . "</a>]";
-					echo "<textarea id=\"EXPORTRESULTS\">$outputBuffer</textarea>";
+					echo "<textarea id=\"EXPORTRESULTS\">" . htmlentities($outputBuffer, ENT_QUOTES, 'UTF-8') . "</textarea>";
 				echo "</div>";
 			} else {
 				
