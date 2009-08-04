@@ -1,6 +1,6 @@
 Language: Português (Brasil)
 Language-Code: pt_BR
-Build-Date: Wed, 18 Feb 2009 10:18:58 -0700
+Build-Date: Mon, 15 Jun 2009 12:12:56 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "O arquivo não pode ser lido ou está vazio."
@@ -138,7 +138,7 @@ msgid: "Update"
 msgstr: "Atualizar"
 
 msgid: "Delete"
-msgstr: "Remover sua mãe"
+msgstr: "Deletar"
 
 msgid: "Alter"
 msgstr: "Alterar"
@@ -318,13 +318,13 @@ msgstr: "apagar estas colunas"
 msgid: "delete this index"
 msgstr: "apagar este índice"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "apagar estes índices"
 
 msgid: "delete this user"
 msgstr: "apagar este usuário"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "apagar estes usuários"
 
 msgid: "Are you sure you want to"

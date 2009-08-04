@@ -1,6 +1,6 @@
 Language: Magyar
 Language-Code: hu_HU
-Build-Date: Wed, 18 Feb 2009 10:18:02 -0700
+Build-Date: Mon, 15 Jun 2009 12:09:22 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "A fájl nem olvasható vagy üres"
@@ -318,13 +318,13 @@ msgstr: "oszlopok törlése"
 msgid: "delete this index"
 msgstr: "index törlése"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "indexek törlése"
 
 msgid: "delete this user"
 msgstr: "felhasználó törlése"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "felhasználók törlése"
 
 msgid: "Are you sure you want to"

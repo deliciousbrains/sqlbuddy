@@ -86,7 +86,7 @@ if (isset($_POST['editParts'])) {
 				$showLargeEditor[] = "longtext";
 				
 				if (in_array($curtype, $showLargeEditor)) {
-					echo '<textarea name="' . $structureRow['Field'] . '">' . $dataRow[$structureRow['Field']] . '</textarea>';
+					echo '<textarea name="' . $structureRow['Field'] . '">' . htmlentities($dataRow[$structureRow['Field']], ENT_QUOTES, 'UTF-8') . '</textarea>';
 				}
 				elseif ($curtype == "enum") {
 					$trimmed = substr($structureRow['Type'], 6, -2);

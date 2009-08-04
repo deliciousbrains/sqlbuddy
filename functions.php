@@ -33,8 +33,8 @@ if (version_compare(PHP_VERSION, "5.0.0", "<"))
 else
 	include INCLUDES_DIR . "class/Sql.php";
 
-define("VERSION_NUMBER", "1.3.1");
-define("PREVIEW_CHAR_SIZE", 65);
+define("VERSION_NUMBER", "1.3.2");
+define("PREVIEW_CHAR_SIZE", 75);
 
 $adapterList[] = "mysql";
 
@@ -53,9 +53,12 @@ $langList['de_DE'] = "Deutsch";
 $langList['en_US'] = "English";
 $langList['es_ES'] = "Español";
 $langList['es_AR'] = "Español (Argentina)";
+$langList['eo_EO'] = "Esperanto";
 $langList['fr_FR'] = "Français";
+$langList['gl_ES'] = "Galego";
 $langList['id_ID'] = "Indonesian";
 $langList['it_IT'] = "Italiano";
+$langList['he_IL'] = "Ivrit";
 $langList['lo_LA'] = "Lao";
 $langList['lv_LV'] = "Latviešu";
 $langList['hu_HU'] = "Magyar";
@@ -66,11 +69,16 @@ $langList['pt_PT'] = "Português (Portugal)";
 $langList['ru_RU'] = "Русский";
 $langList['ro_RO'] = "Română";
 $langList['sk_SK'] = "Slovenčina";
-$langList['sl_SI'] = "Slovenski";
+$langList['sl_SI'] = "Slovenščina";
+$langList['sp_RS'] = "Srpski";
 $langList['fi_FI'] = "Suomi";
 $langList['sv_SE'] = "Svenska";
 $langList['tl_PH'] = "Tagalog";
+$langList['vi_VN'] = "Tiếng Việt";
 $langList['tr_TR'] = "Türkçe";
+$langList['uk_UA'] = "Українська";
+$langList['ar_DZ'] = "العربية";
+$langList['fa_IR'] = "فارسی";
 $langList['zh_CN'] = "中文 (简体)";
 $langList['zh_TW'] = "中文 (繁體)";
 $langList['ja_JP'] = "日本語";
@@ -209,14 +217,9 @@ function startOutput() {
 	if (!headers_sent()) {
 		if (extension_loaded("zlib") && ((isset($sbconfig['EnableGzip']) && $sbconfig['EnableGzip'] == true) || !isset($sbconfig['EnableGzip'])) && !ini_get("zlib.output_compression") && ini_get("output_handler") != "ob_gzhandler") {
 			ob_start("ob_gzhandler");
-			header("Content-Encoding: gzip");
-			ob_implicit_flush();
 		} else {
 			ob_start();
 		}
-		
-		header("Cache-Control: no-cache, must-revalidate");
-		header("Content-Type: text/html; charset=UTF-8");
 		
 		register_shutdown_function("finishOutput");
 	}
@@ -225,8 +228,7 @@ function startOutput() {
 function finishOutput() {	
 	global $conn;
 	
-	if (ob_get_length() > 0)
-		ob_end_flush();
+	ob_end_flush();
 	
 	if (isset($conn) && $conn->isConnected()) {
 		$conn->disconnect();
@@ -375,9 +377,9 @@ global $lang;
 		echo '"delete this column":"' . __("delete this column") . '", ';
 		echo '"delete these columns":"' . __("delete these columns") . '", ';
 		echo '"delete this index":"' . __("delete this index") . '", ';
-		echo '"delete these indexes":"' . __("delete this indexes") . '", ';
+		echo '"delete these indexes":"' . __("delete these indexes") . '", ';
 		echo '"delete this user":"' . __("delete this user") . '", ';
-		echo '"delete these users":"' . __("delete this users") . '", ';
+		echo '"delete these users":"' . __("delete these users") . '", ';
 		echo '"Are you sure you want to":"' . __("Are you sure you want to") . '", ';
 	
 		echo '"The following query will be run:":"' . __("The following query will be run:") . '", ';
@@ -388,7 +390,7 @@ global $lang;
 		echo '"Are you sure you want to drop the \'%s\' table? This will delete the table and all data inside of it. The following query will be run:":"' . __("Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:") . '", ';
 		echo '"Are you sure you want to drop the database \'%s\'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:":"' . __("Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:") . '", ';
 	
-		echo '"Successfully saved changes.":"' . __("Successfully saved changes.") . '", ';
+		echo '"Successfully saved changes":"' . __("Successfully saved changes") . '", ';
 	
 		echo '"New field":"' . __("New field") . '", ';
 	
@@ -401,7 +403,7 @@ global $lang;
 		echo '"Cancel":"' . __("Cancel") . '", ';
 	
 		echo '"Error":"' . __("Error") . '", ';
-		echo '"There was an error receiving data from the server.":"' . __("There was an error receiving data from the server.") . '"';
+		echo '"There was an error receiving data from the server":"' . __("There was an error receiving data from the server") . '"';
 		
 	}
 	
@@ -502,7 +504,7 @@ function themeFile($filename) {
 }
 
 function smartCaching($filename) {
-	return "serve.php?file=" . $filename . "&ver=" . str_replace(".", "_", VERSION_NUMBER);
+	return $filename . "?ver=" . str_replace(".", "_", VERSION_NUMBER);
 }
 
 function __($t) {

@@ -1,9 +1,9 @@
 Language: Español
 Language-Code: es_ES
-Build-Date: Wed, 18 Feb 2009 10:16:47 -0700
+Build-Date: Mon, 15 Jun 2009 12:08:33 -0600
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "No ha podido ser leído o está vacío."
+msgstr: "la cual contiene los siguientes datos"
 
 msgid: "Error performing operation"
 msgstr: "Error durante la operación"
@@ -318,13 +318,13 @@ msgstr: "borrar estas columnas"
 msgid: "delete this index"
 msgstr: "borrar este índice"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "borrar estos índices"
 
 msgid: "delete this user"
 msgstr: "borrar este usuario"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "borrar estos usuarios"
 
 msgid: "Are you sure you want to"

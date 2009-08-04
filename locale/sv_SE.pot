@@ -1,6 +1,6 @@
 Language: Svenska
 Language-Code: sv_SE
-Build-Date: Wed, 18 Feb 2009 10:16:31 -0700
+Build-Date: Mon, 15 Jun 2009 12:08:30 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Filen kunde inte läsas eller var tom"
@@ -318,13 +318,13 @@ msgstr: "ta bort de här colummerna"
 msgid: "delete this index"
 msgstr: "Ta bort index"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "Ta bort alla index"
 
 msgid: "delete this user"
 msgstr: "ta bort användare"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "ta bort de här användarna"
 
 msgid: "Are you sure you want to"

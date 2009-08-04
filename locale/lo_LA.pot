@@ -1,6 +1,6 @@
 Language: Lao
 Language-Code: lo_LA
-Build-Date: Wed, 18 Feb 2009 10:19:37 -0700
+Build-Date: Mon, 15 Jun 2009 12:13:17 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "ໄຟລ໌ບໍ່ສາມາດອ່ານໄດ້ ຫຼືວ່າງເປົ່າ"
@@ -318,13 +318,13 @@ msgstr: "ລຶບຄໍລັບເຫລົ່ານີ້"
 msgid: "delete this index"
 msgstr: "ລຶບອິນເດັກນີ້"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "ລຶບອິນເດັກເຫລົ່ານີ້"
 
 msgid: "delete this user"
 msgstr: "ລຶບຜູ້ໃຊ້ຄົນນີ້"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "ລຶບຜູ້ໃຊ້ເຫລົ່ານີ້"
 
 msgid: "Are you sure you want to"

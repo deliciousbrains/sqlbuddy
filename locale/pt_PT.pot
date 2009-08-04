@@ -1,9 +1,9 @@
 Language: Português (Portugal)
 Language-Code: pt_PT
-Build-Date: Wed, 18 Feb 2009 10:21:50 -0700
+Build-Date: Mon, 15 Jun 2009 12:15:19 -0600
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "Ou o ficheiro não consegue ser lido ou estava vazio "
+msgstr: "O ficheiro não pode ser lido ou estava vazio "
 
 msgid: "Error performing operation"
 msgstr: "Erro ao executar a operação"
@@ -318,13 +318,13 @@ msgstr: "apagar estas colunas"
 msgid: "delete this index"
 msgstr: "apagar este índice"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "apagar estes índices"
 
 msgid: "delete this user"
 msgstr: "apagar este utilizador"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "apagar estes utilizadores"
 
 msgid: "Are you sure you want to"
@@ -367,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Está ligado ao MySQL %s com o utilizador %s"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "O servidor da base de dados está em execução desde %s e transferiu aproximadamente %s dos dados."
+msgstr: "O servidor da base de dados está em execução desde %s e transferiu aproximadamente %s de dados."
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Uma nova versão do SQL Buddy está disponível!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "Foi instalado %s do SQL Buddy e %s está agora disponível."
+msgstr: "Tem instalado o SQL Buddy %s e está agora disponível o %s."
 
 msgid: "Getting started"
 msgstr: "Começar"

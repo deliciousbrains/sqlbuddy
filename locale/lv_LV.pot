@@ -1,6 +1,6 @@
 Language: Latviešu
 Language-Code: lv_LV
-Build-Date: Wed, 18 Feb 2009 10:19:07 -0700
+Build-Date: Mon, 15 Jun 2009 12:13:17 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Failu nav iespējams nolasīt vai arī tas ir tukšs"
@@ -174,7 +174,7 @@ msgid: "User not found!"
 msgstr: "Lietotājs nav atrasts!"
 
 msgid: "You must export either structure, data, or both"
-msgstr: "Ir jāeksportē vai nu struktūra, vai dati, vai abas šīs lietas"
+msgstr: "Ir jāeksportē vai nu struktūra vai dati, vai abas šīs lietas"
 
 msgid: "Please select the databases that you would like to export"
 msgstr: "Lūdzu, izvēties eksportējamās datubāzes"
@@ -318,13 +318,13 @@ msgstr: "dzēst šīs kolonnas"
 msgid: "delete this index"
 msgstr: "dzēst šo indeksu"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "dzēst šos indeksus"
 
 msgid: "delete this user"
 msgstr: "dzēst šo lietotāju"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "dzēst šos lietotājus"
 
 msgid: "Are you sure you want to"
@@ -421,7 +421,7 @@ msgid: "edit selected items"
 msgstr: "labot iezīmētās vienības"
 
 msgid: "delete selected items"
-msgstr: "dzēst izvēlētās vienības"
+msgstr: "dzēst iezīmētās vienības"
 
 msgid: "refresh page"
 msgstr: "atjaunot lapas skatījumu"
@@ -445,7 +445,7 @@ msgid: "optimize selected tables"
 msgstr: "optimizēt izvēlētās tabulas"
 
 msgid: "Choose a .sql file to import"
-msgstr: "Lūdzu izvēlēties importējamo .sql failu"
+msgstr: "Izvēlēties importējamo .sql failu"
 
 msgid: "File
 "
@@ -655,7 +655,7 @@ msgid: "Give user"
 msgstr: "Piešķirt lietotājam"
 
 msgid: "Updates"
-msgstr: "jauninājumi"
+msgstr: "Jauninājumi"
 
 msgid: "There are no updates available"
 msgstr: "Ir pieejami jauninājumi"

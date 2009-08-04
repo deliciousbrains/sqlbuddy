@@ -46,7 +46,7 @@ if (isset($query)) {
 	<textarea name="QUERY" id="QUERY"><?php
 	
 	if (isset($displayQuery))
-		echo $displayQuery;
+		echo htmlentities($displayQuery, ENT_QUOTES, 'UTF-8');
 	
 	?></textarea>
 	</td>

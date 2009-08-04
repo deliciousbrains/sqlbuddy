@@ -77,7 +77,6 @@ if (isset($_GET['file'])) {
 	if (file_exists($filename)) {
 		if (extension_loaded('zlib') && ((isset($sbconfig['EnableGzip']) && $sbconfig['EnableGzip'] == true) || !isset($sbconfig['EnableGzip']))) {
 			ob_start("ob_gzhandler");
-			header("Content-Encoding: gzip");
 		} else {
 			ob_start();
 		}
@@ -97,13 +96,13 @@ if (isset($_GET['file'])) {
 		$contents = file_get_contents($filename);
 		
 		if (substr($filename, -4) == ".css") {
-			header("Content-Type: text/css");
+			header("Content-Type: text/css; charset=utf-8");
 			$contents = compressCSS($contents);
 		} else if (substr($filename, -3) == ".js" && strpos($filename, "mootools") === false) {
-			header("Content-Type: application/x-javascript");
+			header("Content-Type: application/x-javascript; charset=utf-8");
 			$contents = compressJS($contents);
 		} else if (substr($filename, -3) == ".js") {
-			header("Content-Type: application/x-javascript");
+			header("Content-Type: application/x-javascript; charset=utf-8");
 		}
 		
 		echo $contents;

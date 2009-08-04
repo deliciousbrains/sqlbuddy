@@ -1,6 +1,6 @@
 Language: Italiano
 Language-Code: it_IT
-Build-Date: Wed, 18 Feb 2009 10:17:10 -0700
+Build-Date: Mon, 15 Jun 2009 12:08:52 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Non è possibile la lettura del file, oppure il file è vuoto."
@@ -9,7 +9,7 @@ msgid: "Error performing operation"
 msgstr: "Errore nell'esecuzione dell'operazione"
 
 msgid: "All"
-msgstr: "amore'"
+msgstr: "Tutti"
 
 msgid: "None"
 msgstr: "Nessuno"
@@ -30,13 +30,13 @@ msgid: "Table"
 msgstr: "Tabella"
 
 msgid: "Rows"
-msgstr: "Riga"
+msgstr: "Righe"
 
 msgid: "Size"
 msgstr: "Dimensione"
 
 msgid: "Overhead"
-msgstr: "Generale"
+msgstr: "Sovraccarico"
 
 msgid: "Options"
 msgstr: "Opzioni"
@@ -45,7 +45,7 @@ msgid: "Edit database"
 msgstr: "Modifica database"
 
 msgid: "Charset"
-msgstr: "Set carattere"
+msgstr: "Set di caratteri"
 
 msgid: "Submit"
 msgstr: "Invio"
@@ -66,7 +66,7 @@ msgid: "Type"
 msgstr: "Tipo"
 
 msgid: "Values"
-msgstr: "Valore"
+msgstr: "Valori"
 
 msgid: "Key"
 msgstr: "Chiave"
@@ -87,7 +87,7 @@ msgid: "Other"
 msgstr: "Altro"
 
 msgid: "Unsigned"
-msgstr: "Unsigned"
+msgstr: "Senza segno"
 
 msgid: "Binary"
 msgstr: "Binario"
@@ -102,10 +102,10 @@ msgid: "Add field"
 msgstr: "Inserisci Campo"
 
 msgid: "Oops"
-msgstr: "Attenzione"
+msgstr: "Oops"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "Per qualche ragione, i parametri del database non sono stati inclusi assieme alla tua richiesta"
+msgstr: "Per qualche ragione, i parametri del database non sono stati inclusi insieme alla tua richiesta"
 
 msgid: "Save changes to original"
 msgstr: "Salva i cambiamenti con l'originale"
@@ -318,13 +318,13 @@ msgstr: "eliminare queste colonne"
 msgid: "delete this index"
 msgstr: "eliminare questo indice"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "eliminare questi indici"
 
 msgid: "delete this user"
 msgstr: "eliminare questo utente"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "eliminare questi utenti"
 
 msgid: "Are you sure you want to"
@@ -358,7 +358,7 @@ msgid: "Logout"
 msgstr: "Esci"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: "Per qualche ragione i parametri non sono stati inclusi assieme alla tua richiesta"
+msgstr: "Per qualche ragione i parametri non sono stati inclusi insieme alla tua richiesta"
 
 msgid: "Welcome to SQL Buddy!"
 msgstr: "Benvenuto in SQL Buddy!"
@@ -412,7 +412,7 @@ msgid: "Press this key..."
 msgstr: "Premi questo tasto..."
 
 msgid: "...and this will happen"
-msgstr: "...otterai di"
+msgstr: "...e succederà questo"
 
 msgid: "select none"
 msgstr: "deselezionare tutto"
@@ -477,11 +477,11 @@ msgstr: "Ultima"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: "La query ha selezionato %d risultato"
-msgstr[1]: "La query ha selezionato %d risultati"
+msgstr[0]: "La tua query ha restituito %d risultato"
+msgstr[1]: "La tua query ha restituito %d risultati"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Nota: Per evitare problemi col browser, solo le prime %d righe del risultato sono state visualizzate"
+msgstr: "Nota: Per evitare problemi con il browser, solo le prime %d righe del risultato sono state visualizzate"
 
 msgid: "binary data"
 msgstr: "dati binari"
@@ -502,7 +502,7 @@ msgid: "There was a problem logging you in"
 msgstr: "Ci sono stati dei problemi durante l'autenticazione"
 
 msgid: "Login"
-msgstr: "Log in"
+msgstr: "Autenticati"
 
 msgid: "Unsupported browser"
 msgstr: "Browser non supportato"
@@ -577,13 +577,13 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Inserisci nel formato: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Sei sicuro di voler svuotare la tabella '%s'? Questa operazione eliminerà  i dati all'interno della tabella. La query seguente verrà  eseguita:"
+msgstr: "Sei sicuro di voler svuotare la tabella '%s'? Questa operazione eliminerà i dati all'interno della tabella. La query seguente verrà  eseguita:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Sei sicuro di voler eliminare la tabella '%s'? Questa operazione eliminerà  i dati all'interno della tabella. La query seguente verrà  eseguita:"
+msgstr: "Sei sicuro di voler eliminare la tabella '%s'? Questa operazione eliminerà i dati all'interno della tabella. La query seguente verrà  eseguita:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Sei sicuro di voler cancellare il database '%s'? Questa operazione cancellerà  assieme al database le tabelle ed ogni dato presente all'interno di esse. La query seguente verrà  eseguita:"
+msgstr: "Sei sicuro di voler cancellare il database '%s'? Questa operazione cancellerà, insieme al database, le tabelle ed ogni dato presente all'interno di esse. La query seguente verrà  eseguita:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
 msgstr: "Siamo spiacenti ma solo Internet Explorer 7 è supportato. È possibile scaricarlo gratuitamente dal sito internet della Microsoft. Altrimenti è possbile utilizzare altri browser gratuiti tra cui Firefox, Safari ed Opera."
@@ -607,7 +607,7 @@ msgid: "Storage engine"
 msgstr: "Motore di memorizzazione"
 
 msgid: "Language"
-msgstr: "Linguaggio"
+msgstr: "Lingua"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"

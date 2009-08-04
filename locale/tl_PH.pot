@@ -1,6 +1,6 @@
 Language: Tagalog
 Language-Code: tl_PH
-Build-Date: Wed, 18 Feb 2009 10:13:51 -0700
+Build-Date: Mon, 15 Jun 2009 12:05:54 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Ang file ay hindi mabasa o walang laman"
@@ -318,13 +318,13 @@ msgstr: "tanggalin ang mga column"
 msgid: "delete this index"
 msgstr: "tanggalin ang indeks"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "tanggalin ang mga indeks"
 
 msgid: "delete this user"
 msgstr: "burahin ang gumagamit"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "burahin ang mga gumagamit"
 
 msgid: "Are you sure you want to"

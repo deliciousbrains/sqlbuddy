@@ -1,6 +1,6 @@
 Language: 中文 (繁體)
 Language-Code: zh_TW
-Build-Date: Wed, 18 Feb 2009 10:16:26 -0700
+Build-Date: Mon, 15 Jun 2009 12:08:25 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "檔案空白或無法讀取"
@@ -318,13 +318,13 @@ msgstr: "刪除這些欄位"
 msgid: "delete this index"
 msgstr: "刪除這個索引"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "刪除這些索引"
 
 msgid: "delete this user"
 msgstr: "刪除這個使用者"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "刪除這些使用者"
 
 msgid: "Are you sure you want to"
@@ -403,7 +403,7 @@ msgid: "The columns in the browse and query tabs are resizable. Adjust them to a
 msgstr: "在瀏覽及指令分頁中的欄位大小是可以調整的。依您的喜好將它們調寬或調窄。"
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "登入頁面是以預設使用者 root@localhost 為基礎。您可以透過編輯 config.php 改變預設的使用者及主機。"
+msgstr: "登入頁面是以預設使用者 root@localhost 為基礎。您可以透過編輯 config.php 改變預設的使用者及主%"
 
 msgid: "Keyboard shortcuts"
 msgstr: "快速鍵"
@@ -477,8 +477,8 @@ msgstr: "最末頁"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: "您的指令傳回了 %d 個結果"
-msgstr[1]: "您的指令傳回了 %d 個結果"
+msgstr[0]: ""
+msgstr[1]: ""
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
 msgstr: "備註: 為避免讓您的瀏覽器當機，只有前 %d 個結果被顯示"
@@ -611,18 +611,18 @@ msgstr: "語言"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: "已經從檔案中被執行了%d的語法"
-msgstr[1]: "已經從檔案中被執行了%d的語法(多行)"
+msgstr[0]: ""
+msgstr[1]: ""
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: "已從檔案中成功插入了%d列資料"
-msgstr[1]: "已從檔案中成功插入了%d列資料(多列)"
+msgstr[0]: ""
+msgstr[1]: ""
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: "%d列的語法已被略過,原因是value中的數量不正確"
-msgstr[1]: "%d列的語法已被略過,原因是value中的數量不正確(多行)"
+msgstr[0]: ""
+msgstr[1]: ""
 
 msgid: "Theme"
 msgstr: "主題"

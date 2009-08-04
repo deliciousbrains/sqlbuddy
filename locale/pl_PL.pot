@@ -1,6 +1,6 @@
 Language: Polski
 Language-Code: pl_PL
-Build-Date: Wed, 18 Feb 2009 10:15:29 -0700
+Build-Date: Mon, 15 Jun 2009 12:07:05 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Plik niezdatny do odczytu lub pusty"
@@ -51,7 +51,7 @@ msgid: "Submit"
 msgstr: "Zatwierdź"
 
 msgid: "Create a new table"
-msgstr: "Utw"
+msgstr: "Lecim z tabela"
 
 msgid: "Name"
 msgstr: "Nazwa"
@@ -72,13 +72,13 @@ msgid: "Key"
 msgstr: "Klucz"
 
 msgid: "primary"
-msgstr: "gł"
+msgstr: "Guwny"
 
 msgid: "unique"
 msgstr: "unikalny"
 
 msgid: "index"
-msgstr: "indeks"
+msgstr: "idnex"
 
 msgid: "Default"
 msgstr: "Domyślnie"
@@ -129,7 +129,7 @@ msgid: "User privileges"
 msgstr: "Uprawnienia użytkownika"
 
 msgid: "Select"
-msgstr: "Wyb"
+msgstr: "Wybierz"
 
 msgid: "Insert"
 msgstr: "Wprowadzanie"
@@ -208,7 +208,7 @@ msgid: "Note
 msgstr: "Notatka"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
-msgstr: "Jeżeli jest to serwer publiczny, powinieneś skasować ten plik z serwera po jego ściągnieciu"
+msgstr: "Jeżeli jest to serwer publiczny, powinieneś skasować ten plik z serwera po jego ściągnieciu, pomysl debilu"
 
 msgid: "Export"
 msgstr: "Eksport"
@@ -318,13 +318,13 @@ msgstr: "skasuj te kolumny"
 msgid: "delete this index"
 msgstr: "skasuj ten indeks"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "skasuj te indeksy"
 
 msgid: "delete this user"
 msgstr: "skasuj tego użytkownika"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "skasuj tych użytkownik"
 
 msgid: "Are you sure you want to"

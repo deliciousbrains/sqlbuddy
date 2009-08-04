@@ -1,6 +1,6 @@
 Language: Indonesian
 Language-Code: id_ID
-Build-Date: Wed, 18 Feb 2009 10:21:47 -0700
+Build-Date: Mon, 15 Jun 2009 12:15:12 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "File tidak dapat dibaca atau file masih kosong"
@@ -318,13 +318,13 @@ msgstr: "hapus kolom-kolom ini"
 msgid: "delete this index"
 msgstr: "hapus indeks ini"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "hapus indeks-indeks ini"
 
 msgid: "delete this user"
 msgstr: "hapus user ini"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "hapus user-user ini"
 
 msgid: "Are you sure you want to"

@@ -1,226 +1,226 @@
-Language: Bahasa Melayu
-Language-Code: ms_ID
-Build-Date: Mon, 15 Jun 2009 12:18:03 -0600
+Language: Esperanto
+Language-Code: eo_EO
+Build-Date: Mon, 15 Jun 2009 19:16:42 -0600
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "Sama ada fail berkenaan tidak dapat dibaca atau ianya kosong"
+msgstr: "La dosiero aŭ ne povas esti legata aŭ estas malplena"
 
 msgid: "Error performing operation"
-msgstr: "Ralat semasa proses operasi"
+msgstr: "Eraro dum plenumo de operacio"
 
 msgid: "All"
-msgstr: "Semua"
+msgstr: "Ĉiuj"
 
 msgid: "None"
-msgstr: "Tiada"
+msgstr: "Neniuj"
 
 msgid: "With selected"
-msgstr: "Dengan pilihan"
+msgstr: "Elektitajn"
 
 msgid: "Empty"
-msgstr: "Kosong"
+msgstr: "Malplenigi"
 
 msgid: "Drop"
-msgstr: "Musnahkan"
+msgstr: "Viŝi"
 
 msgid: "Optimize"
-msgstr: "Mengoptimumkan"
+msgstr: "Plifavorigi"
 
 msgid: "Table"
-msgstr: "Jadual"
+msgstr: "Tabelo"
 
 msgid: "Rows"
-msgstr: "Baris"
+msgstr: "Vicoj"
 
 msgid: "Size"
-msgstr: "Saiz"
+msgstr: "Grando"
 
 msgid: "Overhead"
-msgstr: ""
+msgstr: "Troa memoruzo"
 
 msgid: "Options"
-msgstr: "Pilihan"
+msgstr: "Elektoj"
 
 msgid: "Edit database"
-msgstr: "Edit pangkalan data"
+msgstr: "Modifi datumbazon"
 
 msgid: "Charset"
-msgstr: "Set karakter"
+msgstr: "Kodoprezento"
 
 msgid: "Submit"
-msgstr: "Hantar"
+msgstr: "Sendi"
 
 msgid: "Create a new table"
-msgstr: "Cipta jadual baru"
+msgstr: "Krei novan tabelon"
 
 msgid: "Name"
-msgstr: "Nama"
+msgstr: "Nomo"
 
 msgid: "Setup the fields for the table below"
-msgstr: "Ciptakan medan untuk jadual dibawah"
+msgstr: "Krei kampojn por la ĉi suba tabelo"
 
 msgid: "New field"
-msgstr: "Medan baru"
+msgstr: "Nova kampo"
 
 msgid: "Type"
-msgstr: "Jenis"
+msgstr: "Tipo"
 
 msgid: "Values"
-msgstr: "Nilai"
+msgstr: "Valoroj"
 
 msgid: "Key"
-msgstr: "Kunci"
+msgstr: "Ŝlosilo"
 
 msgid: "primary"
-msgstr: "primari"
+msgstr: "ĉefa"
 
 msgid: "unique"
-msgstr: "unik"
+msgstr: "unika"
 
 msgid: "index"
-msgstr: "indek"
+msgstr: "Indekso"
 
 msgid: "Default"
-msgstr: "Default"
+msgstr: "Norma valoro"
 
 msgid: "Other"
-msgstr: "Lain"
+msgstr: "Aliaj"
 
 msgid: "Unsigned"
-msgstr: "Unsigned"
+msgstr: "Sensignuma"
 
 msgid: "Binary"
-msgstr: "Binari"
+msgstr: "Duuma"
 
 msgid: "Not Null"
-msgstr: "Tidak Kosong"
+msgstr: "Ne nulo"
 
 msgid: "Auto Increment"
-msgstr: "Auto Menaik"
+msgstr: "Popaŝa memkreskado"
 
 msgid: "Add field"
-msgstr: "Tambah medan"
+msgstr: "Aldoni kampon"
 
 msgid: "Oops"
-msgstr: "Oops"
+msgstr: "Ups"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "Atas sebab-sebab tertentu, parameter pangkalan data tidak dapat disertakan mengikut permintaan anda"
+msgstr: "Datumbaza parametro mankis en la enketo"
 
 msgid: "Save changes to original"
-msgstr: "Simpan tetapan mengikut asalan"
+msgstr: "Apliki ŝanĝojn al la originalo"
 
 msgid: "Insert as new row"
-msgstr: "Masukakn baris baru"
+msgstr: "Enmeti kiel novan vicon"
 
 msgid: "Save"
-msgstr: "Simpan"
+msgstr: "Konservi"
 
 msgid: "User"
-msgstr: "Pengguna"
+msgstr: "Uzanto"
 
 msgid: "All privileges"
-msgstr: "Semua hak"
+msgstr: "Ĉiujn rajtojn"
 
 msgid: "Selected privileges"
-msgstr: "Hak akses terpilih"
+msgstr: "Elektitajn rajtojn"
 
 msgid: "User privileges"
-msgstr: "Hak akses pengguna"
+msgstr: "Rajtoj de uzanto"
 
 msgid: "Select"
-msgstr: "Pilih"
+msgstr: "Elekti"
 
 msgid: "Insert"
-msgstr: "Masukkan"
+msgstr: "Enmeti"
 
 msgid: "Update"
-msgstr: "Kemaskini"
+msgstr: "Ĝisdatigi"
 
 msgid: "Delete"
-msgstr: "Padam"
+msgstr: "Viŝi"
 
 msgid: "Alter"
-msgstr: ""
+msgstr: "Ŝanĝi"
 
 msgid: "Create"
-msgstr: "Cipta"
+msgstr: "Krei"
 
 msgid: "Temp tables"
-msgstr: ""
+msgstr: "Portempa tabelo"
 
 msgid: "Administrator privileges"
-msgstr: ""
+msgstr: "Rajtoj de administranto"
 
 msgid: "File"
-msgstr: "Fail"
+msgstr: "Dosiero"
 
 msgid: "Process"
-msgstr: "Proses"
+msgstr: "Procezo"
 
 msgid: "Reload"
-msgstr: ""
+msgstr: "Reŝargi"
 
 msgid: "Shutdown"
-msgstr: "Tutup"
+msgstr: "Malŝargi"
 
 msgid: "Super"
-msgstr: "Super"
+msgstr: "Bonege"
 
 msgid: "Grant option"
-msgstr: ""
+msgstr: "Permesataj"
 
 msgid: "User not found!"
-msgstr: "Akaun pengguna tidak dijumpai"
+msgstr: "Uzanto ne troviĝis!"
 
 msgid: "You must export either structure, data, or both"
-msgstr: "Anda mesti mengeksport sama ada strukturnya, data atau kedua-duanya sekali"
+msgstr: "Vi devas eksporti aŭ strukturon aŭ datumon aŭ ambaŭ"
 
 msgid: "Please select the databases that you would like to export"
-msgstr: "Sila pilih pangkalan data yang ingin di eksport"
+msgstr: "Bv. elekti la eksportotajn datumbazojn"
 
 msgid: "Please select the tables that you would like to export"
-msgstr: "Sila pilih jadual yang ingin di eksport"
+msgstr: "Bv. elekti la eksportotajn tabelojn"
 
 msgid: "Table `%s` is empty"
-msgstr: "Jadual `%s` kosong"
+msgstr: "La tabelo „%s“ estas malplena"
 
 msgid: "Results"
-msgstr: "Keputusan"
+msgstr: "Rezultoj"
 
 msgid: "Select all"
-msgstr: "Pilih semua"
+msgstr: "Elekti ĉiujn"
 
 msgid: "The file could not be opened"
-msgstr: "Fail berkenaan tidak dapat dibuka"
+msgstr: "La dosiero ne povis esti malfermata"
 
 msgid: "Could not write to file"
-msgstr: "Tidak dapat tulis ke fail berkenaan"
+msgstr: "Skribi en la dosieron ne estis sukcesa"
 
 msgid: "Successfully wrote content to file"
-msgstr: ""
+msgstr: "Skribi la datumojn en la dosieron estis sukcesa"
 
 msgid: "Download"
-msgstr: "Muat turun"
+msgstr: "Elŝuto"
 
 msgid: "Note
 "
-msgstr: "Nota"
+msgstr: "Noto"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
-msgstr: "Jika server ini adalah server umum, anda ditekankan untuk memadam fail ini selepas memuat turunnya"
+msgstr: "Se tio estas publika servilo, vi viŝu ĉi tiun dosieron post la elŝuto"
 
 msgid: "Export"
-msgstr: "Eksport"
+msgstr: "Eksporto"
 
 msgid: "Tables"
-msgstr: "Jadual"
+msgstr: "Tabeloj"
 
 msgid: "Databases"
-msgstr: "Pangkalan data"
+msgstr: "Datumbazoj"
 
 msgid: "Format"
-msgstr: "Format"
+msgstr: "Aranĝo"
 
 msgid: "SQL"
 msgstr: "SQL"
@@ -229,436 +229,436 @@ msgid: "CSV"
 msgstr: "CSV"
 
 msgid: "Structure"
-msgstr: "Struktur"
+msgstr: "Strukturo"
 
 msgid: "Data"
-msgstr: "Data"
+msgstr: "Datumoj"
 
 msgid: "Compact inserts"
-msgstr: "Sisipan padat"
+msgstr: "Kompaktaj INSERT-ordonoj"
 
 msgid: "Complete inserts"
-msgstr: "Sisipan lengkap"
+msgstr: "Kompletaj INSERT-ordonoj"
 
 msgid: "Delimiter"
-msgstr: "Pembatas"
+msgstr: "Limigilo"
 
 msgid: "Comma"
-msgstr: "Koma"
+msgstr: "Komo"
 
 msgid: "Tab"
-msgstr: ""
+msgstr: "Folio"
 
 msgid: "Semicolon"
-msgstr: "koma bertitik"
+msgstr: "Punktokomo"
 
 msgid: "Space"
-msgstr: "Ruang"
+msgstr: "Spaceto"
 
 msgid: "Print field names on first line"
-msgstr: ""
+msgstr: "Presi la nomojn de kampojn en la unua vico"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: ""
+msgstr: "Se vi eksportas multegajn vicojn, estas rekomendinde eligi la rezultoj al dosiero"
 
 msgid: "Output to"
-msgstr: ""
+msgstr: "Eligo al"
 
 msgid: "Browser"
-msgstr: "Layari"
+msgstr: "Foliumilo"
 
 msgid: "Text file"
-msgstr: "Fail teks"
+msgstr: "Dosiero de teksto"
 
 msgid: "Home"
-msgstr: "Home"
+msgstr: "Hejmo"
 
 msgid: "Users"
-msgstr: "Pengguna"
+msgstr: "Uzantoj"
 
 msgid: "Query"
-msgstr: "Kueri"
+msgstr: "Enketo"
 
 msgid: "Import"
-msgstr: "Import"
+msgstr: "Importo"
 
 msgid: "Overview"
-msgstr: ""
+msgstr: "Superrigardo"
 
 msgid: "Browse"
-msgstr: "Layari"
+msgstr: "Trafoliumi"
 
 msgid: "Your changes were saved to the database"
-msgstr: "Tetapan anda telah disimpan"
+msgstr: "Ŝanĝoj estas konservitaj al la datumbazo"
 
 msgid: "delete this row"
-msgstr: "Padam baris ini"
+msgstr: "Viŝi tiun vicon"
 
 msgid: "delete these rows"
-msgstr: "Padam baris ini"
+msgstr: "Viŝi tiujn vicojn"
 
 msgid: "empty this table"
-msgstr: "kosongkan jadual ini"
+msgstr: "Malplenigi la tabelon"
 
 msgid: "empty these tables"
-msgstr: "kosongkan jadual ini"
+msgstr: "Malplenigi la tabelojn"
 
 msgid: "drop this table"
-msgstr: "musnahkan jadual ini"
+msgstr: "Viŝi la tabelon"
 
 msgid: "drop these tables"
-msgstr: "musnahkan jadual ini"
+msgstr: "Viŝi la tabelojn"
 
 msgid: "delete this column"
-msgstr: "padam ruangan ini"
+msgstr: "Viŝi la kolumnon"
 
 msgid: "delete these columns"
-msgstr: "padam ruangan ini"
+msgstr: "Viŝi la kolumnojn"
 
 msgid: "delete this index"
-msgstr: "padam indeks ini"
+msgstr: "Viŝi la indekson"
 
 msgid: "delete these indexes"
-msgstr: "padam indeks ini"
+msgstr: "Viŝi la indeksojn"
 
 msgid: "delete this user"
-msgstr: "padam pengguna ini"
+msgstr: "Viŝi la uzanton"
 
 msgid: "delete these users"
-msgstr: "padam pengguna ini"
+msgstr: "Viŝi la uzantojn"
 
 msgid: "Are you sure you want to"
-msgstr: "Anda pasti anda ingin"
+msgstr: "Ĉu vi estas certa, ke vi volas"
 
 msgid: "The following query will be run:"
-msgstr: "Kueri berikut akan dilaksanakan"
+msgstr: "Okazos la jena enketo:"
 
 msgid: "The following queries will be run:"
-msgstr: "Kueri berikut akan dilaksanakan"
+msgstr: "Okazos la jenaj enketoj:"
 
 msgid: "Confirm"
-msgstr: "Pasti"
+msgstr: "Konfirmi"
 
 msgid: "Successfully saved changes"
-msgstr: "Tetapan disimpan dengan jayanya"
+msgstr: "Ŝanĝoj estas sukcese konservitaj"
 
 msgid: "Full Text"
-msgstr: "Teks Penuh"
+msgstr: "Plena teksto"
 
 msgid: "Loading..."
-msgstr: "Memuat..."
+msgstr: "Atendu ..."
 
 msgid: "Error"
-msgstr: "Ralat"
+msgstr: "Eraro"
 
 msgid: "There was an error receiving data from the server"
-msgstr: "Terdapat ralat semasa menerimat data dari server"
+msgstr: "Eraro okazis ricevante datumojn de la servilo"
 
 msgid: "Logout"
-msgstr: "Log keluar"
+msgstr: "Elsaluti"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: "Atas sebab-sebab tertentu, parameter untuk jadual berkenaan tidak disertakan mengikut permintaan anda"
+msgstr: "Ial la tabela parametro ne estis enmetita en via enketo"
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "Selamat Datang ke SQL Buddy!"
+msgstr: "Bonvenon al SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: ""
+msgstr: "Vi estas konektita al MySQL %s estante la uzanto %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "La datumbaza servilo funcias ekde %s kaj movis proksimume %s da datumoj."
 
 msgid: "A new version of SQL Buddy is available!"
-msgstr: "Versi terbaru SQL Buddy kini boleh didapati!"
+msgstr: "Nova eldono de SQL Buddy estas elŝutebla!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "Vi instalis SQL Buddy %s. Ĝi nun estas laboronta."
 
 msgid: "Getting started"
-msgstr: ""
+msgstr: "Enkonduko"
 
 msgid: "Help"
-msgstr: "Bantuan"
+msgstr: "Helpo"
 
 msgid: "Translations"
-msgstr: "Terjemahan"
+msgstr: "Tradukoj"
 
 msgid: "Release Notes"
-msgstr: "Nota "
+msgstr: "Notoj pri eldonoj"
 
 msgid: "Contact"
-msgstr: "Hubungi"
+msgstr: "Kontakto"
 
 msgid: "Create a new database"
-msgstr: "Cipta pangkalan data baru"
+msgstr: "Krei novan datumbazon"
 
 msgid: "Did you know..."
-msgstr: "Anda anda tahu..."
+msgstr: "Ĉu vi sciis ..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: ""
+msgstr: "en estas facila vojo por elekti elementojn dum foliumado. Marku la unuan vicon, tenu la majuskligan klavon premita kaj elektu la lastan vicon de la markenda intervalo. Ĉiuj markobutonoj estos markitaj."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: ""
+msgstr: "La kolumnoj de la foliumaj kaj enketaj folioj estas regrandigeblaj. Alĝustigu laŭplaĉe."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: ""
+msgstr: "La ensaluto komence funkcias per la datumoj de la uzanto root@localhost. Vi povas modifi la apriorajn valoroj por la uzanto kaj la servilo en la dosiero config.php."
 
 msgid: "Keyboard shortcuts"
-msgstr: "Pintasan papan kekunci"
+msgstr: "Fulmoklavoj"
 
 msgid: "Press this key..."
-msgstr: "Tekan kekunci ini..."
+msgstr: "Premu tiun klavon ..."
 
 msgid: "...and this will happen"
-msgstr: "...dan perkara ini akan berlaku"
+msgstr: "... kaj tio okazos"
 
 msgid: "select none"
-msgstr: "tiada"
+msgstr: "elekti nenion"
 
 msgid: "edit selected items"
-msgstr: "edit item yang dipilih"
+msgstr: "modifi elektitajn erojn"
 
 msgid: "delete selected items"
-msgstr: "padam pilihan yang dipilih"
+msgstr: "viŝi elektitajn erojn"
 
 msgid: "refresh page"
-msgstr: "muat semula halaman"
+msgstr: "reŝargi la paĝon"
 
 msgid: "load the query tab"
-msgstr: "muatkan tab kueri"
+msgstr: "ŝargi la enketan folion"
 
 msgid: "browse tab - go to first page of results"
-msgstr: ""
+msgstr: "Trafoliumi - al la unua paĝo de la rezultoj"
 
 msgid: "browse tab - go to last page of results"
-msgstr: ""
+msgstr: "Trafoliumi - al la lasta paĝo de la rezultoj"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: ""
+msgstr: "Trafoliumi - al la antaŭa paĝo de la rezultoj"
 
 msgid: "browse tab - go to next page of results"
-msgstr: ""
+msgstr: "Trafoliumi - al la sekva paĝo de la rezultoj"
 
 msgid: "optimize selected tables"
-msgstr: "optimumkan jadual yang dipilih"
+msgstr: "plifavorigi elektitajn tabelojn"
 
 msgid: "Choose a .sql file to import"
-msgstr: "Pilih fail .sql untuk mengimport"
+msgstr: "Elektu .sql-dosieron por importi"
 
 msgid: "File
 "
-msgstr: "Fail"
+msgstr: "Dosiero"
 
 msgid: "Ignore first line"
-msgstr: "Abaikan baris pertama"
+msgstr: "Malatentu la unuan vicon"
 
 msgid: "Edit"
-msgstr: "Edit"
+msgstr: "Modifi"
 
 msgid: "Refresh"
-msgstr: "Muat semula"
+msgstr: "Reŝargi"
 
 msgid: "No primary key defined"
-msgstr: "Tiada kekunci primari ditakrifkan"
+msgstr: "Ĉefa ŝlosilo ne estas difinita"
 
 msgid: "First"
-msgstr: "Mula"
+msgstr: "Unua"
 
 msgid: "Prev"
-msgstr: "Sebelumnya"
+msgstr: "Antaŭa"
 
 msgid: "Next"
-msgstr: "Seterusnya"
+msgstr: "Sekva"
 
 msgid: "Last"
-msgstr: "Akhir"
+msgstr: "Lasta"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: "Queri anda mengembalikan %d hasil"
-msgstr[1]: "Queri anda mengembalikan %d hasil"
+msgstr[0]: "Via enketo rezultigis %d vicojn"
+msgstr[1]: "Via enketo rezultigis %d vicojn"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Nota: Untuk mengelakkan pelayar web anda 'hang', hanya %d yang pertama keputusan akan dipaparkan"
+msgstr: "Notu: Por eviti kolapson de la foliumilo, nur la unuaj %d vicoj estas montritaj"
 
 msgid: "binary data"
-msgstr: "data binari"
+msgstr: "duumaj datumoj"
 
 msgid: "Your query affected %d rows"
-msgstr: ""
+msgstr: "Via enketo koncernis %d vicojn"
 
 msgid: "Your query did not return any results"
-msgstr: "Queri anda tidak mendatangkan sebarang hasil"
+msgstr: "Via enketo ne donis rezulton"
 
 msgid: "Your data has been inserted into the database"
-msgstr: ""
+msgstr: "Datumoj estas enmetitaj en la datumbazon"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: ""
+msgstr: "La tabelo \"%s\" ne estas trovita"
 
 msgid: "There was a problem logging you in"
-msgstr: "Terdapat keralatan semasa anda melog masuk"
+msgstr: "Estis eraro je ensalutigo"
 
 msgid: "Login"
-msgstr: "Log masuk"
+msgstr: "Ensaluto"
 
 msgid: "Unsupported browser"
-msgstr: ""
+msgstr: "Ne subtenata foliumilo"
 
 msgid: "Help!"
-msgstr: "Bantuan!"
+msgstr: "Helpu!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: "Sesi anda telah tamat. Sila log masuk kembali."
+msgstr: "La kunsido estas tempfinita. Bv. denove ensaluti."
 
 msgid: "Username"
-msgstr: "Katanama"
+msgstr: "Uzanto"
 
 msgid: "Password"
-msgstr: "Katalaluan"
+msgstr: "Pasvorto"
 
 msgid: "Run a query on the %s database"
-msgstr: ""
+msgstr: "Enketi en la %s datumbazo"
 
 msgid: "Columns"
-msgstr: "Ruangan"
+msgstr: "Kolumnoj"
 
 msgid: "Add a column"
-msgstr: "Cipta ruangan"
+msgstr: "Krei novan kolumnon"
 
 msgid: "Insert this column"
-msgstr: "Masukkan ruangan ini"
+msgstr: "Enmeti tiun kolumnon"
 
 msgid: "At end of table"
-msgstr: "Di penghujung jadual"
+msgstr: "Je fino de tabelo"
 
 msgid: "At beginning of table"
-msgstr: "Di permulaan jadual"
+msgstr: "Je Komenco de tabelo"
 
 msgid: "After"
-msgstr: "Selepas"
+msgstr: "post"
 
 msgid: "Edit table"
-msgstr: "Edit Jadual"
+msgstr: "Modifi tabelon"
 
 msgid: "Indexes"
-msgstr: "Indeksan"
+msgstr: "Indeksoj"
 
 msgid: "Add an index"
-msgstr: "Cipta indeksan"
+msgstr: "Aldoni indekson"
 
 msgid: "Column(s)"
-msgstr: "Ruangan"
+msgstr: "Kolumno(j)n"
 
 msgid: "Show %d more..."
-msgstr: "Paparkan %d lagi..."
+msgstr: "Montri pliajn %d ..."
 
 msgid: "Empty table"
-msgstr: "Kosongkan jadual"
+msgstr: "Malplenigi tabelon"
 
 msgid: "Drop table"
-msgstr: "Musnahkan jadual"
+msgstr: "Viŝi tabelon"
 
 msgid: "Optimize table"
-msgstr: "Optimumkan jadual"
+msgstr: "Plifavorigi tabelon"
 
 msgid: "Table Information"
-msgstr: "Maklumat jadual"
+msgstr: "Informo pri tabelo"
 
 msgid: "Host"
-msgstr: "Hos"
+msgstr: "Servilo"
 
 msgid: "Add a new user"
-msgstr: "Cipta akaun pengguna baru"
+msgstr: "Krei novan uzanton"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: ""
+msgstr: "Tajpu en formato ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "Ĉu vi estas certa, ke vi volas malplenigi la tabelon '%s'? Tio forigos ĉiujn datumojn el la tabelo. La jena peto estas farota:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "Ĉu vi estas certa, ke vi volas viŝi la tabelon '%s'? Tio forigos ĉiujn datumojn kaj la tabelon. La jena peto estas farota:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: ""
+msgstr: "Ĉu vi estas certa, ke vi volas viŝi la datumbazon '%s'? Tio forigos ĉiujn datumojn, ĉiujn tabelojn kaj la datumbazon. La jena peto estas farota:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: ""
+msgstr: "Bv. pardoni, aktuale ni subtenas nur la foliumilojn Internet Explorer 7, Firefox, Safari kaj Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: "Anda dikesan tidak mengaktifkan cookies. Untuk membolehkan sesi berjalan dengan baik, kebanyakkan instalasi PHP memerlukan cookies diaktifkan."
+msgstr: "Vi ne permesas meton de kuketoj. Bv. permesi kuketojn por plulaboro."
 
 msgid: "Importing..."
-msgstr: "Mengimport.."
+msgstr: "Importanta ..."
 
 msgid: "Drop the '%s' database"
-msgstr: "Musnahkan '&s' pangkalan data"
+msgstr: "Viŝi la datumbazon „%s“"
 
 msgid: "Okay"
-msgstr: "Ok"
+msgstr: "Faru"
 
 msgid: "Cancel"
-msgstr: "Batal"
+msgstr: "ĉesu"
 
 msgid: "Storage engine"
-msgstr: "Engin Penyimpanan"
+msgstr: "Aranĝilo de konservado"
 
 msgid: "Language"
-msgstr: "Bahasa"
+msgstr: "Lingvo"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d ordono estas farita de la dosiero"
+msgstr[1]: "%d ordonoj estas faritaj de la dosiero"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d vico estas enmetita en la datumbazon el la dosiero"
+msgstr[1]: "%d vicoj estas enmetitaj en la datumbazon el la dosiero"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: ""
-msgstr[1]: "%d"
+msgstr[0]: "%d vico estas ignorita, ĉar la nombro de valoroj ne estis korekta"
+msgstr[1]: "%d vicoj estas ignoritaj, ĉar la nombro de valoroj ne estis korekta"
 
 msgid: "Theme"
-msgstr: "Tema"
+msgstr: "Fasado"
 
 msgid: "(%.4f seconds)"
-msgstr: "(%.4f saat)"
+msgstr: "(%.4f sekundoj)"
 
 msgid: "The following errors were reported"
-msgstr: "Ralat berikut telah dilaporkan"
+msgstr: "La jenaj eraroj estas raportitaj"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: "Anda tidak mempunyai cukup kebenaran untuk mencipta akaun pengguna baru."
+msgstr: "Vi ne havas permeson krei novajn uzantojn."
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: "Anda tidak mempunyai cukup kebenaran untuk memaparkaan atau menguruskan akaun pengguna."
+msgstr: "Vi ne havas permeson vidi aŭ administri uzantojn."
 
 msgid: "You are connected to %s."
-msgstr: "Anda dihubunkan ke %s."
+msgstr: "Vi estas konektata al %s."
 
 msgid: "Allow access to"
-msgstr: "Benarkan akses kepada"
+msgstr: "Permesi atingon al"
 
 msgid: "All databases"
-msgstr: "Semua pangkalan data"
+msgstr: "Ĉiuj datumbazoj"
 
 msgid: "Selected databases"
-msgstr: "Pang"
+msgstr: "Elektitaj datumbazoj"
 
 msgid: "Give user"
-msgstr: "Beri pengguna"
+msgstr: "Doni al la uzanto"
 
 msgid: "Updates"
-msgstr: "Kemaskini"
+msgstr: "Ĝisdatigoj"
 
 msgid: "There are no updates available"
-msgstr: "Tiada pilihan kemaskini didapati"
+msgstr: "Ne estas ĝisdatigoj"
 
 msgid: "Change password"
-msgstr: "Tukar katalaluan"
+msgstr: "Ŝanĝi pasvorton"

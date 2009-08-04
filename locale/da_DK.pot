@@ -1,6 +1,6 @@
 Language: Danish
 Language-Code: da_DK
-Build-Date: Wed, 18 Feb 2009 10:21:44 -0700
+Build-Date: Mon, 15 Jun 2009 12:15:14 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Filen kunne enten, ikke blive fundet eller den er tom"
@@ -30,7 +30,7 @@ msgid: "Table"
 msgstr: "Tabel"
 
 msgid: "Rows"
-msgstr: "Række"
+msgstr: "Rækker"
 
 msgid: "Size"
 msgstr: "Størrelse"
@@ -96,7 +96,7 @@ msgid: "Not Null"
 msgstr: "ikke nul"
 
 msgid: "Auto Increment"
-msgstr: ""
+msgstr: "Automatisk stigning"
 
 msgid: "Add field"
 msgstr: "Tilføj felt"
@@ -108,7 +108,7 @@ msgid: "For some reason, the database parameter was not included with your reque
 msgstr: "Databaseparameteren var ikke inkluderet i din forespørgsel"
 
 msgid: "Save changes to original"
-msgstr: "Gem ændringer til originalet"
+msgstr: "Gem ændringer til originalen"
 
 msgid: "Insert as new row"
 msgstr: "Indsæt som ny række"
@@ -147,10 +147,10 @@ msgid: "Create"
 msgstr: "CREATE"
 
 msgid: "Temp tables"
-msgstr: "Temporære tabeller"
+msgstr: "Midlertidige tabeller"
 
 msgid: "Administrator privileges"
-msgstr: "Administratorrettigheder"
+msgstr: "Administrator rettigheder"
 
 msgid: "File"
 msgstr: "Fil"
@@ -211,7 +211,7 @@ msgid: "If this is a public server, you should delete this file from the server 
 msgstr: "Hvis dette er en offentlig server, så bør denne fil slettes efter at den er blevet downloadet"
 
 msgid: "Export"
-msgstr: "Eksportér"
+msgstr: "Eksport"
 
 msgid: "Tables"
 msgstr: "Tabeller"
@@ -235,10 +235,10 @@ msgid: "Data"
 msgstr: "Data"
 
 msgid: "Compact inserts"
-msgstr: ""
+msgstr: "Komprimer indlæg"
 
 msgid: "Complete inserts"
-msgstr: ""
+msgstr: "Færdiggør indlæg"
 
 msgid: "Delimiter"
 msgstr: "Skilletegn"
@@ -292,16 +292,16 @@ msgid: "Your changes were saved to the database"
 msgstr: "Ændringerne blev gemt til databasen"
 
 msgid: "delete this row"
-msgstr: "Slet denne række"
+msgstr: "slet denne række"
 
 msgid: "delete these rows"
-msgstr: "Slet disse rækker"
+msgstr: "slet disse rækker"
 
 msgid: "empty this table"
-msgstr: "Tøm denne tabel"
+msgstr: "tøm denne tabel"
 
 msgid: "empty these tables"
-msgstr: "Tøm disse tabeller"
+msgstr: "tøm disse tabeller"
 
 msgid: "drop this table"
 msgstr: "drop denne tabel"
@@ -318,13 +318,13 @@ msgstr: "slet disse kolonner"
 msgid: "delete this index"
 msgstr: "slet dette index"
 
-msgid: "delete this indexes"
-msgstr: "slet disse indicies "
+msgid: "delete these indexes"
+msgstr: "slet disse indicies"
 
 msgid: "delete this user"
 msgstr: "slet denne bruger"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "slet disse brugere"
 
 msgid: "Are you sure you want to"
@@ -358,7 +358,7 @@ msgid: "Logout"
 msgstr: "Log ud"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: ""
+msgstr: "Databaseparameteren var ikke inkluderet i din forespørgsel"
 
 msgid: "Welcome to SQL Buddy!"
 msgstr: "Velkommen til SQL Buddy!"
@@ -367,7 +367,7 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Du har forbindelse til MySQL %s med brugeren %s"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: ""
+msgstr: "Databasen server har kørt siden %s og har overført ca %s af data"
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "En ny version af SQL Buddy er tilgængelig!"
@@ -376,7 +376,7 @@ msgid: "You have SQL Buddy %s installed and %s is now available."
 msgstr: "Du har SQL Buddy version %s installeret og %s er nu tilgængelig."
 
 msgid: "Getting started"
-msgstr: "Gå i gang"
+msgstr: "Kom i gang"
 
 msgid: "Help"
 msgstr: "Hjælp"
@@ -394,16 +394,16 @@ msgid: "Create a new database"
 msgstr: "Opret en ny database"
 
 msgid: "Did you know..."
-msgstr: "Viste du..."
+msgstr: "Vidste du..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: ""
+msgstr: "Der er en nemmere måde at vælge en stor gruppe af poster, når du browser tabelrækker. Tjek den første række, holde Skift-tasten nede, og tjek sidste række. Afkrydsningsfelterne mellem de to rækker, vil automatisk blive markeret for dig."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: ""
+msgstr: "Browse og Søg kolonnerne kan frit ændres i størrelse.rnJuster dem til så bred eller smal du ønsker"
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: ""
+msgstr: "Login-siden er baseret på en standard bruger af root @ localhost. Ved at redigere config.php, kan du ændre standard bruger og vært for, hvad du ønsker."
 
 msgid: "Keyboard shortcuts"
 msgstr: "Genvejstaster"
@@ -427,19 +427,19 @@ msgid: "refresh page"
 msgstr: "Opdater siden"
 
 msgid: "load the query tab"
-msgstr: ""
+msgstr: "vis forespørgsel fanebladet"
 
 msgid: "browse tab - go to first page of results"
-msgstr: ""
+msgstr: "gennemse fane - gå til første side af resultater"
 
 msgid: "browse tab - go to last page of results"
-msgstr: ""
+msgstr: "gennemse fane - gå til sidste side af resultater"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: ""
+msgstr: "gennemse fane - gå til forrige side af resultater"
 
 msgid: "browse tab - go to next page of results"
-msgstr: ""
+msgstr: "gennemse fane - gå til næste side af resultater"
 
 msgid: "optimize selected tables"
 msgstr: "Optimér valgte tabeller"
@@ -580,16 +580,16 @@ msgid: "Are you sure you want to empty the '%s' table? This will delete all the 
 msgstr: "Er du sikker på, at du vil tømme '%s' tabeller? Dette vil slette al dataindhold. Følgende forspørgsel vil blive kørt:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "Er du sikker på at du vil droppe '%s' tabel? Dette vil slette tabellen, og alle data i den. Følgende forespørgsel vil blive kørt:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: ""
+msgstr: "Er du sikker på at du vil droppe database '% s'? Dette vil slette databasen, tabeller i databasen, og alle data i tabellerne. Følgende forespørgsel vil blive kørt:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: ""
+msgstr: "Vi beklager, men i øjeblikket er det kun Internet Explorer 7 der er understøttet. Den er tilgængelig som en gratis download på Microsofts hjemmeside. Andre gratis browsere er også støttet, herunder Firefox, Safari og Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: ""
+msgstr: "Det ser ud til, at du ikke har cookies aktiveret. For at Sessions skal virke, kræver de fleste php-installationer at cookies er aktiveret."
 
 msgid: "Importing..."
 msgstr: "Importerer..."
@@ -611,13 +611,13 @@ msgstr: "Sprog"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d erklæring blev kørt fra filen"
+msgstr[1]: "%d erklæringer blev kørt fra filen"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d række blev sat  ind i databasen fra filen"
+msgstr[1]: "%d rækker blev sat ind i databasen fra filen"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"

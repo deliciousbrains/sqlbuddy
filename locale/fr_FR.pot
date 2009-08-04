@@ -1,6 +1,6 @@
 Language: Français
 Language-Code: fr_FR
-Build-Date: Wed, 18 Feb 2009 10:17:13 -0700
+Build-Date: Mon, 15 Jun 2009 12:09:04 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Le fichier est vide ou ne peut pas être lu"
@@ -36,7 +36,7 @@ msgid: "Size"
 msgstr: "Taille"
 
 msgid: "Overhead"
-msgstr: "Frais généraux"
+msgstr: "Taille totale"
 
 msgid: "Options"
 msgstr: "Options"
@@ -48,7 +48,7 @@ msgid: "Charset"
 msgstr: "Jeu de caractères"
 
 msgid: "Submit"
-msgstr: "Soumettre"
+msgstr: "Valider"
 
 msgid: "Create a new table"
 msgstr: "Créer une nouvelle table"
@@ -318,13 +318,13 @@ msgstr: "Effacer ces colonnes"
 msgid: "delete this index"
 msgstr: "Effacer cet index"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "Effacer ces index"
 
 msgid: "delete this user"
 msgstr: "Effacer cet utilisateur"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "Effacer ces utilisateurs"
 
 msgid: "Are you sure you want to"
@@ -352,7 +352,7 @@ msgid: "Error"
 msgstr: "Erreur"
 
 msgid: "There was an error receiving data from the server"
-msgstr: "Une erreur s'est produite lors de la rÃ©ception de données en provenance du serveur"
+msgstr: "Une erreur s'est produite lors de la réception de données en provenance du serveur"
 
 msgid: "Logout"
 msgstr: "Déconnexion"
@@ -442,10 +442,10 @@ msgid: "browse tab - go to next page of results"
 msgstr: "navigation par onglet - aller à la page suivante des résultats"
 
 msgid: "optimize selected tables"
-msgstr: "Optimiser les tables selectionnées"
+msgstr: "Optimiser les tables sélectionnées"
 
 msgid: "Choose a .sql file to import"
-msgstr: "Choisisser un fichier .sql à importer"
+msgstr: "Choisissez un fichier .sql à importer"
 
 msgid: "File
 "
@@ -640,10 +640,10 @@ msgid: "You do not have enough permissions to view or manage users."
 msgstr: "Vous n'avez pas les permissions suffisantes pour voir ou gérer les utilisateurs."
 
 msgid: "You are connected to %s."
-msgstr: "Connecté sous"
+msgstr: "Connecté sous %s"
 
 msgid: "Allow access to"
-msgstr: "Authoriser l'accès à"
+msgstr: "Autoriser l'accès à"
 
 msgid: "All databases"
 msgstr: "Toutes les bases de données"
@@ -661,4 +661,4 @@ msgid: "There are no updates available"
 msgstr: "Il n'y a pas de mise à jour disponible"
 
 msgid: "Change password"
-msgstr: "Changez le mot de passe"
+msgstr: "Changer le mot de passe"

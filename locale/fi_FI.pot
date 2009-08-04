@@ -1,6 +1,6 @@
 Language: Suomi
 Language-Code: fi_FI
-Build-Date: Wed, 18 Feb 2009 10:24:07 -0700
+Build-Date: Mon, 15 Jun 2009 12:15:39 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Tiedostoa ei pystytty lukemaan tai se oli tyhjä"
@@ -318,13 +318,13 @@ msgstr: "poista nämä sarakkeet"
 msgid: "delete this index"
 msgstr: "poista tämä indeksi"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "poista nämä indeksit"
 
 msgid: "delete this user"
 msgstr: "poista tämä käyttäjä"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "poista nämä käyttäjät"
 
 msgid: "Are you sure you want to"

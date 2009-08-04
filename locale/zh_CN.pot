@@ -1,6 +1,6 @@
 Language: 中文 (简体)
 Language-Code: zh_CN
-Build-Date: Wed, 18 Feb 2009 10:17:05 -0700
+Build-Date: Mon, 15 Jun 2009 12:09:03 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "文件为空或文件不可读"
@@ -318,13 +318,13 @@ msgstr: "删除这些列"
 msgid: "delete this index"
 msgstr: "删除此索引"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "删除这些索引"
 
 msgid: "delete this user"
 msgstr: "删除此用户"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "删除这些用户"
 
 msgid: "Are you sure you want to"

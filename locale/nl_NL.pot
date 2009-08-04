@@ -1,6 +1,6 @@
 Language: Nederlands
 Language-Code: nl_NL
-Build-Date: Wed, 18 Feb 2009 10:16:19 -0700
+Build-Date: Mon, 15 Jun 2009 12:07:35 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Bestand kon niet gelezen worden of was leeg"
@@ -162,7 +162,7 @@ msgid: "Reload"
 msgstr: "Herlaad"
 
 msgid: "Shutdown"
-msgstr: "Be"
+msgstr: "Afsluiten"
 
 msgid: "Super"
 msgstr: "Super"
@@ -318,13 +318,13 @@ msgstr: "deze kolommen verwijderen"
 msgid: "delete this index"
 msgstr: "deze index verwijderen"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "deze indexen verwijderen"
 
 msgid: "delete this user"
 msgstr: "deze gebruiker verwijderen"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "deze gebruikers verwijderen"
 
 msgid: "Are you sure you want to"
@@ -645,13 +645,13 @@ msgid: "You are connected to %s."
 msgstr: "Je bent verbonden met %s."
 
 msgid: "Allow access to"
-msgstr: "Toegang verlenen tot"
+msgstr: "to"
 
 msgid: "All databases"
-msgstr: "Alle databases"
+msgstr: "Alle databas"
 
 msgid: "Selected databases"
-msgstr: "Geselecteerde databases"
+msgstr: "Ges"
 
 msgid: "Give user"
 msgstr: "Geef gebruiker"

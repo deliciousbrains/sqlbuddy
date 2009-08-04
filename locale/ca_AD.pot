@@ -1,6 +1,6 @@
 Language: Català
 Language-Code: ca_AD
-Build-Date: Wed, 18 Feb 2009 10:25:23 -0700
+Build-Date: Mon, 15 Jun 2009 12:15:33 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "No s'ha pogut llegir l'arxiu o estava buit"
@@ -180,7 +180,7 @@ msgid: "Please select the databases that you would like to export"
 msgstr: "Si us plau, seleccioni la base de dades que voleu exportar"
 
 msgid: "Please select the tables that you would like to export"
-msgstr: "si us plau, seleccioni les taules que voleu exportar"
+msgstr: "Si us plau, seleccioni les taules que voleu exportar"
 
 msgid: "Table `%s` is empty"
 msgstr: "La taula `%s` és buida"
@@ -235,10 +235,10 @@ msgid: "Data"
 msgstr: "Data"
 
 msgid: "Compact inserts"
-msgstr: "inserts compactats"
+msgstr: "Inserts compactats"
 
 msgid: "Complete inserts"
-msgstr: "inserts complerts"
+msgstr: "Inserts complerts"
 
 msgid: "Delimiter"
 msgstr: "Delimitador"
@@ -292,7 +292,7 @@ msgid: "Your changes were saved to the database"
 msgstr: "Els teus canvis s'han guardat a la base de dades"
 
 msgid: "delete this row"
-msgstr: "eliminar aquesta fila"
+msgstr: "elimina aquesta fila"
 
 msgid: "delete these rows"
 msgstr: "elimina aquestes files"
@@ -304,10 +304,10 @@ msgid: "empty these tables"
 msgstr: "buida aquestes taules"
 
 msgid: "drop this table"
-msgstr: "eliminar aquesta taula"
+msgstr: "elimina aquesta taula"
 
 msgid: "drop these tables"
-msgstr: "eliminar aquestes taules"
+msgstr: "elimina aquestes taules"
 
 msgid: "delete this column"
 msgstr: "esborra aquesta columna"
@@ -318,13 +318,13 @@ msgstr: "esborra aquestes columnes"
 msgid: "delete this index"
 msgstr: "esborra aquest índex"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "esborra aquests índexs"
 
 msgid: "delete this user"
 msgstr: "esborra aquest usuari"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "esborra aquests usuaris"
 
 msgid: "Are you sure you want to"
@@ -337,7 +337,7 @@ msgid: "The following queries will be run:"
 msgstr: "Les següents queries seran creades:"
 
 msgid: "Confirm"
-msgstr: "Confirmació"
+msgstr: "Confirma"
 
 msgid: "Successfully saved changes"
 msgstr: "Canvis guardats correctament"
@@ -355,7 +355,7 @@ msgid: "There was an error receiving data from the server"
 msgstr: "Hi ha hagut un error al rebre les dades desde el servidor"
 
 msgid: "Logout"
-msgstr: "Sortir"
+msgstr: "Surt"
 
 msgid: "For some reason, the table parameter was not included with your request"
 msgstr: "Per alguna raó, algun paràmetre de no ha sigut inclòs a la seva consulta"
@@ -376,7 +376,7 @@ msgid: "You have SQL Buddy %s installed and %s is now available."
 msgstr: "SQL Buddy ha sigut instalat i està disponible."
 
 msgid: "Getting started"
-msgstr: "Començar"
+msgstr: "Començant"
 
 msgid: "Help"
 msgstr: "Ajuda"
@@ -397,13 +397,13 @@ msgid: "Did you know..."
 msgstr: "Sabies que..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: ""
+msgstr: "Hi ha una forma més fàcil de seleccionar un grup gran d'elements quan s'estan fullejant files de la base de dades. Marca la primera fila, polsa la tecla shift y marca la última fila. Totes les files entre una i altra seran marcades automàticament."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: ""
+msgstr: "Les columnes en les pestanyes de consulta i fullejar poden canviar de amplària."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: ""
+msgstr: "La fulla d'autenticació està basada en un usuari per defecte (root@localhost). Editant config.php, pots canviar l'usuari per defecte i el hoste als que vulgues."
 
 msgid: "Keyboard shortcuts"
 msgstr: "Adreces de Teclat"
@@ -418,34 +418,34 @@ msgid: "select none"
 msgstr: "selecciona cap"
 
 msgid: "edit selected items"
-msgstr: "modificar elements seleccionats"
+msgstr: "modifica elements seleccionats"
 
 msgid: "delete selected items"
-msgstr: "esborrar elements seleccionats"
+msgstr: "esborra elements seleccionats"
 
 msgid: "refresh page"
-msgstr: "refrescar pàgina"
+msgstr: "refresca pàgina"
 
 msgid: "load the query tab"
-msgstr: "carregar la pestanya de consultes"
+msgstr: "carrega la pestanya de consultes"
 
 msgid: "browse tab - go to first page of results"
-msgstr: ""
+msgstr: "Pestanya navegació - anar a la primera pàgina de resultats"
 
 msgid: "browse tab - go to last page of results"
-msgstr: ""
+msgstr: "Pestanya navegació - anar a la última pàgina de resultats"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: ""
+msgstr: "Pestanya navegació - anar a la pàgina de resultats següent"
 
 msgid: "browse tab - go to next page of results"
-msgstr: ""
+msgstr: "Pestanya navegació - anar a la pàgina de resultats anterior"
 
 msgid: "optimize selected tables"
-msgstr: ""
+msgstr: "optimitza les taules seleccionades"
 
 msgid: "Choose a .sql file to import"
-msgstr: ""
+msgstr: "Tria un arxiu .sql per a importar-lo"
 
 msgid: "File
 "
@@ -487,16 +487,16 @@ msgid: "binary data"
 msgstr: "dades binaries"
 
 msgid: "Your query affected %d rows"
-msgstr: ""
+msgstr: "La teva consulta ha afectat a %d files"
 
 msgid: "Your query did not return any results"
-msgstr: ""
+msgstr: "La teva consulta no ha tornat cap resultat"
 
 msgid: "Your data has been inserted into the database"
-msgstr: ""
+msgstr: "Les teves dades han sigut inserides a la base de dades"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: ""
+msgstr: "Hi ha hagut un problema localitzant la taula '%s'"
 
 msgid: "There was a problem logging you in"
 msgstr: "Hi ha hagut un problema en la identificació en"
@@ -511,7 +511,7 @@ msgid: "Help!"
 msgstr: "Ajuda!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: ""
+msgstr: "La teva sessió ha caducat. Per favor, autenticat un altra vegada."
 
 msgid: "Username"
 msgstr: "Usuari"
@@ -520,79 +520,79 @@ msgid: "Password"
 msgstr: "Contrasenya"
 
 msgid: "Run a query on the %s database"
-msgstr: ""
+msgstr: "Executar una consulta a la base de dades %s"
 
 msgid: "Columns"
-msgstr: ""
+msgstr: "Columnes"
 
 msgid: "Add a column"
-msgstr: ""
+msgstr: "Afegir una columna"
 
 msgid: "Insert this column"
-msgstr: ""
+msgstr: "Inserir aquesta columna"
 
 msgid: "At end of table"
-msgstr: ""
+msgstr: "Al final de la taula"
 
 msgid: "At beginning of table"
-msgstr: ""
+msgstr: "Al principi de la taula"
 
 msgid: "After"
-msgstr: ""
+msgstr: "Després"
 
 msgid: "Edit table"
-msgstr: ""
+msgstr: "Edita la taula"
 
 msgid: "Indexes"
-msgstr: ""
+msgstr: "Índexs"
 
 msgid: "Add an index"
-msgstr: ""
+msgstr: "Afegir un índex"
 
 msgid: "Column(s)"
-msgstr: ""
+msgstr: "Columna(es)"
 
 msgid: "Show %d more..."
-msgstr: ""
+msgstr: "Mostrar %d més..."
 
 msgid: "Empty table"
-msgstr: ""
+msgstr: "Buidar la taula"
 
 msgid: "Drop table"
-msgstr: ""
+msgstr: "Eliminar la taula"
 
 msgid: "Optimize table"
-msgstr: ""
+msgstr: "Optimitzar la taula"
 
 msgid: "Table Information"
-msgstr: ""
+msgstr: "Informació de la taula"
 
 msgid: "Host"
-msgstr: "Hoste"
+msgstr: "Amfitrió"
 
 msgid: "Add a new user"
-msgstr: ""
+msgstr: "Afegeix un nou usuari"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: ""
+msgstr: "Introdueix seguint el format: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "Estas segur de que vols buidar la taula '%s'? Això eliminarà *totes les dades* dins de la taula. La següent consulta serà executada:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "Estas segur de que vols eliminar la taula '%s'? Això eliminarà la taula i *totes les dades* dins. La següent consulta serà executada:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: ""
+msgstr: "Estàs segur que vols eliminar la base de dades '%s'? Açò eliminarà la base de dades, les taules dins de la base de dades i *totes les dades* dins d'eixes taules. La següent consulta serà executada:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: ""
+msgstr: "Ho sentim, pero actualment  només Internet Explorer 7 està suportat. Està disponible com a descàrrega gratuïta al website de Microsoft. Hi han d'altres navegadors suportats gratuïts, com ara  Firefox, Safari i Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: ""
+msgstr: "Sembla que no tens les cookies habilitades. Per a que funcionen, la majoria de les instal·lacions PHP requereixen cookies."
 
 msgid: "Importing..."
-msgstr: ""
+msgstr: "Fent la importació..."
 
 msgid: "Drop the '%s' database"
 msgstr: "Eliminar la base de dades '%s'"
@@ -601,7 +601,7 @@ msgid: "Okay"
 msgstr: "Correcte"
 
 msgid: "Cancel"
-msgstr: "Cancelar"
+msgstr: "Cancel·la"
 
 msgid: "Storage engine"
 msgstr: "Motor d'enmagatzematge"
@@ -611,8 +611,8 @@ msgstr: "Idioma"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "La ordre %d ha sigut executada des de l'arxiu"
+msgstr[1]: "Les ordres %d han sigut executades des de l'arxiu"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
@@ -652,7 +652,7 @@ msgid: "Selected databases"
 msgstr: "Bases de dades selecionades"
 
 msgid: "Give user"
-msgstr: ""
+msgstr: "Donar a l'usuari"
 
 msgid: "Updates"
 msgstr: "Actualitzacions"

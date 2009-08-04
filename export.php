@@ -153,6 +153,7 @@ if ($_POST) {
 					
 					$tableEngine = "";
 					$tableCharset = "";
+					$autoIncrement = "";
 					
 					if (isset($exportStructure)) {
 						
@@ -173,7 +174,11 @@ if ($_POST) {
 									if (array_key_exists('Collation', $infoRow) && isset($collationList)) {
 										$tableCharset = $collationList[$infoRow['Collation']];
 									}
-								
+									
+									if (array_key_exists('Auto_increment', $infoRow))
+									{
+										$autoIncrement = $infoRow['Auto_increment'];
+									}
 								}
 								
 							} else if ($conn->getAdapter() == "sqlite") {
@@ -268,7 +273,12 @@ if ($_POST) {
 								}
 								
 								if ($tableCharset) {
-									$outputBuffer .= ' DEFAULT CHARSET ' . $tableCharset;
+									$outputBuffer .= ' DEFAULT CHARSET=' . $tableCharset;
+								}
+								
+								if ($autoIncrement)
+								{
+									$outputBuffer .= ' AUTO_INCREMENT=' . $autoIncrement;
 								}
 							}
 							
@@ -551,12 +561,15 @@ if (isset($error)) {
 		
 		if ($conn->isResultSet($dbSql)) {
 			while ($dbRow = $conn->fetchArray($dbSql)) {
-				echo '<option value="' . $dbRow[0] . '"';
-				
-				if (isset($dbs) && in_array($dbRow[0], $dbs))
-					echo ' selected="selected"';
-				
-				echo '>' . $dbRow[0] . '</option>';
+				if ($dbRow[0] != "information_schema")
+				{
+					echo '<option value="' . $dbRow[0] . '"';
+					
+					if (isset($dbs) && in_array($dbRow[0], $dbs))
+						echo ' selected="selected"';
+					
+					echo '>' . $dbRow[0] . '</option>';
+				}
 			}
 		}
 		

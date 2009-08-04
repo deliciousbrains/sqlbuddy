@@ -1,6 +1,6 @@
 Language: 日本語
 Language-Code: ja_JP
-Build-Date: Wed, 18 Feb 2009 10:18:33 -0700
+Build-Date: Mon, 15 Jun 2009 12:09:39 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "ファイルが空のため読み込むことが出来ませんでした。"
@@ -318,13 +318,13 @@ msgstr: "これらの列を削除します"
 msgid: "delete this index"
 msgstr: "このインデックスを削除します"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "これらのインデックスを削除します"
 
 msgid: "delete this user"
 msgstr: "このユーザーを削除します"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "これらのユーザーを削除します"
 
 msgid: "Are you sure you want to"
@@ -652,7 +652,7 @@ msgid: "Selected databases"
 msgstr: "選択されたデータベース "
 
 msgid: "Give user"
-msgstr: "ユーザに与える。"
+msgstr: "ユーザーに与える。"
 
 msgid: "Updates"
 msgstr: "更新"

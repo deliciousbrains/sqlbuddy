@@ -1,9 +1,9 @@
 Language: Deutsch
 Language-Code: de_DE
-Build-Date: Wed, 18 Feb 2009 10:16:23 -0700
+Build-Date: Mon, 15 Jun 2009 12:08:22 -0600
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "Entweder konnte die Datei nicht gefunden werden oder die Datei war leer"
+msgstr: "Die Datei konnte entweder nicht gefunden werden oder die Datei war leer"
 
 msgid: "Error performing operation"
 msgstr: "Fehler beim Ausführen der Operation"
@@ -21,7 +21,7 @@ msgid: "Empty"
 msgstr: "Leeren"
 
 msgid: "Drop"
-msgstr: "L&ouml;schen"
+msgstr: "Löschen"
 
 msgid: "Optimize"
 msgstr: "Optimieren"
@@ -33,10 +33,10 @@ msgid: "Rows"
 msgstr: "Zeile"
 
 msgid: "Size"
-msgstr: "Gr&ouml;ße"
+msgstr: "Größe"
 
 msgid: "Overhead"
-msgstr: "Overhead"
+msgstr: "Überhang"
 
 msgid: "Options"
 msgstr: "Optionen"
@@ -87,25 +87,25 @@ msgid: "Other"
 msgstr: "Andere"
 
 msgid: "Unsigned"
-msgstr: "Nicht signiert"
+msgstr: "vorzeichenlos"
 
 msgid: "Binary"
-msgstr: "Bin&auml;r"
+msgstr: "Binär"
 
 msgid: "Not Null"
-msgstr: "nicht null"
+msgstr: "Nicht Null"
 
 msgid: "Auto Increment"
-msgstr: "automatischer Zuwachs"
+msgstr: "Automatische Erhöhung"
 
 msgid: "Add field"
-msgstr: "Feld hinzuf&uuml;gen"
+msgstr: "Feld hinzufügen"
 
 msgid: "Oops"
 msgstr: "Hoppla"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "Der Datenbankparameter war nicht in Ihrer Anfrage enthalten."
+msgstr: "Der Datenbankparameter war nicht in Ihrer Anfrage enthalten"
 
 msgid: "Save changes to original"
 msgstr: "Änderungen auf das Original anwenden"
@@ -147,7 +147,7 @@ msgid: "Create"
 msgstr: "CREATE"
 
 msgid: "Temp tables"
-msgstr: "Tempor&auml;re Tabellen"
+msgstr: "Temporäre Tabellen"
 
 msgid: "Administrator privileges"
 msgstr: "Administratorenrechte"
@@ -289,13 +289,13 @@ msgid: "Browse"
 msgstr: "Ansicht"
 
 msgid: "Your changes were saved to the database"
-msgstr: "&Auml;nderungen in Datenbank gespeichert"
+msgstr: "Änderungen in Datenbank gespeichert"
 
 msgid: "delete this row"
-msgstr: "Zeile l&ouml;schen"
+msgstr: "Zeile löschen"
 
 msgid: "delete these rows"
-msgstr: "Zeilen l&ouml;schen"
+msgstr: "Zeilen löschen"
 
 msgid: "empty this table"
 msgstr: "Tabelle leeren"
@@ -304,31 +304,31 @@ msgid: "empty these tables"
 msgstr: "Tabellen leeren"
 
 msgid: "drop this table"
-msgstr: "Tabelle l&ouml;schen"
+msgstr: "Tabelle löschen"
 
 msgid: "drop these tables"
-msgstr: "Tabellen l&ouml;schen"
+msgstr: "Tabellen öschen"
 
 msgid: "delete this column"
-msgstr: "Zelle l&ouml;schen"
+msgstr: "Zelle löschen"
 
 msgid: "delete these columns"
-msgstr: "Zellen l&ouml;schen"
+msgstr: "Zellen löschen"
 
 msgid: "delete this index"
-msgstr: "Index l&ouml;schen"
+msgstr: "Index löschen"
 
-msgid: "delete this indexes"
-msgstr: "Indizes l&ouml;schen"
+msgid: "delete these indexes"
+msgstr: "Indizes löschen"
 
 msgid: "delete this user"
-msgstr: "Benutzer l&ouml;schen"
+msgstr: "Benutzer löschen"
 
-msgid: "delete this users"
-msgstr: "Benutzer l&ouml;schen"
+msgid: "delete these users"
+msgstr: "Benutzer löschen"
 
 msgid: "Are you sure you want to"
-msgstr: "M&ouml;chten Sie wirklich diese aktion durchf&uuml;hren ?"
+msgstr: "Möchten Sie wirklich diese aktion durchführen ?"
 
 msgid: "The following query will be run:"
 msgstr: "Folgende Abfrage wird ausgeführt:"
@@ -337,10 +337,10 @@ msgid: "The following queries will be run:"
 msgstr: "Folgende Abfragen werden ausgeführt:"
 
 msgid: "Confirm"
-msgstr: "Best&auml;tigen"
+msgstr: "Bestätigen"
 
 msgid: "Successfully saved changes"
-msgstr: "&Auml;nderungen erfolgreich gespeichert"
+msgstr: "Änderungen erfolgreich gespeichert"
 
 msgid: "Full Text"
 msgstr: "Volltext"
@@ -358,7 +358,7 @@ msgid: "Logout"
 msgstr: "Abmelden"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: "Der Tabellenparameter war nicht in Ihrer Anfrage enthalten."
+msgstr: "Der Tabellekjghkjenthalten."
 
 msgid: "Welcome to SQL Buddy!"
 msgstr: "Willkommen bei SQL Buddy!"
@@ -376,13 +376,13 @@ msgid: "You have SQL Buddy %s installed and %s is now available."
 msgstr: "Du hast SQL Buddy %s installiert und %s ist nun verfügbar."
 
 msgid: "Getting started"
-msgstr: "Einf&uuml;hrung"
+msgstr: "Einführung"
 
 msgid: "Help"
 msgstr: "Hilfe"
 
 msgid: "Translations"
-msgstr: "&Üuml;bersetzungen"
+msgstr: "Übersetzungen"
 
 msgid: "Release Notes"
 msgstr: "Versions Information"
@@ -406,7 +406,7 @@ msgid: "The login page is based on a default user of root@localhost. By editing 
 msgstr: "Die Loginseite basiert auf den Daten des Users root@localhost. Sie können die Standardwerte für den Datenbankbenutzer und Host in der config.php ändern."
 
 msgid: "Keyboard shortcuts"
-msgstr: "Tastenk&uuml;rzel"
+msgstr: "Tastenkürzel"
 
 msgid: "Press this key..."
 msgstr: "Drücken Sie diese Taste ..."
@@ -415,7 +415,7 @@ msgid: "...and this will happen"
 msgstr: "... und das wird passieren"
 
 msgid: "select none"
-msgstr: "nichts wählen"
+msgstr: "nichts auswählen"
 
 msgid: "edit selected items"
 msgstr: "ausgewählte Elemente ändern"
@@ -430,16 +430,16 @@ msgid: "load the query tab"
 msgstr: "den Query-Tab laden"
 
 msgid: "browse tab - go to first page of results"
-msgstr: "Browser Tab - gehe zur ersten Ergebnisseite"
+msgstr: "Durchsuche Tab - gehe zur ersten Ergebnisseite"
 
 msgid: "browse tab - go to last page of results"
-msgstr: "Browser Tab - gehe zu letzten Ergebnisseite"
+msgstr: "Durchsuche Tab - gehe zu letzten Ergebnisseite"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: "Browser Tab - gehe zur vorherigen Ergebnisseite"
+msgstr: "Durchsuche Tab - gehe zur vorherigen Ergebnisseite"
 
 msgid: "browse tab - go to next page of results"
-msgstr: "Browser Tab - gehe zur nächsten Ergebnisseite"
+msgstr: "Durchsuche Tab - gehe zur nächsten Ergebnisseite"
 
 msgid: "optimize selected tables"
 msgstr: "ausgewählte Tabellen optimieren"
@@ -481,7 +481,7 @@ msgstr[0]: "Abfrage hatte %d Zeilen"
 msgstr[1]: "Abfrage hatte %d Zeilen"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Merke: Um einen Browser-Absturz zu verhindern, werden nur die ersten %d Zeilen angezeigt"
+msgstr: "Hinweis: Um einen Browser-Absturz zu verhindern, werden nur die ersten %d Zeilen angezeigt"
 
 msgid: "binary data"
 msgstr: "Binärdaten"
@@ -577,16 +577,16 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Im Format ('1','2') eingeben"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Sind Sie sicher, dass Sie die Tabelle '%s' leeren wollen? Dies wird alle Daten der Tabelle unwiderruflich l&ouml;schen. Folgende Anfrage wird ausgef&uuml;hrt:"
+msgstr: "Sind Sie sicher, dass Sie die Tabelle '%s' leeren wollen? Dies wird alle Daten der Tabelle unwiderruflich löschen. Folgende Anfrage wird ausgeführt:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
 msgstr: "Sind Sie sicher, dass Sie die Tabelle '%s' löschen wollen? Dies wird alle Daten der Tabelle und die Tabelle unwiderruflich löschen. Folgende Anfrage wird ausgeführt:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Sind Sie sicher, dass Sie die Datenbank '%s' löschen wollen? Dies wird alle Tabellen, deren Daten und die Datenbank unwiderruflich löschen. Folgende Anfrage wird ausgefÃ¼hrt:"
+msgstr: "Sind Sie sicher, dass Sie die Datenbank '%s' löschen wollen? Dies wird alle Tabellen, deren Daten und die Datenbank unwiderruflich löschen. Folgende Anfrage wird ausgeführt:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "Wir bitten um Verzeihung, aber momentan werden nur Internet Explorer 7, Firefox, Safari und Opera unterstützt."
+msgstr: "Wir bitten um Verzeihung, aber momentan wird nur Internet Explorer 7 unterstützt, welchen Sie kostenlos von der Microsoft Webseite herunterladen können. Andere kostenlose Browser werden ebenfalls unterstützt, dazu zählen Firefox, Safari und Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
 msgstr: "Sie haben Cookies nicht aktiviert. Sie müssen Cookies einschalten, um sich einzuloggen."
@@ -625,7 +625,7 @@ msgstr[0]: "%d Zeile wurde übersprungen, weil die Anzahl der Werte nicht korrek
 msgstr[1]: "%d Zeilen wurden übersprungen, weil die Anzahl der Werte nicht korrekt waren"
 
 msgid: "Theme"
-msgstr: "Aussehen"
+msgstr: "Theme"
 
 msgid: "(%.4f seconds)"
 msgstr: "(%.4f Sekunden)"

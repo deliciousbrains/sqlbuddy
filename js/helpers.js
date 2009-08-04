@@ -645,7 +645,7 @@ function sizePage() {
 		if (sb.page == "browse.php")
 			var gridHeight = windowInnerHeight - 111;
 		else if (sb.page == "query.php")
-			var gridHeight = windowInnerHeight - 210;
+			var gridHeight = windowInnerHeight - 225;
 		
 		if (Browser.Engine.trident)
 			gridHeight = gridHeight - 9;

@@ -1,6 +1,6 @@
 Language: Русский
 Language-Code: ru_RU
-Build-Date: Wed, 18 Feb 2009 10:19:04 -0700
+Build-Date: Mon, 15 Jun 2009 12:13:08 -0600
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Файл не был прочитан или файл пуст"
@@ -318,13 +318,13 @@ msgstr: "удалить эти колонки"
 msgid: "delete this index"
 msgstr: "удалить индекс"
 
-msgid: "delete this indexes"
+msgid: "delete these indexes"
 msgstr: "удалить эти индексы"
 
 msgid: "delete this user"
 msgstr: "удалить пользователя"
 
-msgid: "delete this users"
+msgid: "delete these users"
 msgstr: "удалить указанных пользователей"
 
 msgid: "Are you sure you want to"
@@ -442,7 +442,7 @@ msgid: "browse tab - go to next page of results"
 msgstr: "Просмотреть на вкладке - переход на следующую страницу результатов"
 
 msgid: "optimize selected tables"
-msgstr: "оптимизировать выбранные таблицы"
+msgstr: "Оптимизировать выбранные таблицы"
 
 msgid: "Choose a .sql file to import"
 msgstr: "Выберите для импорта файл с расширением *.sql"
