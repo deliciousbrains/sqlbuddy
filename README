@@ -31,13 +31,6 @@ UPGRADING
 To upgrade SQL Buddy, its probably best to delete the old version then
 unzip the new version in its place.
 
-TRANSLATIONS
-
-SQL Buddy now has an online hub for translations. It allows a group 
-of people to collaborate together on a translation. The address is 
-http://www.sqlbuddy.com/translations/. If you have any questions about working
-on a translation, feel free to contact me using the form on the website.
-
 KEYBOARD SHORTCUTS
 
 There is a bunch of keyboard shortcuts available to speed up things like
@@ -50,11 +43,8 @@ which line you need to comment out.
 HELP
 
 If you need help, first check http://www.sqlbuddy.com/help/
-As I answer questions, I will add the answers to that page 
-for everyone to read.
 
-If you are still having trouble, you can contact me by using 
-the form at http://www.sqlbuddy.com/contact/
+A forum is also available at http://groups.google.com/group/sql-buddy/topics
 
 Thanks for your support,
 
