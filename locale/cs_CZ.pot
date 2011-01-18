@@ -1,6 +1,6 @@
 Language: Čeština
 Language-Code: cs_CZ
-Build-Date: Mon, 15 Jun 2009 12:09:04 -0600
+Build-Date: Tue, 18 Jan 2011 15:04:49 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Nelze číst ze souboru nebo je soubor prázdný"
@@ -174,7 +174,7 @@ msgid: "User not found!"
 msgstr: "Uživatel nenalezen"
 
 msgid: "You must export either structure, data, or both"
-msgstr: "Musí být buď vývozní struktury, dat nebo obojí "
+msgstr: "Musíte exportovat strukturu, data nebo obojí "
 
 msgid: "Please select the databases that you would like to export"
 msgstr: "Vyberte prosím databáze, které chcete exportovat."
@@ -493,10 +493,10 @@ msgid: "Your query did not return any results"
 msgstr: "Váš dotaz nevrátil žádný výsledek"
 
 msgid: "Your data has been inserted into the database"
-msgstr: "Vaše data byly vložena do databáze"
+msgstr: "Vaše data byla vložena do databáze"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: "Vyskytl se problém při hledání databáze \"%s\""
+msgstr: "Vyskytl se problém při hledání tabulky \"%s\""
 
 msgid: "There was a problem logging you in"
 msgstr: "Problém s přihlášením"
@@ -611,8 +611,8 @@ msgstr: "Jazyk"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: "% dotaz ze souboru proveden"
-msgstr[1]: "% dotazů ze souboru provedeno"
+msgstr[0]: "%d dotaz ze souboru proveden"
+msgstr[1]: "%d dotazů ze souboru provedeno"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
@@ -662,3 +662,6 @@ msgstr: "Nejsou k dispozici žádné aktualizace"
 
 msgid: "Change password"
 msgstr: "Změna hesla"
+
+msgid: "Redirecting..."
+msgstr: "Přesměrování..."

@@ -1,6 +1,6 @@
 Language: Slovenščina
 Language-Code: sl_SL
-Build-Date: Mon, 15 Jun 2009 12:15:21 -0600
+Build-Date: Tue, 18 Jan 2011 15:20:20 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Ali datoteke ni bilo mogoče prebrati ali pa je prazna"
@@ -662,3 +662,6 @@ msgstr: "Posodobitve niso na voljo"
 
 msgid: "Change password"
 msgstr: "Sprememba gesla"
+
+msgid: "Redirecting..."
+msgstr: "Preusmerjam..."

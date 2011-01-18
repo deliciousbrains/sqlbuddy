@@ -1,6 +1,6 @@
 Language: Lao
 Language-Code: lo_LA
-Build-Date: Mon, 15 Jun 2009 12:13:17 -0600
+Build-Date: Tue, 18 Jan 2011 15:12:42 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "ໄຟລ໌ບໍ່ສາມາດອ່ານໄດ້ ຫຼືວ່າງເປົ່າ"
@@ -662,3 +662,6 @@ msgstr: "ຍັງບໍ່ມີເວີຊັນອັບເດດໃໝ່�
 
 msgid: "Change password"
 msgstr: "ປ່ຽນລະຫັດຜ່ານ"
+
+msgid: "Redirecting..."
+msgstr: "ຕົກລົງ"

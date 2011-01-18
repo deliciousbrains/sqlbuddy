@@ -1,6 +1,6 @@
 Language: Українська
 Language-Code: uk_UA
-Build-Date: Mon, 15 Jun 2009 12:13:49 -0600
+Build-Date: Tue, 18 Jan 2011 15:25:14 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Файл неможливо прочитати або він порожній"
@@ -105,7 +105,7 @@ msgid: "Oops"
 msgstr: "Упс"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "Параметри бази не було включено у запит"
+msgstr: "По деяким причинам, параметри бази не було включено у запит"
 
 msgid: "Save changes to original"
 msgstr: "Зберегти зміни в оригіналі"
@@ -367,7 +367,7 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Ви з'єднані з MySQL %s як користувач %s.	"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "Сервер баз даних працює з %s іприблизно передав %s даних."
+msgstr: "Сервер баз даних працює з %s і приблизно передав %s даних."
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Доступна нова версія SQL Buddy"
@@ -385,7 +385,7 @@ msgid: "Translations"
 msgstr: "Переклади"
 
 msgid: "Release Notes"
-msgstr: ""
+msgstr: "Примітки до випуску"
 
 msgid: "Contact"
 msgstr: "Контакт"
@@ -397,13 +397,13 @@ msgid: "Did you know..."
 msgstr: "Чи знаєте ви..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: ""
+msgstr: "Існує простий спосіб вибрати велику групу елементів при перегляді записів в таблиці. Позначити перший рядок, утримуючи кнопку Shift, і позначте кінцевий рядок. Прапорці між цими рядками будуть автоматично позначені."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: ""
+msgstr: "Колонки в закладках запиту і перегляду розсовуємо. Відрегулюйте їх на скільки ви забажаєте."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: ""
+msgstr: "На сторінці входу використовується користувач за замовчуванням root@localhost. Ви можете відредагувати config.php і змінити користувача за умовчанням і хост."
 
 msgid: "Keyboard shortcuts"
 msgstr: "Клавіатурні скорочення"
@@ -412,34 +412,34 @@ msgid: "Press this key..."
 msgstr: "Натисніть цю кнопку..."
 
 msgid: "...and this will happen"
-msgstr: ""
+msgstr: "...і відбудеться ця дія"
 
 msgid: "select none"
-msgstr: ""
+msgstr: "зняти виділення"
 
 msgid: "edit selected items"
-msgstr: ""
+msgstr: "редагувати виділені елементи"
 
 msgid: "delete selected items"
-msgstr: ""
+msgstr: "видалити виділені елементи"
 
 msgid: "refresh page"
 msgstr: "оновити сторінку"
 
 msgid: "load the query tab"
-msgstr: ""
+msgstr: "Завантажити запит у вкладці"
 
 msgid: "browse tab - go to first page of results"
-msgstr: ""
+msgstr: "переглянути на вкладці - перейти до першої сторінки результатів"
 
 msgid: "browse tab - go to last page of results"
-msgstr: ""
+msgstr: "переглянути на вкладці - перейти до останьої сторінки результатів"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: ""
+msgstr: "переглянути на вкладці - перейти до попередньої сторінки результатів"
 
 msgid: "browse tab - go to next page of results"
-msgstr: ""
+msgstr: "переглянути на вкладці - перейти до наступної сторінки результатів"
 
 msgid: "optimize selected tables"
 msgstr: "оптимізувати виділені таблиці"
@@ -477,29 +477,29 @@ msgstr: "Останній"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "Ваш запит повернув %d результат"
+msgstr[1]: "Ваш запит повернув %d результатів"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: ""
+msgstr: "Щоб у Вас не виникло проблем з роботою браузеру тільки %d результатів будуть відображені"
 
 msgid: "binary data"
 msgstr: "двійкові дані"
 
 msgid: "Your query affected %d rows"
-msgstr: ""
+msgstr: "Ваш запит задіяв %d записів"
 
 msgid: "Your query did not return any results"
-msgstr: ""
+msgstr: "Ваш запит не повернув жодного результату"
 
 msgid: "Your data has been inserted into the database"
 msgstr: "Ваші дані внесено до бази даних"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: ""
+msgstr: "Виникла невелика проблема з пошуком таблиці \"%s\""
 
 msgid: "There was a problem logging you in"
-msgstr: ""
+msgstr: "Виникла проблема при спробі входу"
 
 msgid: "Login"
 msgstr: "Логін"
@@ -511,7 +511,7 @@ msgid: "Help!"
 msgstr: "Допомога!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: ""
+msgstr: "Час вашої сесії вичерпано. Будь-ласка увійдіть під логіном ще раз."
 
 msgid: "Username"
 msgstr: "Логін"
@@ -520,7 +520,7 @@ msgid: "Password"
 msgstr: "Пароль"
 
 msgid: "Run a query on the %s database"
-msgstr: ""
+msgstr: "Виконати запит до бази даних %s"
 
 msgid: "Columns"
 msgstr: "Стовбці"
@@ -577,19 +577,19 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Введіть відповідно формату: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "Ви впевнені, що хочете очистити таблицю '%s'? Всі дані з цієї таблиці буде видалено. Буде виконано такий запит: "
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: ""
+msgstr: "Ви впевнені, що хочете видалити таблицю '%s'? Це призведе до видалення таблиці та її даних. Буде виконано наступний запит:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: ""
+msgstr: "Ви впевнені, що хочете видалити базу данних '%s'? Це призведе до видалення бази даних, всіх її таблиць і даних в цих таблицях. Буде виконано наступний запит:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: ""
+msgstr: "Нам дуже шкода, але на даний момент підтримується тільки Internet Explorer 7. Він доступний для вільного завантаження з сайту компанії Майкрософт. Інші вільно-поширювані браузери так само підтримуються, включаючи Firefox, Safari і Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: ""
+msgstr: "Ви, здається, не включили підтримку кук. Для роботи сесій більшість інсталяцій php вимагає куки."
 
 msgid: "Importing..."
 msgstr: "Імпортую..."
@@ -604,34 +604,34 @@ msgid: "Cancel"
 msgstr: "Скасувати"
 
 msgid: "Storage engine"
-msgstr: ""
+msgstr: "Механізм збереження"
 
 msgid: "Language"
 msgstr: "Мова"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "Команда %d була виконана з вмісту файлу"
+msgstr[1]: "Команди %d були виконані з вмісту файлу"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "Рядок %d була вставлена в базу даних з вмісту файлу"
+msgstr[1]: "Строки %d були вставлені в базу даних з вмісту файлу"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "Рядок %d була пропущена, тому що кількість значень невірне"
+msgstr[1]: "Строки %d були пропущені, тому що кількість значень невірне"
 
 msgid: "Theme"
 msgstr: "тема"
 
 msgid: "(%.4f seconds)"
-msgstr: ""
+msgstr: "(%.4f секунд)"
 
 msgid: "The following errors were reported"
-msgstr: ""
+msgstr: "Виявлено наступні помилки"
 
 msgid: "You do not have enough permissions to create new users."
 msgstr: "Ви не маєте достатньо прав для створення нових користувачів"
@@ -662,3 +662,6 @@ msgstr: "Немає наявних поновленнь"
 
 msgid: "Change password"
 msgstr: "Змінити пароль"
+
+msgid: "Redirecting..."
+msgstr: "Перенаправлення..."

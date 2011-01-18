@@ -1,6 +1,6 @@
 Language: Magyar
 Language-Code: hu_HU
-Build-Date: Mon, 15 Jun 2009 12:09:22 -0600
+Build-Date: Tue, 18 Jan 2011 15:11:03 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "A fájl nem olvasható vagy üres"
@@ -9,7 +9,7 @@ msgid: "Error performing operation"
 msgstr: "Hiba a művelet elvégzésében"
 
 msgid: "All"
-msgstr: "Mind"
+msgstr: "Összes"
 
 msgid: "None"
 msgstr: "Nincs"
@@ -174,7 +174,7 @@ msgid: "User not found!"
 msgstr: "A felhasználó nem található!"
 
 msgid: "You must export either structure, data, or both"
-msgstr: "Neked exportálnod kell bármelyik szerkezetet, adatokat vagy mindkettőt "
+msgstr: "Exportálnod kell bármelyik szerkezetet, adatot vagy mindkettőt "
 
 msgid: "Please select the databases that you would like to export"
 msgstr: "Kérlek válaszd ki az exportálásra szánt adatbázisokat"
@@ -183,7 +183,7 @@ msgid: "Please select the tables that you would like to export"
 msgstr: "Kérlek válaszd ki az exportálásra szánt táblákat"
 
 msgid: "Table `%s` is empty"
-msgstr: "A '%s' tábla üres"
+msgstr: "A(z) '%s' tábla üres"
 
 msgid: "Results"
 msgstr: "Eredmények"
@@ -289,7 +289,7 @@ msgid: "Browse"
 msgstr: "Böngészés"
 
 msgid: "Your changes were saved to the database"
-msgstr: "A változásaid elmentésre kerültek az adatbázisba"
+msgstr: "A változásaid mentésre kerültek az adatbázisba"
 
 msgid: "delete this row"
 msgstr: "sor törlése"
@@ -298,10 +298,10 @@ msgid: "delete these rows"
 msgstr: "sorok törlése"
 
 msgid: "empty this table"
-msgstr: "a tábla üres"
+msgstr: "a tábla ürítése"
 
 msgid: "empty these tables"
-msgstr: "a táblák üresek"
+msgstr: "a táblák ürítése"
 
 msgid: "drop this table"
 msgstr: "tábla eldobása"
@@ -346,7 +346,7 @@ msgid: "Full Text"
 msgstr: "Teljes szöveg"
 
 msgid: "Loading..."
-msgstr: "Töltés..."
+msgstr: "Betöltés..."
 
 msgid: "Error"
 msgstr: "Hiba"
@@ -355,7 +355,7 @@ msgid: "There was an error receiving data from the server"
 msgstr: "Hiba lépett fel az adatok fogadása közben a szervertől"
 
 msgid: "Logout"
-msgstr: "Kilépés"
+msgstr: "Kijelentkezés"
 
 msgid: "For some reason, the table parameter was not included with your request"
 msgstr: "Valamilyen okból kifolyólag, a tábla paraméter nem volt belefoglalva a kérésbe"
@@ -364,7 +364,7 @@ msgid: "Welcome to SQL Buddy!"
 msgstr: "Üdvözöli az SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "MySQL %s-hoz vagy csatlakozva mint %s felhasználó."
+msgstr: "Csatlakozva a következőhöz: MySQL %s, mint %s felhasználó."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
 msgstr: "Az adatbázis szerver %s óta fut és hozzávetőlegesen %s adatforgalmat generált"
@@ -373,7 +373,7 @@ msgid: "A new version of SQL Buddy is available!"
 msgstr: "Az SQL Buddy egy újabb verziója elérhető!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "Az SQL Buddy %s verziója van installálva és elérhető a %s verzió"
+msgstr: "Az SQL Buddy %s verziója van telepítve és elérhető a(z) %s verzió"
 
 msgid: "Getting started"
 msgstr: "Elindulás"
@@ -403,7 +403,7 @@ msgid: "The columns in the browse and query tabs are resizable. Adjust them to a
 msgstr: "Az oszlopok szelessége a böngésző és lekérdezés fülekben változtatható. Állítsd őket amilyen szélesre vagy keskenyre akarod."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "A bejelentkezési oldal a root@localhost  alapértelmezett felhasználóján alapul. Újra szerkeszd a config.php fájlt és meg tudod változtatni az alapértelmezett felhasználót és host-ot bármire akarod."
+msgstr: "A bejelentkezési oldal a root@localhost  alapértelmezett felhasználóján alapul. A config.php fájl szerkeztésével meg tudod változtatni az alapértelmezett felhasználót és host-ot bármire."
 
 msgid: "Keyboard shortcuts"
 msgstr: "Gyorsbillentyűk"
@@ -412,7 +412,7 @@ msgid: "Press this key..."
 msgstr: "Nyomd le ezt a gombot..."
 
 msgid: "...and this will happen"
-msgstr: "... és ez fog történni"
+msgstr: "...és ez fog történni"
 
 msgid: "select none"
 msgstr: "nincs kiválasztva"
@@ -490,13 +490,13 @@ msgid: "Your query affected %d rows"
 msgstr: "A lekérdezésed %d sort adott vissza"
 
 msgid: "Your query did not return any results"
-msgstr: "A lekérdetésednek nincs eredménye"
+msgstr: "A lekérdezésednek nincs eredménye"
 
 msgid: "Your data has been inserted into the database"
 msgstr: "Az adat be lett szúrva az adatbázisba"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: "Egy kis probléma lépett fel a \"%s\" tábla keresése közben"
+msgstr: "Probléma lépett fel a(z) \"%s\" tábla keresése közben"
 
 msgid: "There was a problem logging you in"
 msgstr: "Probléma van a bejelentkezéseddel"
@@ -520,7 +520,7 @@ msgid: "Password"
 msgstr: "Jelszó"
 
 msgid: "Run a query on the %s database"
-msgstr: "Lekérdezés fut a %s adatbázison"
+msgstr: "Lekérdezés futtatása a(z) %s adatbázison"
 
 msgid: "Columns"
 msgstr: "Oszlopok"
@@ -577,19 +577,19 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "A következő formában kérem: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Biztosan ki akarod üríteni a '%s' táblát? Ezzel törölni fogod az összes adatot a táblában. A következő lekérdezés lesz lefuttatva:"
+msgstr: "Biztosan ki akarod üríteni a(z) '%s' táblát? Ezzel törölni fogod az összes adatot a táblában. A következő lekérdezés lesz lefuttatva:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Biztosan törölni szeretnéd a '%s' táblát? Ezzel törölni fogod a táblát és a benne lévő összes adatot. A következő lekérdezés lesz lefuttatva:"
+msgstr: "Biztosan törölni szeretnéd a(z) '%s' táblát? Ezzel törölni fogod a táblát és a benne lévő összes adatot. A következő lekérdezés lesz lefuttatva:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
 msgstr: "Biztosan törölni szeretnéd a(z) '%s' adatbázist? Ezzel törölni fogod az adatbázist, a benne lévő táblákat és a táblákban lévő összes adatot. A következő lekérdezés lesz lefuttatva:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "Sajnos csak az Internet Explorer 7 támogatott. Ingyenesen letölthető a Microsoft weboldaláról, egyéb ingyenes böngészők is támogatottak, mint a Firefox, Safari és az Opera."
+msgstr: "Sajnos csak az Internet Explorer 7 támogatott. Ingyenesen letölthető a Microsoft weboldaláról. Egyéb ingyenes böngészők is támogatottak, mint a Firefox, Safari és az Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: "Úgy tűnik a sütik-k nincsenek engedélyezve. A munkamenetek működéséhez a legtöbb PHP alkalmazásnak szüksége van a sütik-k engedélyezésére."
+msgstr: "Úgy tűnik a sütik nincsenek engedélyezve. A munkamenetek működéséhez, a legtöbb PHP alkalmazásnak szüksége van a sütik-k engedélyezésére."
 
 msgid: "Importing..."
 msgstr: "Importálás..."
@@ -640,10 +640,10 @@ msgid: "You do not have enough permissions to view or manage users."
 msgstr: "Nincs elegendő hozzáférési jogod, hogy megtekintsd vagy menedzseld a felhasználót."
 
 msgid: "You are connected to %s."
-msgstr: "Csatlakozva vagy a %s."
+msgstr: "Csatlakozva vagy a következőhöz: %s."
 
 msgid: "Allow access to"
-msgstr: "Hozzáférés engedélyezése a"
+msgstr: "Hozzáférés engedélyezése a(z)"
 
 msgid: "All databases"
 msgstr: "Összes adatbázis"
@@ -662,3 +662,6 @@ msgstr: "Nincsenek elérhető frissítések"
 
 msgid: "Change password"
 msgstr: "Jelszó csere"
+
+msgid: "Redirecting..."
+msgstr: "Átirányítás..."

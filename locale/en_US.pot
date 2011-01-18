@@ -1,6 +1,6 @@
 Language: English
 Language-Code: en_US
-Build-Date: Mon, 15 Jun 2009 12:18:35 -0600
+Build-Date: Tue, 18 Jan 2011 15:06:44 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: ""
@@ -661,4 +661,7 @@ msgid: "There are no updates available"
 msgstr: ""
 
 msgid: "Change password"
+msgstr: ""
+
+msgid: "Redirecting..."
 msgstr: ""

@@ -1,6 +1,6 @@
-Language: Ivrit
+Language: עִבְרִית
 Language-Code: he_IL
-Build-Date: Mon, 15 Jun 2009 12:09:32 -0600
+Build-Date: Tue, 18 Jan 2011 15:10:24 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "לא ניתן לקרוא את הקובץ, או שהוא ריק"
@@ -373,7 +373,7 @@ msgid: "A new version of SQL Buddy is available!"
 msgstr: "ישנה גרסה חדשה של SQL BUDDY"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: ""
+msgstr: "מערכת האתר הותקנה וכעת ניתן להכנס אליה"
 
 msgid: "Getting started"
 msgstr: "איך מתחילים"
@@ -662,3 +662,6 @@ msgstr: "אין עדכונים "
 
 msgid: "Change password"
 msgstr: "שנה ססמא"
+
+msgid: "Redirecting..."
+msgstr: "מפנה.."

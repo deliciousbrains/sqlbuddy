@@ -1,6 +1,6 @@
 Language: Bahasa Melayu
 Language-Code: ms_ID
-Build-Date: Mon, 15 Jun 2009 12:18:03 -0600
+Build-Date: Tue, 18 Jan 2011 15:13:59 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Sama ada fail berkenaan tidak dapat dibaca atau ianya kosong"
@@ -141,16 +141,16 @@ msgid: "Delete"
 msgstr: "Padam"
 
 msgid: "Alter"
-msgstr: ""
+msgstr: "Ubah"
 
 msgid: "Create"
 msgstr: "Cipta"
 
 msgid: "Temp tables"
-msgstr: ""
+msgstr: "Jadual sementara"
 
 msgid: "Administrator privileges"
-msgstr: ""
+msgstr: "Keistimewaan-keistimewaan pentadbir"
 
 msgid: "File"
 msgstr: "Fail"
@@ -159,7 +159,7 @@ msgid: "Process"
 msgstr: "Proses"
 
 msgid: "Reload"
-msgstr: ""
+msgstr: "Muatsemula"
 
 msgid: "Shutdown"
 msgstr: "Tutup"
@@ -168,7 +168,7 @@ msgid: "Super"
 msgstr: "Super"
 
 msgid: "Grant option"
-msgstr: ""
+msgstr: "Pilihan 'Grant'"
 
 msgid: "User not found!"
 msgstr: "Akaun pengguna tidak dijumpai"
@@ -198,7 +198,7 @@ msgid: "Could not write to file"
 msgstr: "Tidak dapat tulis ke fail berkenaan"
 
 msgid: "Successfully wrote content to file"
-msgstr: ""
+msgstr: "Berjaya menulis kandungan ke dalam fail"
 
 msgid: "Download"
 msgstr: "Muat turun"
@@ -247,7 +247,7 @@ msgid: "Comma"
 msgstr: "Koma"
 
 msgid: "Tab"
-msgstr: ""
+msgstr: "Tab"
 
 msgid: "Semicolon"
 msgstr: "koma bertitik"
@@ -256,13 +256,13 @@ msgid: "Space"
 msgstr: "Ruang"
 
 msgid: "Print field names on first line"
-msgstr: ""
+msgstr: "Cetak nama lajur di baris pertama"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
 msgstr: ""
 
 msgid: "Output to"
-msgstr: ""
+msgstr: "Keluarkan ke"
 
 msgid: "Browser"
 msgstr: "Layari"
@@ -283,7 +283,7 @@ msgid: "Import"
 msgstr: "Import"
 
 msgid: "Overview"
-msgstr: ""
+msgstr: "Umum"
 
 msgid: "Browse"
 msgstr: "Layari"
@@ -376,7 +376,7 @@ msgid: "You have SQL Buddy %s installed and %s is now available."
 msgstr: ""
 
 msgid: "Getting started"
-msgstr: ""
+msgstr: "Mula Di sini"
 
 msgid: "Help"
 msgstr: "Bantuan"
@@ -430,16 +430,16 @@ msgid: "load the query tab"
 msgstr: "muatkan tab kueri"
 
 msgid: "browse tab - go to first page of results"
-msgstr: ""
+msgstr: "pergi ke Laman Pertama"
 
 msgid: "browse tab - go to last page of results"
-msgstr: ""
+msgstr: "pergi ke Laman Terakhir"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: ""
+msgstr: "pergi ke laman sebelumnya"
 
 msgid: "browse tab - go to next page of results"
-msgstr: ""
+msgstr: "pergi ke laman selepas"
 
 msgid: "optimize selected tables"
 msgstr: "optimumkan jadual yang dipilih"
@@ -505,7 +505,7 @@ msgid: "Login"
 msgstr: "Log masuk"
 
 msgid: "Unsupported browser"
-msgstr: ""
+msgstr: "Pelayar tidak disokong"
 
 msgid: "Help!"
 msgstr: "Bantuan!"
@@ -520,7 +520,7 @@ msgid: "Password"
 msgstr: "Katalaluan"
 
 msgid: "Run a query on the %s database"
-msgstr: ""
+msgstr: "Laksakan kueri di pengkalan data %s"
 
 msgid: "Columns"
 msgstr: "Ruangan"
@@ -571,10 +571,10 @@ msgid: "Host"
 msgstr: "Hos"
 
 msgid: "Add a new user"
-msgstr: "Cipta akaun pengguna baru"
+msgstr: "Daftar akaun pengguna baru"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: ""
+msgstr: "Masukkan dalam format ('1', '2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
 msgstr: ""
@@ -586,7 +586,7 @@ msgid: "Are you sure you want to drop the database '%s'? This will delete the da
 msgstr: ""
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: ""
+msgstr: "Maaf. hanya IE7 yang disokong. pegi website Microsoft kalau mau download. Paling senang, JANGAN PAKAI INTERNET EXPLORER! guna Firefox!"
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
 msgstr: "Anda dikesan tidak mengaktifkan cookies. Untuk membolehkan sesi berjalan dengan baik, kebanyakkan instalasi PHP memerlukan cookies diaktifkan."
@@ -604,25 +604,25 @@ msgid: "Cancel"
 msgstr: "Batal"
 
 msgid: "Storage engine"
-msgstr: "Engin Penyimpanan"
+msgstr: "Enjin Penyimpanan"
 
 msgid: "Language"
 msgstr: "Bahasa"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "pernyataan %d telah dilaksanakan dari fail tersebut"
+msgstr[1]: "pernyataan %d telah dilaksanakan dari fail tersebut"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "sebanyak %d baris dari fail tersebut telah dimasukkan ke dalam pengkalan data "
+msgstr[1]: "sebanyak %d baris dari fail tersebut telah dimasukkan ke dalam pengkalan data "
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: ""
-msgstr[1]: "%d"
+msgstr[0]: "sebanyak %d baris data terpaksa diabaikan kerana bilangan nilai adalah tidak tepat"
+msgstr[1]: "sebanyak %d baris data terpaksa diabaikan kerana bilangan nilai adalah tidak tepat"
 
 msgid: "Theme"
 msgstr: "Tema"
@@ -662,3 +662,6 @@ msgstr: "Tiada pilihan kemaskini didapati"
 
 msgid: "Change password"
 msgstr: "Tukar katalaluan"
+
+msgid: "Redirecting..."
+msgstr: "Memindah haluan.."

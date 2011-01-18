@@ -1,6 +1,6 @@
 Language: Tiếng Việt
 Language-Code: vi_VN
-Build-Date: Mon, 15 Jun 2009 12:15:50 -0600
+Build-Date: Tue, 18 Jan 2011 15:25:45 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Không đọc được hoặc file không có dữ liệu"
@@ -662,3 +662,6 @@ msgstr: "Chưa có bản cập nhật"
 
 msgid: "Change password"
 msgstr: "Đổi mật khẩu"
+
+msgid: "Redirecting..."
+msgstr: "Chuyển trang"

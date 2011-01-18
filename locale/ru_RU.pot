@@ -1,6 +1,6 @@
 Language: Русский
 Language-Code: ru_RU
-Build-Date: Mon, 15 Jun 2009 12:13:08 -0600
+Build-Date: Tue, 18 Jan 2011 15:18:31 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Файл не был прочитан или файл пуст"
@@ -9,7 +9,7 @@ msgid: "Error performing operation"
 msgstr: "Ошибка во время выполнения операции"
 
 msgid: "All"
-msgstr: "Все"
+msgstr: "Всё"
 
 msgid: "None"
 msgstr: "Ничего"
@@ -102,7 +102,7 @@ msgid: "Add field"
 msgstr: "Добавить поле"
 
 msgid: "Oops"
-msgstr: "Упс..."
+msgstr: "Произошла ошибка..."
 
 msgid: "For some reason, the database parameter was not included with your request"
 msgstr: "По некоторой причине, параметр базы данных не был включен в ваш запрос"
@@ -132,7 +132,7 @@ msgid: "Select"
 msgstr: "Выбор"
 
 msgid: "Insert"
-msgstr: "Вставка"
+msgstr: "Вставить"
 
 msgid: "Update"
 msgstr: "Обновление"
@@ -150,7 +150,7 @@ msgid: "Temp tables"
 msgstr: "Временные таблицы"
 
 msgid: "Administrator privileges"
-msgstr: "Привелегии администратора"
+msgstr: "Привилегии администратора"
 
 msgid: "File"
 msgstr: "Файл"
@@ -171,7 +171,7 @@ msgid: "Grant option"
 msgstr: "Права доступа"
 
 msgid: "User not found!"
-msgstr: "Пользователь не найден!"
+msgstr: "Такой пользователь не найден!"
 
 msgid: "You must export either structure, data, or both"
 msgstr: "Вам следует экспортировать структуру, данные или всё вместе"
@@ -461,7 +461,7 @@ msgid: "Refresh"
 msgstr: "Обновить"
 
 msgid: "No primary key defined"
-msgstr: "Не указан основной ключ"
+msgstr: "Не указан основной кл3"
 
 msgid: "First"
 msgstr: "Первый"
@@ -505,16 +505,16 @@ msgid: "Login"
 msgstr: "Войти"
 
 msgid: "Unsupported browser"
-msgstr: "Неподдерживаемый браузер"
+msgstr: "Ваш браузер не поддерживается, извините."
 
 msgid: "Help!"
 msgstr: "Помогите!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: "Ваша сессия истекла. Пожалуйста, войдите снова."
+msgstr: "Увы, срок действия вашей сессии истёк. Пожалуйста, войдите снова."
 
 msgid: "Username"
-msgstr: "Имя пользоватея"
+msgstr: "Имя пользователя"
 
 msgid: "Password"
 msgstr: "Пароль"
@@ -662,3 +662,6 @@ msgstr: "Нет доступных обновлений"
 
 msgid: "Change password"
 msgstr: "Изменить пароль"
+
+msgid: "Redirecting..."
+msgstr: "Переадресация..."

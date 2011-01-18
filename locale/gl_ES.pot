@@ -1,6 +1,6 @@
 Language: Galego
 Language-Code: gl_ES
-Build-Date: Mon, 15 Jun 2009 12:18:11 -0600
+Build-Date: Tue, 18 Jan 2011 15:10:01 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Non puido ser lido ou está baleiro."
@@ -662,3 +662,6 @@ msgstr: "Non hai actualizacións dispoñibles"
 
 msgid: "Change password"
 msgstr: "Cambiar contrasinal"
+
+msgid: "Redirecting..."
+msgstr: "Ata luego rapaz....."

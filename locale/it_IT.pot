@@ -1,6 +1,6 @@
 Language: Italiano
 Language-Code: it_IT
-Build-Date: Mon, 15 Jun 2009 12:08:52 -0600
+Build-Date: Tue, 18 Jan 2011 15:12:00 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Non è possibile la lettura del file, oppure il file è vuoto."
@@ -48,7 +48,7 @@ msgid: "Charset"
 msgstr: "Set di caratteri"
 
 msgid: "Submit"
-msgstr: "Invio"
+msgstr: "Invia"
 
 msgid: "Create a new table"
 msgstr: "Crea una nuova tabella"
@@ -87,7 +87,7 @@ msgid: "Other"
 msgstr: "Altro"
 
 msgid: "Unsigned"
-msgstr: "Senza segno"
+msgstr: "Non firmato"
 
 msgid: "Binary"
 msgstr: "Binario"
@@ -168,7 +168,7 @@ msgid: "Super"
 msgstr: "Super"
 
 msgid: "Grant option"
-msgstr: "Garantisci opzione"
+msgstr: "Permessi"
 
 msgid: "User not found!"
 msgstr: "Utente non trovato!"
@@ -262,7 +262,7 @@ msgid: "If you are exporting a large number of rows, it is recommended that you 
 msgstr: "Se stai esportando un grande numero di righe, è raccomandabile visualizzare il risultato in un file di testo"
 
 msgid: "Output to"
-msgstr: "Visualizza"
+msgstr: "Esporta in"
 
 msgid: "Browser"
 msgstr: "Browser"
@@ -292,49 +292,49 @@ msgid: "Your changes were saved to the database"
 msgstr: "I cambiamenti sono stati salvati nel database"
 
 msgid: "delete this row"
-msgstr: "eliminare questa riga"
+msgstr: "elimina questa riga"
 
 msgid: "delete these rows"
-msgstr: "eliminare queste righe"
+msgstr: "elimina queste righe"
 
 msgid: "empty this table"
-msgstr: "svuotare questa tabella"
+msgstr: "svuota questa tabella"
 
 msgid: "empty these tables"
-msgstr: "svuotare queste tabelle"
+msgstr: "svuota queste tabelle"
 
 msgid: "drop this table"
-msgstr: "cancellare questa tabella"
+msgstr: "cancella questa tabella"
 
 msgid: "drop these tables"
-msgstr: "cancellare queste tabelle"
+msgstr: "cancella queste tabelle"
 
 msgid: "delete this column"
-msgstr: "eliminare questa colonna"
+msgstr: "elimina questa colonna"
 
 msgid: "delete these columns"
-msgstr: "eliminare queste colonne"
+msgstr: "elimina queste colonne"
 
 msgid: "delete this index"
-msgstr: "eliminare questo indice"
+msgstr: "elimina questo indice"
 
 msgid: "delete these indexes"
-msgstr: "eliminare questi indici"
+msgstr: "elimina questi indici"
 
 msgid: "delete this user"
-msgstr: "eliminare questo utente"
+msgstr: "elimina questo utente"
 
 msgid: "delete these users"
-msgstr: "eliminare questi utenti"
+msgstr: "elimina questi utenti"
 
 msgid: "Are you sure you want to"
-msgstr: "Sei sicuro di voler"
+msgstr: "Sei sicuro di volere"
 
 msgid: "The following query will be run:"
-msgstr: "La seguente query sarà eseguita:"
+msgstr: "Sarà eseguita la seguente query:"
 
 msgid: "The following queries will be run:"
-msgstr: "Le seguenti query saranno eseguite:"
+msgstr: "Saranno eseguite le seguenti query:"
 
 msgid: "Confirm"
 msgstr: "Conferma"
@@ -346,7 +346,7 @@ msgid: "Full Text"
 msgstr: "Full text"
 
 msgid: "Loading..."
-msgstr: "Caricamento..."
+msgstr: "Caricamento in corso..."
 
 msgid: "Error"
 msgstr: "Errore"
@@ -355,7 +355,7 @@ msgid: "There was an error receiving data from the server"
 msgstr: "Si è verificato un errore durante la ricezione dei dati dal server"
 
 msgid: "Logout"
-msgstr: "Esci"
+msgstr: "Disconnetti"
 
 msgid: "For some reason, the table parameter was not included with your request"
 msgstr: "Per qualche ragione i parametri non sono stati inclusi insieme alla tua richiesta"
@@ -367,10 +367,10 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Sei connesso a MySQL %s tramite l'utente %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "Il database sta girando da %s ed ha trasferito approssimativamente %s di dati."
+msgstr: "Il database è in esecuzione da %s ed ha trasferito approssimativamente %s di dati."
 
 msgid: "A new version of SQL Buddy is available!"
-msgstr: "Una nuova versione di SQL Buddy è disponibile!"
+msgstr: "E' disponibile una nuova versione di SQL Buddy!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
 msgstr: "Hai SQL Buddy %s installato e %s è ora disponibile."
@@ -391,7 +391,7 @@ msgid: "Contact"
 msgstr: "Contatti"
 
 msgid: "Create a new database"
-msgstr: "Crea un nuovo database"
+msgstr: "Crea nuovo database"
 
 msgid: "Did you know..."
 msgstr: "Lo sapevi che..."
@@ -403,7 +403,7 @@ msgid: "The columns in the browse and query tabs are resizable. Adjust them to a
 msgstr: "La dimensione delle colonne nella finestra ed il campo delle query sono ridimensionabili. Aumenta o diminuisci la dimensione a tuo piacimento."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "La pagine di autenticazione di default usa l'utente root@localhost. Editando il file config.php, è possibile modificare l'utente e dominio di default."
+msgstr: "La pagina di autenticazione di default usa l'utente root@localhost. Editando il file config.php, è possibile modificare l'utente e l'host di default."
 
 msgid: "Keyboard shortcuts"
 msgstr: "Scorciatoie da tastiera"
@@ -415,16 +415,16 @@ msgid: "...and this will happen"
 msgstr: "...e succederà questo"
 
 msgid: "select none"
-msgstr: "deselezionare tutto"
+msgstr: "deseleziona tutto"
 
 msgid: "edit selected items"
-msgstr: "editare gli oggetti selezionati"
+msgstr: "edita gli oggetti selezionati"
 
 msgid: "delete selected items"
-msgstr: "eliminare gli oggetti selezionati"
+msgstr: "elimina gli oggetti selezionati"
 
 msgid: "refresh page"
-msgstr: "aggiornare la pagina"
+msgstr: "aggiorna la pagina"
 
 msgid: "load the query tab"
 msgstr: "caricare il campo delle query"
@@ -442,7 +442,7 @@ msgid: "browse tab - go to next page of results"
 msgstr: "andare alla pagina seguente dei risultati"
 
 msgid: "optimize selected tables"
-msgstr: "Ottimizzare le tabelle selezionate"
+msgstr: "Ottimizza le tabelle selezionate"
 
 msgid: "Choose a .sql file to import"
 msgstr: "Seleziona un file .sql da importare"
@@ -496,13 +496,13 @@ msgid: "Your data has been inserted into the database"
 msgstr: "I dati sono stati inseriti nel database"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: "Ci sono stati degli errori nel localizzare la tabella \"%s\""
+msgstr: "Ci sono stati alcuni problemi nel localizzare la tabella \"%s\""
 
 msgid: "There was a problem logging you in"
 msgstr: "Ci sono stati dei problemi durante l'autenticazione"
 
 msgid: "Login"
-msgstr: "Autenticati"
+msgstr: "Login"
 
 msgid: "Unsupported browser"
 msgstr: "Browser non supportato"
@@ -511,7 +511,7 @@ msgid: "Help!"
 msgstr: "Aiuto!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: "La sessione è scaduta. Autenticati di nuovo."
+msgstr: "La sessione è scaduta. Autenticati nuovamente."
 
 msgid: "Username"
 msgstr: "Nome utente"
@@ -529,7 +529,7 @@ msgid: "Add a column"
 msgstr: "Aggiungi una colonna"
 
 msgid: "Insert this column"
-msgstr: "Inserisci una colonna"
+msgstr: "Inserisci questa colonna"
 
 msgid: "At end of table"
 msgstr: "Alla fine della tabella"
@@ -541,7 +541,7 @@ msgid: "After"
 msgstr: "Dopo"
 
 msgid: "Edit table"
-msgstr: "Modifica la tabella"
+msgstr: "Modifica tabella"
 
 msgid: "Indexes"
 msgstr: "Indici"
@@ -550,22 +550,22 @@ msgid: "Add an index"
 msgstr: "Aggiungi un indice"
 
 msgid: "Column(s)"
-msgstr: "Colonna/e"
+msgstr: "Colonna(e)"
 
 msgid: "Show %d more..."
 msgstr: "Mostra %d in più..."
 
 msgid: "Empty table"
-msgstr: "Svuota la tabella"
+msgstr: "Svuota tabella"
 
 msgid: "Drop table"
-msgstr: "Elimina la tabella"
+msgstr: "Elimina tabella"
 
 msgid: "Optimize table"
-msgstr: "Ottimizza la tabella"
+msgstr: "Ottimizza tabella"
 
 msgid: "Table Information"
-msgstr: "Tabella Riepilogativa"
+msgstr: "Tabella riepilogativa"
 
 msgid: "Host"
 msgstr: "Dominio"
@@ -577,22 +577,22 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Inserisci nel formato: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Sei sicuro di voler svuotare la tabella '%s'? Questa operazione eliminerà i dati all'interno della tabella. La query seguente verrà  eseguita:"
+msgstr: "Sei sicuro di voler svuotare la tabella '%s'? Questa operazione eliminerà i dati all'interno della tabella. Verrà eseguita la seguente query:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Sei sicuro di voler eliminare la tabella '%s'? Questa operazione eliminerà i dati all'interno della tabella. La query seguente verrà  eseguita:"
+msgstr: "Sei sicuro di voler eliminare la tabella '%s'? Questa operazione eliminerà la tabella e tutti i dati al suo interno. Verrà eseguita la seguente query:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Sei sicuro di voler cancellare il database '%s'? Questa operazione cancellerà, insieme al database, le tabelle ed ogni dato presente all'interno di esse. La query seguente verrà  eseguita:"
+msgstr: "Sei sicuro di voler cancellare il database '%s'? Questa operazione cancellerà il database, le tabelle al suo interno ed ogni dato presente all'interno di esse. Verrà eseguita la seguente query:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "Siamo spiacenti ma solo Internet Explorer 7 è supportato. È possibile scaricarlo gratuitamente dal sito internet della Microsoft. Altrimenti è possbile utilizzare altri browser gratuiti tra cui Firefox, Safari ed Opera."
+msgstr: "Siamo spiacenti ma attualmente è supportato solo Internet Explorer 7. È possibile scaricarlo gratuitamente dal sito internet della Microsoft. Sono supportati anche altri browser gratuiti tra cui Firefox, Safari ed Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
 msgstr: "Sembra che il tuo browser non accetti i cookies. Per far funzionare le sessioni, molte installazioni di php richiedono i cookies abilitati."
 
 msgid: "Importing..."
-msgstr: "Importazione..."
+msgstr: "Importazione in corso..."
 
 msgid: "Drop the '%s' database"
 msgstr: "Cancellazione del database '%s'"
@@ -604,7 +604,7 @@ msgid: "Cancel"
 msgstr: "Cancella"
 
 msgid: "Storage engine"
-msgstr: "Motore di memorizzazione"
+msgstr: "Motore di archiviazione"
 
 msgid: "Language"
 msgstr: "Lingua"
@@ -631,13 +631,13 @@ msgid: "(%.4f seconds)"
 msgstr: "(%.4f secondi)"
 
 msgid: "The following errors were reported"
-msgstr: "I seguenti errori sono stati riscontrati"
+msgstr: "Sono stati riscontrati i seguenti errori"
 
 msgid: "You do not have enough permissions to create new users."
 msgstr: "Non hai permessi sufficienti per creare nuovi utenti."
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: "Non hai permessi sufficienti per gestire gli utenti."
+msgstr: "Non hai permessi sufficienti per vedere o gestire gli utenti."
 
 msgid: "You are connected to %s."
 msgstr: "Sei connesso a %s."
@@ -658,7 +658,10 @@ msgid: "Updates"
 msgstr: "Aggiornamenti"
 
 msgid: "There are no updates available"
-msgstr: "Nessun aggiornamento disponibile"
+msgstr: "Non ci sono aggiornamenti disponibili"
 
 msgid: "Change password"
 msgstr: "Cambia password"
+
+msgid: "Redirecting..."
+msgstr: "Reindirizzamento in corso..."

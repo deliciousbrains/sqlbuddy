@@ -1,6 +1,6 @@
 Language: Türkçe
 Language-Code: tr_TR
-Build-Date: Mon, 15 Jun 2009 12:13:42 -0600
+Build-Date: Tue, 18 Jan 2011 15:24:42 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Dosya okunamıyor veya boş"
@@ -192,7 +192,7 @@ msgid: "Select all"
 msgstr: "Hepsini seç"
 
 msgid: "The file could not be opened"
-msgstr: "Dosya a"
+msgstr: "Dosya açılamıyor"
 
 msgid: "Could not write to file"
 msgstr: "Dosyaya yazılamıyor"
@@ -583,10 +583,10 @@ msgid: "Are you sure you want to drop the '%s' table? This will delete the table
 msgstr: "'%s' tablosunu silmek istediğinizden emin misiniz? Bu işlem tabloyu ve içerisindeki bütün verileri silecektir. Çalıştırılacakacak sorgu:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "'%s' veritabanını silmek istediÄŸinizden emin misiniz? Bu iÅŸlem veritabanÄ±nÄ±, iÃ§erisindeki tablolarÄ± ve tablolar iÃ§erisindeki bÃ¼tÃ¼n verileri silecektir. Ã‡alÄ±ÅŸtÄ±rÄ±lacak sorgu:"
+msgstr: "'%s' veritabanını silmek istediÄŸinizden emin misiniz? Bu işlem veritabanını, içerisindeki tabloları ve tablolar içerisindeki bütün verileri silecektir. Çalıştırılacak sorgu:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "ÃœzgÃ¼nÃ¼z ancak sadece Internet Explorer 7 desteklenmektedir. Microsoft'un web sayfaından bedava indirmek mümkündür Firefox, Safari ve Opera dahil olmak Ã¼zere diÄŸer bedava tarayÄ±cÄ±lar da desteklenmektedir."
+msgstr: "Üzgünüz ancak sadece Internet Explorer 7 desteklenmektedir. Microsoft'un web sayfaından bedava indirmek mümkündür Firefox, Safari ve Opera dahil olmak üzere diğer bedava tarayıcılar da desteklenmektedir."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
 msgstr: "Görünen o ki cookieleriniz seçili değil. Oturumların çalışması için birçok php kurulumu cookie gerektirir."
@@ -662,3 +662,6 @@ msgstr: "Güncelleme yok"
 
 msgid: "Change password"
 msgstr: "Şifre değiştir"
+
+msgid: "Redirecting..."
+msgstr: "Yönlendiriliyor..."

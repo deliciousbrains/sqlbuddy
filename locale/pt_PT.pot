@@ -1,6 +1,6 @@
 Language: Português (Portugal)
 Language-Code: pt_PT
-Build-Date: Mon, 15 Jun 2009 12:15:19 -0600
+Build-Date: Tue, 18 Jan 2011 15:16:35 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "O ficheiro não pode ser lido ou estava vazio "
@@ -201,7 +201,7 @@ msgid: "Successfully wrote content to file"
 msgstr: "O conteúdo foi escrito para o ficheiro com sucesso"
 
 msgid: "Download"
-msgstr: "Download"
+msgstr: "Transferir"
 
 msgid: "Note
 "
@@ -403,7 +403,7 @@ msgid: "The columns in the browse and query tabs are resizable. Adjust them to a
 msgstr: "As colunas nos separadores de procura e comando são redimensionáveis. Ajuste-as para mais largas ou mais estreitas, conforme preferir."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "A página de login baseia-se no utilizador pré-definido root@localhost.com. Editando o ficheiro config.php, é possível mudar este utilizador e o servidor."
+msgstr: "A página de login baseia-se no utilizador pré-definido root@localhost. Editando o ficheiro config.php, é possível mudar este utilizador e o servidor."
 
 msgid: "Keyboard shortcuts"
 msgstr: "Atalhos do teclado"
@@ -583,7 +583,7 @@ msgid: "Are you sure you want to drop the '%s' table? This will delete the table
 msgstr: "Tem a certeza que pretende apagar a tabela '%s'? Isto elimina a tabela e todos os dados contidos na mesma. O comando seguinte será executado:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Tem a certeza que pretende apagar a base de dados '%s'? Isto elimina a base de dados, as tabelas e os dados contidos nas tabelas. O comando seguinte serÃ¡ executado:"
+msgstr: "Tem a certeza que pretende apagar a base de dados '%s'? Isto elimina a base de dados, as tabelas e os dados contidos nas tabelas. O comando seguinte será executado:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
 msgstr: "Lamentamos, mas actualmente só o Internet Explorer 7 é suportado. Está disponível gratuitamente por download no website da Microsoft. Outros navegadores gratuitos também são suportados, incluindo o Firefox, o Safari e o Opera."
@@ -662,3 +662,6 @@ msgstr: "Não há actualizações disponíveis"
 
 msgid: "Change password"
 msgstr: "Alterar palavra-passe"
+
+msgid: "Redirecting..."
+msgstr: "Redireccionando..."

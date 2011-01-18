@@ -1,6 +1,6 @@
 Language: Slovenčina
 Language-Code: sk_SK
-Build-Date: Mon, 15 Jun 2009 12:18:16 -0600
+Build-Date: Tue, 18 Jan 2011 15:19:32 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Zo súboru nemožno čítať alebo je súbor prázdny"
@@ -102,7 +102,7 @@ msgid: "Add field"
 msgstr: "Pridať pole"
 
 msgid: "Oops"
-msgstr: "Hopla"
+msgstr: "ups"
 
 msgid: "For some reason, the database parameter was not included with your request"
 msgstr: "Z nejakého dôvodu, parameter databázy nebol zahrnutý v dopyte"
@@ -511,7 +511,7 @@ msgid: "Help!"
 msgstr: "Pomoc!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: "Vaša relácia vypršala. Prosím, znovu sa prihláste."
+msgstr: "Vaša relácia vypršala. Prosím, prihláste sa znovu."
 
 msgid: "Username"
 msgstr: "Používateľské meno"
@@ -662,3 +662,6 @@ msgstr: "Nie su dostupné žiadne aktualizácie"
 
 msgid: "Change password"
 msgstr: "Zmeniť heslo"
+
+msgid: "Redirecting..."
+msgstr: "Presmerujem..."

@@ -1,6 +1,6 @@
 Language: Esperanto
 Language-Code: eo_EO
-Build-Date: Mon, 15 Jun 2009 19:16:42 -0600
+Build-Date: Tue, 18 Jan 2011 15:07:00 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "La dosiero aŭ ne povas esti legata aŭ estas malplena"
@@ -662,3 +662,6 @@ msgstr: "Ne estas ĝisdatigoj"
 
 msgid: "Change password"
 msgstr: "Ŝanĝi pasvorton"
+
+msgid: "Redirecting..."
+msgstr: "Bonvolu atendi dum vi post pagxo."

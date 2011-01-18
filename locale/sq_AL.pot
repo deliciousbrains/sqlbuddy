@@ -1,667 +1,668 @@
-Language: 中文 (繁體)
-Language-Code: zh_TW
-Build-Date: Tue, 18 Jan 2011 15:26:25 -0700
+Language: Shqip
+Language-Code: sq_AL
+Build-Date: Tue, 18 Jan 2011 15:50:19 -0700
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "檔案空白或無法讀取"
+msgstr: "Fajlli nuk mund te lexohet ose eshte i zbrazet"
 
 msgid: "Error performing operation"
-msgstr: "執行程序錯誤"
+msgstr: "Gabim gjate operacionit"
 
 msgid: "All"
-msgstr: "全部"
+msgstr: "Gjitha"
 
 msgid: "None"
-msgstr: "全不選"
+msgstr: "Asnje"
 
 msgid: "With selected"
-msgstr: "針對已選取項目"
+msgstr: "Me te selektuarat"
 
 msgid: "Empty"
-msgstr: "清空"
+msgstr: "Zbraz"
 
 msgid: "Drop"
-msgstr: "刪除"
+msgstr: "Hedhe"
 
 msgid: "Optimize"
-msgstr: "最佳化"
+msgstr: "Optimizoje"
 
 msgid: "Table"
-msgstr: "表格"
+msgstr: "Tabela"
 
 msgid: "Rows"
-msgstr: "列"
+msgstr: "Rrjeshtat"
 
 msgid: "Size"
-msgstr: "大小"
+msgstr: "Madhesia"
 
 msgid: "Overhead"
-msgstr: "多餘空間"
+msgstr: "Siper"
 
 msgid: "Options"
-msgstr: "選項"
+msgstr: "Opcionet"
 
 msgid: "Edit database"
-msgstr: "編輯資料庫"
+msgstr: "Rregullo databazen"
 
 msgid: "Charset"
-msgstr: "語系"
+msgstr: "Charset"
 
 msgid: "Submit"
-msgstr: "送出"
+msgstr: "Paraqit"
 
 msgid: "Create a new table"
-msgstr: "建立表格"
+msgstr: "Krijo tabele te re"
 
 msgid: "Name"
-msgstr: "名稱"
+msgstr: "Emri"
 
 msgid: "Setup the fields for the table below"
-msgstr: "為表格設定欄位"
+msgstr: "Ndertoj fushat per tabelen me poshte"
 
 msgid: "New field"
-msgstr: "新欄位"
+msgstr: "Fushe e re"
 
 msgid: "Type"
-msgstr: "型態"
+msgstr: "Lloji"
 
 msgid: "Values"
-msgstr: "數值"
+msgstr: "Vlera"
 
 msgid: "Key"
-msgstr: "鍵"
+msgstr: "Grepi"
 
 msgid: "primary"
-msgstr: "主鍵"
+msgstr: "primare"
 
 msgid: "unique"
-msgstr: "唯一"
+msgstr: "unike"
 
 msgid: "index"
-msgstr: "索引"
+msgstr: "indeks"
 
 msgid: "Default"
-msgstr: "預設值"
+msgstr: "Default"
 
 msgid: "Other"
-msgstr: "其他"
+msgstr: "Tjeter"
 
 msgid: "Unsigned"
-msgstr: "無正負"
+msgstr: "E panënshkruar"
 
 msgid: "Binary"
-msgstr: "二進位制"
+msgstr: "Binar"
 
 msgid: "Not Null"
-msgstr: "不可為空白"
+msgstr: "Jo e zbrazet"
 
 msgid: "Auto Increment"
-msgstr: "自動增加"
+msgstr: "Auto-rritje"
 
 msgid: "Add field"
-msgstr: "新增欄位"
+msgstr: "Shto fushe"
 
 msgid: "Oops"
-msgstr: "哎呀"
+msgstr: "upss"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "因為某種原因，資料庫變數並沒有與您的要求一起送出"
+msgstr: "Per disa arsyeje, parametrat e databazes nuk jane bashkangjitur ne kerkese"
 
 msgid: "Save changes to original"
-msgstr: "將變更儲存至原始"
+msgstr: "Ruaj ndryshimet ne origjinal"
 
 msgid: "Insert as new row"
-msgstr: "以新的一列插入"
+msgstr: "Shto si rrjesht te ri"
 
 msgid: "Save"
-msgstr: "儲存"
+msgstr: "Ruaj"
 
 msgid: "User"
-msgstr: "使用者"
+msgstr: "Përdorues"
 
 msgid: "All privileges"
-msgstr: "所有權限"
+msgstr: "Gjitha privilegjet"
 
 msgid: "Selected privileges"
-msgstr: "指定的權限"
+msgstr: "Privilegjet e zgjedhura"
 
 msgid: "User privileges"
-msgstr: "使用者權限"
+msgstr: "Privilegjet e perdoruesit"
 
 msgid: "Select"
-msgstr: "選擇"
+msgstr: "Zgjedh"
 
 msgid: "Insert"
-msgstr: "插入"
+msgstr: "Shto"
 
 msgid: "Update"
-msgstr: "更新"
+msgstr: "Perditeso"
 
 msgid: "Delete"
-msgstr: "刪除"
+msgstr: "Fshij"
 
 msgid: "Alter"
-msgstr: "修改"
+msgstr: "Shendrro"
 
 msgid: "Create"
-msgstr: "建立"
+msgstr: "Krijo"
 
 msgid: "Temp tables"
-msgstr: "暫存表格"
+msgstr: "Tabelat e perkoheshme"
 
 msgid: "Administrator privileges"
-msgstr: "管理者權限"
+msgstr: "Privilegjet e administratorit"
 
 msgid: "File"
-msgstr: "檔案"
+msgstr: "Fajll"
 
 msgid: "Process"
-msgstr: "程序"
+msgstr: "Proces"
 
 msgid: "Reload"
-msgstr: "重新載入"
+msgstr: "Rifresko"
 
 msgid: "Shutdown"
-msgstr: "關閉"
+msgstr: "Fike"
 
 msgid: "Super"
-msgstr: "超級"
+msgstr: "Super"
 
 msgid: "Grant option"
-msgstr: "授權選項"
+msgstr: "Jep opcione"
 
 msgid: "User not found!"
-msgstr: "找不到使用者!"
+msgstr: "Perdoruesi nuk u gjet."
 
 msgid: "You must export either structure, data, or both"
-msgstr: "您必須要匯出結構、資料，或兩者"
+msgstr: "You duhet te eksportoni strukturen, permbajtjen apo te dyjat"
 
 msgid: "Please select the databases that you would like to export"
-msgstr: "請選擇您欲匯出的資料庫"
+msgstr: "Ju lutemi zgjedheni databazen qe deshironi te eksportoni"
 
 msgid: "Please select the tables that you would like to export"
-msgstr: "請選擇您欲匯出的表格"
+msgstr: "Ju lutemi zgjedheni tabelat qe deshironi te eksportoni"
 
 msgid: "Table `%s` is empty"
-msgstr: "表格 `%s` 空白"
+msgstr: "Tabela `%s` eshte e zbrazet"
 
 msgid: "Results"
-msgstr: "結果"
+msgstr: "Rezultatet"
 
 msgid: "Select all"
-msgstr: "全選"
+msgstr: "Zgjedh gjitha"
 
 msgid: "The file could not be opened"
-msgstr: "檔案無法開啟"
+msgstr: "Fajlli nuk mund te hapet"
 
 msgid: "Could not write to file"
-msgstr: "無法寫入檔案"
+msgstr: "Nuk mund te shkruaj"
 
 msgid: "Successfully wrote content to file"
-msgstr: "成功將內容寫入檔案"
+msgstr: "Permbajtja u shkruaj me sukses ne fajll"
 
 msgid: "Download"
-msgstr: "下載"
+msgstr: "Shkarko"
 
 msgid: "Note
 "
-msgstr: "備註"
+msgstr: "Notë"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
-msgstr: "如果這是一個公開的伺服器，您應該在下載這個檔案後將它刪除"
+msgstr: "Nese ky eshte nje server publik, you duhet ta fshijni kete fajll pasi ta keni shkarkuar"
 
 msgid: "Export"
-msgstr: "匯出"
+msgstr: "Eksport"
 
 msgid: "Tables"
-msgstr: "表格"
+msgstr: "Tabelat"
 
 msgid: "Databases"
-msgstr: "資料庫"
+msgstr: "Databazat"
 
 msgid: "Format"
-msgstr: "格式"
+msgstr: "Formatizo"
 
 msgid: "SQL"
 msgstr: "SQL"
 
 msgid: "CSV"
-msgstr: "CSV"
+msgstr: "CVS"
 
 msgid: "Structure"
-msgstr: "結構"
+msgstr: "Struktura"
 
 msgid: "Data"
-msgstr: "資料"
+msgstr: "Permbajtja"
 
 msgid: "Compact inserts"
-msgstr: "簡潔插入"
+msgstr: "Ngjeshe permbajtjen e futur"
 
 msgid: "Complete inserts"
-msgstr: "完整插入"
+msgstr: "Kompleto permbajtjen e futur"
 
 msgid: "Delimiter"
-msgstr: "分隔符號"
+msgstr: "Delimeter"
 
 msgid: "Comma"
-msgstr: "逗號"
+msgstr: "Presje"
 
 msgid: "Tab"
-msgstr: "移字符號 (Tab)"
+msgstr: "Tabular"
 
 msgid: "Semicolon"
-msgstr: "分號"
+msgstr: "Pikëpresje"
 
 msgid: "Space"
-msgstr: "空白"
+msgstr: "Hapsire"
 
 msgid: "Print field names on first line"
-msgstr: "在第一行輸出欄位名稱"
+msgstr: "Shtyp emrat e fushave ne rrjeshtin e pare"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "如果您匯出的列數相當的多，建議您將結果輸出至文字檔案"
+msgstr: "Nese jeni duke eksportuar nje numer te madh te rrjeshtave, eshte e rekomanduar te di ruani ne nje tekst fajll"
 
 msgid: "Output to"
-msgstr: "輸出到"
+msgstr: "Ruaj si"
 
 msgid: "Browser"
-msgstr: "瀏覽器"
+msgstr: "Browser"
 
 msgid: "Text file"
-msgstr: "文字檔案"
+msgstr: "Tekst fajll"
 
 msgid: "Home"
-msgstr: "首頁"
+msgstr: "Home"
 
 msgid: "Users"
-msgstr: "使用者"
+msgstr: "Perdoruesit"
 
 msgid: "Query"
-msgstr: "指令"
+msgstr: "Kueri"
 
 msgid: "Import"
-msgstr: "匯入"
+msgstr: "Import"
 
 msgid: "Overview"
-msgstr: "概要"
+msgstr: "Pasqyra"
 
 msgid: "Browse"
-msgstr: "瀏覽"
+msgstr: "Gjej"
 
 msgid: "Your changes were saved to the database"
-msgstr: "您的變更已儲存至資料庫"
+msgstr: "Ndryshimet u ruajten ne databaze"
 
 msgid: "delete this row"
-msgstr: "刪除這列"
+msgstr: "fshijni kete rrjesht"
 
 msgid: "delete these rows"
-msgstr: "刪除這幾列"
+msgstr: "fshijni keto rrjeshta"
 
 msgid: "empty this table"
-msgstr: "清空這個表格"
+msgstr: "zbrazeni kete tabele"
 
 msgid: "empty these tables"
-msgstr: "清空這些表格"
+msgstr: "zbrazeni keto tabela"
 
 msgid: "drop this table"
-msgstr: "刪除這個表格"
+msgstr: "hedheni kete tabele"
 
 msgid: "drop these tables"
-msgstr: "刪除這些表格"
+msgstr: "hedheni keto tabela"
 
 msgid: "delete this column"
-msgstr: "刪除這個欄位"
+msgstr: "fshijni kete kolone"
 
 msgid: "delete these columns"
-msgstr: "刪除這些欄位"
+msgstr: "fshijni keto kolona"
 
 msgid: "delete this index"
-msgstr: "刪除這個索引"
+msgstr: "fshijni kete indeks"
 
 msgid: "delete these indexes"
-msgstr: "刪除這些索引"
+msgstr: "fshijni keto indekse"
 
 msgid: "delete this user"
-msgstr: "刪除這個使用者"
+msgstr: "fshijni kete perdorues"
 
 msgid: "delete these users"
-msgstr: "刪除這些使用者"
+msgstr: "fshijni keta perdorues"
 
 msgid: "Are you sure you want to"
-msgstr: "您確定您要"
+msgstr: "A jeni i sigurt se doni te"
 
 msgid: "The following query will be run:"
-msgstr: "下列的語法將被執行:"
+msgstr: "Kjo kerkese do te ekzekutohet"
 
 msgid: "The following queries will be run:"
-msgstr: "下列的語法將被執行:"
+msgstr: "Keto kerkesa do te ekzekutohen"
 
 msgid: "Confirm"
-msgstr: "確認"
+msgstr: "Konfirmo"
 
 msgid: "Successfully saved changes"
-msgstr: "成功的儲存變更"
+msgstr: "Ndryshimet u ruajten me sukses"
 
 msgid: "Full Text"
-msgstr: "全文"
+msgstr: "Gjithe tekst"
 
 msgid: "Loading..."
-msgstr: "載入中..."
+msgstr: "Loading"
 
 msgid: "Error"
-msgstr: "錯誤"
+msgstr: "Gabim"
 
 msgid: "There was an error receiving data from the server"
-msgstr: "在從伺服器接收資料時發生錯誤"
+msgstr: "Kishte nje gabim gjate marrjes se permbajtjes nga serveri"
 
 msgid: "Logout"
-msgstr: "登出"
+msgstr: "Çkyçu"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: "因為某種原因，表格變數並沒有與您的要求送出"
+msgstr: "Per disa arsyeje, parametrat e tabeles nuk jane bashkangjitur ne kerkese"
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "歡迎使用 SQL Buddy!"
+msgstr: "Miresevini ne SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "您已連結到 MySQL %s，並登入為使用者 %s。"
+msgstr: "Ju jeni lidhur ne MySQL %s si perdoruesi %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "資料庫伺服器自從 %s 起已傳輸了大約 %s 的資料。"
+msgstr: "Serveri i databazes eshte i ndezur qe nga %s dhe ka transferuar perafersisht %s te permbajtjes"
 
 msgid: "A new version of SQL Buddy is available!"
-msgstr: "新版的 SQL Buddy 已經釋出!"
+msgstr: "Verzioni i ri i SQL Buddy eshte gati!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "您已成功安裝 SQL Buddy %s ，最新版本是 %s 。"
+msgstr: "Ju keni SQL Buddy %s te instaluar dhe %s eshte gati."
 
 msgid: "Getting started"
-msgstr: "快速入門"
+msgstr: "Gati te filloni"
 
 msgid: "Help"
-msgstr: "說明"
+msgstr: "Ndihma"
 
 msgid: "Translations"
-msgstr: "翻譯"
+msgstr: "Perkthimet"
 
 msgid: "Release Notes"
-msgstr: "發行說明"
+msgstr: "Shenimet e Verzionit"
 
 msgid: "Contact"
-msgstr: "聯絡"
+msgstr: "Kontakti"
 
 msgid: "Create a new database"
-msgstr: "建立新的資料庫"
+msgstr: "Krijo nje databaze te re"
 
 msgid: "Did you know..."
-msgstr: "您知道嗎..."
+msgstr: "A e dini se ..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
-msgstr: "有一個比較快的方法可以在瀏覽表格時選取大量的項目。勾選第一列、按住 Shift、再勾選最後一列。兩列之間的項目將自動被選取。"
+msgstr: "Per te selektuar me shume se nje rrjesht, Zgjedheni te parin, mbajeni SHIFT dhe zgjedheni te fundit."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: "在瀏覽及指令分頁中的欄位大小是可以調整的。依您的喜好將它們調寬或調窄。"
+msgstr: "Kolonat ja te rizmadhueshme, afrohu me kursor ne mes te du kolonafe tek rrjeshti i pare."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "登入頁面是以預設使用者 root@localhost 為基礎。您可以透過編輯 config.php 改變預設的使用者及主%"
+msgstr: "Faqja e kyqjes eshte e bazuar ne root@localhost, "
 
 msgid: "Keyboard shortcuts"
-msgstr: "快速鍵"
+msgstr: "Shkurtesat e tastieres"
 
 msgid: "Press this key..."
-msgstr: "按這個..."
+msgstr: "Shtyp kete tast..."
 
 msgid: "...and this will happen"
-msgstr: "...然後就會這樣"
+msgstr: "... dhe kjo do te ndodhe"
 
 msgid: "select none"
-msgstr: "全不選"
+msgstr: "mos zgjedh asnjeren"
 
 msgid: "edit selected items"
-msgstr: "編輯已選取的項目"
+msgstr: "ndrysho gjerat e zgjedhura"
 
 msgid: "delete selected items"
-msgstr: "刪除已選取的項目"
+msgstr: "fshij gjerat e zgjedhura"
 
 msgid: "refresh page"
-msgstr: "重新載入頁面"
+msgstr: "Rifresko faqen"
 
 msgid: "load the query tab"
-msgstr: "載入語法分頁"
+msgstr: "ngarko tabin e pyetjes"
 
 msgid: "browse tab - go to first page of results"
-msgstr: "瀏覽分頁 - 移至結果的第一頁"
+msgstr: "shko tek faqja e pare e rezultateve"
 
 msgid: "browse tab - go to last page of results"
-msgstr: "瀏覽分頁 - 移至結果的最末頁"
+msgstr: "shko tek faqja e fundit e rezultateve"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: "瀏覽分頁 - 移至結果的前一頁"
+msgstr: "shko tek faqja e paraprake e rezultateve"
 
 msgid: "browse tab - go to next page of results"
-msgstr: "瀏覽分頁 - 移至結果的下一頁"
+msgstr: "shko tek faqja e ardhshme e rezultateve"
 
 msgid: "optimize selected tables"
-msgstr: "最佳化選取的表格"
+msgstr: "optimizo tabelat e zgjedhura"
 
 msgid: "Choose a .sql file to import"
-msgstr: "選取欲匯入的 .sql 檔案"
+msgstr: "Zgjedhe nje .sql fajll per import"
 
 msgid: "File
 "
-msgstr: "檔案"
+msgstr: "Fajll"
 
 msgid: "Ignore first line"
-msgstr: "忽略第一行"
+msgstr: "Injoro rrjeshtin e pare"
 
 msgid: "Edit"
-msgstr: "編輯"
+msgstr: "Ndrysho"
 
 msgid: "Refresh"
-msgstr: "重新整理"
+msgstr: "Rifresko"
 
 msgid: "No primary key defined"
-msgstr: "沒有指定主要鍵"
+msgstr: "Ska asnj kyq primar te definuar"
 
 msgid: "First"
-msgstr: "第一頁"
+msgstr: "E para"
 
 msgid: "Prev"
-msgstr: "前一頁"
+msgstr: "Paraprakja"
 
 msgid: "Next"
-msgstr: "下一頁"
+msgstr: "E ardhshmja"
 
 msgid: "Last"
-msgstr: "最末頁"
+msgstr: "E fundit"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: "您的指令傳回 %d 筆結果"
-msgstr[1]: "您的指令傳回 %d 筆結果"
+msgstr[0]: "Kerkesa juaj dha %d rezultat"
+msgstr[1]: "Kerkesa juaj dha %d rezultate"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "備註: 為避免讓您的瀏覽器當機，只有前 %d 個結果被顯示"
+msgstr: "Shenim: Per te menjanuar problemet me shfletues, vetem %d rezultatet e para jane shfaqur"
 
 msgid: "binary data"
-msgstr: "二進位資料"
+msgstr: "permbajtej binare"
 
 msgid: "Your query affected %d rows"
-msgstr: "您的指令影響了 %d 列"
+msgstr: "Kerkesa juaj preku %d rrjeshta"
 
 msgid: "Your query did not return any results"
-msgstr: "您的指令沒有傳回任何結果"
+msgstr: "Kerkesa juaj nuk dha ndonje rezultat"
 
 msgid: "Your data has been inserted into the database"
-msgstr: "您的資料已被插入至資料庫中"
+msgstr: "Permbajtja juaj eshte futur ne databaze"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: "尋找 \"%s\" 表格時遇上了一點麻煩"
+msgstr: "Ishte nje telash i vogel gjate lokalizimit te tabeles \"%s\""
 
 msgid: "There was a problem logging you in"
-msgstr: "無法登入"
+msgstr: "Kishte nje problem gjate kyqjes."
 
 msgid: "Login"
-msgstr: "登入"
+msgstr: "Kyqu"
 
 msgid: "Unsupported browser"
-msgstr: "不支援的瀏覽器"
+msgstr: "Shfletues i pa perkrahur, perdor Firefox."
 
 msgid: "Help!"
-msgstr: "救我!"
+msgstr: "Ndihme!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: "您的工作階段已過期。請重新登入。"
+msgstr: "Sesioni juaj ka mbaruar, ju lutemi kyquni perseri."
 
 msgid: "Username"
-msgstr: "帳號"
+msgstr: "Perdoruesi"
 
 msgid: "Password"
-msgstr: "密碼"
+msgstr: "Fjalekalimi"
 
 msgid: "Run a query on the %s database"
-msgstr: "對 %s 資料庫進行指令"
+msgstr: "Jep nje kerkese ne databazen %s "
 
 msgid: "Columns"
-msgstr: "欄位"
+msgstr: "Kolonat"
 
 msgid: "Add a column"
-msgstr: "新增欄位"
+msgstr: "Shto nje kolone"
 
 msgid: "Insert this column"
-msgstr: "插入這個欄位"
+msgstr: "Fut kete kolone"
 
 msgid: "At end of table"
-msgstr: "在表格的尾端"
+msgstr: "Ne fund te tabeles"
 
 msgid: "At beginning of table"
-msgstr: "在表格的閅"
+msgstr: "Ne fillim te tabeles"
 
 msgid: "After"
-msgstr: "以後"
+msgstr: "Pas"
 
 msgid: "Edit table"
-msgstr: "編輯表格"
+msgstr: "Ndrysho tabelen"
 
 msgid: "Indexes"
-msgstr: "索引"
+msgstr: "Indekset"
 
 msgid: "Add an index"
-msgstr: "新增索引"
+msgstr: "Shto nje indeks"
 
 msgid: "Column(s)"
-msgstr: "欄位"
+msgstr: "Kolona (t)"
 
 msgid: "Show %d more..."
-msgstr: "多顯示 %d 項..."
+msgstr: "Shfaq %d me shume .."
 
 msgid: "Empty table"
-msgstr: "清空表格"
+msgstr: "Zbraz tabelen"
 
 msgid: "Drop table"
-msgstr: "刪除表格"
+msgstr: "Hedh tabelen"
 
 msgid: "Optimize table"
-msgstr: "將表格最佳化"
+msgstr: "Optimizo tabelen"
 
 msgid: "Table Information"
-msgstr: "表格資料"
+msgstr: "Informatata e tabeles"
 
 msgid: "Host"
-msgstr: "主機"
+msgstr: "Hosti"
 
 msgid: "Add a new user"
-msgstr: "新增使用者"
+msgstr: "Shto perdorues te ri"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: "請以此格式輸入：('1','2')"
+msgstr: "Vendos ne formatin: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "您確定要清空'%s'資料表嗎？這將會刪除裡面所有的資料。以下的指令將被執行："
+msgstr: "A je i sigurt qe do me zbraz tabelen '%s'. Kjo i fshijn gjitha. "
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "您確定要刪除'%s'資料表嗎？這將會刪除裡面所有的資料。以下的指令將被執行："
+msgstr: "A je i sigurt qe do me hedhe tabelen '%s'. Kjo i fshijn gjitha. 
+"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "您確定要刪除'%s'資料庫嗎？裡面所有的資料與資料表將一併被刪除。以下的指令將被執行："
+msgstr: "A je i sigurt qe do me hedhe databazen'%s'. Kjo i fshijn gjitha. "
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "對不起，但目前我們只支援 Internet Explorer 7。它可以從微軟的網站免費下載。您也可以使用其他如 Firefox、Safari 及 Opera 等的免費瀏覽器。"
+msgstr: "Na vjen keq po vetem internet explorer 7 eshte duke u perkrahur. Shkarkoje Firefox."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: "您似乎沒有啟用 cookies。為了可以使用工作階段，大部分的 PHP 程式皆需要 cookies。"
+msgstr: "Nuk i keni cookie te leshuara. Leshoni menjehere sa sju erdha aty."
 
 msgid: "Importing..."
-msgstr: "匯入中..."
+msgstr: "Duke importuar"
 
 msgid: "Drop the '%s' database"
-msgstr: "刪除'%s'資料庫"
+msgstr: "Hedh databazen '%s'"
 
 msgid: "Okay"
-msgstr: "確定"
+msgstr: "Ne rregull"
 
 msgid: "Cancel"
-msgstr: "取消"
+msgstr: "Anulo"
 
 msgid: "Storage engine"
-msgstr: "儲存引擎"
+msgstr: "Motori i magazinimit"
 
 msgid: "Language"
-msgstr: "語言"
+msgstr: "Gjuha"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d u ekzekutua nga fajlli"
+msgstr[1]: "%d ishte ekzekutuar nga fajlli"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d rrjeshta u futen ne databaze nga fajlli"
+msgstr[1]: "%d rrjeshta ishin futur ne databaze nga fajlli"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "%d rrjesht eshte tejkaluar sepse vlera ishte jokorrekt"
+msgstr[1]: "%d rrjeshta jane tejkaluar sepse vlera ishte jokorrekte"
 
 msgid: "Theme"
-msgstr: "主題"
+msgstr: "Tema"
 
 msgid: "(%.4f seconds)"
-msgstr: "(%.4f 秒)"
+msgstr: "(%.4f sekonda)"
 
 msgid: "The following errors were reported"
-msgstr: "下列的錯誤被回報"
+msgstr: "Keto gabime u raportuan."
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: "您沒有足夠的權限來建立使用者。"
+msgstr: "Nuk keni leje per te krijuar perdorues te ri."
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: "您沒有足夠的權限來檢視或管理使用者。"
+msgstr: "Nuk keni leje per ti pare apo menagjuar perdoruesit"
 
 msgid: "You are connected to %s."
-msgstr: "您已連接至 %s"
+msgstr: "Ju jeni lidhur me %s."
 
 msgid: "Allow access to"
-msgstr: "允許存取"
+msgstr: "Lejo akses tek"
 
 msgid: "All databases"
-msgstr: "所有資料庫"
+msgstr: "Gjitha Databazat"
 
 msgid: "Selected databases"
-msgstr: "選定的資料庫"
+msgstr: "Databazat e zgjedhura"
 
 msgid: "Give user"
-msgstr: "給使用者"
+msgstr: "Jepi perdorues"
 
 msgid: "Updates"
-msgstr: "更新"
+msgstr: "Te rejat"
 
 msgid: "There are no updates available"
-msgstr: "目前沒有更新"
+msgstr: "Ska asnj te re"
 
 msgid: "Change password"
-msgstr: "修改密碼"
+msgstr: "Ndrysho fjalekalimin"
 
 msgid: "Redirecting..."
-msgstr: "重新導向..."
+msgstr: "Duke ridrejtuar..."

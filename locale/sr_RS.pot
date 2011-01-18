@@ -1,6 +1,6 @@
 Language: Српски ћирилица
 Language-Code: sr_RS
-Build-Date: Mon, 15 Jun 2009 12:18:06 -0600
+Build-Date: Tue, 18 Jan 2011 15:21:35 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Или се датотека не може читати или је празна"
@@ -662,3 +662,6 @@ msgstr: "Нема доступних ажурирања"
 
 msgid: "Change password"
 msgstr: "Промена лозинке"
+
+msgid: "Redirecting..."
+msgstr: "Скретање"

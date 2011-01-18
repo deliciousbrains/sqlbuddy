@@ -1,6 +1,6 @@
 Language: Español (Argentina)
 Language-Code: es_AR
-Build-Date: Mon, 15 Jun 2009 12:16:07 -0600
+Build-Date: Tue, 18 Jan 2011 15:07:33 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "No se pudo encontrar el archivo o está vacío"
@@ -36,13 +36,13 @@ msgid: "Size"
 msgstr: "Tamaño"
 
 msgid: "Overhead"
-msgstr: "Overhead"
+msgstr: "Sobrecarga"
 
 msgid: "Options"
 msgstr: "Opciones"
 
 msgid: "Edit database"
-msgstr: "Editar la base de datos"
+msgstr: "Modificar la base de datos"
 
 msgid: "Charset"
 msgstr: "Juego de caracteres"
@@ -57,7 +57,7 @@ msgid: "Name"
 msgstr: "Nombre"
 
 msgid: "Setup the fields for the table below"
-msgstr: "Definir los campos de la tabla"
+msgstr: "Definir los campos de la tabla abajo"
 
 msgid: "New field"
 msgstr: "Nuevo campo"
@@ -81,7 +81,7 @@ msgid: "index"
 msgstr: "Indice"
 
 msgid: "Default"
-msgstr: "Por defecto"
+msgstr: "Predeterminado"
 
 msgid: "Other"
 msgstr: "Otro"
@@ -96,13 +96,13 @@ msgid: "Not Null"
 msgstr: "No nulo"
 
 msgid: "Auto Increment"
-msgstr: "Autoincremento"
+msgstr: "Autoincremental"
 
 msgid: "Add field"
 msgstr: "Agregar campo"
 
 msgid: "Oops"
-msgstr: "Ooops!!!"
+msgstr: "Epa!!!"
 
 msgid: "For some reason, the database parameter was not included with your request"
 msgstr: "Por alguna razón, en su consulta falta el parámetro de base de datos"
@@ -141,7 +141,7 @@ msgid: "Delete"
 msgstr: "Eliminar"
 
 msgid: "Alter"
-msgstr: "Alterar"
+msgstr: "Modificar"
 
 msgid: "Create"
 msgstr: "Crear"
@@ -171,7 +171,7 @@ msgid: "Grant option"
 msgstr: "Opción grant"
 
 msgid: "User not found!"
-msgstr: "Usuario no encontrado!!"
+msgstr: "Usuario no encontrado!"
 
 msgid: "You must export either structure, data, or both"
 msgstr: "Debe exportar la estructura, los datos o ambos"
@@ -183,7 +183,7 @@ msgid: "Please select the tables that you would like to export"
 msgstr: "Por favor, seleccione las tablas que quiere exportar"
 
 msgid: "Table `%s` is empty"
-msgstr: "La tabla `%s` está vacia"
+msgstr: "La tabla `%s` está vacía"
 
 msgid: "Results"
 msgstr: "Resultados"
@@ -235,7 +235,7 @@ msgid: "Data"
 msgstr: "Datos"
 
 msgid: "Compact inserts"
-msgstr: "Compactar inserciones"
+msgstr: "Inserciones compactas"
 
 msgid: "Complete inserts"
 msgstr: "Inserciones completas"
@@ -259,7 +259,7 @@ msgid: "Print field names on first line"
 msgstr: "Imprimir nombres de campos en la primera fila"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "Si está exportando muchas filas se recomienda que redirija el resultado a un archivo de texto"
+msgstr: "Si está exportando muchas filas se recomienda que dirija el resultado a un archivo de texto"
 
 msgid: "Output to"
 msgstr: "Salida hacia"
@@ -283,7 +283,7 @@ msgid: "Import"
 msgstr: "Importar"
 
 msgid: "Overview"
-msgstr: "Vista rápida"
+msgstr: "Resumen"
 
 msgid: "Browse"
 msgstr: "Examinar"
@@ -298,10 +298,10 @@ msgid: "delete these rows"
 msgstr: "Eliminar estas filas"
 
 msgid: "empty this table"
-msgstr: "Eliminar los registros de esta tabla"
+msgstr: "Vaciar esta tabla"
 
 msgid: "empty these tables"
-msgstr: "Eliminar los registros de estas tablas"
+msgstr: "Vaciar estas tablas"
 
 msgid: "drop this table"
 msgstr: "Eliminar esta tabla"
@@ -328,19 +328,19 @@ msgid: "delete these users"
 msgstr: "Eliminar estos usuarios"
 
 msgid: "Are you sure you want to"
-msgstr: "Esta usted seguro que desea"
+msgstr: "Está seguro que desea"
 
 msgid: "The following query will be run:"
-msgstr: "Se ejecutará la siguiente consulta"
+msgstr: "Se ejecutará la siguiente consulta:"
 
 msgid: "The following queries will be run:"
-msgstr: "Se ejecutarán las siguientes consultas"
+msgstr: "Se ejecutarán las siguientes consultas:"
 
 msgid: "Confirm"
-msgstr: "Confirme"
+msgstr: "Confirmar"
 
 msgid: "Successfully saved changes"
-msgstr: "Satisfactoriamente guardado"
+msgstr: "Modificaciones guardadas con éxito"
 
 msgid: "Full Text"
 msgstr: "Texto Completo"
@@ -367,13 +367,13 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Está conectado a MySQL %s con el usuario %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "El servidor de Base de Datos ha estado corriendo desde %s y ha transferido aproximadamente %s de data."
+msgstr: "El servicio de Base de Datos ha estado activo desde %s y ha transferido aproximadamente %s de datos."
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Una nueva versión de SQL Buddy está disponible!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "Tienes SQL Buddy %s instalado y %s está disponible"
+msgstr: "Tiene SQL Buddy %s instalado y %s está ahora disponible"
 
 msgid: "Getting started"
 msgstr: "Primeros pasos"
@@ -394,7 +394,7 @@ msgid: "Create a new database"
 msgstr: "Crear una nueva base de datos"
 
 msgid: "Did you know..."
-msgstr: "¿ Sabía que ...?"
+msgstr: "Sabía que ..."
 
 msgid: "There is an easier way to select a large group of items when browsing table rows. Check the first row, hold the shift key, and check the final row. The checkboxes between the two rows will be automatically checked for you."
 msgstr: "Hay una forma más fácil de seleccionar muchos elementos cuando se examinan filas. Marque la primera fila, mantenga pulsada la tecla mayúsculas y marque la última fila. Las casillas de verificación intermedias se marcarán automáticamente."
@@ -403,28 +403,28 @@ msgid: "The columns in the browse and query tabs are resizable. Adjust them to a
 msgstr: "Las columnas de las pestañas Examinar y Consulta se pueden redimensionar. Ajuste el ancho según sus necesidades."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "La página de inicio de sesión utiliza el usuario por omisión root@localhost. Modifique el fichero config.php para cambiar este valor."
+msgstr: "La página de inicio de sesión utiliza el usuario predeterminado root@localhost. Modifique el fichero config.php para modificar este valor."
 
 msgid: "Keyboard shortcuts"
 msgstr: "Atajos"
 
 msgid: "Press this key..."
-msgstr: "Presione esta tecla"
+msgstr: "Presione esta tecla..."
 
 msgid: "...and this will happen"
 msgstr: "...y sucederá esto"
 
 msgid: "select none"
-msgstr: "Borrar selección"
+msgstr: "borrar selección"
 
 msgid: "edit selected items"
-msgstr: "Editar los elementos seleccionados"
+msgstr: "modificar los elementos seleccionados"
 
 msgid: "delete selected items"
-msgstr: "Eliminar los elementos seleccionados"
+msgstr: "eliminar los elementos seleccionados"
 
 msgid: "refresh page"
-msgstr: "Recargar página"
+msgstr: "actualizar página"
 
 msgid: "load the query tab"
 msgstr: "carga la pestaña de consulta"
@@ -436,10 +436,10 @@ msgid: "browse tab - go to last page of results"
 msgstr: "pestaña examinar - ir a última página de resultados"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: "pestaña examinar - ir a anterior página de resultados"
+msgstr: "pestaña examinar - ir a página anterior de resultados"
 
 msgid: "browse tab - go to next page of results"
-msgstr: "pestaña examinar - ir a siguiente página de resultados"
+msgstr: "pestaña examinar - ir a página siguiente de resultados"
 
 msgid: "optimize selected tables"
 msgstr: "optimizar las tablas seleccionadas"
@@ -455,7 +455,7 @@ msgid: "Ignore first line"
 msgstr: "Ignorar la primera línea"
 
 msgid: "Edit"
-msgstr: "Editar"
+msgstr: "Modificar"
 
 msgid: "Refresh"
 msgstr: "Actualizar"
@@ -481,13 +481,13 @@ msgstr[0]: "La consulta ha devuelto %d fila"
 msgstr[1]: "La consulta ha devuelto %d filas"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Nota: para evitar errores en su navegador solo se muestran los %d primeros resultados"
+msgstr: "Nota: para evitar errores en su navegador sólo se muestran las %d primeras filas"
 
 msgid: "binary data"
-msgstr: "Datos binarios"
+msgstr: "datos binarios"
 
 msgid: "Your query affected %d rows"
-msgstr: "Su consulta ha afectado a %d filas"
+msgstr: "Su consulta ha afectado %d filas"
 
 msgid: "Your query did not return any results"
 msgstr: "Su consulta no ha devuelto resultados"
@@ -499,7 +499,7 @@ msgid: "There was a bit of trouble locating the \"%s\" table"
 msgstr: "No se pudo localizar la tabla \"%s\""
 
 msgid: "There was a problem logging you in"
-msgstr: "Se produjeron errores en el inicio de sesión"
+msgstr: "Error en el inicio de sesión"
 
 msgid: "Login"
 msgstr: "Inicio de sesión"
@@ -520,34 +520,34 @@ msgid: "Password"
 msgstr: "Contraseña"
 
 msgid: "Run a query on the %s database"
-msgstr: "Ejecutar consulta sobre la base de datos %s"
+msgstr: "Ejecutar una consulta sobre la base de datos %s"
 
 msgid: "Columns"
 msgstr: "Columnas"
 
 msgid: "Add a column"
-msgstr: "Nueva columna"
+msgstr: "Agregar columna"
 
 msgid: "Insert this column"
 msgstr: "Insertar esta Columna"
 
 msgid: "At end of table"
-msgstr: "En el final de la tabla"
+msgstr: "Al final de la tabla"
 
 msgid: "At beginning of table"
-msgstr: "En el comienzo de la tabla"
+msgstr: "Al comienzo de la tabla"
 
 msgid: "After"
-msgstr: "Despues"
+msgstr: "Después"
 
 msgid: "Edit table"
-msgstr: "Editar tabla"
+msgstr: "Modificar tabla"
 
 msgid: "Indexes"
 msgstr: "Indices"
 
 msgid: "Add an index"
-msgstr: "Nuevo índice"
+msgstr: "Agregar índice"
 
 msgid: "Column(s)"
 msgstr: "Columna(s)"
@@ -574,13 +574,13 @@ msgid: "Add a new user"
 msgstr: "Agregar usuario"
 
 msgid: "Enter in the format: ('1','2')"
-msgstr: "Introducir usando el formato: ('1','2')"
+msgstr: "Introducir con el formato: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "¿Está seguro que quiere vaciar la tabla '%s'? Esta acción borrará¡ los datos que contenga. Se ejecutará¡ la siguiente consulta:"
+msgstr: "¿Está seguro que quiere vaciar la tabla '%s'? Esta acción borrará los datos que contenga. Se ejecutará la siguiente consulta:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "¿Está seguro que quiere elimninar la tabla '%s'? Esta acción borrará la tabla y los datos que contenga. Se ejecutará la siguiente consulta:"
+msgstr: "¿Está seguro que quiere eliminar la tabla '%s'? Esta acción borrará la tabla y los datos que contenga. Se ejecutará la siguiente consulta:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
 msgstr: "¿Está seguro que quiere eliminar la base de datos '%s'? Esta acción borrará la base, las tablas que contenga y sus datos. Se ejecutará la siguiente consulta:"
@@ -589,16 +589,16 @@ msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is 
 msgstr: "Lo lamentamos pero actualmente sólo se soporta Internet Explorer 7, que se puede descargar gratuitamente desde la página web de Microsoft. Otros navegadores soportados: Firefox, Safari y Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
-msgstr: "Las cookies de su navegador no parecen estar habilitadas. Para el correcto funcionamiento de las sesiones la mayoría de las instalaciones de php las requieren."
+msgstr: "Las cookies de su navegador no parecen estar habilitadas. Para el correcto funcionamiento de las sesiones la mayoría de las aplicaciones Web las requieren."
 
 msgid: "Importing..."
 msgstr: "Importando..."
 
 msgid: "Drop the '%s' database"
-msgstr: "Borrar la base de datos '%s'"
+msgstr: "Eliminar la base de datos '%s'"
 
 msgid: "Okay"
-msgstr: "Ok"
+msgstr: "Aceptar"
 
 msgid: "Cancel"
 msgstr: "Cancelar"
@@ -631,7 +631,7 @@ msgid: "(%.4f seconds)"
 msgstr: "(%.4f segundos)"
 
 msgid: "The following errors were reported"
-msgstr: "Los siguientes errores son reportados"
+msgstr: "Ocurrieron los siguientes errores"
 
 msgid: "You do not have enough permissions to create new users."
 msgstr: "No posee permisos para crear nuevos usuarios"
@@ -640,7 +640,7 @@ msgid: "You do not have enough permissions to view or manage users."
 msgstr: "No posee permisos para ver o administrar usuarios"
 
 msgid: "You are connected to %s."
-msgstr: "Se conecto a %s"
+msgstr: "Está conectado a %s"
 
 msgid: "Allow access to"
 msgstr: "Permitir acceso a"
@@ -661,4 +661,7 @@ msgid: "There are no updates available"
 msgstr: "No hay actualizaciones disponibles"
 
 msgid: "Change password"
-msgstr: "Cambiar contraseña"
+msgstr: "Modificar contraseña"
+
+msgid: "Redirecting..."
+msgstr: "Redireccionando..."

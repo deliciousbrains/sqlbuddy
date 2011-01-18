@@ -1,6 +1,6 @@
 Language: Suomi
 Language-Code: fi_FI
-Build-Date: Mon, 15 Jun 2009 12:15:39 -0600
+Build-Date: Tue, 18 Jan 2011 15:09:18 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Tiedostoa ei pystytty lukemaan tai se oli tyhjä"
@@ -577,13 +577,13 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Syötä muodossa: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Haluatko varmasti tyhjentÃ¤Ã¤ taulun '%s'? Kaikki data taulussa menetetÃ¤Ã¤n. Seuraava kysely tullaan suorittamaan:"
+msgstr: "Haluatko varmasti tyhjentää taulun '%s'? Kaikki data taulussa menetetään. Seuraava kysely tullaan suorittamaan:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Haluatko varmasti poistaa taulun '%s'? Kaikki data taulussa menetetÃ¤Ã¤n. Seuraava kysely tullaan suorittamaan:"
+msgstr: "Haluatko varmasti poistaa taulun '%s'? Kaikki data taulussa menetetään. Seuraava kysely tullaan suorittamaan:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Haluatko varmasti poistaa tietokannan '%s'? Tietokanta, kaikki sen taulut ja kaikki data tauluissa menetetÃ¤Ã¤n. Seuraava kysely tullaan suorittamaan:"
+msgstr: "Haluatko varmasti poistaa tietokannan '%s'? Tietokanta, kaikki sen taulut ja kaikki data tauluissa menetetään. Seuraava kysely tullaan suorittamaan:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
 msgstr: "Valitettavasti ainoastaan Internet Explorer 7 on tuettu. Voit ladata sen ilmaiseksi Microsoftin sivuilta. Muut ilmaiset tuetut selaimet ovat Firefox, Safari ja Opera."
@@ -662,3 +662,6 @@ msgstr: "Päivityksiä ei ole saatavilla"
 
 msgid: "Change password"
 msgstr: "Vaihda salasana"
+
+msgid: "Redirecting..."
+msgstr: "Uudelleen ohjataan..."

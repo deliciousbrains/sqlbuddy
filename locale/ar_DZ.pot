@@ -1,63 +1,63 @@
 Language: العربية
 Language-Code: ar_DZ
-Build-Date: Mon, 15 Jun 2009 12:13:33 -0600
+Build-Date: Tue, 18 Jan 2011 15:03:44 -0700
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "إما أن الملف فارغ أو لا يمكن قراءته"
+msgstr: "إما أن الملف فارغ أو تعذرت قراءته"
 
 msgid: "Error performing operation"
-msgstr: "هنالك خطأ حال دون تنفيذ العملية"
+msgstr: "خطأ في تنفيذ العملية"
 
 msgid: "All"
 msgstr: "الكل"
 
 msgid: "None"
-msgstr: "لا شي"
+msgstr: "لاشيء"
 
 msgid: "With selected"
-msgstr: "مع المحدد"
+msgstr: "المحددة"
 
 msgid: "Empty"
-msgstr: "فارغ"
+msgstr: "إفراغ"
 
 msgid: "Drop"
 msgstr: "حذف"
 
 msgid: "Optimize"
-msgstr: "تحسين"
+msgstr: "موالفة"
 
 msgid: "Table"
 msgstr: "جدول"
 
 msgid: "Rows"
-msgstr: "صفوف"
+msgstr: "سجلات"
 
 msgid: "Size"
-msgstr: "حجم"
+msgstr: "الحجم"
 
 msgid: "Overhead"
-msgstr: "فوق الحد"
+msgstr: "العبء"
 
 msgid: "Options"
 msgstr: "خيارات"
 
 msgid: "Edit database"
-msgstr: "تحرير قاعدة البيانات"
+msgstr: "تعديل قاعدة البيانات"
 
 msgid: "Charset"
 msgstr: "الترميز"
 
 msgid: "Submit"
-msgstr: "ارسال"
+msgstr: "نفذ"
 
 msgid: "Create a new table"
-msgstr: "انشاء جدول جديد"
+msgstr: "أنشئ جدول جديد"
 
 msgid: "Name"
 msgstr: "الاسم"
 
 msgid: "Setup the fields for the table below"
-msgstr: "تنصيب حقول الجدول بالاسفل"
+msgstr: "إعداد حقول الجدول أدناه"
 
 msgid: "New field"
 msgstr: "حقل جديد"
@@ -69,22 +69,22 @@ msgid: "Values"
 msgstr: "القيم"
 
 msgid: "Key"
-msgstr: "المفتاح"
+msgstr: "مفتاح الفهرس"
 
 msgid: "primary"
-msgstr: "الأساسي"
+msgstr: "أولي"
 
 msgid: "unique"
-msgstr: "وحيد"
+msgstr: "فريد"
 
 msgid: "index"
-msgstr: "دليل"
+msgstr: "فهرس"
 
 msgid: "Default"
 msgstr: "افتراضي"
 
 msgid: "Other"
-msgstr: "غير ذلك"
+msgstr: "آخر"
 
 msgid: "Unsigned"
 msgstr: "غير موقّع"
@@ -93,28 +93,28 @@ msgid: "Binary"
 msgstr: "ثنائي"
 
 msgid: "Not Null"
-msgstr: "ليس عديم القيمة"
+msgstr: "غير فارغ"
 
 msgid: "Auto Increment"
-msgstr: "زيادة تلقائية"
+msgstr: "ترقيم تلقائي"
 
 msgid: "Add field"
-msgstr: "إضافة حقل"
+msgstr: "أضف الحقل"
 
 msgid: "Oops"
-msgstr: "آااه"
+msgstr: "يا إلهي"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "لسبب ما, قيم قاعدة البيانات لم تدرج مع طلبك"
+msgstr: "لسبب ما، لم يشتمل طلبك على متغير اسم قاعدة البيانات"
 
 msgid: "Save changes to original"
-msgstr: "حفظ التغيرات الأساسية"
+msgstr: "احفظ الخيارات إلى الأصل"
 
 msgid: "Insert as new row"
-msgstr: "اضافة كصف جديد"
+msgstr: "أدخل سطر جديد"
 
 msgid: "Save"
-msgstr: "حفظ"
+msgstr: "احفظ"
 
 msgid: "User"
 msgstr: "مستخدم"
@@ -123,16 +123,16 @@ msgid: "All privileges"
 msgstr: "جميع الصلاحيات"
 
 msgid: "Selected privileges"
-msgstr: "الصلاحيات المنتقاة"
+msgstr: "الصلاحيات المحددة"
 
 msgid: "User privileges"
 msgstr: "صلاحيات المستخدم"
 
 msgid: "Select"
-msgstr: "اختيار"
+msgstr: "عرض"
 
 msgid: "Insert"
-msgstr: "اضافة"
+msgstr: "إدخال"
 
 msgid: "Update"
 msgstr: "تحديث"
@@ -147,58 +147,58 @@ msgid: "Create"
 msgstr: "إنشاء"
 
 msgid: "Temp tables"
-msgstr: "جداول مؤقت"
+msgstr: "الجداول المؤقتة"
 
 msgid: "Administrator privileges"
-msgstr: "صلاحيات مدير النظام"
+msgstr: "صلاحيات المدير"
 
 msgid: "File"
 msgstr: "ملف"
 
 msgid: "Process"
-msgstr: "معالجة"
+msgstr: "عملية"
 
 msgid: "Reload"
-msgstr: "تحديث"
+msgstr: "إعادة التحميل"
 
 msgid: "Shutdown"
-msgstr: "ايقاف التشغيل"
+msgstr: "إيقاف"
 
 msgid: "Super"
-msgstr: "عالي"
+msgstr: "خارق"
 
 msgid: "Grant option"
-msgstr: "خيار المنح"
+msgstr: "إعطاء خيار"
 
 msgid: "User not found!"
-msgstr: "المستخدم غير موجود"
+msgstr: "المستخدم غير موجود!"
 
 msgid: "You must export either structure, data, or both"
-msgstr: "يجب عليك تصدير إما بنية أو بيانات أو كلاهما"
+msgstr: "يجب أن تصدّر إما الهيكلة، البيانات أو كليهما"
 
 msgid: "Please select the databases that you would like to export"
-msgstr: "الرجاء تحديد قواعد البيانات التي تريد تصديرها"
+msgstr: "من فضلم اختر قاعدة البيانات التي تود تصديرها"
 
 msgid: "Please select the tables that you would like to export"
-msgstr: "الرجاء تحديد الجداول التي تريد تصديرها"
+msgstr: "من فضلك اختر الجداول التي تود تصديرها"
 
 msgid: "Table `%s` is empty"
 msgstr: "الجدول `%s` فارغ"
 
 msgid: "Results"
-msgstr: "نتائج"
+msgstr: "النتائج"
 
 msgid: "Select all"
-msgstr: "تحديد الكل"
+msgstr: "اختيار الكل"
 
 msgid: "The file could not be opened"
 msgstr: "لا يمكن فتح الملف"
 
 msgid: "Could not write to file"
-msgstr: "لا يمكن الكتابة في الملف"
+msgstr: "لم يمكن الكتابة على الملف"
 
 msgid: "Successfully wrote content to file"
-msgstr: "تم كتابة المحتوى في الملف بنجاح"
+msgstr: "تم كتابة المحتويات على الملف بنجاح"
 
 msgid: "Download"
 msgstr: "تحميل"
@@ -208,7 +208,7 @@ msgid: "Note
 msgstr: "ملاحظة"
 
 msgid: "If this is a public server, you should delete this file from the server after you download it"
-msgstr: "إذا كان هذا الخادم عام، الرجاء حذف الملف من الخادم بعد تنزيله"
+msgstr: "غير مكتمل"
 
 msgid: "Export"
 msgstr: "تصدير"
@@ -217,37 +217,37 @@ msgid: "Tables"
 msgstr: "جداول"
 
 msgid: "Databases"
-msgstr: "قواعد بيانات"
+msgstr: "قواعد البيانات"
 
 msgid: "Format"
-msgstr: "صيغة"
+msgstr: "النسق"
 
 msgid: "SQL"
-msgstr: "إس كيو إل"
+msgstr: "SQL"
 
 msgid: "CSV"
-msgstr: "سي إس في"
+msgstr: "CSV"
 
 msgid: "Structure"
-msgstr: "بنية"
+msgstr: "البنية"
 
 msgid: "Data"
-msgstr: "بايانات"
+msgstr: "بيانات"
 
 msgid: "Compact inserts"
-msgstr: "دمج المدخلات"
+msgstr: "مجموعة إضافات"
 
 msgid: "Complete inserts"
-msgstr: "اكمال المدخلات"
+msgstr: "إضافات كاملة"
 
 msgid: "Delimiter"
-msgstr: "محدد"
+msgstr: "الفاصل"
 
 msgid: "Comma"
 msgstr: "فاصلة"
 
 msgid: "Tab"
-msgstr: "لسان تبويب"
+msgstr: "علامة جدولة"
 
 msgid: "Semicolon"
 msgstr: "فاصلة منقوطة"
@@ -256,25 +256,25 @@ msgid: "Space"
 msgstr: "مسافة"
 
 msgid: "Print field names on first line"
-msgstr: "اطبع اسماء الحقول في السطر الأول"
+msgstr: "اعرض أسماء الحقول في السطر الأول"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
 msgstr: "اذا كنت تصدر عدد كبير من الحقول, فمن الافضل حفظ المخرجات في ملف نصي"
 
 msgid: "Output to"
-msgstr: "توجيه المخرجات الى"
+msgstr: "إخراج إلى"
 
 msgid: "Browser"
-msgstr: "استعراض"
+msgstr: "المتصفح"
 
 msgid: "Text file"
-msgstr: "ملف نصّي"
+msgstr: "ملف نصي"
 
 msgid: "Home"
 msgstr: "الرئيسية"
 
 msgid: "Users"
-msgstr: "مستخدمون"
+msgstr: "المستخدمون"
 
 msgid: "Query"
 msgstr: "استعلام"
@@ -292,16 +292,16 @@ msgid: "Your changes were saved to the database"
 msgstr: "تم حفظ التغيرات في قاعدة البيانات"
 
 msgid: "delete this row"
-msgstr: "حذف هذا الصف"
+msgstr: "حذف هذا السجل"
 
 msgid: "delete these rows"
-msgstr: "حذف هذه الصفوف"
+msgstr: "حذف هذه السجلات"
 
 msgid: "empty this table"
-msgstr: "افراغ هذا الجدول"
+msgstr: "إفراغ هذا الجدول"
 
 msgid: "empty these tables"
-msgstr: "افراغ هذه الجداول"
+msgstr: "إفراغ هذه الجداول"
 
 msgid: "drop this table"
 msgstr: "حذف هذا الجدول"
@@ -349,19 +349,19 @@ msgid: "Loading..."
 msgstr: "تحميل..."
 
 msgid: "Error"
-msgstr: "خظأ"
+msgstr: "خطأ"
 
 msgid: "There was an error receiving data from the server"
-msgstr: "حدث خطأ في استقبال البيانات من الخادم"
+msgstr: "غير مكتمل"
 
 msgid: "Logout"
 msgstr: "تسجيل الخروج"
 
 msgid: "For some reason, the table parameter was not included with your request"
-msgstr: "لسبب ما, قيم الجدول لم يتم تضمينها مع طلبك"
+msgstr: "غير مكتمل"
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "مرحبا بك في اس كيو ال بادي"
+msgstr: "مرحبا بك في SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "أنت متصل ب MySQL %s بالمستخدم %s."
@@ -400,10 +400,10 @@ msgid: "There is an easier way to select a large group of items when browsing ta
 msgstr: "توجد طريقة سهله لاختيار مجموعة كبيره من العناصر عند استعراض صفوف الجدول. اشر على الصف الاول مع استمرار الضغط على زر shit والتأشير على اخر صف. ستم اختيار كل الصفوف بينها اليا"
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: ""
+msgstr: "الأعمدة الموجودة في تبويبات الاستعراض والاستعلام قابلة لتغيير الحجم. يمكنك تغييرها بالعرض المناسب لك."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: ""
+msgstr: "تستخدم صفحة الدخول المستخدمة root@localhost بشكل افتراضي. يمكنك تعديل الملف config.php لتغيير المستخدم والمضيف الافتراضي متى ما شئت."
 
 msgid: "Keyboard shortcuts"
 msgstr: "اختصارات لوحة المفاتيح"
@@ -415,7 +415,7 @@ msgid: "...and this will happen"
 msgstr: "...و هذا ما سيحصل"
 
 msgid: "select none"
-msgstr: ""
+msgstr: "عدم تحديد أي شيء"
 
 msgid: "edit selected items"
 msgstr: "تحرير البنود المحددة"
@@ -427,25 +427,25 @@ msgid: "refresh page"
 msgstr: "تحديث الصفحة"
 
 msgid: "load the query tab"
-msgstr: ""
+msgstr: "إظهار تبويب الاستعلام"
 
 msgid: "browse tab - go to first page of results"
-msgstr: ""
+msgstr: "تبويب الاستعراض - إذهب إلى أول صفحة من النتيجة"
 
 msgid: "browse tab - go to last page of results"
-msgstr: ""
+msgstr: "تبويب الاستعراض - إذهب إلى آخر صفحة من النتيجة"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: ""
+msgstr: "تبويب الاستعراض - إذهب إلى الصفحة السابقة من النتيجة"
 
 msgid: "browse tab - go to next page of results"
-msgstr: ""
+msgstr: "تبويب الاستعراض - إذهب إلى الصفحة التالية من النتيجة"
 
 msgid: "optimize selected tables"
-msgstr: ""
+msgstr: "تحسين الجداول المحددة"
 
 msgid: "Choose a .sql file to import"
-msgstr: ""
+msgstr: "اختر ملف .sql لاستيراده"
 
 msgid: "File
 "
@@ -477,8 +477,8 @@ msgstr: "الأخير"
 
 msgid: "Your query returned %d result"
 msgid_plural: "Your query returned %d results"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "نتج عن استعلامك %d نتيجة"
+msgstr[1]: "نتج عن استعلامك %d نتائج"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
 msgstr: "ملاحظه : لتجنب عدم استجابة متصفحك ، تم عرض %d النتائج الأولى فقط"
@@ -487,10 +487,10 @@ msgid: "binary data"
 msgstr: "بيانات ثنائية"
 
 msgid: "Your query affected %d rows"
-msgstr: ""
+msgstr: "نفّذ استعلامك على %d سجل"
 
 msgid: "Your query did not return any results"
-msgstr: ""
+msgstr: "لم ينتج عن استعلامك أي شيء"
 
 msgid: "Your data has been inserted into the database"
 msgstr: "تم اضافة البيانات إلى قاعدة البيانات"
@@ -520,7 +520,7 @@ msgid: "Password"
 msgstr: "كلمة المرور"
 
 msgid: "Run a query on the %s database"
-msgstr: ""
+msgstr: "تنفيذ استعلام على قاعدة البيانات %s"
 
 msgid: "Columns"
 msgstr: "أعمدة"
@@ -577,13 +577,13 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "ادخل بالصيغة ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Ù‡Ù„ Ø§Ù†Øª Ù…ØªØ£ÙƒØ¯ Ù…Ù† Ø§Ù†Ùƒ ØªØ±ÙŠØ¯ ØªÙØ±ÙŠØº Ø§Ù„Ø¬Ø¯ÙˆÙ„ '%s' ØŸ Ù‡Ø°Ø§ Ø³ÙˆÙ ÙŠØ­Ø°Ù Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ù…Ù† Ø§Ù„Ø¯Ø§Ø®Ù„. Ø§Ù„Ø£Ù…Ø± Ø§Ù„ØªØ§Ù„ÙŠØ© Ø³ÙŠØªÙ… ØªÙ†ÙÙŠØ°Ù‡:"
+msgstr: "متأكد أنك تريد إفراغ الجدول '%s'؟ سيقوم هذا الإجراء بحذف جميع البيانات التي فيه. سيتم تنفيذ الاستعلام التالي:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Ù‡Ù„ Ø§Ù†Øª Ù…ØªØ£ÙƒØ¯ Ù…Ù† Ø§Ù†Ùƒ ØªØ±ÙŠØ¯ Ø­Ø¯Ù Ø§Ù„Ø¬Ø¯ÙˆÙ„ '%s' ØŸ Ù‡Ø°Ø§ Ø³ÙˆÙ ÙŠØ­Ø°Ù Ø§Ù„Ø¬Ø¯ÙˆÙ„ Ùˆ Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ù…Ù† Ø§Ù„Ø¯Ø§Ø®Ù„. Ø§Ù„Ø£Ù…Ø± Ø§Ù„ØªØ§Ù„ÙŠØ© Ø³ÙŠØªÙ… ØªÙ†ÙÙŠØ°Ù‡:"
+msgstr: "متأكد أنك تريد حذف الجدول '%s'؟ سيقوم هذا الإجراء بحذف الجدول وجميع بياناته. سيتم تنفيذ الاستعلام التالي:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Ù‡Ù„ Ø§Ù†Øª Ù…ØªØ£ÙƒØ¯ Ù…Ù† Ø§Ù†Ùƒ ØªØ±ÙŠØ¯ Ø­Ø¯Ù Ù‚Ø§Ø¹Ø¯Ø© Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª '%s' ØŸ Ù‡Ø°Ø§ Ø³ÙˆÙ ÙŠØ­Ø°Ù Ù‚Ø§Ø¹Ø¯Ø© Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ùˆ Ø§Ù„Ø¬Ø¯Ø§ÙˆÙ„ Ùˆ Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª Ù…Ù† Ø§Ù„Ø¯Ø§Ø®Ù„. Ø§Ù„Ø£Ù…Ø± Ø§Ù„ØªØ§Ù„ÙŠØ© Ø³ÙŠØªÙ… ØªÙ†ÙÙŠØ°Ù‡:"
+msgstr: "متأكد أنك تريد حذف قاعدة البيانات '%s'؟ سيقوم هذا الإجراء بحذف قاعدة البيانات، وجميع الجداول التي فيها، وجميع البيانات التي في هذه الجداول. سيتم تنفيذ الاستعلام التالي:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
 msgstr: "عذرا ، ولكن في الوقت الراهن سوى انترنت اكسبلورر 7 مدعوم.يمكنك تنزيله من موقع مايكروسوفت على شبكة الانترنت. المتصفحات المجانيه الاخرى أيضاً ، بما في ذلك فايرفوكس و سفاري و والاوبرا."
@@ -595,7 +595,7 @@ msgid: "Importing..."
 msgstr: "استيراد..."
 
 msgid: "Drop the '%s' database"
-msgstr: "Ø­Ø°Ù Ù‚Ø§Ø¹Ø¯Ø© Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª '%s' "
+msgstr: "حذف قاعدة البيانات '%s'"
 
 msgid: "Okay"
 msgstr: "نعم"
@@ -611,18 +611,18 @@ msgstr: "لغة"
 
 msgid: "%d statement was executed from the file"
 msgid_plural: "%d statements were executed from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "تم تنفيذ %d أمر من الملف"
+msgstr[1]: "تم تنفيذ %d أوامر من الملف"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "تم إضافة سجل من الملف في قاعدة البيانات"
+msgstr[1]: "تم إضافة %d سجلات من الملف في قاعدة البيانات"
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
-msgstr[0]: ""
-msgstr[1]: ""
+msgstr[0]: "تم تخطي سجل لأن عدد القيم غير صحيح"
+msgstr[1]: "تم تخطي %d سجلات لأن عدد القيم غير صحيح"
 
 msgid: "Theme"
 msgstr: "شكل الواجهة"
@@ -634,10 +634,10 @@ msgid: "The following errors were reported"
 msgstr: "تقرير حول الاخطاء"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: "لا توجد لديك الصلاحيات الكافية لانشاء مستخدم جديد"
+msgstr: "غير مكتمل"
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: "لا توجد لديك الصلاحيات الكافيه لعرض او ادارة المستخدمين"
+msgstr: "غير مكتمل"
 
 msgid: "You are connected to %s."
 msgstr: "لا يمكنك الاتصال ب %s"
@@ -662,3 +662,6 @@ msgstr: "لا توجد تحديثات متاحة"
 
 msgid: "Change password"
 msgstr: "تغيير كلمة المرور"
+
+msgid: "Redirecting..."
+msgstr: "إعادة التوجيه"

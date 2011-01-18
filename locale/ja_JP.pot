@@ -1,9 +1,9 @@
 Language: 日本語
 Language-Code: ja_JP
-Build-Date: Mon, 15 Jun 2009 12:09:39 -0600
+Build-Date: Tue, 18 Jan 2011 15:12:20 -0700
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "ファイルが空のため読み込むことが出来ませんでした。"
+msgstr: "ファイルが空のため読み込むことが出来ませんでした"
 
 msgid: "Error performing operation"
 msgstr: "エラーを発生させた操作"
@@ -96,7 +96,7 @@ msgid: "Not Null"
 msgstr: "Not Null"
 
 msgid: "Auto Increment"
-msgstr: "Auto Increment"
+msgstr: "自動インクリメント"
 
 msgid: "Add field"
 msgstr: "フィールドの追加"
@@ -141,7 +141,7 @@ msgid: "Delete"
 msgstr: "削除"
 
 msgid: "Alter"
-msgstr: "Alter"
+msgstr: "変更"
 
 msgid: "Create"
 msgstr: "作成"
@@ -364,16 +364,16 @@ msgid: "Welcome to SQL Buddy!"
 msgstr: "SQL Buddy へようこそ！"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "データベース%sへ、ユーザ名%sで接続しました。"
+msgstr: "データベース%sへ、ユーザ名%sで接続しました"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "データベースサーバは、%sから稼働していて、約%sのデータが転送されました。"
+msgstr: "データベースサーバは、%sから稼働していて、約%sのデータが転送されました"
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "新しいバージョンのSQL Buddyが入手可能です"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "SQL Buddy %s がインストールされ、%s が利用可能になりました。"
+msgstr: "SQL Buddy %s がインストールされ、%s が利用可能になりました"
 
 msgid: "Getting started"
 msgstr: "はじめに"
@@ -481,7 +481,7 @@ msgstr[0]: "%d件の結果が返されました"
 msgstr[1]: "%d件の結果が返されました"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "注:ブラウザがクラッシュするのを防ぐ為、最初の%d件のみ結果が表示されています。"
+msgstr: "注:ブラウザがクラッシュするのを防ぐ為、最初の%d件のみ結果が表示されています"
 
 msgid: "binary data"
 msgstr: "バイナリデータ"
@@ -511,7 +511,7 @@ msgid: "Help!"
 msgstr: "ヘルプ！"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: "セッションがタイムアウトしました。再度ログインしてください。"
+msgstr: "セッションがタイムアウトしました。再度ログインしてください"
 
 msgid: "Username"
 msgstr: "ユーザー名"
@@ -662,3 +662,6 @@ msgstr: "利用可能な更新はありません"
 
 msgid: "Change password"
 msgstr: "パスワードを変更"
+
+msgid: "Redirecting..."
+msgstr: "リダイレクトします"

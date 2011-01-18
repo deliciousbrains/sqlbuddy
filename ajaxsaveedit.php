@@ -61,13 +61,11 @@ if ($_POST && isset($table)) {
 				if ($conn->getAdapter() == "mysql") {
 					if (isset($types) && substr($value, 0, 2) == "0x" && isset($binaryDTs) && in_array($types[$keyname], $binaryDTs)) {
 						$updates .= "`" . $keyname . "`=" . $value . ",";
-					} else if (!$value && $nulls[$keyname] == "YES") {
+					} else if (!$value && !($value != '' && (int)$value == 0) && $nulls[$keyname] == "YES") {
 						$updates .= "`" . $keyname . "`=NULL,";
 					} else {
 						$updates .= "`" . $keyname . "`='" . $value . "',";
 					}
-				} else if ($conn->getAdapter() == "sqlite") {
-					$updates .= "'" . $keyname . "'='" . $value . "',";
 				}
 			}
 			

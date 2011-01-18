@@ -1,6 +1,6 @@
 Language: Nederlands
 Language-Code: nl_NL
-Build-Date: Mon, 15 Jun 2009 12:07:35 -0600
+Build-Date: Tue, 18 Jan 2011 15:14:28 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Bestand kon niet gelezen worden of was leeg"
@@ -105,7 +105,7 @@ msgid: "Oops"
 msgstr: "Oeps"
 
 msgid: "For some reason, the database parameter was not included with your request"
-msgstr: "Omwille een bepaalde reden was de databaseparameter niet in uw verzoek meegenomen"
+msgstr: "Omwille van een bepaalde reden was de database parameter niet in uw verzoek meegenomen"
 
 msgid: "Save changes to original"
 msgstr: "Sla wijzigingen op in origineel"
@@ -174,13 +174,13 @@ msgid: "User not found!"
 msgstr: "Gebruiker niet gevonden!"
 
 msgid: "You must export either structure, data, or both"
-msgstr: "U moet structuur en/of data exporteren"
+msgstr: "U moet de structuur en/of data exporteren"
 
 msgid: "Please select the databases that you would like to export"
-msgstr: "Selecteer AUB de databases die u wilt exporteren"
+msgstr: "Selecteer a.u.b. de databases die u wilt exporteren"
 
 msgid: "Please select the tables that you would like to export"
-msgstr: "Selecteer AUB de tabellen die u wilt exporteren"
+msgstr: "Selecteer a.u.b. de tabellen die u wilt exporteren"
 
 msgid: "Table `%s` is empty"
 msgstr: "Tabel `%s` is leeg"
@@ -262,13 +262,13 @@ msgid: "If you are exporting a large number of rows, it is recommended that you 
 msgstr: "Als u een groot aantal rijen exporteert, wordt aanbevolen het resultaat naar een tekstbestand uit te voeren."
 
 msgid: "Output to"
-msgstr: "Uitvoeren naar"
+msgstr: "Exporteren naar"
 
 msgid: "Browser"
 msgstr: "Browser"
 
 msgid: "Text file"
-msgstr: "Tekstbestand"
+msgstr: "Tekst bestand"
 
 msgid: "Home"
 msgstr: "Home"
@@ -328,7 +328,7 @@ msgid: "delete these users"
 msgstr: "deze gebruikers verwijderen"
 
 msgid: "Are you sure you want to"
-msgstr: "Wil je"
+msgstr: "Weet je zeker dat je wil"
 
 msgid: "The following query will be run:"
 msgstr: "De volgende query zal worden uitgevoerd:"
@@ -346,7 +346,7 @@ msgid: "Full Text"
 msgstr: "Volledige tekst"
 
 msgid: "Loading..."
-msgstr: "Bezig met laden..."
+msgstr: "Laden ..."
 
 msgid: "Error"
 msgstr: "Fout"
@@ -355,19 +355,19 @@ msgid: "There was an error receiving data from the server"
 msgstr: "Er is een fout opgetreden bij het ontvangen van data van de server"
 
 msgid: "Logout"
-msgstr: "Afmelden"
+msgstr: "Uitloggen"
 
 msgid: "For some reason, the table parameter was not included with your request"
 msgstr: "Omwille een bepaalde reden was de tabelparameter niet in uw verzoek meegenomen"
 
 msgid: "Welcome to SQL Buddy!"
-msgstr: "Welkom bij SQL Buddy!"
+msgstr: "Welkom in SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "U bent verbonden met MySQL %s als gebruiker %s"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "De databaseserver draait sinds %s en heeft ongeveer %s data verzonden"
+msgstr: "De database server draait sinds %s en heeft ongeveer %s data verzonden"
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "Er is een nieuwe versie van SQL Buddy beschikbaar!"
@@ -403,7 +403,7 @@ msgid: "The columns in the browse and query tabs are resizable. Adjust them to a
 msgstr: "De kolommen in de Bladeren- en Query-tabbladen zijn schaalbaar. Stel ze zo breed of smal in zoals u wilt."
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "De loginpagina is gebaseerd op de standaardgebruiker root@localhost. Door config.php aan te passen kunt u de standaardgebruiker en -host aanpassen"
+msgstr: "De login pagina is gebaseerd op de standaard gebruiker root@localhost. Door config.php aan te passen kunt u de standaard gebruiker en -host aanpassen"
 
 msgid: "Keyboard shortcuts"
 msgstr: "Sneltoetsen"
@@ -412,7 +412,7 @@ msgid: "Press this key..."
 msgstr: "Druk op deze toets..."
 
 msgid: "...and this will happen"
-msgstr: "...en dit zal gebeuren"
+msgstr: "... en dit zal gebeuren"
 
 msgid: "select none"
 msgstr: "selecteer niets"
@@ -421,7 +421,7 @@ msgid: "edit selected items"
 msgstr: "bewerk de geselecteerde items"
 
 msgid: "delete selected items"
-msgstr: "wis de geselecteerde items"
+msgstr: "verwijder de geselecteerde items"
 
 msgid: "refresh page"
 msgstr: "ververs de pagina"
@@ -430,16 +430,16 @@ msgid: "load the query tab"
 msgstr: "laad de query tab"
 
 msgid: "browse tab - go to first page of results"
-msgstr: "bladertab - ga naar de eerste pagina met resultaten"
+msgstr: "blader tab - ga naar de eerste pagina met resultaten"
 
 msgid: "browse tab - go to last page of results"
-msgstr: "bladertab - ga naar de laatste pagina met resultaten"
+msgstr: "blader tab - ga naar de laatste pagina met resultaten"
 
 msgid: "browse tab - go to previous page of results"
-msgstr: "bladertab - ga naar de vorige pagina met resultaten"
+msgstr: "blader tab - ga naar de vorige pagina met resultaten"
 
 msgid: "browse tab - go to next page of results"
-msgstr: "bladertab - ga naar de volgende pagina met resultaten"
+msgstr: "blader tab - ga naar de volgende pagina met resultaten"
 
 msgid: "optimize selected tables"
 msgstr: "optimaliseer geselecteerde tabellen"
@@ -455,7 +455,7 @@ msgid: "Ignore first line"
 msgstr: "Negeer eerste regel"
 
 msgid: "Edit"
-msgstr: "Bewerken"
+msgstr: "Bewerk"
 
 msgid: "Refresh"
 msgstr: "Verversen"
@@ -487,22 +487,22 @@ msgid: "binary data"
 msgstr: "binaire data"
 
 msgid: "Your query affected %d rows"
-msgstr: "Je query heeft %d rijen aangepast"
+msgstr: "De query heeft %d rijen aangepast"
 
 msgid: "Your query did not return any results"
-msgstr: "Je query gaf geen resultaten terug"
+msgstr: "De query gaf geen resultaten terug"
 
 msgid: "Your data has been inserted into the database"
-msgstr: "Uw data is in de database ingevoegd"
+msgstr: "Uw data is in de database geplaatst"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
-msgstr: "Er waren problemen de \"%s\" tabel te vinden"
+msgstr: "Er waren problemen om de \"%s\" tabel te vinden"
 
 msgid: "There was a problem logging you in"
-msgstr: "Er was een probleem met het aanmelden"
+msgstr: "Er heeft zich een probleem voor gedaan tijdens het inloggen"
 
 msgid: "Login"
-msgstr: "Aanmelden"
+msgstr: "Inloggen"
 
 msgid: "Unsupported browser"
 msgstr: "Niet ondersteunde browser"
@@ -511,7 +511,7 @@ msgid: "Help!"
 msgstr: "Help!"
 
 msgid: "Your session has timed out. Please login again."
-msgstr: "Uw sessie is verlopen. Log AUB opnieuw in."
+msgstr: "Uw sessie is verlopen. Log a.u.b. opnieuw in."
 
 msgid: "Username"
 msgstr: "Gebruikersnaam"
@@ -547,7 +547,7 @@ msgid: "Indexes"
 msgstr: "Indexen"
 
 msgid: "Add an index"
-msgstr: "Index toevoegen"
+msgstr: "Voeg een index toe"
 
 msgid: "Column(s)"
 msgstr: "Kolom(men)"
@@ -559,13 +559,13 @@ msgid: "Empty table"
 msgstr: "Leeg tabel"
 
 msgid: "Drop table"
-msgstr: "Wis tabel"
+msgstr: "Verwijder tabel"
 
 msgid: "Optimize table"
 msgstr: "Optimaliseer tabel"
 
 msgid: "Table Information"
-msgstr: "Tabelinformatie"
+msgstr: "Tabel informatie"
 
 msgid: "Host"
 msgstr: "Host"
@@ -586,9 +586,7 @@ msgid: "Are you sure you want to drop the database '%s'? This will delete the da
 msgstr: "Weet u zeker dat u de '%s' database wilt leegmaken? Dit zal alle tabellen met alle gegevens verwijderen. De volgende Query zal worden uitgevoerd:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "Sorry, maar op dit moment ondersteunen we alleen Internet Explorer 7, Firefox, Safari en Opera.
-
-Internet Explorer is gratis beschikbaar op de site van Microsoft."
+msgstr: "Sorry, maar op dit moment ondersteunen we alleen Internet Explorer 7, Firefox, Safari en Opera. Internet Explorer is gratis beschikbaar op de site van Microsoft."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
 msgstr: "U heeft cookies uitgeschakeld. Om sessies te laten werken hebben de meeste php-installaties cookies nodig."
@@ -600,7 +598,7 @@ msgid: "Drop the '%s' database"
 msgstr: "Verwijder de '%s' database"
 
 msgid: "Okay"
-msgstr: "Oke"
+msgstr: "Oké"
 
 msgid: "Cancel"
 msgstr: "Annuleer"
@@ -618,8 +616,8 @@ msgstr[1]: "%d statements zijn uitgevoerd vanuit het bestand"
 
 msgid: "%d row was inserted into the database from the file"
 msgid_plural: "%d rows were inserted into the database from the file"
-msgstr[0]: "%d rijen is ingevoegd in de database uit het bestand."
-msgstr[1]: "%d rijen is ingevoegd in de database uit het bestand."
+msgstr[0]: "%d rijen zijn ingevoegd in de database uit het bestand"
+msgstr[1]: "%d rijen zijn ingevoegd in de database uit het bestand "
 
 msgid: "%d row had to be skipped because the number of values was incorrect"
 msgid_plural: "%d rows had to be skipped because the number of values was incorrect"
@@ -636,22 +634,22 @@ msgid: "The following errors were reported"
 msgstr: "De volgende fouten werden gerapporteerd"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: "Je hebt niet genoeg permissies om nieuwe gebruikers aan te maken."
+msgstr: "Je hebt niet genoeg rechten om nieuwe gebruikers te creëren."
 
 msgid: "You do not have enough permissions to view or manage users."
-msgstr: "Je hebt niet genoeg permissies om gebruikers weer te geven of te beheren."
+msgstr: "Je hebt niet genoeg rechten om gebruikers te beheren of in te zien."
 
 msgid: "You are connected to %s."
 msgstr: "Je bent verbonden met %s."
 
 msgid: "Allow access to"
-msgstr: "to"
+msgstr: "Geef toestemming aan"
 
 msgid: "All databases"
-msgstr: "Alle databas"
+msgstr: "Alle databases"
 
 msgid: "Selected databases"
-msgstr: "Ges"
+msgstr: "Geselecteerde database"
 
 msgid: "Give user"
 msgstr: "Geef gebruiker"
@@ -663,4 +661,7 @@ msgid: "There are no updates available"
 msgstr: "Er zijn geen updates beschikbaar"
 
 msgid: "Change password"
-msgstr: "Verander wachtwoord"
+msgstr: "Wachtwoord wijzigen"
+
+msgid: "Redirecting..."
+msgstr: "Doorsturen..."

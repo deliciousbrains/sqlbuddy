@@ -1,9 +1,9 @@
 Language: Español
 Language-Code: es_ES
-Build-Date: Mon, 15 Jun 2009 12:08:33 -0600
+Build-Date: Tue, 18 Jan 2011 15:08:19 -0700
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "la cual contiene los siguientes datos"
+msgstr: "No se pudo leer o esta vacío."
 
 msgid: "Error performing operation"
 msgstr: "Error durante la operación"
@@ -15,10 +15,10 @@ msgid: "None"
 msgstr: "Ninguno"
 
 msgid: "With selected"
-msgstr: "Con los seleccionados"
+msgstr: "Seleccionados"
 
 msgid: "Empty"
-msgstr: "Vacío"
+msgstr: "Vacíos"
 
 msgid: "Drop"
 msgstr: "Borrar"
@@ -81,7 +81,7 @@ msgid: "index"
 msgstr: "índice"
 
 msgid: "Default"
-msgstr: "Por Defecto"
+msgstr: "Por defecto"
 
 msgid: "Other"
 msgstr: "Otro"
@@ -364,7 +364,7 @@ msgid: "Welcome to SQL Buddy!"
 msgstr: "Bienvenido a SQL Buddy!"
 
 msgid: "You are connected to MySQL %s with the user %s."
-msgstr: "Se ha conectado al MySQL %s con el usuario %s."
+msgstr: "Se ha conectado al servidor MySQL %s con el usuario %s."
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
 msgstr: "El servidor de bases de datos ha estado ejecutándose desde %s y ha transferido aproximadamente %s de datos."
@@ -373,7 +373,7 @@ msgid: "A new version of SQL Buddy is available!"
 msgstr: "¡Está disponible una nueva versión de SQL Buddy!"
 
 msgid: "You have SQL Buddy %s installed and %s is now available."
-msgstr: "Usted tiene instalado SQL Buddy %s y %s está disponible."
+msgstr: "Usted tiene instalado SQL Buddy %s y ya está disponible SQL Buddy %s."
 
 msgid: "Getting started"
 msgstr: "Primeros pasos"
@@ -493,7 +493,7 @@ msgid: "Your query did not return any results"
 msgstr: "Su consulta no ha devuelto resultados"
 
 msgid: "Your data has been inserted into the database"
-msgstr: "Sus datos han sido ingresados a la base de datos"
+msgstr: "Sus datos han sido añadidos a la base de datos"
 
 msgid: "There was a bit of trouble locating the \"%s\" table"
 msgstr: "Ha habido un problema ubicando la tabla \"%s\""
@@ -662,3 +662,6 @@ msgstr: "No hay actualizaciones disponibles"
 
 msgid: "Change password"
 msgstr: "Cambiar contraseña"
+
+msgid: "Redirecting..."
+msgstr: "Redireccionando..."

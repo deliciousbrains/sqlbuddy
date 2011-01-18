@@ -1,6 +1,6 @@
 Language: Tagalog
 Language-Code: tl_PH
-Build-Date: Mon, 15 Jun 2009 12:05:54 -0600
+Build-Date: Tue, 18 Jan 2011 15:24:16 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Ang file ay hindi mabasa o walang laman"
@@ -662,3 +662,6 @@ msgstr: "Walang pang bago."
 
 msgid: "Change password"
 msgstr: "Magpalit ng password"
+
+msgid: "Redirecting..."
+msgstr: "Redirecionando..."

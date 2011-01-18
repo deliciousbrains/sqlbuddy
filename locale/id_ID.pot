@@ -1,6 +1,6 @@
-Language: Indonesian
+Language: Bahasa Indonesia
 Language-Code: id_ID
-Build-Date: Mon, 15 Jun 2009 12:15:12 -0600
+Build-Date: Tue, 18 Jan 2011 15:11:27 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "File tidak dapat dibaca atau file masih kosong"
@@ -186,7 +186,7 @@ msgid: "Table `%s` is empty"
 msgstr: "Tabel `%s` kosong"
 
 msgid: "Results"
-msgstr: "Results"
+msgstr: "Hasil"
 
 msgid: "Select all"
 msgstr: "Seleksi semua"
@@ -235,10 +235,10 @@ msgid: "Data"
 msgstr: "Data"
 
 msgid: "Compact inserts"
-msgstr: "Insert secara compact"
+msgstr: "Sisip secara compact"
 
 msgid: "Complete inserts"
-msgstr: "Insert secara komplit"
+msgstr: "Sisip secara komplit"
 
 msgid: "Delimiter"
 msgstr: "Pemisah"
@@ -262,7 +262,7 @@ msgid: "If you are exporting a large number of rows, it is recommended that you 
 msgstr: "Jika Anda mengekspor baris dalam jumlah besar, direkomendasikan untuk menyimpan outputnya dalam sebuah file teks"
 
 msgid: "Output to"
-msgstr: "Output ke"
+msgstr: "Keluaran ke"
 
 msgid: "Browser"
 msgstr: "Browser"
@@ -283,7 +283,7 @@ msgid: "Import"
 msgstr: "Impor"
 
 msgid: "Overview"
-msgstr: "Tampilan"
+msgstr: "Sekilas"
 
 msgid: "Browse"
 msgstr: "Browse"
@@ -406,7 +406,7 @@ msgid: "The login page is based on a default user of root@localhost. By editing 
 msgstr: "Halaman login adalah berdasar pada user default: root@localhost. Anda bisa mengubahnya dengan mengedit nama default user dan nama host pada file config.php"
 
 msgid: "Keyboard shortcuts"
-msgstr: "Shortcut keyboard"
+msgstr: "Langkah Cepat keyboard"
 
 msgid: "Press this key..."
 msgstr: "Tekan tombol ini..."
@@ -415,7 +415,7 @@ msgid: "...and this will happen"
 msgstr: "...dan hal ini akan terjadi"
 
 msgid: "select none"
-msgstr: "seleksi"
+msgstr: "Tanpa seleksi"
 
 msgid: "edit selected items"
 msgstr: "edit item yang terseleksi"
@@ -484,7 +484,7 @@ msgid: "Note: To avoid crashing your browser, only the first %d results have bee
 msgstr: "Catatan: Untuk menghindari crash-nya browser Anda, hanya %d hasil yang ditampilkan"
 
 msgid: "binary data"
-msgstr: "binary data"
+msgstr: "data biner"
 
 msgid: "Your query affected %d rows"
 msgstr: "Query anda mempengaruhi %d baris"
@@ -505,7 +505,7 @@ msgid: "Login"
 msgstr: "Login"
 
 msgid: "Unsupported browser"
-msgstr: "Browser yang tidak di-support"
+msgstr: "Browser yang tidak didukung"
 
 msgid: "Help!"
 msgstr: "Tolong!"
@@ -662,3 +662,6 @@ msgstr: "Tidak ada update baru yang tersedia"
 
 msgid: "Change password"
 msgstr: "Ubah password"
+
+msgid: "Redirecting..."
+msgstr: "melanjutkan....."

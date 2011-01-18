@@ -1,6 +1,6 @@
 Language: Română
 Language-Code: ro_RO
-Build-Date: Mon, 15 Jun 2009 12:13:01 -0600
+Build-Date: Tue, 18 Jan 2011 15:17:53 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Fișierul nu a putut fi citit sau este gol"
@@ -662,3 +662,6 @@ msgstr: "Nu sunt actualizări disponibile"
 
 msgid: "Change password"
 msgstr: "Schimbare de parolă"
+
+msgid: "Redirecting..."
+msgstr: "Redirecţionare..."

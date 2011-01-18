@@ -1,6 +1,6 @@
 Language: Latviešu
 Language-Code: lv_LV
-Build-Date: Mon, 15 Jun 2009 12:13:17 -0600
+Build-Date: Tue, 18 Jan 2011 15:13:15 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "Failu nav iespējams nolasīt vai arī tas ir tukšs"
@@ -177,7 +177,7 @@ msgid: "You must export either structure, data, or both"
 msgstr: "Ir jāeksportē vai nu struktūra vai dati, vai abas šīs lietas"
 
 msgid: "Please select the databases that you would like to export"
-msgstr: "Lūdzu, izvēties eksportējamās datubāzes"
+msgstr: "Lūdzu, izvēlēties eksportējamās datubāzes"
 
 msgid: "Please select the tables that you would like to export"
 msgstr: "Lūdzu, izvēlēties eksportējamās tabulas"
@@ -662,3 +662,6 @@ msgstr: "Ir pieejami jauninājumi"
 
 msgid: "Change password"
 msgstr: "Mainīt paroli"
+
+msgid: "Redirecting..."
+msgstr: "Pārsūtu..."

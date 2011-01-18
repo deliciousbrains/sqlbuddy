@@ -133,7 +133,7 @@ if (isset($_POST['editParts']) && $conn->isResultSet($structureSql)) {
 				echo "<select name=\"CHARSET\" style=\"width: 125px\">";
 				echo "<option></option>";
 				
-				if ($structureRow['Collation'] != "NULL") {
+				if ($structureRow['Collation'] != "NULL" && isset($structureRow['Collation'])) {
 					$currentCharset = $collationList[$structureRow['Collation']];
 				}
 				

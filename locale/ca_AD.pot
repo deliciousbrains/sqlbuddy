@@ -1,12 +1,12 @@
 Language: Català
 Language-Code: ca_AD
-Build-Date: Mon, 15 Jun 2009 12:15:33 -0600
+Build-Date: Tue, 18 Jan 2011 15:04:12 -0700
 
 msgid: "Either the file could not be read or it was empty"
 msgstr: "No s'ha pogut llegir l'arxiu o estava buit"
 
 msgid: "Error performing operation"
-msgstr: "Error durant l'operació"
+msgstr: "Error durant la operació"
 
 msgid: "All"
 msgstr: "Tots"
@@ -195,7 +195,7 @@ msgid: "The file could not be opened"
 msgstr: "El fitxer no pot ser obert"
 
 msgid: "Could not write to file"
-msgstr: "Imposible escriure el fitxer"
+msgstr: "Impossible escriure el fitxer"
 
 msgid: "Successfully wrote content to file"
 msgstr: "El fitxer s'ha escrit correctament"
@@ -586,7 +586,7 @@ msgid: "Are you sure you want to drop the database '%s'? This will delete the da
 msgstr: "Estàs segur que vols eliminar la base de dades '%s'? Açò eliminarà la base de dades, les taules dins de la base de dades i *totes les dades* dins d'eixes taules. La següent consulta serà executada:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "Ho sentim, pero actualment  només Internet Explorer 7 està suportat. Està disponible com a descàrrega gratuïta al website de Microsoft. Hi han d'altres navegadors suportats gratuïts, com ara  Firefox, Safari i Opera."
+msgstr: "Ho sentim, pero actualment  només Internet Explorer 7 està suportat. Està disponible com a descàrrega gratuïta al website de Microsoft. Hi ha d'altres navegadors suportats gratuïts, com ara  Firefox, Safari i Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
 msgstr: "Sembla que no tens les cookies habilitades. Per a que funcionen, la majoria de les instal·lacions PHP requereixen cookies."
@@ -640,10 +640,10 @@ msgid: "You do not have enough permissions to view or manage users."
 msgstr: "No tens prous permisos per veure o manipular els usuaris."
 
 msgid: "You are connected to %s."
-msgstr: "Esàs connectat a %s"
+msgstr: "Estàs connectat a %s"
 
 msgid: "Allow access to"
-msgstr: "Permetre accés a"
+msgstr: "Permetre l'accés a"
 
 msgid: "All databases"
 msgstr: "Totes les bases de dades"
@@ -658,7 +658,10 @@ msgid: "Updates"
 msgstr: "Actualitzacions"
 
 msgid: "There are no updates available"
-msgstr: "No hi han actualitzacions disponibles."
+msgstr: "No hi ha actualitzacions disponibles."
 
 msgid: "Change password"
 msgstr: "Canviar clau"
+
+msgid: "Redirecting..."
+msgstr: "Redirigint..."
