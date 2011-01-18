@@ -1,9 +1,9 @@
-Language: Danish
+Language: Dansk
 Language-Code: da_DK
-Build-Date: Mon, 15 Jun 2009 12:15:14 -0600
+Build-Date: Tue, 18 Jan 2011 15:05:21 -0700
 
 msgid: "Either the file could not be read or it was empty"
-msgstr: "Filen kunne enten, ikke blive fundet eller den er tom"
+msgstr: "Filen kunne ikke læses, eller også er den tom."
 
 msgid: "Error performing operation"
 msgstr: "Fejl ved udførelse af opgaven"
@@ -51,7 +51,7 @@ msgid: "Submit"
 msgstr: "Send"
 
 msgid: "Create a new table"
-msgstr: "Opret en ny tabel"
+msgstr: "Opret ny tabel"
 
 msgid: "Name"
 msgstr: "Navn"
@@ -78,10 +78,10 @@ msgid: "unique"
 msgstr: "unik"
 
 msgid: "index"
-msgstr: "index"
+msgstr: "indeks"
 
 msgid: "Default"
-msgstr: "Standardopsætning"
+msgstr: "Standard"
 
 msgid: "Other"
 msgstr: "Andre"
@@ -93,7 +93,7 @@ msgid: "Binary"
 msgstr: "Binær"
 
 msgid: "Not Null"
-msgstr: "ikke nul"
+msgstr: "ikke null"
 
 msgid: "Auto Increment"
 msgstr: "Automatisk stigning"
@@ -168,7 +168,7 @@ msgid: "Super"
 msgstr: "Super"
 
 msgid: "Grant option"
-msgstr: "Bevillig tilvalg"
+msgstr: "Bevilg tilvalg"
 
 msgid: "User not found!"
 msgstr: "Bruger ikke fundet!"
@@ -259,7 +259,7 @@ msgid: "Print field names on first line"
 msgstr: "Udskriv feltnavne på første linie"
 
 msgid: "If you are exporting a large number of rows, it is recommended that you output the results to a text file"
-msgstr: "Du er ved at eksportere et stort antal af rækker, det anbefales at du eksporterer resultatet til en tekst fil"
+msgstr: "Hvis du er ved at eksportere et stort antal rækker, er det anbefalet at du eksporterer resultatet til en tekst fil"
 
 msgid: "Output to"
 msgstr: "Skriv til "
@@ -343,7 +343,7 @@ msgid: "Successfully saved changes"
 msgstr: "Ændringer blev gemt"
 
 msgid: "Full Text"
-msgstr: "Fuld Tekst"
+msgstr: "Fuld tekst"
 
 msgid: "Loading..."
 msgstr: "Henter..."
@@ -352,7 +352,7 @@ msgid: "Error"
 msgstr: "Fejl"
 
 msgid: "There was an error receiving data from the server"
-msgstr: "Der opstod en fejl ved modtagningen af data fra serveren"
+msgstr: "Der opstod en fejl ved modtagelse af data fra serveren"
 
 msgid: "Logout"
 msgstr: "Log ud"
@@ -367,7 +367,7 @@ msgid: "You are connected to MySQL %s with the user %s."
 msgstr: "Du har forbindelse til MySQL %s med brugeren %s"
 
 msgid: "The database server has been running since %s and has transferred approximately %s of data."
-msgstr: "Databasen server har kørt siden %s og har overført ca %s af data"
+msgstr: "Databasen server har kørt siden %s og har overført ca. %s af data"
 
 msgid: "A new version of SQL Buddy is available!"
 msgstr: "En ny version af SQL Buddy er tilgængelig!"
@@ -400,10 +400,10 @@ msgid: "There is an easier way to select a large group of items when browsing ta
 msgstr: "Der er en nemmere måde at vælge en stor gruppe af poster, når du browser tabelrækker. Tjek den første række, holde Skift-tasten nede, og tjek sidste række. Afkrydsningsfelterne mellem de to rækker, vil automatisk blive markeret for dig."
 
 msgid: "The columns in the browse and query tabs are resizable. Adjust them to as wide or narrow as you like."
-msgstr: "Browse og Søg kolonnerne kan frit ændres i størrelse.rnJuster dem til så bred eller smal du ønsker"
+msgstr: "Gennemse og søg kolonnerne kan frit ændres i størrelse. Juster dem så brede eller smalle du ønsker"
 
 msgid: "The login page is based on a default user of root@localhost. By editing config.php, you can change the default user and host to whatever you want."
-msgstr: "Login-siden er baseret på en standard bruger af root @ localhost. Ved at redigere config.php, kan du ændre standard bruger og vært for, hvad du ønsker."
+msgstr: "Login-siden er baseret på en standard bruger af root@localhost. Ved at redigere config.php, kan du ændre standard bruger og vært til hvad du ønsker."
 
 msgid: "Keyboard shortcuts"
 msgstr: "Genvejstaster"
@@ -481,10 +481,10 @@ msgstr[0]: "Din forespørgsel returnerede %d resultat"
 msgstr[1]: "Din forespørgsel retunerede %d resultater"
 
 msgid: "Note: To avoid crashing your browser, only the first %d results have been displayed"
-msgstr: "Note: Kun de første %d resultater er vist, for ikke at din browser skal gå ned."
+msgstr: "Note: For at din browser ikke går ned, er kun de første %d resultater vist"
 
 msgid: "binary data"
-msgstr: "Binear data"
+msgstr: "Binære data"
 
 msgid: "Your query affected %d rows"
 msgstr: "Din forespørgsel påvirkede %d rækker"
@@ -577,16 +577,16 @@ msgid: "Enter in the format: ('1','2')"
 msgstr: "Indtast i formatet: ('1','2')"
 
 msgid: "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"
-msgstr: "Er du sikker på, at du vil tømme '%s' tabeller? Dette vil slette al dataindhold. Følgende forspørgsel vil blive kørt:"
+msgstr: "Er du sikker på, at du vil tømme '%s' tabellen? Dette vil slette al data i tabellen. Følgende forspørgsel vil blive kørt:"
 
 msgid: "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"
-msgstr: "Er du sikker på at du vil droppe '%s' tabel? Dette vil slette tabellen, og alle data i den. Følgende forespørgsel vil blive kørt:"
+msgstr: "Er du sikker på at du vil droppe '%s' tabellen? Dette vil slette tabellen, og alle data i den. Følgende forespørgsel vil blive kørt:"
 
 msgid: "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"
-msgstr: "Er du sikker på at du vil droppe database '% s'? Dette vil slette databasen, tabeller i databasen, og alle data i tabellerne. Følgende forespørgsel vil blive kørt:"
+msgstr: "Er du sikker på at du vil droppe databasen '% s'? Dette vil slette databasen, tabeller i databasen, og alle data i tabellerne. Følgende forespørgsel vil blive kørt:"
 
 msgid: "We're sorry, but currently only Internet Explorer 7 is supported. It is available as a free download on Microsoft's website. Other free browsers are also supported, including Firefox, Safari, and Opera."
-msgstr: "Vi beklager, men i øjeblikket er det kun Internet Explorer 7 der er understøttet. Den er tilgængelig som en gratis download på Microsofts hjemmeside. Andre gratis browsere er også støttet, herunder Firefox, Safari og Opera."
+msgstr: "Vi beklager, men i øjeblikket er det kun Internet Explorer 7 der er understøttet. Den er tilgængelig som en gratis download på Microsofts hjemmeside. Andre gratis browsere er også understøttet, herunder Firefox, Safari og Opera."
 
 msgid: "You don't appear to have cookies enabled. For sessions to work, most php installations require cookies."
 msgstr: "Det ser ud til, at du ikke har cookies aktiveret. For at Sessions skal virke, kræver de fleste php-installationer at cookies er aktiveret."
@@ -631,10 +631,10 @@ msgid: "(%.4f seconds)"
 msgstr: "(%. 4f sekunder)"
 
 msgid: "The following errors were reported"
-msgstr: "De følgende fejl opstod"
+msgstr: "Der opstod følgende fejl"
 
 msgid: "You do not have enough permissions to create new users."
-msgstr: "Du har ikke tilstrækkelige rettigheder til at lave en ny bruger"
+msgstr: "Du har ikke tilstrækkelige rettigheder til at oprette en ny bruger"
 
 msgid: "You do not have enough permissions to view or manage users."
 msgstr: "Du har ikke tilstrækkelige rettigheder til at se eller styre brugere"
@@ -662,3 +662,6 @@ msgstr: "Der er ingen opdateringer tilgængelige"
 
 msgid: "Change password"
 msgstr: "Skift kodeord"
+
+msgid: "Redirecting..."
+msgstr: "Omdirigerer"
