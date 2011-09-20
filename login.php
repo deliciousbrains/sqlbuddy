@@ -18,24 +18,24 @@ include "functions.php";
 $adapter = (isset($sbconfig['DefaultAdapter'])) ? $sbconfig['DefaultAdapter'] : "mysql";
 $host = (isset($sbconfig['DefaultHost'])) ? $sbconfig['DefaultHost'] : "localhost";
 $user = (isset($sbconfig['DefaultUser'])) ? $sbconfig['DefaultUser'] : "root";
-$pass = (isset($sbconfig['DefaultPass'])) ? $sbconfig['DefaultPass'] : "";	
+$pass = (isset($sbconfig['DefaultPass'])) ? $sbconfig['DefaultPass'] : "";
 
 // SQLite only
-$database = (isset($sbconfig['DefaultDatabase'])) ? $sbconfig['DefaultDatabase'] : "";	
+$database = (isset($sbconfig['DefaultDatabase'])) ? $sbconfig['DefaultDatabase'] : "";
 
 if ($_POST) {
 	if (isset($_POST['ADAPTER']))
 		$adapter = $_POST['ADAPTER'];
-	
+
 	if (isset($_POST['HOST']))
 		$host = $_POST['HOST'];
-		
+
 	if (isset($_POST['USER']))
 		$user = $_POST['USER'];
-		
+
 	if (isset($_POST['PASS']))
 		$pass = $_POST['PASS'];
-	
+
 	if (isset($_POST['DATABASE']))
 		$database = $_POST['DATABASE'];
 }
@@ -45,7 +45,7 @@ if (!in_array($adapter, $adapterList)) {
 }
 
 if (($adapter != "sqlite" && $host && $user && ($pass || $_POST)) || ($adapter == "sqlite" && $database)) {
-	
+
 	if ($adapter == "sqlite") {
 		$connString = "sqlite:database=$database";
 		$connCheck = new SQL($connString);
@@ -55,31 +55,31 @@ if (($adapter != "sqlite" && $host && $user && ($pass || $_POST)) || ($adapter =
 		$connString = "$adapter:host=$host";
 		$connCheck = new SQL($connString, $user, $pass);
 	}
-	
+
 	if ($connCheck->isConnected()) {
 		$_SESSION['SB_LOGIN'] = true;
 		$_SESSION['SB_LOGIN_STRING'] = $connString;
 		$_SESSION['SB_LOGIN_USER'] = $user;
 		$_SESSION['SB_LOGIN_PASS'] = $pass;
-		
+
 		$path = $_SERVER["SCRIPT_NAME"];
 		$pathSplit = explode("/", $path);
-		
+
 		$redirect = "";
-		
+
 		for ($i=0; $i<count($pathSplit)-1; $i++) {
 			if (trim($pathSplit[$i]) != "")
 				$redirect .= "/" . $pathSplit[$i];
 		}
-		
+
 		if (array_key_exists("HTTPS", $_SERVER) && $_SERVER['HTTPS'] == "on") {
 			$protocol = "https://";
 		} else {
 			$protocol = "http://";
 		}
-		
+
 		$redirect = $protocol . $_SERVER["HTTP_HOST"] . $redirect . "/";
-		
+
 		redirect($redirect);
 		exit;
 	} else {
@@ -113,20 +113,20 @@ startOutput();
 		<form name="loginform" method="post">
 		<div class="loginspacer">
 		<?php
-		
+
 		// make sure they aren't using IE below version 7
-		
+
 		$ua = $_SERVER['HTTP_USER_AGENT'];
-		
+
 		$ie = strstr($ua, 'MSIE') ? true : false;
 		$ieVer = $ie ? preg_split('/msie/i', $ua) : false;
 		$ieVer = $ieVer ? floatval($ieVer[1]) : false;
-		
+
 		// turn into whole number
 		$ieVer = (int)($ieVer);
-		
+
 		if ($ua && $ie && $ieVer < 7) {
-			
+
 			?>
 			<table cellpadding="0" id="tb">
 			<tr>
@@ -137,9 +137,9 @@ startOutput();
 			</tr>
 			</table>
 			<?php
-			
+
 		} else {
-			
+
 			?>
 			<table cellpadding="0" id="tb">
 			<tr>
@@ -152,36 +152,42 @@ startOutput();
 			if (isset($_GET['timeout'])) {
 				echo '<tr><td colspan="2"><div class="errormess">' . __("Your session has timed out. Please login again.") . '</div></td></tr>';
 			}
-			
+
 			if (sizeof($adapterList) > 1) {
-			
+
 			?>
 			<tr>
 			<td class="field"></td>
 			<td>
 			<select name="ADAPTER" id="ADAPTER" onchange="adapterChange()">
 			<?php
-			
+
 			if (in_array("mysql", $adapterList)) {
 				?>
 				<option value="mysql"<?php if ($adapter == "mysql") echo " selected"; ?>><?php echo __("MySQL"); ?></option>
 				<?php
 			}
-			
+
 			if (in_array("sqlite", $adapterList)) {
 				?>
 				<option value="sqlite"<?php if ($adapter == "sqlite") echo " selected"; ?>><?php echo __("SQLite"); ?></option>
 				<?php
 			}
-			
+
+			if (in_array("pgsql", $adapterList)) {
+				?>
+				<option value="pgsql"<?php if ($adapter == "pgsql") echo " selected"; ?>><?php echo __("PostgreSQL"); ?></option>
+				<?php
+			}
+
 			?>
 			</select>
 			</td>
 			</tr>
 			<?php
-			
+
 			}
-			
+
 			?>
 			</table>
 			<table cellpadding="0" id="REGOPTIONS"<?php if ($adapter == "sqlite") echo ' style="display: none"'; ?>>
@@ -211,9 +217,9 @@ startOutput();
 			</tr>
 			</table>
 			<?php
-			
+
 		}
-		
+
 		?>
 		</div>
 		</form>
@@ -221,17 +227,17 @@ startOutput();
 	</div>
 	<script type="text/javascript">
 	<!--
-	
+
 	<?php
-	
+
 	if ($adapter != "sqlite") {
 		echo "$('PASS').focus();";
 	} else {
 		echo "$('DATABASE').focus();";
 	}
-	
+
 	?>
-	
+
 	if (!navigator.cookieEnabled) {
 		var tb = $('tb');
 		var newTr = new Element('tr');
@@ -244,11 +250,11 @@ startOutput();
 		newTr.appendChild(newTd);
 		tb.appendChild(newTr);
 	}
-	
+
 	function adapterChange() {
 		var adapter = $('ADAPTER');
 		var currentAdapter = adapter.options[adapter.selectedIndex].value;
-		
+
 		if (currentAdapter == "sqlite") {
 			$('REGOPTIONS').style.display = 'none';
 			$('LITEOPTIONS').style.display = '';
@@ -258,9 +264,9 @@ startOutput();
 			$('LITEOPTIONS').style.display = 'none';
 			$('PASS').focus();
 		}
-		
+
 	}
-	
+
 	// -->
 	</script>
 </body>

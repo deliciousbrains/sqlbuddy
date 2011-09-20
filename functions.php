@@ -41,6 +41,9 @@ $adapterList[] = "mysql";
 if (function_exists("sqlite_open") || (class_exists("PDO") && in_array("sqlite", PDO::getAvailableDrivers()))) {
 	$adapterList[] = "sqlite";
 }
+if (function_exists("pg_connect") || (class_exists("PDO") && in_array("pgsql", PDO::getAvailableDrivers()))) {
+	$adapterList[] = "pgsql";
+}
 
 $cookieLength = time() + (60*24*60*60);
 
@@ -97,16 +100,16 @@ if (isset($conn) && $conn->isConnected()) {
 
 	if (isset($_GET['table']))
 		$table = $conn->escapeString($_GET['table']);
-	
+
 	if ($conn->hasCharsetSupport()) {
-		
+
 		$charsetSql = $conn->listCharset();
 		if ($conn->isResultSet($charsetSql)) {
 			while ($charsetRow = $conn->fetchAssoc($charsetSql)) {
 				$charsetList[] = $charsetRow['Charset'];
 			}
 		}
-	
+
 		$collationSql = $conn->listCollation();
 		if ($conn->isResultSet($collationSql)) {
 			while ($collationRow = $conn->fetchAssoc($collationSql)) {
@@ -175,23 +178,23 @@ function validateRequest() {
 
 function startOutput() {
 	global $sbconfig;
-	
+
 	if (!headers_sent()) {
 		if (extension_loaded("zlib") && ((isset($sbconfig['EnableGzip']) && $sbconfig['EnableGzip'] == true) || !isset($sbconfig['EnableGzip'])) && !ini_get("zlib.output_compression") && ini_get("output_handler") != "ob_gzhandler") {
 			ob_start("ob_gzhandler");
 		} else {
 			ob_start();
 		}
-		
+
 		register_shutdown_function("finishOutput");
 	}
 }
 
-function finishOutput() {	
+function finishOutput() {
 	global $conn;
-	
+
 	ob_end_flush();
-	
+
 	if (isset($conn) && $conn->isConnected()) {
 		$conn->disconnect();
 		unset($conn);
@@ -204,6 +207,7 @@ global $requestKey;
 global $sbconfig;
 global $conn;
 global $lang;
+
 
 require 'views/layout.php';
 }

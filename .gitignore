@@ -1,9 +1,13 @@
+
 # Project Files #
 #################
 *.tmproj
 *.psd
 *.orig
 _*/
+/.settings
+/.buildpath
+/.project
 
 # Packages #
 ############

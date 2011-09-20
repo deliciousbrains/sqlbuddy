@@ -143,9 +143,9 @@ color: rgb(80, 80, 80);
 	float: left;
 	height: 100%;
 }
-#toptabs ul li a {
+#toptabs ul li a, #headerinfo a {
 	float: left;
-	margin: 10px 5px 0 15px;
+	margin: 12px 5px 0 15px;
 	color: rgb(45,50,55);
 	font-weight: normal;
 	padding: 8px 14px;
@@ -187,19 +187,23 @@ color: rgb(175, 175, 175) !important;
 }
 /* Header Infos */
 #headerinfo {
-padding: 7px 18px 0;
-width: 175px;
-text-align: right;
-float: right;
-color: white;
+	width: 175px;
+	float: right;
+	color: rgb(45,50,55);
+	font-weight: normal;
+	font-size: 1em;
 }
 #headerinfo a {
-margin-left: 10px;
-outline: none;
+	float: right;
+	margin-left: 10px;
 }
 
 #load {
-color: rgb(190, 190, 190);
+	float: left;
+	color: rgb(45,205,115);
+	margin: 12px 5px 0 15px;
+	font-weight: normal;
+	padding: 8px 14px;
 }
 
 #container {
@@ -1063,13 +1067,6 @@ h3, h4 {
 }
 #bottom{
 	padding-top: 0;
-}
-#headerinfo a {
-color: rgb(215, 215, 215) !important;
-text-shadow: rgb(50, 50, 50) 0 1px 0;
-}
-#headerinfo a:hover {
-color: #fff !important;
 }
 
 #loginform {
