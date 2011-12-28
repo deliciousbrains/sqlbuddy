@@ -1,0 +1,6 @@
+{
+    "name": "helio-networks/sqlbuddy",
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
