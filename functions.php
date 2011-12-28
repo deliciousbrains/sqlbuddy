@@ -41,6 +41,9 @@ $adapterList[] = "mysql";
 if (function_exists("sqlite_open") || (class_exists("PDO") && in_array("sqlite", PDO::getAvailableDrivers()))) {
 	$adapterList[] = "sqlite";
 }
+if (function_exists("pg_connect") || (class_exists("PDO") && in_array("pgsql", PDO::getAvailableDrivers()))) {
+	$adapterList[] = "pgsql";
+}
 
 $cookieLength = time() + (60*24*60*60);
 
@@ -144,16 +147,16 @@ if (isset($conn) && $conn->isConnected()) {
 
 	if (isset($_GET['table']))
 		$table = $conn->escapeString($_GET['table']);
-	
+
 	if ($conn->hasCharsetSupport()) {
-		
+
 		$charsetSql = $conn->listCharset();
 		if ($conn->isResultSet($charsetSql)) {
 			while ($charsetRow = $conn->fetchAssoc($charsetSql)) {
 				$charsetList[] = $charsetRow['Charset'];
 			}
 		}
-	
+
 		$collationSql = $conn->listCollation();
 		if ($conn->isResultSet($collationSql)) {
 			while ($collationRow = $conn->fetchAssoc($collationSql)) {
@@ -222,23 +225,23 @@ function validateRequest() {
 
 function startOutput() {
 	global $sbconfig;
-	
+
 	if (!headers_sent()) {
 		if (extension_loaded("zlib") && ((isset($sbconfig['EnableGzip']) && $sbconfig['EnableGzip'] == true) || !isset($sbconfig['EnableGzip'])) && !ini_get("zlib.output_compression") && ini_get("output_handler") != "ob_gzhandler") {
 			ob_start("ob_gzhandler");
 		} else {
 			ob_start();
 		}
-		
+
 		register_shutdown_function("finishOutput");
 	}
 }
 
-function finishOutput() {	
+function finishOutput() {
 	global $conn;
-	
+
 	ob_end_flush();
-	
+
 	if (isset($conn) && $conn->isConnected()) {
 		$conn->disconnect();
 		unset($conn);
@@ -297,9 +300,9 @@ global $lang;
 		<div id="sidemenu">
 		<div class="dblist"><ul>
 		<?php
-		
+
 		if ($conn->getAdapter() != "sqlite") {
-		
+
 		?>
 			<li id="sidehome"><a href="#page=home" onclick="sideMainClick('home.php', 0); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Home"); ?></div></a></li>
 			<li id="sideusers"><a href="#page=users&topTab=1" onclick="sideMainClick('users.php', 1); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Users"); ?></div></a></li>
@@ -307,21 +310,21 @@ global $lang;
 			<li id="sideimport"><a href="#page=import&topTab=3" onclick="sideMainClick('import.php', 3); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Import"); ?></div></a></li>
 			<li id="sideexport"><a href="#page=export&topTab=4" onclick="sideMainClick('export.php', 4); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Export"); ?></div></a></li>
 		<?php
-		
+
 		} else {
-		
+
 		?>
 			<li id="sidehome"><a href="#page=home" onclick="sideMainClick('home.php', 0); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Home"); ?></div></a></li>
 			<li id="sidequery"><a href="#page=query&topTab=1" onclick="sideMainClick('query.php', 1); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Query"); ?></div></a></li>
 			<li id="sideimport"><a href="#page=import&topTab=2" onclick="sideMainClick('import.php', 2); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Import"); ?></div></a></li>
 			<li id="sideexport"><a href="#page=export&topTab=3" onclick="sideMainClick('export.php', 3); return false;"><div class="menuicon">&gt;</div><div class="menutext"><?php echo __("Export"); ?></div></a></li>
 		<?php
-		
+
 		}
-		
+
 		?>
 		</ul></div>
-		
+
 		<div class="dblistheader"><?php echo __("Databases"); ?></div>
 		<div class="dblist" id="databaselist"><ul></ul></div>
 		</div>
@@ -342,41 +345,41 @@ global $lang;
 	</body>
 	<script type="text/javascript">
 	<!--
-	
+
 	<?php
-	
+
 	if ($conn->getAdapter() == "sqlite") {
 		echo "var showUsersMenu = false;\n";
 	} else {
 		echo "var showUsersMenu = true;\n";
 	}
-	
+
 	echo "var adapter = \"" . $conn->getAdapter() . "\";\n";
-	
+
 	if (isset($requestKey)) {
 		echo 'var requestKey = "' . $requestKey . '";';
 		echo "\n";
 	}
-	
+
 	// javascript translation strings
 	echo "\t\tvar getTextArr = {";
-	
+
 	if ($lang != "en_US") {
-		
+
 		echo '"Home":"' . __("Home") . '", ';
 		echo '"Users":"' . __("Users") . '", ';
 		echo '"Query":"' . __("Query") . '", ';
 		echo '"Import":"' . __("Import") . '", ';
 		echo '"Export":"' . __("Export") . '", ';
-	
+
 		echo '"Overview":"' . __("Overview") . '", ';
-	
+
 		echo '"Browse":"' . __("Browse") . '", ';
 		echo '"Structure":"' . __("Structure") . '", ';
 		echo '"Insert":"' . __("Insert") . '", ';
-	
+
 		echo '"Your changes were saved to the database.":"' . __("Your changes were saved to the database.") . '", ';
-	
+
 		echo '"delete this row":"' . __("delete this row") . '", ';
 		echo '"delete these rows":"' . __("delete these rows") . '", ';
 		echo '"empty this table":"' . __("empty this table") . '", ';
@@ -390,32 +393,32 @@ global $lang;
 		echo '"delete this user":"' . __("delete this user") . '", ';
 		echo '"delete these users":"' . __("delete these users") . '", ';
 		echo '"Are you sure you want to":"' . __("Are you sure you want to") . '", ';
-	
+
 		echo '"The following query will be run:":"' . __("The following query will be run:") . '", ';
 		echo '"The following queries will be run:":"' . __("The following queries will be run:") . '", ';
-	
+
 		echo '"Confirm":"' . __("Confirm") . '", ';
 		echo '"Are you sure you want to empty the \'%s\' table? This will delete all the data inside of it. The following query will be run:":"' . __("Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:") . '", ';
 		echo '"Are you sure you want to drop the \'%s\' table? This will delete the table and all data inside of it. The following query will be run:":"' . __("Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:") . '", ';
 		echo '"Are you sure you want to drop the database \'%s\'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:":"' . __("Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:") . '", ';
-	
+
 		echo '"Successfully saved changes":"' . __("Successfully saved changes") . '", ';
-	
+
 		echo '"New field":"' . __("New field") . '", ';
-	
+
 		echo '"Full Text":"' . __("Full Text") . '", ';
-	
+
 		echo '"Loading...":"' . __("Loading...") . '", ';
 		echo '"Redirecting...":"' . __("Redirecting...") . '", ';
-	
+
 		echo '"Okay":"' . __("Okay") . '", ';
 		echo '"Cancel":"' . __("Cancel") . '", ';
-	
+
 		echo '"Error":"' . __("Error") . '", ';
 		echo '"There was an error receiving data from the server":"' . __("There was an error receiving data from the server") . '"';
-		
+
 	}
-	
+
 	echo '};';
 
 	echo "\n";
@@ -424,7 +427,7 @@ global $lang;
 	echo 'var menujson = {"menu": [';
 	echo $conn->getMetadata();
 	echo ']};';
-	
+
 	?>
 	//-->
 	</script>
