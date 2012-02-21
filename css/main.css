@@ -1,0 +1,314 @@
+* {
+font-size: 100%;
+margin: 0;
+padding: 0;
+}
+
+body {
+font: 13px/18px Arial, sans-serif;
+color: rgb(60, 60, 60);
+margin: 10px 0 30px;
+background-color: rgb(220, 220, 220);
+text-align: center;
+}
+
+h2 {
+font-size: 17px;
+font-weight: normal;
+color: #3885BE;
+margin: 15px 0 10px;
+}
+h2 a {
+color: #3885BE;
+}
+h3 {
+margin: 15px 0 0;
+}
+a {
+text-decoration: none;
+color: #3A6D96;
+}
+a:hover {
+text-decoration: underline;
+}
+a img {
+border: 0;
+}
+.content ul {
+margin-top: 5px;
+padding-left: 25px;
+line-height: 18px;
+}
+p {
+margin: 0 0 10px;
+}
+td {
+vertical-align: top;
+}
+
+.inputtext, textarea {
+margin: 0;
+color: rgb(60, 60, 60);
+font-size: 12px;
+font-family: Arial, sans-serif;
+padding: 2px;
+border-width: 1px;
+border-style: solid;
+border-color: rgb(150, 150, 150) rgb(165, 165, 165) rgb(155, 155, 155) rgb(145, 145, 145);
+}
+.inputfield {
+color: #3a6d96;
+padding: 0px 10px 0px 0px !important;
+text-align: right;
+}
+.inputtitle td {
+padding: 15px 0px 0px 2px;
+font-weight: bold;
+color: rgb(125, 125, 125);
+}
+.inputseperator {
+border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+a.inputbutton {
+background: transparent url(../images/button-left.png) no-repeat top left;
+height: 23px;
+padding: 4px 0px 6px 4px;
+text-decoration: none;
+cursor: default;
+font-size: 13px;
+}
+a.inputbutton span {
+background: transparent url(../images/button-right.png) no-repeat top right;
+line-height: 20px;
+height: 23px !important;
+padding: 4px 9px 6px 6px;
+color: rgb(75, 75, 75);
+}
+a.inputbutton:active {
+background: transparent url(../images/button-left-pressed.png) no-repeat top left;
+outline: none;
+}
+a.inputbutton:active span {
+background: transparent url(../images/button-right-pressed.png) no-repeat top right;
+}
+
+#header {
+background: rgb(75, 75, 75);
+margin: 0 5px;
+}
+#tl {
+width: 3px;
+float: left;
+}
+#tr {
+width: 3px;
+float: right;
+}
+#logo {
+float: left;
+clear: both;
+}
+#logo a img {
+padding: 12px 0 8px 18px;
+}
+
+#toptabs {
+width: 500px;
+float: right;
+text-align: right;
+}
+#toptabs ul {
+padding: 10px 0px 11px;
+}
+#toptabs ul li {
+list-style-type: none;
+display: inline;
+padding: 0px 23px 0 0;
+}
+#toptabs ul li a {
+color: rgb(200, 200, 200);
+font-size: 12px;
+}
+#toptabs ul li a:hover {
+text-decoration: none;
+}
+#toptabs ul li a:hover, #toptabs ul li.selected a {
+color: white !important;
+}
+
+#container {
+width: 772px;
+margin: 0 auto;
+text-align: left;
+}
+#adv {
+padding: 5px 0;
+margin: 0 4px 10px;
+border-bottom: 1px solid rgb(150, 150, 150);
+}
+#content {
+background: white;
+padding: 0 7px 10px;
+clear: both;
+margin: 0 5px;
+min-height: 300px;
+border-width: 0 1px 1px;
+border-style: solid;
+border-color: rgb(150, 150, 150);
+}
+#leftside {
+width: 460px;
+float: left;
+padding: 0 10px;
+}
+#rightside {
+width: 178px;
+padding: 17px 7px 0 0;
+float: right;
+font-size: 12px;
+}
+#rightside strong {
+color: rgb(120, 120, 120);
+font-weight: normal;
+font-size: 13px;
+}
+#wider {
+width: 650px;
+float: left;
+padding: 0 10px 14px;
+}
+#forum {
+width: 731px;
+float: left;
+padding: 0 8px;
+}
+
+.framedimage {
+border: 1px solid rgb(200, 200, 200);
+padding: 2px;
+margin: 5px 0 15px;
+}
+
+.promotitle {
+font-size: 15px;
+color: #C7723E;
+}
+
+.quote {
+margin: 12px 10px 10px;
+line-height: 16px;
+color: rgb(95, 95, 95);
+width: 375px;
+}
+
+.download {
+background: url(../images/downloadButton.png) no-repeat;
+display: block;
+color: white;
+font-size: 13px;
+padding: 10px 9px 10px 11px;
+height: 20px;
+width: 154px;
+text-align: center;
+margin-bottom: 15px;
+}
+.download:hover {
+background: url(../images/downloadButton-hover.png) no-repeat;
+text-decoration: none;
+}
+
+.clearfix {
+clear: both;
+}
+
+.errormess {
+background: rgb(255, 240, 240);
+border: 1px solid rgb(255, 200, 200);
+padding: 5px 10px;
+margin-top: 10px;
+}
+
+.q {
+margin: 15px 0 2px;
+font-weight: bold;
+}
+
+.keyboardtable {
+width: 425px;
+margin-top: 7px;
+border-right: 1px solid rgb(200, 200, 200);
+border-bottom: 1px solid rgb(200, 200, 200);
+}
+.keyboardtable td, .keyboardtable th {
+padding: 0px 10px 0px 5px;
+border-left: 1px solid rgb(200, 200, 200);
+border-top: 1px solid rgb(200, 200, 200);
+}
+.keyboardtable th {
+color: rgb(125, 125, 125);
+font-weight: normal;
+}
+
+.contact .field {
+color: gray;
+font-size: 12px;
+padding-right: 10px;
+width: 70px;
+text-align: right;
+}
+.contact .inputtext {
+width: 250px;
+}
+.contact textarea {
+width: 325px;
+height: 175px;
+}
+.contact td {
+padding: 3px 0;
+}
+
+.translationtable td {
+padding: 9px 5px;
+border-bottom: 1px dashed rgb(150, 150, 150);
+width: 50%;
+}
+.translationtable .inputtext {
+width: 100%;
+font-size: 13px;
+}
+.translationtable textarea {
+height: 64px;
+font-size: 13px;
+}
+
+#currTran td {
+padding-bottom: 5px;
+}
+.progressbar {
+height: 14px;
+display: block;
+width: 220px;
+border: 1px solid #999999;
+margin-right: 10px;
+}
+.progress {
+background-color: #D6E0EC;
+height: 14px;
+display: block;
+}
+
+.caption {
+font-size: 11px;
+margin: -5px 0 30px 9px;
+color: rgb(100, 100, 100);
+}
+
+#footer {
+width: 751px;
+margin: 0px auto;
+text-align: left;
+font-size: 11px;
+color: rgb(150, 150, 150);
+padding: 10px 20px 20px;
+}

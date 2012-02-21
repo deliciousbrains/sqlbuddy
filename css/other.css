@@ -1,0 +1,102 @@
+.blogpost h2 a:hover {
+text-decoration: none;
+}
+.postdetails {
+color: rgb(120, 120, 120);
+font-size: 12px;
+padding-bottom: 10px;
+}
+.postdetails a {
+color: rgb(120, 120, 120);
+}
+.blogpost .pipe {
+padding: 0 5px;
+color: rgb(170, 170, 170);
+}
+
+#comments {
+margin-top: 30px;
+color: rgb(100, 100, 100);
+}
+.newcomment {
+padding-bottom: 4px;
+}
+.comment {
+width: 450px;
+}
+.commentfield {
+color: #3a6d96;
+}
+.optional, .date {
+font-weight: normal;
+color: rgb(175, 175, 175);
+padding-left: 5px;
+}
+.inputarea {
+padding: 3px 0 7px;
+}
+.newcomment .inputtext {
+width: 200px;
+}
+.newcomment textarea {
+width: 350px;
+height: 115px;
+}
+.comment .top {
+color: #C87F52;
+}
+.comment .top a {
+color: #C87F52;
+text-decoration: underline;
+}
+.comment p {
+margin: 1px 0 13px;
+}
+.commentseperator {
+border-bottom: 1px solid rgb(225, 225, 225);
+margin: 0 0 15px -17px;
+padding: 0 7px 0 17px;
+}
+
+#framecontrols {
+margin: 17px 0 15px 5px;
+padding: 0;
+}
+#framecontrols li {
+list-style-type: none;
+padding: 0 22px;
+display: inline;
+}
+#framecontrols a {
+outline: none;
+text-align: center;
+cursor: pointer;
+font-size: 12px;
+}
+#framecontrols li.selected a {
+color: rgb(75, 75, 75);
+cursor: default;
+background: url(../images/scribble.png) no-repeat 50% 2px;
+margin: 0 -30px;
+padding: 10px 30px;
+}
+#framecontrols li.selected a:hover {
+text-decoration: none;
+}
+#frameborder {
+border: 1px solid rgb(200, 200, 200);
+width: 692px;
+margin-bottom: 5px;
+}
+#frame {
+border: 5px solid white;
+overflow: hidden;
+}
+#scroll {
+width: 3500px;
+height: 272px;
+}
+#scroll div {
+float: left;
+margin-right: 5px;
+}
