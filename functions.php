@@ -282,9 +282,7 @@ global $lang;
 	<div id="rightside">
 
 		<div id="content">
-			<div class="corners"><div class="tl"></div><div class="tr"></div></div>
 			<div id="innercontent"></div>
-			<div class="corners"><div class="bl"></div><div class="br"></div></div>
 		</div>
 
 		</div>

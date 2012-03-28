@@ -690,7 +690,7 @@ function sizePage() {
 		$('sidemenu').style.height = sideHeight + 'px';
 	}
 	if (f($('innercontent'))) {
-		var inHeight = (windowInnerHeight - headerOffset - 33);
+		var inHeight = (windowInnerHeight - headerOffset - 18);
 		
 		if (Browser.Engine.trident)
 			inHeight -= 4;

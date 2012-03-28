@@ -34,7 +34,6 @@ if (isset($_POST['runQuery'])) {
 		
 		if ($query != "") {
 			$conn->query($query) or ($dbError = $conn->error());
-			
 			// make a list of the tables that were dropped/emptied
 			if (substr($query, 0, 10) == "DROP TABLE")
 				$droppedList[] = substr($query, 12, -1);
