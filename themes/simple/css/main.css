@@ -154,8 +154,18 @@ vertical-align:top;
 .menuicon {
 	visibility: hidden;
 }
-.dblist ul li a .menutoggler {
-background: transparent url("../images/closedArrow.png") no-repeat 4px 3px;
+.dblist ul li a .menutoggler, .dblist ul li.expanded a .menutoggler{
+	background-image: none;
+}
+.dblist ul li a .menutoggler:before {
+	margin: 2px 0 0 4px;	
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	border-width: 4px;
+	border-style: solid;
+	border-color: transparent transparent transparent rgb(175,175,175);
 }
 .dblist ul li a .menuicon {
 height: 14px;
@@ -164,6 +174,13 @@ float: left;
 font-size: 10px;
 padding-top: 1px;
 }
-.dblist ul li.expanded a .menutoggler{
-background: transparent url("../images/openArrow.png") no-repeat 3px 3px;
+.dblist ul li.expanded a .menutoggler:before{
+	margin: 4px 0 0 2px;	
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	border-width: 4px;
+	border-style: solid;
+	border-color: rgb(175,175,175) transparent transparent transparent;
 }
