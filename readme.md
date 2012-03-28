@@ -1,3 +1,13 @@
+# SQLBuddy on speed
+
+Being in Australia teaches you one thing about the web. Websites can not be to fast or to tiny in bytes. Thus my idea to speed up sqlbuddy. 
+
+## Firstly everything I do not need will be stripped away.
+
+- Only English language
+- Only my theme "simple" which will be edited to use less images
+
+-------------------------------------------------------
 SQL Buddy - Web based MySQL administration
 http://www.sqlbuddy.com/
 
