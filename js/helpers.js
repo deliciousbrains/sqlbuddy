@@ -177,13 +177,13 @@ function finishTabLoad(responseText) {
 	
 	var pageTitle;
 	if (sb.table) {
-		pageTitle = sb.getTabTitle(sb.topTab) + " - " + sb.table;
+		pageTitle = sb.table + ' - ' + sb.getTabTitle(sb.topTab);
 	} else if (sb.db) {
-		pageTitle = sb.getTabTitle(sb.topTab) + " - " + sb.db;
+		pageTitle = sb.db +' - '+sb.getTabTitle(sb.topTab);
 	} else {
 		pageTitle = sb.getTabTitle(sb.topTab);
 	}
-	document.title = "SQL Buddy - " + pageTitle;
+	document.title = "sql: " + pageTitle;
 	
 	refreshRowCount();
 }
@@ -690,7 +690,7 @@ function sizePage() {
 		$('sidemenu').style.height = sideHeight + 'px';
 	}
 	if (f($('innercontent'))) {
-		var inHeight = (windowInnerHeight - headerOffset - 18);
+		var inHeight = (windowInnerHeight - headerOffset - 8);
 		
 		if (Browser.Engine.trident)
 			inHeight -= 4;

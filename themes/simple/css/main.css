@@ -18,7 +18,7 @@ html {
 }
 
 h3, h4 {
-color: steelblue;
+	color: steelblue;
 }
 
 #innercontent {
@@ -26,6 +26,7 @@ color: steelblue;
 	border-color: rgb(75, 75, 75);
 	border-width: 0 0 0 2px;
 	border-style: solid;
+	padding-bottom: 0px;
 }
 #bottom{
 	padding-top: 0;

@@ -210,7 +210,7 @@ global $lang;
 
 <html xmlns="http://www.w3.org/1999/xhtml" version="-//W3C//DTD XHTML 1.1//EN" xml:lang="en">
 	<head>
-		<title>SQL Buddy</title>
+		<title>SQL</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/common.css"); ?>" media="all" />
 		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/navigation.css"); ?>" media="all" />
