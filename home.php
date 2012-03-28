@@ -196,6 +196,8 @@ if ($conn->getAdapter() != "sqlite") {
 			$defaultCharset = $conn->result($defaultCharSql, 0, "Value");
 		}
 		
+		in_array('utf8', $charsetList) ? $defaultCharset = 'utf8' : '';
+		
 		foreach ($charsetList as $charset) {
 			echo "<option value=\"" . $charset . "\"";
 			
