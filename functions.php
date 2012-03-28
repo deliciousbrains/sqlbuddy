@@ -44,53 +44,7 @@ if (function_exists("sqlite_open") || (class_exists("PDO") && in_array("sqlite",
 
 $cookieLength = time() + (60*24*60*60);
 
-$langList['id_ID'] = "Bahasa Indonesia";
-$langList['ms_ID'] = "Bahasa Melayu";
-$langList['ca_AD'] = "Català";
-$langList['cs_CZ'] = "Čeština";
-$langList['sr_RS'] = "Српски ћирилица";
-$langList['da_DK'] = "Dansk";
-$langList['de_DE'] = "Deutsch";
-$langList['et_EE'] = "Eesti keel";
 $langList['en_US'] = "English";
-$langList['es_ES'] = "Español";
-$langList['es_AR'] = "Español (Argentina)";
-$langList['eo_EO'] = "Esperanto";
-$langList['fr_FR'] = "Français";
-$langList['gl_ES'] = "Galego";
-$langList['hr_HR'] = "Hrvatski";
-$langList['it_IT'] = "Italiano";
-$langList['ko_KR'] = "한국어";
-$langList['lo_LA'] = "Lao";
-$langList['lv_LV'] = "Latviešu";
-$langList['hu_HU'] = "Magyar";
-$langList['nl_NL'] = "Nederlands";
-$langList['no_NO'] = "Norsk";
-$langList['pl_PL'] = "Polski";
-$langList['pt_BR'] = "Português (Brasil)";
-$langList['pt_PT'] = "Português (Portugal)";
-$langList['ru_RU'] = "Русский";
-$langList['ro_RO'] = "Română";
-$langList['sq_AL'] = "Shqip";
-$langList['sk_SK'] = "Slovenčina";
-$langList['sl_SL'] = "Slovenščina";
-$langList['sp_RS'] = "Srpski";
-$langList['fi_FI'] = "Suomi";
-$langList['sv_SE'] = "Svenska";
-$langList['tl_PH'] = "Tagalog";
-$langList['vi_VN'] = "Tiếng Việt";
-$langList['tr_TR'] = "Türkçe";
-$langList['uk_UA'] = "Українська";
-$langList['ar_DZ'] = "العربية";
-$langList['fa_IR'] = "فارسی";
-$langList['he_IL'] = "עִבְרִית";
-$langList['bg_BG'] = "български език";
-$langList['bn_BD'] = "বাংলা";
-$langList['el_GR'] = "ελληνικά";
-$langList['th_TH'] = "ภาษาไทย";
-$langList['zh_CN'] = "中文 (简体)";
-$langList['zh_TW'] = "中文 (繁體)";
-$langList['ja_JP'] = "日本語";
 
 if (isset($_COOKIE['sb_lang']) && array_key_exists($_COOKIE['sb_lang'], $langList)) {
 	$lang = preg_replace("/[^a-z0-9_]/i", "", $_COOKIE['sb_lang']);
@@ -106,8 +60,7 @@ if ($lang != "en_US") {
 	setcookie("sb_lang", "", time() - 10000);
 }
 
-$themeList["classic"] = "Classic";
-$themeList["bittersweet"] = "Bittersweet";
+$themeList["simple"] = "Simple";
 
 if (isset($_COOKIE['sb_theme'])) {
 	$currentTheme = preg_replace("/[^a-z0-9_]/i", "", $_COOKIE['sb_theme']);
@@ -118,11 +71,11 @@ if (isset($_COOKIE['sb_theme'])) {
 		// extend the cookie length
 		setcookie("sb_theme", $theme, $cookieLength);
 	} else {
-		$theme = "bittersweet";
+		$theme = "simple";
 		setcookie("sb_theme", "", time() - 10000);
 	}
 } else {
-	$theme = "bittersweet";
+	$theme = "simple";
 }
 
 $gt = new GetTextReader($lang . ".pot");
