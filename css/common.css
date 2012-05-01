@@ -311,8 +311,7 @@ border-bottom: 1px solid #E5E6AD !important;
 }
 
 .gridscroll {
-	overflow-y: visible;
-	overflow-x: scroll;
+	overflow: auto;
 	min-height: 21px;
 }
 .gridscroll .browse:last-child {
