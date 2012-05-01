@@ -111,11 +111,11 @@ color: rgb(175, 175, 175) !important;
 color: rgb(175, 175, 175) !important;
 }
 #leftside {
-width: 180px;
+	width: 170px;
 }
 #rightside {
 	padding: 0;
-	margin: 0 0 0 180px;
+	margin: 0 0 0 170px;
 }
 .inputbutton {
 	background-color: rgb(252,252,252);
