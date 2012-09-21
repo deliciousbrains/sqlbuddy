@@ -54,7 +54,7 @@ if (isset($_POST['editParts'])) {
 		
 		<form id="editform<?php echo $counter; ?>" querypart="<?php echo $part; ?>" onsubmit="saveEdit('editform<?php echo $counter; ?>'); return false;">
 		<div class="errormessage" style="margin: 6px 12px 10px; width: 338px; display: none"></div>
-		<table class="insert edit" cellspacing="0" cellpadding="0">
+		<div class="insert edit" cellspacing="0" cellpadding="0">
 		<?php
 		
 		if ($conn->isResultSet($structureSql) && $conn->getAdapter() == "mysql") {
@@ -75,17 +75,14 @@ if (isset($_POST['editParts'])) {
 				$cursize = $matches[3];
 				$curextra = $matches[4];
 				
-				echo '<tr>';
-				echo '<td class="fieldheader"><span style="color: steelblue">';
+				echo '<div class="item-container">';
+				echo '<div class="fieldheader"><span style="color: steelblue">';
 				if ($structureRow['Key'] == 'PRI') echo '<u>';
 				echo $structureRow['Field'];
 				if ($structureRow['Key'] == 'PRI') echo '</u>';
-				echo "</span> " . $curtype . $cursizeQuotes . ' ' . $structureRow['Extra'] . '</td>';
-
-				echo '</tr>';
-				echo '<tr>';
+				echo "</span> " . $curtype . $cursizeQuotes . ' ' . $structureRow['Extra'] . '</div>';
 				
-				echo '<td class="inputarea">';
+				echo '<div class="inputarea">';
 				
 				$showLargeEditor[] = "text";
 				$showLargeEditor[] = "mediumtext";
@@ -134,13 +131,13 @@ if (isset($_POST['editParts'])) {
 					
 					echo '" />';
 				}
+				echo "</div>";
 				
 				$firstField = false;
 				
 				?>
 				
-				</td>
-				</tr>
+				</div>
 				
 				<?php
 			}
@@ -177,8 +174,7 @@ if (isset($_POST['editParts'])) {
 				
 				?>
 				
-				</td>
-				</tr>
+				</div>
 				
 				<?php
 			}
@@ -188,18 +184,13 @@ if (isset($_POST['editParts'])) {
 		}
 		
 		?>
-		<tr>
-		<td>
+		<div>
 		<label><input type="radio" name="SB_INSERT_CHOICE" value="SAVE" checked="checked" /><?php echo __("Save changes to original"); ?></label><br />
 		<label><input type="radio" name="SB_INSERT_CHOICE" value="INSERT" /><?php echo __("Insert as new row"); ?></label>
-		</td>
-		</tr>
-		<tr>
-		<td style="padding-top: 10px; padding-bottom: 25px">
+		</div>
+		<div style="padding-top: 10px; padding-bottom: 25px">
 		<input type="submit" class="inputbutton" value="<?php echo __("Submit"); ?>" />&nbsp;&nbsp;<a onclick="cancelEdit('editform<?php echo $counter; ?>')"><?php echo __("Cancel"); ?></a>
-		</td>
-		</tr>
-		</table>
+		</div>
 		</form>
 		
 		
