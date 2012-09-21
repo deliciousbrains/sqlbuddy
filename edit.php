@@ -62,7 +62,11 @@ if (isset($_POST['editParts'])) {
 			$dataSql = $conn->query("SELECT * FROM `" . $table . "` " . $part);
 			$dataRow = $conn->fetchAssoc($dataSql);
 			
-			while ($structureRow = $conn->fetchAssoc($structureSql)) {
+			$count = 0;
+			
+			while ($structureRow = $conn->fetchAssoc($structureSql))
+			{
+				$count = 1-$count;
 				
 				preg_match("/^([a-z]+)(.([0-9]+).)?(.*)?$/", $structureRow['Type'], $matches);
 				
@@ -77,8 +81,10 @@ if (isset($_POST['editParts'])) {
 				echo $structureRow['Field'];
 				if ($structureRow['Key'] == 'PRI') echo '</u>';
 				echo "</span> " . $curtype . $cursizeQuotes . ' ' . $structureRow['Extra'] . '</td>';
+
 				echo '</tr>';
 				echo '<tr>';
+				
 				echo '<td class="inputarea">';
 				
 				$showLargeEditor[] = "text";

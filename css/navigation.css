@@ -23,6 +23,8 @@ outline: none;
 border-width: 1px 0 1px 1px;
 border-style: solid;
 border-color: transparent;
+border-bottom-radius-left: 3px;
+border-top-radius-left: 3px;
 }
 .dblist ul li a .menutext {
 padding: 1px 6px 0px 0px;
@@ -87,7 +89,8 @@ font-weight: normal;
 padding-left: 3px;
 }
 #toptabs ul li.selected a {
-cursor: default;
+	cursor: default;
+	border-radius: 3px;
 }
 #toptabs ul li.deactivated a {
 cursor: default;

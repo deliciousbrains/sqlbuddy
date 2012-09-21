@@ -57,15 +57,13 @@ color: #444;
 .dblist ul li.selected a .menutext {
 color: #fff;
 }
-.dblist ul li.selected>a {
+.dblist ul li.selected > a {
 background: rgb(75, 75, 75) !important;
 border-color: rgb(75, 75, 75);
 border-width: 0px;
 padding: 3px 0px;
--webkit-border-top-left-radius: 3px;
--moz-border-radius-topleft: 3px;
--webkit-border-bottom-left-radius: 3px; 
--moz-border-radius-bottomleft: 3px;
+border-top-left-radius: 3px;
+border-bottom-left-radius: 3px; 
 color: #fff !important;
 }
 .sublist li a {
@@ -124,8 +122,8 @@ color: rgb(175, 175, 175) !important;
 	border: 1px solid #BBBBBB;
 	padding:2px 8px !important;
 	text-shadow:0 1px 0 rgb(255,255,255);
-	-webkit-border-radius: 11px;
-	-moz-border-radius: 11px;
+	border-radius: 11px;
+	border-radius: 11px;
 	line-height: 12px;
 	width: 69px;
 	height: 26px; 
@@ -141,8 +139,7 @@ color: rgb(175, 175, 175) !important;
 	color: rgb(0,0,0);
 }
 .text, textarea {
--webkit-border-radius: 3px;
--moz-border-radius: 3px;
+border-radius: 3px;
 background:#F5F5F5 none repeat scroll 0 0;
 border:1px solid #CCCCCC;
 color:#666666;
