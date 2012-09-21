@@ -52,9 +52,9 @@ if (isset($_POST['editParts'])) {
 		
 		?>
 		
-		<form id="editform<?php echo $counter; ?>" querypart="<?php echo $part; ?>" onsubmit="saveEdit('editform<?php echo $counter; ?>'); return false;">
+		<form id="editform<?php echo $counter; ?>" querypart="<?php echo $part; ?>" onsubmit="saveEdit('editform<?php echo $counter; ?>'); return false;" style="border-bottom: 1px solid grey; float: left;">
 		<div class="errormessage" style="margin: 6px 12px 10px; width: 338px; display: none"></div>
-		<div class="insert edit" cellspacing="0" cellpadding="0">
+		<div class="insert edit" style="width: 100%; float: left;">
 		<?php
 		
 		if ($conn->isResultSet($structureSql) && $conn->getAdapter() == "mysql") {
@@ -63,7 +63,7 @@ if (isset($_POST['editParts'])) {
 			$dataRow = $conn->fetchAssoc($dataSql);
 			
 			$count = 0;
-			
+			$column[0] = $column[1] = '';
 			while ($structureRow = $conn->fetchAssoc($structureSql))
 			{
 				$count = 1-$count;
@@ -75,73 +75,76 @@ if (isset($_POST['editParts'])) {
 				$cursize = $matches[3];
 				$curextra = $matches[4];
 				
-				echo '<div class="item-container">';
-				echo '<div class="fieldheader"><span style="color: steelblue">';
-				if ($structureRow['Key'] == 'PRI') echo '<u>';
-				echo $structureRow['Field'];
-				if ($structureRow['Key'] == 'PRI') echo '</u>';
-				echo "</span> " . $curtype . $cursizeQuotes . ' ' . $structureRow['Extra'] . '</div>';
+				$column[$count] .= '<div class="item-container">
+					<div class="fieldheader"><span style="color: steelblue">';
 				
-				echo '<div class="inputarea">';
+				if ($structureRow['Key'] == 'PRI')
+				{
+					 $column[$count] .= '<u>'.$structureRow['Field'].'</u>';
+				}
+				else
+				{
+					$column[$count] .= $structureRow['Field'];
+				}
+
+				$column[$count] .= "</span> " . $curtype . $cursizeQuotes . ' ' . $structureRow['Extra'] . '</div>
+					<div class="inputarea">';
 				
 				$showLargeEditor[] = "text";
 				$showLargeEditor[] = "mediumtext";
 				$showLargeEditor[] = "longtext";
 				
 				if (in_array($curtype, $showLargeEditor)) {
-					echo '<textarea name="' . $structureRow['Field'] . '">' . htmlentities($dataRow[$structureRow['Field']], ENT_QUOTES, 'UTF-8') . '</textarea>';
+					$column[$count] .= '<textarea name="' . $structureRow['Field'] . '">' . htmlentities($dataRow[$structureRow['Field']], ENT_QUOTES, 'UTF-8') . '</textarea>';
 				}
 				elseif ($curtype == "enum") {
 					$trimmed = substr($structureRow['Type'], 6, -2);
 					$listOptions = explode("','", $trimmed);
-					echo '<select name="' . $structureRow['Field'] . '">';
-					echo '<option> - - - - - </option>';
+					$column[$count] .=  '<select name="' . $structureRow['Field'] . '">';
+					$column[$count] .=  '<option> - - - - - </option>';
 					foreach ($listOptions as $option) {
-						echo '<option value="' . $option . '"';
+						$column[$count] .=  '<option value="' . $option . '"';
 						if ($option == $dataRow[$structureRow['Field']]) {
-							echo ' selected="selected"';
+							$column[$count] .=  ' selected="selected"';
 						}
-						echo '>' . $option . '</option>';
+						$column[$count] .=  '>' . $option . '</option>';
 					}
-					echo '</select>';
+					$column[$count] .=  '</select>';
 				}
 				elseif ($curtype == "set") {
 					$trimmed = substr($structureRow['Type'], 5, -2);
 					$listOptions = explode("','", $trimmed);
 					foreach ($listOptions as $option) {
 						$id = $option . rand(1, 1000);
-						echo '<label for="' . $id . '"><input name="' . $structureRow['Field'] . '[]" value="' . $option . '" id="' . $id . '" type="checkbox"';
+						$column[$count] .=  '<label for="' . $id . '"><input name="' . $structureRow['Field'] . '[]" value="' . $option . '" id="' . $id . '" type="checkbox"';
 						
 						if (strpos($dataRow[$structureRow['Field']], $option) > -1)
-							echo ' checked="checked"';
+							$column[$count] .=  ' checked="checked"';
 						
-						echo '>' . $option . '</label><br />';
+						$column[$count] .=  '>' . $option . '</label><br />';
 					}
 				} else {
-					echo '<input type="text"';
+					$column[$count] .=  '<input type="text"';
 					if ($firstField)
-						echo ' id="EDITFIRSTFIELD"';
-					echo ' name="' . $structureRow['Field'] . '" class="text" value="';
+						$column[$count] .= ' id="EDITFIRSTFIELD"';
+					$column[$count] .= ' name="' . $structureRow['Field'] . '" class="text" value="';
 					
 					if ($dataRow[$structureRow['Field']] && isset($binaryDTs) && in_array($curtype, $binaryDTs)) {
-						echo "0x" . bin2hex($dataRow[$structureRow['Field']]);
+						$column[$count] .= "0x" . bin2hex($dataRow[$structureRow['Field']]);
 					} else {
-						echo htmlentities($dataRow[$structureRow['Field']], ENT_QUOTES, 'UTF-8');
+						$column[$count] .= htmlentities($dataRow[$structureRow['Field']], ENT_QUOTES, 'UTF-8');
 					}
 					
-					echo '" />';
+					$column[$count] .= '" />';
 				}
-				echo "</div>";
+				$column[$count] .= "</div></div>";
 				
 				$firstField = false;
 				
-				?>
-				
-				</div>
-				
-				<?php
 			}
 			
+			echo "<div class='column' style='float:left'>".$column[1]."</div><div class='column' style='float:left; margin-right: 25px;'>".$column[0]."</div><br style='clear: left;'/></div>";
+				
 			$structureSql = $conn->describeTable($table);
 			
 		} else if (sizeof($structureSql) > 0 && $conn->getAdapter() == "sqlite") {
@@ -184,11 +187,11 @@ if (isset($_POST['editParts'])) {
 		}
 		
 		?>
-		<div>
+		<div style="float: left;">
 		<label><input type="radio" name="SB_INSERT_CHOICE" value="SAVE" checked="checked" /><?php echo __("Save changes to original"); ?></label><br />
 		<label><input type="radio" name="SB_INSERT_CHOICE" value="INSERT" /><?php echo __("Insert as new row"); ?></label>
 		</div>
-		<div style="padding-top: 10px; padding-bottom: 25px">
+		<div style="padding-top: 10px; padding-bottom: 25px; float: left;">
 		<input type="submit" class="inputbutton" value="<?php echo __("Submit"); ?>" />&nbsp;&nbsp;<a onclick="cancelEdit('editform<?php echo $counter; ?>')"><?php echo __("Cancel"); ?></a>
 		</div>
 		</form>

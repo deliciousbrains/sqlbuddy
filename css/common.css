@@ -152,9 +152,11 @@ padding: 10px 0 0 5px;
 
 #content {
 width: 100%;
+float: left;
 }
 #innercontent {
 padding: 8px 10px 10px;
+float: left;
 }
 
 .grid {
