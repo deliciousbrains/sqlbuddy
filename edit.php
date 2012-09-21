@@ -143,7 +143,7 @@ if (isset($_POST['editParts'])) {
 				
 			}
 			
-			echo "<div class='column' style='float:left'>".$column[1]."</div><div class='column' style='float:left; margin-right: 25px;'>".$column[0]."</div><br style='clear: left;'/></div>";
+			echo "<div class='column' style='float:left margin-right: 25px;'>".$column[1]."</div><div class='column' style='float:left;'>".$column[0]."</div><br style='clear: left;'/></div>";
 				
 			$structureSql = $conn->describeTable($table);
 			
