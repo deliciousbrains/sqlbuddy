@@ -1,44 +1,46 @@
 SQL Buddy - Web based MySQL administration
-http://www.sqlbuddy.com/
+===========
 
-2008 Calvin Lough <http://calv.in>
+SQL Buddy is an alternative to phpMyAdmin designed to be easy to use.
 
-INTRODUCTION
+![SQL Buddy](http://sqlbuddy.com/images/sqlbuddy%20screen.png)
 
-SQL Buddy is open source! Use of the application is governed by
-a MIT license - see LICENSE file for details.
+## Requirements
 
-INSTALLATION
+* PHP 4.3+
+* MySQL 4+
 
-To start using SQL Buddy take the folder of unzipped files and 
-ftp them to your server. I would recommend placing them in a 
-folder such as http://www.yourserver.com/sqlbuddy/. But in
-reality, it shouldn't matter where you put them or what you call
-the folder.
+## Installation
 
-If you are interested, there is a few variables in config.php that you
-can change if you want to customize your installation. It is totally 
-optional, and your setup will work just fine if you leave the values at
-their defaults.
+Just unzip the files to your server and it's ready to use. Seriously, the next step is logging in.
 
-UPGRADING
+## Translations
 
-To upgrade SQL Buddy, its probably best to delete the old version then
-unzip the new version in its place.
+SQL Buddy is available in 48 languages (including Esperanto!).
 
-KEYBOARD SHORTCUTS
-
-There is a bunch of keyboard shortcuts available to speed up things like
-navigating through results, editing rows, etc. A list of shortcuts is
-available on the home tab after you login. If you find the shortcuts 
-annoying and would like to disable them, there is a line in main.js that you 
-can disable. Its about 50 lines down, and I have left a comment indicating 
-which line you need to comment out.
-
-HELP
+## Help
 
 If you need help, a forum is available at http://groups.google.com/group/sql-buddy/topics
 
-Thanks for your support,
+## License
 
-Calvin
+Copyright &copy; 2013 Calvin Lough <http://calv.in>
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
