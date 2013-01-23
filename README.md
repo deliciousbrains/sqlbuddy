@@ -16,7 +16,7 @@ Just unzip the files to your server and it's ready to use. Seriously, the next s
 
 ## Translations
 
-SQL Buddy is available in 48 languages (including Esperanto!).
+SQL Buddy ships with 47 translations (including Esperanto!).
 
 ## Help
 
