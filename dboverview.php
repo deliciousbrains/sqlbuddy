@@ -560,15 +560,7 @@ setTimeout("startGrid()", 1);
 <?php
 
 }else{
-	
-	?>
-	
-	<div class="errorpage">
-	<h4><?php echo __("Oops"); ?></h4>
-	<p><?php echo __("For some reason, the database parameter was not included with your request."); ?></p>
-	</div>
-	
-	<?php
+	outputError(__("For some reason, the database parameter was not included with your request."));
 	exit;
 	
 }

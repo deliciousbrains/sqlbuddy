@@ -424,12 +424,7 @@ if ($connected) {
 	}
 
 } else {
-	?>
-	<div class="errorpage">
-	<h4><?php echo __("Error"); ?></h4>
-	<p><?php echo __("You do not have enough permissions to view or manage users."); ?></p>
-	</div>
-	<?php
+    outputError(__("You do not have enough permissions to view or manage users."));
 }
 
 ?>

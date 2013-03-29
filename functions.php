@@ -206,33 +206,22 @@ global $conn;
 global $lang;
 
 require 'views/layout.php';
+}
 
+function outputError($errorText) {
+    require 'views/error.php';
 }
 
 function requireDatabaseAndTableBeDefined() {
 	global $db, $table;
 
 	if (!isset($db)) {
-		?>
-
-		<div class="errorpage">
-		<h4><?php echo __("Oops"); ?></h4>
-		<p><?php echo __("For some reason, the database parameter was not included with your request."); ?></p>
-		</div>
-
-		<?php
+        outputError(__("For some reason, the database parameter was not included with your request."));
 		exit;
 	}
 
 	if (!isset($table)) {
-		?>
-
-		<div class="errorpage">
-		<h4><?php echo __("Oops"); ?></h4>
-		<p><?php echo __("For some reason, the table parameter was not included with your request."); ?></p>
-		</div>
-
-		<?php
+        outputError(__("For some reason, the table parameter was not included with your request."));
 		exit;
 	}
 

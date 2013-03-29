@@ -772,14 +772,7 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql)) {
 <?php
 
 } else {
-	?>
-	
-	<div class="errorpage">
-	<h4><?php echo __("Oops"); ?></h4>
-	<p><?php printf(__('There was a bit of trouble locating the "%s" table.'), $table); ?></p>
-	</div>
-	
-	<?php
+    outputError(printf(__('There was a bit of trouble locating the "%s" table.'), $table));
 }
 
 ?>
