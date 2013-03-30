@@ -209,7 +209,7 @@ Page.prototype.preload = function() {
 	var pre;
 	for (var i=0; i<images.length; i++) {
 		pre = new Image();
-		pre.src = "images/" + images[i];
+		pre.src = "assets/images/" + images[i];
 	}
 }
 
@@ -622,7 +622,7 @@ function createWindow(title, content, options) {
 	windowHeader.className = 'fulltextheader';
 	windowHeader.addEvent("mousedown", focusWindow);
 	windowHeader.addEvent("mousedown", startDrag);
-	var windowHeaderContent = '<table cellspacing="0" width="100%"><tr><td class="headertl"></td><td class="headercenter"><p><img class="fulltextimage" src="images/window-close.png" align="right" onclick="closeWindow(\'' + windowId + '\')" />' + title + '</p></td><td class="headertr"></td></tr></table>';
+	var windowHeaderContent = '<table cellspacing="0" width="100%"><tr><td class="headertl"></td><td class="headercenter"><p><img class="fulltextimage" src="assets/images/window-close.png" align="right" onclick="closeWindow(\'' + windowId + '\')" />' + title + '</p></td><td class="headertr"></td></tr></table>';
 	windowHeader.set('html', windowHeaderContent);
 	windowMain.appendChild(windowHeader);
 	
@@ -637,7 +637,7 @@ function createWindow(title, content, options) {
 	var innerContent = '<table cellspacing="0" width="100%"><tr><td class="mainl"></td><td class="maincenter"><div class="fulltextcontent" style="max-height: 400px">' + content + '</div>';
 	
 	if (!(options.isDialog || options.isDismissible)) {
-		innerContent += '<div class="resizeHandle"><img src="images/window-resize.png" id="resize' + windowId + '"></div>';
+		innerContent += '<div class="resizeHandle"><img src="assets/images/window-resize.png" id="resize' + windowId + '"></div>';
 	}
 	
 	innerContent += '</td><td class="mainr"></td></tr></table>';
