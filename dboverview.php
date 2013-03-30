@@ -208,7 +208,7 @@ if ($conn->isResultSet($tableSql)) {
 		echo '">';
 		echo '<table cellpadding="0" cellspacing="0">';
 		echo '<tr>';
-		echo '<td><div class="item column1"><div style="float: left; overflow: hidden; width: 185px">' . $tableRow[0] . '</div><img src="images/goto.png" class="goto" onclick="subTabLoad(\'' . $db . '\', \'' . $tableRow[0] . '\')" /></div></td>';
+		echo '<td><div class="item column1"><div style="float: left; overflow: hidden; width: 185px">' . $tableRow[0] . '</div><img src="'. assetFile("images/goto.png") . '" class="goto" onclick="subTabLoad(\'' . $db . '\', \'' . $tableRow[0] . '\')" /></div></td>';
 		echo '<td><div class="item column2">' . number_format($rowCount) . '</div></td>';
 		
 		if (isset($collationList) && array_key_exists("Collation", $infoRow)) {

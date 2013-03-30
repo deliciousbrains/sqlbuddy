@@ -278,6 +278,10 @@ function themeFile($filename) {
 	return smartCaching("themes/" . $theme . "/" . $filename);
 }
 
+function assetFile($filename) {
+	return smartCaching("assets/" . $filename);
+}
+
 function smartCaching($filename) {
 	return $filename . "?ver=" . str_replace(".", "_", VERSION_NUMBER);
 }

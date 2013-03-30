@@ -96,16 +96,16 @@ startOutput();
 	<head>
 		<title>SQL Buddy</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/common.css"); ?>" />
-		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/navigation.css"); ?>" />
-		<link type="text/css" rel="stylesheet" href="<?php echo smartCaching("css/print.css"); ?>" media="print" />
+		<link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/common.css"); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/navigation.css"); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/print.css"); ?>" media="print" />
 		<link type="text/css" rel="stylesheet" href="<?php echo themeFile("css/main.css"); ?>" />
 		<!--[if lte IE 7]>
     		<link type="text/css" rel="stylesheet" href="<?php echo themeFile("css/ie.css"); ?>" />
 		<![endif]-->
-		<script type="text/javascript" src="<?php echo smartCaching("js/mootools-1.2-core.js"); ?>"></script>
-		<script type="text/javascript" src="<?php echo smartCaching("js/helpers.js"); ?>"></script>
-		<script type="text/javascript" src="<?php echo smartCaching("js/movement.js"); ?>"></script>
+		<script type="text/javascript" src="<?php echo assetFile("js/mootools-1.2-core.js"); ?>"></script>
+		<script type="text/javascript" src="<?php echo assetFile("js/helpers.js"); ?>"></script>
+		<script type="text/javascript" src="<?php echo assetFile("js/movement.js"); ?>"></script>
 	</head>
 	<body style="background: none">
 	<div id="container">
