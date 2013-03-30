@@ -105,64 +105,64 @@
     }
 
     // javascript translation strings
-    echo "\t\tvar getTextArr = {";
-
     if ($lang != "en_US") {
+        $translations = array(
+            "Home" => __("Home"),
+            "Users" => __("Users"),
+            "Query" => __("Query"),
+            "Import" => __("Import"),
+            "Export" => __("Export"),
 
-        echo '"Home":"' . __("Home") . '", ';
-        echo '"Users":"' . __("Users") . '", ';
-        echo '"Query":"' . __("Query") . '", ';
-        echo '"Import":"' . __("Import") . '", ';
-        echo '"Export":"' . __("Export") . '", ';
+            "Overview" => __("Overview"),
 
-        echo '"Overview":"' . __("Overview") . '", ';
+            "Browse" => __("Browse"),
+            "Structure" => __("Structure"),
+            "Insert" => __("Insert"),
 
-        echo '"Browse":"' . __("Browse") . '", ';
-        echo '"Structure":"' . __("Structure") . '", ';
-        echo '"Insert":"' . __("Insert") . '", ';
+            "Your changes were saved to the database." => __("Your changes were saved to the database."),
 
-        echo '"Your changes were saved to the database.":"' . __("Your changes were saved to the database.") . '", ';
+            "delete this row" => __("delete this row"),
+            "delete these rows" => __("delete these rows"),
+            "empty this table" => __("empty this table"),
+            "empty these tables" => __("empty these tables"),
+            "drop this table" => __("drop this table"),
+            "drop these tables" => __("drop these tables"),
+            "delete this column" => __("delete this column"),
+            "delete these columns" => __("delete these columns"),
+            "delete this index" => __("delete this index"),
+            "delete these indexes" => __("delete these indexes"),
+            "delete this user" => __("delete this user"),
+            "delete these users" => __("delete these users"),
+            "Are you sure you want to" => __("Are you sure you want to"),
 
-        echo '"delete this row":"' . __("delete this row") . '", ';
-        echo '"delete these rows":"' . __("delete these rows") . '", ';
-        echo '"empty this table":"' . __("empty this table") . '", ';
-        echo '"empty these tables":"' . __("empty these tables") . '", ';
-        echo '"drop this table":"' . __("drop this table") . '", ';
-        echo '"drop these tables":"' . __("drop these tables") . '", ';
-        echo '"delete this column":"' . __("delete this column") . '", ';
-        echo '"delete these columns":"' . __("delete these columns") . '", ';
-        echo '"delete this index":"' . __("delete this index") . '", ';
-        echo '"delete these indexes":"' . __("delete these indexes") . '", ';
-        echo '"delete this user":"' . __("delete this user") . '", ';
-        echo '"delete these users":"' . __("delete these users") . '", ';
-        echo '"Are you sure you want to":"' . __("Are you sure you want to") . '", ';
+            "The following query will be run:" => __("The following query will be run:"),
+            "The following queries will be run:" => __("The following queries will be run:"),
 
-        echo '"The following query will be run:":"' . __("The following query will be run:") . '", ';
-        echo '"The following queries will be run:":"' . __("The following queries will be run:") . '", ';
+            "Confirm" => __("Confirm"),
+            "Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:" => __("Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:"),
+            "Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:" => __("Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:"),
+            "Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:" => __("Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:"),
 
-        echo '"Confirm":"' . __("Confirm") . '", ';
-        echo '"Are you sure you want to empty the \'%s\' table? This will delete all the data inside of it. The following query will be run:":"' . __("Are you sure you want to empty the '%s' table? This will delete all the data inside of it. The following query will be run:") . '", ';
-        echo '"Are you sure you want to drop the \'%s\' table? This will delete the table and all data inside of it. The following query will be run:":"' . __("Are you sure you want to drop the '%s' table? This will delete the table and all data inside of it. The following query will be run:") . '", ';
-        echo '"Are you sure you want to drop the database \'%s\'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:":"' . __("Are you sure you want to drop the database '%s'? This will delete the database, the tables inside the database, and all data inside of the tables. The following query will be run:") . '", ';
+            "Successfully saved changes" => __("Successfully saved changes"),
 
-        echo '"Successfully saved changes":"' . __("Successfully saved changes") . '", ';
+            "New field" => __("New field"),
 
-        echo '"New field":"' . __("New field") . '", ';
+            "Full Text" => __("Full Text"),
 
-        echo '"Full Text":"' . __("Full Text") . '", ';
+            "Loading..." => __("Loading..."),
+            "Redirecting..." => __("Redirecting..."),
 
-        echo '"Loading...":"' . __("Loading...") . '", ';
-        echo '"Redirecting...":"' . __("Redirecting...") . '", ';
+            "Okay" => __("Okay"),
+            "Cancel" => __("Cancel"),
 
-        echo '"Okay":"' . __("Okay") . '", ';
-        echo '"Cancel":"' . __("Cancel") . '", ';
+            "Error" => __("Error"),
+            "There was an error receiving data from the server" => __("There was an error receiving data from the server")
+        );
 
-        echo '"Error":"' . __("Error") . '", ';
-        echo '"There was an error receiving data from the server":"' . __("There was an error receiving data from the server") . '"';
-
+        echo "\t\tvar getTextArr = " . json_encode($translations) . ";";
+    } else {
+        echo "\t\tvar getTextArr = {};";
     }
-
-    echo '};';
 
     echo "\n";
 
