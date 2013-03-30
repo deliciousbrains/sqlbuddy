@@ -16,15 +16,6 @@
     <script type="text/javascript" src="<?php echo smartCaching("js/helpers.js"); ?>"></script>
     <script type="text/javascript" src="<?php echo smartCaching("js/core.js"); ?>"></script>
     <script type="text/javascript" src="<?php echo smartCaching("js/movement.js"); ?>"></script>
-
-    <!-- CodeMirror -->
-    <link type="text/css" rel="stylesheet"  href="<?php echo smartCaching("lib/codemirror/codemirror.css"); ?>" />
-    <link type="text/css" rel="stylesheet"  href="<?php echo smartCaching("lib/codemirror/show-hint.css"); ?>" />
-    <script type="text/javascript" src="<?php echo smartCaching("lib/codemirror/codemirror.js"); ?>"></script>
-    <script type="text/javascript" src="<?php echo smartCaching("lib/codemirror/sql.js"); ?>"></script>
-    <script type="text/javascript" src="<?php echo smartCaching("lib/codemirror/show-hint.js"); ?>"></script>
-    <script type="text/javascript" src="<?php echo smartCaching("js/sql-completion-tokens.js"); ?>"></script>
-    <script type="text/javascript" src="<?php echo smartCaching("js/sql-hint.js"); ?>"></script>
 </head>
 <body>
 <div id="container">
