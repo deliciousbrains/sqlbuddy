@@ -1,24 +1,36 @@
 SQL Buddy
 ===========
 
-SQL Buddy is an alternative to phpMyAdmin with a focus on usability.
+SQL Buddy is a phpMyAdmin alternative with a focus on usability.
 
 ![Screenshot 1](https://raw.github.com/calvinlough/sqlbuddy/gh-pages/images/screenshot1.png)
 ![Screenshot 2](https://raw.github.com/calvinlough/sqlbuddy/gh-pages/images/screenshot2.png)
 ![Screenshot 3](https://raw.github.com/calvinlough/sqlbuddy/gh-pages/images/screenshot3.png)
 
+## Features
+
+* Create and drop databases and tables
+* View, edit, insert and delete table rows
+* Execute custom SQL and view the output
+* Import and export databases and tables to SQL and CSV formats
+* Add, edit and delete MySQL users
+* Ships with 47 translations (including Esperanto!)
+
+## Download
+
+**[Download v1.3.3](https://github.com/calvinlough/sqlbuddy/raw/gh-pages/sqlbuddy.zip)**
+
+## Installation
+
+* Download the file above and unzip it
+* Upload the sqlbuddy folder to your web server
+* Point your browser to the sqlbuddy folder
+* Log in using your existing MySQL credentials
+
 ## Requirements
 
 * PHP 4.3+
 * MySQL 4+
-
-## Installation
-
-Just unzip the files to your server and it's ready to use. Seriously, the next step is logging in.
-
-## Translations
-
-SQL Buddy ships with 47 translations (including Esperanto!).
 
 ## Help
 
