@@ -1,9 +1,11 @@
-SQL Buddy - Web based MySQL administration
+SQL Buddy
 ===========
 
-SQL Buddy is an alternative to phpMyAdmin designed to be easy to use.
+SQL Buddy is an alternative to phpMyAdmin with a focus on usability.
 
-![SQL Buddy](http://sqlbuddy.com/images/sqlbuddy%20screen.png)
+![Screenshot 1](https://raw.github.com/calvinlough/sqlbuddy/gh-pages/images/screenshot1.png)
+![Screenshot 2](https://raw.github.com/calvinlough/sqlbuddy/gh-pages/images/screenshot2.png)
+![Screenshot 3](https://raw.github.com/calvinlough/sqlbuddy/gh-pages/images/screenshot3.png)
 
 ## Requirements
 
