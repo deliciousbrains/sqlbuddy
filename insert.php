@@ -52,9 +52,9 @@ if ($conn->isResultSet($structureSql) || sizeof($structureSql) > 0) {
 			}
 			
 			if (isset($types) && substr($value, 0, 2) == "0x" && isset($binaryDTs) && in_array($types[$key], $binaryDTs)) {
-				$insertValues .= $conn->escapeString(urldecode($value)) . ",";
+				$insertValues .= $conn->escapeString(rawurldecode($value)) . ",";
 			} else {
-				$insertValues .= "'" . $conn->escapeString(urldecode($value)) . "',";
+				$insertValues .= "'" . $conn->escapeString(rawurldecode($value)) . "',";
 			}
 			
 		}
