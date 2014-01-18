@@ -349,7 +349,10 @@ if (isset($dbError)) {
 				}
 				echo '" fieldname="' . $fieldList[$i] . '">';
 				
-				if (isset($tableTypes) && in_array($tableTypes[$i], $binaryDTs)) {
+
+				if (is_null($dataRow[$i])) {
+					echo '<em>Null</em>';
+	  	  		} else if (isset($tableTypes) && in_array($tableTypes[$i], $binaryDTs)) {
 					echo '<span class="binary">(' . __("binary data") . ')</span>';
 				} else if (is_numeric($dataRow[$i]) && stristr($fieldList[$i], "Date") !== false && strlen($dataRow[$i]) > 7 && strlen($dataRow[$i]) < 14) {
 					echo '<span title="' . date("F j, Y g:ia", $dataRow[$i]) . '">' . formatForOutput($dataRow[$i]) . '</span>';

@@ -146,6 +146,16 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql)) {
 		
 		echo '<div class="row' . $m . ' browse';
 		
+		$allow_null = $structureRow['Null'] == 'YES';
+		$default_null = is_null($structureRow['Default']);
+		if ($allow_null && $default_null){
+			$default_value = '<em>Null</em>';
+		} elseif (!$allow_null && $default_null) {
+			$default_value = '<em>None</em>';
+		} else {
+			$default_value = $structureRow['Default'];
+		}
+		
 		if ($m % 2 == 1) { echo ' alternator'; }
 		else 
 		{ echo ' alternator2'; }
@@ -155,7 +165,7 @@ if ($conn->getAdapter() == "mysql" && $conn->isResultSet($structureSql)) {
 		echo '<tr>';
 		echo '<td><div class="item column1">' . $structureRow['Field'] . '</div></td>';
 		echo '<td><div class="item column2">' . $structureRow['Type'] . '</div></td>';
-		echo '<td><div class="item column3">' . $structureRow['Default'] . '</div></td>';
+		echo '<td><div class="item column3">' . $default_value . '</div></td>';
 		echo '</tr>';
 		echo '</table>';
 		echo '</div>';
