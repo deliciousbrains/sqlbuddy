@@ -140,22 +140,6 @@ loginCheck();
 	
 	</td>
 </tr>
-<tr>
-	<td>
-	<h4><?php echo __("Getting started"); ?></h4>
-	</td>
-</tr>
-<tr>
-	<td style="padding: 1px 0 15px 10px">
-	
-	<ul>
-	<li><a href="http://www.sqlbuddy.com/help/"><?php echo __("Help"); ?></a></li>
-	<li><a href="http://www.sqlbuddy.com/translations/"><?php echo __("Translations"); ?></a></li>
-	<li><a href="http://www.sqlbuddy.com/contact/"><?php echo __("Contact"); ?></a></li>
-	</ul>
-	
-	</td>
-</tr>
 <?php
 
 if ($conn->getAdapter() != "sqlite") {
