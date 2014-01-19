@@ -8,9 +8,9 @@
     <link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/common.css"); ?>" media="all" />
     <link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/navigation.css"); ?>" media="all" />
     <link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/print.css"); ?>" media="print" />
-    <link type="text/css" rel="stylesheet" href="<?php echo themeFile("css/main.css"); ?>" media="all" />
+    <link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/theme.css"); ?>" media="all" />
     <!--[if lte IE 7]>
-    <link type="text/css" rel="stylesheet" href="<?php echo themeFile("css/ie.css"); ?>" media="all" />
+    <link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/theme.ie.css"); ?>" media="all" />
     <![endif]-->
     <script type="text/javascript" src="<?php echo assetFile("js/mootools-1.2-core.js"); ?>"></script>
     <script type="text/javascript" src="<?php echo assetFile("js/helpers.js"); ?>"></script>

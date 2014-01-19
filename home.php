@@ -114,28 +114,6 @@ loginCheck();
 		?>
 		</td>
 	</tr>
-	<tr>
-		<td class="inputfield">
-		<?php echo __("Theme"); ?>:
-		</td>
-		<td>
-		<select id="themeSwitcher" onchange="switchTheme()">
-		<?php
-		
-		foreach ($themeList as $t => $n) {
-			echo '<option value="' . $t . '"';
-			
-			if ($theme == $t) {
-				echo " selected";
-			}
-			
-			echo '>' . $n . '</option>';
-		}
-		
-		?>
-		</select>
-		</td>
-	</tr>
 	</table>
 	
 	</td>
