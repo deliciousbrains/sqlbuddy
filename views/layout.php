@@ -6,9 +6,7 @@
     <title>SQL Buddy</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/common.css"); ?>" media="all" />
-    <link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/navigation.css"); ?>" media="all" />
     <link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/print.css"); ?>" media="print" />
-    <link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/theme.css"); ?>" media="all" />
     <!--[if lte IE 7]>
     <link type="text/css" rel="stylesheet" href="<?php echo assetFile("css/theme.ie.css"); ?>" media="all" />
     <![endif]-->
@@ -21,7 +19,7 @@
 <div id="container">
     <div id="header">
         <div id="headerlogo">
-            <a href="#page=home" onclick="sideMainClick('home.php', 0); return false;"><img src="<?php echo assetFile("images/logo.png"); ?>" /></a>
+            <a href="#page=home" onclick="sideMainClick('home.php', 0); return false;">SQL Buddy</a>
         </div>
         <div id="toptabs"><ul></ul></div>
         <div id="headerinfo">

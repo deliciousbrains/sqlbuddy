@@ -1,8 +1,9 @@
 body {
-text-align: center;
-background: url(../images/initLoad.png) no-repeat 50% 125px;
-font: 12px/17px arial, sans-serif;
-color: rgb(50, 50, 50);
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+	font-size: 16px;
+	text-align: center;
+	background: url(../images/initLoad.png) no-repeat 50% 125px;
+	color: rgb(50, 50, 50);
 }
 
 * {
@@ -94,18 +95,100 @@ outline-width: thin;
 background: url(../images/button.png) 0 22px;
 color: rgb(80, 80, 80);
 }
-
+/* -------------------------- */
+/* Header */
+#header {
+	background-color: rgb(255,255,255);
+	background-image: none;
+	position: relative;
+	z-index: 10;
+	height: 60px;
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.25);
+}
 #headerlogo {
-width: 161px;
-padding: 10px 15px 2px;
-float: left;
+	width: 200px;
+	height: 100%;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+	float: left;
+	background-color: rgb(45,50,55);
 }
 #headerlogo a {
-outline: none;
+	float: left;
+	outline: none;
+	color: rgb(255,255,255);
+	font-weight: 600;
+	font-size: 1.6em;
+	height: 100%;
+	width: 100%;
+	padding: 20px 0 0 20px;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
 }
-#headerlogo img {
-display: inline;
+/* Navi */ 
+#toptabs {
+	padding-top: 7px;
+	float: left;
 }
+#toptabs ul {
+	padding: 0;
+}
+#toptabs ul li {
+list-style-type: none;
+float: left;
+}
+#toptabs ul li a {
+	margin: 0 5px 0 15px;
+	color: rgb(45,50,55);
+	font-weight: bold;
+	padding: 4px 7px;
+	font-size: 1em;
+}
+#toptabs ul li a .rowcount {
+font-weight: normal;
+padding-left: 3px;
+}
+#toptabs ul li.selected a {
+	cursor: default;
+	border-radius: 3px;
+}
+#toptabs ul li.deactivated a {
+cursor: default;
+}
+#toptabs ul li a {
+
+}
+#toptabs ul li a .rowcount {
+color: rgb(235, 235, 235);
+}
+#toptabs ul li a:hover {
+color: #fff;
+padding: 4px 7px;
+}
+#toptabs ul li.selected a {
+color: #fff;
+font-weight: bold;
+text-shadow: rgb(50, 50, 50) 0 1px 0;
+background: steelblue;
+padding: 4px 7px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+}
+
+#toptabs ul li.selected a .rowcount {
+color: rgb(235, 235, 235);
+}
+#toptabs ul li.deactivated a {
+color: rgb(175, 175, 175) !important;
+}
+#toptabs ul li.deactivated a .rowcount {
+color: rgb(175, 175, 175) !important;
+}
+/* Header Infos */
 #headerinfo {
 padding: 7px 18px 0;
 width: 175px;
@@ -136,18 +219,22 @@ padding-top: 6px;
 min-height: 350px;
 }
 #leftside {
-vertical-align: top;
-width: 180px;
-float: left;
+	vertical-align: top;
+	width: 200px;
+	float: left;
 }
 #rightside {
-vertical-align: top;
-margin-left: 180px;
-padding: 0 6px 5px 0;
+	vertical-align: top;
+	padding: 0;
+	margin: 0 0 0 200px;
 }
 #sidemenu {
-display: block;
-padding: 10px 0 0 5px;
+	display: block;
+	padding: 10px 0 0 5px;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+	width: 200px;
 }
 
 #content {
@@ -160,7 +247,8 @@ float: left;
 	width: 100%;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	box-sizing: border-box;	
+	box-sizing: border-box;
+	background-color: rgb(255,255,255);
 }
 
 .grid {
@@ -890,4 +978,204 @@ float: right;
 }
 .goto:hover {
 opacity: 1;
+}
+/* Navigation */
+.dblistheader {
+padding: 0px 0px 0px 7px;
+outline: none;
+text-transform: uppercase;
+font-size: 10px;
+color: rgb(175, 175, 175);
+}
+
+.dblist {
+width: 100%;
+line-height: 17px;
+padding-bottom: 6px;
+}
+.dblist ul {
+padding: 0px;
+}
+.dblist ul li {
+list-style-type: none;
+}
+.dblist ul li a {
+display: block;
+outline: none;
+border-width: 1px 0 1px 1px;
+border-style: solid;
+border-color: transparent;
+border-bottom-radius-left: 3px;
+border-top-radius-left: 3px;
+}
+.dblist ul li a .menutext {
+padding: 1px 6px 0px 0px;
+margin-left: 16px;
+border: 0;
+}
+.dblist ul li a .menutoggler {
+width: 12px;
+height: 14px;
+margin: 3px 4px 0px 2px;
+float: left;
+background: transparent url(../images/closedArrow.png) no-repeat 4px 3px;
+}
+.dblist ul li a .menuicon {
+height: 14px;
+margin: 0px 5px 0px 6px;
+float: left;
+font-size: 10px;
+padding-top: 1px;
+}
+.dblist ul li.expanded a .menutoggler{
+background: transparent url(../images/openArrow.png) no-repeat 3px 3px;
+}
+.dblist ul li.expanded .sublist {
+display: block;
+}
+
+.sublist {
+border: 0px !important;
+overflow: hidden;
+}
+.sublist li a {
+padding: 1px 6px 0px 22px !important;
+margin-left: 7px;
+overflow-x: hidden;
+}
+.sublist li.loading a {
+background: url(../images/loading.gif) no-repeat 0 0 !important;
+}
+.subcount {
+padding-left: 5px;
+font-size: 11px;
+}
+
+/* Theme */
+html {
+	background: #DDDDDB;
+}
+
+
+#bottom{
+	
+}
+
+h3, h4 {
+	color: steelblue;
+}
+#bottom{
+	padding-top: 0;
+}
+#headerinfo a {
+color: rgb(215, 215, 215) !important;
+text-shadow: rgb(50, 50, 50) 0 1px 0;
+}
+#headerinfo a:hover {
+color: #fff !important;
+}
+
+#loginform {
+padding: 7px;
+background: url(../../../images/transparent.png);
+}
+#loginform .loginspacer {
+background: white;
+}
+
+.dblistheader {
+color: #777;
+}
+
+.dblist ul li a .menutext {
+color: #444;
+}
+.dblist ul li.selected a .menutext {
+color: #fff;
+}
+.dblist ul li.selected > a {
+background: rgb(75, 75, 75) !important;
+border-color: rgb(75, 75, 75);
+border-width: 0px;
+padding: 3px 0px;
+border-top-left-radius: 3px;
+border-bottom-left-radius: 3px; 
+color: #fff !important;
+}
+.sublist li a {
+color: #444;
+}
+.subcount {
+color: #666;
+}
+.selected .subcount {
+color: #ddd;
+}
+
+.inputbutton {
+	background-color: rgb(252,252,252);
+	background-image: -moz-linear-gradient(top, rgb(252,252,252), rgb(240,240,240));
+	background-image: -webkit-linear-gradient(top, rgb(252,252,252), rgb(240,240,240));
+	border: 1px solid #BBBBBB;
+	padding:2px 8px !important;
+	text-shadow:0 1px 0 rgb(255,255,255);
+	border-radius: 11px;
+	border-radius: 11px;
+	line-height: 12px;
+	width: 69px;
+	height: 26px; 
+}
+.inputbutton:hover{
+	border: 1px solid #666;
+	color:rgb(0,0,0);
+}
+.inputbutton:active {
+	background-color: rgb(240,240,240);	
+	background-image: -moz-linear-gradient(top, rgb(225,225,225), rgb(240,240,240));
+	background-image: -webkit-linear-gradient(top, rgb(225,225,225), rgb(240,240,240));
+	color: rgb(0,0,0);
+}
+.text, textarea {
+border-radius: 3px;
+background:#F5F5F5 none repeat scroll 0 0;
+border:1px solid #CCCCCC;
+color:#666666;
+font-size:10px;
+height:14px;
+margin-right:2px;
+padding:3px;
+vertical-align:top;
+}
+.menuicon {
+	visibility: hidden;
+}
+.dblist ul li a .menutoggler, .dblist ul li.expanded a .menutoggler{
+	background-image: none;
+}
+.dblist ul li a .menutoggler:before {
+	margin: 2px 0 0 4px;	
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	border-width: 4px;
+	border-style: solid;
+	border-color: transparent transparent transparent rgb(175,175,175);
+}
+.dblist ul li a .menuicon {
+height: 14px;
+margin: 0px 5px 0px 6px;
+float: left;
+font-size: 10px;
+padding-top: 1px;
+}
+.dblist ul li.expanded a .menutoggler:before{
+	margin: 4px 0 0 2px;	
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	border-width: 4px;
+	border-style: solid;
+	border-color: rgb(175,175,175) transparent transparent transparent;
 }
