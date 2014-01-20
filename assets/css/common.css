@@ -131,21 +131,24 @@ color: rgb(80, 80, 80);
 }
 /* Navi */ 
 #toptabs {
-	padding-top: 7px;
+	height: 100%;
 	float: left;
 }
 #toptabs ul {
 	padding: 0;
+	height: 100%;
 }
 #toptabs ul li {
-list-style-type: none;
-float: left;
+	list-style-type: none;
+	float: left;
+	height: 100%;
 }
 #toptabs ul li a {
-	margin: 0 5px 0 15px;
+	float: left;
+	margin: 10px 5px 0 15px;
 	color: rgb(45,50,55);
-	font-weight: bold;
-	padding: 4px 7px;
+	font-weight: normal;
+	padding: 8px 14px;
 	font-size: 1em;
 }
 #toptabs ul li a .rowcount {
@@ -159,24 +162,18 @@ padding-left: 3px;
 #toptabs ul li.deactivated a {
 cursor: default;
 }
-#toptabs ul li a {
-
-}
 #toptabs ul li a .rowcount {
 color: rgb(235, 235, 235);
 }
 #toptabs ul li a:hover {
-color: #fff;
-padding: 4px 7px;
+	color: rgb(255,255,255);
+	background: rgb(45,205,115);
+	border-radius: 3px;
 }
 #toptabs ul li.selected a {
-color: #fff;
-font-weight: bold;
-text-shadow: rgb(50, 50, 50) 0 1px 0;
-background: steelblue;
-padding: 4px 7px;
--webkit-border-radius: 3px;
--moz-border-radius: 3px;
+	color: rgb(255,255,255);
+	background: rgb(45,205,115);
+	border-radius: 3px;
 }
 
 #toptabs ul li.selected a .rowcount {

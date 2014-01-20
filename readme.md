@@ -1,7 +1,8 @@
 # SQLBuddy
-This is my fork of the pretty nice sql buddy by Calvin Lough.
+This fork tries to improve the overall usability and awesomeness of sqlbuddy. I will mostly be working on design and layout. If anybody is wants to contribute (especially in the area of php code improvements, db supports, features) I would be very happy.
 
-What I do is remove everything I deem unnessesary and improve the overall usability.
+
+
 
 -------------------------------------------------------
 SQL Buddy - Web based MySQL administration
