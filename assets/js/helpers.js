@@ -149,29 +149,7 @@ function finishTabLoad(responseText) {
 	runJavascriptContent();
 	sizePage();
 	
-	var sideId = getSubMenuId(sb.db, sb.table);
-	if (f(sideId) != "") {
-		deselectSideMenu();
-		$(sideId).addClass("selected");
-		
-		//make sure the side menu is expanded
-		var targ = $(sideId);
-		
-		if (f(sb.db) && f(sb.table) && f(targ)) {
-			while (f(targ) && !targ.hasClass("sublist")) {
-				targ = targ.parentNode;
-			}
-			if (f(targ)) {
-				var toExpand = targ.id;
-				var toExpandId = parseInt(toExpand.substring(7));
-				toggleMenu(toExpandId, true);
-			}
-		} else if (f(sb.db) && f(targ)) {
-			var toExpand = $E('.sublist', targ).id;
-			var toExpandId = parseInt(toExpand.substring(7));
-			toggleMenu(toExpandId, true);
-		}
-	}
+
 	
 	sb.setHash();
 	
