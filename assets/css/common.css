@@ -1,15 +1,14 @@
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-	font-size: 16px;
+	font-size: 1em;
+	line-height: 150%;
 	text-align: center;
 	background: url(../images/initLoad.png) no-repeat 50% 125px;
 	color: rgb(50, 50, 50);
 }
-
 * {
 margin: 0; padding: 0;
 }
-
 table {
 border-spacing: 0;
 }
@@ -256,22 +255,20 @@ float: left;
 border-width: 1px;
 border-style: solid;
 border-color: rgb(225, 225, 225) rgb(210, 210, 210) rgb(210, 210, 210) rgb(210, 210, 210);
-background: url(../images/schemaHeader.png) top repeat-x;
 }
 
 .gridheader {
-height: 18px;
+	height: 28px;
 border-bottom: 1px solid rgb(150, 150, 150);
-border-right: 1px solid #fff;
+
 overflow: hidden;
 }
 .gridheaderinner {
 padding-left: 1px;
 }
-
 .headertitle {
-background: #EEEEEE url(../images/schemaHeader.png) top;
-padding: 0 5px 0 6px;
+background: #EEEEEE;
+padding: 5px 6px;
 width: 200px;
 cursor: pointer;
 overflow: hidden;
@@ -281,7 +278,6 @@ color: rgb(90, 90, 90);
 }
 
 .columnresizer {
-border-right: 1px solid rgb(255, 255, 255);
 border-left: 1px solid rgb(185, 185, 185);
 width: 0;
 height: 18px;
@@ -289,13 +285,12 @@ cursor: ew-resize;
 }
 
 .emptyvoid {
-background: #EEEEEE url(../images/schemaHeader.png) top;
-height: 16px;
+background: #EEEEEE;
+height: 26px;
 width: 14px;
 padding: 1px 4px;
 float: left;
 border-bottom: 1px solid rgb(150, 150, 150);
-border-right: 1px solid rgb(205, 205, 205);
 }
 
 .impotent .headertitle, .impotent .columnresizer {
@@ -306,26 +301,26 @@ cursor: default;
 }
 
 .browse {
-line-height: 17px;
-min-width: 100%;
-width: 100%;
+	line-height: 1.4em;
+	min-width: 100%;
+	width: 100%;
 }
 .browse table td {
-border-right: 1px solid rgb(200, 200, 200);
-vertical-align: top;
+	border-right: 1px solid rgb(200, 200, 200);
+	vertical-align: top;
 }
 
 .item {
-padding: 2px 6px;
-width: 200px;
-overflow: hidden;
-max-height: 16px;
+	padding: 2px 6px;
+	width: 200px;
+	overflow: hidden;
+	height: 20px;
 }
 .longtext {
-width: 300px;
+	width: 300px;
 }
 .numeric {
-width: 50px;
+	width: 50px;
 }
 .binary {
 font-style: italic;
@@ -342,9 +337,9 @@ overflow: hidden;
 border-right: 1px solid rgb(185, 185, 185);
 }
 .manip {
-padding-top: 1px;
-vertical-align: top;
-height: 19px;
+	padding: 2px 0;
+	vertical-align: top;
+	height: 20px;
 }
 .manip:last-child {
 border-bottom: 0 !important;
@@ -355,8 +350,8 @@ padding: 0 1px 0 5px;
 float: left;
 }
 .manip dd {
-width: 15px;
-padding: 2px 0 0 0;
+	width: 15px;
+	padding: .3em 0 0 0;
 float: left;
 }
 .manip dd a {
@@ -470,10 +465,12 @@ margin: 12px 5px;
 border-bottom: 2px solid #ccc;
 }
 .insertmessage {
-margin: 1px 4px;
-padding: 4px 8px;
-color: rgb(75, 75, 75);
-width: 332px;
+	margin: 1px 4px;
+	padding: 4px 8px;
+	color: rgb(75, 75, 75);
+	width: 100% !important;
+	display: block;
+	float: left;
 }
 
 .edit {
