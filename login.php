@@ -12,6 +12,7 @@ MIT license
 2008 Calvin Lough <http://calv.in>
 
 */
+// error_reporting(E_ALL);
 
 include "functions.php";
 

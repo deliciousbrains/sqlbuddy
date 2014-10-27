@@ -1,7 +1,12 @@
+html{
+	display: block;
+	width: 100%;
+}
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 	font-size: 1em;
 	line-height: 150%;
+	width: 100%;
 	text-align: center;
 	background: url(../images/initLoad.png) no-repeat 50% 125px;
 	color: rgb(50, 50, 50);
@@ -85,7 +90,7 @@ padding: 2px 5px 4px;
 font-size: 12px;
 line-height: 18px;
 width: 60px;
-height: 22px; 
+height: 22px;
 border: 0;
 color: rgb(60, 60, 60);
 outline-width: thin;
@@ -109,8 +114,8 @@ color: rgb(80, 80, 80);
 #headerlogo {
 	width: 200px;
 	height: 100%;
-	-moz-box-sizing: border-box; 
-	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	float: left;
 	background-color: rgb(45,50,55);
@@ -124,11 +129,11 @@ color: rgb(80, 80, 80);
 	height: 100%;
 	width: 100%;
 	padding: 20px 0 0 20px;
-	-moz-box-sizing: border-box; 
-	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-/* Navi */ 
+/* Navi */
 #toptabs {
 	height: 100%;
 	float: left;
@@ -230,11 +235,12 @@ min-height: 350px;
 }
 #sidemenu {
 	display: block;
-	padding: 10px 0 0 5px;
-	-moz-box-sizing: border-box; 
-	-webkit-box-sizing: border-box; 
+	padding: 10px 0 0 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 200px;
+	overflow: scroll;
 }
 
 #content {
@@ -245,12 +251,24 @@ float: left;
 	padding: 8px 10px 10px;
 	float: left;
 	width: 100%;
+	overflow: hidden;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	background-color: rgb(255,255,255);
 }
 
+.browsetab{
+	overflow: hidden;
+	display: block;
+	position: relative;
+}
+.pane{
+	overflow: hidden;
+	display: block;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+}
 .grid {
 border-width: 1px;
 border-style: solid;
@@ -403,6 +421,9 @@ border-bottom: 1px solid #E5E6AD !important;
 .gridscroll {
 	overflow: auto;
 	min-height: 21px;
+	position: relative;
+	display: block;
+
 }
 .gridscroll .browse:last-child {
 border-bottom: 0 !important;
@@ -465,12 +486,13 @@ margin: 12px 5px;
 border-bottom: 2px solid #ccc;
 }
 .insertmessage {
-	margin: 1px 4px;
+	margin: 10px 0px;
 	padding: 4px 8px;
 	color: rgb(75, 75, 75);
 	width: 100% !important;
 	display: block;
 	float: left;
+	border-radius: 5px;
 }
 
 .edit {
@@ -624,7 +646,13 @@ padding-top: 5px !important;
 .privpane td {
 padding: 1px 0 !important;
 }
-
+.pane {
+	height: 100%;
+}
+.pane form{
+	width: 100%;
+	display: block;
+}
 .export {
 padding: 7px 7px 5px 14px;
 width: 375px;
@@ -799,7 +827,7 @@ padding: 7px 0 5px;
 background: url(../images/window-button.png);
 padding: 3px 5px 4px;
 width: 60px;
-height: 22px; 
+height: 22px;
 border: 0;
 color: white;
 outline-color: rgb(130, 130, 130);
@@ -987,7 +1015,7 @@ color: rgb(175, 175, 175);
 }
 
 .dblist {
-width: 100%;
+min-width: 100%;
 line-height: 17px;
 padding-bottom: 6px;
 }
@@ -1029,17 +1057,18 @@ padding-top: 1px;
 background: transparent url(../images/openArrow.png) no-repeat 3px 3px;
 }
 .dblist ul li.expanded .sublist {
-display: block;
+	display: block;
+	overflow-x: visible;
 }
 
 .sublist {
-border: 0px !important;
-overflow: hidden;
+	border: 0px !important;
+	overflow: hidden;
 }
 .sublist li a {
 padding: 1px 6px 0px 22px !important;
 margin-left: 7px;
-overflow-x: hidden;
+overflow-x: visible;
 }
 .sublist li.loading a {
 background: url(../images/loading.gif) no-repeat 0 0 !important;
@@ -1056,7 +1085,7 @@ html {
 
 
 #bottom{
-	
+
 }
 
 h3, h4 {
@@ -1090,7 +1119,7 @@ border-color: rgb(75, 75, 75);
 border-width: 0px;
 padding: 3px 0px;
 border-top-left-radius: 3px;
-border-bottom-left-radius: 3px; 
+border-bottom-left-radius: 3px;
 color: #fff !important;
 }
 .sublist li a {
@@ -1114,14 +1143,14 @@ color: #ddd;
 	border-radius: 11px;
 	line-height: 12px;
 	width: 69px;
-	height: 26px; 
+	height: 26px;
 }
 .inputbutton:hover{
 	border: 1px solid #666;
 	color:rgb(0,0,0);
 }
 .inputbutton:active {
-	background-color: rgb(240,240,240);	
+	background-color: rgb(240,240,240);
 	background-image: -moz-linear-gradient(top, rgb(225,225,225), rgb(240,240,240));
 	background-image: -webkit-linear-gradient(top, rgb(225,225,225), rgb(240,240,240));
 	color: rgb(0,0,0);
@@ -1144,7 +1173,7 @@ vertical-align:top;
 	background-image: none;
 }
 .dblist ul li a .menutoggler:before {
-	margin: 2px 0 0 4px;	
+	margin: 2px 0 0 4px;
 	content: "";
 	display: block;
 	height: 0;
@@ -1161,7 +1190,7 @@ font-size: 10px;
 padding-top: 1px;
 }
 .dblist ul li.expanded a .menutoggler:before{
-	margin: 4px 0 0 2px;	
+	margin: 4px 0 0 2px;
 	content: "";
 	display: block;
 	height: 0;
