@@ -13,7 +13,7 @@ MIT license
 
 */
 
-include "functions.php";
+include 'functions.php';
 
 loginCheck();
 
@@ -31,10 +31,10 @@ if (isset($db)) {
 
 if (isset($query)) {
 	$displayQuery = $query;
-} else if (isset($db) && isset($table) && $conn->getAdapter() == "mysql") {
-	$displayQuery = "SELECT * FROM `$table` LIMIT 100";
-} else if (isset($db) && isset($table) && $conn->getAdapter() == "sqlite") {
-	$displayQuery = "SELECT * FROM '$table' LIMIT 100";
+} else if (isset($db) && isset($table) && $conn->getAdapter() == 'mysql') {
+	$displayQuery = "SELECT * FROM `{$table}` LIMIT 100";
+} else if (isset($db) && isset($table) && $conn->getAdapter() == 'sqlite') {
+	$displayQuery = "SELECT * FROM '{$table}' LIMIT 100";
 }
 
 ?>
@@ -51,7 +51,7 @@ if (isset($query)) {
 	?></textarea>
 	</td>
 	<td valign="bottom" style="padding-left: 7px">
-	<input type="submit" class="inputbutton" value="<?php echo __("Submit"); ?>" />
+	<input type="submit" class="inputbutton" value="<?php echo __('Submit'); ?>" />
 	</td>
 </tr>
 </table>
@@ -65,7 +65,7 @@ if (isset($query)) {
 	
 	echo '<div style="margin-top: 10px">';
 	
-	require "includes/browse.php";
+	require 'includes/browse.php';
 	
 	echo '</div>';
 }

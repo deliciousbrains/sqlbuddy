@@ -36,6 +36,6 @@ if (isset($_SESSION['SB_LOGIN_PASS'])) {
 	unset($GLOBALS['_SESSION']['SB_LOGIN_PASS']);
 }
 
-header("Location: login.php");
+header('Location: login.php');
 
 ?>

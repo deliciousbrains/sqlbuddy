@@ -15,15 +15,15 @@ MIT license
 
 class SQL {
 	
-	var $adapter = "";
-	var $method = "";
-	var $version = "";
-	var $conn = "";
-	var $options = "";
-	var $errorMessage = "";
-	var $db = "";
+	var $adapter = '';
+	var $method = '';
+	var $version = '';
+	var $conn = '';
+	var $options = '';
+	var $errorMessage = '';
+	var $db = '';
 	
-	function SQL($connString, $user = "", $pass = "") {
+	function SQL($connString, $user = '', $pass = '') {
 		list($this->adapter, $options) = explode(":", $connString, 2);
 		
 		if ($this->adapter != "sqlite") {
@@ -113,9 +113,8 @@ class SQL {
 	function getOptionValue($optKey) {
 		if (array_key_exists($optKey, $this->options)) {
 			return $this->options[$optKey];
-		} else {
-			return false;
 		}
+		return false;
 	}
 	
 	function selectDB($db) {
@@ -123,12 +122,10 @@ class SQL {
 			if ($this->method == "mysql") {
 				$this->db = $db;
 				return (mysql_select_db($db));
-			} else {
-				return true;
 			}
-		} else {
-			return false;
+			return true;
 		}
+		return false;
 	}
 
 	function query($queryText) {
@@ -162,9 +159,8 @@ class SQL {
 
 				return $queryResult;
 			}
-		} else {
-			return false;
 		}
+		return false;
 	}
 	
 	// Be careful using this function - when used with pdo, the pointer is moved
@@ -189,9 +185,8 @@ class SQL {
 		if ($this->conn) {
 			if ($this->method == "pdo") {
 				return ($resultSet == true);
-			} else {
-				return ($this->rowCount($resultSet) > 0);
 			}
+			return ($this->rowCount($resultSet) > 0);
 		}
 	}
 
@@ -286,9 +281,8 @@ class SQL {
 		if ($this->conn) {
 			if ($this->adapter == "mysql" && version_compare($this->getVersion(), "4.1", ">")) {
 				return true;
-			} else  {
-				return false;
 			}
+			return false;
 		}
 	}
 	

@@ -15,15 +15,15 @@ MIT license
 
 class SQL {
 	
-	var $adapter = "";
-	var $method = "";
-	var $version = "";
-	var $conn = "";
-	var $options = "";
-	var $errorMessage = "";
-	var $db = "";
+	var $adapter = '';
+	var $method = '';
+	var $version = '';
+	var $conn = '';
+	var $options = '';
+	var $errorMessage = '';
+	var $db = '';
 	
-	function SQL($connString, $user = "", $pass = "") {
+	function SQL($connString, $user = '', $pass = '') {
 		list($this->adapter, $options) = explode(":", $connString, 2);
 		
 		if ($this->adapter != "sqlite") {
@@ -81,24 +81,19 @@ class SQL {
 	function getOptionValue($optKey) {
 		if (array_key_exists($optKey, $this->options)) {
 			return $this->options[$optKey];
-		} else {
-			return false;
 		}
+		return false;
 	}
 	
 	function selectDB($db) {
 		if ($this->conn) {
-			
 			$this->db = $db;
-			
 			if ($this->method == "mysql") {
 				return (mysql_select_db($db));
-			} else {
-				return true;
 			}
-		} else {
-			return false;
+			return true;
 		}
+		return false;
 	}
 
 	function query($queryText) {

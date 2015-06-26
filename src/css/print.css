@@ -2,16 +2,16 @@
 display: none;
 }
 
+#innercontent a {
+color: #3A6D96 !important;
+}
+
 .inputbutton, .inputbutton:active {
 background: default !important;
 border: default !important;
 line-height: inherit !important;
 width: auto !important;
 height: auto !important; 
-}
-
-#innercontent a {
-color: #3A6D96 !important;
 }
 
 .leftchecks, .emptyvoid {

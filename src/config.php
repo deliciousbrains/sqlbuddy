@@ -16,9 +16,9 @@ MIT license
 
 /* The values below are for the login.php page */
 
-$sbconfig['DefaultAdapter'] = "mysql";
-$sbconfig['DefaultHost'] = "localhost";
-$sbconfig['DefaultUser'] = "root";
+$sbconfig['DefaultAdapter'] = 'mysql';
+$sbconfig['DefaultHost'] = 'localhost';
+$sbconfig['DefaultUser'] = 'root';
 
 /*
 * If you want to enable automatic login, you can include your password below. To 
@@ -30,10 +30,10 @@ $sbconfig['DefaultUser'] = "root";
 */
 
 // MySQL
-// $sbconfig['DefaultPass'] = "";
+// $sbconfig['DefaultPass'] = '';
 
 // SQLite
-// $sbconfig['DefaultDatabase'] = "";
+// $sbconfig['DefaultDatabase'] = '';
 
 /*
 * By default, when you view the homepage of your SQL Buddy installation, a check is
