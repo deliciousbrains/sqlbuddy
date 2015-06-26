@@ -41,7 +41,7 @@ if ($query) {
 					$start = 0;
 				}
 				
-				$q = "$q $sort LIMIT $start, $perPage";
+				$q = "{$q} $sort LIMIT {$start}, {$perPage}";
 			}
 			
 			$queryStartTime = microtime_float();

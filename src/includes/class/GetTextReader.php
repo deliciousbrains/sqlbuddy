@@ -68,9 +68,8 @@ class GetTextReader {
 	function getTranslation($lookup) {
 		if (array_key_exists($lookup, $this->translationIndex)) {
 			return $this->translationIndex[$lookup];
-		} else {
-			return $lookup;
 		}
+		return $lookup;
 	}
 	
 }
