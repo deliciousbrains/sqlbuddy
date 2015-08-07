@@ -1,4 +1,10 @@
 # SQLBuddy
+
+**SEEKING NEW OWNER**
+Since I am not activly using sqlbuddy anymore I will not maintain this fork. If you want to take it over, please let me know, I will happily hand it over.
+
+-------------------------------------------------------
+
 This fork tries to improve the overall usability and awesomeness of sqlbuddy. I will mostly be working on design and layout. If anybody is wants to contribute (especially in the area of php code improvements, db supports, features) I would be very happy.
 
 
