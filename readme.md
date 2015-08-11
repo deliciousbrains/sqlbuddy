@@ -1,7 +1,7 @@
 # SQLBuddy
 
-**SEEKING NEW OWNER**
-Since I am not activly using sqlbuddy anymore I will not maintain this fork. If you want to take it over, please let me know, I will happily hand it over.
+**DELETING THIS REPO SOON**
+As the original repo was taken over by deliciousbrains I will be deleting this repo in the coming days.
 
 -------------------------------------------------------
 
