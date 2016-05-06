@@ -1,0 +1,19 @@
+{
+    "require": {
+        "symfony/http-foundation": "^3.0",
+        "symfony/routing": "^3.0",
+        "symfony/http-kernel": "^3.0",
+        "symfony/event-dispatcher": "^3.0",
+        "symfony/dependency-injection": "^3.0",
+        "windwalker/renderer": "^2.1",
+        "illuminate/view": "^5.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "SQLBuddy\\": "src/"
+        }
+    }
+}
