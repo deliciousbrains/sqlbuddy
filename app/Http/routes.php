@@ -14,3 +14,8 @@
 $app->get('/', function () use ($app) {
     return view('common.layout');
 });
+
+// Database
+$app->get('/database', 'DatabaseController@index');
+$app->post('/database', 'DatabaseController@store');
+$app->delete('/database/{id}', 'DatabaseController@destroy');
