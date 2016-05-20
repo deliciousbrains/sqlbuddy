@@ -1,19 +1,32 @@
 {
+    "name": "laravel/lumen",
+    "description": "The Laravel Lumen Framework.",
+    "keywords": ["framework", "laravel", "lumen"],
+    "license": "MIT",
+    "type": "project",
     "require": {
-        "symfony/http-foundation": "^3.0",
-        "symfony/routing": "^3.0",
-        "symfony/http-kernel": "^3.0",
-        "symfony/event-dispatcher": "^3.0",
-        "symfony/dependency-injection": "^3.0",
-        "windwalker/renderer": "^2.1",
-        "illuminate/view": "^5.2"
+        "php": ">=5.5.9",
+        "laravel/lumen-framework": "5.2.*",
+        "vlucas/phpdotenv": "~2.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.3"
+        "fzaninotto/faker": "~1.4",
+        "phpunit/phpunit": "~4.0"
     },
     "autoload": {
         "psr-4": {
-            "SQLBuddy\\": "src/"
+            "App\\": "app/"
         }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/",
+            "database/"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ]
     }
 }
