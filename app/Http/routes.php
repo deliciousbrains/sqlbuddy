@@ -19,3 +19,6 @@ $app->get('/', function () use ($app) {
 $app->get('/database', 'DatabaseController@index');
 $app->post('/database', 'DatabaseController@store');
 $app->delete('/database/{id}', 'DatabaseController@destroy');
+
+// Table
+$app->get('/database/{database}/table', 'TableController@index');

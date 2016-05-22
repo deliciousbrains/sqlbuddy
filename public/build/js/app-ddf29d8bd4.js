@@ -10157,7 +10157,20 @@ require('./components/sidebar.js');
 
 Vue.component('sqlbuddy-sidebar', {
 
-    props: ['databases']
+    props: ['databases'],
+
+    data: function data() {
+        return {
+            tables: []
+        };
+    },
+
+
+    methods: {
+        updateTables: function updateTables(e) {
+            var database = e.target[e.target.selectedIndex].value;
+        }
+    }
 
 });
 
