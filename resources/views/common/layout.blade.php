@@ -9,29 +9,30 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
           integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
 </head>
-
 <body id="sqlbuddy">
     @include('common.nav')
 
-    <div class="container" style="margin-top: 40px;">
-        <div class="row">
-            <div class="col-md-3">
-                @include('common.sidebar')
-            </div>
-            <div class="col-md-9">
-                @yield('content')
+    <sqlbuddy inline-template>
+        <div class="sqlbuddy">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2 col-sm-3">
+                        @include('common.sidebar')
+                    </div>
+                    <div class="col-md-10 col-sm-9">
+                        <div class="alert alert-danger" v-if="error">
+                            @{{ error }}
+                        </div>
+
+                        @yield('content')
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </sqlbuddy>
 
-    <script>
-        window.SQLBuddy = {
-            state: {
-                databases: {!! collect(app('db')->select('SHOW DATABASES'))->pluck('Database')->toJson() !!}
-            }
-        }
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"
             integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7"

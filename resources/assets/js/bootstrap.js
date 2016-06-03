@@ -3,4 +3,9 @@ if (window.Vue === undefined) {
     window.Vue = require('vue');
 }
 
-require('./components/sidebar.js');
+Vue.use(require('vue-resource'));
+
+require('./util/pagination');
+
+require('./components/sqlbuddy');
+require('./components/sidebar');

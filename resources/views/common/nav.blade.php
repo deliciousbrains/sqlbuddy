@@ -1,5 +1,5 @@
 <nav class="navbar navbar-full navbar-dark bg-primary">
-    <div class="container">
-        <a class="navbar-brand" href="#">SQL Buddy</a>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url('/') }}">SQL Buddy</a>
     </div>
 </nav>
