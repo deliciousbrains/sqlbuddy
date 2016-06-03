@@ -1,0 +1,16 @@
+.sqlbuddy {
+	margin: 40px 0;
+}
+.sqlbuddy-sidebar {
+	overflow: auto;
+}
+.sqlbuddy-sidebar-table-list {
+	list-style: none;
+	padding: 0 5px;
+	margin: 1em 0;
+
+	.active { font-weight: bold; }
+}
+.sqlbuddy-table-table-wrapper {
+	overflow: auto;
+}
