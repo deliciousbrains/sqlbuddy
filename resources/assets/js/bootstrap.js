@@ -9,3 +9,4 @@ require('./util/pagination');
 
 require('./components/sqlbuddy');
 require('./components/sidebar');
+require('./components/table');
