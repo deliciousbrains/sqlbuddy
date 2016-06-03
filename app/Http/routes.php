@@ -12,13 +12,19 @@
 */
 
 $app->get('/', function () use ($app) {
-    return view('common.layout');
+    return view('table');
 });
 
-// Database
-$app->get('/database', 'DatabaseController@index');
-$app->post('/database', 'DatabaseController@store');
-$app->delete('/database/{id}', 'DatabaseController@destroy');
+$app->group([
+    'namespace' => 'App\Http\Controllers\Api',
+    'prefix'    => 'api',
+], function () use ($app) {
+    // Database
+    $app->get('/databases', 'DatabaseController@index');
+    $app->post('/databases', 'DatabaseController@store');
+    $app->delete('/databases/{id}', 'DatabaseController@destroy');
 
-// Table
-$app->get('/database/{database}/table', 'TableController@index');
+    // Table
+    $app->get('/databases/{database}/tables', 'TableController@index');
+    $app->get('/databases/{database}/tables/{table}', 'TableController@rows');
+});

@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use DB;
 use Exception;
 use Illuminate\Http\Request;
 
-class DatabaseController extends Controller
+class DatabaseController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +16,9 @@ class DatabaseController extends Controller
     public function index()
     {
         try {
-            $result = collect(app('db')->select('SHOW DATABASES'))->pluck('Database');
-        }
-        catch (Exception $e) {
-            $result = false;
+            $result = collect(DB::select('SHOW DATABASES'))->pluck('Database');
+        } catch (Exception $e) {
+            $result = $this->getError($e);
         }
 
         return response()->json($result);
@@ -27,7 +27,7 @@ class DatabaseController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -35,10 +35,9 @@ class DatabaseController extends Controller
         $database = $request->input('database');
 
         try {
-            $result = app('db')->statement("CREATE DATABASE `{$database}`");
-        }
-        catch (Exception $e) {
-            $result = false;
+            $result = DB::statement("CREATE DATABASE `{$database}`");
+        } catch (Exception $e) {
+            $result = $this->getError($e);
         }
 
         return response()->json($result);
@@ -47,7 +46,7 @@ class DatabaseController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  string  $id
+     * @param  string $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -58,8 +57,8 @@ class DatabaseController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  string  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  string $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -70,16 +69,15 @@ class DatabaseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  string  $id
+     * @param  string $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
         try {
-            $result = app('db')->statement("DROP DATABASE `{$id}`");
-        }
-        catch (Exception $e) {
-            $result = false;
+            $result = DB::statement("DROP DATABASE `{$id}`");
+        } catch (Exception $e) {
+            $result = $this->getError($e);
         }
 
         return response()->json($result);
