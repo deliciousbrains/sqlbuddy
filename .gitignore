@@ -1,5 +1,7 @@
 /.idea
 /node_modules
 /vendor
-/public/**/*.map
+/public/build
+/public/css
+/public/js/
 .env
