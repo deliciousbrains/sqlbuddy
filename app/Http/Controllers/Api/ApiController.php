@@ -29,6 +29,6 @@ class ApiController extends Controller
     protected function selectDatabase($databaseName)
     {
         $pdo = \DB::connection()->getPdo();
-        $pdo->exec('use ' . $databaseName);
+        $pdo->exec('use `' . $databaseName . '`');
     }
 }
