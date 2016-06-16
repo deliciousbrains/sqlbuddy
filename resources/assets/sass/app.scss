@@ -14,3 +14,22 @@
 .sqlbuddy-table-table-wrapper {
 	overflow: auto;
 }
+
+// Pagination
+.pagination-container {
+	margin: 1rem 0;
+
+	.pagination {
+		margin: 0;
+	}
+
+	.page-info, .row-info {
+		display: inline-block;
+		margin: 7px 0 0 40px;
+	}
+
+	select {
+		display: inline-block;
+		width: auto;
+	}
+}

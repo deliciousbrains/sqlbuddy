@@ -5,8 +5,10 @@ if (window.Vue === undefined) {
 
 Vue.use(require('vue-resource'));
 
-require('./util/pagination');
-
+// Components
 require('./components/sqlbuddy');
 require('./components/sidebar');
 require('./components/table');
+
+// Utils
+Vue.component('pagination', require('./util/pagination.vue'));
