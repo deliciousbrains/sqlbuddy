@@ -1,9 +1,11 @@
 .sqlbuddy {
 	margin: 40px 0;
 }
+
 .sqlbuddy-sidebar {
 	overflow: auto;
 }
+
 .sqlbuddy-sidebar-table-list {
 	list-style: none;
 	padding: 0 5px;
@@ -11,8 +13,25 @@
 
 	.active { font-weight: bold; }
 }
+
 .sqlbuddy-table-table-wrapper {
 	overflow: auto;
+
+	td {
+		max-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.truncated {
+		color: #0275d8;
+		cursor: pointer;
+
+		&:active,
+		&:hover {
+			color: #014c8c;
+		}
+	}
 }
 
 // Pagination
@@ -32,4 +51,13 @@
 		display: inline-block;
 		width: auto;
 	}
+}
+
+// Popover
+.popover {
+	max-width: 500px;
+}
+
+.popover-content {
+	word-wrap: break-word;
 }

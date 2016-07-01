@@ -53,11 +53,21 @@ Vue.component('sqlbuddy-table', {
 	},
 
 	watch: {
-		'selectedDatabase': function(database) {
+		'selectedDatabase': function() {
 			this.resetTableData();
 		},
 		'selectedTable': function(table) {
 			this.getTableRows(table);
+		},
+		'rows': function() {
+			$(function() {
+				$('td:truncated').addClass('truncated').popover({
+					'placement': 'bottom',
+					'content': function() {
+						return this.innerHTML;
+					}
+				});
+			});
 		}
 	},
 
