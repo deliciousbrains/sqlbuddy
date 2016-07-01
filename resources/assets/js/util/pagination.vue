@@ -75,6 +75,7 @@ export default {
 	watch: {
 		'data.current_page': function(page) {
 			this.$dispatch('pagination-' + this.name + '-page', page);
+			this.$dispatch('pagination-page-updated', page);
 		}
 	}
 }

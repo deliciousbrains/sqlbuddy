@@ -1,7 +1,8 @@
 Vue.component('sqlbuddy-table', {
 	props: [
 		'selectedDatabase',
-		'selectedTable'
+		'selectedTable',
+	    'page'
 	],
 
 	data() {
@@ -57,7 +58,7 @@ Vue.component('sqlbuddy-table', {
 			this.resetTableData();
 		},
 		'selectedTable': function(table) {
-			this.getTableRows(table);
+			this.getTableRows(table, this.page);
 		},
 		'rows': function() {
 			$(function() {

@@ -11,10 +11,6 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return view('table');
-});
-
 $app->group([
     'namespace' => 'App\Http\Controllers\Api',
     'prefix'    => 'api',
@@ -28,3 +24,8 @@ $app->group([
     $app->get('/databases/{database}/tables', 'TableController@index');
     $app->get('/databases/{database}/tables/{table}', 'TableController@rows');
 });
+
+$app->get('/', 'MainController@index');
+$app->get('/{database}', 'MainController@index');
+$app->get('/{database}/{table}', 'MainController@index');
+$app->get('/{database}/{table}/{page}', 'MainController@index');

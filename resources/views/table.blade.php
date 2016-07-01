@@ -1,7 +1,7 @@
 @extends('common.layout')
 
 @section('content')
-	<sqlbuddy-table :selected-database="selectedDatabase" :selected-table="selectedTable" inline-template>
+	<sqlbuddy-table :selected-database="selectedDatabase" :selected-table="selectedTable" :page="page" inline-template>
 		<div class="sqlbuddy-table">
 			<div v-if="columns.length">
 				<div class="sqlbuddy-table-table-wrapper">
