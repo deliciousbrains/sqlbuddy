@@ -17,6 +17,9 @@ Vue.component('sqlbuddy-table', {
 
 	methods: {
 		getTableRows(table, page) {
+			if (!this.selectedDatabase || !table) {
+				return;
+			}
 			if (typeof page === 'undefined') {
 				page = 1;
 			}
