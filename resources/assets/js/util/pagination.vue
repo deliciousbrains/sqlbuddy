@@ -1,5 +1,5 @@
 <template>
-	<div class="pagination-container clearfix" v-if="data.total > data.per_page">
+	<div class="pagination-container clearfix" v-if="data.data.length">
 		<ul class="pagination pull-xs-left">
 			<li class="page-item" :class="{ 'disabled': data.current_page <= 1 }">
 				<a href="#" class="page-link" aria-label="First" @click.prevent="data.current_page = 1"><span aria-hidden="true">&laquo;</span><span class="sr-only">First</span></a>
