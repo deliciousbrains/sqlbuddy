@@ -21,6 +21,15 @@ Vue.component('sqlbuddy', {
 		}
 	},
 
+	watch: {
+		'selectedDatabase': function() {
+			this.error = null;
+		},
+		'selectedTable': function() {
+			this.error = null;
+		}
+	},
+
 	events: {
 		'error': function(error) {
 			this.error = error;
