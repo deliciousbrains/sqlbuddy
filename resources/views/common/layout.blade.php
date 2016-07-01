@@ -22,7 +22,10 @@
                         @include('common.sidebar')
                     </div>
                     <div class="col-md-10 col-sm-9">
-                        <div class="alert alert-danger" v-if="error">
+                        <div class="alert alert-danger alert-dismissible" v-if="error">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                             @{{ error }}
                         </div>
 
