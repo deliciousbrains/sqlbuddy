@@ -3,5 +3,5 @@
 /vendor
 /public/build
 /public/css
-/public/js/
+/public/js
 .env
