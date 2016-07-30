@@ -70,11 +70,18 @@ Vue.component('sqlbuddy', {
 	},
 
 	watch: {
-		'selectedDatabase': function() {
+		'selectedDatabase': function(database, oldVal) {
+			if( oldVal.length && oldVal !== database ) {
+				this.selectedTable = '';
+				this.page = '';
+			}
 			this.error = null;
 			this.updateLocation();
 		},
-		'selectedTable': function() {
+		'selectedTable': function(table, oldVal) {
+			if( oldVal.length && oldVal !== table ) {
+				this.page = '';
+			}
 			this.error = null;
 			this.updateLocation();
 		}
