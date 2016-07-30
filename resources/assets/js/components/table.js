@@ -54,10 +54,17 @@ Vue.component('sqlbuddy-table', {
 	},
 
 	watch: {
-		'selectedDatabase': function() {
+		'selectedDatabase': function(database, oldVal) {
+			if( oldVal.length && oldVal !== database ) {
+				this.selectedTable = '';
+				this.page = '';
+			}
 			this.resetTableData();
 		},
-		'selectedTable': function(table) {
+		'selectedTable': function(table, oldVal) {
+			if( oldVal.length && oldVal !== table ) {
+				this.page = '';
+			}
 			this.getTableRows(table, this.page);
 		},
 		'rows': function() {
