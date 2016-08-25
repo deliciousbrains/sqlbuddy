@@ -1,10 +1,42 @@
+.sqlbuddy-nav {
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 10;
+	height: 54px;
+
+	.navbar { width: 100%; }
+}
+
 .sqlbuddy {
-	margin: 40px 0;
+	display: flex;
+	overflow: hidden;
+	height: 100vh;
+	margin-top: -54px;
+	padding-top: 54px;
+	position: relative;
+	width: 100%;
+	backface-visibility: hidden;
+	will-change: overflow;
+
+	.container-fluid { width: 100%; }
+}
+
+.sqlbuddy-sidebar,
+.sqlbuddy-main {
+	overflow: auto;
+	height: auto;
+	padding: 40px 20px 20px;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: none;
 }
 
 .sqlbuddy-sidebar {
-	overflow: auto;
+	width: 17%;
+	min-width: 200px;
 }
+
+.sqlbuddy-main { flex: 1; }
 
 .sqlbuddy-sidebar-table-list {
 	list-style: none;

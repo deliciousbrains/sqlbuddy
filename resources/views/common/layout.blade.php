@@ -12,26 +12,24 @@
     <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
 </head>
 <body id="sqlbuddy">
-    @include('common.nav')
+	<div class="sqlbuddy-nav">
+        @include('common.nav')
+	</div>
 
     <sqlbuddy inline-template>
         <div class="sqlbuddy">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-2 col-sm-3">
-                        @include('common.sidebar')
-                    </div>
-                    <div class="col-md-10 col-sm-9">
-                        <div class="alert alert-danger alert-dismissible" v-if="error">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            @{{ error }}
-                        </div>
-
-                        @yield('content')
-                    </div>
+            <div class="sqlbuddy-sidebar">
+                @include('common.sidebar')
+            </div>
+            <div class="sqlbuddy-main">
+                <div class="alert alert-danger alert-dismissible" v-if="error">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    @{{ error }}
                 </div>
+
+                @yield('content')
             </div>
         </div>
     </sqlbuddy>
