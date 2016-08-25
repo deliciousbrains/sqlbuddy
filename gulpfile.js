@@ -14,7 +14,14 @@ require('laravel-elixir-vueify');
  */
 
 elixir(function(mix) {
-	mix.browserify('app.js')
+	mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js')
+		.copy('node_modules/tether/dist/js/tether.min.js', 'public/js')
+		.copy('node_modules/bootstrap/dist/js/bootstrap.min.js', 'public/js')
+		.copy('node_modules/bootstrap/dist/css/bootstrap.min.css', 'public/css')
+		.copy('node_modules/bootstrap/dist/css/bootstrap.min.css.map', 'public/css')
+		.copy('node_modules/font-awesome/css/font-awesome.min.css', 'public/css')
+		.copy('node_modules/font-awesome/fonts', 'public/fonts')
+		.browserify('app.js')
 		.sass(['app.scss'], 'public/css')
 		.version(['js/app.js', 'css/app.css']);
 });

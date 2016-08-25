@@ -4,6 +4,8 @@
     "gulp": "^3.9.1"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-alpha.3",
+    "font-awesome": "^4.6.3",
     "history": "^3.0.0",
     "laravel-elixir": "^4.0.0",
     "laravel-elixir-vueify": "^1.0.3",
