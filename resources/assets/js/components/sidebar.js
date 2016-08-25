@@ -13,8 +13,10 @@ Vue.component('sqlbuddy-sidebar', {
 
 	methods: {
 		getTables(database) {
+			this.$dispatch('is-loading', true);
 			this.$http.get('/api/databases/' + encodeURI(database) + '/tables')
 				.then(response => {
+					this.$dispatch('is-loading', false);
 					if (response.data.error) {
 						this.$dispatch('error', response.data.error);
 					} else {

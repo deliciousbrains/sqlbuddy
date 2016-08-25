@@ -8,18 +8,22 @@ Vue.component('sqlbuddy', {
 			selectedDatabase: '',
 			selectedTable: '',
 			page: 1,
+			isLoading: true,
 			error: null
 		}
 	},
 
 	ready() {
+		this.isLoading = false;
 		this.getDatabases();
 	},
 
 	methods: {
 		getDatabases() {
+			this.$emit('is-loading', true);
 			this.$http.get('/api/databases')
 				.then(response => {
+					this.$emit('is-loading', false);
 					this.databases = response.data;
 					this.setLocation();
 				});
@@ -88,6 +92,9 @@ Vue.component('sqlbuddy', {
 	},
 
 	events: {
+		'is-loading': function(isLoading) {
+			this.isLoading = isLoading;
+		},
 		'error': function(error) {
 			this.error = error;
 		},

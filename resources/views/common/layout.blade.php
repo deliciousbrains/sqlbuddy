@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
           integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
 </head>
 <body id="sqlbuddy">
@@ -17,7 +18,7 @@
 	</div>
 
     <sqlbuddy inline-template>
-        <div class="sqlbuddy">
+        <div class="sqlbuddy" :class="{ 'sqlbuddy-isloading': isLoading }">
             <div class="sqlbuddy-sidebar">
                 @include('common.sidebar')
             </div>
@@ -31,6 +32,10 @@
 
                 @yield('content')
             </div>
+	        <div class="sqlbuddy-loading-overlay" v-show="isLoading">
+		        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+		        <span class="sr-only">Loading...</span>
+	        </div>
         </div>
     </sqlbuddy>
 

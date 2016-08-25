@@ -19,7 +19,18 @@
 	backface-visibility: hidden;
 	will-change: overflow;
 
-	.container-fluid { width: 100%; }
+	.sqlbuddy-loading-overlay {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(255, 255, 255, 0.5);
+		color: #0275d8;
+	}
 }
 
 .sqlbuddy-sidebar,

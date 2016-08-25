@@ -25,8 +25,10 @@ Vue.component('sqlbuddy-table', {
 				page = 1;
 			}
 
+			this.$dispatch('is-loading', true);
 			this.$http.get('/api/databases/' + encodeURI(this.selectedDatabase) + '/tables/' + encodeURI(table) + '?page=' + page)
 				.then(response => {
+					this.$dispatch('is-loading', false);
 					if (response.data.error) {
 						this.resetTableData();
 						this.$dispatch('error', response.data.error);
