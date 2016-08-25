@@ -4,6 +4,7 @@ Vue.component('sqlbuddy', {
 	data() {
 		return {
 			history: createHistory(),
+			historyListener: null,
 			databases: [],
 			selectedDatabase: '',
 			selectedTable: '',
@@ -15,7 +16,16 @@ Vue.component('sqlbuddy', {
 
 	ready() {
 		this.isLoading = false;
+
+		this.historyListener = this.history.listen(location => {
+			this.setLocation(location);
+		});
+
 		this.getDatabases();
+	},
+
+	beforeDestroy() {
+		this.historyListener();
 	},
 
 	methods: {
@@ -28,8 +38,11 @@ Vue.component('sqlbuddy', {
 					this.setLocation();
 				});
 		},
-		setLocation() {
-			var location = this.history.getCurrentLocation();
+		setLocation(location) {
+			if (typeof location === 'undefined') {
+				location = this.history.getCurrentLocation();
+			}
+
 			if (!location.state) {
 				// Set the state from the path
 				var segments = location.pathname.substring(1).split('/');
