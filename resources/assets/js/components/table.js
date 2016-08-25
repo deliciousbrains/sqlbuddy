@@ -2,7 +2,7 @@ Vue.component('sqlbuddy-table', {
 	props: [
 		'selectedDatabase',
 		'selectedTable',
-	    'page'
+		'page'
 	],
 
 	data() {
@@ -55,14 +55,14 @@ Vue.component('sqlbuddy-table', {
 
 	watch: {
 		'selectedDatabase': function(database, oldVal) {
-			if( oldVal.length && oldVal !== database ) {
+			if (oldVal.length && oldVal !== database) {
 				this.selectedTable = '';
 				this.page = '';
 			}
 			this.resetTableData();
 		},
 		'selectedTable': function(table, oldVal) {
-			if( oldVal.length && oldVal !== table ) {
+			if (oldVal.length && oldVal !== table) {
 				this.page = '';
 			}
 			this.getTableRows(table, this.page);

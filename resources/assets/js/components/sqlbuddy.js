@@ -71,7 +71,7 @@ Vue.component('sqlbuddy', {
 
 	watch: {
 		'selectedDatabase': function(database, oldVal) {
-			if( oldVal.length && oldVal !== database ) {
+			if (oldVal.length && oldVal !== database) {
 				this.selectedTable = '';
 				this.page = '';
 			}
@@ -79,7 +79,7 @@ Vue.component('sqlbuddy', {
 			this.updateLocation();
 		},
 		'selectedTable': function(table, oldVal) {
-			if( oldVal.length && oldVal !== table ) {
+			if (oldVal.length && oldVal !== table) {
 				this.page = '';
 			}
 			this.error = null;
