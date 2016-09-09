@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "89f86216933c320ff049d9ba08ca989c",
-    "content-hash": "ee42b776f466a6d4a4e8b33fc6699e06",
+    "hash": "9914e8d6a16be4a8192a06257eb2f1cb",
+    "content-hash": "06b37d975e13daf7ac68457efadeb7ac",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -850,6 +850,52 @@
             "time": "2016-03-07 20:37:17"
         },
         {
+            "name": "illuminate/cookie",
+            "version": "v5.2.45",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/cookie.git",
+                "reference": "45d1da2fca331d3b95880f9bb55cd073cbc3762b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/cookie/zipball/45d1da2fca331d3b95880f9bb55cd073cbc3762b",
+                "reference": "45d1da2fca331d3b95880f9bb55cd073cbc3762b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "5.2.*",
+                "illuminate/support": "5.2.*",
+                "php": ">=5.5.9",
+                "symfony/http-foundation": "2.8.*|3.0.*",
+                "symfony/http-kernel": "2.8.*|3.0.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Cookie\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Cookie package.",
+            "homepage": "http://laravel.com",
+            "time": "2016-08-01 13:49:14"
+        },
+        {
             "name": "illuminate/database",
             "version": "v5.2.32",
             "source": {
@@ -1288,16 +1334,16 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v5.2.32",
+            "version": "v5.2.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
-                "reference": "bd1e5729b6791dd8c91eec155bbfa06d465ea235"
+                "reference": "259ae8eaee714b4633b3ee4e51e98648840a976c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/session/zipball/bd1e5729b6791dd8c91eec155bbfa06d465ea235",
-                "reference": "bd1e5729b6791dd8c91eec155bbfa06d465ea235",
+                "url": "https://api.github.com/repos/illuminate/session/zipball/259ae8eaee714b4633b3ee4e51e98648840a976c",
+                "reference": "259ae8eaee714b4633b3ee4e51e98648840a976c",
                 "shasum": ""
             },
             "require": {
@@ -1329,12 +1375,12 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylor@laravel.com"
                 }
             ],
             "description": "The Illuminate Session package.",
             "homepage": "http://laravel.com",
-            "time": "2016-04-07 02:32:40"
+            "time": "2016-08-01 13:49:14"
         },
         {
             "name": "illuminate/support",

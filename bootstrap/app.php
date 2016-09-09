@@ -78,6 +78,10 @@ $app->routeMiddleware([
 |
 */
 
+$app->configure('session');
+$app->register(Illuminate\Cookie\CookieServiceProvider::class);
+$app->register(Illuminate\Session\SessionServiceProvider::class);
+
 $app->register(App\Providers\AppServiceProvider::class);
 $app->register(App\Providers\AuthServiceProvider::class);
 $app->register(App\Providers\EventServiceProvider::class);
