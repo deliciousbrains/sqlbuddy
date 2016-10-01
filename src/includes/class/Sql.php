@@ -13,6 +13,13 @@ MIT license
 
 */
 
+# There is no good corresponding mysql_result function in mysqli. mysql_result is approximated here.
+function mysqli_result($res, $row, $field=0) {
+	$res->data_seek($row);
+	$datarow = $res->fetch_array();
+	return $datarow[$field];
+}
+
 class SQL {
 	
 	var $adapter = "";
@@ -68,7 +75,7 @@ class SQL {
 		} else {
 			$this->method = "mysql";
 			$host = (array_key_exists("host", $opt)) ? $opt['host'] : "";
-			$this->conn = @mysql_connect($host, $user, $pass);
+			$this->conn = @mysqli_connect($host, $user, $pass);
 		}
 		
 		if ($this->conn && $this->method == "pdo") {
@@ -93,7 +100,7 @@ class SQL {
 			if ($this->method == "pdo") {
 				$this->conn = null;
 			} else if ($this->method == "mysql") {
-				mysql_close($this->conn);
+				mysqli_close($this->conn);
 				$this->conn = null;
 			} else if ($this->method == "sqlite") {
 				sqlite_close($this->conn);
@@ -122,7 +129,7 @@ class SQL {
 		if ($this->conn) {
 			if ($this->method == "mysql") {
 				$this->db = $db;
-				return (mysql_select_db($db));
+				return (mysqli_select_db($this->conn, $db));
 			} else {
 				return true;
 			}
@@ -146,10 +153,10 @@ class SQL {
 
 				return $queryResult;
 			} else if ($this->method == "mysql") {
-				$queryResult = @mysql_query($queryText, $this->conn);
+				$queryResult = @mysqli_query($this->conn, $queryText);
 
 				if (!$queryResult) {
-					$this->errorMessage = mysql_error();
+					$this->errorMessage = mysqli_error($this->conn);
 				}
 
 				return $queryResult;
@@ -178,7 +185,7 @@ class SQL {
 			if ($this->method == "pdo") {
 				return count($resultSet->fetchAll());
 			} else if ($this->method == "mysql") {
-				return @mysql_num_rows($resultSet);
+				return @mysqli_num_rows($resultSet);
 			} else if ($this->method == "sqlite") {
 				return @sqlite_num_rows($resultSet);
 			}
@@ -203,7 +210,7 @@ class SQL {
 			if ($this->method == "pdo") {
 				return $resultSet->fetch(PDO::FETCH_NUM);
 			} else if ($this->method == "mysql") {
-				return mysql_fetch_row($resultSet);
+				return mysqli_fetch_row($resultSet);
 			} else if ($this->method == "sqlite") {
 				return sqlite_fetch_array($resultSet, SQLITE_NUM);
 			}
@@ -218,7 +225,7 @@ class SQL {
 			if ($this->method == "pdo") {
 				return $resultSet->fetch(PDO::FETCH_ASSOC);
 			} else if ($this->method == "mysql") {
-				return mysql_fetch_assoc($resultSet);
+				return mysqli_fetch_assoc($resultSet);
 			} else if ($this->method == "sqlite") {
 				return sqlite_fetch_array($resultSet, SQLITE_ASSOC);
 			}
@@ -233,13 +240,14 @@ class SQL {
 			if ($this->method == "pdo") {
 				return $resultSet->rowCount();
 			} else if ($this->method == "mysql") {
-				return @mysql_affected_rows($resultSet);
+#				return @mysqli_affected_rows($resultSet);
+				return @mysqli_affected_rows($this->conn);
 			} else if ($this->method == "sqlite") {
 				return sqlite_changes($resultSet);
 			}
 		}
 	}
-	
+
 	function result($resultSet, $targetRow, $targetColumn = "") {
 		if (!$resultSet)
 			return false;
@@ -254,7 +262,7 @@ class SQL {
 					return $resultRow[0];
 				}
 			} else if ($this->method == "mysql") {
-				return mysql_result($resultSet, $targetRow, $targetColumn);
+				return mysqli_result($resultSet, $targetRow, $targetColumn);
 			} else if ($this->method == "sqlite") {
 				return sqlite_column($resultSet, $targetColumn);
 			}
@@ -317,7 +325,7 @@ class SQL {
 			if ($this->method == "pdo") {
 				return $this->conn->lastInsertId();
 			} else if ($this->method == "mysql") {
-				return @mysql_insert_id($this->conn);
+				return @mysqli_insert_id($this->conn);
 			} else if ($this->method == "sqlite") {
 				return sqlite_last_insert_rowid($this-conn);
 			}
@@ -331,7 +339,7 @@ class SQL {
 				$toEscape = substr($toEscape, 1, -1);
 				return $toEscape;
 			} else if ($this->adapter == "mysql") {
-				return mysql_real_escape_string($toEscape);
+				return mysqli_real_escape_string($this->conn, $toEscape);
 			} else if ($this->adapter == "sqlite") {
 				return sqlite_escape_string($toEscape);
 			}
@@ -346,7 +354,7 @@ class SQL {
 			}
 			
 			if ($this->adapter == "mysql") {
-				$verSql = mysql_get_server_info();
+				$verSql = mysqli_get_server_info($this->conn);
 				$version = explode("-", $verSql);
 				$this->version = $version[0];
 				return $this->version;
