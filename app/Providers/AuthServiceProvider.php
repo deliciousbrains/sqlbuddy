@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Extensions\MysqlUserProvider;
+use App\Extensions\SessionUserProvider;
 use Illuminate\Support\ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -24,11 +24,12 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \Auth::provider('mysql', function ($app, array $config) {
-            $app->configure('database');
+        \Auth::provider('session', function ($app, array $config) {
+            $app->make('hash');
 
             // Return an instance of Illuminate\Contracts\Auth\UserProvider...
-            return new MysqlUserProvider($app['db.factory'], $app['config']['database'], $config);
+            return new SessionUserProvider($this->app['hash'], $config);
+        });
         });
     }
 }

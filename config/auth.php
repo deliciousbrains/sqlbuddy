@@ -37,7 +37,7 @@ return [
     'guards' => [
         'web' => [
             'driver'   => 'session',
-            'provider' => env('AUTH_PROVIDER', 'mysql'),
+            'provider' => 'session',
         ],
     ],
 
@@ -59,8 +59,8 @@ return [
     */
 
     'providers' => [
-        'mysql' => [
-            'driver' => 'mysql',
+        'session' => [
+            'driver' => 'session',
         ],
     ],
 

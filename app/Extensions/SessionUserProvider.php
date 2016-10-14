@@ -4,23 +4,17 @@ namespace App\Extensions;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\UserProvider;
-use Illuminate\Database\Connectors\ConnectionFactory;
+use Illuminate\Contracts\Hashing\Hasher as HasherContract;
+use Illuminate\Support\Facades\Session;
 
-class MysqlUserProvider implements UserProvider
+class SessionUserProvider implements UserProvider
 {
     /**
-     * The database connection factory.
+     * The hasher implementation.
      *
-     * @var ConnectionFactory
+     * @var HasherContract
      */
-    protected $connectionFactory;
-
-    /**
-     * The database config.
-     *
-     * @var array
-     */
-    protected $databaseConfig;
+    protected $hasher;
 
     /**
      * The provider config.
@@ -29,12 +23,10 @@ class MysqlUserProvider implements UserProvider
      */
     protected $config;
 
-    public function __construct(ConnectionFactory $connectionFactory, $databaseConfig, $config)
+    public function __construct(HasherContract $hasher, $config)
     {
-        $this->connectionFactory = $connectionFactory;
-        $this->databaseConfig    = $databaseConfig;
-        $this->config            = $config;
-        dd($this->databaseConfig);
+        $this->hasher = $hasher;
+        $this->config = $config;
     }
 
     /**
@@ -45,7 +37,16 @@ class MysqlUserProvider implements UserProvider
      */
     public function retrieveById($identifier)
     {
-        // TODO: Implement retrieveById() method.
+        $user = Session::get('current_user');
+        if (!$user) {
+            return null;
+        }
+
+        if ($user->getAuthIdentifier() == $identifier) {
+            return $user;
+        }
+
+        return null;
     }
 
     /**
@@ -57,7 +58,16 @@ class MysqlUserProvider implements UserProvider
      */
     public function retrieveByToken($identifier, $token)
     {
-        // TODO: Implement retrieveByToken() method.
+        $user = Session::get('current_user');
+        if (!$user) {
+            return null;
+        }
+
+        if ($user->getAuthIdentifier() == $identifier && $user->getRememberToken() == $token) {
+            return $user;
+        }
+
+        return null;
     }
 
     /**
@@ -69,7 +79,12 @@ class MysqlUserProvider implements UserProvider
      */
     public function updateRememberToken(Authenticatable $user, $token)
     {
-        // TODO: Implement updateRememberToken() method.
+        $user = Session::get('current_user');
+        if (!$user) {
+            return;
+        }
+
+        $user->setRememberToken($token);
     }
 
     /**
@@ -80,7 +95,25 @@ class MysqlUserProvider implements UserProvider
      */
     public function retrieveByCredentials(array $credentials)
     {
-        // TODO: Implement retrieveByCredentials() method.
+        if (empty($credentials)) {
+            return null;
+        }
+
+        $user = Session::get('current_user');
+        if (!$user) {
+            return null;
+        }
+
+        foreach ($credentials as $key => $value) {
+            if ($key == $user->getAuthIdentifierName() && $value == $user->getAuthIdentifier()) {
+                return $user;
+            }
+            if ($key == $user->getRememberTokenName() && $value == $user->getRememberToken()) {
+                return $user;
+            }
+        }
+
+        return null;
     }
 
     /**
@@ -94,10 +127,6 @@ class MysqlUserProvider implements UserProvider
     {
         $plain = $credentials['password'];
 
-        $conn = $this->connectionFactory->make([
-            'host' => 'localhost',
-            'port' => 3306,
-            'username' => $user->getAuthIdentifierName()
-        ]);
+        return $this->hasher->check($plain, $user->getAuthPassword());
     }
 }
