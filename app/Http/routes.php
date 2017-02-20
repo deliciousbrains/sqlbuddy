@@ -12,8 +12,9 @@
 */
 
 $app->group([
-    'namespace' => 'App\Http\Controllers\Api',
-    'prefix'    => 'api',
+    'namespace'  => 'App\Http\Controllers\Api',
+    'prefix'     => 'api',
+    'middleware' => 'auth.basic',
 ], function () use ($app) {
     // Database
     $app->get('/databases', 'DatabaseController@index');
