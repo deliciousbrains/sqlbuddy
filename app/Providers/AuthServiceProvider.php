@@ -2,8 +2,7 @@
 
 namespace App\Providers;
 
-use App\Extensions\DatabaseGuard;
-use App\Extensions\SessionUserProvider;
+use App\Extensions\DatabaseAuthUserProvider;
 use Illuminate\Support\ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -25,7 +24,9 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        \Auth::provider('databaseAuth', function ($app, array $config) {
             // Return an instance of Illuminate\Contracts\Auth\UserProvider...
+            return new DatabaseAuthUserProvider($app['db']);
         });
     }
 }

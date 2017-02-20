@@ -10,4 +10,14 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 class User extends GenericUser implements AuthenticatableContract, AuthorizableContract
 {
     use Authorizable;
+
+    /**
+     * Get the name of the unique identifier for the user.
+     *
+     * @return string
+     */
+    public function getAuthIdentifierName()
+    {
+        return 'user';
+    }
 }

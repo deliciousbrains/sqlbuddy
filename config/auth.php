@@ -36,8 +36,8 @@ return [
 
     'guards' => [
         'web' => [
-            'driver'   => 'database',
-            'provider' => 'session',
+            'driver'   => 'session',
+            'provider' => 'users',
         ],
     ],
 
@@ -59,8 +59,8 @@ return [
     */
 
     'providers' => [
-        'session' => [
-            'driver' => 'session',
+        'users' => [
+            'driver' => 'databaseAuth',
         ],
     ],
 
