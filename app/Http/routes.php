@@ -12,7 +12,7 @@
 */
 
 $app->group([
-    'namespace' => 'App\Http\Controllers\Api',
+    'namespace' => 'Api',
     'prefix'    => 'api',
 ], function () use ($app) {
     // Database
