@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use DB;
-use Exception;
 use Illuminate\Http\Request;
 
 class DatabaseController extends ApiController
@@ -15,11 +14,7 @@ class DatabaseController extends ApiController
      */
     public function index()
     {
-        try {
-            $result = collect(DB::select('SHOW DATABASES'))->pluck('Database');
-        } catch (Exception $e) {
-            $result = $this->getError($e);
-        }
+        $result = collect(DB::select('SHOW DATABASES'))->pluck('Database');
 
         return response()->json($result);
     }
@@ -34,11 +29,7 @@ class DatabaseController extends ApiController
     {
         $database = $request->input('database');
 
-        try {
-            $result = DB::statement("CREATE DATABASE `{$database}`");
-        } catch (Exception $e) {
-            $result = $this->getError($e);
-        }
+        $result = DB::statement("CREATE DATABASE `{$database}`");
 
         return response()->json($result);
     }
@@ -74,11 +65,7 @@ class DatabaseController extends ApiController
      */
     public function destroy($id)
     {
-        try {
-            $result = DB::statement("DROP DATABASE `{$id}`");
-        } catch (Exception $e) {
-            $result = $this->getError($e);
-        }
+        $result = DB::statement("DROP DATABASE `{$id}`");
 
         return response()->json($result);
     }

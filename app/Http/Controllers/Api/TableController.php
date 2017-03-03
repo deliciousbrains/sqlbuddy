@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use DB;
-use Exception;
 use Illuminate\Http\Request;
 
 class TableController extends ApiController
@@ -17,12 +16,8 @@ class TableController extends ApiController
     {
         $this->selectDatabase($database);
 
-        try {
-            $schema = DB::getDoctrineSchemaManager();
-            $result = $schema->listTableNames();
-        } catch (Exception $e) {
-            $result = $this->getError($e);
-        }
+        $schema = DB::getDoctrineSchemaManager();
+        $result = $schema->listTableNames();
 
         return response()->json($result);
     }
@@ -31,19 +26,15 @@ class TableController extends ApiController
     {
         $this->selectDatabase($database);
 
-        try {
-            $schema  = DB::getDoctrineSchemaManager();
-            $columns = $schema->listTableColumns($table);
-            $columns = collect($columns)->keys()->all();
-            $rows    = DB::table($table)->paginate(20);
+        $schema  = DB::getDoctrineSchemaManager();
+        $columns = $schema->listTableColumns($table);
+        $columns = collect($columns)->keys()->all();
+        $rows    = DB::table($table)->paginate(20);
 
-            $result = [
-                'columns' => $columns,
-                'rows'    => $rows,
-            ];
-        } catch (Exception $e) {
-            $result = $this->getError($e);
-        }
+        $result = [
+            'columns' => $columns,
+            'rows'    => $rows,
+        ];
 
         return response()->json($result);
     }
