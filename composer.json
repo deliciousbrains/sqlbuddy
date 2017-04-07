@@ -6,7 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/lumen-framework": "5.2.*",
+        "laravel/lumen-framework": "5.4.*",
         "vlucas/phpdotenv": "~2.2",
         "doctrine/dbal": "^2.5",
         "illuminate/session": "^5.2",
@@ -14,7 +14,7 @@
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
-        "phpunit/phpunit": "~4.0"
+        "phpunit/phpunit": "~5.7"
     },
     "autoload": {
         "files": [

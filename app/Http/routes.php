@@ -12,7 +12,7 @@
 */
 
 $app->group([
-    'namespace'  => 'App\Http\Controllers\Api',
+    'namespace'  => 'Api',
     'prefix'     => 'api',
     'middleware' => 'auth.basic',
 ], function () use ($app) {
