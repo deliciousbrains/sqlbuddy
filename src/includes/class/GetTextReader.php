@@ -18,7 +18,7 @@ class GetTextReader {
 	var $translationIndex = array();
 	var $basePath = "locale/";
 	
-	function GetTextReader($inputFile) {
+	function __construct($inputFile) {
 		
 		$msgId = "";
 		$msgIdPlural = "";

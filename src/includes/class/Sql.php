@@ -30,7 +30,7 @@ class SQL {
 	var $errorMessage = "";
 	var $db = "";
 	
-	function SQL($connString, $user = "", $pass = "") {
+	function __construct($connString, $user = "", $pass = "") {
 		list($this->adapter, $options) = explode(":", $connString, 2);
 		
 		if ($this->adapter != "sqlite") {
